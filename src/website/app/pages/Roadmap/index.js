@@ -27,6 +27,44 @@ const todo = 'todo',
       doing = 'doing',
       done = 'done';
 
+const data = [{
+  title: `Publish CA's Design System`,
+  bullets: [{
+    title: 'Write guideline pages that explain the different parts of our system',
+    status: done
+  }, {
+    title: 'Crystalize a home page that delights and excites potential users',
+    status: doing
+  }, {
+    title: 'Devise community pages that engage contributors',
+    status: todo
+  }]
+}, {
+  title: `Build Components`,
+  bullets: [{
+    title: 'Publish a proof of concept that we can use to validate our architecture',
+    status: done
+  }, {
+    title: 'Assemble a set of base components that could be used to stand up a simple app',
+    status: doing
+  }, {
+    title: 'Forge some higher-level components that stitch several of our base components together',
+    status: todo
+  }, {
+    title: 'Synthesize a stylistically robust DataTable that is performant under load',
+    status: todo
+  }]
+}, {
+  title: `Adoption Across CA's Products`,
+  bullets: [{
+    title: 'Fully Support CA API Management UI',
+    status: doing
+  }, {
+    title: 'Identify our next early adoptor product',
+    status: todo
+  }]
+}];
+
 type Status = todo | doing | done;
 
 type Bullet = {
@@ -41,89 +79,28 @@ type Header = {
   bullets: Bullets
 };
 
-type Headers = Array<Header>
-
-const data = [{
-  title: `Publish CA's Design System`,
-  bullets: [{
-    title: 'Build guideline pages that explain the different parts of our system',
-    status: done
-  }, {
-    title: 'Build a home page that delights and excites potential users',
-    status: doing
-  }, {
-    title: 'Build community pages that engage contributors',
-    status: todo
-  }]
-}, {
-  title: `Build Components`,
-  bullets: [{
-    title: 'Publish a proof of concept that we can use to validate our architecture',
-    status: done
-  }, {
-    title: 'Build a set of base components that could be used to stand up a simple app',
-    status: doing
-  }, {
-    title: 'Build some higher-level components that stitch several of our base components together',
-    status: todo
-  }, {
-    title: 'Build the best damn DataTable the world has ever seen',
-    status: todo
-  }]
-}, {
-  title: `Adoption Across CA's Products`,
-  bullets: [{
-    title: 'Fully Support CA API Management UI',
-    status: doing
-  }, {
-    title: 'Identify our next early adoptor product',
-    status: todo
-  }]
-}];
+type Headers = Array<Header>;
 
 export default function Roadmap() {
   return (
     <GuidelinePage>
-      <Markdown>{content}</Markdown>
-      <Headers data={data} />
+      <Markdown scope={{ Anchor }}>{content}</Markdown>
+      { renderHeaders(data) }
     </GuidelinePage>
   );
 }
 
 const styles = {
-  statusBarRoot: ({ theme }) => ({
-    width: '5em',
-    borderRadius: theme.borderRadius_1,
-    border: `2px solid black`
+  anchor: ({ theme }) => ({
+    color: 'black'
   }),
-  statusIndicator: ({ percent, theme }) => ({
-    backgroundColor:
-      percent > 70
-        ? theme.backgroundColor_success_activeMuted
-        : percent > 50
-          ? theme.backgroundColor_warning_activeMuted
-          : theme.backgroundColor_danger_activeMuted,
-    borderRadius: theme.borderRadius_1,
-    width: `${percent}%`,
-    textAlign: 'center',
-    fontWeight: theme.fontWeight_bold,
-    fontSize: theme.fontSize_ui
-  }),
-  incrementList: () => ({
-    listStyle: 'none',
-    paddingLeft: '0px'
-  }),
-  milestonesList: () => ({
-    listStyleType: 'disc'
-  }),
-  milestoneRoot: ({ theme }) => ({
+  li: ({ theme }) => ({
     marginBottom: theme.space_stack_sm
   }),
-  chip: ({ status, theme }) => ({
+  badge: ({ status, theme }) => ({
     backgroundColor:
       done === status && theme.backgroundColor_success_activeMuted ||
-      doing === status && theme.color_theme_20 ||
-      todo === status && theme.backgroundColor_warning_activeMuted,
+      doing === status && theme.color_theme_20,
     marginLeft: theme.space_inline_sm,
     padding: `0 ${theme.space_inline_sm}`,
     borderRadius: theme.borderRadius_1,
@@ -135,62 +112,43 @@ const styles = {
   })
 };
 
-const LabelList = createStyledComponent('ul', styles.incrementList);
-const LabelRoot = createStyledComponent('li');
-const MilestoneList = createStyledComponent('ul', styles.milestonesList);
-const MilestoneRoot = createStyledComponent('li', styles.milestoneRoot);
-const IssueList = createStyledComponent('ul');
-const IssueRoot = createStyledComponent('li');
-const ChipRoot = createStyledComponent('a', styles.chip);
-const StatusBarRoot = createStyledComponent('div', styles.statusBarRoot);
-const StatusIndicator = createStyledComponent('div', styles.statusIndicator);
+const UL = createStyledComponent('ul');
+const LI = createStyledComponent('li', styles.li);
+const Badge = createStyledComponent('span', styles.badge);
+const Anchor = createStyledComponent('a', styles.anchor);
 
-function StatusBar({ percent }) {
-  return (
-    <StatusBarRoot>
-      <StatusIndicator percent={percent}>{`${percent}%`}</StatusIndicator>
-    </StatusBarRoot>
-  );
+function renderHeaders(data: Headers) {
+  return data.map((header, idx) => renderHeader(header));
 }
 
-function Headers({ data }: Headers) {
-  return (
-    <LabelList>
-      { data.map(header => <Header {...header}/>) }
-    </LabelList>
-  );
+function renderHeader({title, bullets}: Header) {
+  return [
+    <Heading level={3} key={0}>{title}</Heading>,
+    renderItems(bullets)
+  ];
 }
 
-function Header({ bullets, title }: Header) {
+function renderItems(bullets: Bullets) {
   return (
-    <LabelRoot>
-      <Heading level={3}>{title}</Heading>
-      <Bullets bullets={bullets} />
-    </LabelRoot>
-  );
-}
-
-function Bullets({ bullets }: Bullets) {
-  return (
-    <MilestoneList>
-      { bullets.map(bullet => <Bullet {...bullet} />) }
-    </MilestoneList>
+    <UL>
+      { bullets.map((bullet, idx) => <Bullet key={idx} {...bullet} />) }
+    </UL>
   );
 }
 
 function Bullet({ title, status }: Bullet) {
   return (
-    <MilestoneRoot>
-      {title}
-      <Chip status={status} />
-    </MilestoneRoot>
+    <LI>
+      { title }
+      { renderStatus(status) }
+    </LI>
   );
 }
 
-function Chip({ status }) {
-  return (undefined === status) ? null : (
-    <ChipRoot status={status}>
-      {status}
-    </ChipRoot>
-  );
+function renderStatus(status: Status) {
+  return ([undefined, todo].indexOf(status) === -1) ? (
+    <Badge status={status}>
+      {status === doing ? 'in-progress' : status}
+    </Badge>
+  ) : null;
 }
