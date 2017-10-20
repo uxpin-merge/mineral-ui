@@ -23,77 +23,61 @@ import Markdown from '../../Markdown';
 import Heading from '../../Heading';
 import content from './content.md';
 
-type Issue = {
+const todo = 'todo',
+      doing = 'doing',
+      done = 'done';
+
+type Status = todo | doing | done;
+
+type Bullet = {
   title: string,
-  closed?: boolean
+  status?: Status
 };
 
-type Issues = Array<Issue>;
+type Bullets = Array<Bullet>;
 
-type Milestone = {
+type Header = {
   title: string,
-  closed?: boolean,
-  issues?: Issues
+  bullets: Bullets
 };
 
-type Milestones = Array<Milestone>;
-
-type Label = {
-  title: string,
-  milestones: Milestones
-};
-
-type Labels = Array<Label>
+type Headers = Array<Header>
 
 const data = [{
   title: `Publish CA's Design System`,
-  milestones: [{
-    title: 'Guideline Pages',
-    closed: true
+  bullets: [{
+    title: 'Build guideline pages that explain the different parts of our system',
+    status: done
   }, {
-    title: 'Home Page',
-    closed: false
+    title: 'Build a home page that delights and excites potential users',
+    status: doing
   }, {
-    title: 'Community Pages'
+    title: 'Build community pages that engage contributors',
+    status: todo
   }]
 }, {
   title: `Build Components`,
-  milestones: [{
-    title: 'Proof of Concept',
-    closed: true
+  bullets: [{
+    title: 'Publish a proof of concept that we can use to validate our architecture',
+    status: done
   }, {
-    title: 'Base Components',
-    closed: false
+    title: 'Build a set of base components that could be used to stand up a simple app',
+    status: doing
   }, {
-    title: 'Macro Components'
+    title: 'Build some higher-level components that stitch several of our base components together',
+    status: todo
+  }, {
+    title: 'Build the best damn DataTable the world has ever seen',
+    status: todo
   }]
 }, {
   title: `Adoption Across CA's Products`,
-  milestones: [{
-    title: 'APIM',
-    issues: [{
-      title: 'Consumed One Component',
-      closed: true
-    }, {
-      title: 'Full Support',
-      closed: false
-    }]
+  bullets: [{
+    title: 'Fully Support CA API Management UI',
+    status: doing
   }, {
-    title: 'CAAC',
-    issues: [{
-      title: 'Consumed One Component',
-      closed: false
-    }, {
-      title: 'Full Support'
-    }]
-  }, {
-    title: 'AXA',
-    issues: [{
-      title: 'Consumed One Component',
-      closed: false
-    }, {
-      title: 'Full Support'
-    }]
+    title: 'Identify our next early adoptor product',
+    status: todo
   }]
 }];
 
@@ -101,7 +85,7 @@ export default function Roadmap() {
   return (
     <GuidelinePage>
       <Markdown>{content}</Markdown>
-      <Labels labels={data} />
+      <Headers data={data} />
     </GuidelinePage>
   );
 }
@@ -135,18 +119,19 @@ const styles = {
   milestoneRoot: ({ theme }) => ({
     marginBottom: theme.space_stack_sm
   }),
-  chip: ({ closed, theme }) => ({
+  chip: ({ status, theme }) => ({
     backgroundColor:
-      closed
-        ? theme.backgroundColor_success_activeMuted
-        : theme.color_theme_20,
+      done === status && theme.backgroundColor_success_activeMuted ||
+      doing === status && theme.color_theme_20 ||
+      todo === status && theme.backgroundColor_warning_activeMuted,
     marginLeft: theme.space_inline_sm,
     padding: `0 ${theme.space_inline_sm}`,
     borderRadius: theme.borderRadius_1,
     fontWeight: theme.fontWeight_bold,
     textDecoration: 'none',
     color: theme.color_text,
-    fontSize: theme.fontSize_ui
+    fontSize: theme.fontSize_ui,
+    textTransform: 'uppercase'
   })
 };
 
@@ -168,62 +153,44 @@ function StatusBar({ percent }) {
   );
 }
 
-function Labels({ labels }: Labels) {
+function Headers({ data }: Headers) {
   return (
     <LabelList>
-      { labels.map(label => <Label {...label}/>) }
+      { data.map(header => <Header {...header}/>) }
     </LabelList>
   );
 }
 
-function Label({ milestones, title }: Label) {
+function Header({ bullets, title }: Header) {
   return (
     <LabelRoot>
       <Heading level={3}>{title}</Heading>
-      <Milestones milestones={milestones} />
+      <Bullets bullets={bullets} />
     </LabelRoot>
   );
 }
 
-function Milestones({ milestones }: Milestones) {
+function Bullets({ bullets }: Bullets) {
   return (
     <MilestoneList>
-      { milestones.map(milestone => <Milestone {...milestone} />) }
+      { bullets.map(bullet => <Bullet {...bullet} />) }
     </MilestoneList>
   );
 }
 
-function Milestone({ title, issues, closed }: Milestone) {
+function Bullet({ title, status }: Bullet) {
   return (
     <MilestoneRoot>
       {title}
-      <Issues issues={ issues } />
-      <Chip closed={closed} />
+      <Chip status={status} />
     </MilestoneRoot>
   );
 }
 
-function Issues({ issues }: Issues) {
-  return issues ? (
-    <IssueList>
-      { issues.map(issue => <Issue {...issue} />) }
-    </IssueList>
-  ) : null ;
-}
-
-function Issue({ title, closed }: Issue) {
-  return (
-    <IssueRoot>
-      {title}
-      <Chip closed={closed} />
-    </IssueRoot>
-  );
-}
-
-function Chip({ closed }) {
-  return undefined === closed ? null : (
-    <ChipRoot closed={closed}>
-      {closed ? 'DONE' : 'IN-PROGRESS'}
+function Chip({ status }) {
+  return (undefined === status) ? null : (
+    <ChipRoot status={status}>
+      {status}
     </ChipRoot>
   );
 }
