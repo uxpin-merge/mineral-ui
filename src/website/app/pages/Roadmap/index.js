@@ -32,8 +32,8 @@ type Issues = Array<Issue>;
 
 type Milestone = {
   title: string,
-  dueDate?: date,
-  issues: Issues
+  closed?: boolean,
+  issues?: Issues
 };
 
 type Milestones = Array<Milestone>;
@@ -48,74 +48,24 @@ type Labels = Array<Label>
 const data = [{
   title: `Publish CA's Design System`,
   milestones: [{
-    title: 'past',
-    issues: [{
-      title: 'Color Page',
-      closed: true
-    }, {
-      title: 'Typography Page',
-      closed: true
-    }, {
-      title: 'Theme Page',
-      closed: true
-    }]
+    title: 'Guideline Pages',
+    closed: true
   }, {
-    title: 'current',
-    issues: [{
-      title: 'Home Page',
-      closed: false
-    }]
+    title: 'Home Page',
+    closed: false
   }, {
-    title: 'next',
-    issues: [{
-      title: 'Community Page'
-    }, {
-      title: 'Resorces Page'
-    }]
+    title: 'Community Pages'
   }]
 }, {
   title: `Build Components`,
   milestones: [{
-    title: 'past',
-    issues: [{
-      title: 'HelloWorld',
-      closed: true
-    }, {
-      title: 'Button',
-      closed: true
-    }, {
-      title: 'Link',
-      closed: true
-    }, {
-      title: 'Card',
-      closed: true
-    }, {
-      title: 'Menu',
-      closed: true
-    }, {
-      title: 'Dropdown',
-      closed: true
-    }]
+    title: 'Proof of Concept',
+    closed: true
   }, {
-    title: 'next',
-    issues: [{
-      title: 'Select'
-    }, {
-      title: 'TextInput'
-    }, {
-      title: 'Form'
-    }]
+    title: 'Base Components',
+    closed: false
   }, {
-    title: 'unplanned',
-    issues: [{
-      title: 'DataTable'
-    }, {
-      title: 'Nav'
-    }, {
-      title: 'Grid'
-    }, {
-      title: 'Tabs'
-    }]
+    title: 'Macro Components'
   }]
 }, {
   title: `Adoption Across CA's Products`,
@@ -243,34 +193,35 @@ function Milestones({ milestones }: Milestones) {
   );
 }
 
-function Milestone({ title, issues }: Milestone) {
+function Milestone({ title, issues, closed }: Milestone) {
   return (
     <MilestoneRoot>
       {title}
-      <Issues issues={issues} />
+      <Issues issues={ issues } />
+      <Chip closed={closed} />
     </MilestoneRoot>
   );
 }
 
 function Issues({ issues }: Issues) {
-  return (
+  return issues ? (
     <IssueList>
       { issues.map(issue => <Issue {...issue} />) }
     </IssueList>
-  );
+  ) : null ;
 }
 
 function Issue({ title, closed }: Issue) {
   return (
     <IssueRoot>
       {title}
-      {undefined === closed ? null : <Chip closed={closed} /> }
+      <Chip closed={closed} />
     </IssueRoot>
   );
 }
 
 function Chip({ closed }) {
-  return (
+  return undefined === closed ? null : (
     <ChipRoot closed={closed}>
       {closed ? 'DONE' : 'IN-PROGRESS'}
     </ChipRoot>
