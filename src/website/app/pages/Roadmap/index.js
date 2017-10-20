@@ -22,74 +22,136 @@ import GuidelinePage from '../../GuidelinePage';
 import Markdown from '../../Markdown';
 import Heading from '../../Heading';
 import content from './content.md';
-import milestones from './milestones';
+
+type Issue = {
+  title: string,
+  closed?: boolean
+};
+
+type Issues = Array<Issue>;
+
+type Milestone = {
+  title: string,
+  dueDate?: date,
+  issues: Issues
+};
+
+type Milestones = Array<Milestone>;
+
+type Label = {
+  title: string,
+  milestones: Milestones
+};
+
+type Labels = Array<Label>
+
+const data = [{
+  title: `Publish CA's Design System`,
+  milestones: [{
+    title: 'past',
+    issues: [{
+      title: 'Color Page',
+      closed: true
+    }, {
+      title: 'Typography Page',
+      closed: true
+    }, {
+      title: 'Theme Page',
+      closed: true
+    }]
+  }, {
+    title: 'current',
+    issues: [{
+      title: 'Home Page',
+      closed: false
+    }]
+  }, {
+    title: 'next',
+    issues: [{
+      title: 'Community Page'
+    }, {
+      title: 'Resorces Page'
+    }]
+  }]
+}, {
+  title: `Build Components`,
+  milestones: [{
+    title: 'past',
+    issues: [{
+      title: 'HelloWorld',
+      closed: true
+    }, {
+      title: 'Button',
+      closed: true
+    }, {
+      title: 'Link',
+      closed: true
+    }, {
+      title: 'Card',
+      closed: true
+    }, {
+      title: 'Menu',
+      closed: true
+    }, {
+      title: 'Dropdown',
+      closed: true
+    }]
+  }, {
+    title: 'next',
+    issues: [{
+      title: 'Select'
+    }, {
+      title: 'TextInput'
+    }, {
+      title: 'Form'
+    }]
+  }, {
+    title: 'unplanned',
+    issues: [{
+      title: 'DataTable'
+    }, {
+      title: 'Nav'
+    }, {
+      title: 'Grid'
+    }, {
+      title: 'Tabs'
+    }]
+  }]
+}, {
+  title: `Adoption Across CA's Products`,
+  milestones: [{
+    title: 'APIM',
+    issues: [{
+      title: 'Consumed One Component',
+      closed: true
+    }, {
+      title: 'Full Support',
+      closed: false
+    }]
+  }, {
+    title: 'CAAC',
+    issues: [{
+      title: 'Consumed One Component',
+      closed: false
+    }, {
+      title: 'Full Support'
+    }]
+  }, {
+    title: 'AXA',
+    issues: [{
+      title: 'Consumed One Component',
+      closed: false
+    }, {
+      title: 'Full Support'
+    }]
+  }]
+}];
 
 export default function Roadmap() {
   return (
     <GuidelinePage>
-      <Markdown scope={{ StatusBar }}>{content}</Markdown>
-      <IncrementList>
-        <li>
-          <Heading level={3}>Publish CA's Design System</Heading>
-          <MilestoneList>
-            <MilestoneRoot>
-              Color Page <Chip state="CLOSED" />
-            </MilestoneRoot>
-            <MilestoneRoot>
-              Typography Page <Chip state="CLOSED" />
-            </MilestoneRoot>
-            <MilestoneRoot>
-              Theme Page <Chip state="OPEN" />
-            </MilestoneRoot>
-            <MilestoneRoot>
-              Community Page <Chip state="OPEN" />
-            </MilestoneRoot>
-            <MilestoneRoot>
-              Resources Page <Chip state="OPEN" />
-            </MilestoneRoot>
-          </MilestoneList>
-        </li>
-        <li>
-          <Heading level={3}>Build Components</Heading>
-          <MilestoneList>
-            <MilestoneRoot>
-              Proof of Concept <Chip state="CLOSED" />
-            </MilestoneRoot>
-            <MilestoneRoot>
-              Base Components <Chip state="OPEN" />
-            </MilestoneRoot>
-            <MilestoneRoot>
-              Macro Components <Chip state="OPEN" />
-            </MilestoneRoot>
-          </MilestoneList>
-        </li>
-        <li>
-          <Heading level={3}>Adoption Across CA's Products</Heading>
-          <MilestoneList>
-            <MilestoneRoot>
-              APIM <Chip state="CLOSED" />
-            </MilestoneRoot>
-            <MilestoneRoot>
-              Agile Central <Chip state="OPEN" />
-            </MilestoneRoot>
-            <MilestoneRoot>
-              AXA <Chip state="OPEN" />
-            </MilestoneRoot>
-            <MilestoneRoot>
-              TDM <Chip state="OPEN" />
-            </MilestoneRoot>
-            <MilestoneRoot>
-              PAM <Chip state="OPEN" />
-            </MilestoneRoot>
-            <MilestoneRoot>
-              ARD <Chip state="OPEN" />
-            </MilestoneRoot>
-            <MilestoneRoot>
-              DCD <Chip state="OPEN" />
-            </MilestoneRoot>
-          </MilestoneList>
-        </li>
-      </IncrementList>
+      <Markdown>{content}</Markdown>
+      <Labels labels={data} />
     </GuidelinePage>
   );
 }
@@ -123,11 +185,11 @@ const styles = {
   milestoneRoot: ({ theme }) => ({
     marginBottom: theme.space_stack_sm
   }),
-  chip: ({ state, theme }) => ({
+  chip: ({ closed, theme }) => ({
     backgroundColor:
-      'OPEN' === state
-        ? theme.color_theme_20
-        : theme.backgroundColor_success_activeMuted,
+      closed
+        ? theme.backgroundColor_success_activeMuted
+        : theme.color_theme_20,
     marginLeft: theme.space_inline_sm,
     padding: `0 ${theme.space_inline_sm}`,
     borderRadius: theme.borderRadius_1,
@@ -138,9 +200,12 @@ const styles = {
   })
 };
 
-const IncrementList = createStyledComponent('ul', styles.incrementList);
+const LabelList = createStyledComponent('ul', styles.incrementList);
+const LabelRoot = createStyledComponent('li');
 const MilestoneList = createStyledComponent('ul', styles.milestonesList);
 const MilestoneRoot = createStyledComponent('li', styles.milestoneRoot);
+const IssueList = createStyledComponent('ul');
+const IssueRoot = createStyledComponent('li');
 const ChipRoot = createStyledComponent('a', styles.chip);
 const StatusBarRoot = createStyledComponent('div', styles.statusBarRoot);
 const StatusIndicator = createStyledComponent('div', styles.statusIndicator);
@@ -153,126 +218,61 @@ function StatusBar({ percent }) {
   );
 }
 
-type Node = {
-  id: string,
-  number: number,
-  state: string,
-  title: string,
-  url: string
-};
-
-type Nodes = Array<Node>;
-
-type IncrementsProps = {
-  data: {
-    repository: {
-      milestones: {
-        nodes: Nodes
-      }
-    }
-  }
-};
-
-type IncrementProps = {
-  milestones: Array<number>,
-  nodes: Nodes,
-  number: number,
-  title: string
-};
-
-type MilestonesProps = {
-  nodes: Nodes
-};
-
-type IncrementDef = {
-  milestones: Array<number>,
-  title: string,
-  nodes?: Nodes
-};
-
-type IncrementDefs = Array<IncrementDef>;
-
-function Increments({ data }: IncrementsProps) {
-  const incrementDefs: IncrementDefs = [
-    {
-      milestones: [3, 7, 9, 10],
-      title: `Build a Website that Documents CA's Design Philosophy`
-    },
-    {
-      milestones: [12, 13, 15],
-      title: 'Build Components'
-    },
-    {
-      milestones: [],
-      title: 'Adoption',
-      nodes: [
-        {
-          id: 'adoption1',
-          number: 0,
-          state: 'OPEN',
-          title: 'APIM',
-          url: 'http://mineral-ui.com'
-        }
-      ]
-    }
-  ];
-  const increments = data.repository.milestones.nodes.reduce(
-    (incrementDefs, milestone) => {
-      return incrementDefs.reduce((incrementsWithNodes, incrementDef) => {
-        const incrementContainsMilestone =
-          incrementDef.milestones.indexOf(milestone.number) !== -1;
-
-        return incrementsWithNodes.concat({
-          milestones: incrementDef.milestones,
-          nodes: incrementContainsMilestone
-            ? Array.prototype.concat(incrementDef.nodes || [], milestone)
-            : incrementDef.nodes,
-          title: incrementDef.title
-        });
-      }, []);
-    },
-    incrementDefs
-  );
-
+function Labels({ labels }: Labels) {
   return (
-    <IncrementList>
-      {increments.map((increment, index) => (
-        <Increment key={index} number={index + 1} {...increment} />
-      ))}
-    </IncrementList>
+    <LabelList>
+      { labels.map(label => <Label {...label}/>) }
+    </LabelList>
   );
 }
 
-function Increment({ nodes, number, title }: IncrementProps) {
+function Label({ milestones, title }: Label) {
   return (
-    <li>
-      <Heading level={3}>{`Goal ${number} - ${title}`}</Heading>
-      <Milestones nodes={nodes} />
-    </li>
+    <LabelRoot>
+      <Heading level={3}>{title}</Heading>
+      <Milestones milestones={milestones} />
+    </LabelRoot>
   );
 }
 
-function Milestones({ nodes }: MilestonesProps) {
+function Milestones({ milestones }: Milestones) {
   return (
     <MilestoneList>
-      {nodes.map(milestone => <Milestone key={milestone.id} {...milestone} />)}
+      { milestones.map(milestone => <Milestone {...milestone} />) }
     </MilestoneList>
   );
 }
 
-function Milestone({ state, title, url }: Node) {
+function Milestone({ title, issues }: Milestone) {
   return (
     <MilestoneRoot>
       {title}
-      <Chip state={state} />
+      <Issues issues={issues} />
     </MilestoneRoot>
   );
 }
 
-function Chip({ state }) {
+function Issues({ issues }: Issues) {
   return (
-    <ChipRoot state={state}>
-      {'OPEN' === state ? 'IN-PROGRESS' : 'DONE'}
+    <IssueList>
+      { issues.map(issue => <Issue {...issue} />) }
+    </IssueList>
+  );
+}
+
+function Issue({ title, closed }: Issue) {
+  return (
+    <IssueRoot>
+      {title}
+      {undefined === closed ? null : <Chip closed={closed} /> }
+    </IssueRoot>
+  );
+}
+
+function Chip({ closed }) {
+  return (
+    <ChipRoot closed={closed}>
+      {closed ? 'DONE' : 'IN-PROGRESS'}
     </ChipRoot>
   );
 }
