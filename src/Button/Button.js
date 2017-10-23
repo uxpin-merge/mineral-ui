@@ -26,6 +26,8 @@ type Props = {
   circular?: boolean,
   /** Disables the Button */
   disabled?: boolean,
+  /** Element to be used as the root node - e.g. 'a' */
+  element?: string,
   /** Stretch Button to fill its container */
   fullWidth?: boolean,
   /** Icon that goes after the children*/
@@ -40,8 +42,6 @@ type Props = {
   primary?: boolean,
   /** Available sizes */
   size?: 'small' | 'medium' | 'large' | 'jumbo',
-  /** Available types */
-  type?: 'button' | 'submit',
   /** Available variants */
   variant?: 'regular' | 'danger' | 'success' | 'warning'
 };
@@ -146,6 +146,7 @@ const styles = {
         }
       })(),
       cursor: disabled ? 'default' : 'pointer',
+      display: 'inline-block',
       fontWeight: theme.Button_fontWeight,
       height: theme[`Button_height_${size}`],
       // if the user puts in a small icon in a large button
@@ -156,6 +157,7 @@ const styles = {
         text === undefined
           ? theme[`Button_paddingIconOnly_${size}`]
           : `0 ${theme.Button_paddingHorizontal}`,
+      textDecoration: 'none',
       verticalAlign: 'middle',
       width: fullWidth && '100%',
       '&:focus': {
@@ -276,10 +278,6 @@ const styles = {
   }
 };
 
-const Root = createStyledComponent('button', styles.button, {
-  includeStyleReset: true,
-  rootEl: 'button'
-});
 const Content = createStyledComponent('span', styles.content);
 const Inner = createStyledComponent('span', styles.inner);
 
@@ -292,14 +290,19 @@ const Inner = createStyledComponent('span', styles.inner);
  */
 export default function Button({
   children,
+  element = 'button',
   iconStart,
   iconEnd,
   size = 'large',
-  type = 'button',
   variant = 'regular',
   ...restProps
 }: Props) {
-  const rootProps = { size, text: children, type, variant, ...restProps };
+  const rootProps = { size, text: children, variant, ...restProps };
+
+  const Root = createStyledComponent(element, styles.button, {
+    includeStyleReset: true,
+    rootEl: element
+  });
 
   const iconSize = {
     small: 'medium',
