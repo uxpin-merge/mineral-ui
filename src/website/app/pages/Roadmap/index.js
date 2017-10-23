@@ -21,6 +21,7 @@ import { createStyledComponent } from '../../../../utils';
 import GuidelinePage from '../../GuidelinePage';
 import Markdown from '../../Markdown';
 import Heading from '../../Heading';
+import Button from '../../../../Button';
 import content from './content.md';
 
 const todo = 'todo',
@@ -81,41 +82,37 @@ type Header = {
 
 type Headers = Array<Header>;
 
-export default function Roadmap() {
-  return (
-    <GuidelinePage>
-      <Markdown scope={{ Anchor }}>{content}</Markdown>
-      { renderHeaders(data) }
-    </GuidelinePage>
-  );
-}
-
 const styles = {
-  anchor: ({ theme }) => ({
-    color: 'black'
-  }),
-  li: ({ theme }) => ({
-    marginBottom: theme.space_stack_sm
-  }),
   badge: ({ status, theme }) => ({
     backgroundColor:
       done === status && theme.backgroundColor_success_activeMuted ||
       doing === status && theme.color_theme_20,
-    marginLeft: theme.space_inline_sm,
-    padding: `0 ${theme.space_inline_sm}`,
     borderRadius: theme.borderRadius_1,
-    fontWeight: theme.fontWeight_bold,
-    textDecoration: 'none',
     color: theme.color_text,
     fontSize: theme.fontSize_ui,
-    textTransform: 'uppercase'
+    fontWeight: theme.fontWeight_bold,
+    marginLeft: theme.space_inline_sm,
+    padding: `0 ${theme.space_inline_sm}`,
+    textDecoration: 'none',
+    textTransform: 'uppercase',
+    whiteSpace: 'nowrap'
+  }),
+  li: ({ theme }) => ({
+    marginBottom: theme.space_stack_sm
   })
 };
 
-const UL = createStyledComponent('ul');
-const LI = createStyledComponent('li', styles.li);
 const Badge = createStyledComponent('span', styles.badge);
-const Anchor = createStyledComponent('a', styles.anchor);
+const LI = createStyledComponent('li', styles.li);
+
+export default function Roadmap() {
+  return (
+    <GuidelinePage>
+      <Markdown scope={{ Button }}>{content}</Markdown>
+      { renderHeaders(data) }
+    </GuidelinePage>
+  );
+}
 
 function renderHeaders(data: Headers) {
   return data.map((header, idx) => renderHeader(header));
@@ -130,9 +127,9 @@ function renderHeader({title, bullets}: Header) {
 
 function renderItems(bullets: Bullets) {
   return (
-    <UL>
+    <ul>
       { bullets.map((bullet, idx) => <Bullet key={idx} {...bullet} />) }
-    </UL>
+    </ul>
   );
 }
 
