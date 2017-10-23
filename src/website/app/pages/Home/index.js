@@ -35,8 +35,8 @@ import _Hero from './Hero';
 import Section from './Section';
 import ThemePlayground from './ThemePlayground';
 import triangles from './triangles';
-import featureOne from './featureOne.md';
-import featureTwo from './featureTwo.md';
+import accessibility from './accessibility.md';
+import dropInComponents from './dropInComponents.md';
 import first from './first.md';
 import getStarted from './getStarted.md';
 import intro from './intro.md';
@@ -512,8 +512,8 @@ export default class Home extends Component<Props, State> {
               </PlaygroundSection>
               <Section>
                 <Features>
-                  <Feature>{featureOne}</Feature>
-                  <Feature>{featureTwo}</Feature>
+                  <Feature>{accessibility}</Feature>
+                  <Feature>{dropInComponents}</Feature>
                 </Features>
               </Section>
               <GetStartedSection

@@ -22,6 +22,7 @@ import IconFavorite from '../../../../Icon/IconFavorite';
 import ThemeProvider from '../../../../ThemeProvider';
 import Button from '../../../../Button';
 import Markdown from '../../Markdown';
+import content from './themePlayground.md';
 
 type Props = {
   index: number,
@@ -180,22 +181,6 @@ const PlaygroundOption = ({
 
 const playgroundButtonIcon = <IconFavorite />;
 
-const playgroundContent = `
-### Something About Themes
-
-Prime number, a mote of dust suspended in a sunbeam globular star cluster
-Orion’s sword decipherment! Consciousness tendrils of gossamer clouds.
-Tendrils of gossamer clouds are creatures of the cosmos, the carbon in our
-apple pies Vangelis. [Cambrian explosion](/components/link), Hypatia, finite
-but unbounded tingling of the spine descended from astronomers hearts of the
-stars billions upon billions dream of the mind’s eye, a very small stage in
-a vast cosmic arena.
-
-<Button iconStart={playgroundButtonIcon} primary>
-  We love themes
-</Button>
-`;
-
 const handleClick = (fn: () => void) => {
   fn();
   // TODO: blur here
@@ -243,7 +228,7 @@ export default function ThemePlaygound({
         <PlaygroundSandbox
           anchors={false}
           scope={{ Button, playgroundButtonIcon }}>
-          {playgroundContent}
+          {content}
         </PlaygroundSandbox>
       </Root>
     </ThemeProvider>
