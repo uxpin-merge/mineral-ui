@@ -20,132 +20,13 @@ import React from 'react';
 import { createStyledComponent } from '../../../../utils';
 import GuidelinePage from '../../GuidelinePage';
 import Markdown from '../../Markdown';
-import Heading from '../../Heading';
 import Button from '../../../../Button';
 import content from './content.md';
-
-const todo = 'todo',
-      doing = 'doing',
-      done = 'done';
-
-const data = [{
-  title: `Publish CA's Design System`,
-  bullets: [{
-    title: 'Write guideline pages that explain the different parts of our system',
-    status: done
-  }, {
-    title: 'Crystalize a home page that delights and excites potential users',
-    status: doing
-  }, {
-    title: 'Devise community pages that engage contributors',
-    status: todo
-  }]
-}, {
-  title: `Build Components`,
-  bullets: [{
-    title: 'Publish a proof of concept that we can use to validate our architecture',
-    status: done
-  }, {
-    title: 'Assemble a set of base components that could be used to stand up a simple app',
-    status: doing
-  }, {
-    title: 'Forge some higher-level components that stitch several of our base components together',
-    status: todo
-  }, {
-    title: 'Synthesize a stylistically robust DataTable that is performant under load',
-    status: todo
-  }]
-}, {
-  title: `Adoption Across CA's Products`,
-  bullets: [{
-    title: 'Fully Support CA API Management UI',
-    status: doing
-  }, {
-    title: 'Identify our next early adoptor product',
-    status: todo
-  }]
-}];
-
-type Status = todo | doing | done;
-
-type Bullet = {
-  title: string,
-  status?: Status
-};
-
-type Bullets = Array<Bullet>;
-
-type Header = {
-  title: string,
-  bullets: Bullets
-};
-
-type Headers = Array<Header>;
-
-const styles = {
-  badge: ({ status, theme }) => ({
-    backgroundColor:
-      done === status && theme.backgroundColor_success_activeMuted ||
-      doing === status && theme.color_theme_20,
-    borderRadius: theme.borderRadius_1,
-    color: theme.color_text,
-    fontSize: theme.fontSize_ui,
-    fontWeight: theme.fontWeight_bold,
-    marginLeft: theme.space_inline_sm,
-    padding: `0 ${theme.space_inline_sm}`,
-    textDecoration: 'none',
-    textTransform: 'uppercase',
-    whiteSpace: 'nowrap'
-  }),
-  li: ({ theme }) => ({
-    marginBottom: theme.space_stack_sm
-  })
-};
-
-const Badge = createStyledComponent('span', styles.badge);
-const LI = createStyledComponent('li', styles.li);
 
 export default function Roadmap() {
   return (
     <GuidelinePage>
       <Markdown scope={{ Button }}>{content}</Markdown>
-      { renderHeaders(data) }
     </GuidelinePage>
   );
-}
-
-function renderHeaders(data: Headers) {
-  return data.map((header, idx) => renderHeader(header));
-}
-
-function renderHeader({title, bullets}: Header) {
-  return [
-    <Heading level={3} key={0}>{title}</Heading>,
-    renderItems(bullets)
-  ];
-}
-
-function renderItems(bullets: Bullets) {
-  return (
-    <ul>
-      { bullets.map((bullet, idx) => <Bullet key={idx} {...bullet} />) }
-    </ul>
-  );
-}
-
-function Bullet({ title, status }: Bullet) {
-  return (
-    <LI>
-      { title }
-      { renderStatus(status) }
-    </LI>
-  );
-}
-
-function renderStatus(status: Status) {
-  return ([undefined, todo].indexOf(status) === -1) ? (
-    <Badge status={status}>
-      {status === doing ? 'in-progress' : status}
-    </Badge>
-  ) : null;
 }

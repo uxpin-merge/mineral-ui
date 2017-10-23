@@ -23,6 +23,7 @@ import Paragraph from './Paragraph';
 import Link from './Link';
 import MarkdownTable from './MarkdownTable';
 import prism from './utils/prism';
+import Label from './Label';
 
 type Props = {
   children: React$Node,
@@ -58,25 +59,6 @@ const Root = createStyledComponent('div', ({ theme }) => ({
 
   '& p': {
     marginBottom: `${theme.lineHeight * 1.5}em`
-  },
-
-  '& a:link': {
-    color: theme.color_text_primary,
-    textDecoration: 'none'
-  },
-  '& a:hover': {
-    color: theme.color_text_primary_hover,
-    textDecoration: 'underline'
-  },
-  '& a:focus': {
-    color: theme.color_text_primary_focus,
-    outline: `1px solid ${theme.borderColor_focus}`,
-    outlineOffset: '2px'
-  },
-  // `:active` must be last, to follow LVHFA order:
-  // https://developer.mozilla.org/en-US/docs/Web/CSS/:active
-  '& a:active': {
-    color: theme.color_text_primary_active
   },
 
   '& :not(pre) > code': {
@@ -124,6 +106,12 @@ const Image = createStyledComponent('img', {
     width: '100%'
   }
 });
+const ListItem = createStyledComponent('li', ({ theme }) => ({
+  marginBottom: theme.space_stack_sm,
+  '& *': {
+    marginLeft: theme.space_inset_sm
+  }
+}));
 
 function replaceHeading(level, children, headingProps: mdHeadingProps) {
   // Render the same props and children that were passed in, but prepend a
@@ -211,6 +199,28 @@ export default function Markdown({ children, scope, ...restProps }: Props) {
       },
       table({ children }) {
         return <MarkdownTable>{children}</MarkdownTable>;
+      },
+      li({ children }) {
+        const newChildren = children.map(child => {
+          const labelDelimiter = '~';
+          const idx = child && child.indexOf && child.indexOf(labelDelimiter);
+
+          if (typeof child !== 'string' || idx === -1) {
+            return child;
+          }
+
+          const preLabelText = child.substr(0, idx).trim();
+          const labelText = child.substr(idx + labelDelimiter.length).trim();
+          const labelVariant = "done" === labelText ? "success" : "regular";
+
+          return [
+            preLabelText,
+            <Label variant={ labelVariant }>
+              { labelText }
+            </Label>
+          ];
+        });
+        return <ListItem>{ newChildren }</ListItem>;
       }
     },
     components: {

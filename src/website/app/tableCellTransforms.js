@@ -21,7 +21,7 @@ import IconCheck from '../../Icon/IconCheck';
 import IconAssignment from '../../Icon/IconAssignment';
 import IconSlowMotionVideo from '../../Icon/IconSlowMotionVideo';
 import IconWarning from '../../Icon/IconWarning';
-import _Label from './Label';
+import Label from './Label';
 
 // a tilde surrounded by some spaces and "new"
 const REGEX_LABEL_NEW = /^\s+?~\s+?(new)/;
@@ -29,7 +29,6 @@ const REGEX_LABEL_NEW = /^\s+?~\s+?(new)/;
 const REGEX_LABEL_EXPERIMENTAL = /^\s+?~\s+?(experimental)/;
 
 const styles = {
-  label: ({ theme }) => ({ marginLeft: theme.space_inline_md }),
   icon: {
     '& svg': {
       verticalAlign: 'text-top'
@@ -46,7 +45,6 @@ const styles = {
   }
 };
 
-const Label = createStyledComponent(_Label, styles.label);
 const Available = createStyledComponent('span', styles.icon);
 const InDevelopment = createStyledComponent('span', styles.icon);
 const Planned = createStyledComponent('span', styles.icon);
