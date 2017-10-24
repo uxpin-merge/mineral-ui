@@ -35,6 +35,7 @@ import _Markdown from '../../Markdown';
 import Canvas from './Canvas';
 import Footer from './Footer';
 import Header from './Header';
+import Rocks from './Rocks';
 import Section from './Section';
 import ThemePlayground from './ThemePlayground';
 import triangles from './triangles';
@@ -202,17 +203,6 @@ const styles = {
       marginLeft: theme.space_inline_lg
     }
   }),
-  coloredLogo: {
-    '& .band-1': {
-      fill: mineralColor.yellow
-    },
-    '& .band-2': {
-      fill: mineralColor.orange
-    },
-    '& .band-3': {
-      fill: mineralColor.slate
-    }
-  },
   features: {
     '@media(min-width: 39em)': {
       display: 'flex',
@@ -230,6 +220,18 @@ const styles = {
       '& + &': {
         marginTop: 0
       }
+    }
+  }),
+  floatingRocks: ({ theme }) => ({
+    height: 150,
+    margin: `0 auto ${theme.baseline_3}`,
+    width: 300,
+
+    '@media(min-width: 61em)': {
+      height: 300,
+      flex: `0 0 300px`,
+      order: 2,
+      margin: 0
     }
   }),
   getStarted: ({ theme }) => ({
@@ -360,35 +362,26 @@ const styles = {
       // paddingTop: theme.baseline_3
     }
   }),
-  guidelines: ({ theme }) => ({
-    '@media(max-width: 38.999em)': {
-      textAlign: 'center',
+  guidelines: {
+    textAlign: 'center',
 
-      '& > svg': {
-        margin: '0 auto',
-        maxWidth: '10vh',
-        width: '50%'
-      }
-    },
-
-    '@media(min-width: 39em)': {
-      display: 'grid',
-      gridTemplateColumns: '1fr 10em',
-      gridColumnGap: theme.space_inline_md,
-
-      '& > *': {
-        gridColumn: 1,
-        textAlign: 'right'
-      },
-
-      '& > svg': {
-        alignSelf: 'center',
-        gridColumn: 2,
-        gridRow: '1 / span 2',
-        width: '100%'
+    '@media(min-width: 61em)': {
+      flex: `1 1 auto`,
+      marginLeft: `${1 / 12 * 100}%`,
+      marginRight: `${1 / 12 * 100}%`,
+      order: 1,
+      textAlign: 'right'
+    }
+  },
+  guidelinesSection: {
+    '@media(min-width: 61em)': {
+      // Inner
+      '& > div': {
+        alignItems: 'center',
+        display: 'flex'
       }
     }
-  }),
+  },
   hero: {
     // Inner
     '> div': {
@@ -505,12 +498,12 @@ const Markdown = createStyledComponent(_Markdown, styles.markdown);
 const BlogLink = createStyledComponent(Link, styles.blogLink);
 const Button = createStyledComponent(_Button, styles.button);
 const Buttons = createStyledComponent('div', styles.buttons);
-const ColoredLogo = createStyledComponent(Logo, styles.coloredLogo);
 const CTALink = createThemedComponent(Link, CTALinkTheme);
 const Features = createStyledComponent('div', styles.features);
 const Feature = createStyledComponent(Markdown, styles.feature).withProps({
   anchors: false
 });
+const FloatingRocks = createStyledComponent(Rocks, styles.floatingRocks);
 const GetStarted = createStyledComponent(
   Markdown,
   styles.getStarted
@@ -527,6 +520,10 @@ const Guidelines = createStyledComponent(
   Markdown,
   styles.guidelines
 ).withProps({ anchors: false });
+const GuidelinesSection = createStyledComponent(
+  Section,
+  styles.guidelinesSection
+);
 const Hero = createStyledComponent(Section, styles.hero);
 const HeroCanvas = createStyledComponent(Canvas, styles.heroCanvas);
 const Intro = createStyledComponent(Markdown, styles.intro).withProps({
@@ -563,7 +560,7 @@ export default class Home extends Component<Props, State> {
 
   componentDidMount() {
     triangles();
-    this.rotateThemes(this.state.themeIndex);
+    // this.rotateThemes(this.state.themeIndex);
   }
 
   render() {
@@ -576,7 +573,7 @@ export default class Home extends Component<Props, State> {
             <Root>
               <ThemeProvider theme={heroTheme}>
                 <Hero
-                  angles={matches ? [7, 7] : [5, 5]}
+                  angles={matches ? [7, 8] : [5, 5]}
                   point={matches ? 1 / 4 : 1 / 1000}>
                   <HeroCanvas />
                   <Header latestPost={latestPost} />
@@ -596,15 +593,18 @@ export default class Home extends Component<Props, State> {
                   </Buttons>
                 </Hero>
               </ThemeProvider>
-              <Section
+              <GuidelinesSection
                 angles={[3, 5]}
                 // $FlowFixMe
                 clipColor={playgroundThemes[themeIndex].color_theme_80}
                 point={matches ? 3 / 4 : 999 / 1000}>
-                <Guidelines scope={{ ColoredLogo, IconChevronRight, CTALink }}>
+                <Media query="(min-width: 61em)">
+                  {matches => <FloatingRocks showRockPile={matches} />}
+                </Media>
+                <Guidelines scope={{ CTALink, IconChevronRight }}>
                   {guidelines}
                 </Guidelines>
-              </Section>
+              </GuidelinesSection>
               <PlaygroundSection
                 angles={[5, 3]}
                 index={themeIndex}

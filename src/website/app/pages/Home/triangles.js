@@ -1122,7 +1122,7 @@ export default function triangles(xPos = 100, yPos = 300) {
     addEventListeners();
     resize(container.offsetWidth, container.offsetHeight);
     animate();
-    moveLight();
+    // moveLight();
   }
 
   function createRenderer() {

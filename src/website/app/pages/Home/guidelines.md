@@ -1,5 +1,3 @@
-<ColoredLogo />
-
 ### Simplicity, Quality, Speed — Pick Three
 
 People expect modern, engaging experiences that work.
