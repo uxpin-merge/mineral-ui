@@ -2,19 +2,11 @@
 
 ### Let’s Get Started
 
-1. #### Install the [Mineral UI package](https://www.npmjs.com/package/mineral-ui)
+1. #### Install the [Mineral UI package](https://www.npmjs.com/package/mineral-ui) using `npm` or `yarn`.
 
     ```bash
-    npm install --save mineral-ui
+    npm install --save mineral-ui glamor glamorous react react-dom
     ```
-
-    or
-
-    ```bash
-    yarn add mineral-ui
-    ```
-
-    Then install any missing peer dependencies reported by `npm` or `yarn`.
 
 1. #### Wrap your app in a [ThemeProvider](/components/theme-provider) at its root for styling
 

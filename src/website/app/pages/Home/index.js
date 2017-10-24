@@ -32,6 +32,7 @@ import Link from '../../Link';
 import Logo from '../../Logo';
 import Markdown from '../../Markdown';
 import Canvas from './Canvas';
+import Footer from './Footer';
 import Header from './Header';
 import Section from './Section';
 import ThemePlayground from './ThemePlayground';
@@ -192,7 +193,7 @@ const styles = {
   },
   getStarted: ({ theme }) => ({
     margin: '0 auto',
-    width: 'min-content',
+    maxWidth: 'min-content',
 
     '& > svg': {
       display: 'block',
@@ -511,6 +512,9 @@ export default class Home extends Component<Props, State> {
                   </GetStarted>
                 </ThemeProvider>
               </GetStartedSection>
+              <ThemeProvider theme={gettingStartedTheme}>
+                <Footer />
+              </ThemeProvider>
             </Root>
           </ThemeProvider>
         )}
