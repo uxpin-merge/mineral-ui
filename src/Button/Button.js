@@ -42,6 +42,8 @@ type Props = {
   primary?: boolean,
   /** Available sizes */
   size?: 'small' | 'medium' | 'large' | 'jumbo',
+  /** Available types */
+  type?: 'button' | 'submit',
   /** Available variants */
   variant?: 'regular' | 'danger' | 'success' | 'warning'
 };
@@ -294,10 +296,17 @@ export default function Button({
   iconStart,
   iconEnd,
   size = 'large',
+  type = 'button',
   variant = 'regular',
   ...restProps
 }: Props) {
-  const rootProps = { size, text: children, variant, ...restProps };
+  const rootProps = {
+    size,
+    text: children,
+    type: 'button' === element ? type : undefined,
+    variant,
+    ...restProps
+  };
 
   const Root = createStyledComponent(element, styles.button, {
     includeStyleReset: true,
