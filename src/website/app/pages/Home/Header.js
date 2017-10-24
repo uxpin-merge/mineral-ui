@@ -29,6 +29,7 @@ import _Popover from '../../../../Popover';
 import Heading from '../../Heading';
 import _Link from '../../Link';
 import LogotypeHorizontal from '../../LogotypeHorizontal';
+// import { pxToEm } from './index';
 
 type Props = {
   latestPost?: {
@@ -49,13 +50,15 @@ const menuButtonTheme = ({ theme }) => ({
   Button_fontWeight: theme.fontWeight_regular,
   Button_height_large: null,
   Button_paddingHorizontal: 0,
-  ButtonContent_fontSize: pxToEm(18)
+  ButtonContent_fontSize: '1em',
+  ButtonIcon_margin: theme.space_inline_xxs
 });
 const popoverTheme = {
   PopoverContent_backgroundColor: null,
   PopoverContent_borderColor: 'transparent',
   PopoverContent_borderRadius: null,
-  PopoverContent_boxShadow: null
+  PopoverContent_boxShadow: null,
+  PopoverContent_paddingVertical: null
 };
 
 const styles = {
@@ -66,18 +69,19 @@ const styles = {
       alignItems: 'flex-end',
       display: 'flex',
       justifyContent: 'space-between',
-      marginBottom: `${parseFloat(theme.space_inset_sm) * 16}em`,
-      paddingTop: `${parseFloat(theme.space_inset_sm) * 8}em`,
+      marginBottom: theme.baseline_10,
+      paddingTop: pxToEm(30),
 
       '@media(max-width: 38.999em)': {
         marginBottom: isMenuOpen
-          ? `${parseFloat(theme.space_inset_sm) * 33}em` // Dependent on menu height
-          : `${parseFloat(theme.space_inset_sm) * 8}em`,
-        paddingTop: `${parseFloat(theme.space_inset_sm) * 3}em`,
+          ? `${parseFloat(theme.space_inset_sm) * 35}em` // Dependent on menu height
+          : theme.baseline_6,
+        paddingTop: `${parseFloat(theme.space_inset_sm) * 4}em`,
         transition: `margin ${transitionProperties}`,
 
         '& div[id$="popoverContent"]': {
-          marginTop: theme.space_stack_sm,
+          // Matches nav link padding + menuButton optical adjustment
+          marginTop: `${parseFloat(theme.space_stack_sm) + 0.45}em`,
           opacity: isMenuOpen ? 1 : 0,
           transition: `opacity ${transitionProperties}`,
 
@@ -90,9 +94,10 @@ const styles = {
       }
     };
   },
-  link: {
-    fontSize: pxToEm(18)
-  },
+  link: ({ theme }) => ({
+    fontFamily: theme.fontFamily_headline,
+    fontSize: '1em'
+  }),
   logotype: {
     lineHeight: 1,
     margin: 0,
@@ -103,13 +108,17 @@ const styles = {
 
     '& svg': {
       display: 'block',
-      width: 137
+      width: 128, // Reaches to midpoint of a 320-wide viewport
+
+      '@media(min-width: 39em)': {
+        width: 157
+      }
     }
   },
   menuButton: {
     border: 0,
     position: 'relative',
-    top: '0.3em', // Optical adjustment for baseline alignment with Logotype
+    top: '0.45em', // Optical adjustment for baseline alignment with Logotype
 
     '&:focus': {
       color: color.orange_50,
@@ -128,10 +137,10 @@ const styles = {
         textAlign: 'right',
 
         '&:nth-child(1)': { backgroundColor: 'rgba(0,0,0,0.5)' },
-        '&:nth-child(2)': { backgroundColor: 'rgba(0,0,0,0.42)' },
-        '&:nth-child(3)': { backgroundColor: 'rgba(0,0,0,0.34)' },
-        '&:nth-child(4)': { backgroundColor: 'rgba(0,0,0,0.26)' },
-        '&:nth-child(5)': { backgroundColor: 'rgba(0,0,0,0.18)' }
+        '&:nth-child(2)': { backgroundColor: 'rgba(0,0,0,0.44)' },
+        '&:nth-child(3)': { backgroundColor: 'rgba(0,0,0,0.38)' },
+        '&:nth-child(4)': { backgroundColor: 'rgba(0,0,0,0.32)' },
+        '&:nth-child(5)': { backgroundColor: 'rgba(0,0,0,0.26)' }
       }
     },
 

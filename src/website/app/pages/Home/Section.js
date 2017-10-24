@@ -16,7 +16,7 @@
 
 /* @flow */
 import React from 'react';
-import { createStyledComponent } from '../../../../utils';
+import { createStyledComponent, pxToEm } from '../../../../utils';
 
 type Props = {
   angles?: Array<number>,
@@ -31,11 +31,12 @@ const styles = {
   }),
   inner: ({ angles, clipColor, point, theme }) => {
     const clipBottomEdge = angles[0] > 0;
-    const paddingHorizontal = `${parseFloat(theme.space_inset_sm) * 4}em`;
-    const paddingHorizontalWide = `${parseFloat(theme.space_inset_sm) * 16}em`;
-    const paddingVertical = `${parseFloat(theme.space_inset_sm) * 4}em`;
+    const paddingHorizontal = pxToEm(30);
+    const paddingHorizontalWide = pxToEm(100);
+    const paddingVertical = theme.baseline_6;
     const paddingVerticalWide = `${parseFloat(theme.space_inset_sm) * 16}em`;
-    const paddingWithClip = `${parseFloat(theme.space_inset_sm) * 16}em`;
+    const paddingWithClip = `${parseFloat(theme.baseline_6) +
+      parseFloat(theme.baseline_2)}em`;
     const paddingWithClipWide = `${parseFloat(theme.space_inset_sm) * 24}em`;
     const paddingBottom =
       point && clipBottomEdge ? paddingWithClip : paddingVertical;

@@ -16,7 +16,12 @@
 
 /* @flow */
 import React from 'react';
-import { createStyledComponent } from '../../../../utils';
+import Media from 'react-media';
+import {
+  createStyledComponent,
+  getNormalizedValue,
+  pxToEm
+} from '../../../../utils';
 import IconCheck from '../../../../Icon/IconCheck';
 import IconFavorite from '../../../../Icon/IconFavorite';
 import ThemeProvider from '../../../../ThemeProvider';
@@ -40,13 +45,16 @@ type OptionProps = {
 
 const styles = {
   root: ({ theme }) => ({
-    display: 'grid',
-    gridGap: theme.space_inline_sm,
-    gridTemplateColumns: 'repeat(3, auto)',
-    gridTemplateRows: `min-content auto`,
     marginTop: theme.space_stack_xl,
     position: 'relative', // for z-index
     zIndex: 2,
+
+    '@media(min-width: 23em)': {
+      display: 'grid',
+      gridGap: theme.space_inline_sm,
+      gridTemplateColumns: 'repeat(3, auto)',
+      gridTemplateRows: `min-content auto`
+    },
 
     '@media(min-width: 48em)': {
       gridGap: theme.space_inline_md,
@@ -64,13 +72,20 @@ const styles = {
     boxShadow: isActive ? `0 0 0 1px ${theme[`borderColor_focus`]}` : null,
     cursor: 'pointer',
     display: 'flex',
-    justifyContent: 'center',
-    padding: theme.space_inset_sm,
+    marginBottom: theme.space_stack_sm,
+    padding: `${theme.space_inset_sm} ${theme.space_inset_lg}`,
     position: 'relative',
+    width: '100%',
     '&::-moz-focus-inner': { border: 0 },
 
     '&:focus,&:hover': {
       backgroundColor: themes[thisIndex].color_theme_10
+    },
+
+    '@media(min-width: 23em)': {
+      marginBottom: 0,
+      padding: theme.space_inset_sm,
+      justifyContent: 'center'
     },
 
     '@media(min-width: 29em)': {
@@ -88,7 +103,6 @@ const styles = {
     }
   }),
   optionHex: ({ theme }) => ({
-    color: theme.color_caption,
     display: 'block',
     fontSize: theme.fontSize_mouse,
     marginTop: theme.space_stack_xxs,
@@ -117,6 +131,7 @@ const styles = {
     }
   }),
   optionName: ({ theme }) => ({
+    color: theme.color_gray_100,
     display: 'block',
     fontSize: theme.fontSize_ui,
     fontWeight: theme.fontWeight_bold
@@ -125,15 +140,41 @@ const styles = {
     backgroundColor: theme.color_white,
     borderRadius: theme.borderRadius_1,
     gridColumn: '1 / span 3',
-    padding: theme.space_inset_lg,
+    padding: `${theme.space_inset_lg} ${pxToEm(28)}`,
 
     '@media(min-width: 48em)': {
       gridColumn: 2,
       gridRow: '1 / span 4'
     },
 
-    '& > h3': {
-      color: theme.color_theme_80
+    '& h3': {
+      color: theme.color_theme_80,
+      margin: `0 0 ${getNormalizedValue(
+        theme.baseline_2,
+        theme.Heading_fontSize_3_wide
+      )}`,
+
+      // Dependent on h3 content | TODO: test this
+      '@media(max-width: 29.999em)': {
+        fontSize: theme.Heading_fontSize_3,
+        margin: `0 0 ${getNormalizedValue(
+          theme.baseline_2,
+          theme.Heading_fontSize_3
+        )}`
+      }
+    },
+
+    '& > button': {
+      '@media(max-width: 22.999em)': {
+        padding: `0 ${theme.space_inline_xxs}`,
+        width: '100%',
+
+        // Content, with a specificity hack
+        '& > span > span[class]': {
+          paddingLeft: theme.space_inline_xxs,
+          paddingRight: theme.space_inline_xxs
+        }
+      }
     }
   })
 };
@@ -179,8 +220,6 @@ const Option = ({
   );
 };
 
-const playgroundButtonIcon = <IconFavorite />;
-
 const handleClick = (fn: () => void) => {
   fn();
   // TODO: blur here
@@ -210,9 +249,17 @@ export default function ThemePlaygound({
           };
           return <Option {...optionProps}>{theme.name}</Option>;
         })}
-        <Sandbox anchors={false} scope={{ Button, playgroundButtonIcon }}>
-          {content}
-        </Sandbox>
+        <Media query="(min-width: 23em)">
+          {matches => {
+            const playgroundButtonIcon = matches ? <IconFavorite /> : undefined;
+
+            return (
+              <Sandbox anchors={false} scope={{ Button, playgroundButtonIcon }}>
+                {content}
+              </Sandbox>
+            );
+          }}
+        </Media>
       </Root>
     </ThemeProvider>
   );

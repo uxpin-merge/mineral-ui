@@ -30,8 +30,3 @@
     ```
 
 1. #### [Contribute!](https://github.com/mineral-ui/mineral-ui) Mineral is open-source
-
-<Buttons>
-  <Button primary size="jumbo">Read the full documentation</Button>
-  <Button size="jumbo">View on GitHub</Button>
-</Buttons>

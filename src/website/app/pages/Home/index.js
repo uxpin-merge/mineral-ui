@@ -22,15 +22,16 @@ import {
   color,
   createStyledComponent,
   createThemedComponent,
+  getNormalizedValue,
   mineralTheme,
   pxToEm
 } from '../../../../utils';
-import Button from '../../../../Button';
+import _Button from '../../../../Button';
 import IconChevronRight from '../../../../Icon/IconChevronRight';
 import ThemeProvider from '../../../../ThemeProvider';
 import Link from '../../Link';
 import Logo from '../../Logo';
-import Markdown from '../../Markdown';
+import _Markdown from '../../Markdown';
 import Canvas from './Canvas';
 import Footer from './Footer';
 import Header from './Header';
@@ -39,8 +40,8 @@ import ThemePlayground from './ThemePlayground';
 import triangles from './triangles';
 import accessibility from './accessibility.md';
 import dropInComponents from './dropInComponents.md';
-import first from './first.md';
 import getStarted from './getStarted.md';
+import guidelines from './guidelines.md';
 import intro from './intro.md';
 
 // Temp
@@ -54,16 +55,14 @@ type State = {
   themeIndex: number
 };
 
+// export function pxToEm(value: number) {
+//   return `${value / 18}em`;
+// }
+
 const latestPost = {
   title: 'How we built our site using our components',
   url: 'https://medium.com'
 };
-
-const playgroundThemes = [
-  { name: 'Magenta', ...magenta },
-  { name: 'Teal', ...teal },
-  { name: 'Sky', ...sky }
-];
 
 const mineralColor = {
   orange: color.orange_50,
@@ -80,19 +79,44 @@ const mineralColor = {
   slate_hover: color.slate_50
 };
 
+const playgroundThemes = [
+  { name: 'Magenta', ...magenta, color_text: mineralColor.slate },
+  { name: 'Teal', ...teal, color_text: mineralColor.slate },
+  { name: 'Sky', ...sky, color_text: mineralColor.slate }
+];
+
 const rootTheme = {
+  baseline_1: pxToEm(13),
+  baseline_2: pxToEm(13 * 2),
+  baseline_3: pxToEm(13 * 3),
+  baseline_4: pxToEm(13 * 4),
+  baseline_5: pxToEm(13 * 5),
+  baseline_6: pxToEm(13 * 6),
+  baseline_7: pxToEm(13 * 7),
+  baseline_8: pxToEm(13 * 8),
+  baseline_9: pxToEm(13 * 9),
+  baseline_10: pxToEm(13 * 10),
+
+  color_text: mineralColor.slate,
   fontFamily: null,
   fontFamily_headline: `franklin-gothic-urw, ${mineralTheme.fontFamily_system}`,
+  fontSize_base: 16,
 
-  ButtonContent_fontSize: '1.1em',
+  Button_fontWeight: mineralTheme.fontWeight_regular,
+  Button_height_jumbo: pxToEm(39),
+  Button_paddingHorizontal: pxToEm(16), // For a total of 32
+  ButtonContent_fontSize: pxToEm(19),
 
   Heading_color_3: mineralColor.orange,
   Heading_fontFamily: `franklin-gothic-urw, ${mineralTheme.fontFamily_system}`,
-  Heading_fontSize_2: pxToEm(59),
-  Heading_fontSize_3: pxToEm(40),
+  Heading_fontSize_2: pxToEm(39),
+  Heading_fontSize_2_wide: pxToEm(59),
+  Heading_fontSize_3: pxToEm(26),
+  Heading_fontSize_3_wide: pxToEm(40),
   Heading_fontWeight_1: '300',
   Heading_fontWeight_2: '300',
   Heading_fontWeight_3: '300',
+  Heading_fontWeight_4: '500',
   Heading_lineHeight: '1.1'
 };
 const heroTheme = {
@@ -102,7 +126,7 @@ const heroTheme = {
   Button_backgroundColor_primary_active: mineralColor.orange_active,
   Button_backgroundColor_primary_focus: mineralColor.orange_focus,
   Button_backgroundColor_primary_hover: mineralColor.orange_hover,
-  Button_color_text: mineralColor.orange,
+  Button_color_text: mineralColor.slate_active,
 
   Heading_color_2: color.white,
 
@@ -131,23 +155,33 @@ const gettingStartedTheme = {
   Link_color_hover: mineralColor.yellow_hover
 };
 const CTALinkTheme = {
-  Link_color: color.gray_80,
-  Link_color_active: color.gray_90,
-  Link_color_hover: color.gray_70,
-  Link_color_focus: color.gray_80
+  Link_color: mineralColor.orange,
+  Link_color_active: mineralColor.orange_active,
+  Link_color_hover: mineralColor.orange_hover,
+  Link_color_focus: mineralColor.orange_focus
 };
 
 const styles = {
+  root: {
+    // fontSize: pxToEm(18)
+  },
   blogLink: ({ theme }) => ({
     backgroundColor: 'rgba(0,0,0,0.4)',
     borderRadius: theme.borderRadius_1,
-    padding: `${parseFloat(theme.space_inset_sm) / 2}em`,
+    display: 'inline-block',
+    fontFamily: theme.fontFamily_headline,
+    marginBottom: theme.baseline_6,
+    padding: `0 ${parseFloat(theme.space_inset_sm) / 2}em`,
+
+    '&:hover,&:focus': {
+      backgroundColor: 'rgba(0,0,0,0.2)',
+      textDecoration: 'none'
+    },
 
     '&::before': {
-      backgroundColor: mineralColor.yellow,
+      backgroundColor: mineralColor.orange_active,
       borderRadius: theme.borderRadius_1,
       bottom: '0.1em',
-      color: theme.color_black,
       content: 'New',
       fontSize: '0.8em',
       fontWeight: theme.fontWeight_bold,
@@ -158,11 +192,10 @@ const styles = {
       `,
       position: 'relative',
       textTransform: 'uppercase'
-    },
-
-    '&:hover::before': {
-      textDecoration: 'none'
     }
+  }),
+  button: ({ theme }) => ({
+    fontFamily: theme.fontFamily_headline
   }),
   buttons: ({ theme }) => ({
     '& > * + *': {
@@ -186,34 +219,64 @@ const styles = {
       justifyContent: 'space-between'
     }
   },
-  feature: {
+  feature: ({ theme }) => ({
+    '& + &': {
+      marginTop: theme.baseline_6
+    },
+
     '@media(min-width: 39em)': {
-      width: '40%'
+      width: '40%',
+
+      '& + &': {
+        marginTop: 0
+      }
     }
-  },
+  }),
   getStarted: ({ theme }) => ({
     margin: '0 auto',
     maxWidth: 'min-content',
 
     '& > svg': {
       display: 'block',
-      margin: '0 auto',
-      width: '50px'
+      margin: `0 auto ${theme.baseline_2}`,
+      width: '52px'
     },
 
-    '& > h3': {
-      textAlign: 'center'
+    // TODO: Specificity hack
+    '& > h3[id]': {
+      margin: `0 0 ${getNormalizedValue(
+        theme.baseline_6,
+        theme.Heading_fontSize_3_wide
+      )}`,
+      textAlign: 'center',
+
+      '@media(max-width: 29.999em)': {
+        margin: `0 0 ${getNormalizedValue(
+          theme.baseline_6,
+          theme.Heading_fontSize_3
+        )}`
+      }
     },
 
     '& > ol': {
       counterReset: 'getStarted',
       listStyle: 'none',
+      margin: 0,
       padding: 0
     },
 
     '& > ol > li': {
       counterIncrement: 'getStarted',
+      paddingTop: `${1.5 + parseFloat(theme.baseline_1)}em`,
       position: 'relative',
+
+      '@media(min-width: 39em)': {
+        paddingTop: 0
+      },
+
+      '& + li': {
+        marginTop: theme.baseline_6
+      },
 
       '&::before': {
         backgroundColor: mineralColor.yellow,
@@ -222,12 +285,30 @@ const styles = {
         color: theme.color_gray_100,
         fontWeight: theme.fontWeight_extraBold,
         height: '1.5em',
-        right: `calc(100% + ${theme.space_inline_md})`,
+        left: 0,
         position: 'absolute',
         textAlign: 'center',
-        top: '-0.2em', // Optical adjustment
-        width: '1.5em'
+        top: 0,
+        // transform: 'translateX(50%)',
+        width: '1.5em',
+
+        '@media(min-width: 39em)': {
+          left: 'auto',
+          right: `calc(100% + ${theme.space_inline_md})`,
+          top: '0.05em' // Optical adjustment
+          // transform: 'none'
+        }
+      },
+
+      '& > h4': {
+        lineHeight: theme.lineHeight_prose,
+        fontWeight: theme.Heading_fontWeight_4,
+        margin: `0 0 ${getNormalizedValue(theme.baseline_2, theme.fontSize_h4)}`
       }
+    },
+
+    '& pre': {
+      maxHeight: 'none'
     }
   }),
   getStartedBackgrounds: ({ theme }) => ({
@@ -262,6 +343,7 @@ const styles = {
   getStartedSection: ({ theme }) => ({
     position: 'relative',
 
+    // TODO: Maybe not necessary?
     '&::before': {
       backgroundColor: theme.color_gray_100,
       bottom: 0,
@@ -271,6 +353,11 @@ const styles = {
       right: 0,
       top: 0,
       zIndex: '-2'
+    },
+
+    // Inner
+    '& > div': {
+      // paddingTop: theme.baseline_3
     }
   }),
   guidelines: ({ theme }) => ({
@@ -316,32 +403,70 @@ const styles = {
     backgroundColor: mineralColor.slate,
 
     '@media(max-width: 38.999em)': {
-      bottom: '-12.5em' // Matches change in Header margin due to open menu
+      bottom: '-14.5em' // Matches change in Header margin due to open menu
     },
 
     '& > svg': {
       mixBlendMode: 'hard-light'
     }
   },
-  intro: {
-    // Dependent on h2 content
-    '& > h2': {
-      '@media(max-width: 29.999em)': {
-        fontSize: pxToEm(44)
+  intro: ({ theme }) => ({
+    // All of these numbers are dependent on width of h2 content
+    '& h2': {
+      fontSize: theme.Heading_fontSize_2,
+      margin: `0 0 ${getNormalizedValue(
+        theme.baseline_2,
+        theme.Heading_fontSize_2
+      )}`,
+
+      '@media(min-width: 48em)': {
+        fontSize: theme.Heading_fontSize_2_wide,
+        margin: `0 0 ${getNormalizedValue(
+          theme.baseline_2,
+          theme.Heading_fontSize_2_wide
+        )}`,
+        maxWidth: getNormalizedValue(pxToEm(396), theme.Heading_fontSize_2_wide)
+      },
+
+      '@media(min-width: 67em)': {
+        maxWidth: 'none'
       }
     },
 
-    // All of these numbers are dependent on width of h2 content
     '& > p': {
-      '@media(min-width: 52em)': {
-        maxWidth: '36em'
+      '@media(min-width: 39em)': {
+        maxWidth: pxToEm(396)
       },
 
-      '@media(min-width: 62em)': {
-        maxWidth: '41em'
+      '@media(min-width: 67em)': {
+        '&[class]': {
+          maxWidth: pxToEm(611)
+        }
       }
     }
-  },
+  }),
+  markdown: ({ theme }) => ({
+    '& h3': {
+      fontSize: theme.Heading_fontSize_3,
+      margin: `0 0 ${getNormalizedValue(
+        theme.baseline_2,
+        theme.Heading_fontSize_3
+      )}`,
+
+      // Dependent on h3 content | TODO: test this
+      '@media(min-width: 30em)': {
+        fontSize: theme.Heading_fontSize_3_wide,
+        margin: `0 0 ${getNormalizedValue(
+          theme.baseline_2,
+          theme.Heading_fontSize_3_wide
+        )}`
+      }
+    },
+
+    '& p': {
+      margin: `0 0 ${theme.baseline_3}`
+    }
+  }),
   playgroundCanvas: ({ index }) => ({
     background: `linear-gradient(
       ${rgba(playgroundThemes[index].color_theme_80, 0.5)},
@@ -372,14 +497,13 @@ const styles = {
   })
 };
 
-const Root = createStyledComponent(
-  'div',
-  {},
-  {
-    includeStyleReset: true
-  }
-);
+const Root = createStyledComponent('div', styles.root, {
+  includeStyleReset: true
+});
+// Must come before all of the other Markdown-based Components
+const Markdown = createStyledComponent(_Markdown, styles.markdown);
 const BlogLink = createStyledComponent(Link, styles.blogLink);
+const Button = createStyledComponent(_Button, styles.button);
 const Buttons = createStyledComponent('div', styles.buttons);
 const ColoredLogo = createStyledComponent(Logo, styles.coloredLogo);
 const CTALink = createThemedComponent(Link, CTALinkTheme);
@@ -451,7 +575,9 @@ export default class Home extends Component<Props, State> {
           <ThemeProvider theme={rootTheme}>
             <Root>
               <ThemeProvider theme={heroTheme}>
-                <Hero angles={[5, 3]} point={matches ? 1 / 4 : 1 / 1000}>
+                <Hero
+                  angles={matches ? [7, 7] : [5, 5]}
+                  point={matches ? 1 / 4 : 1 / 1000}>
                   <HeroCanvas />
                   <Header latestPost={latestPost} />
                   {latestPost &&
@@ -466,12 +592,7 @@ export default class Home extends Component<Props, State> {
                     <Button primary size="jumbo">
                       Get Started
                     </Button>
-                    <Media
-                      query="(min-width: 39em)"
-                      render={() => (
-                        <Button size="jumbo">View on GitHub</Button>
-                      )}
-                    />
+                    {matches && <Button size="jumbo">View on GitHub</Button>}
                   </Buttons>
                 </Hero>
               </ThemeProvider>
@@ -481,7 +602,7 @@ export default class Home extends Component<Props, State> {
                 clipColor={playgroundThemes[themeIndex].color_theme_80}
                 point={matches ? 3 / 4 : 999 / 1000}>
                 <Guidelines scope={{ ColoredLogo, IconChevronRight, CTALink }}>
-                  {first}
+                  {guidelines}
                 </Guidelines>
               </Section>
               <PlaygroundSection
@@ -509,9 +630,15 @@ export default class Home extends Component<Props, State> {
                 point={1 / 2}>
                 <GetStartedBackground index={themeIndex} />
                 <ThemeProvider theme={gettingStartedTheme}>
-                  <GetStarted scope={{ Buttons, Button, Logo }}>
-                    {getStarted}
-                  </GetStarted>
+                  <div>
+                    <GetStarted scope={{ Logo }}>{getStarted}</GetStarted>
+                    <Buttons>
+                      <Button primary size="jumbo">
+                        Read the full documentation
+                      </Button>
+                      {matches && <Button size="jumbo">View on GitHub</Button>}
+                    </Buttons>
+                  </div>
                 </ThemeProvider>
               </GetStartedSection>
               <ThemeProvider theme={gettingStartedTheme}>
