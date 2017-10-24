@@ -1082,7 +1082,7 @@ export default function triangles(xPos = 100, yPos = 300) {
     width: 1.5, // 1.2
     height: 1.5, // 1.2
     slices: 100, // 250
-    ambient: '#59728c',
+    ambient: '#737373',
     diffuse: '#FFFFFF'
   };
 
@@ -1094,8 +1094,8 @@ export default function triangles(xPos = 100, yPos = 300) {
     xPos,
     yPos,
     zOffset: 100,
-    ambient: '#293234',
-    diffuse: '#59728c',
+    ambient: '#2e2e2e',
+    diffuse: '#737373',
     pickedup: true,
     proxy: false,
     currIndex: 0

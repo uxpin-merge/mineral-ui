@@ -19,7 +19,8 @@ import React from 'react';
 import { createStyledComponent } from '../../../../utils';
 
 type Props = {
-  className?: string
+  className?: string,
+  triangles?: boolean
 };
 
 const Root = createStyledComponent('div', {
@@ -31,13 +32,19 @@ const Root = createStyledComponent('div', {
   zIndex: '-1'
 });
 
-export default function Canvas({ className, ...restProps }: Props) {
+export default function Canvas({
+  className,
+  triangles = true,
+  ...restProps
+}: Props) {
   const classes = className ? className : '';
   return (
     <Root className={`canvas ${classes}`} {...restProps}>
-      <svg className="triangles">
-        <use xlinkHref="#triangles" />
-      </svg>
+      {triangles && (
+        <svg className="triangles">
+          <use xlinkHref="#triangles" />
+        </svg>
+      )}
     </Root>
   );
 }

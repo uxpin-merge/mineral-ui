@@ -17,6 +17,7 @@
 /* @flow */
 import React, { Component } from 'react';
 import Media from 'react-media';
+import rgba from 'polished/lib/color/rgba';
 import {
   color,
   createStyledComponent,
@@ -229,59 +230,32 @@ const styles = {
     }
   }),
   getStartedBackgrounds: ({ theme }) => ({
-    '& > :first-child': {
-      // bottom: 0,
-      left: 'calc(-50vw + 50%)',
-      overflow: 'hidden', // Maybe not necessary? Could simplify structure
-      position: 'absolute',
-      right: 'calc(-50vw + 50%)',
-      top: 0,
+    '& > :nth-child(1)': {
+      backgroundColor: theme.color_gray_100,
+      bottom: 'auto',
       zIndex: '-2',
 
-      '& > div': {
-        alignItems: 'stretch',
-        display: 'flex',
-        width: '200%',
-
-        '& > div': {
-          flex: '0 0 50%',
-          position: 'relative',
-          width: '50%'
-        },
-
-        '& > :first-child': {
-          backgroundColor: theme.color_gray_100,
-
-          '& > svg': {
-            mixBlendMode: 'luminosity',
-            transform: 'translateX(50%) rotate(180deg) scale(2)'
-          }
-        },
-
-        '& > :last-child': {
-          background: `linear-gradient(
-          rgba(0,0,0,0.25),
-          ${theme.color_gray_100}
-        )`,
-          left: '-50%'
-        }
+      '& > svg': {
+        mixBlendMode: 'luminosity',
+        transform: 'translateX(50%) rotate(180deg) scale(2)'
       }
     },
 
-    '& > :last-child': {
+    '& > :nth-child(2)': {
+      background: `linear-gradient(
+        rgba(0,0,0,0.4),
+        ${theme.color_gray_100}
+      )`
+    },
+
+    '& > :nth-child(3)': {
       background: `repeating-linear-gradient(
-      -45deg,
-      rgba(255,255,255,0.05),
-      rgba(255,255,255,0.05) 2px,
-      rgba(0,0,0,0) 2px,
-      rgba(0,0,0,0) 4px
-    )`,
-      bottom: 0,
-      left: 'calc(-50vw + 50%)',
-      position: 'absolute',
-      right: 'calc(-50vw + 50%)',
-      top: 0,
-      zIndex: '-1'
+        -45deg,
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.05) 2px,
+        rgba(0,0,0,0) 2px,
+        rgba(0,0,0,0) 4px
+      )`
     }
   }),
   getStartedSection: ({ theme }) => ({
@@ -338,8 +312,14 @@ const styles = {
     }
   },
   heroCanvas: {
+    backgroundColor: mineralColor.slate,
+
     '@media(max-width: 38.999em)': {
       bottom: '-12.5em' // Matches change in Header margin due to open menu
+    },
+
+    '& > svg': {
+      mixBlendMode: 'hard-light'
     }
   },
   intro: {
@@ -363,8 +343,8 @@ const styles = {
   },
   playgroundCanvas: ({ index }) => ({
     background: `linear-gradient(
-      ${playgroundThemes[index].color_theme_80},
-      ${playgroundThemes[index].color_theme_40}
+      ${rgba(playgroundThemes[index].color_theme_80, 0.5)},
+      ${rgba(playgroundThemes[index].color_theme_40, 0.5)}
     )`,
     transform: 'scaleX(-1)',
 
@@ -435,17 +415,9 @@ const PlaygroundSection = createStyledComponent(
 
 const GetStartedBackground = () => (
   <GetStartedBackgrounds>
-    <div>
-      <div>
-        <div>
-          <svg className="triangles">
-            <use xlinkHref="#triangles" />
-          </svg>
-        </div>
-        <div />
-      </div>
-    </div>
-    <div />
+    <Canvas />
+    <Canvas triangles={false} />
+    <Canvas triangles={false} />
   </GetStartedBackgrounds>
 );
 
