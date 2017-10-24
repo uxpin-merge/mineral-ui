@@ -19,7 +19,7 @@ import React from 'react';
 import { createStyledComponent } from '../../../../utils';
 
 type Props = {
-  angle?: number,
+  angles?: Array<number>,
   children: React$Node,
   clipColor?: string,
   point?: number
@@ -29,8 +29,8 @@ const styles = {
   root: ({ point }) => ({
     overflow: point ? 'hidden' : null
   }),
-  inner: ({ angle, clipColor, point, theme }) => {
-    const clipBottomEdge = angle > 0;
+  inner: ({ angles, clipColor, point, theme }) => {
+    const clipBottomEdge = angles[0] > 0;
     const paddingHorizontal = `${parseFloat(theme.space_inset_sm) * 4}em`;
     const paddingHorizontalWide = `${parseFloat(theme.space_inset_sm) * 16}em`;
     const paddingVertical = `${parseFloat(theme.space_inset_sm) * 4}em`;
@@ -91,7 +91,7 @@ const styles = {
       '&::before': {
         ...pseudoStyles,
         left: 'calc(-50vw + 50%)', // [1]
-        transform: `skewY(${angle}deg) ${transformProperties}`,
+        transform: `skewY(${angles[0]}deg) ${transformProperties}`,
         transformOrigin: `${clipBottomEdge ? 'top' : 'bottom'} right`,
         width: `calc(50vw - 50% + ${point * 100}%)` // [2]
       }
@@ -101,7 +101,7 @@ const styles = {
       '&::after': {
         ...pseudoStyles,
         right: 'calc(-50vw + 50%)', // [1]
-        transform: `skewY(${-1 * angle}deg) ${transformProperties}`,
+        transform: `skewY(${-1 * angles[1]}deg) ${transformProperties}`,
         transformOrigin: `${clipBottomEdge ? 'top' : 'bottom'} left`,
         width: `calc(50vw - 50% + ${(1 - point) * 100}%)` // [2]
       }
@@ -119,7 +119,7 @@ const Root = createStyledComponent('div', styles.root);
 const Inner = createStyledComponent('div', styles.inner);
 
 export default function Section({
-  angle = 5,
+  angles = [5, 5],
   clipColor = '#fff',
   children,
   point,
@@ -130,7 +130,7 @@ export default function Section({
     ...restProps
   };
   const innerProps = {
-    angle,
+    angles,
     clipColor,
     point
   };

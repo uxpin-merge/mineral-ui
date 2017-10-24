@@ -451,7 +451,7 @@ export default class Home extends Component<Props, State> {
           <ThemeProvider theme={rootTheme}>
             <Root>
               <ThemeProvider theme={heroTheme}>
-                <Hero point={matches ? 1 / 4 : 1 / 1000}>
+                <Hero angles={[5, 3]} point={matches ? 1 / 4 : 1 / 1000}>
                   <HeroCanvas />
                   <Header latestPost={latestPost} />
                   {latestPost &&
@@ -476,6 +476,7 @@ export default class Home extends Component<Props, State> {
                 </Hero>
               </ThemeProvider>
               <Section
+                angles={[3, 5]}
                 // $FlowFixMe
                 clipColor={playgroundThemes[themeIndex].color_theme_80}
                 point={matches ? 3 / 4 : 999 / 1000}>
@@ -484,6 +485,7 @@ export default class Home extends Component<Props, State> {
                 </Guidelines>
               </Section>
               <PlaygroundSection
+                angles={[5, 3]}
                 index={themeIndex}
                 point={matches ? 1 / 4 : 1 / 1000}>
                 <PlaygroundCanvas index={themeIndex} />
@@ -502,7 +504,7 @@ export default class Home extends Component<Props, State> {
                 </Features>
               </Section>
               <GetStartedSection
-                angle={-5}
+                angles={[-5, -5]}
                 clipColor={color.white}
                 point={1 / 2}>
                 <GetStartedBackground index={themeIndex} />
