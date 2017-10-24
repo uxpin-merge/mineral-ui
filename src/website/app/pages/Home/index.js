@@ -30,8 +30,8 @@ import ThemeProvider from '../../../../ThemeProvider';
 import Link from '../../Link';
 import Logo from '../../Logo';
 import Markdown from '../../Markdown';
+import Canvas from './Canvas';
 import Header from './Header';
-import _Hero from './Hero';
 import Section from './Section';
 import ThemePlayground from './ThemePlayground';
 import triangles from './triangles';
@@ -43,8 +43,8 @@ import intro from './intro.md';
 
 // Temp
 import magenta from './themes/magenta';
-import sky from './themes/sky';
 import teal from './themes/teal';
+import sky from './themes/sky';
 
 type Props = {};
 
@@ -57,7 +57,11 @@ const latestPost = {
   url: 'https://medium.com'
 };
 
-const playgroundThemes = [magenta, sky, teal];
+const playgroundThemes = [
+  { name: 'Magenta', ...magenta },
+  { name: 'Teal', ...teal },
+  { name: 'Sky', ...sky }
+];
 
 const mineralColor = {
   orange: color.orange_50,
@@ -89,7 +93,6 @@ const rootTheme = {
   Heading_fontWeight_3: '300',
   Heading_lineHeight: '1.1'
 };
-
 const heroTheme = {
   color_text: color.white,
 
@@ -106,7 +109,6 @@ const heroTheme = {
   Link_color_focus: color.white,
   Link_color_hover: color.white
 };
-
 const gettingStartedTheme = {
   color_text: color.white,
 
@@ -126,6 +128,268 @@ const gettingStartedTheme = {
   Link_color_focus: mineralColor.yellow_focus,
   Link_color_hover: mineralColor.yellow_hover
 };
+const CTALinkTheme = {
+  Link_color: color.gray_80,
+  Link_color_active: color.gray_90,
+  Link_color_hover: color.gray_70,
+  Link_color_focus: color.gray_80
+};
+
+const styles = {
+  blogLink: ({ theme }) => ({
+    backgroundColor: 'rgba(0,0,0,0.4)',
+    borderRadius: theme.borderRadius_1,
+    padding: `${parseFloat(theme.space_inset_sm) / 2}em`,
+
+    '&::before': {
+      backgroundColor: mineralColor.yellow,
+      borderRadius: theme.borderRadius_1,
+      bottom: '0.1em',
+      color: theme.color_black,
+      content: 'New',
+      fontSize: '0.8em',
+      fontWeight: theme.fontWeight_bold,
+      marginRight: theme.space_inline_sm,
+      padding: `
+      ${parseFloat(theme.space_inset_sm) / 4}em
+      ${parseFloat(theme.space_inset_sm) / 2}em
+      `,
+      position: 'relative',
+      textTransform: 'uppercase'
+    },
+
+    '&:hover::before': {
+      textDecoration: 'none'
+    }
+  }),
+  buttons: ({ theme }) => ({
+    '& > * + *': {
+      marginLeft: theme.space_inline_lg
+    }
+  }),
+  coloredLogo: {
+    '& .band-1': {
+      fill: mineralColor.yellow
+    },
+    '& .band-2': {
+      fill: mineralColor.orange
+    },
+    '& .band-3': {
+      fill: mineralColor.slate
+    }
+  },
+  features: {
+    '@media(min-width: 39em)': {
+      display: 'flex',
+      justifyContent: 'space-between'
+    }
+  },
+  feature: {
+    '@media(min-width: 39em)': {
+      width: '40%'
+    }
+  },
+  getStarted: ({ theme }) => ({
+    margin: '0 auto',
+    width: 'min-content',
+
+    '& > svg': {
+      display: 'block',
+      margin: '0 auto',
+      width: '50px'
+    },
+
+    '& > h3': {
+      textAlign: 'center'
+    },
+
+    '& > ol': {
+      counterReset: 'getStarted',
+      listStyle: 'none',
+      padding: 0
+    },
+
+    '& > ol > li': {
+      counterIncrement: 'getStarted',
+      position: 'relative',
+
+      '&::before': {
+        backgroundColor: mineralColor.yellow,
+        borderRadius: '0.75em',
+        content: 'counter(getStarted)',
+        color: theme.color_gray_100,
+        fontWeight: theme.fontWeight_extraBold,
+        height: '1.5em',
+        right: `calc(100% + ${theme.space_inline_md})`,
+        position: 'absolute',
+        textAlign: 'center',
+        top: '-0.2em', // Optical adjustment
+        width: '1.5em'
+      }
+    }
+  }),
+  getStartedBackgrounds: ({ theme }) => ({
+    '& > :first-child': {
+      // bottom: 0,
+      left: 'calc(-50vw + 50%)',
+      overflow: 'hidden', // Maybe not necessary? Could simplify structure
+      position: 'absolute',
+      right: 'calc(-50vw + 50%)',
+      top: 0,
+      zIndex: '-2',
+
+      '& > div': {
+        alignItems: 'stretch',
+        display: 'flex',
+        width: '200%',
+
+        '& > div': {
+          flex: '0 0 50%',
+          position: 'relative',
+          width: '50%'
+        },
+
+        '& > :first-child': {
+          backgroundColor: theme.color_gray_100,
+
+          '& > svg': {
+            mixBlendMode: 'luminosity',
+            transform: 'translateX(50%) rotate(180deg) scale(2)'
+          }
+        },
+
+        '& > :last-child': {
+          background: `linear-gradient(
+          rgba(0,0,0,0.25),
+          ${theme.color_gray_100}
+        )`,
+          left: '-50%'
+        }
+      }
+    },
+
+    '& > :last-child': {
+      background: `repeating-linear-gradient(
+      -45deg,
+      rgba(255,255,255,0.05),
+      rgba(255,255,255,0.05) 2px,
+      rgba(0,0,0,0) 2px,
+      rgba(0,0,0,0) 4px
+    )`,
+      bottom: 0,
+      left: 'calc(-50vw + 50%)',
+      position: 'absolute',
+      right: 'calc(-50vw + 50%)',
+      top: 0,
+      zIndex: '-1'
+    }
+  }),
+  getStartedSection: ({ theme }) => ({
+    position: 'relative',
+
+    '&::before': {
+      backgroundColor: theme.color_gray_100,
+      bottom: 0,
+      content: '""',
+      left: 0,
+      position: 'absolute',
+      right: 0,
+      top: 0,
+      zIndex: '-2'
+    }
+  }),
+  guidelines: ({ theme }) => ({
+    '@media(max-width: 38.999em)': {
+      textAlign: 'center',
+
+      '& > svg': {
+        margin: '0 auto',
+        maxWidth: '10vh',
+        width: '50%'
+      }
+    },
+
+    '@media(min-width: 39em)': {
+      display: 'grid',
+      gridTemplateColumns: '1fr 10em',
+      gridColumnGap: theme.space_inline_md,
+
+      '& > *': {
+        gridColumn: 1,
+        textAlign: 'right'
+      },
+
+      '& > svg': {
+        alignSelf: 'center',
+        gridColumn: 2,
+        gridRow: '1 / span 2',
+        width: '100%'
+      }
+    }
+  }),
+  hero: {
+    // Inner
+    '> div': {
+      paddingTop: 0,
+
+      '@media(min-width: 39em)': {
+        justifyContent: 'space-between'
+      }
+    }
+  },
+  heroCanvas: {
+    '@media(max-width: 38.999em)': {
+      bottom: '-12.5em' // Matches change in Header margin due to open menu
+    }
+  },
+  intro: {
+    // Dependent on h2 content
+    '& > h2': {
+      '@media(max-width: 29.999em)': {
+        fontSize: pxToEm(44)
+      }
+    },
+
+    // All of these numbers are dependent on width of h2 content
+    '& > p': {
+      '@media(min-width: 52em)': {
+        maxWidth: '36em'
+      },
+
+      '@media(min-width: 62em)': {
+        maxWidth: '41em'
+      }
+    }
+  },
+  playgroundCanvas: ({ index }) => ({
+    background: `linear-gradient(
+      ${playgroundThemes[index].color_theme_80},
+      ${playgroundThemes[index].color_theme_40}
+    )`,
+    transform: 'scaleX(-1)',
+
+    '& > svg': {
+      mixBlendMode: 'hard-light',
+      transform: 'scale(2)'
+    }
+  }),
+  playgroundSection: ({ index }) => ({
+    position: 'relative',
+
+    '&::before': {
+      background: `linear-gradient(
+        ${playgroundThemes[index].color_theme_80},
+        rgba(0,0,0,0)
+      )`,
+      bottom: 0,
+      content: '""',
+      left: 0,
+      position: 'absolute',
+      right: 0,
+      top: 0
+    }
+  })
+};
 
 const Root = createStyledComponent(
   'div',
@@ -134,289 +398,40 @@ const Root = createStyledComponent(
     includeStyleReset: true
   }
 );
-
-const BlogLink = createStyledComponent(Link, ({ theme }) => ({
-  backgroundColor: 'rgba(0,0,0,0.4)',
-  borderRadius: theme.borderRadius_1,
-  padding: `${parseFloat(theme.space_inset_sm) / 2}em`,
-
-  '&::before': {
-    backgroundColor: mineralColor.yellow,
-    borderRadius: theme.borderRadius_1,
-    bottom: '0.1em',
-    color: theme.color_black,
-    content: 'New',
-    fontSize: '0.8em',
-    fontWeight: theme.fontWeight_bold,
-    marginRight: theme.space_inline_sm,
-    padding: `
-      ${parseFloat(theme.space_inset_sm) / 4}em
-      ${parseFloat(theme.space_inset_sm) / 2}em
-      `,
-    position: 'relative',
-    textTransform: 'uppercase'
-  },
-
-  '&:hover::before': {
-    textDecoration: 'none'
-  }
-}));
-
-const Buttons = createStyledComponent('div', ({ theme }) => ({
-  '& > * + *': {
-    marginLeft: theme.space_inline_lg
-  }
-}));
-
-const ColoredLogo = createStyledComponent(Logo, {
-  '& .band-1': {
-    fill: mineralColor.yellow
-  },
-  '& .band-2': {
-    fill: mineralColor.orange
-  },
-  '& .band-3': {
-    fill: mineralColor.slate
-  }
-});
-
-const CTALink = createThemedComponent(Link, {
-  Link_color: color.gray_80,
-  Link_color_active: color.gray_90,
-  Link_color_hover: color.gray_70,
-  Link_color_focus: color.gray_80
-});
-
-const Features = createStyledComponent('div', {
-  '@media(min-width: 39em)': {
-    display: 'flex',
-    justifyContent: 'space-between'
-  }
-});
-
-const Feature = createStyledComponent(Markdown, {
-  '@media(min-width: 39em)': {
-    width: '40%'
-  }
-}).withProps({
+const BlogLink = createStyledComponent(Link, styles.blogLink);
+const Buttons = createStyledComponent('div', styles.buttons);
+const ColoredLogo = createStyledComponent(Logo, styles.coloredLogo);
+const CTALink = createThemedComponent(Link, CTALinkTheme);
+const Features = createStyledComponent('div', styles.features);
+const Feature = createStyledComponent(Markdown, styles.feature).withProps({
   anchors: false
 });
-
-const GetStarted = createStyledComponent(Markdown, ({ theme }) => ({
-  margin: '0 auto',
-  width: 'min-content',
-
-  '& > svg': {
-    display: 'block',
-    margin: '0 auto',
-    width: '50px'
-  },
-
-  '& > h3': {
-    textAlign: 'center'
-  },
-
-  '& > ol': {
-    counterReset: 'getStarted',
-    listStyle: 'none',
-    padding: 0
-  },
-
-  '& > ol > li': {
-    counterIncrement: 'getStarted',
-    position: 'relative',
-
-    '&::before': {
-      backgroundColor: mineralColor.yellow,
-      borderRadius: '0.75em',
-      content: 'counter(getStarted)',
-      color: theme.color_gray_100,
-      fontWeight: theme.fontWeight_extraBold,
-      height: '1.5em',
-      right: `calc(100% + ${theme.space_inline_md})`,
-      position: 'absolute',
-      textAlign: 'center',
-      top: '-0.2em', // Optical adjustment
-      width: '1.5em'
-    }
-  }
-})).withProps({ anchors: false });
-
-const GetStartedBackgrounds = createStyledComponent('div', ({ theme }) => ({
-  '& > :first-child': {
-    // bottom: 0,
-    left: 'calc(-50vw + 50%)',
-    overflow: 'hidden',
-    position: 'absolute',
-    right: 'calc(-50vw + 50%)',
-    top: 0,
-    zIndex: '-2',
-
-    '& > div': {
-      alignItems: 'stretch',
-      display: 'flex',
-      width: '200%',
-
-      '& > div': {
-        flex: '0 0 50%',
-        position: 'relative',
-        width: '50%'
-      },
-
-      '& > :first-child': {
-        backgroundColor: theme.color_gray_100,
-
-        '& > svg': {
-          mixBlendMode: 'luminosity',
-          transform: 'translateX(50%) rotate(180deg) scale(2)'
-        }
-      },
-
-      '& > :last-child': {
-        background: `linear-gradient(
-          rgba(0,0,0,0.25),
-          ${theme.color_gray_100}
-        )`,
-        left: '-50%'
-      }
-    }
-  },
-
-  '& > :last-child': {
-    background: `repeating-linear-gradient(
-      -45deg,
-      rgba(255,255,255,0.05),
-      rgba(255,255,255,0.05) 2px,
-      rgba(0,0,0,0) 2px,
-      rgba(0,0,0,0) 4px
-    )`,
-    bottom: 0,
-    left: 'calc(-50vw + 50%)',
-    position: 'absolute',
-    right: 'calc(-50vw + 50%)',
-    top: 0,
-    zIndex: '-1'
-  }
-}));
-
-const GetStartedSection = createStyledComponent(Section, ({ theme }) => ({
-  position: 'relative',
-
-  '&::before': {
-    backgroundColor: theme.color_gray_100,
-    bottom: 0,
-    content: '""',
-    left: 0,
-    position: 'absolute',
-    right: 0,
-    top: 0,
-    zIndex: '-2'
-  }
-}));
-
-const Guidelines = createStyledComponent(Markdown, ({ theme }) => ({
-  '@media(max-width: 38.999em)': {
-    textAlign: 'center',
-
-    '& > svg': {
-      margin: '0 auto',
-      maxWidth: '10vh',
-      width: '50%'
-    }
-  },
-
-  '@media(min-width: 39em)': {
-    display: 'grid',
-    gridTemplateColumns: '1fr 10em',
-    gridColumnGap: theme.space_inline_md,
-
-    '& > *': {
-      gridColumn: 1,
-      textAlign: 'right'
-    },
-
-    '& > svg': {
-      alignSelf: 'center',
-      gridColumn: 2,
-      gridRow: '1 / span 2',
-      width: '100%'
-    }
-  }
-})).withProps({ anchors: false });
-
-// $FlowFixMe
-const Hero = createStyledComponent(_Hero, {
-  '@media(min-width: 39em)': {
-    '> div': {
-      justifyContent: 'space-between',
-      height: '95vh',
-      maxHeight: '48em' // Dependent on content
-    }
-  },
-
-  // Output
-  '@media(max-width: 38.999em)': {
-    '> div > div:first-child': {
-      bottom: '-12.5em' // Matches change in Header margin due to open menu
-    }
-  }
+const GetStarted = createStyledComponent(
+  Markdown,
+  styles.getStarted
+).withProps({ anchors: false });
+const GetStartedBackgrounds = createStyledComponent(
+  'div',
+  styles.getStartedBackgrounds
+);
+const GetStartedSection = createStyledComponent(
+  Section,
+  styles.getStartedSection
+);
+const Guidelines = createStyledComponent(
+  Markdown,
+  styles.guidelines
+).withProps({ anchors: false });
+const Hero = createStyledComponent(Section, styles.hero);
+const HeroCanvas = createStyledComponent(Canvas, styles.heroCanvas);
+const Intro = createStyledComponent(Markdown, styles.intro).withProps({
+  anchors: false
 });
-
-const Intro = createStyledComponent(Markdown, {
-  // Dependent on h2 content
-  '& > h2': {
-    '@media(max-width: 29.999em)': {
-      fontSize: pxToEm(44)
-    }
-  },
-
-  // All of these numbers are dependent on width of h2 content
-  '& > p': {
-    '@media(min-width: 52em)': {
-      maxWidth: '36em'
-    },
-
-    '@media(min-width: 62em)': {
-      maxWidth: '41em'
-    }
-  }
-}).withProps({ anchors: false });
-
-const PlaygroundBackground = createStyledComponent('div', ({ index }) => ({
-  background: `linear-gradient(
-    ${playgroundThemes[index].color_theme_80},
-    ${playgroundThemes[index].color_theme_40}
-  )`,
-  bottom: 0,
-  left: 'calc(-50vw + 50%)',
-  position: 'absolute',
-  right: 'calc(-50vw + 50%)',
-  top: 0,
-  transform: 'scaleX(-1)',
-  zIndex: '-1',
-
-  '& > svg': {
-    mixBlendMode: 'hard-light',
-    transform: 'scale(2)'
-  }
-}));
-
-const PlaygroundSection = createStyledComponent(Section, ({ index }) => ({
-  position: 'relative',
-
-  '&::before': {
-    background: `linear-gradient(
-      ${playgroundThemes[index].color_theme_80},
-      rgba(0,0,0,0)
-    )`,
-    bottom: 0,
-    content: '""',
-    left: 0,
-    position: 'absolute',
-    right: 0,
-    top: 0
-  }
-}));
+const PlaygroundCanvas = createStyledComponent(Canvas, styles.playgroundCanvas);
+const PlaygroundSection = createStyledComponent(
+  Section,
+  styles.playgroundSection
+);
 
 const GetStartedBackground = () => (
   <GetStartedBackgrounds>
@@ -464,6 +479,7 @@ export default class Home extends Component<Props, State> {
             <Root>
               <ThemeProvider theme={heroTheme}>
                 <Hero point={matches ? 1 / 4 : 1 / 1000}>
+                  <HeroCanvas />
                   <Header latestPost={latestPost} />
                   {latestPost &&
                     matches && (
@@ -497,11 +513,7 @@ export default class Home extends Component<Props, State> {
               <PlaygroundSection
                 index={themeIndex}
                 point={matches ? 1 / 4 : 1 / 1000}>
-                <PlaygroundBackground index={themeIndex}>
-                  <svg className="triangles">
-                    <use xlinkHref="#triangles" />
-                  </svg>
-                </PlaygroundBackground>
+                <PlaygroundCanvas index={themeIndex} />
                 <ThemePlayground
                   index={themeIndex}
                   setIndex={index => {

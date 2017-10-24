@@ -25,13 +25,11 @@ type Props = {
   point?: number
 };
 
-const Root = createStyledComponent('div', ({ point }) => ({
-  overflow: point ? 'hidden' : null
-}));
-
-const Inner = createStyledComponent(
-  'div',
-  ({ angle, clipColor, point, theme }) => {
+const styles = {
+  root: ({ point }) => ({
+    overflow: point ? 'hidden' : null
+  }),
+  inner: ({ angle, clipColor, point, theme }) => {
     const clipBottomEdge = angle > 0;
     const paddingHorizontal = `${parseFloat(theme.space_inset_sm) * 4}em`;
     const paddingHorizontalWide = `${parseFloat(theme.space_inset_sm) * 16}em`;
@@ -115,7 +113,10 @@ const Inner = createStyledComponent(
 
     return styles;
   }
-);
+};
+
+const Root = createStyledComponent('div', styles.root);
+const Inner = createStyledComponent('div', styles.inner);
 
 export default function Section({
   angle = 5,

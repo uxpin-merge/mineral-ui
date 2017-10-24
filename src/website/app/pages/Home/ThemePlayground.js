@@ -30,9 +30,16 @@ type Props = {
   themes: Array<Object>
 };
 
-const Root = createStyledComponent(
-  'div',
-  ({ theme }) => ({
+type OptionProps = {
+  children: React$Node,
+  isActive: boolean,
+  onClick: () => void,
+  themes: Array<Object>,
+  thisIndex: number
+};
+
+const styles = {
+  root: ({ theme }) => ({
     display: 'grid',
     gridGap: theme.space_inline_sm,
     gridTemplateColumns: 'repeat(3, auto)',
@@ -47,135 +54,128 @@ const Root = createStyledComponent(
       gridTemplateRows: 'repeat(3, auto)'
     }
   }),
-  {
-    includeStyleReset: true
-  }
-);
+  optionRoot: ({ isActive, theme, themes, thisIndex }) => ({
+    alignItems: 'center',
+    backgroundColor: isActive
+      ? themes[thisIndex].color_theme_10
+      : theme.color_white,
+    border: `1px solid ${isActive ? theme.color_white : 'transparent'}`,
+    borderRadius: theme.borderRadius_1,
+    boxShadow: isActive ? `0 0 0 1px ${theme[`borderColor_focus`]}` : null,
+    cursor: 'pointer',
+    display: 'flex',
+    justifyContent: 'center',
+    padding: theme.space_inset_sm,
+    position: 'relative',
+    '&::-moz-focus-inner': { border: 0 },
 
-const PlaygroundOptionRoot = createStyledComponent(
-  'button',
-  ({ thisIndex, isActive, theme, themes }) => {
-    return {
-      alignItems: 'center',
-      backgroundColor: isActive
-        ? themes[thisIndex].color_theme_10
-        : theme.color_white,
-      border: `1px solid ${isActive ? theme.color_white : 'transparent'}`,
-      borderRadius: theme.borderRadius_1,
-      boxShadow: isActive ? `0 0 0 1px ${theme[`borderColor_focus`]}` : null,
-      cursor: 'pointer',
-      display: 'flex',
-      justifyContent: 'center',
-      padding: theme.space_inset_sm,
-      position: 'relative',
-      '&::-moz-focus-inner': { border: 0 },
+    '&:focus,&:hover': {
+      backgroundColor: themes[thisIndex].color_theme_10
+    },
 
-      '&:focus,&:hover': {
-        backgroundColor: themes[thisIndex].color_theme_10
-      },
+    '@media(min-width: 29em)': {
+      alignItems: 'flex-start',
+      flexDirection: 'column',
+      padding: `
+        ${theme.space_inset_md}
+        ${theme.space_inset_md}
+        ${theme.space_inset_md}
+        ${parseFloat(theme.space_inset_md) +
+        1.25 + // Large icon size
+        parseFloat(theme.space_inset_sm) + // padding left & right
+          parseFloat(theme.space_inline_sm)}em
+      `
+    }
+  }),
+  optionHex: ({ theme }) => ({
+    color: theme.color_caption,
+    display: 'block',
+    fontSize: theme.fontSize_mouse,
+    marginTop: theme.space_stack_xxs,
 
-      '& > [role="icon"]': {
-        backgroundColor: themes[thisIndex].color_theme_60,
-        borderRadius: theme.borderRadius_1,
-        boxSizing: 'content-box',
-        flex: '0 0 auto',
-        fill: isActive ? theme.color_white : 'transparent',
-        marginRight: theme.space_inline_xs,
-        padding: `${parseFloat(theme.space_inset_sm) / 2}em`
-      },
+    '@media(max-width: 28.999em)': {
+      display: 'none'
+    }
+  }),
 
-      '@media(min-width: 29em)': {
-        alignItems: 'flex-start',
-        flexDirection: 'column',
-        padding: `
-          ${theme.space_inset_md}
-          ${theme.space_inset_md}
-          ${theme.space_inset_md}
-          ${parseFloat(theme.space_inset_md) +
-          1.25 + // Large icon size
-          parseFloat(theme.space_inset_sm) + // padding left & right
-            parseFloat(theme.space_inline_sm)}em
-        `,
+  optionIcon: ({ isActive, theme, themes, thisIndex }) => ({
+    backgroundColor: themes[thisIndex].color_theme_60,
+    borderRadius: theme.borderRadius_1,
+    boxSizing: 'content-box',
+    flex: '0 0 auto',
+    fill: isActive ? theme.color_white : 'transparent',
+    marginRight: theme.space_inline_xs,
+    padding: `${parseFloat(theme.space_inset_sm) / 2}em`,
 
-        '& > [role="icon"]': {
-          height: '1.25em', // Large size
-          left: theme.space_inset_md,
-          position: 'absolute',
-          top: '50%',
-          transform: 'translateY(-50%)',
-          width: '1.25em' // Large size
-        }
-      }
-    };
-  },
-  {
-    includeStyleReset: true
-  }
-);
+    '@media(min-width: 29em)': {
+      height: '1.25em', // Large size
+      left: theme.space_inset_md,
+      position: 'absolute',
+      top: '50%',
+      transform: 'translateY(-50%)',
+      width: '1.25em' // Large size
+    }
+  }),
+  optionName: ({ theme }) => ({
+    display: 'block',
+    fontSize: theme.fontSize_ui,
+    fontWeight: theme.fontWeight_bold
+  }),
+  sandbox: ({ theme }) => ({
+    backgroundColor: theme.color_white,
+    borderRadius: theme.borderRadius_1,
+    gridColumn: '1 / span 3',
+    padding: theme.space_inset_lg,
 
-const PlaygroundOptionHex = createStyledComponent('span', ({ theme }) => ({
-  color: theme.color_caption,
-  display: 'block',
-  fontSize: theme.fontSize_mouse,
-  marginTop: theme.space_stack_xxs,
+    '@media(min-width: 48em)': {
+      gridColumn: 2,
+      gridRow: '1 / span 4'
+    },
 
-  '@media(max-width: 28.999em)': {
-    display: 'none'
-  }
-}));
+    '& > h3': {
+      color: theme.color_theme_80
+    }
+  })
+};
 
-const PlaygroundOptionName = createStyledComponent('span', ({ theme }) => ({
-  display: 'block',
-  fontSize: theme.fontSize_ui,
-  fontWeight: theme.fontWeight_bold
-}));
+const Root = createStyledComponent('div', styles.root, {
+  includeStyleReset: true
+});
+const OptionRoot = createStyledComponent('button', styles.optionRoot, {
+  includeStyleReset: true
+});
+const OptionHex = createStyledComponent('span', styles.optionHex);
+const OptionIcon = createStyledComponent(IconCheck, styles.optionIcon);
+const OptionName = createStyledComponent('span', styles.optionName);
+const Sandbox = createStyledComponent(Markdown, styles.sandbox);
 
-const PlaygroundSandbox = createStyledComponent(Markdown, ({ theme }) => ({
-  backgroundColor: theme.color_white,
-  borderRadius: theme.borderRadius_1,
-  // boxShadow: theme.shadow_3,
-  gridColumn: '1 / span 3',
-  padding: theme.space_inset_lg,
-
-  '@media(min-width: 48em)': {
-    gridColumn: 2,
-    gridRow: '1 / span 4'
-  },
-
-  '& > h3': {
-    color: theme.color_theme_80
-  }
-}));
-
-const PlaygroundOption = ({
+const Option = ({
   children,
   thisIndex,
   isActive,
   onClick,
   themes,
   ...restProps
-}: {
-  children: React$Node,
-  thisIndex: number,
-  isActive: boolean,
-  onClick: () => void,
-  themes: Array<Object>
-}) => {
+}: OptionProps) => {
   const rootProps = {
     onClick,
-    thisIndex,
     isActive,
     themes,
+    thisIndex,
     ...restProps
   };
+  const iconProps = {
+    isActive,
+    size: 'small',
+    themes,
+    thisIndex
+  };
   return (
-    <PlaygroundOptionRoot {...rootProps}>
-      <IconCheck size="small" />
-      <PlaygroundOptionName>{children}</PlaygroundOptionName>
-      <PlaygroundOptionHex>
-        {themes[thisIndex].color_theme_60}
-      </PlaygroundOptionHex>
-    </PlaygroundOptionRoot>
+    <OptionRoot {...rootProps}>
+      <OptionIcon {...iconProps} />
+      <OptionName>{children}</OptionName>
+      <OptionHex>{themes[thisIndex].color_theme_60}</OptionHex>
+    </OptionRoot>
   );
 };
 
@@ -198,38 +198,21 @@ export default function ThemePlaygound({
   return (
     <ThemeProvider theme={themes[index]}>
       <Root {...rootProps}>
-        <PlaygroundOption
-          thisIndex={0}
-          isActive={index === 0}
-          onClick={() => {
-            handleClick(() => setIndex(0));
-          }}
-          themes={themes}>
-          Magenta
-        </PlaygroundOption>
-        <PlaygroundOption
-          thisIndex={1}
-          isActive={index === 1}
-          onClick={() => {
-            handleClick(() => setIndex(1));
-          }}
-          themes={themes}>
-          Sky
-        </PlaygroundOption>
-        <PlaygroundOption
-          thisIndex={2}
-          isActive={index === 2}
-          onClick={() => {
-            handleClick(() => setIndex(2));
-          }}
-          themes={themes}>
-          Teal
-        </PlaygroundOption>
-        <PlaygroundSandbox
-          anchors={false}
-          scope={{ Button, playgroundButtonIcon }}>
+        {themes.map((theme, i) => {
+          const optionProps = {
+            isActive: index === i,
+            key: i,
+            onClick: () => {
+              handleClick(() => setIndex(i));
+            },
+            themes: themes,
+            thisIndex: i
+          };
+          return <Option {...optionProps}>{theme.name}</Option>;
+        })}
+        <Sandbox anchors={false} scope={{ Button, playgroundButtonIcon }}>
           {content}
-        </PlaygroundSandbox>
+        </Sandbox>
       </Root>
     </ThemeProvider>
   );

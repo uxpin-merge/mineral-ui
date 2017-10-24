@@ -17,19 +17,12 @@
 /* @flow */
 import React from 'react';
 import { createStyledComponent } from '../../../../utils';
-import Section from './Section';
 
 type Props = {
-  children?: React$Node
+  className?: string
 };
 
-const Root = createStyledComponent(Section, {
-  '& > div': {
-    paddingTop: 0
-  }
-});
-
-const Canvas = createStyledComponent('div', {
+const Root = createStyledComponent('div', {
   bottom: 0,
   left: 'calc(-50vw + 50%)',
   position: 'absolute',
@@ -38,15 +31,13 @@ const Canvas = createStyledComponent('div', {
   zIndex: '-1'
 });
 
-export default function Hero({ children, ...restProps }: Props) {
+export default function Canvas({ className, ...restProps }: Props) {
+  const classes = className ? className : '';
   return (
-    <Root {...restProps}>
-      <Canvas id="canvas">
-        <svg className="triangles">
-          <use xlinkHref="#triangles" />
-        </svg>
-      </Canvas>
-      {children}
+    <Root className={`canvas ${classes}`} {...restProps}>
+      <svg className="triangles">
+        <use xlinkHref="#triangles" />
+      </svg>
     </Root>
   );
 }
