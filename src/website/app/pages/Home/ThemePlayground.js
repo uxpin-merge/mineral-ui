@@ -16,20 +16,12 @@
 
 /* @flow */
 import React from 'react';
-import Media from 'react-media';
-import {
-  createStyledComponent,
-  getNormalizedValue,
-  pxToEm
-} from '../../../../utils';
+import { createStyledComponent, pxToEm } from '../../../../utils';
 import IconCheck from '../../../../Icon/IconCheck';
-import IconFavorite from '../../../../Icon/IconFavorite';
 import ThemeProvider from '../../../../ThemeProvider';
-import Button from '../../../../Button';
-import Markdown from '../../Markdown';
-import content from './themePlayground.md';
 
 type Props = {
+  children: React$Node,
   index: number,
   setIndex: (index: number) => void,
   themes: Array<Object>
@@ -111,7 +103,6 @@ const styles = {
       display: 'none'
     }
   }),
-
   optionIcon: ({ isActive, theme, themes, thisIndex }) => ({
     backgroundColor: themes[thisIndex].color_theme_60,
     borderRadius: theme.borderRadius_1,
@@ -148,23 +139,14 @@ const styles = {
     },
 
     '& h3': {
-      color: theme.color_theme_80,
-      margin: `0 0 ${getNormalizedValue(
-        theme.baseline_2,
-        theme.Heading_fontSize_3_wide
-      )}`,
-
-      // Dependent on h3 content | TODO: test this
-      '@media(max-width: 29.999em)': {
-        fontSize: theme.Heading_fontSize_3,
-        margin: `0 0 ${getNormalizedValue(
-          theme.baseline_2,
-          theme.Heading_fontSize_3
-        )}`
-      }
+      color: theme.color_theme_80
     },
 
-    '& > button': {
+    '& p > a:link': {
+      fontWeight: theme.fontWeight_semiBold
+    },
+
+    '& button': {
       '@media(max-width: 22.999em)': {
         padding: `0 ${theme.space_inline_xxs}`,
         width: '100%',
@@ -188,7 +170,7 @@ const OptionRoot = createStyledComponent('button', styles.optionRoot, {
 const OptionHex = createStyledComponent('span', styles.optionHex);
 const OptionIcon = createStyledComponent(IconCheck, styles.optionIcon);
 const OptionName = createStyledComponent('span', styles.optionName);
-const Sandbox = createStyledComponent(Markdown, styles.sandbox);
+const Sandbox = createStyledComponent('div', styles.sandbox);
 
 const Option = ({
   children,
@@ -226,6 +208,7 @@ const handleClick = (fn: () => void) => {
 };
 
 export default function ThemePlaygound({
+  children,
   index,
   setIndex,
   themes,
@@ -247,19 +230,9 @@ export default function ThemePlaygound({
             themes: themes,
             thisIndex: i
           };
-          return <Option {...optionProps}>{theme.name}</Option>;
+          return <Option {...optionProps}>{theme.name}</Option>; // eslint-disable-line react/jsx-key
         })}
-        <Media query="(min-width: 23em)">
-          {matches => {
-            const playgroundButtonIcon = matches ? <IconFavorite /> : undefined;
-
-            return (
-              <Sandbox anchors={false} scope={{ Button, playgroundButtonIcon }}>
-                {content}
-              </Sandbox>
-            );
-          }}
-        </Media>
+        <Sandbox>{children}</Sandbox>
       </Root>
     </ThemeProvider>
   );

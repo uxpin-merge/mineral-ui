@@ -51,7 +51,7 @@ const menuButtonTheme = ({ theme }) => ({
   Button_height_large: null,
   Button_paddingHorizontal: 0,
   ButtonContent_fontSize: '1em',
-  ButtonIcon_margin: theme.space_inline_xxs
+  ButtonIcon_margin: null
 });
 const popoverTheme = {
   PopoverContent_backgroundColor: null,
@@ -70,13 +70,13 @@ const styles = {
       display: 'flex',
       justifyContent: 'space-between',
       marginBottom: theme.baseline_10,
-      paddingTop: pxToEm(30),
+      paddingTop: theme.baseline_4,
 
       '@media(max-width: 38.999em)': {
         marginBottom: isMenuOpen
-          ? `${parseFloat(theme.space_inset_sm) * 35}em` // Dependent on menu height
+          ? '17.5em' // Dependent on menu height
           : theme.baseline_6,
-        paddingTop: `${parseFloat(theme.space_inset_sm) * 4}em`,
+        paddingTop: pxToEm(30), // Matches left/right Section Inner padding
         transition: `margin ${transitionProperties}`,
 
         '& div[id$="popoverContent"]': {

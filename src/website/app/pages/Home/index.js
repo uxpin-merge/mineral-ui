@@ -17,6 +17,7 @@
 /* @flow */
 import React, { Component } from 'react';
 import Media from 'react-media';
+import desaturate from 'polished/lib/color/desaturate';
 import rgba from 'polished/lib/color/rgba';
 import {
   color,
@@ -28,6 +29,7 @@ import {
 } from '../../../../utils';
 import _Button from '../../../../Button';
 import IconChevronRight from '../../../../Icon/IconChevronRight';
+import IconFavorite from '../../../../Icon/IconFavorite';
 import ThemeProvider from '../../../../ThemeProvider';
 import Link from '../../Link';
 import Logo from '../../Logo';
@@ -39,11 +41,13 @@ import Rocks from './Rocks';
 import Section from './Section';
 import ThemePlayground from './ThemePlayground';
 import triangles from './triangles';
-import accessibility from './accessibility.md';
-import dropInComponents from './dropInComponents.md';
-import getStarted from './getStarted.md';
-import guidelines from './guidelines.md';
-import intro from './intro.md';
+import accessibility from './content/accessibility.md';
+import dropInComponents from './content/dropInComponents.md';
+import footer from './content/footer.md';
+import getStarted from './content/getStarted.md';
+import guidelines from './content/guidelines.md';
+import intro from './content/intro.md';
+import themePlayground from './content/themePlayground.md';
 
 // Temp
 import magenta from './themes/magenta';
@@ -101,7 +105,6 @@ const rootTheme = {
   color_text: mineralColor.slate,
   fontFamily: null,
   fontFamily_headline: `franklin-gothic-urw, ${mineralTheme.fontFamily_system}`,
-  fontSize_base: 16,
 
   Button_fontWeight: mineralTheme.fontWeight_regular,
   Button_height_jumbo: pxToEm(39),
@@ -113,7 +116,7 @@ const rootTheme = {
   Heading_fontSize_2: pxToEm(39),
   Heading_fontSize_2_wide: pxToEm(59),
   Heading_fontSize_3: pxToEm(26),
-  Heading_fontSize_3_wide: pxToEm(40),
+  Heading_fontSize_3_wide: pxToEm(37),
   Heading_fontWeight_1: '300',
   Heading_fontWeight_2: '300',
   Heading_fontWeight_3: '300',
@@ -156,6 +159,7 @@ const gettingStartedTheme = {
   Link_color_hover: mineralColor.yellow_hover
 };
 const CTALinkTheme = {
+  Link_borderColor_focus: mineralColor.orange_focus,
   Link_color: mineralColor.orange,
   Link_color_active: mineralColor.orange_active,
   Link_color_hover: mineralColor.orange_hover,
@@ -163,16 +167,15 @@ const CTALinkTheme = {
 };
 
 const styles = {
-  root: {
-    // fontSize: pxToEm(18)
-  },
   blogLink: ({ theme }) => ({
+    alignItems: 'center',
     backgroundColor: 'rgba(0,0,0,0.4)',
     borderRadius: theme.borderRadius_1,
-    display: 'inline-block',
+    display: 'inline-flex',
     fontFamily: theme.fontFamily_headline,
     marginBottom: theme.baseline_6,
-    padding: `0 ${parseFloat(theme.space_inset_sm) / 2}em`,
+    padding: `${parseFloat(theme.space_inset_sm) / 2}em
+      ${theme.space_inset_sm}`,
 
     '&:hover,&:focus': {
       backgroundColor: 'rgba(0,0,0,0.2)',
@@ -182,7 +185,6 @@ const styles = {
     '&::before': {
       backgroundColor: mineralColor.orange_active,
       borderRadius: theme.borderRadius_1,
-      bottom: '0.1em',
       content: 'New',
       fontSize: '0.8em',
       fontWeight: theme.fontWeight_bold,
@@ -191,37 +193,66 @@ const styles = {
       ${parseFloat(theme.space_inset_sm) / 4}em
       ${parseFloat(theme.space_inset_sm) / 2}em
       `,
-      position: 'relative',
       textTransform: 'uppercase'
+    },
+
+    '& > svg': {
+      flex: '0 0 auto'
     }
   }),
   button: ({ theme }) => ({
     fontFamily: theme.fontFamily_headline
   }),
   buttons: ({ theme }) => ({
+    marginTop: theme.baseline_3,
+
     '& > * + *': {
       marginLeft: theme.space_inline_lg
     }
   }),
-  features: {
-    '@media(min-width: 39em)': {
-      display: 'flex',
-      justifyContent: 'space-between'
+  CTALink: ({ theme }) => ({
+    alignItems: 'center',
+    display: 'inline-flex',
+    fontFamily: theme.fontFamily_headline,
+    fontWeight: theme.fontWeight_semiBold,
+
+    '& > svg': {
+      flex: '0 0 auto'
     }
-  },
+  }),
   feature: ({ theme }) => ({
+    textAlign: 'center',
+
     '& + &': {
       marginTop: theme.baseline_6
     },
 
     '@media(min-width: 39em)': {
-      width: '40%',
+      flex: `0 0 ${5 / 12 * 100}%`,
+      textAlign: 'left',
 
       '& + &': {
         marginTop: 0
       }
     }
   }),
+  featureImg: ({ circleFill, theme }) => ({
+    backgroundColor: circleFill,
+    borderRadius: theme.baseline_5,
+    height: theme.baseline_5,
+    marginBottom: `${parseFloat(theme.baseline_1) - 0.3}em`, // Optical adjustment
+    padding: theme.baseline_1,
+    width: theme.baseline_5
+  }),
+  featureSection: {
+    // Inner
+    '& > div': {
+      '@media(min-width: 39em)': {
+        display: 'flex',
+        justifyContent: 'space-between'
+      }
+    }
+  },
   floatingRocks: ({ theme }) => ({
     height: 150,
     margin: `0 auto ${theme.baseline_3}`,
@@ -235,15 +266,6 @@ const styles = {
     }
   }),
   getStarted: ({ theme }) => ({
-    margin: '0 auto',
-    maxWidth: 'min-content',
-
-    '& > svg': {
-      display: 'block',
-      margin: `0 auto ${theme.baseline_2}`,
-      width: '52px'
-    },
-
     // TODO: Specificity hack
     '& > h3[id]': {
       margin: `0 0 ${getNormalizedValue(
@@ -267,9 +289,9 @@ const styles = {
       padding: 0
     },
 
-    '& > ol > li': {
+    '& li': {
       counterIncrement: 'getStarted',
-      paddingTop: `${1.5 + parseFloat(theme.baseline_1)}em`,
+      paddingTop: `${2.5 + parseFloat(theme.baseline_1)}em`,
       position: 'relative',
 
       '@media(min-width: 39em)': {
@@ -285,20 +307,24 @@ const styles = {
         borderRadius: '0.75em',
         content: 'counter(getStarted)',
         color: theme.color_gray_100,
+        fontSize: '1.5em',
         fontWeight: theme.fontWeight_extraBold,
         height: '1.5em',
-        left: 0,
+        left: '50%',
         position: 'absolute',
         textAlign: 'center',
         top: 0,
-        // transform: 'translateX(50%)',
+        transform: 'translateX(-50%)',
         width: '1.5em',
 
         '@media(min-width: 39em)': {
+          fontSize: '1em',
+          height: '1.5em',
           left: 'auto',
           right: `calc(100% + ${theme.space_inline_md})`,
-          top: '0.05em' // Optical adjustment
-          // transform: 'none'
+          top: '0.05em', // Optical adjustment
+          transform: 'none',
+          width: '1.5em'
         }
       },
 
@@ -309,7 +335,13 @@ const styles = {
       }
     },
 
+    '& :not(pre) > code': {
+      backgroundColor: 'rgba(0, 0, 0, 0.15)',
+      color: theme.color_text
+    },
+
     '& pre': {
+      backgroundColor: 'rgba(0, 0, 0, 0.25)',
       maxHeight: 'none'
     }
   }),
@@ -335,11 +367,27 @@ const styles = {
     '& > :nth-child(3)': {
       background: `repeating-linear-gradient(
         -45deg,
-        rgba(255,255,255,0.05),
-        rgba(255,255,255,0.05) 2px,
-        rgba(0,0,0,0) 2px,
-        rgba(0,0,0,0) 4px
+        rgba(255,255,255,0.025),
+        rgba(255,255,255,0.025) 1px,
+        rgba(0,0,0,0) 1px,
+        rgba(0,0,0,0) 6px
       )`
+    }
+  }),
+  getStartedContent: ({ theme }) => ({
+    margin: '0 auto',
+    maxWidth: 'min-content',
+    textAlign: 'center',
+
+    '@media(min-width: 39em)': {
+      textAlign: 'left'
+    },
+
+    // Logo
+    '& > svg': {
+      display: 'block',
+      margin: `0 auto ${theme.baseline_2}`,
+      width: '52px'
     }
   }),
   getStartedSection: ({ theme }) => ({
@@ -359,7 +407,9 @@ const styles = {
 
     // Inner
     '& > div': {
-      // paddingTop: theme.baseline_3
+      '@media(min-width: 48em)': {
+        paddingTop: theme.baseline_7 // Optical adjustment
+      }
     }
   }),
   guidelines: {
@@ -371,14 +421,40 @@ const styles = {
       marginRight: `${1 / 12 * 100}%`,
       order: 1,
       textAlign: 'right'
+    },
+
+    // Dependent on h2 & p content
+    '& > p': {
+      '@media(min-width: 66.5em)': {
+        marginLeft: '3em'
+      },
+
+      '@media(min-width: 69.5em)': {
+        marginLeft: '4.5em'
+      },
+
+      '@media(min-width: 74em)': {
+        marginLeft: '6em'
+      },
+
+      '@media(min-width: 76em)': {
+        marginLeft: '6.5em'
+      }
     }
   },
   guidelinesSection: {
-    '@media(min-width: 61em)': {
-      // Inner
-      '& > div': {
+    // Inner
+    '& > div': {
+      '@media(min-width: 61em)': {
         alignItems: 'center',
         display: 'flex'
+      }
+    },
+
+    // Guidelines
+    '& > div > :last-child': {
+      '@media(min-width: 48em) and (max-width: 60.999em)': {
+        margin: `0 ${1 / 12 * 100}%`
       }
     }
   },
@@ -457,13 +533,13 @@ const styles = {
     },
 
     '& p': {
-      margin: `0 0 ${theme.baseline_3}`
+      margin: `0 0 ${theme.baseline_2}`
     }
   }),
   playgroundCanvas: ({ index }) => ({
     background: `linear-gradient(
-      ${rgba(playgroundThemes[index].color_theme_80, 0.5)},
-      ${rgba(playgroundThemes[index].color_theme_40, 0.5)}
+      ${playgroundThemes[index].color_theme_40},
+      ${desaturate(0.5, playgroundThemes[index].color_theme_10)}
     )`,
     transform: 'scaleX(-1)',
 
@@ -472,13 +548,13 @@ const styles = {
       transform: 'scale(2)'
     }
   }),
-  playgroundSection: ({ index }) => ({
+  playgroundSection: ({ index, theme }) => ({
     position: 'relative',
 
     '&::before': {
       background: `linear-gradient(
-        ${playgroundThemes[index].color_theme_80},
-        rgba(0,0,0,0)
+        ${desaturate(0.2, playgroundThemes[index].color_theme_60)},
+        ${rgba(desaturate(0.2, playgroundThemes[index].color_theme_60), 0.25)}
       )`,
       bottom: 0,
       content: '""',
@@ -486,49 +562,69 @@ const styles = {
       position: 'absolute',
       right: 0,
       top: 0
+    },
+
+    // Inner
+    '& > div': {
+      paddingTop: theme.baseline_3,
+
+      '@media(min-width: 48em)': {
+        paddingTop: theme.baseline_6
+      }
+    },
+
+    // Playground
+    '& > div > :last-child': {
+      '@media(min-width: 61em)': {
+        margin: `0 ${1 / 12 * 100}%`
+      }
     }
   })
 };
 
-const Root = createStyledComponent('div', styles.root, {
-  includeStyleReset: true
+const Root = createStyledComponent(
+  'div',
+  {},
+  {
+    includeStyleReset: true
+  }
+);
+// Markdown must come before all of the other Markdown-based components
+const Markdown = createStyledComponent(_Markdown, styles.markdown).withProps({
+  anchors: false
 });
-// Must come before all of the other Markdown-based Components
-const Markdown = createStyledComponent(_Markdown, styles.markdown);
 const BlogLink = createStyledComponent(Link, styles.blogLink);
 const Button = createStyledComponent(_Button, styles.button);
 const Buttons = createStyledComponent('div', styles.buttons);
-const CTALink = createThemedComponent(Link, CTALinkTheme);
-const Features = createStyledComponent('div', styles.features);
-const Feature = createStyledComponent(Markdown, styles.feature).withProps({
-  anchors: false
+const ThemedCTALink = createThemedComponent(Link, CTALinkTheme);
+const CTALink = createStyledComponent(ThemedCTALink, styles.CTALink);
+const Feature = createStyledComponent('div', styles.feature);
+const FeatureImg = createStyledComponent('img', styles.featureImg).withProps({
+  alt: ''
 });
+const FeatureSection = createStyledComponent(Section, styles.featureSection);
 const FloatingRocks = createStyledComponent(Rocks, styles.floatingRocks);
-const GetStarted = createStyledComponent(
-  Markdown,
-  styles.getStarted
-).withProps({ anchors: false });
+const GetStarted = createStyledComponent(Markdown, styles.getStarted);
 const GetStartedBackgrounds = createStyledComponent(
   'div',
   styles.getStartedBackgrounds
+);
+const GetStartedContent = createStyledComponent(
+  'div',
+  styles.getStartedContent
 );
 const GetStartedSection = createStyledComponent(
   Section,
   styles.getStartedSection
 );
-const Guidelines = createStyledComponent(
-  Markdown,
-  styles.guidelines
-).withProps({ anchors: false });
+const Guidelines = createStyledComponent(Markdown, styles.guidelines);
 const GuidelinesSection = createStyledComponent(
   Section,
   styles.guidelinesSection
 );
 const Hero = createStyledComponent(Section, styles.hero);
 const HeroCanvas = createStyledComponent(Canvas, styles.heroCanvas);
-const Intro = createStyledComponent(Markdown, styles.intro).withProps({
-  anchors: false
-});
+const Intro = createStyledComponent(Markdown, styles.intro);
 const PlaygroundCanvas = createStyledComponent(Canvas, styles.playgroundCanvas);
 const PlaygroundSection = createStyledComponent(
   Section,
@@ -560,7 +656,7 @@ export default class Home extends Component<Props, State> {
 
   componentDidMount() {
     triangles();
-    // this.rotateThemes(this.state.themeIndex);
+    this.rotateThemes(this.state.themeIndex);
   }
 
   render() {
@@ -594,9 +690,12 @@ export default class Home extends Component<Props, State> {
                 </Hero>
               </ThemeProvider>
               <GuidelinesSection
-                angles={[3, 5]}
+                angles={[5, 5]}
                 // $FlowFixMe
-                clipColor={playgroundThemes[themeIndex].color_theme_80}
+                clipColor={desaturate(
+                  0.2,
+                  playgroundThemes[themeIndex].color_theme_60
+                )}
                 point={matches ? 3 / 4 : 999 / 1000}>
                 <Media query="(min-width: 61em)">
                   {matches => <FloatingRocks showRockPile={matches} />}
@@ -615,22 +714,50 @@ export default class Home extends Component<Props, State> {
                   setIndex={index => {
                     this.setThemeIndex(index, true);
                   }}
-                  themes={playgroundThemes}
-                />
+                  themes={playgroundThemes}>
+                  <Media query="(min-width: 23em)">
+                    {matches => {
+                      const playgroundButtonIcon = matches ? (
+                        <IconFavorite />
+                      ) : (
+                        undefined
+                      );
+
+                      return (
+                        <Markdown
+                          anchors={false}
+                          scope={{ Button, Link, playgroundButtonIcon }}>
+                          {themePlayground}
+                        </Markdown>
+                      );
+                    }}
+                  </Media>
+                </ThemePlayground>
               </PlaygroundSection>
-              <Section>
-                <Features>
-                  <Feature>{accessibility}</Feature>
-                  <Feature>{dropInComponents}</Feature>
-                </Features>
-              </Section>
+              <FeatureSection>
+                <Feature>
+                  <FeatureImg
+                    circleFill="#efdaf4"
+                    src="/images/rocks/accessibility.svg"
+                  />
+                  <Markdown>{accessibility}</Markdown>
+                </Feature>
+                <Feature>
+                  <FeatureImg
+                    circleFill="#d6ebdf"
+                    src="/images/rocks/dropInReady.svg"
+                  />
+                  <Markdown>{dropInComponents}</Markdown>
+                </Feature>
+              </FeatureSection>
               <GetStartedSection
                 angles={[-5, -5]}
                 clipColor={color.white}
                 point={1 / 2}>
                 <GetStartedBackground index={themeIndex} />
                 <ThemeProvider theme={gettingStartedTheme}>
-                  <div>
+                  <GetStartedContent>
+                    <Logo fill="#fff" />
                     <GetStarted scope={{ Logo }}>{getStarted}</GetStarted>
                     <Buttons>
                       <Button primary size="jumbo">
@@ -638,11 +765,13 @@ export default class Home extends Component<Props, State> {
                       </Button>
                       {matches && <Button size="jumbo">View on GitHub</Button>}
                     </Buttons>
-                  </div>
+                  </GetStartedContent>
                 </ThemeProvider>
               </GetStartedSection>
               <ThemeProvider theme={gettingStartedTheme}>
-                <Footer />
+                <Footer>
+                  <Markdown>{footer}</Markdown>
+                </Footer>
               </ThemeProvider>
             </Root>
           </ThemeProvider>

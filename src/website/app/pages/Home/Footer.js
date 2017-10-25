@@ -15,38 +15,37 @@
  */
 
 /* @flow */
-import React from 'react';
 import { createStyledComponent, getNormalizedValue } from '../../../../utils';
-import Link from '../../Link';
 import Section from './Section';
 
-type Props = {};
-
-const Root = createStyledComponent(
+export default createStyledComponent(
   Section,
   ({ theme }) => ({
-    backgroundColor: theme.color_gray_100,
+    backgroundColor: theme.color_black,
     color: theme.color_gray_40,
 
     // Inner
     '& > div': {
-      paddingBottom: 0,
-      paddingTop: 0,
+      paddingBottom: 1, // To prevent margin collapse
+      paddingTop: 1, // To prevent margin collapse
 
-      '& > p': {
-        fontSize: theme.fontSize_mouse,
-        margin: 0,
-        padding: `${getNormalizedValue(
-          theme.space_inset_sm,
-          theme.fontSize_mouse
-        )} 0`
-      },
+      // Markdown
+      '& > div': {
+        '& > p': {
+          fontSize: theme.fontSize_mouse,
+          lineHeight: theme.lineHeight,
+          margin: `${getNormalizedValue(
+            theme.baseline_1,
+            theme.fontSize_mouse
+          )} 0`
+        },
 
-      '@media(min-width: 39em)': {
-        display: 'flex',
+        '@media(min-width: 39em)': {
+          display: 'flex',
 
-        '& > :last-child': {
-          marginLeft: 'auto'
+          '& > p:last-child': {
+            marginLeft: 'auto'
+          }
         }
       }
     }
@@ -55,15 +54,3 @@ const Root = createStyledComponent(
     includeStyleReset: true
   }
 );
-
-export default function Footer({ ...restProps }: Props) {
-  return (
-    <Root {...restProps}>
-      <p>Copyright © 2017 CA</p>
-      <p>
-        We welcome feedback and contributions on {' '}
-        <Link href="https://github.com/mineral-ui/mineral-ui">GitHub</Link>
-      </p>
-    </Root>
-  );
-}

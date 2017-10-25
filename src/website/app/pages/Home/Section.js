@@ -34,10 +34,11 @@ const styles = {
     const paddingHorizontal = pxToEm(30);
     const paddingHorizontalWide = pxToEm(100);
     const paddingVertical = theme.baseline_6;
-    const paddingVerticalWide = `${parseFloat(theme.space_inset_sm) * 16}em`;
+    const paddingVerticalWide = theme.baseline_10;
     const paddingWithClip = `${parseFloat(theme.baseline_6) +
       parseFloat(theme.baseline_2)}em`;
-    const paddingWithClipWide = `${parseFloat(theme.space_inset_sm) * 24}em`;
+    const paddingWithClipWide = `${parseFloat(theme.baseline_10) +
+      parseFloat(theme.baseline_4)}em`;
     const paddingBottom =
       point && clipBottomEdge ? paddingWithClip : paddingVertical;
     const paddingBottomWide =

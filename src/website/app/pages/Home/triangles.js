@@ -1082,7 +1082,7 @@ export default function triangles(xPos = 100, yPos = 300) {
     width: 1.5, // 1.2
     height: 1.5, // 1.2
     slices: 100, // 250
-    ambient: '#737373',
+    ambient: '#777777',
     diffuse: '#FFFFFF'
   };
 
@@ -1094,8 +1094,8 @@ export default function triangles(xPos = 100, yPos = 300) {
     xPos,
     yPos,
     zOffset: 100,
-    ambient: '#2e2e2e',
-    diffuse: '#737373',
+    ambient: '#111111',
+    diffuse: '#777777',
     pickedup: true,
     proxy: false,
     currIndex: 0
@@ -1122,7 +1122,7 @@ export default function triangles(xPos = 100, yPos = 300) {
     addEventListeners();
     resize(container.offsetWidth, container.offsetHeight);
     animate();
-    // moveLight();
+    moveLight();
   }
 
   function createRenderer() {
