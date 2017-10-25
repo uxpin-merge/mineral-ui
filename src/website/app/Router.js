@@ -45,7 +45,10 @@ export default function Router({ demos }: Props) {
         <Route
           key={`page-${index}`}
           path={page.path}
-          render={() => <page.component pageMeta={pageMeta} />}
+          render={() => {
+            debugger;
+            return <page.component pageMeta={pageMeta} />;
+          }}
         />
       );
     });
