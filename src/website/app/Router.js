@@ -37,16 +37,15 @@ export default function Router({ demos }: Props) {
       return [...acc, ...pages];
     }, [])
     .map((page, index) => {
-      const pageMeta = {
-        title: `${page.title} | Mineral UI`,
-        canonicalLink: `https://mineral-ui.com${page.path}`
-      };
       return (
         <Route
           key={`page-${index}`}
           path={page.path}
           render={() => {
-            debugger;
+            const pageMeta = {
+              title: `${page.title} | Mineral UI`,
+              canonicalLink: `https://mineral-ui.com${page.path}`
+            };
             return <page.component pageMeta={pageMeta} />;
           }}
         />
