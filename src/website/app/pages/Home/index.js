@@ -27,7 +27,7 @@ import {
   mineralTheme,
   pxToEm
 } from '../../../../utils';
-import _Button from '../../../../Button';
+import Button from '../../../../Button';
 import IconChevronRight from '../../../../Icon/IconChevronRight';
 import IconFavorite from '../../../../Icon/IconFavorite';
 import ThemeProvider from '../../../../ThemeProvider';
@@ -594,7 +594,10 @@ const Markdown = createStyledComponent(_Markdown, styles.markdown).withProps({
   anchors: false
 });
 const BlogLink = createStyledComponent(Link, styles.blogLink);
-const Button = createStyledComponent(_Button, styles.button);
+const LinkButton = createStyledComponent(Button, styles.button).withProps({
+  element: Link,
+  size: 'jumbo'
+});
 const Buttons = createStyledComponent('div', styles.buttons);
 const ThemedCTALink = createThemedComponent(Link, CTALinkTheme);
 const CTALink = createStyledComponent(ThemedCTALink, styles.CTALink);
@@ -682,10 +685,14 @@ export default class Home extends Component<Props, State> {
                     )}
                   <Intro>{intro}</Intro>
                   <Buttons>
-                    <Button primary size="jumbo">
+                    <LinkButton to="/getting-started" primary>
                       Get Started
-                    </Button>
-                    {matches && <Button size="jumbo">View on GitHub</Button>}
+                    </LinkButton>
+                    {matches && (
+                      <LinkButton href="https://github.com/mineral-ui/mineral-ui">
+                        View on GitHub
+                      </LinkButton>
+                    )}
                   </Buttons>
                 </Hero>
               </ThemeProvider>
@@ -726,7 +733,7 @@ export default class Home extends Component<Props, State> {
                       return (
                         <Markdown
                           anchors={false}
-                          scope={{ Button, Link, playgroundButtonIcon }}>
+                          scope={{ LinkButton, Link, playgroundButtonIcon }}>
                           {themePlayground}
                         </Markdown>
                       );
@@ -760,10 +767,14 @@ export default class Home extends Component<Props, State> {
                     <Logo fill="#fff" />
                     <GetStarted scope={{ Logo }}>{getStarted}</GetStarted>
                     <Buttons>
-                      <Button primary size="jumbo">
+                      <LinkButton to="/getting-started" primary>
                         Read the full documentation
-                      </Button>
-                      {matches && <Button size="jumbo">View on GitHub</Button>}
+                      </LinkButton>
+                      {matches && (
+                        <LinkButton href="https://github.com/mineral-ui/mineral-ui">
+                          View on GitHub
+                        </LinkButton>
+                      )}
                     </Buttons>
                   </GetStartedContent>
                 </ThemeProvider>

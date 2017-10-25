@@ -6,6 +6,6 @@ the change to only affect a portion of them. Themes are simple enough to quickly
 change the color palette and powerful enough to adjust a
 [whole host of other properties](theming/#theming-theme-variables).
 
-<Button iconStart={playgroundButtonIcon} primary>
+<LinkButton to="/theming" iconStart={playgroundButtonIcon} primary>
   Learn About Themes
-</Button>
+</LinkButton>

@@ -26,6 +26,8 @@ type Props = {
   circular?: boolean,
   /** Disables the Button */
   disabled?: boolean,
+  /** Element to be used as the root node - e.g. `a` or `ReactRouterLink` */
+  element?: $FlowFixMe, // Should allow string | React class
   /** Stretch Button to fill its container */
   fullWidth?: boolean,
   /** Icon that goes after the children*/
@@ -146,6 +148,7 @@ const styles = {
         }
       })(),
       cursor: disabled ? 'default' : 'pointer',
+      display: 'inline-block', // For when element !== 'button'
       fontWeight: theme.Button_fontWeight,
       height: theme[`Button_height_${size}`],
       // if the user puts in a small icon in a large button
@@ -169,7 +172,19 @@ const styles = {
           }
         })(),
         borderColor: theme.Button_borderColor_focus,
-        boxShadow: theme.Button_boxShadow_focus
+        boxShadow: theme.Button_boxShadow_focus,
+        // For when element !== 'button'
+        color: (() => {
+          if (disabled) {
+            return theme.color_text_disabled;
+          } else if (primary) {
+            return theme.Button_color_text_primary;
+          } else if (minimal) {
+            return theme.Button_color_text_minimal;
+          } else {
+            return theme.Button_color_text;
+          }
+        })()
       },
       '&:hover': {
         backgroundColor: (() => {
@@ -182,7 +197,20 @@ const styles = {
               return theme.Button_backgroundColor_hover;
             }
           }
-        })()
+        })(),
+        // For when element !== 'button'
+        color: (() => {
+          if (disabled) {
+            return theme.color_text_disabled;
+          } else if (primary) {
+            return theme.Button_color_text_primary;
+          } else if (minimal) {
+            return theme.Button_color_text_minimal;
+          } else {
+            return theme.Button_color_text;
+          }
+        })(),
+        textDecoration: 'none' // For when element !== 'button'
       },
       // `:active` must be last, to follow LVHFA order:
       // https://developer.mozilla.org/en-US/docs/Web/CSS/:active
@@ -196,6 +224,18 @@ const styles = {
             } else {
               return theme.Button_backgroundColor_active;
             }
+          }
+        })(),
+        // For when element !== 'button'
+        color: (() => {
+          if (disabled) {
+            return theme.color_text_disabled;
+          } else if (primary) {
+            return theme.Button_color_text_primary;
+          } else if (minimal) {
+            return theme.Button_color_text_minimal;
+          } else {
+            return theme.Button_color_text;
           }
         })()
       },
@@ -276,10 +316,6 @@ const styles = {
   }
 };
 
-const Root = createStyledComponent('button', styles.button, {
-  includeStyleReset: true,
-  rootEl: 'button'
-});
 const Content = createStyledComponent('span', styles.content);
 const Inner = createStyledComponent('span', styles.inner);
 
@@ -292,6 +328,7 @@ const Inner = createStyledComponent('span', styles.inner);
  */
 export default function Button({
   children,
+  element = 'button', // TODO: temp
   iconStart,
   iconEnd,
   size = 'large',
@@ -299,7 +336,19 @@ export default function Button({
   variant = 'regular',
   ...restProps
 }: Props) {
-  const rootProps = { size, text: children, type, variant, ...restProps };
+  const Root = createStyledComponent(element, styles.button, {
+    includeStyleReset: true,
+    rootEl: element
+  });
+
+  const rootProps = {
+    role: element !== 'button' && 'button', // TODO: temp
+    size,
+    text: children,
+    type,
+    variant,
+    ...restProps
+  };
 
   const iconSize = {
     small: 'medium',
