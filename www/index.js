@@ -29,21 +29,48 @@ const svg = tag("svg").bind(this, {
   height:"200"
 });
 
-function triangle(one, two, three, ...colors) {
-  return path({
-    d: `M${one}L${two}L${three}z`
-  }, animate({
+function animateColors(...colors) {
+  return animate({
     attributeName: "fill",
     values: colors.join(";"),
     repeatCount: "indefinite",
     begin: "0s",
     dur: "10s"
-  }));
+  });
+}
+
+function triangle(one, two, three, ...colors) {
+  return path({
+    d: `M${one}L${two}L${three}z`
+  }, animateColors(colors));
+}
+
+function triangle1(one, ...colors) {
+  return path({
+    d: `M${one}l1 2l1 -2z`
+  }, animateColors(colors));
+}
+
+function mesh(num, width, height) {
+  const verticies = [],
+        area = Math.sqrt(width * height / num / 2);
+  console.log(area);
+
+  for (let i=0, row=1; i<num; row++) {
+    for (let offset=0; offset<width; i++, offset+=area) {
+      const x = offset + Math.random() * area,
+            y = row * Math.random() * area,
+            v = `${x} ${y}`;
+      console.log(v);
+      verticies[i] = [x, y];
+    }
+  }
+  return verticies;
 }
 
 const svgStr = svg(
-  triangle("50 100", "200 100", "200 0", "black", "green"),
-  triangle("100 0", "0 200", "200 200", "orange", "purple", "orange"));
+  mesh(10, 300, 200).map(v => triangle1(`${v[0]} ${v[1]}`, "black"))
+);
 
 fs.writeFile("www/gems.svg", svgStr, err => {
   if (err) {
