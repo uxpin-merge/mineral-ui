@@ -48,7 +48,7 @@ function animateColors(...colors) {
 }
 
 function getDimensions(triangles) {
-  return triangles.reduce(({xmin, ymin, xmax, ymax}, {one, two, three}) => {
+  const dimensions = triangles.reduce(({xmin, ymin, xmax, ymax}, {one, two, three}) => {
     const triangleXs = [one, two, three].map(p => p.x);
     const triangleYs = [one, two, three].map(p => p.y);
     return {
@@ -63,31 +63,53 @@ function getDimensions(triangles) {
     xmax: Number.NEGATIVE_INFINITY,
     ymax: Number.NEGATIVE_INFINITY
   });
+  return {
+    width: dimensions.xmax-dimensions.xmin,
+    height: dimensions.ymax-dimensions.ymin,
+    ...dimensions
+  };
+}
+
+function renderTriangle({one, two, three, color, ...rest}) {
+  return path({
+    d: `M${one.x},${one.y}L${two.x},${two.y}L${three.x},${three.y}z`
+  }, animateColors(color));
+}
+
+function rotatePoint90Anti({width, height}, {x, y}) {
+  return {x: y, y: width-x};
+}
+
+function rotateTriangle90Anti(dimensions, {one, two, three, ...rest}) {
+  const rotate = rotatePoint90Anti.bind(this, dimensions);
+  return {
+    one: rotate(one),
+    two: rotate(two),
+    three: rotate(three),
+    ...rest
+  };
+}
+
+function log(props) {
+  console.log(props);
+  return props;
 }
 
 const path = tag("path");
 const animate = tag("animate");
-const svg = tag("svg").bind(this, {
-  id:"gem",
-  xmlns:"http://www.w3.org/2000/svg",
-  "xmlns:xlink":"http://www.w3.org/1999/xlink",
-  width:"500px",
-  height:"500px",
+const svg = tag("svg");
 
-  ...(({xmin, xmax, ymin, ymax}, width = xmax-xmin, height = ymax-ymin) => ({
-    viewBox: `${xmin} ${ymin} ${width} ${height}`
-  }))(getDimensions(triangles))
-});
-
-function triangle(one, two, three, ...colors) {
-  return path({
-    d: `M${one.x},${one.y}L${two.x},${two.y}L${three.x},${three.y}z`
-  }, animateColors(colors));
-}
-
-const svgStr = svg(
-  triangles.map(({one, two, three, color}) => triangle(one, two, three, color))
-);
+const unrotatedDimesions = getDimensions(triangles),
+      rotatedTriangles = triangles.map(rotateTriangle90Anti.bind(this, unrotatedDimesions)),
+      rotatedDimesions = getDimensions(rotatedTriangles),
+      svgStr = svg({
+        id:"gem",
+        xmlns:"http://www.w3.org/2000/svg",
+        "xmlns:xlink":"http://www.w3.org/1999/xlink",
+        viewBox: (({xmin, ymin, width, height}) => [xmin, ymin, width, height].join(" "))(rotatedDimesions),
+        width: rotatedDimesions.width,
+        height: rotatedDimesions.height
+      }, rotatedTriangles.map(renderTriangle) .join(""));
 
 fs.writeFile("www/gems.svg", svgStr, err => {
   if (err) {
