@@ -1,6 +1,7 @@
 const fs = require('fs');
 const triangles = require('./triangles');
 
+const svg = require('./svg');
 
 function rotatePoint90Anti({width, height}, {x, y}) {
   return {x: y, y: width-x};
@@ -21,27 +22,11 @@ function log(props) {
   return props;
 }
 
-function spreadAttrs(attrs) {
-  return Object.keys(attrs).map(key => {
-    const str = `${key}="${attrs[key]}"`;
-    return str;
-  }).join(" ");
-}
-
-function tag(name) {
-  return function(attrs, ...children) {
-    // console.log("name:", name);
-    // console.log("attrs:", attrs);
-    // console.log("children:", children);
-    return `<${name} ${spreadAttrs(attrs)}`
-      + (children && children.length > 0
-         ? `>${children.join("")}</${name}>`
-         : '/>');
   };
 }
 
 function animateFill(...colors) {
-  return animate({
+  return svg.animate({
     attributeName: "fill",
     values: colors.join(";"),
     repeatCount: "indefinite",
@@ -51,7 +36,7 @@ function animateFill(...colors) {
 }
 
 function animateStroke(...colors) {
-  return animate({
+  return svg.animate({
     attributeName: "stroke",
     values: colors.join(";"),
     repeatCount: "indefinite",
@@ -83,18 +68,15 @@ function getDimensions(triangles) {
   };
 }
 
-function renderTriangle({one, two, three, color, ...rest}) {
-  return path({
+function triangle({one, two, three, color}) {
+  return svg.path({
     d: `M${one.x},${one.y}L${two.x},${two.y}L${three.x},${three.y}z`
   }, animateFill(color), animateStroke(color));
 }
 
-const path = tag("path");
-const animate = tag("animate");
-const svg = tag("svg");
 
 const dimesions = getDimensions(triangles),
-      svgStr = svg({
+      svgStr = svg.svg({
         id:"gem",
         xmlns:"http://www.w3.org/2000/svg",
         "xmlns:xlink":"http://www.w3.org/1999/xlink",
