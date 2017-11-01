@@ -73,52 +73,56 @@ function triangle({one, two, three, color}) {
   );
 }
 
-// To find orientation of ordered triplet (p, q, r).
-// The function returns following values
-// 0 --> p, q and r are colinear
-// 1 --> Clockwise
-// 2 --> Counterclockwise
-function orientation(p, q, r) {
-  // See http://www.geeksforgeeks.org/orientation-3-ordered-points/
-  // for details of below formula.
-  const val = (q.y - p.y) * (r.x - q.x) -
-    (q.x - p.x) * (r.y - q.y);
-
-  if (val == 0) return 0;  // colinear
-
-  return (val > 0)? 1: 2; // clock or counterclock wise
+function getPointOnAndDistanceFromLine({x:x1, y:y1}, {x: x2, y: y2}, {x: x3, y:y3}) {
+  const a = x2-x1,
+        b = y2-y1,
+        cSquared = a*a + b*b,
+        u = ((x3 - x1) * a + (y3 - y1) * b) / cSquared,
+        x4 = x1 + u * a,
+        y4 = y1 + u * b,
+        point = {
+          x: x4,
+          y: y4
+        };
+  return {
+    point,
+    distance: distance(point, {x: x3, y: y3})
+  };
 }
 
-function doIntersect(p1, q1, p2, q2) {
-  // Find the four orientations needed for general and
-  // special cases
-  const o1 = orientation(p1, q1, p2),
-        o2 = orientation(p1, q1, q2),
-        o3 = orientation(p2, q2, p1),
-        o4 = orientation(p2, q2, q1);
+function computeColor(distance) {
+  const diffusionRadius = 700,
+        lightness = distance / diffusionRadius,
+        maxBrightness = 60;
 
-  // General case
-  if (o1 != o2 && o3 != o4) {
-    return true;
-  }
-
-  // Special Cases :)
-  return false;
+  return `hsl(0, 0%, ${maxBrightness - (lightness * maxBrightness)}%)`;
 }
 
-// function intersects({start, end}, {one, two, three}) {
-//   return sameSign([one, two, three].map(dot));
-// }
+function distance({x: x1, y: y1}, {x: x2, y: y2}) {
+  return (((x1 - x2) ** 2) + ((y2 - y1) ** 2)) ** (1/2);
+}
 
-function lightUp({start, end}, {one, two, three, color}) {
-  edge1Intersects = doIntersect(start, end, one, two);
-  edge2Intersects = doIntersect(start, end, one, three);
-  edge3Intersects = doIntersect(start, end, two, three);
+function minDistanceFromReference(points, referencePoint) {
+  return Math.min(points.map(distance.bind(this, referencePoint)));
+}
+
+function lightUp({start, end}, {one, two, three}) {
+  const { distance: minDistance } = [one, two, three].reduce((acc, triPoint) => {
+          const pointAndDistance = getPointOnAndDistanceFromLine(start, end, triPoint);
+          return pointAndDistance.distance < acc.distance ? pointAndDistance : acc;
+        }, {
+          distance: Number.POSITIVE_INFINITY
+        });
+
+  const minDistanceFromTriangle = minDistanceFromReference.bind(this, [one, two, three]),
+        startDistance = minDistanceFromTriangle(start),
+        endDistance = minDistanceFromTriangle(end);
+
   return {
     one,
     two,
     three,
-    color: edge1Intersects || edge2Intersects || edge3Intersects ? "red" : color
+    color: [startDistance, minDistance, endDistance].map(computeColor)
   };
 }
 
@@ -134,14 +138,19 @@ const dimesions = getDimensions(triangleData),
           x: xmax-(width*.1),
           y: ymax
         }}))(dimesions),
-      svgStr = svg.svg({
-        id:"gem",
-        xmlns:"http://www.w3.org/2000/svg",
-        "xmlns:xlink":"http://www.w3.org/1999/xlink",
-        viewBox: (({xmin, ymin, width, height}) => [xmin, ymin, width, height].join(" "))(dimesions),
-        width: dimesions.width,
-        height: dimesions.height
-      }, triangleData.map(lightUp.bind(this, lightPath)).map(triangle).join(""));
+      svgStr = svg.svg(
+        {
+          id:"gem",
+          xmlns:"http://www.w3.org/2000/svg",
+          "xmlns:xlink":"http://www.w3.org/1999/xlink",
+          viewBox: (({xmin, ymin, width, height}) => [xmin, ymin, width, height].join(" "))(dimesions),
+          width: dimesions.width,
+          height: dimesions.height
+        },
+        triangleData
+          .map(lightUp.bind(this, lightPath))
+          .map(triangle).join("")
+      );
 
 fs.writeFile("www/gems.svg", svgStr, err => {
   if (err) {
