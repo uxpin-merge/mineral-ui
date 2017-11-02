@@ -35,7 +35,8 @@
     "release": "npm run build && npm test && ./scripts/release.js",
     "release:dist": "./scripts/release.js",
     "start": "webpack-dev-server --progress",
-    "js": "nodemon --ext js www/index.js",
+    "js": "nodemon --watch www --ext js www/index.js",
+    "js:test": "nodemon --watch www --ext js --exec jest www",
     "svg": "reload -b -d www --exts html,svg",
     "test": "npm run lint && npm run flow:restart && npm run jest -- --coverage"
   },
