@@ -15,10 +15,8 @@ function pointOnAndDistanceFromLine({x:x1, y:y1}, {x: x2, y: y2}, {x: x3, y:y3})
   };
 }
 
-function color(distance) {
-  const diffusionRadius = 700,
-        maxBrightness = 255,
-        percentOfMax = Math.min(1, distance / diffusionRadius),
+function color(maxBrightness, diffusionRadius, distance) {
+  const percentOfMax = Math.min(1, distance / diffusionRadius),
         lightness = maxBrightness - Math.floor(percentOfMax * maxBrightness),
         hex = lightness.toString(16),
         code = ((hex) => {

@@ -10,7 +10,9 @@ function log(props) {
 }
 
 function lightUp({start, end}, {one, two, three}) {
-  const { distance: minDistance } = [one, two, three].reduce((acc, triPoint) => {
+  const maxBrightness = 255,
+        diffusionRadius = 700,
+        { distance: minDistance } = [one, two, three].reduce((acc, triPoint) => {
           const pointAndDistance = compute.pointOnAndDistanceFromLine(start, end, triPoint);
           return pointAndDistance.distance < acc.distance ? pointAndDistance : acc;
         }, {
@@ -25,7 +27,8 @@ function lightUp({start, end}, {one, two, three}) {
     one,
     two,
     three,
-    color: [startDistance, minDistance, endDistance].map(compute.color)
+    color: [startDistance, minDistance, endDistance].map(
+      compute.color.bind(this, maxBrightness, diffusionRadius))
   };
 }
 

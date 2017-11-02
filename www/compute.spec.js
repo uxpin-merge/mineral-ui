@@ -42,19 +42,19 @@ const tests = [
     cases: [
       {
         name: "works at no distance",
-        args: [0],
+        args: [255, 700, 0],
         result: "#ffffff"
       }, {
         name: "works at some distance",
-        args: [350],
+        args: [255, 700, 350],
         result: "#808080"
       }, {
         name: "works with all single digit hex",
-        args: [673],
+        args: [255, 700, 673],
         result: "#0a0a0a"
       }, {
         name: "works at great distance",
-        args: [1050],
+        args: [255, 700, 1050],
         result: "#000000"
       }
     ]
