@@ -1,4 +1,4 @@
-function getPointOnAndDistanceFromLine({x:x1, y:y1}, {x: x2, y: y2}, {x: x3, y:y3}) {
+function pointOnAndDistanceFromLine({x:x1, y:y1}, {x: x2, y: y2}, {x: x3, y:y3}) {
   const a = x2-x1,
         b = y2-y1,
         cSquared = a*a + b*b,
@@ -17,10 +17,22 @@ function getPointOnAndDistanceFromLine({x:x1, y:y1}, {x: x2, y: y2}, {x: x3, y:y
 
 function color(distance) {
   const diffusionRadius = 700,
-        lightness = distance / diffusionRadius,
-        maxBrightness = 60;
+        maxBrightness = 255,
+        percentOfMax = Math.min(1, distance / diffusionRadius),
+        lightness = maxBrightness - Math.floor(percentOfMax * maxBrightness),
+        hex = lightness.toString(16),
+        code = ((hex) => {
+          let code = "";
+          const padded = 1 === hex.length ? `0${hex}` : hex;
 
-  return `hsl(0, 0%, ${maxBrightness - (lightness * maxBrightness)}%)`;
+          while(code.length < 6) {
+            code += padded;
+          }
+
+          return code;
+        })(hex);
+
+  return `#${code}`;
 }
 
 function distance({x: x1, y: y1}, {x: x2, y: y2}) {
@@ -28,7 +40,9 @@ function distance({x: x1, y: y1}, {x: x2, y: y2}) {
 }
 
 function minDistanceFromReference(points, referencePoint) {
-  return Math.min(points.map(distance.bind(this, referencePoint)));
+  const distanceFromReference = distance.bind(this, referencePoint),
+        distances = points.map(distanceFromReference);
+  return Math.min(...distances);
 }
 
 function rotatePoint90Anti({width, height}, {x, y}) {
@@ -72,7 +86,7 @@ module.exports = {
   color,
   dimensions,
   distance,
-  getPointOnAndDistanceFromLine,
+  pointOnAndDistanceFromLine,
   minDistanceFromReference,
   rotatePoint90Anti,
   rotateTriangle90Anti

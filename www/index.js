@@ -11,7 +11,7 @@ function log(props) {
 
 function lightUp({start, end}, {one, two, three}) {
   const { distance: minDistance } = [one, two, three].reduce((acc, triPoint) => {
-          const pointAndDistance = compute.getPointOnAndDistanceFromLine(start, end, triPoint);
+          const pointAndDistance = compute.pointOnAndDistanceFromLine(start, end, triPoint);
           return pointAndDistance.distance < acc.distance ? pointAndDistance : acc;
         }, {
           distance: Number.POSITIVE_INFINITY
