@@ -9,10 +9,8 @@ function log(props) {
   return props;
 }
 
-function lightUp({start, end}, {one, two, three}) {
-  const maxBrightness = 255,
-        diffusionRadius = 700,
-        { distance: minDistance } = [one, two, three].reduce((acc, triPoint) => {
+function lightUp({start, end, brightness, radius}, {one, two, three}) {
+  const { distance: minDistance } = [one, two, three].reduce((acc, triPoint) => {
           const pointAndDistance = compute.pointOnAndDistanceFromLine(start, end, triPoint);
           return pointAndDistance.distance < acc.distance ? pointAndDistance : acc;
         }, {
@@ -28,7 +26,9 @@ function lightUp({start, end}, {one, two, three}) {
     two,
     three,
     color: [startDistance, minDistance, endDistance].map(
-      compute.color.bind(this, maxBrightness, diffusionRadius))
+      compute.color.bind(this, brightness, radius)),
+    begin: start.time,
+    dur: end.time-start.time
   };
 }
 
@@ -43,7 +43,9 @@ const {xmin, xmax, ymin, ymax, width, height} = compute.dimensions(triangleData)
           time: 10,
           x: xmax-(width*.1),
           y: ymax
-        }
+        },
+        brightness: 150,
+        radius: 700
       },
       svgStr = svg.svg(
         {
