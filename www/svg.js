@@ -16,6 +16,7 @@ function tag(name) {
 
 module.exports = {
   animate: tag("animate"),
+  circle: tag("circle"),
   path: tag("path"),
   svg: tag("svg")
 };

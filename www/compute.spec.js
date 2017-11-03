@@ -58,6 +58,19 @@ const tests = [
         result: "#000000"
       }
     ]
+  }, {
+    subject: compute.centroid,
+    cases: [
+      {
+        name: "works",
+        args: [{x:15, y:15}, {x:47, y:40}, {x:65,y:20}],
+        result: {x:42, y:25}
+      }, {
+        name: "works still",
+        args: [{x:19, y:13}, {x:25, y:42}, {x:-5,y:28}],
+        result: {x:13, y:28}
+      }
+    ]
   }
 ];
 

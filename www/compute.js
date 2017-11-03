@@ -37,6 +37,11 @@ function distance({x: x1, y: y1}, {x: x2, y: y2}) {
   return (((x1 - x2) ** 2) + ((y2 - y1) ** 2)) ** (1/2);
 }
 
+function pythagoreanA(b, c) {
+  // a*a + b*b = c*c
+  return Math.abs(c*c - b*b) ** (1/2);
+}
+
 function minDistanceFromReference(points, referencePoint) {
   const distanceFromReference = distance.bind(this, referencePoint),
         distances = points.map(distanceFromReference);
@@ -80,11 +85,20 @@ function dimensions(triangleData) {
   };
 }
 
+function centroid(a, b, c) {
+  return {
+    x: Math.round((a.x + b.x + c.x) / 3),
+    y: Math.round((a.y + b.y + c.y) / 3)
+  };
+}
+
 module.exports = {
+  centroid,
   color,
   dimensions,
   distance,
   pointOnAndDistanceFromLine,
+  pythagoreanA,
   minDistanceFromReference,
   rotatePoint90Anti,
   rotateTriangle90Anti
