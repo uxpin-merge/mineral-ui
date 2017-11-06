@@ -9,31 +9,77 @@ function log(props) {
   return props;
 }
 
-function lightUp({start, end, brightness, radius}, triangle, index) {
-  console.log("==============================");
+function extendLight({start, end, brightness, radius}) {
+  const dur = end.time - start.time;
+  const distance = compute.distance(start, end);
+  const velocity = dur / distance;
+  return {
+    start,
+    end,
+    brightness,
+    radius,
+    dur,
+    distance,
+    velocity
+  };
+}
+
+function timeTransform(time, dur) {
+  return compute.roundPlaces(2, compute.clamp(0, 1, time/dur));
+}
+
+function distanceTransform(distance, brightness, radius) {
+  return compute.color(brightness, radius, compute.roundPlaces(0, compute.clamp(0, radius, distance)));
+}
+
+function lightUp({start, end, brightness, radius, dur, velocity}, triangle) {
   const {one, two, three} = triangle;
   const centroid = compute.centroid(one, two, three);
-  const brightest = compute.pointOnAndDistanceFromLine(start, end, centroid);
-  const illuminationDistance = compute.pythagoreanA(brightest.distance, radius);
-  const distanceStartToBrightest = compute.distance(start, brightest.point);
-  const lightDuration = end.time-start.time;
-  const lightPathDistance = compute.distance(start, end);
-  const beginSeconds = lightDuration * (distanceStartToBrightest - illuminationDistance) / lightPathDistance;
-  const dur = illuminationDistance * 2 / lightPathDistance * lightDuration;
+  const startDistance = compute.distance(start, centroid);
+  const endDistance = compute.distance(end, centroid);
 
-  const minDistanceFromTriangle = compute.minDistanceFromReference.bind(this, [one, two, three]);
-  const startDistance = minDistanceFromTriangle(start);
-  const endDistance = minDistanceFromTriangle(end);
+  const brightest = compute.pointOnAndDistanceFromLine(start, end, centroid);
+  const distanceStartToBrightest = compute.distance(start, brightest.point);
+  const brightestTime = distanceStartToBrightest * velocity;
+
+  const illuminationDistance = compute.pythagoreanA(brightest.distance, radius);
+  const illuminationDuration = illuminationDistance * velocity;
+  const illuminationTime = (distanceStartToBrightest - illuminationDistance) * velocity;
+
+  const extinguishTime = brightestTime + illuminationDuration;
+
+  const keyFrames = [{
+    time: start.time,
+    distance: startDistance
+  }, {
+    time: illuminationTime,
+    distance: Math.min(startDistance, radius)
+  }, {
+    time: brightestTime,
+    distance: brightest.distance
+  }, {
+    time: extinguishTime,
+    distance: Math.min(radius, endDistance)
+  }, {
+    time: end.time,
+    distance: endDistance
+  }].reduce((acc, frame) => {
+    return {
+      color: acc.color.concat(distanceTransform(frame.distance, brightness, radius)),
+      keyTimes: acc.keyTimes.concat(timeTransform(frame.time, dur))
+    };
+  }, {
+    color: [],
+    keyTimes: []
+  });
 
   return {
-    index,
     one,
     two,
     three,
-    color: [startDistance, brightest.distance, endDistance].map(
-      compute.color.bind(this, brightness, radius)),
-    begin: beginSeconds,
     dur,
+    color: keyFrames.color,
+    keyTimes: keyFrames.keyTimes,
     centroid,
     brightest
   };
@@ -61,42 +107,44 @@ const lightPath = {
   brightness: 100,
   radius: 700
 };
+const triangles = triangleData
+      // .reduce(selectTrianglesReducer, [])
+      // .map(log)
+      .map(lightUp.bind(this, extendLight(lightPath)))
+      // .map(log)
+      .map(draw.triangle)
+      .join("");
+const light = svg.circle(
+  {
+    cx: lightPath.end.x,
+    cy: lightPath.end.y,
+    r: lightPath.radius,
+    fill: "yellow",
+    opacity: "0.5"
+  },
+  draw.animate("cx", {values:[lightPath.start.x, lightPath.end.x], begin:lightPath.start.time, dur:lightPath.end.time}),
+  draw.animate("cy", {values:[lightPath.start.y, lightPath.end.y], begin:lightPath.start.time, dur:lightPath.end.time}));
+const lightCenter = svg.circle(
+  {
+    cx: lightPath.end.x,
+    cy: lightPath.end.y,
+    fill: "blue",
+    r: 5
+  },
+  draw.animate("cx", {values:[lightPath.start.x, lightPath.end.x], begin:lightPath.start.time, dur:lightPath.end.time}),
+  draw.animate("cy", {values:[lightPath.start.y, lightPath.end.y], begin:lightPath.start.time, dur:lightPath.end.time}));
 const svgStr = svg.svg(
   {
     id:"gem",
     xmlns:"http://www.w3.org/2000/svg",
     "xmlns:xlink":"http://www.w3.org/1999/xlink",
     viewBox: [xmin, ymin, width, height].join(" "),
-    width,
-    height
+    width: "100%"
   },
-  svg.circle(
-    {
-      cx: lightPath.start.x,
-      cy: lightPath.start.y,
-      r: lightPath.radius,
-      fill: "yellow",
-      opacity: "0.5"
-    },
-    draw.animate("cx", [lightPath.start.x, lightPath.end.x], lightPath.start.time, lightPath.end.time),
-    draw.animate("cy", [lightPath.start.y, lightPath.end.y], lightPath.start.time, lightPath.end.time)),
-  triangleData
-    // .reduce(selectTrianglesReducer, [])
-    // .map(log)
-    .map(lightUp.bind(this, lightPath))
-    .map(log)
-    .map(draw.triangle)
-    .join(""),
+  light,
+  triangles,
   draw.line(lightPath.start, lightPath.end, "red"),
-  svg.circle(
-    {
-      cx: lightPath.start.x,
-      cy: lightPath.start.y,
-      fill: "blue",
-      r: 5
-    },
-    draw.animate("cx", [lightPath.start.x, lightPath.end.x], lightPath.start.time, lightPath.end.time),
-    draw.animate("cy", [lightPath.start.y, lightPath.end.y], lightPath.start.time, lightPath.end.time))
+  lightCenter
 );
 
 fs.writeFile("www/gems.svg", svgStr, err => {

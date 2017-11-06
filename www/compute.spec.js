@@ -3,6 +3,44 @@ const paratest = require('./paratest');
 
 const tests = [
   {
+    subject: compute.roundPlaces,
+    cases: [
+      {
+        name: "works with more",
+        args: [1, 10.25],
+        result: 10.3
+      }, {
+        name: "works with less",
+        args: [2, 10.5],
+        result: 10.5
+      }, {
+        name: "works with ints",
+        args: [1, 10],
+        result: 10
+      }, {
+        name: "works with zero",
+        args: [0, 10.876],
+        result: 11
+      }
+    ]
+  }, {
+    subject: compute.clamp,
+    cases: [
+      {
+        name: "works inside",
+        args: [0, 10, 5],
+        result: 5
+      }, {
+        name: "works above",
+        args: [0, 10, 15],
+        result: 10
+      }, {
+        name: "works below",
+        args: [0, 10, -5],
+        result: 0
+      }
+    ]
+  }, {
     subject: compute.distance,
     cases: [
       {

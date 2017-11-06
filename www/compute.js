@@ -1,3 +1,5 @@
+const roundOff = roundPlaces.bind(this, 2);
+
 function pointOnAndDistanceFromLine({x:x1, y:y1}, {x: x2, y: y2}, {x: x3, y:y3}) {
   const a = x2-x1,
         b = y2-y1,
@@ -6,12 +8,12 @@ function pointOnAndDistanceFromLine({x:x1, y:y1}, {x: x2, y: y2}, {x: x3, y:y3})
         x4 = x1 + u * a,
         y4 = y1 + u * b,
         point = {
-          x: x4,
-          y: y4
+          x: roundOff(x4),
+          y: roundOff(y4)
         };
   return {
     point,
-    distance: distance(point, {x: x3, y: y3})
+    distance: roundOff(distance(point, {x: x3, y: y3}))
   };
 }
 
@@ -92,8 +94,17 @@ function centroid(a, b, c) {
   };
 }
 
+function clamp(min, max, value) {
+  return Math.min(Math.max(min, value), max);
+}
+
+function roundPlaces(places, value) {
+  return parseFloat(value.toFixed(places));
+}
+
 module.exports = {
   centroid,
+  clamp,
   color,
   dimensions,
   distance,
@@ -101,5 +112,6 @@ module.exports = {
   pythagoreanA,
   minDistanceFromReference,
   rotatePoint90Anti,
-  rotateTriangle90Anti
+  rotateTriangle90Anti,
+  roundPlaces
 };
