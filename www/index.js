@@ -63,10 +63,17 @@ function lightUp({start, end, brightness, radius, dur, velocity}, triangle) {
   }, {
     time: end.time,
     distance: endDistance
-  }].reduce((acc, frame) => {
+  }].reduce((acc, frame, index) => {
+    const newTime = timeTransform(frame.time, dur);
+    if (index > 0) {
+      const prevTime = acc.keyTimes[index - 1];
+      if (newTime === prevTime) {
+        return acc;
+      }
+    }
     return {
       color: acc.color.concat(distanceTransform(frame.distance, brightness, radius)),
-      keyTimes: acc.keyTimes.concat(timeTransform(frame.time, dur))
+      keyTimes: acc.keyTimes.concat(newTime)
     };
   }, {
     color: [],

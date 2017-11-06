@@ -34,16 +34,22 @@ function triangle({one, two, three, dur, color, keyTimes, centroid, brightest}) 
   };
 
   if(Array.isArray(color)) {
-    children = [
-      animate("fill", {
-        keyTimes,
-        dur,
-        values: color
-      })
-    ];
-    opts = {
-      fill: color[color.length - 1]
-    };
+    if(color.every((c, i, a) => c === a[0])) {
+      opts = {fill: color[0], stroke: color[0]};
+    } else {
+      children = [
+        animate("stroke", {
+          keyTimes,
+          dur,
+          values: color
+        }),
+        animate("fill", {
+          keyTimes,
+          dur,
+          values: color
+        })
+      ];
+    }
   } else {
     opts = {fill: color};
   }
