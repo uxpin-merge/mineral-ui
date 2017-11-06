@@ -17,22 +17,15 @@ function pointOnAndDistanceFromLine({x:x1, y:y1}, {x: x2, y: y2}, {x: x3, y:y3})
   };
 }
 
+function lerp(value, low1, high1, low2, high2) {
+  return Math.round(low2 + (value - low1) * (high2 - low2) / (high1 - low1));
+}
+
 function color(maxBrightness, diffusionRadius, distance) {
-  const percentOfMax = Math.min(1, distance / diffusionRadius),
-        lightness = maxBrightness - Math.floor(percentOfMax * maxBrightness),
-        hex = lightness.toString(16),
-        code = ((hex) => {
-          let code = "";
-          const padded = 1 === hex.length ? `0${hex}` : hex;
-
-          while(code.length < 6) {
-            code += padded;
-          }
-
-          return code;
-        })(hex);
-
-  return `#${code}`;
+  const percentage = clamp(0, maxBrightness, lerp(distance, diffusionRadius, 0, 0, maxBrightness));
+  const newValue = lerp(percentage, 0, maxBrightness, 0, 15);
+  const hex = newValue.toString(16);
+  return `#${hex}${hex}${hex}`;
 }
 
 function distance({x: x1, y: y1}, {x: x2, y: y2}) {
@@ -108,6 +101,7 @@ module.exports = {
   color,
   dimensions,
   distance,
+  lerp,
   pointOnAndDistanceFromLine,
   pythagoreanA,
   minDistanceFromReference,

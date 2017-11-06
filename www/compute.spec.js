@@ -81,19 +81,19 @@ const tests = [
       {
         name: "works at no distance",
         args: [255, 700, 0],
-        result: "#ffffff"
+        result: "#fff"
       }, {
         name: "works at some distance",
         args: [255, 700, 350],
-        result: "#808080"
+        result: "#888"
       }, {
         name: "works with all single digit hex",
         args: [255, 700, 673],
-        result: "#0a0a0a"
+        result: "#111"
       }, {
         name: "works at great distance",
         args: [255, 700, 1050],
-        result: "#000000"
+        result: "#000"
       }
     ]
   }, {
@@ -107,6 +107,31 @@ const tests = [
         name: "works still",
         args: [{x:19, y:13}, {x:25, y:42}, {x:-5,y:28}],
         result: {x:13, y:28}
+      }
+    ]
+  }, {
+    subject: compute.lerp,
+    cases: [
+      {
+        name: "works",
+        args: [50, 0, 100, 0, 16],
+        result: 8
+      }, {
+        name: "rounds appropriately",
+        args: [45, 0, 100, 0, 16],
+        result: 7
+      }, {
+        name: "lower",
+        args: [-10, 0, 100, 0, 16],
+        result: -2
+      }, {
+        name: "another",
+        args: [600, 700, 0, 0, 15],
+        result: 2
+      }, {
+        name: "higher",
+        args: [800, 700, 0, 0, 15],
+        result: -2
       }
     ]
   }
