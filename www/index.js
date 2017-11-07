@@ -91,16 +91,16 @@ const {xmin, xmax, ymin, ymax, width, height} = compute.dimensions(triangleData)
 const lightPath = {
   start: {
     time: 0,
-    x: xmax-(width*.5),
-    y: ymin
+    x: xmax-(width*.25),
+    y: ymin+(height*.25)
   },
   end: {
     time: 60,
     x: xmax-(width*.1),
     y: ymax
   },
-  brightness: 60,
-  radius: 1100
+  brightness: 75,
+  radius: width*.70
 };
 const triangles = triangleData
       // .reduce(selectTrianglesReducer, [])
