@@ -80,19 +80,19 @@ const tests = [
     cases: [
       {
         name: "works at no distance",
-        args: [255, 700, 0],
+        args: [100, 700, 0],
         result: "#fff"
       }, {
         name: "works at some distance",
-        args: [255, 700, 350],
-        result: "#888"
+        args: [100, 700, 350],
+        result: "#808080"
       }, {
         name: "works with all single digit hex",
-        args: [255, 700, 673],
-        result: "#111"
+        args: [100, 700, 673],
+        result: "#0a0a0a"
       }, {
         name: "works at great distance",
-        args: [255, 700, 1050],
+        args: [100, 700, 1050],
         result: "#000"
       }
     ]
@@ -119,19 +119,32 @@ const tests = [
       }, {
         name: "rounds appropriately",
         args: [45, 0, 100, 0, 16],
-        result: 7
+        result: 7.2
       }, {
         name: "lower",
         args: [-10, 0, 100, 0, 16],
-        result: -2
+        result: -1.6
       }, {
         name: "another",
         args: [600, 700, 0, 0, 15],
-        result: 2
+        result: 2.142857142857143
       }, {
         name: "higher",
         args: [800, 700, 0, 0, 15],
-        result: -2
+        result: -2.142857142857143
+      }
+    ]
+  }, {
+    subject: compute.padColor,
+    cases: [
+      {
+        name: "works",
+        args: ["ff"],
+        result: "#fff"
+      }, {
+        name: "works",
+        args: ["f"],
+        result: "#0f0f0f"
       }
     ]
   }

@@ -13,6 +13,7 @@ function extendLight({start, end, brightness, radius}) {
   const dur = end.time - start.time;
   const distance = compute.distance(start, end);
   const velocity = dur / distance;
+  const slope = (end.y - start.y) / (end.x - start.x);
   return {
     start,
     end,
@@ -20,7 +21,9 @@ function extendLight({start, end, brightness, radius}) {
     radius,
     dur,
     distance,
-    velocity
+    velocity,
+    slope,
+    theta: Math.atan(slope)
   };
 }
 
@@ -28,72 +31,57 @@ function timeTransform(time, dur) {
   return compute.roundPlaces(2, compute.clamp(0, 1, time/dur));
 }
 
-function distanceTransform(distance, brightness, radius) {
+function distanceTransform(brightness, radius, distance) {
   return compute.color(brightness, radius, compute.roundPlaces(0, compute.clamp(0, radius, distance)));
 }
 
-function lightUp({start, end, brightness, radius, dur, velocity}, triangle) {
-  const {one, two, three} = triangle;
+function translateByReference(point, reference) {
+  return {x: point.x - reference.x, y: point.y - reference.y};
+}
+
+function lightUp({start, end, theta, brightness, radius, distance, dur, velocity, slope}, triangle) {
+  const {one, two, three, id} = triangle;
   const centroid = compute.centroid(one, two, three);
+  const origin = {x: 0, y: 0};
   const startDistance = compute.distance(start, centroid);
   const endDistance = compute.distance(end, centroid);
 
   const brightest = compute.pointOnAndDistanceFromLine(start, end, centroid);
-  const distanceStartToBrightest = compute.distance(start, brightest.point);
-  const brightestTime = distanceStartToBrightest * velocity;
-
   const illuminationDistance = compute.pythagoreanA(brightest.distance, radius);
-  const illuminationDuration = illuminationDistance * velocity;
-  const illuminationTime = (distanceStartToBrightest - illuminationDistance) * velocity;
 
-  const extinguishTime = brightestTime + illuminationDuration;
+  const translatedCentroid = translateByReference(centroid, start);
+  const distanceStartToBrightest = compute.distance(start, brightest.point);
+  const distanceFromIlluminationToOrigin = distanceStartToBrightest - illuminationDistance;
+  const distanceFromExtinguishToOrigin = distanceStartToBrightest + illuminationDistance;
+  const illuminationPoint = {x: start.x + (Math.cos(theta) * distanceFromIlluminationToOrigin), y: start.y + (Math.sin(theta) * distanceFromIlluminationToOrigin)};
+  const extinguishPoint = {x: start.x + (Math.cos(theta) * distanceFromExtinguishToOrigin), y: start.y + (Math.sin(theta) * distanceFromExtinguishToOrigin)};
+  const illuminatedDistance = compute.distance(illuminationPoint, extinguishPoint);
 
-  const keyFrames = [{
-    time: start.time,
-    distance: startDistance
-  }, {
-    time: illuminationTime,
-    distance: Math.min(startDistance, radius)
-  }, {
-    time: brightestTime,
-    distance: brightest.distance
-  }, {
-    time: extinguishTime,
-    distance: Math.min(radius, endDistance)
-  }, {
-    time: end.time,
-    distance: endDistance
-  }].reduce((acc, frame, index) => {
-    const newTime = timeTransform(frame.time, dur);
-    if (index > 0) {
-      const prevTime = acc.keyTimes[index - 1];
-      if (newTime === prevTime) {
-        return acc;
-      }
-    }
-    return {
-      color: acc.color.concat(distanceTransform(frame.distance, brightness, radius)),
-      keyTimes: acc.keyTimes.concat(newTime)
-    };
-  }, {
-    color: [],
-    keyTimes: []
-  });
+  const points = [start, illuminationPoint, brightest.point, extinguishPoint, end]
+        .sort((a, b) => a.y > b.y)
+        .filter(p => p.y >= start.y && p.y <= end.y);
+  const color = points.map(compute.distance.bind(this, centroid))
+        .map(distanceTransform.bind(this, brightness, radius));
+  const keyTimes = points.map(p => compute.roundPlaces(2, compute.lerp(compute.distance(start, p), 0, distance, 0, 1)));
 
   return {
+    start,
+    id,
     one,
     two,
     three,
     dur,
-    color: keyFrames.color,
-    keyTimes: keyFrames.keyTimes,
+    color,
+    keyTimes,
     centroid,
-    brightest
+    brightest,
+    illuminationPoint,
+    extinguishPoint
   };
 }
 
 function selectTrianglesReducer(acc, triangle) {
-  if([12, 15, 197].indexOf(triangle.id) !== -1) {
+  if([165].indexOf(triangle.id) !== -1) {
     return acc.concat(triangle);
   }
   return acc;
@@ -111,7 +99,7 @@ const lightPath = {
     x: xmax-(width*.1),
     y: ymax
   },
-  brightness: 100,
+  brightness: 60,
   radius: 700
 };
 const triangles = triangleData
@@ -149,8 +137,8 @@ const svgStr = svg.svg(
     width: "100%"
   },
   light,
-  triangles,
   draw.line(lightPath.start, lightPath.end, "red"),
+  triangles,
   lightCenter
 );
 

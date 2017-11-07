@@ -18,14 +18,30 @@ function pointOnAndDistanceFromLine({x:x1, y:y1}, {x: x2, y: y2}, {x: x3, y:y3})
 }
 
 function lerp(value, low1, high1, low2, high2) {
-  return Math.round(low2 + (value - low1) * (high2 - low2) / (high1 - low1));
+  return low2 + (value - low1) * (high2 - low2) / (high1 - low1);
+}
+
+function padColor(str) {
+  let out = "";
+  const padded = 1 === str.length ? `0${str}` : str;
+
+  while(out.length < 6) {
+    out += padded;
+  }
+
+  let allSame = true;
+  for(let i=0; allSame && i<out.length; i++) {
+    allSame = out[i] === out[0];
+  }
+
+  return allSame ? `#${out.substr(0,3)}` : `#${out}`;
 }
 
 function color(maxBrightness, diffusionRadius, distance) {
-  const percentage = clamp(0, maxBrightness, lerp(distance, diffusionRadius, 0, 0, maxBrightness));
-  const newValue = lerp(percentage, 0, maxBrightness, 0, 15);
+  const whiteness = lerp(maxBrightness, 0, 100, 0, 255);
+  const newValue = Math.round(clamp(0, whiteness, lerp(distance, diffusionRadius, 0, 0, whiteness)));
   const hex = newValue.toString(16);
-  return `#${hex}${hex}${hex}`;
+  return padColor(hex);
 }
 
 function distance({x: x1, y: y1}, {x: x2, y: y2}) {
@@ -102,6 +118,7 @@ module.exports = {
   dimensions,
   distance,
   lerp,
+  padColor,
   pointOnAndDistanceFromLine,
   pythagoreanA,
   minDistanceFromReference,
