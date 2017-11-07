@@ -147,6 +147,32 @@ const tests = [
         result: "#0f0f0f"
       }
     ]
+  }, {
+    subject: compute.timeMirror,
+    cases: [
+      {
+        name: "works",
+        args: [[0, 0.2, 0.9, 1]],
+        result: [0, 0.1, 0.45, 0.5, 0.55, 0.9, 1]
+      }, {
+        name: "fewer",
+        args: [[0, 0.2, 1]],
+        result: [0, 0.1, 0.5, 0.9, 1]
+      }, {
+        name: "fewer still",
+        args: [[0, 1]],
+        result: [0, 0.5, 1]
+      }
+    ]
+  }, {
+    subject: compute.colorMirror,
+    cases: [
+      {
+        name: "works",
+        args: [["#000", "#fff", "#111"]],
+        result: ["#000", "#fff", "#111", "#fff", "#000"]
+      }
+    ]
   }
 ];
 

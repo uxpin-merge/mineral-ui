@@ -111,10 +111,30 @@ function roundPlaces(places, value) {
   return parseFloat(value.toFixed(places));
 }
 
+function timeMirror(times) {
+  let init = times.map(t => t/2);
+  for(let i=init.length-1; i--; ) {
+    const difference = init[i+1] - init[i];
+    init = init.concat(init[init.length-1] + difference);
+  }
+  return init;
+}
+
+function colorMirror(colors) {
+  let init = colors.reduce((acc, c, i) => {
+    return i !== colors.length - 1 ? acc.concat(c) : acc;
+  }, []);
+  let reversed = colors.reduce((acc, c) => {
+    return [c].concat(acc);
+  }, []);
+  return init.concat(reversed);
+}
+
 module.exports = {
   centroid,
   clamp,
   color,
+  colorMirror,
   dimensions,
   distance,
   lerp,
@@ -124,5 +144,6 @@ module.exports = {
   minDistanceFromReference,
   rotatePoint90Anti,
   rotateTriangle90Anti,
-  roundPlaces
+  roundPlaces,
+  timeMirror
 };

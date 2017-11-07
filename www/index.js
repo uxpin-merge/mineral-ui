@@ -60,9 +60,9 @@ function lightUp({start, end, theta, brightness, radius, distance, dur, velocity
   const points = [start, illuminationPoint, brightest.point, extinguishPoint, end]
         .sort((a, b) => a.y > b.y)
         .filter(p => p.y >= start.y && p.y <= end.y);
-  const color = points.map(compute.distance.bind(this, centroid))
-        .map(distanceTransform.bind(this, brightness, radius));
-  const keyTimes = points.map(p => compute.roundPlaces(2, compute.lerp(compute.distance(start, p), 0, distance, 0, 1)));
+  const color = compute.colorMirror(points.map(compute.distance.bind(this, centroid))
+        .map(distanceTransform.bind(this, brightness, radius)));
+  const keyTimes = compute.timeMirror(points.map(p => compute.roundPlaces(2, compute.lerp(compute.distance(start, p), 0, distance, 0, 1))));
 
   return {
     start,
@@ -95,12 +95,12 @@ const lightPath = {
     y: ymin
   },
   end: {
-    time: 10,
+    time: 60,
     x: xmax-(width*.1),
     y: ymax
   },
   brightness: 60,
-  radius: 700
+  radius: 1100
 };
 const triangles = triangleData
       // .reduce(selectTrianglesReducer, [])
@@ -136,10 +136,10 @@ const svgStr = svg.svg(
     viewBox: [xmin, ymin, width, height].join(" "),
     width: "100%"
   },
-  light,
-  draw.line(lightPath.start, lightPath.end, "red"),
-  triangles,
-  lightCenter
+  // light,
+  // draw.line(lightPath.start, lightPath.end, "red"),
+  triangles
+  // lightCenter
 );
 
 fs.writeFile("www/gems.svg", svgStr, err => {
