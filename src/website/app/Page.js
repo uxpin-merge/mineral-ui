@@ -469,6 +469,7 @@ export default class Page extends Component<Props, State> {
             <div>
               <Dialog>
                 <MenuButton
+                  aria-label="close"
                   iconStart={<IconClose />}
                   inDialog
                   onClick={this.close.bind(this)}
@@ -484,6 +485,7 @@ export default class Page extends Component<Props, State> {
             <div>
               <MenuButton
                 iconStart={<IconMenu />}
+                aria-label="open"
                 onClick={this.open.bind(this)}
               />
             </div>
