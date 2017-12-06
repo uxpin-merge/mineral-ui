@@ -16,35 +16,29 @@
 
 /* @flow */
 import React from 'react';
-import { createStyledComponent } from '../../../../../../styles';
 import { mineralTheme } from '../../../../../../themes';
-import Button from '../../../../../../Button';
-import Card, { CardBlock, CardTitle } from '../../../../../../Card';
+import _Link from '../../../../../../Link';
+import Card, { CardBlock, CardActions } from '../../../../../../Card';
 import DemoLayout from '../../components/DemoLayout';
+import demoContent from '../../components/demoContent';
 
-const CustomContent = createStyledComponent('div', ({ theme }) => ({
-  backgroundColor: theme.color_gray_20,
-  padding: `${theme.space_stack_md} 0`
-}));
-
-const customContent = (
-  <CustomContent>
-    <Button fullWidth>Button</Button>
-  </CustomContent>
-);
+const Link = (props: {}) => <_Link target="_blank" {...props} />;
 
 export default {
-  id: 'children',
-  title: 'Arbitrary Children',
+  id: 'with-links',
+  title: 'With Links',
   // $FlowFixMe
   backgroundColor: mineralTheme.color_gray_10,
-  description: `A CardBlock will render any children.`,
-  scope: { Button, Card, CardBlock, CardTitle, customContent, DemoLayout },
+  description: '',
+  scope: { Link, Card, CardActions, CardBlock, demoContent, DemoLayout },
   source: `
     <DemoLayout>
       <Card>
-        <CardTitle>Card Title</CardTitle>
-        <CardBlock>{customContent}</CardBlock>
+        <CardBlock>{demoContent}</CardBlock>
+        <CardActions>
+          <Link href="https://example.com">Link 1</Link>
+          <Link href="https://example.com">Link 2</Link>
+        </CardActions>
       </Card>
     </DemoLayout>`
 };

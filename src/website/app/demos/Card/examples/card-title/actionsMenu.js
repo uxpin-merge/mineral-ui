@@ -16,23 +16,47 @@
 
 /* @flow */
 import { mineralTheme } from '../../../../../../themes';
-import Card, { CardBlock, CardImage, CardTitle } from '../../../../../../Card';
+import Card, {
+  CardBlock,
+  CardTitle,
+  CardTitleMenu
+} from '../../../../../../Card';
 import DemoLayout from '../../components/DemoLayout';
 import demoContent from '../../components/demoContent';
 
 export default {
-  id: 'with-image',
-  title: 'Displaying an Image in a Card',
+  id: 'actions-menu',
+  title: 'Actions Menu',
   // $FlowFixMe
   backgroundColor: mineralTheme.color_gray_10,
-  description: 'CardImages should provide an `alt` attribute.',
-  scope: { Card, CardBlock, CardImage, CardTitle, demoContent, DemoLayout },
+  description: ``,
+  scope: {
+    Card,
+    CardBlock,
+    CardTitle,
+    CardTitleMenu,
+    demoContent,
+    DemoLayout
+  },
   source: `
-    <DemoLayout>
-      <Card>
-        <CardImage src="/images/500x281.png" alt="gradient image" />
-        <CardTitle>Card Title</CardTitle>
-        <CardBlock>{demoContent}</CardBlock>
-      </Card>
-    </DemoLayout>`
+    () => {
+      const menuData = [
+        {
+          items: [
+            { onClick: () => { console.log('Clicked 1') }, text: 'MenuItem 1' },
+            { onClick: () => { console.log('Clicked 2') }, text: 'MenuItem 2' },
+            { onClick: () => { console.log('Clicked 3') }, text: 'MenuItem 3' }
+          ]
+        }
+      ];
+
+      return (
+        <DemoLayout>
+          <Card>
+            <CardTitle actions={<CardTitleMenu data={menuData} />}>Card Title</CardTitle>
+            <CardBlock>{demoContent}</CardBlock>
+          </Card>
+        </DemoLayout>
+      );
+    }`
 };

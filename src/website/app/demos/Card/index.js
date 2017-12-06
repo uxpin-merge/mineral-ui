@@ -16,15 +16,21 @@
 
 /* @flow */
 import { componentTheme as cardComponentTheme } from '../../../../Card/Card';
+import { componentTheme as cardActionsComponentTheme } from '../../../../Card/CardActions';
 import { componentTheme as cardBlockComponentTheme } from '../../../../Card/CardBlock';
+import { componentTheme as cardFooterComponentTheme } from '../../../../Card/CardFooter';
 import { componentTheme as cardTitleComponentTheme } from '../../../../Card/CardTitle';
 import cardExamples from './examples/card';
+import cardActionsExamples from './examples/card-actions';
 import cardBlockExamples from './examples/card-block';
+import cardFooterExamples from './examples/card-footer';
 import cardImageExamples from './examples/card-image';
 import cardTitleExamples from './examples/card-title';
 
 const cardDoc = require('!!react-docgen-loader!../../../../Card/Card');
+const cardActionsDoc = require('!!react-docgen-loader!../../../../Card/CardActions');
 const cardBlockDoc = require('!!react-docgen-loader!../../../../Card/CardBlock');
+const cardFooterDoc = require('!!react-docgen-loader!../../../../Card/CardFooter');
 const cardImageDoc = require('!!react-docgen-loader!../../../../Card/CardImage');
 const cardTitleDoc = require('!!react-docgen-loader!../../../../Card/CardTitle');
 
@@ -46,6 +52,15 @@ Don't put too much information in a single card.
 Cards represent a gateway to more detailed information in another app view.`
   },
   {
+    bestPractices: [],
+    componentTheme: cardActionsComponentTheme,
+    doc: cardActionsDoc,
+    examples: cardActionsExamples,
+    slug: 'card-actions',
+    title: 'CardActions',
+    whenHowToUse: ``
+  },
+  {
     bestPractices: bestPractices.cardBlock,
     componentTheme: cardBlockComponentTheme,
     doc: cardBlockDoc,
@@ -55,6 +70,15 @@ Cards represent a gateway to more detailed information in another app view.`
     whenHowToUse: `CardBlock is used to help lay out content that's not a [title](../card-title) or an [image](../card-image) in the body of the [Card](../card).
 
 Try not to put inline links in your content. Create purposeful calls to action with [Buttons](../button) at the bottom of the Card.`
+  },
+  {
+    bestPractices: [],
+    componentTheme: cardFooterComponentTheme,
+    doc: cardFooterDoc,
+    examples: cardFooterExamples,
+    slug: 'card-footer',
+    title: 'CardFooter',
+    whenHowToUse: ``
   },
   {
     bestPractices: bestPractices.cardImage,

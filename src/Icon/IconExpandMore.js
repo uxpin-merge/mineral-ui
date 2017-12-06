@@ -15,16 +15,30 @@
  */
 
 /* @flow */
-export default {
-  id: 'import-syntax',
-  title: 'Import Syntax',
-  description: `\`\`\`
-import Card, { CardTitle } from 'mineral-ui/Card';
-\`\`\`
+import React from 'react';
+import Icon from 'mineral-ui/Icon';
 
-<Callout title="Note">
-  <a href="../card" key={0}>Cards</a> normally occupy the full available width
-  of their container. The Cards here are width-constrained for illustration
-  purposes.
-</Callout>`
+type Props = {
+  size?: string | 'small' | 'medium' | 'large',
+  color?: string,
+  rtl?: boolean,
+  title?: string
 };
+
+/* eslint-disable prettier/prettier */
+export default function IconExpandMore(props: Props) {
+  const iconProps = {
+    rtl: false,
+    ...props
+  };
+
+  return (
+    <Icon {...iconProps}>
+      <g>
+        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
+      </g>
+    </Icon>
+  );
+}
+
+IconExpandMore.category = 'navigation';

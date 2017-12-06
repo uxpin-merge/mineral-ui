@@ -18,25 +18,27 @@
 import { mineralTheme } from '../../../../../../themes';
 import Card, { CardBlock, CardTitle } from '../../../../../../Card';
 import DemoLayout from '../../components/DemoLayout';
+import demoContent from '../../components/demoContent';
 
 export default {
   id: 'meta',
   title: 'With Meta Information',
   // $FlowFixMe
   backgroundColor: mineralTheme.color_gray_10,
-  description: `When you must provide information that doesn't belong to every Card in a set, supply it as \`meta\` information.
-The information will display above the title, which will automatically display in the minor style.
-If information is in every card in the set, consider using the \`subtitle\` attribute.`,
-  scope: { Card, CardBlock, CardTitle, DemoLayout },
+  description: `When you must provide information that doesn't belong to every
+Card in a set, supply it as \`meta\` information. The information will display
+beside the title. If information is in every card in the set, or if the meta
+information is not brief, consider using the \`subtitle\` prop.`,
+  scope: { Card, CardBlock, CardTitle, demoContent, DemoLayout },
   source: `
     <DemoLayout>
       <Card>
-        <CardTitle meta="Meta Information for This Card">Card Title</CardTitle>
-        <CardBlock>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis
-          pretium massa. Aliquam erat volutpat. Nulla facilisi. Donec vulputate
-          interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-        </CardBlock>
+        <CardTitle meta="Meta Info">Card Title</CardTitle>
+        <CardBlock>{demoContent}</CardBlock>
+      </Card>
+      <Card>
+        <CardTitle meta="Longer meta info is truncated">Card Title</CardTitle>
+        <CardBlock>{demoContent}</CardBlock>
       </Card>
     </DemoLayout>`
 };

@@ -15,43 +15,55 @@
  */
 
 /* @flow */
-import { createStyledComponent } from '../../../../../../styles';
 import { mineralTheme } from '../../../../../../themes';
-import Card, { CardBlock, CardImage, CardTitle } from '../../../../../../Card';
-import _DemoLayout from '../../components/DemoLayout';
+import Button from '../../../../../../Button';
+import Card, {
+  CardActions,
+  CardBlock,
+  CardFooter
+} from '../../../../../../Card';
+import DemoLayout from '../../components/DemoLayout';
 import demoContent from '../../components/demoContent';
 
-const DemoLayout = createStyledComponent(_DemoLayout, {
-  '& img': {
-    width: '100%'
-  }
-});
-
 export default {
-  id: 'order',
-  title: 'Order of Sections',
+  id: 'arbitrary-children',
+  title: 'Arbitrary Children',
   // $FlowFixMe
   backgroundColor: mineralTheme.color_gray_10,
-  description: `There is no 'one true way' to lay out a Card. Cards are flexible enough to accept different component arrangements.`,
-  scope: { Card, CardBlock, CardImage, CardTitle, demoContent, DemoLayout },
+  description: '',
+  scope: {
+    Button,
+    Card,
+    CardActions,
+    CardBlock,
+    CardFooter,
+    demoContent,
+    DemoLayout
+  },
   source: `
     <DemoLayout>
       <Card>
-        <CardImage src="/images/500x500.png" alt="gradient image" />
-        <CardTitle minor>Card Title</CardTitle>
         <CardBlock>{demoContent}</CardBlock>
+        <CardFooter title="Footer Title Only" />
       </Card>
-
       <Card>
-        <CardTitle>Card Title</CardTitle>
-        <CardImage src="/images/500x500.png" alt="gradient image" />
         <CardBlock>{demoContent}</CardBlock>
+        <CardFooter>
+          <CardActions>
+            <Button size="medium">Button 1</Button>
+            <Button primary size="medium">Button 2</Button>
+          </CardActions>
+        </CardFooter>
       </Card>
-
       <Card>
-        <CardTitle>Card Title</CardTitle>
         <CardBlock>{demoContent}</CardBlock>
-        <CardImage src="/images/690x690.png" alt="gradient image" />
+        <CardFooter title="Footer Title">
+          <CardBlock>{demoContent}</CardBlock>
+          <CardActions>
+            <Button size="medium">Button 1</Button>
+            <Button primary size="medium">Button 2</Button>
+          </CardActions>
+        </CardFooter>
       </Card>
     </DemoLayout>`
 };

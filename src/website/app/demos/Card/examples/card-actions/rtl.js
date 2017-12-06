@@ -15,35 +15,40 @@
  */
 
 /* @flow */
-import { mineralTheme } from '../../../../../../themes';
+import { mineralTheme, ThemeProvider } from '../../../../../../themes';
+import IconCloud from 'mineral-ui-icons/IconCloud';
 import Button from '../../../../../../Button';
-import Card, { CardBlock, CardImage, CardTitle } from '../../../../../../Card';
+import Card, { CardActions, CardBlock } from '../../../../../../Card';
 import DemoLayout from '../../components/DemoLayout';
-import demoContent from '../../components/demoContent';
+import demoContent from '../../components/demoContentRtl';
 
 export default {
-  id: 'basic',
-  title: 'Basic Usage',
+  id: 'rtl',
+  title: 'Bidirectionality',
   // $FlowFixMe
   backgroundColor: mineralTheme.color_gray_10,
-  description: `Card content should be neither too simple nor too complex.
-Cards are used as a gateway to more detailed content, not merely as a widget container.
-Cards contain one [CardTitle](../card-title), an optional [CardImage](../card-image), and one or more [CardBlocks](../card-block).`,
+  description: `CardActions reverses its alignment when the \`direction\` theme
+variable is set to \`rtl\` (right-to-left).`,
   scope: {
     Button,
     Card,
+    CardActions,
     CardBlock,
-    CardImage,
-    CardTitle,
     demoContent,
-    DemoLayout
+    DemoLayout,
+    IconCloud,
+    ThemeProvider
   },
   source: `
-    <DemoLayout>
-      <Card>
-        <CardTitle>Card Title</CardTitle>
-        <CardImage src="/images/500x500.png" alt="gradient placeholder" />
-        <CardBlock>{demoContent}</CardBlock>
-      </Card>
+    <DemoLayout dir="rtl">
+      <ThemeProvider theme={{ direction: 'rtl' }}>
+        <Card>
+          <CardBlock>{demoContent}</CardBlock>
+          <CardActions>
+            <Button size="medium">زر واحد</Button>
+            <Button iconStart={<IconCloud />} size="medium">زر اثنين</Button>
+          </CardActions>
+        </Card>
+      </ThemeProvider>
     </DemoLayout>`
 };

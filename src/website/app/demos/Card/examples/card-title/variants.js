@@ -15,52 +15,30 @@
  */
 
 /* @flow */
-import {
-  createStyledComponent,
-  getNormalizedValue
-} from '../../../../../../styles';
 import { mineralTheme } from '../../../../../../themes';
-import Card, {
-  CardBlock as _CardBlock,
-  CardTitle
-} from '../../../../../../Card';
+import Card, { CardBlock, CardTitle } from '../../../../../../Card';
 import DemoLayout from '../../components/DemoLayout';
 import demoContent from '../../components/demoContent';
 
-const CardBlock = createStyledComponent(_CardBlock, ({ theme }) => ({
-  position: 'relative',
-
-  '&::before': {
-    borderColor: theme.color_theme_10,
-    borderStyle: 'solid',
-    borderWidth: `${getNormalizedValue(
-      theme.space_inset_md,
-      theme.fontSize_prose
-    )} ${getNormalizedValue(theme.space_inset_md, theme.fontSize_prose)}`,
-    bottom: `-${getNormalizedValue(
-      theme.space_inset_md,
-      theme.fontSize_prose
-    )}`,
-    content: '""',
-    left: 0,
-    position: 'absolute',
-    right: 0,
-    top: `-${getNormalizedValue(theme.space_inset_md, theme.fontSize_prose)}`
-  }
-}));
-
 export default {
-  id: 'consistent-spacing',
-  title: 'Provide Consistent Spacing',
+  id: 'variants',
+  title: 'Variants',
   // $FlowFixMe
   backgroundColor: mineralTheme.color_gray_10,
-  description:
-    'CardBlock provides uniform top/bottom margin & left/right padding (highlighted here in light blue).',
+  description: '',
   scope: { Card, CardBlock, CardTitle, demoContent, DemoLayout },
   source: `
     <DemoLayout>
       <Card>
-        <CardTitle>Card Title</CardTitle>
+        <CardTitle variant="danger">Danger Card Title</CardTitle>
+        <CardBlock>{demoContent}</CardBlock>
+      </Card>
+      <Card>
+        <CardTitle variant="success">Success Card Title</CardTitle>
+        <CardBlock>{demoContent}</CardBlock>
+      </Card>
+      <Card>
+        <CardTitle variant="warning" subtitle="Subtitle Here">Warning Card Title</CardTitle>
         <CardBlock>{demoContent}</CardBlock>
       </Card>
     </DemoLayout>`

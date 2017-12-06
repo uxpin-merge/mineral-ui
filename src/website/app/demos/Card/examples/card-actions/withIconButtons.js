@@ -15,36 +15,42 @@
  */
 
 /* @flow */
-import React from 'react';
-import { createStyledComponent } from '../../../../../../styles';
 import { mineralTheme } from '../../../../../../themes';
 import Button from '../../../../../../Button';
-import Card, { CardBlock, CardTitle } from '../../../../../../Card';
+import Card, { CardBlock, CardActions } from '../../../../../../Card';
+import IconCloud from 'mineral-ui-icons/IconCloud';
 import DemoLayout from '../../components/DemoLayout';
-
-const CustomContent = createStyledComponent('div', ({ theme }) => ({
-  backgroundColor: theme.color_gray_20,
-  padding: `${theme.space_stack_md} 0`
-}));
-
-const customContent = (
-  <CustomContent>
-    <Button fullWidth>Button</Button>
-  </CustomContent>
-);
+import demoContent from '../../components/demoContent';
 
 export default {
-  id: 'children',
-  title: 'Arbitrary Children',
+  id: 'with-icon-buttons',
+  title: 'With Icon-only Buttons',
   // $FlowFixMe
   backgroundColor: mineralTheme.color_gray_10,
-  description: `A CardBlock will render any children.`,
-  scope: { Button, Card, CardBlock, CardTitle, customContent, DemoLayout },
+  description: '',
+  scope: {
+    Button,
+    Card,
+    CardActions,
+    CardBlock,
+    demoContent,
+    DemoLayout,
+    IconCloud
+  },
   source: `
     <DemoLayout>
       <Card>
-        <CardTitle>Card Title</CardTitle>
-        <CardBlock>{customContent}</CardBlock>
+        <CardBlock>{demoContent}</CardBlock>
+        <CardActions>
+          <Button
+            iconStart={<IconCloud title="Button label 1"/>}
+            minimal
+            size="medium" />
+          <Button
+            iconStart={<IconCloud title="Button label 2"/>}
+            minimal
+            size="medium" />
+        </CardActions>
       </Card>
     </DemoLayout>`
 };

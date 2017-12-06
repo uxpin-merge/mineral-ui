@@ -28,8 +28,8 @@ const Root = createStyledComponent(
 
     return {
       display: 'block',
-      marginBottom: theme.CardRow_margin,
-      marginTop: theme.CardRow_margin,
+      marginBottom: theme.CardRow_marginVertical,
+      marginTop: theme.CardRow_marginVertical,
       maxWidth: '100%',
 
       '&:first-child': {
@@ -39,7 +39,7 @@ const Root = createStyledComponent(
 
       '&:last-child': {
         borderRadius: `0 0 ${theme.Card_borderRadius} ${theme.Card_borderRadius}`,
-        marginBottom: `-${theme.Card_paddingBottom}`
+        marginBottom: 0
       }
     };
   },

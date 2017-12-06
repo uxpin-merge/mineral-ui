@@ -15,10 +15,24 @@
  */
 
 /* @flow */
+import actionsMenu from './actionsMenu';
 import complexTitle from './complexTitle';
 import importSyntax from './importSyntax';
+import rtl from './rtl';
+import variants from './variants';
+import withAvatar from './withAvatar';
 import withMetaInfo from './withMetaInfo';
 import withSubtitle from './withSubtitle';
 import minor from './minor';
 
-export default [importSyntax, withSubtitle, complexTitle, minor, withMetaInfo];
+export default [
+  importSyntax,
+  withSubtitle,
+  complexTitle,
+  withMetaInfo,
+  withAvatar,
+  actionsMenu,
+  variants,
+  minor,
+  rtl
+];

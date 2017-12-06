@@ -18,6 +18,7 @@
 import { mineralTheme } from '../../../../../../themes';
 import Card, { CardBlock, CardTitle } from '../../../../../../Card';
 import DemoLayout from '../../components/DemoLayout';
+import demoContent from '../../components/demoContent';
 
 export default {
   id: 'titles',
@@ -25,16 +26,12 @@ export default {
   // $FlowFixMe
   backgroundColor: mineralTheme.color_gray_10,
   description: 'In addition to a title, a Card can display a subtitle.',
-  scope: { Card, CardBlock, CardTitle, DemoLayout },
+  scope: { Card, CardBlock, CardTitle, demoContent, DemoLayout },
   source: `
     <DemoLayout>
       <Card>
-        <CardTitle subtitle="Subtitle here">Card Title</CardTitle>
-        <CardBlock>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis
-          pretium massa. Aliquam erat volutpat. Nulla facilisi. Donec vulputate
-          interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-        </CardBlock>
+        <CardTitle subtitle="Subtitle Here">Card Title</CardTitle>
+        <CardBlock>{demoContent}</CardBlock>
       </Card>
     </DemoLayout>`
 };

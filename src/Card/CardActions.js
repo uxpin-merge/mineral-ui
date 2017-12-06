@@ -18,12 +18,12 @@
 import React from 'react';
 import { createStyledComponent, getNormalizedValue } from '../styles';
 import { componentTheme as cardComponentTheme } from './Card';
+import { componentTheme as cardBlockComponentTheme } from './CardBlock';
 
 type Props = Object;
 
 export const componentTheme = (baseTheme: Object) => ({
-  CardBlock_fontSize: baseTheme.fontSize_ui,
-  CardBlock_lineHeight: baseTheme.lineHeight_prose,
+  CardActions_gap: baseTheme.space_inline_sm,
 
   ...baseTheme
 });
@@ -33,13 +33,14 @@ const Root = createStyledComponent(
   props => {
     const theme = {
       ...componentTheme(props.theme),
-      ...cardComponentTheme(props.theme)
+      ...cardComponentTheme(props.theme),
+      ...cardBlockComponentTheme(props.theme)
     };
     const fontSize = theme.CardBlock_fontSize;
+    const rtl = theme.direction === 'rtl';
 
     return {
       fontSize,
-      lineHeight: theme.CardBlock_lineHeight,
       marginBottom: getNormalizedValue(theme.CardRow_marginVertical, fontSize),
       marginTop: getNormalizedValue(theme.CardRow_marginVertical, fontSize),
       paddingLeft: getNormalizedValue(
@@ -50,24 +51,22 @@ const Root = createStyledComponent(
         theme.CardRow_paddingHorizontal,
         fontSize
       ),
+      textAlign: rtl ? 'left' : 'right',
 
-      '&:last-child': {
-        marginBottom: getNormalizedValue(
-          theme.CardRow_marginVerticalLast,
-          fontSize
-        )
+      '& > *': {
+        marginLeft: rtl ? null : theme.CardActions_gap,
+        marginRight: rtl ? theme.CardActions_gap : null
       }
     };
   },
   {
-    displayName: 'CardBlock'
+    displayName: 'CardActions'
   }
 );
 
 /**
- * CardBlock is used to normalize font sizes for content and to provide
- * consistent margins and padding.
+ * CardActions.
  */
-export default function CardBlock(props: Props) {
+export default function CardActions(props: Props) {
   return <Root {...props} />;
 }

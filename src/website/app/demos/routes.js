@@ -28,11 +28,19 @@ export default {
     slug: 'card',
     title: 'Card'
   },
+  'card-actions': {
+    slug: 'card-actions',
+    title: 'CardActions'
+  },
   'card-block': {
     description:
       'CardBlock lays out content that’s not a title or an image in the body of the Card.',
     slug: 'card-block',
     title: 'CardBlock'
+  },
+  'card-footer': {
+    slug: 'card-footer',
+    title: 'CardFooter'
   },
   'card-image': {
     description:
