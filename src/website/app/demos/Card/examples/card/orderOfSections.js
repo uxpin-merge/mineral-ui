@@ -38,7 +38,7 @@ export default {
     <DemoLayout>
       <Card>
         <CardImage src="/images/500x500.png" alt="gradient image" />
-        <CardTitle minor>Card Title</CardTitle>
+        <CardTitle>Card Title</CardTitle>
         <CardBlock>{demoContent}</CardBlock>
       </Card>
 

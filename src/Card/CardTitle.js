@@ -32,8 +32,6 @@ type Props = {
   meta?: string,
   /** Title of the Card */
   children: React$Node,
-  /** [Deprecated] Displays the title in a less important style */
-  minor?: boolean,
   /** Subtitle displayed under the title */
   subtitle?: React$Node,
   /** Available variants */

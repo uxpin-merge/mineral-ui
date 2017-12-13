@@ -23,7 +23,6 @@ import variants from './variants';
 import withAvatar from './withAvatar';
 import withMetaInfo from './withMetaInfo';
 import withSubtitle from './withSubtitle';
-import minor from './minor';
 
 export default [
   importSyntax,
@@ -33,6 +32,5 @@ export default [
   withAvatar,
   actionsMenu,
   variants,
-  minor,
   rtl
 ];
