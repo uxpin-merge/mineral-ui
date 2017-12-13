@@ -66,7 +66,7 @@ const Root = createStyledComponent(
   }
 );
 
-const onKeyPress = (props: Props, event: SyntheticEvent<>) => {
+const onKeyDown = (props: Props, event: SyntheticEvent<>) => {
   if (event.key === 'Enter' || event.key === ' ') {
     event.preventDefault();
     props.onClick && props.onClick(event);
@@ -81,7 +81,7 @@ const onKeyPress = (props: Props, event: SyntheticEvent<>) => {
  */
 export default function Card(props: Props) {
   const rootProps = {
-    onKeyPress: props.onClick ? onKeyPress.bind(null, props) : undefined,
+    onKeyDown: props.onClick ? onKeyDown.bind(null, props) : undefined,
     role: props.onClick ? 'button' : undefined,
     tabIndex: props.onClick ? 0 : undefined,
     ...props
