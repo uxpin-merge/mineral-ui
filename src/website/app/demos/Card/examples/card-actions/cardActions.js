@@ -46,5 +46,19 @@ export default {
           <Button iconStart={<IconCloud />}>Button 2</Button>
         </CardActions>
       </Card>
+      <Card>
+        <CardBlock>{demoContent}</CardBlock>
+        <CardActions>
+          <Button minimal >Button 1</Button>
+          <Button iconStart={<IconCloud />} primary>Button 2</Button>
+        </CardActions>
+      </Card>
+      <Card>
+        <CardBlock>{demoContent}</CardBlock>
+        <CardActions>
+          <Button iconStart={<IconCloud title="Button label 1" />} minimal />
+          <Button iconStart={<IconCloud title="Button label 2" />} minimal />
+        </CardActions>
+      </Card>
     </DemoLayout>`
 };

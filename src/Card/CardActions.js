@@ -20,6 +20,7 @@ import { createStyledComponent, getNormalizedValue } from '../styles';
 import Button from '../Button';
 import { componentTheme as cardComponentTheme } from './Card';
 import { componentTheme as cardBlockComponentTheme } from './CardBlock';
+import CardRow from './CardRow';
 
 type Props = Object;
 
@@ -29,49 +30,53 @@ export const componentTheme = (baseTheme: Object) => ({
   ...baseTheme
 });
 
-const Root = createStyledComponent(
-  'div',
-  props => {
+const styles = {
+  action: props => {
     const theme = {
       ...componentTheme(props.theme),
-      ...cardComponentTheme(props.theme),
       ...cardBlockComponentTheme(props.theme)
     };
-    const fontSize = theme.CardBlock_fontSize;
     const rtl = theme.direction === 'rtl';
+    const fontSize = theme.CardBlock_fontSize;
+    const actionsGap = getNormalizedValue(theme.CardActions_gap, fontSize);
 
     return {
+      flex: '0 0 auto',
       fontSize,
-      marginBottom: getNormalizedValue(theme.CardRow_marginVertical, fontSize),
-      marginTop: getNormalizedValue(theme.CardRow_marginVertical, fontSize),
-      paddingLeft: getNormalizedValue(
-        theme.CardRow_paddingHorizontal,
-        fontSize
-      ),
-      paddingRight: getNormalizedValue(
-        theme.CardRow_paddingHorizontal,
-        fontSize
-      ),
-      textAlign: rtl ? 'left' : 'right',
-
-      '& > *': {
-        marginLeft: rtl ? null : theme.CardActions_gap,
-        marginRight: rtl ? theme.CardActions_gap : null
-      }
+      marginBottom: actionsGap,
+      marginLeft: rtl ? null : actionsGap,
+      marginRight: rtl ? actionsGap : null
     };
   },
-  {
-    displayName: 'CardActions'
+  root: props => {
+    const theme = {
+      ...componentTheme(props.theme),
+      ...cardComponentTheme(props.theme)
+    };
+
+    return {
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'flex-end',
+      // We subtract `theme.CardActions_gap` because of the marginBottom on Action.
+      marginBottom: `${parseFloat(theme.CardRow_marginVertical) -
+        parseFloat(theme.CardActions_gap)}em`
+    };
   }
-);
+};
+
+const Root = createStyledComponent(CardRow, styles.root, {
+  displayName: 'CardActions'
+});
+const Action = createStyledComponent('span', styles.action);
 
 const getChildren = children => {
   let endChildren = [];
   Children.map(children, (child, index) => {
     if (child.type === Button) {
-      child = cloneElement(child, { key: index, size: 'medium' });
+      child = cloneElement(child, { size: 'medium' });
     }
-    endChildren.push(child);
+    endChildren.push(<Action key={index}>{child}</Action>);
   });
   return endChildren;
 };

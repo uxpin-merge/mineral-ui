@@ -21,7 +21,7 @@ import { createStyledComponent, getNormalizedValue, pxToEm } from '../styles';
 import IconDanger from '../Icon/IconDanger';
 import IconSuccess from '../Icon/IconSuccess';
 import IconWarning from '../Icon/IconWarning';
-import { componentTheme as cardComponentTheme } from './Card';
+import CardRow from './CardRow';
 
 type Props = {
   /** See the [Actions Menu](#actions-menu) example */
@@ -86,30 +86,19 @@ const styles = {
   },
   meta: props => {
     const theme = componentTheme(props.theme);
+    const fontSize = theme.CardTitleMeta_fontSize;
 
     return {
       flex: '0 0 auto',
-      fontSize: theme.CardTitleMeta_fontSize,
+      fontSize,
       fontWeight: theme.CardTitleMeta_fontWeight,
       position: 'relative',
-      top: pxToEm(5), // Optical alignment
+      top: getNormalizedValue(pxToEm(5), fontSize), // Optical alignment
       ...ellipsis('33%')
     };
   },
-  root: props => {
-    const theme = {
-      ...componentTheme(props.theme),
-      ...cardComponentTheme(props.theme)
-    };
-
-    return {
-      display: 'flex',
-      marginBottom: theme.CardRow_marginVertical,
-      marginTop: theme.CardRow_marginVertical,
-      paddingLeft: theme.CardRow_paddingHorizontal,
-      paddingRight: theme.CardRow_paddingHorizontal,
-      paddingTop: !props.minor && theme.CardTitle_marginTop
-    };
+  root: {
+    display: 'flex'
   },
   subtitle: ({ avatar, theme: baseTheme }) => {
     const theme = componentTheme(baseTheme);
@@ -144,20 +133,25 @@ const styles = {
   titleContent: ({ actions, theme: baseTheme }) => {
     const theme = componentTheme(baseTheme);
     const rtl = theme.direction === 'rtl';
+    const fontSize = theme.CardTitle_fontSize;
+    const actionsMargin = getNormalizedValue(
+      theme.CardTitleIcon_margin,
+      fontSize
+    );
 
     return {
       color: theme.CardTitle_color,
       flex: '1 1 auto',
-      fontSize: theme.CardTitle_fontSize,
+      fontSize,
       fontWeight: theme.CardTitle_fontWeight,
       margin: 0,
-      marginLeft: actions && rtl ? theme.CardTitleIcon_margin : null,
-      marginRight: actions && !rtl ? theme.CardTitleIcon_margin : null
+      marginLeft: actions && rtl ? actionsMargin : null,
+      marginRight: actions && !rtl ? actionsMargin : null
     };
   }
 };
 
-const Root = createStyledComponent('div', styles.root, {
+const Root = createStyledComponent(CardRow, styles.root, {
   displayName: 'CardTitle'
 });
 const Avatar = createStyledComponent('span', styles.avatar);

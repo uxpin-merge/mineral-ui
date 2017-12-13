@@ -135,12 +135,12 @@ const styles = {
     flex: '0 0 auto',
     height: 'auto',
     minWidth: 0,
-    overflow: 'hidden', // [1]
+    overflow: 'hidden',
     padding: 0,
 
     '& > span': {
       display: 'block',
-      margin: `-${pxToEm(2)}` // [1]
+      margin: `-${pxToEm(2)}`
     },
 
     '& [role="img"]': {

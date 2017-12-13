@@ -15,9 +15,22 @@
  */
 
 /* @flow */
-import cardActions from './cardActions';
-import importSyntax from './importSyntax';
-import rtl from './rtl';
-import withLinks from './withLinks';
+import { createStyledComponent } from '../styles';
+import { componentTheme as cardComponentTheme } from './Card';
 
-export default [importSyntax, cardActions, withLinks, rtl];
+export default createStyledComponent(
+  'div',
+  props => {
+    const theme = cardComponentTheme(props.theme);
+
+    return {
+      marginBottom: theme.CardRow_marginVertical,
+      marginTop: theme.CardRow_marginVertical,
+      paddingLeft: theme.CardRow_paddingHorizontal,
+      paddingRight: theme.CardRow_paddingHorizontal
+    };
+  },
+  {
+    displayName: 'CardRow'
+  }
+);
