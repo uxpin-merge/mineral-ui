@@ -42,14 +42,8 @@ export default {
       <Card>
         <CardBlock>{demoContent}</CardBlock>
         <CardActions>
-          <Button
-            iconStart={<IconCloud title="Button label 1"/>}
-            minimal
-            size="medium" />
-          <Button
-            iconStart={<IconCloud title="Button label 2"/>}
-            minimal
-            size="medium" />
+          <Button iconStart={<IconCloud title="Button label 1"/>} minimal />
+          <Button iconStart={<IconCloud title="Button label 2"/>} minimal />
         </CardActions>
       </Card>
     </DemoLayout>`

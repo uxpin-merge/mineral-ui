@@ -15,8 +15,9 @@
  */
 
 /* @flow */
-import React from 'react';
+import React, { Children, cloneElement } from 'react';
 import { createStyledComponent, getNormalizedValue } from '../styles';
+import Button from '../Button';
 import { componentTheme as cardComponentTheme } from './Card';
 import { componentTheme as cardBlockComponentTheme } from './CardBlock';
 
@@ -64,9 +65,20 @@ const Root = createStyledComponent(
   }
 );
 
+const getChildren = children => {
+  let endChildren = [];
+  Children.map(children, (child, index) => {
+    if (child.type === Button) {
+      child = cloneElement(child, { key: index, size: 'medium' });
+    }
+    endChildren.push(child);
+  });
+  return endChildren;
+};
+
 /**
  * CardActions.
  */
-export default function CardActions(props: Props) {
-  return <Root {...props} />;
+export default function CardActions({ children, ...restProps }: Props) {
+  return <Root {...restProps}>{getChildren(children)}</Root>;
 }

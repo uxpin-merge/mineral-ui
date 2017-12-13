@@ -45,8 +45,8 @@ variable is set to \`rtl\` (right-to-left).`,
         <Card>
           <CardBlock>{demoContent}</CardBlock>
           <CardActions>
-            <Button size="medium">زر واحد</Button>
-            <Button iconStart={<IconCloud />} size="medium">زر اثنين</Button>
+            <Button>زر واحد</Button>
+            <Button iconStart={<IconCloud />}>زر اثنين</Button>
           </CardActions>
         </Card>
       </ThemeProvider>
