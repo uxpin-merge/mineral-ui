@@ -23,6 +23,7 @@ const compactLicenseHeader = require('./utils/license').compactLicenseHeader;
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const ANALYZE = process.env.ANALYZE;
 const isProduction = NODE_ENV === 'production';
+const isUXPinBuild = process.env.UXPIN_BUILD === 'true';
 const isDevServer = process.argv.find(arg =>
   arg.includes('webpack-dev-server')
 );
@@ -88,15 +89,18 @@ module.exports = {
           from: '**/*'
         }
       ]),
-      new webpack.optimize.CommonsChunkPlugin({
+    ];
+
+    if (!isUXPinBuild) {
+      plugins = plugins.push(new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
         minChunks: module => {
           return (
             module.context && module.context.indexOf('node_modules') !== -1
           );
         }
-      })
-    ];
+      }));
+    }
 
     if (isProduction && !isDevServer) {
       plugins = plugins.concat([
