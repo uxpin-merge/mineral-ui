@@ -89,7 +89,6 @@ exports[`FormField demo examples basic 1`] = `
 
 .glamor-1,
 [data-glamor-1] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -103,7 +102,6 @@ exports[`FormField demo examples basic 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -176,6 +174,125 @@ exports[`FormField demo examples basic 1`] = `
   z-index: -1;
 }
 
+.glamor-6,
+[data-glamor-6] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  align-items: center;
+  cursor: text;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  width: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-6 *,
+[data-glamor-6] *,
+.glamor-6 *::before,
+[data-glamor-6] *::before,
+.glamor-6 *::after,
+[data-glamor-6] *::after {
+  box-sizing: inherit;
+}
+
+.glamor-5,
+[data-glamor-5] {
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  color: #58606e;
+  flex: 1 1 auto;
+  font-family: inherit;
+  font-size: 0.875em;
+  line-height: 1.5;
+  margin: 1px;
+  min-height: 2.5580357142857144em;
+  min-width: 0;
+  outline: 0;
+  padding: 0.6071428571428571em 1.1428571428571428em;
+  resize: vertical;
+  width: 100%;
+  -webkit-flex: 1 1 auto;
+}
+
+.glamor-5::placeholder,
+[data-glamor-5]::placeholder,
+.glamor-5[data-simulate-placeholder],
+[data-glamor-5][data-simulate-placeholder] {
+  color: #8e99ab;
+  font-style: italic;
+}
+
+.glamor-5::-ms-input-placeholder,
+[data-glamor-5]::-ms-input-placeholder,
+.glamor-5[data-simulate-msinputplaceholder],
+[data-glamor-5][data-simulate-msinputplaceholder] {
+  color: #8e99ab;
+  font-style: italic;
+}
+
+.glamor-5:-ms-input-placeholder,
+[data-glamor-5]:-ms-input-placeholder,
+.glamor-5[data-simulate-msinputplaceholder],
+[data-glamor-5][data-simulate-msinputplaceholder] {
+  color: #8e99ab;
+  font-style: italic;
+}
+
+.glamor-5::-ms-clear,
+[data-glamor-5]::-ms-clear,
+.glamor-5[data-simulate-msclear],
+[data-glamor-5][data-simulate-msclear] {
+  display: none;
+}
+
+.glamor-5:hover ~ div,
+[data-glamor-5]:hover ~ div,
+.glamor-5[data-simulate-hover] ~ div,
+[data-glamor-5][data-simulate-hover] ~ div {
+  border-color: #2e6fd9;
+}
+
+.glamor-5:focus ~ div,
+[data-glamor-5]:focus ~ div,
+.glamor-5[data-simulate-focus] ~ div,
+[data-glamor-5][data-simulate-focus] ~ div {
+  border-color: #c8d1e0;
+  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #2e6fd9;
+}
+
+.glamor-5:active ~ div,
+[data-glamor-5]:active ~ div,
+.glamor-5[data-simulate-active] ~ div,
+[data-glamor-5][data-simulate-active] ~ div {
+  border-color: #c8d1e0;
+  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #2e6fd9;
+}
+
+.glamor-5 ~ div,
+[data-glamor-5] ~ div {
+  background-color: #fff;
+  border-color: #c8d1e0;
+  border-radius: 0.1875em;
+  border-style: solid;
+  border-width: 1px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
 <ThemeProvider>
   <ThemeProvider
     theme={
@@ -185,6 +302,7 @@ exports[`FormField demo examples basic 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -193,27 +311,32 @@ exports[`FormField demo examples basic 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -281,11 +404,11 @@ exports[`FormField demo examples basic 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -318,12 +441,12 @@ exports[`FormField demo examples basic 1`] = `
     <LiveProvider
       code="
     <DemoLayout>
-      {/* Use the \\"input\\" prop to help reduce clutter */}
+      {/* Use the \\"input\\" prop for a streamlined approach. */}
       <FormField input={TextInput} label=\\"Name\\" />
 
-      {/* Or use \\"children\\" if you prefer */}
-      <FormField label=\\"Name\\">
-        <TextInput />
+      {/* Or use \\"children\\", if you prefer. */}
+      <FormField label=\\"Description\\">
+        <TextArea />
       </FormField>
     </DemoLayout>
   "
@@ -333,6 +456,7 @@ exports[`FormField demo examples basic 1`] = `
         Object {
           "DemoLayout": [Function],
           "FormField": [Function],
+          "TextArea": [Function],
           "TextInput": [Function],
         }
       }
@@ -343,6 +467,7 @@ exports[`FormField demo examples basic 1`] = `
           Object {
             "DemoLayout": [Function],
             "FormField": [Function],
+            "TextArea": [Function],
             "TextInput": [Function],
           }
         }
@@ -369,16 +494,23 @@ exports[`FormField demo examples basic 1`] = `
                       <label>
                         <glamorous(div)
                           hideLabel={undefined}
+                          key="formField-2-textWrapper"
                         >
                           <div
                             className="glamor-0"
                           >
-                            Name
+                            <span
+                              id="formField-2-labelText"
+                            >
+                              Name
+                            </span>
                           </div>
                         </glamorous(div)>
                         <TextInput
                           aria-describedby={undefined}
+                          key="formField-2-control"
                           required={undefined}
+                          rootProps={undefined}
                           variant={undefined}
                         >
                           <TextInput
@@ -426,7 +558,7 @@ exports[`FormField demo examples basic 1`] = `
                   </FormField>
                 </FormField>
                 <FormField
-                  label="Name"
+                  label="Description"
                   requiredText="Required"
                 >
                   <FormField
@@ -438,58 +570,63 @@ exports[`FormField demo examples basic 1`] = `
                       <label>
                         <glamorous(div)
                           hideLabel={undefined}
+                          key="formField-3-textWrapper"
                         >
                           <div
                             className="glamor-0"
                           >
-                            Name
+                            <span
+                              id="formField-3-labelText"
+                            >
+                              Description
+                            </span>
                           </div>
                         </glamorous(div)>
-                        <TextInput
+                        <TextArea
                           aria-describedby={undefined}
+                          key="formField-3-control"
                           required={undefined}
+                          rootProps={undefined}
                           variant={undefined}
                         >
-                          <TextInput
+                          <TextArea
                             className={undefined}
                             variant={undefined}
                           >
                             <div
-                              className="glamor-2"
+                              className="glamor-6"
                             >
-                              <glamorous(input)
+                              <glamorous(textarea)
                                 aria-describedby={undefined}
                                 aria-invalid={undefined}
                                 aria-required={undefined}
+                                autoSize={undefined}
                                 disabled={undefined}
-                                iconEnd={undefined}
-                                iconStart={undefined}
                                 innerRef={[Function]}
-                                prefix={undefined}
+                                onInput={[Function]}
                                 readOnly={undefined}
                                 required={undefined}
+                                resizeable={true}
+                                rows={8}
                                 size="large"
-                                suffix={undefined}
-                                type="text"
                                 variant={undefined}
                               >
-                                <input
+                                <textarea
                                   aria-describedby={undefined}
                                   aria-invalid={undefined}
                                   aria-required={undefined}
-                                  className="glamor-1"
+                                  className="glamor-5"
                                   disabled={undefined}
-                                  prefix={undefined}
+                                  onInput={[Function]}
                                   readOnly={undefined}
                                   required={undefined}
-                                  size="large"
-                                  type="text"
+                                  rows={8}
                                 />
-                              </glamorous(input)>
+                              </glamorous(textarea)>
                               <div />
                             </div>
-                          </TextInput>
-                        </TextInput>
+                          </TextArea>
+                        </TextArea>
                       </label>
                     </div>
                   </FormField>
@@ -593,7 +730,6 @@ exports[`FormField demo examples caption 1`] = `
 
 .glamor-1,
 [data-glamor-1] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -607,7 +743,6 @@ exports[`FormField demo examples caption 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -684,7 +819,7 @@ exports[`FormField demo examples caption 1`] = `
 [data-glamor-3] {
   color: #58606e;
   font-size: 0.6875em;
-  margin-top: 0.13636363636363635em;
+  margin-top: 0.18181818181818182em;
 }
 
 <ThemeProvider>
@@ -696,6 +831,7 @@ exports[`FormField demo examples caption 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -704,27 +840,32 @@ exports[`FormField demo examples caption 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -792,11 +933,11 @@ exports[`FormField demo examples caption 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -870,16 +1011,23 @@ exports[`FormField demo examples caption 1`] = `
                   <label>
                     <glamorous(div)
                       hideLabel={undefined}
+                      key="formField-7-textWrapper"
                     >
                       <div
                         className="glamor-0"
                       >
-                        Name
+                        <span
+                          id="formField-7-labelText"
+                        >
+                          Name
+                        </span>
                       </div>
                     </glamorous(div)>
                     <TextInput
                       aria-describedby="formField-7-caption"
+                      key="formField-7-control"
                       required={undefined}
+                      rootProps={undefined}
                       variant={undefined}
                     >
                       <TextInput
@@ -926,6 +1074,7 @@ exports[`FormField demo examples caption 1`] = `
                   <glamorous(div)
                     caption="This is help text"
                     id="formField-7-caption"
+                    isGroup={false}
                     variant={undefined}
                   >
                     <div
@@ -1035,7 +1184,6 @@ exports[`FormField demo examples hide-label 1`] = `
 
 .glamor-1,
 [data-glamor-1] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -1049,7 +1197,6 @@ exports[`FormField demo examples hide-label 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -1165,6 +1312,7 @@ exports[`FormField demo examples hide-label 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -1173,27 +1321,32 @@ exports[`FormField demo examples hide-label 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -1261,11 +1414,11 @@ exports[`FormField demo examples hide-label 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -1352,17 +1505,24 @@ exports[`FormField demo examples hide-label 1`] = `
                       <label>
                         <glamorous(div)
                           hideLabel={undefined}
+                          key="formField-14-textWrapper"
                         >
                           <div
                             className="glamor-0"
                           >
-                            Address
+                            <span
+                              id="formField-14-labelText"
+                            >
+                              Address
+                            </span>
                           </div>
                         </glamorous(div)>
                         <TextInput
                           aria-describedby={undefined}
+                          key="formField-14-control"
                           placeholder="1234 Main St"
                           required={undefined}
+                          rootProps={undefined}
                           variant={undefined}
                         >
                           <TextInput
@@ -1427,17 +1587,24 @@ exports[`FormField demo examples hide-label 1`] = `
                       <label>
                         <glamorous(div)
                           hideLabel={true}
+                          key="formField-15-textWrapper"
                         >
                           <div
                             className="glamor-4"
                           >
-                            Address Line 2
+                            <span
+                              id="formField-15-labelText"
+                            >
+                              Address Line 2
+                            </span>
                           </div>
                         </glamorous(div)>
                         <TextInput
                           aria-describedby={undefined}
+                          key="formField-15-control"
                           placeholder="Apt 101"
                           required={undefined}
+                          rootProps={undefined}
                           variant={undefined}
                         >
                           <TextInput
@@ -1585,7 +1752,6 @@ exports[`FormField demo examples required 1`] = `
 
 .glamor-2,
 [data-glamor-2] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -1599,7 +1765,6 @@ exports[`FormField demo examples required 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -1687,6 +1852,7 @@ exports[`FormField demo examples required 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -1695,27 +1861,32 @@ exports[`FormField demo examples required 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -1783,11 +1954,11 @@ exports[`FormField demo examples required 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -1874,11 +2045,16 @@ exports[`FormField demo examples required 1`] = `
                       <label>
                         <glamorous(div)
                           hideLabel={undefined}
+                          key="formField-4-textWrapper"
                         >
                           <div
                             className="glamor-1"
                           >
-                            Name
+                            <span
+                              id="formField-4-labelText"
+                            >
+                              Name
+                            </span>
                             <glamorous(span)
                               secondaryText={undefined}
                             >
@@ -1892,7 +2068,9 @@ exports[`FormField demo examples required 1`] = `
                         </glamorous(div)>
                         <TextInput
                           aria-describedby={undefined}
+                          key="formField-4-control"
                           required={true}
+                          rootProps={undefined}
                           variant={undefined}
                         >
                           <TextInput
@@ -1954,11 +2132,16 @@ exports[`FormField demo examples required 1`] = `
                       <label>
                         <glamorous(div)
                           hideLabel={undefined}
+                          key="formField-5-textWrapper"
                         >
                           <div
                             className="glamor-1"
                           >
-                            Nombre
+                            <span
+                              id="formField-5-labelText"
+                            >
+                              Nombre
+                            </span>
                             <glamorous(span)
                               secondaryText={undefined}
                             >
@@ -1972,7 +2155,9 @@ exports[`FormField demo examples required 1`] = `
                         </glamorous(div)>
                         <TextInput
                           aria-describedby={undefined}
+                          key="formField-5-control"
                           required={true}
+                          rootProps={undefined}
                           variant={undefined}
                         >
                           <TextInput
@@ -2134,7 +2319,6 @@ exports[`FormField demo examples rtl 1`] = `
 
 .glamor-3,
 [data-glamor-3] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -2148,7 +2332,6 @@ exports[`FormField demo examples rtl 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -2230,6 +2413,7 @@ exports[`FormField demo examples rtl 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -2238,27 +2422,32 @@ exports[`FormField demo examples rtl 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -2326,11 +2515,11 @@ exports[`FormField demo examples rtl 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -2433,11 +2622,16 @@ exports[`FormField demo examples rtl 1`] = `
                         <label>
                           <glamorous(div)
                             hideLabel={undefined}
+                            key="formField-17-textWrapper"
                           >
                             <div
                               className="glamor-1"
                             >
-                              نموذج
+                              <span
+                                id="formField-17-labelText"
+                              >
+                                نموذج
+                              </span>
                               <glamorous(span)
                                 secondaryText={undefined}
                               >
@@ -2453,7 +2647,9 @@ exports[`FormField demo examples rtl 1`] = `
                             aria-describedby={undefined}
                             defaultValue="مرحبا بالعالم"
                             iconStart={<IconBackspace />}
+                            key="formField-17-control"
                             required={true}
+                            rootProps={undefined}
                             variant={undefined}
                           >
                             <TextInput
@@ -2634,7 +2830,6 @@ exports[`FormField demo examples secondaryText 1`] = `
 
 .glamor-2,
 [data-glamor-2] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -2648,7 +2843,6 @@ exports[`FormField demo examples secondaryText 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -2736,6 +2930,7 @@ exports[`FormField demo examples secondaryText 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -2744,27 +2939,32 @@ exports[`FormField demo examples secondaryText 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -2832,11 +3032,11 @@ exports[`FormField demo examples secondaryText 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -2910,11 +3110,16 @@ exports[`FormField demo examples secondaryText 1`] = `
                   <label>
                     <glamorous(div)
                       hideLabel={undefined}
+                      key="formField-6-textWrapper"
                     >
                       <div
                         className="glamor-1"
                       >
-                        Name
+                        <span
+                          id="formField-6-labelText"
+                        >
+                          Name
+                        </span>
                         <glamorous(span)
                           secondaryText="Optional"
                         >
@@ -2928,7 +3133,9 @@ exports[`FormField demo examples secondaryText 1`] = `
                     </glamorous(div)>
                     <TextInput
                       aria-describedby={undefined}
+                      key="formField-6-control"
                       required={undefined}
+                      rootProps={undefined}
                       variant={undefined}
                     >
                       <TextInput
@@ -3072,7 +3279,6 @@ exports[`FormField demo examples validation 1`] = `
 
 .glamor-2,
 [data-glamor-2] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -3086,7 +3292,6 @@ exports[`FormField demo examples validation 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -3306,6 +3511,7 @@ exports[`FormField demo examples validation 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -3314,27 +3520,32 @@ exports[`FormField demo examples validation 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -3402,11 +3613,11 @@ exports[`FormField demo examples validation 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -3561,11 +3772,16 @@ exports[`FormField demo examples validation 1`] = `
                           <label>
                             <glamorous(div)
                               hideLabel={undefined}
+                              key="formField-16-textWrapper"
                             >
                               <div
                                 className="glamor-1"
                               >
-                                Example
+                                <span
+                                  id="formField-16-labelText"
+                                >
+                                  Example
+                                </span>
                                 <glamorous(span)
                                   secondaryText={undefined}
                                 >
@@ -3581,8 +3797,10 @@ exports[`FormField demo examples validation 1`] = `
                               aria-describedby={undefined}
                               inputRef={[Function]}
                               invalid={undefined}
+                              key="formField-16-control"
                               onChange={[Function]}
                               required={true}
+                              rootProps={undefined}
                               value=""
                               variant={undefined}
                             >
@@ -3773,7 +3991,6 @@ exports[`FormField demo examples variants 1`] = `
 
 .glamor-1,
 [data-glamor-1] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -3787,7 +4004,6 @@ exports[`FormField demo examples variants 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -3872,7 +4088,7 @@ exports[`FormField demo examples variants 1`] = `
 [data-glamor-4] {
   color: #06783f;
   font-size: 0.6875em;
-  margin-top: 0.13636363636363635em;
+  margin-top: 0.18181818181818182em;
 }
 
 .glamor-9,
@@ -3921,7 +4137,6 @@ exports[`FormField demo examples variants 1`] = `
 
 .glamor-7,
 [data-glamor-7] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -3935,7 +4150,6 @@ exports[`FormField demo examples variants 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -4012,7 +4226,7 @@ exports[`FormField demo examples variants 1`] = `
 [data-glamor-10] {
   color: #cf4615;
   font-size: 0.6875em;
-  margin-top: 0.13636363636363635em;
+  margin-top: 0.18181818181818182em;
 }
 
 .glamor-15,
@@ -4061,7 +4275,6 @@ exports[`FormField demo examples variants 1`] = `
 
 .glamor-13,
 [data-glamor-13] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -4075,7 +4288,6 @@ exports[`FormField demo examples variants 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -4152,7 +4364,7 @@ exports[`FormField demo examples variants 1`] = `
 [data-glamor-16] {
   color: #db2929;
   font-size: 0.6875em;
-  margin-top: 0.13636363636363635em;
+  margin-top: 0.18181818181818182em;
 }
 
 <ThemeProvider>
@@ -4164,6 +4376,7 @@ exports[`FormField demo examples variants 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -4172,27 +4385,32 @@ exports[`FormField demo examples variants 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -4260,11 +4478,11 @@ exports[`FormField demo examples variants 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -4358,16 +4576,23 @@ exports[`FormField demo examples variants 1`] = `
                       <label>
                         <glamorous(div)
                           hideLabel={undefined}
+                          key="formField-8-textWrapper"
                         >
                           <div
                             className="glamor-0"
                           >
-                            Success
+                            <span
+                              id="formField-8-labelText"
+                            >
+                              Success
+                            </span>
                           </div>
                         </glamorous(div)>
                         <TextInput
                           aria-describedby="formField-8-caption"
+                          key="formField-8-control"
                           required={undefined}
+                          rootProps={undefined}
                           variant="success"
                         >
                           <TextInput
@@ -4446,6 +4671,7 @@ exports[`FormField demo examples variants 1`] = `
                       <glamorous(div)
                         caption="This is help text"
                         id="formField-8-caption"
+                        isGroup={false}
                         variant="success"
                       >
                         <div
@@ -4474,16 +4700,23 @@ exports[`FormField demo examples variants 1`] = `
                       <label>
                         <glamorous(div)
                           hideLabel={undefined}
+                          key="formField-10-textWrapper"
                         >
                           <div
                             className="glamor-0"
                           >
-                            Warning
+                            <span
+                              id="formField-10-labelText"
+                            >
+                              Warning
+                            </span>
                           </div>
                         </glamorous(div)>
                         <TextInput
                           aria-describedby="formField-10-caption"
+                          key="formField-10-control"
                           required={undefined}
+                          rootProps={undefined}
                           variant="warning"
                         >
                           <TextInput
@@ -4562,6 +4795,7 @@ exports[`FormField demo examples variants 1`] = `
                       <glamorous(div)
                         caption="This is help text"
                         id="formField-10-caption"
+                        isGroup={false}
                         variant="warning"
                       >
                         <div
@@ -4590,16 +4824,23 @@ exports[`FormField demo examples variants 1`] = `
                       <label>
                         <glamorous(div)
                           hideLabel={undefined}
+                          key="formField-12-textWrapper"
                         >
                           <div
                             className="glamor-0"
                           >
-                            Danger
+                            <span
+                              id="formField-12-labelText"
+                            >
+                              Danger
+                            </span>
                           </div>
                         </glamorous(div)>
                         <TextInput
                           aria-describedby="formField-12-caption"
+                          key="formField-12-control"
                           required={undefined}
+                          rootProps={undefined}
                           variant="danger"
                         >
                           <TextInput
@@ -4678,6 +4919,7 @@ exports[`FormField demo examples variants 1`] = `
                       <glamorous(div)
                         caption="This is help text"
                         id="formField-12-caption"
+                        isGroup={false}
                         variant="danger"
                       >
                         <div

@@ -16,16 +16,29 @@
 
 /* @flow */
 import { componentTheme as cardComponentTheme } from '../../../../Card/Card';
+import { componentTheme as cardActionsComponentTheme } from '../../../../Card/CardActions';
 import { componentTheme as cardBlockComponentTheme } from '../../../../Card/CardBlock';
+import { componentTheme as cardDividerComponentTheme } from '../../../../Card/CardDivider';
+import { componentTheme as cardFooterComponentTheme } from '../../../../Card/CardFooter';
+import { componentTheme as cardStatusComponentTheme } from '../../../../Card/CardStatus';
 import { componentTheme as cardTitleComponentTheme } from '../../../../Card/CardTitle';
+
 import cardExamples from './examples/card';
+import cardActionsExamples from './examples/card-actions';
 import cardBlockExamples from './examples/card-block';
+import cardDividerExamples from './examples/card-divider';
+import cardFooterExamples from './examples/card-footer';
 import cardImageExamples from './examples/card-image';
+import cardStatusExamples from './examples/card-status';
 import cardTitleExamples from './examples/card-title';
 
 const cardDoc = require('!!react-docgen-loader!../../../../Card/Card');
+const cardActionsDoc = require('!!react-docgen-loader!../../../../Card/CardActions');
 const cardBlockDoc = require('!!react-docgen-loader!../../../../Card/CardBlock');
+const cardDividerDoc = require('!!react-docgen-loader!../../../../Card/CardDivider');
+const cardFooterDoc = require('!!react-docgen-loader!../../../../Card/CardFooter');
 const cardImageDoc = require('!!react-docgen-loader!../../../../Card/CardImage');
+const cardStatusDoc = require('!!react-docgen-loader!../../../../Card/CardStatus');
 const cardTitleDoc = require('!!react-docgen-loader!../../../../Card/CardTitle');
 
 import bestPractices from './bestPractices';
@@ -46,15 +59,50 @@ Don't put too much information in a single card.
 Cards represent a gateway to more detailed information in another app view.`
   },
   {
+    bestPractices: bestPractices.cardActions,
+    componentTheme: cardActionsComponentTheme,
+    doc: cardActionsDoc,
+    examples: cardActionsExamples,
+    slug: 'card-actions',
+    title: 'CardActions',
+    whenHowToUse: `CardActions is best used when Cards have 2–3 associated
+actions, which may or may not be the same for each Card in the set.`
+  },
+  {
     bestPractices: bestPractices.cardBlock,
     componentTheme: cardBlockComponentTheme,
     doc: cardBlockDoc,
     examples: cardBlockExamples,
     slug: 'card-block',
     title: 'CardBlock',
-    whenHowToUse: `CardBlock is used to help lay out content that's not a [title](../card-title) or an [image](../card-image) in the body of the [Card](../card).
+    whenHowToUse: `CardBlock is used to help lay out content that's not a
+[title](../card-title) or an [image](../card-image) in the body of the
+[Card](../card).
 
-Try not to put inline links in your content. Create purposeful calls to action with [Buttons](../button) at the bottom of the Card.`
+Try not to put inline links in your content. Create purposeful calls to action
+with [Buttons](../button) using [CardActions](../card-actions).`
+  },
+  {
+    bestPractices: bestPractices.cardDivider,
+    componentTheme: cardDividerComponentTheme,
+    doc: cardDividerDoc,
+    examples: cardDividerExamples,
+    slug: 'card-divider',
+    title: 'CardDivider',
+    whenHowToUse: `CardDivider is used to provide visual separation between
+sections of a [Card](../card) with complex content. It should be used sparingly.`
+  },
+  {
+    bestPractices: bestPractices.cardFooter,
+    componentTheme: cardFooterComponentTheme,
+    doc: cardFooterDoc,
+    examples: cardFooterExamples,
+    slug: 'card-footer',
+    title: 'CardFooter',
+    whenHowToUse: `Use CardFooter to add a visually differentiated section to
+your [Card](../card). It is best used for stateful information or functionality,
+particularly when paired with a [\`variant\`](#variants). CardFooter must always
+be the last thing in a Card.`
   },
   {
     bestPractices: bestPractices.cardImage,
@@ -66,6 +114,17 @@ Try not to put inline links in your content. Create purposeful calls to action w
 Images shouldn't be used alone in a Card, but should be paired with a call to action and/or a [CardTitle](../card-title).
 
 If you are putting text over top of the CardImage, use a solid color or an image with sufficient contrast to the text.`
+  },
+  {
+    bestPractices: bestPractices.cardStatus,
+    componentTheme: cardStatusComponentTheme,
+    doc: cardStatusDoc,
+    examples: cardStatusExamples,
+    slug: 'card-status',
+    title: 'CardStatus',
+    whenHowToUse: `CardStatus is used to display a Card's current status. If
+the status information is not likely to change, use [CardTitle's](../card-title)
+\`secondaryText\` or \`subtitle\` prop, instead.`
   },
   {
     bestPractices: bestPractices.cardTitle,

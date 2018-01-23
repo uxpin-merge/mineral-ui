@@ -16,6 +16,12 @@
 
 /* @flow */
 export default {
+  avatar: {
+    description:
+      'Avatar provides a graphic representation of an identity. It can display an image, text, or an icon.',
+    slug: 'avatar',
+    title: 'Avatar'
+  },
   button: {
     description:
       'Buttons trigger actions or state changes in your app. Choose a button color to match the intent of the action.',
@@ -28,17 +34,39 @@ export default {
     slug: 'card',
     title: 'Card'
   },
+  'card-actions': {
+    description:
+      'CardActions lays out actions like Buttons or Links in the body of the Card.',
+    slug: 'card-actions',
+    title: 'CardActions'
+  },
   'card-block': {
     description:
       'CardBlock lays out content that’s not a title or an image in the body of the Card.',
     slug: 'card-block',
     title: 'CardBlock'
   },
+  'card-divider': {
+    description: 'CardDivider visually seperates sections of content in Card.',
+    slug: 'card-divider',
+    title: 'CardDivider'
+  },
+  'card-footer': {
+    description: 'CardFooter provides a stateful extension to Card.',
+    slug: 'card-footer',
+    title: 'CardFooter'
+  },
   'card-image': {
     description:
       'CardImages reinforce the intent of the Card. Images shouldn’t be used alone in a Card, but should be paired with a call to action and/or a CardTitle.',
     slug: 'card-image',
     title: 'CardImage'
+  },
+  'card-status': {
+    description:
+      "CardStatus provides a standard way of displaying a Card's current status.",
+    slug: 'card-status',
+    title: 'CardStatus'
   },
   'card-title': {
     description:
@@ -110,6 +138,24 @@ export default {
       'Popovers display supporting content when your user interacts with an associated trigger. Use Popovers to implement other custom behaviors or widgets.',
     slug: 'popover',
     title: 'Popover'
+  },
+  radio: {
+    description:
+      'Radios allows users to select a single option from a set. Use Radios to accept limited choice input from a user.',
+    slug: 'radio',
+    title: 'Radio'
+  },
+  'radio-group': {
+    description:
+      'RadioGroup allows users to select a single option from a set.  Use a RadioGroup for a simpler API than working with Radios directly.',
+    slug: 'radio-group',
+    title: 'RadioGroup'
+  },
+  'text-area': {
+    description:
+      'TextAreas accept data from the user.  Use a TextArea to accept potentially lengthy, free-form input from a user',
+    slug: 'text-area',
+    title: 'TextArea'
   },
   'text-input': {
     description:

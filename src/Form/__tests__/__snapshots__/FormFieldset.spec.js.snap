@@ -121,7 +121,6 @@ exports[`FormFieldset demo examples basic 1`] = `
 
 .glamor-1,
 [data-glamor-1] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -135,7 +134,6 @@ exports[`FormFieldset demo examples basic 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -217,6 +215,7 @@ exports[`FormFieldset demo examples basic 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -225,27 +224,32 @@ exports[`FormFieldset demo examples basic 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -313,11 +317,11 @@ exports[`FormFieldset demo examples basic 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -413,16 +417,23 @@ exports[`FormFieldset demo examples basic 1`] = `
                             <label>
                               <glamorous(div)
                                 hideLabel={undefined}
+                                key="formField-1-textWrapper"
                               >
                                 <div
                                   className="glamor-0"
                                 >
-                                  Email
+                                  <span
+                                    id="formField-1-labelText"
+                                  >
+                                    Email
+                                  </span>
                                 </div>
                               </glamorous(div)>
                               <TextInput
                                 aria-describedby={undefined}
+                                key="formField-1-control"
                                 required={undefined}
+                                rootProps={undefined}
                                 type="email"
                                 variant={undefined}
                               >
@@ -483,16 +494,23 @@ exports[`FormFieldset demo examples basic 1`] = `
                             <label>
                               <glamorous(div)
                                 hideLabel={undefined}
+                                key="formField-2-textWrapper"
                               >
                                 <div
                                   className="glamor-0"
                                 >
-                                  Password
+                                  <span
+                                    id="formField-2-labelText"
+                                  >
+                                    Password
+                                  </span>
                                 </div>
                               </glamorous(div)>
                               <TextInput
                                 aria-describedby={undefined}
+                                key="formField-2-control"
                                 required={undefined}
+                                rootProps={undefined}
                                 type="password"
                                 variant={undefined}
                               >
@@ -674,7 +692,6 @@ exports[`FormFieldset demo examples disabled 1`] = `
 
 .glamor-1,
 [data-glamor-1] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -688,7 +705,6 @@ exports[`FormFieldset demo examples disabled 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -763,6 +779,7 @@ exports[`FormFieldset demo examples disabled 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -771,27 +788,32 @@ exports[`FormFieldset demo examples disabled 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -859,11 +881,11 @@ exports[`FormFieldset demo examples disabled 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -963,17 +985,24 @@ exports[`FormFieldset demo examples disabled 1`] = `
                             <label>
                               <glamorous(div)
                                 hideLabel={undefined}
+                                key="formField-3-textWrapper"
                               >
                                 <div
                                   className="glamor-0"
                                 >
-                                  Email
+                                  <span
+                                    id="formField-3-labelText"
+                                  >
+                                    Email
+                                  </span>
                                 </div>
                               </glamorous(div)>
                               <TextInput
                                 aria-describedby={undefined}
                                 disabled={true}
+                                key="formField-3-control"
                                 required={undefined}
+                                rootProps={undefined}
                                 type="email"
                                 variant={undefined}
                               >
@@ -1034,17 +1063,24 @@ exports[`FormFieldset demo examples disabled 1`] = `
                             <label>
                               <glamorous(div)
                                 hideLabel={undefined}
+                                key="formField-4-textWrapper"
                               >
                                 <div
                                   className="glamor-0"
                                 >
-                                  Password
+                                  <span
+                                    id="formField-4-labelText"
+                                  >
+                                    Password
+                                  </span>
                                 </div>
                               </glamorous(div)>
                               <TextInput
                                 aria-describedby={undefined}
                                 disabled={true}
+                                key="formField-4-control"
                                 required={undefined}
+                                rootProps={undefined}
                                 type="password"
                                 variant={undefined}
                               >
@@ -1236,7 +1272,6 @@ exports[`FormFieldset demo examples rtl 1`] = `
 
 .glamor-2,
 [data-glamor-2] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -1250,7 +1285,6 @@ exports[`FormFieldset demo examples rtl 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -1332,6 +1366,7 @@ exports[`FormFieldset demo examples rtl 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -1340,27 +1375,32 @@ exports[`FormFieldset demo examples rtl 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -1428,11 +1468,11 @@ exports[`FormFieldset demo examples rtl 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -1541,18 +1581,25 @@ exports[`FormFieldset demo examples rtl 1`] = `
                               <label>
                                 <glamorous(div)
                                   hideLabel={undefined}
+                                  key="formField-5-textWrapper"
                                 >
                                   <div
                                     className="glamor-0"
                                   >
-                                    مرحبا بالعالم
+                                    <span
+                                      id="formField-5-labelText"
+                                    >
+                                      مرحبا بالعالم
+                                    </span>
                                   </div>
                                 </glamorous(div)>
                                 <TextInput
                                   aria-describedby={undefined}
                                   defaultValue="مرحبا بالعالم"
                                   iconStart={<IconBackspace />}
+                                  key="formField-5-control"
                                   required={undefined}
+                                  rootProps={undefined}
                                   variant={undefined}
                                 >
                                   <TextInput

@@ -15,6 +15,7 @@
  */
 
 /* @flow */
+import React from 'react';
 import { createStyledComponent } from '../../../../../../styles';
 import { mineralTheme } from '../../../../../../themes';
 import Button from '../../../../../../Button';
@@ -26,24 +27,24 @@ const CustomContent = createStyledComponent('div', ({ theme }) => ({
   padding: `${theme.space_stack_md} 0`
 }));
 
+const customContent = (
+  <CustomContent>
+    <Button fullWidth>Button</Button>
+  </CustomContent>
+);
+
 export default {
   id: 'children',
   title: 'Arbitrary Children',
   // $FlowFixMe
   backgroundColor: mineralTheme.color_gray_10,
-  description: `A Card will render any children.
-
-For best results, please ensure content matches the top/bottom margin and left/right padding of the other \`<Card*/>\` components, or use CardBlock.`,
-  scope: { Button, Card, CardBlock, CardTitle, CustomContent, DemoLayout },
+  description: `A CardBlock will render any children.`,
+  scope: { Button, Card, CardBlock, CardTitle, customContent, DemoLayout },
   source: `
     <DemoLayout>
       <Card>
         <CardTitle>Card Title</CardTitle>
-        <CardBlock>
-          <CustomContent>
-            <Button fullWidth>Button</Button>
-          </CustomContent>
-        </CardBlock>
+        <CardBlock>{customContent}</CardBlock>
       </Card>
     </DemoLayout>`
 };

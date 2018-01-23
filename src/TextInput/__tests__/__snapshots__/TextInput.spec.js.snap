@@ -47,7 +47,6 @@ exports[`TextInput demo examples controlled 1`] = `
 
 .glamor-0,
 [data-glamor-0] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -61,7 +60,6 @@ exports[`TextInput demo examples controlled 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -143,6 +141,7 @@ exports[`TextInput demo examples controlled 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -151,27 +150,32 @@ exports[`TextInput demo examples controlled 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -239,11 +243,11 @@ exports[`TextInput demo examples controlled 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -281,31 +285,23 @@ exports[`TextInput demo examples controlled 1`] = `
         super(props);
 
         this.state = {
-          value: this.props.value
+          value: 'Hello World'
         };
 
-        this.handleTextInputChange = this.handleTextInputChange.bind(this);
+        this.handleChange = this.handleChange.bind(this);
       }
 
-      handleTextInputChange(event) {
+      handleChange(event) {
         this.setState({
           value: event.target.value
         });
-
-        if (this.props.onChange) {
-          this.props.onChange(event);
-        }
       }
 
       render() {
-        const textInputProps = {
-          ...this.props,
-          onChange: this.handleTextInputChange,
-          value: this.state.value || 'Hello World'
-        };
-
         return (
-          <TextInput { ...textInputProps } />
+          <TextInput
+            value={this.state.value}
+            onChange={this.handleChange} />
         );
       }
     }
@@ -318,7 +314,6 @@ exports[`TextInput demo examples controlled 1`] = `
       scope={
         Object {
           "Component": [Function],
-          "DemoLayout": [Function],
           "TextInput": [Function],
         }
       }
@@ -328,7 +323,6 @@ exports[`TextInput demo examples controlled 1`] = `
         scope={
           Object {
             "Component": [Function],
-            "DemoLayout": [Function],
             "TextInput": [Function],
           }
         }
@@ -442,7 +436,6 @@ exports[`TextInput demo examples disabled 1`] = `
 
 .glamor-0,
 [data-glamor-0] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -456,7 +449,6 @@ exports[`TextInput demo examples disabled 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -531,6 +523,7 @@ exports[`TextInput demo examples disabled 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -539,27 +532,32 @@ exports[`TextInput demo examples disabled 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -627,11 +625,11 @@ exports[`TextInput demo examples disabled 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -737,6 +735,537 @@ exports[`TextInput demo examples disabled 1`] = `
 </ThemeProvider>
 `;
 
+exports[`TextInput demo examples form-field 1`] = `
+.glamor-4,
+[data-glamor-4] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  align-items: center;
+  cursor: text;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  width: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.glamor-4 *,
+[data-glamor-4] *,
+.glamor-4 *::before,
+[data-glamor-4] *::before,
+.glamor-4 *::after,
+[data-glamor-4] *::after {
+  box-sizing: inherit;
+}
+
+.glamor-4 [role="img"],
+[data-glamor-4] [role="img"] {
+  display: block;
+  fill: #c8d1e0;
+  flex: 0 0 auto;
+  margin: 0 0.5em;
+  -webkit-flex: 0 0 auto;
+}
+
+.glamor-4 [role="img"]:last-of-type,
+[data-glamor-4] [role="img"]:last-of-type {
+  fill: #c8d1e0;
+}
+
+.glamor-7 > *:not(:last-child),
+[data-glamor-7] > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.glamor-2,
+[data-glamor-2] {
+  fill: #8e99ab;
+  font-size: 16px;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.glamor-3,
+[data-glamor-3] {
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  color: #58606e;
+  flex: 1 1 auto;
+  font-family: inherit;
+  font-size: 0.875em;
+  height: 2.857142857142857em;
+  min-width: 0;
+  outline: 0;
+  padding-left: 0;
+  padding-right: 1.1428571428571428em;
+  width: 100%;
+  -webkit-flex: 1 1 auto;
+}
+
+.glamor-3::placeholder,
+[data-glamor-3]::placeholder,
+.glamor-3[data-simulate-placeholder],
+[data-glamor-3][data-simulate-placeholder] {
+  color: #8e99ab;
+  font-style: italic;
+}
+
+.glamor-3::-ms-input-placeholder,
+[data-glamor-3]::-ms-input-placeholder,
+.glamor-3[data-simulate-msinputplaceholder],
+[data-glamor-3][data-simulate-msinputplaceholder] {
+  color: #8e99ab;
+  font-style: italic;
+}
+
+.glamor-3:-ms-input-placeholder,
+[data-glamor-3]:-ms-input-placeholder,
+.glamor-3[data-simulate-msinputplaceholder],
+[data-glamor-3][data-simulate-msinputplaceholder] {
+  color: #8e99ab;
+  font-style: italic;
+}
+
+.glamor-3::-ms-clear,
+[data-glamor-3]::-ms-clear,
+.glamor-3[data-simulate-msclear],
+[data-glamor-3][data-simulate-msclear] {
+  display: none;
+}
+
+.glamor-3:hover ~ div,
+[data-glamor-3]:hover ~ div,
+.glamor-3[data-simulate-hover] ~ div,
+[data-glamor-3][data-simulate-hover] ~ div {
+  border-color: #2e6fd9;
+}
+
+.glamor-3:focus ~ div,
+[data-glamor-3]:focus ~ div,
+.glamor-3[data-simulate-focus] ~ div,
+[data-glamor-3][data-simulate-focus] ~ div {
+  border-color: #c8d1e0;
+  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #2e6fd9;
+}
+
+.glamor-3:active ~ div,
+[data-glamor-3]:active ~ div,
+.glamor-3[data-simulate-active] ~ div,
+[data-glamor-3][data-simulate-active] ~ div {
+  border-color: #c8d1e0;
+  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #2e6fd9;
+}
+
+.glamor-3 ~ div,
+[data-glamor-3] ~ div {
+  background-color: #fff;
+  border-color: #c8d1e0;
+  border-radius: 0.1875em;
+  border-style: solid;
+  border-width: 1px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.glamor-6,
+[data-glamor-6] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+}
+
+.glamor-6 *,
+[data-glamor-6] *,
+.glamor-6 *::before,
+[data-glamor-6] *::before,
+.glamor-6 *::after,
+[data-glamor-6] *::after {
+  box-sizing: inherit;
+}
+
+.glamor-1,
+[data-glamor-1] {
+  color: #58606e;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.875em;
+  font-weight: 600;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+}
+
+.glamor-1 > *,
+[data-glamor-1] > * {
+  align-self: flex-end;
+  display: inline-block;
+  -webkit-align-self: flex-end;
+}
+
+.glamor-0,
+[data-glamor-0] {
+  color: #db2929;
+  font-size: 0.6875em;
+}
+
+.glamor-5,
+[data-glamor-5] {
+  color: #58606e;
+  font-size: 0.6875em;
+  margin-top: 0.18181818181818182em;
+}
+
+<ThemeProvider>
+  <ThemeProvider
+    theme={
+      Object {
+        "backgroundColor_danger": "#db2929",
+        "backgroundColor_danger_active": "#c71818",
+        "backgroundColor_danger_activeMuted": "#f79999",
+        "backgroundColor_danger_focus": "#db2929",
+        "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
+        "backgroundColor_disabled": "#ebeff5",
+        "backgroundColor_input": "#fff",
+        "backgroundColor_link_focus": "#dde3ed",
+        "backgroundColor_success": "#0a8f4c",
+        "backgroundColor_success_active": "#06783f",
+        "backgroundColor_success_activeMuted": "#95f5c3",
+        "backgroundColor_success_focus": "#0a8f4c",
+        "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
+        "backgroundColor_warning": "#e05b2b",
+        "backgroundColor_warning_active": "#cf4615",
+        "backgroundColor_warning_activeMuted": "#fab69d",
+        "backgroundColor_warning_focus": "#e05b2b",
+        "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
+        "borderColor": "#c8d1e0",
+        "borderColor_active": "#2e6fd9",
+        "borderColor_danger": "#db2929",
+        "borderColor_danger_active": "#c71818",
+        "borderColor_danger_focus": "#c71818",
+        "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
+        "borderColor_focus": "#2e6fd9",
+        "borderColor_hover": "#2e6fd9",
+        "borderColor_success": "#10a35a",
+        "borderColor_success_active": "#0a8f4c",
+        "borderColor_success_focus": "#0a8f4c",
+        "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
+        "borderColor_warning": "#e05b2b",
+        "borderColor_warning_active": "#cf4615",
+        "borderColor_warning_focus": "#cf4615",
+        "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
+        "borderRadius_1": "0.1875em",
+        "color_black": "#1d1f24",
+        "color_caption": "#58606e",
+        "color_gray_10": "#f5f7fa",
+        "color_gray_100": "#333840",
+        "color_gray_20": "#ebeff5",
+        "color_gray_30": "#dde3ed",
+        "color_gray_40": "#c8d1e0",
+        "color_gray_50": "#afbacc",
+        "color_gray_60": "#8e99ab",
+        "color_gray_70": "#707a8a",
+        "color_gray_80": "#58606e",
+        "color_gray_90": "#434a54",
+        "color_placeholder": "#8e99ab",
+        "color_text": "#333840",
+        "color_text_danger": "#db2929",
+        "color_text_danger_active": "#c71818",
+        "color_text_danger_focus": "#db2929",
+        "color_text_danger_hover": "#eb4d4d",
+        "color_text_disabled": "#afbacc",
+        "color_text_ondanger": "#fff",
+        "color_text_onprimary": "#fff",
+        "color_text_onsuccess": "#fff",
+        "color_text_onwarning": "#fff",
+        "color_text_primary": "#2e6fd9",
+        "color_text_primary_active": "#1f5dc2",
+        "color_text_primary_focus": "#2e6fd9",
+        "color_text_primary_hover": "#4a89e8",
+        "color_text_success": "#06783f",
+        "color_text_success_active": "#046132",
+        "color_text_success_focus": "#06783f",
+        "color_text_success_hover": "#0a8f4c",
+        "color_text_warning": "#cf4615",
+        "color_text_warning_active": "#bd3909",
+        "color_text_warning_focus": "#cf4615",
+        "color_text_warning_hover": "#e05b2b",
+        "color_theme_10": "#e6eefc",
+        "color_theme_100": "#0f397d",
+        "color_theme_20": "#c2dbfc",
+        "color_theme_30": "#9dc2fa",
+        "color_theme_40": "#72a5f2",
+        "color_theme_50": "#4a89e8",
+        "color_theme_60": "#2e6fd9",
+        "color_theme_70": "#1f5dc2",
+        "color_theme_80": "#164ea8",
+        "color_theme_90": "#114091",
+        "color_white": "#fff",
+        "direction": "ltr",
+        "fontFamily": "Open Sans",
+        "fontFamily_monospace": "\\"SF Mono\\", \\"Droid Sans Mono\\", \\"Source Code Pro\\", Monaco, Consolas, \\"Courier New\\", Courier, monospace",
+        "fontFamily_system": "-apple-system, system-ui, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
+        "fontSize_base": 16,
+        "fontSize_h1": "2.125em",
+        "fontSize_h2": "1.75em",
+        "fontSize_h3": "1.375em",
+        "fontSize_h4": "1.125em",
+        "fontSize_h5": "0.875em",
+        "fontSize_h6": "0.875em",
+        "fontSize_mouse": "0.6875em",
+        "fontSize_prose": "1em",
+        "fontSize_ui": "0.875em",
+        "fontWeight_bold": 700,
+        "fontWeight_extraBold": 800,
+        "fontWeight_regular": 400,
+        "fontWeight_semiBold": 600,
+        "lineHeight": 1.25,
+        "lineHeight_prose": 1.5,
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
+        "size_jumbo": "3.25em",
+        "size_large": "2.5em",
+        "size_medium": "2em",
+        "size_small": "1.5em",
+        "space_inline_lg": "1.5em",
+        "space_inline_md": "1em",
+        "space_inline_sm": "0.5em",
+        "space_inline_xl": "2em",
+        "space_inline_xs": "0.25em",
+        "space_inline_xxl": "4em",
+        "space_inline_xxs": "0.125em",
+        "space_inset_lg": "1.5em",
+        "space_inset_md": "1em",
+        "space_inset_sm": "0.5em",
+        "space_stack_lg": "1.5em",
+        "space_stack_md": "1em",
+        "space_stack_sm": "0.5em",
+        "space_stack_xl": "2em",
+        "space_stack_xs": "0.25em",
+        "space_stack_xxl": "4em",
+        "space_stack_xxs": "0.125em",
+        "zIndex_100": 100,
+        "zIndex_1600": 1600,
+        "zIndex_200": 200,
+        "zIndex_400": 400,
+        "zIndex_800": 800,
+      }
+    }
+  >
+    <LiveProvider
+      code="
+    <DemoLayout>
+      <FormField
+        input={TextInput}
+        label=\\"Last Name\\"
+        caption=\\"Surname, family name\\"
+        iconStart={<IconAccountBox />}
+        required />
+    </DemoLayout>
+  "
+      mountStylesheet={false}
+      noInline={false}
+      scope={
+        Object {
+          "DemoLayout": [Function],
+          "FormField": [Function],
+          "IconAccountBox": [Function],
+          "TextInput": [Function],
+        }
+      }
+    >
+      <div
+        className="react-live"
+        scope={
+          Object {
+            "DemoLayout": [Function],
+            "FormField": [Function],
+            "IconAccountBox": [Function],
+            "TextInput": [Function],
+          }
+        }
+      >
+        <LivePreview>
+          <div
+            className="react-live-preview"
+          >
+            <glamorous(div)>
+              <div
+                className="glamor-7"
+              >
+                <FormField
+                  caption="Surname, family name"
+                  iconStart={<IconAccountBox />}
+                  input={[Function]}
+                  label="Last Name"
+                  required={true}
+                  requiredText="Required"
+                >
+                  <FormField
+                    className={undefined}
+                  >
+                    <div
+                      className="glamor-6"
+                    >
+                      <label>
+                        <glamorous(div)
+                          hideLabel={undefined}
+                          key="formField-11-textWrapper"
+                        >
+                          <div
+                            className="glamor-1"
+                          >
+                            <span
+                              id="formField-11-labelText"
+                            >
+                              Last Name
+                            </span>
+                            <glamorous(span)
+                              secondaryText={undefined}
+                            >
+                              <span
+                                className="glamor-0"
+                              >
+                                Required
+                              </span>
+                            </glamorous(span)>
+                          </div>
+                        </glamorous(div)>
+                        <TextInput
+                          aria-describedby="formField-11-caption"
+                          iconStart={<IconAccountBox />}
+                          key="formField-11-control"
+                          required={true}
+                          rootProps={undefined}
+                          variant={undefined}
+                        >
+                          <TextInput
+                            className={undefined}
+                            variant={undefined}
+                          >
+                            <div
+                              className="glamor-4"
+                            >
+                              <IconAccountBox
+                                key="iconStart"
+                                size="1.5em"
+                              >
+                                <Icon
+                                  rtl={false}
+                                  size="1.5em"
+                                >
+                                  <glamorous(svg)
+                                    aria-hidden={true}
+                                    aria-labelledby={undefined}
+                                    role="img"
+                                    rtl={false}
+                                    size="1.5em"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <svg
+                                      aria-hidden={true}
+                                      aria-labelledby={undefined}
+                                      className="glamor-2"
+                                      role="img"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <g>
+                                        <path
+                                          d="M3 5v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5a2 2 0 0 0-2 2zm12 4c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"
+                                        />
+                                      </g>
+                                    </svg>
+                                  </glamorous(svg)>
+                                </Icon>
+                              </IconAccountBox>
+                              <glamorous(input)
+                                aria-describedby="formField-11-caption"
+                                aria-invalid={undefined}
+                                aria-required={true}
+                                disabled={undefined}
+                                iconEnd={undefined}
+                                iconStart={<IconAccountBox />}
+                                innerRef={[Function]}
+                                prefix={undefined}
+                                readOnly={undefined}
+                                required={true}
+                                size="large"
+                                suffix={undefined}
+                                type="text"
+                                variant={undefined}
+                              >
+                                <input
+                                  aria-describedby="formField-11-caption"
+                                  aria-invalid={undefined}
+                                  aria-required={true}
+                                  className="glamor-3"
+                                  disabled={undefined}
+                                  prefix={undefined}
+                                  readOnly={undefined}
+                                  required={true}
+                                  size="large"
+                                  type="text"
+                                />
+                              </glamorous(input)>
+                              <div />
+                            </div>
+                          </TextInput>
+                        </TextInput>
+                      </label>
+                      <glamorous(div)
+                        caption="Surname, family name"
+                        id="formField-11-caption"
+                        isGroup={false}
+                        variant={undefined}
+                      >
+                        <div
+                          className="glamor-5"
+                          id="formField-11-caption"
+                        >
+                          Surname, family name
+                        </div>
+                      </glamorous(div)>
+                    </div>
+                  </FormField>
+                </FormField>
+              </div>
+            </glamorous(div)>
+          </div>
+        </LivePreview>
+      </div>
+    </LiveProvider>
+  </ThemeProvider>
+</ThemeProvider>
+`;
+
 exports[`TextInput demo examples icons 1`] = `
 .glamor-2,
 [data-glamor-2] {
@@ -797,7 +1326,6 @@ exports[`TextInput demo examples icons 1`] = `
 
 .glamor-1,
 [data-glamor-1] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -811,7 +1339,6 @@ exports[`TextInput demo examples icons 1`] = `
   padding-left: 0;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -886,7 +1413,6 @@ exports[`TextInput demo examples icons 1`] = `
 
 .glamor-3,
 [data-glamor-3] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -900,7 +1426,6 @@ exports[`TextInput demo examples icons 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -975,7 +1500,6 @@ exports[`TextInput demo examples icons 1`] = `
 
 .glamor-7,
 [data-glamor-7] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -989,7 +1513,6 @@ exports[`TextInput demo examples icons 1`] = `
   padding-left: 0;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -1071,6 +1594,7 @@ exports[`TextInput demo examples icons 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -1079,27 +1603,32 @@ exports[`TextInput demo examples icons 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -1167,11 +1696,11 @@ exports[`TextInput demo examples icons 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -1553,7 +2082,6 @@ exports[`TextInput demo examples input-ref 1`] = `
 
 .glamor-0,
 [data-glamor-0] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -1567,7 +2095,6 @@ exports[`TextInput demo examples input-ref 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -1786,6 +2313,7 @@ exports[`TextInput demo examples input-ref 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -1794,27 +2322,32 @@ exports[`TextInput demo examples input-ref 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -1882,11 +2415,11 @@ exports[`TextInput demo examples input-ref 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -2112,7 +2645,6 @@ exports[`TextInput demo examples invalid 1`] = `
 
 .glamor-0,
 [data-glamor-0] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -2126,7 +2658,6 @@ exports[`TextInput demo examples invalid 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -2208,6 +2739,7 @@ exports[`TextInput demo examples invalid 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -2216,27 +2748,32 @@ exports[`TextInput demo examples invalid 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -2304,11 +2841,11 @@ exports[`TextInput demo examples invalid 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -2458,7 +2995,6 @@ exports[`TextInput demo examples kitchen-sink 1`] = `
 
 .glamor-0,
 [data-glamor-0] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -2472,7 +3008,6 @@ exports[`TextInput demo examples kitchen-sink 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -2604,7 +3139,6 @@ exports[`TextInput demo examples kitchen-sink 1`] = `
 
 .glamor-26,
 [data-glamor-26] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -2618,7 +3152,6 @@ exports[`TextInput demo examples kitchen-sink 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -2693,7 +3226,6 @@ exports[`TextInput demo examples kitchen-sink 1`] = `
 
 .glamor-3,
 [data-glamor-3] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -2707,7 +3239,6 @@ exports[`TextInput demo examples kitchen-sink 1`] = `
   padding-left: 0;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -2782,7 +3313,6 @@ exports[`TextInput demo examples kitchen-sink 1`] = `
 
 .glamor-5,
 [data-glamor-5] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -2796,7 +3326,6 @@ exports[`TextInput demo examples kitchen-sink 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -2871,7 +3400,6 @@ exports[`TextInput demo examples kitchen-sink 1`] = `
 
 .glamor-9,
 [data-glamor-9] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -2885,7 +3413,6 @@ exports[`TextInput demo examples kitchen-sink 1`] = `
   padding-left: 0;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -3053,7 +3580,6 @@ exports[`TextInput demo examples kitchen-sink 1`] = `
 
 .glamor-32,
 [data-glamor-32] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -3067,7 +3593,6 @@ exports[`TextInput demo examples kitchen-sink 1`] = `
   padding-left: 0;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -3157,7 +3682,6 @@ exports[`TextInput demo examples kitchen-sink 1`] = `
 
 .glamor-63,
 [data-glamor-63] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -3171,7 +3695,6 @@ exports[`TextInput demo examples kitchen-sink 1`] = `
   padding-left: 0;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -3263,6 +3786,7 @@ exports[`TextInput demo examples kitchen-sink 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -3271,27 +3795,32 @@ exports[`TextInput demo examples kitchen-sink 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -3359,11 +3888,11 @@ exports[`TextInput demo examples kitchen-sink 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -5049,7 +5578,6 @@ exports[`TextInput demo examples next-to-button 1`] = `
 
 .glamor-10,
 [data-glamor-10] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -5063,7 +5591,6 @@ exports[`TextInput demo examples next-to-button 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -5138,7 +5665,6 @@ exports[`TextInput demo examples next-to-button 1`] = `
 
 .glamor-0,
 [data-glamor-0] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -5152,7 +5678,6 @@ exports[`TextInput demo examples next-to-button 1`] = `
   padding-left: 1.3333333333333333em;
   padding-right: 1.3333333333333333em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -5227,7 +5752,6 @@ exports[`TextInput demo examples next-to-button 1`] = `
 
 .glamor-5,
 [data-glamor-5] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -5241,7 +5765,6 @@ exports[`TextInput demo examples next-to-button 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -5316,7 +5839,6 @@ exports[`TextInput demo examples next-to-button 1`] = `
 
 .glamor-15,
 [data-glamor-15] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -5330,7 +5852,6 @@ exports[`TextInput demo examples next-to-button 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -5885,6 +6406,7 @@ exports[`TextInput demo examples next-to-button 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -5893,27 +6415,32 @@ exports[`TextInput demo examples next-to-button 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -5981,11 +6508,11 @@ exports[`TextInput demo examples next-to-button 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -6444,7 +6971,6 @@ exports[`TextInput demo examples placeholder 1`] = `
 
 .glamor-0,
 [data-glamor-0] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -6458,7 +6984,6 @@ exports[`TextInput demo examples placeholder 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -6540,6 +7065,7 @@ exports[`TextInput demo examples placeholder 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -6548,27 +7074,32 @@ exports[`TextInput demo examples placeholder 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -6636,11 +7167,11 @@ exports[`TextInput demo examples placeholder 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -6797,7 +7328,6 @@ exports[`TextInput demo examples prefix-and-suffix 1`] = `
 
 .glamor-1,
 [data-glamor-1] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -6811,7 +7341,6 @@ exports[`TextInput demo examples prefix-and-suffix 1`] = `
   padding-left: 0;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -6886,7 +7415,6 @@ exports[`TextInput demo examples prefix-and-suffix 1`] = `
 
 .glamor-3,
 [data-glamor-3] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -6900,7 +7428,6 @@ exports[`TextInput demo examples prefix-and-suffix 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -7012,6 +7539,7 @@ exports[`TextInput demo examples prefix-and-suffix 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -7020,27 +7548,32 @@ exports[`TextInput demo examples prefix-and-suffix 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -7108,11 +7641,11 @@ exports[`TextInput demo examples prefix-and-suffix 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -7349,7 +7882,6 @@ exports[`TextInput demo examples read-only 1`] = `
 
 .glamor-0,
 [data-glamor-0] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -7363,7 +7895,6 @@ exports[`TextInput demo examples read-only 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -7445,6 +7976,7 @@ exports[`TextInput demo examples read-only 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -7453,27 +7985,32 @@ exports[`TextInput demo examples read-only 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -7541,11 +8078,11 @@ exports[`TextInput demo examples read-only 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -7698,7 +8235,6 @@ exports[`TextInput demo examples required 1`] = `
 
 .glamor-0,
 [data-glamor-0] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -7712,7 +8248,6 @@ exports[`TextInput demo examples required 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -7794,6 +8329,7 @@ exports[`TextInput demo examples required 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -7802,27 +8338,32 @@ exports[`TextInput demo examples required 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -7890,11 +8431,11 @@ exports[`TextInput demo examples required 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -8101,7 +8642,6 @@ exports[`TextInput demo examples rtl 1`] = `
 
 .glamor-3,
 [data-glamor-3] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -8115,7 +8655,6 @@ exports[`TextInput demo examples rtl 1`] = `
   padding-left: 0;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -8190,7 +8729,6 @@ exports[`TextInput demo examples rtl 1`] = `
 
 .glamor-1,
 [data-glamor-1] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -8204,7 +8742,6 @@ exports[`TextInput demo examples rtl 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -8289,7 +8826,6 @@ exports[`TextInput demo examples rtl 1`] = `
 
 .glamor-6,
 [data-glamor-6] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -8303,7 +8839,6 @@ exports[`TextInput demo examples rtl 1`] = `
   padding-left: 0;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -8385,6 +8920,7 @@ exports[`TextInput demo examples rtl 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -8393,27 +8929,32 @@ exports[`TextInput demo examples rtl 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -8481,11 +9022,11 @@ exports[`TextInput demo examples rtl 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -8861,7 +9402,6 @@ exports[`TextInput demo examples size 1`] = `
 
 .glamor-4,
 [data-glamor-4] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -8875,7 +9415,6 @@ exports[`TextInput demo examples size 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -8955,7 +9494,6 @@ exports[`TextInput demo examples size 1`] = `
 
 .glamor-0,
 [data-glamor-0] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -8969,7 +9507,6 @@ exports[`TextInput demo examples size 1`] = `
   padding-left: 1.3333333333333333em;
   padding-right: 1.3333333333333333em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -9044,7 +9581,6 @@ exports[`TextInput demo examples size 1`] = `
 
 .glamor-2,
 [data-glamor-2] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -9058,7 +9594,6 @@ exports[`TextInput demo examples size 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -9133,7 +9668,6 @@ exports[`TextInput demo examples size 1`] = `
 
 .glamor-6,
 [data-glamor-6] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -9147,7 +9681,6 @@ exports[`TextInput demo examples size 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -9229,6 +9762,7 @@ exports[`TextInput demo examples size 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -9237,27 +9771,32 @@ exports[`TextInput demo examples size 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -9325,11 +9864,11 @@ exports[`TextInput demo examples size 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -9626,7 +10165,6 @@ exports[`TextInput demo examples states 1`] = `
 
 .glamor-0,
 [data-glamor-0] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -9640,7 +10178,6 @@ exports[`TextInput demo examples states 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -9715,7 +10252,6 @@ exports[`TextInput demo examples states 1`] = `
 
 .glamor-12,
 [data-glamor-12] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -9729,7 +10265,6 @@ exports[`TextInput demo examples states 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -9797,7 +10332,6 @@ exports[`TextInput demo examples states 1`] = `
 
 .glamor-10,
 [data-glamor-10] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -9811,7 +10345,6 @@ exports[`TextInput demo examples states 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -9935,7 +10468,6 @@ exports[`TextInput demo examples states 1`] = `
 
 .glamor-17,
 [data-glamor-17] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -9949,7 +10481,6 @@ exports[`TextInput demo examples states 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -10076,7 +10607,6 @@ exports[`TextInput demo examples states 1`] = `
 
 .glamor-39,
 [data-glamor-39] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -10090,7 +10620,6 @@ exports[`TextInput demo examples states 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -10209,7 +10738,6 @@ exports[`TextInput demo examples states 1`] = `
 
 .glamor-61,
 [data-glamor-61] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -10223,7 +10751,6 @@ exports[`TextInput demo examples states 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -10342,7 +10869,6 @@ exports[`TextInput demo examples states 1`] = `
 
 .glamor-32,
 [data-glamor-32] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -10356,7 +10882,6 @@ exports[`TextInput demo examples states 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -10431,7 +10956,6 @@ exports[`TextInput demo examples states 1`] = `
 
 .glamor-34,
 [data-glamor-34] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -10445,7 +10969,6 @@ exports[`TextInput demo examples states 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -10513,7 +11036,6 @@ exports[`TextInput demo examples states 1`] = `
 
 .glamor-54,
 [data-glamor-54] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -10527,7 +11049,6 @@ exports[`TextInput demo examples states 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -10602,7 +11123,6 @@ exports[`TextInput demo examples states 1`] = `
 
 .glamor-56,
 [data-glamor-56] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -10616,7 +11136,6 @@ exports[`TextInput demo examples states 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -10684,7 +11203,6 @@ exports[`TextInput demo examples states 1`] = `
 
 .glamor-76,
 [data-glamor-76] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -10698,7 +11216,6 @@ exports[`TextInput demo examples states 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -10773,7 +11290,6 @@ exports[`TextInput demo examples states 1`] = `
 
 .glamor-78,
 [data-glamor-78] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -10787,7 +11303,6 @@ exports[`TextInput demo examples states 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -10862,6 +11377,7 @@ exports[`TextInput demo examples states 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -10870,27 +11386,32 @@ exports[`TextInput demo examples states 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -10958,11 +11479,11 @@ exports[`TextInput demo examples states 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -11007,7 +11528,6 @@ exports[`TextInput demo examples states 1`] = `
         Object {
           "DemoLayout": [Function],
           "FieldSet": [Function],
-          "TextInput": [Function],
         }
       }
     >
@@ -11017,7 +11537,6 @@ exports[`TextInput demo examples states 1`] = `
           Object {
             "DemoLayout": [Function],
             "FieldSet": [Function],
-            "TextInput": [Function],
           }
         }
       >
@@ -13021,7 +13540,6 @@ exports[`TextInput demo examples uncontrolled 1`] = `
 
 .glamor-0,
 [data-glamor-0] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -13035,7 +13553,6 @@ exports[`TextInput demo examples uncontrolled 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 1.1428571428571428em;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -13117,6 +13634,7 @@ exports[`TextInput demo examples uncontrolled 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -13125,27 +13643,32 @@ exports[`TextInput demo examples uncontrolled 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -13213,11 +13736,11 @@ exports[`TextInput demo examples uncontrolled 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",
@@ -13374,7 +13897,6 @@ exports[`TextInput demo examples variants 1`] = `
 
 .glamor-0,
 [data-glamor-0] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -13388,7 +13910,6 @@ exports[`TextInput demo examples variants 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -13515,7 +14036,6 @@ exports[`TextInput demo examples variants 1`] = `
 
 .glamor-3,
 [data-glamor-3] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -13529,7 +14049,6 @@ exports[`TextInput demo examples variants 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -13648,7 +14167,6 @@ exports[`TextInput demo examples variants 1`] = `
 
 .glamor-6,
 [data-glamor-6] {
-  align-self: stretch;
   background-color: transparent;
   border: 0;
   box-shadow: none;
@@ -13662,7 +14180,6 @@ exports[`TextInput demo examples variants 1`] = `
   padding-left: 1.1428571428571428em;
   padding-right: 0;
   width: 100%;
-  -webkit-align-self: stretch;
   -webkit-flex: 1 1 auto;
 }
 
@@ -13744,6 +14261,7 @@ exports[`TextInput demo examples variants 1`] = `
         "backgroundColor_danger_activeMuted": "#f79999",
         "backgroundColor_danger_focus": "#db2929",
         "backgroundColor_danger_hover": "#eb4d4d",
+        "backgroundColor_danger_muted": "#fabebe",
         "backgroundColor_disabled": "#ebeff5",
         "backgroundColor_input": "#fff",
         "backgroundColor_link_focus": "#dde3ed",
@@ -13752,27 +14270,32 @@ exports[`TextInput demo examples variants 1`] = `
         "backgroundColor_success_activeMuted": "#95f5c3",
         "backgroundColor_success_focus": "#0a8f4c",
         "backgroundColor_success_hover": "#10a35a",
+        "backgroundColor_success_muted": "#c0fadc",
         "backgroundColor_warning": "#e05b2b",
         "backgroundColor_warning_active": "#cf4615",
         "backgroundColor_warning_activeMuted": "#fab69d",
         "backgroundColor_warning_focus": "#e05b2b",
         "backgroundColor_warning_hover": "#ed774c",
+        "backgroundColor_warning_muted": "#fcd0c0",
         "borderColor": "#c8d1e0",
         "borderColor_active": "#2e6fd9",
         "borderColor_danger": "#db2929",
         "borderColor_danger_active": "#c71818",
         "borderColor_danger_focus": "#c71818",
         "borderColor_danger_hover": "#c71818",
+        "borderColor_danger_muted": "#f27474",
         "borderColor_focus": "#2e6fd9",
         "borderColor_hover": "#2e6fd9",
         "borderColor_success": "#10a35a",
         "borderColor_success_active": "#0a8f4c",
         "borderColor_success_focus": "#0a8f4c",
         "borderColor_success_hover": "#0a8f4c",
+        "borderColor_success_muted": "#67eba7",
         "borderColor_warning": "#e05b2b",
         "borderColor_warning_active": "#cf4615",
         "borderColor_warning_focus": "#cf4615",
         "borderColor_warning_hover": "#cf4615",
+        "borderColor_warning_muted": "#f59776",
         "borderRadius_1": "0.1875em",
         "color_black": "#1d1f24",
         "color_caption": "#58606e",
@@ -13840,11 +14363,11 @@ exports[`TextInput demo examples variants 1`] = `
         "fontWeight_semiBold": 600,
         "lineHeight": 1.25,
         "lineHeight_prose": 1.5,
-        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.4)",
-        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.4)",
-        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.4)",
-        "shadow_5": "0 24px 24px -8px rgba(0,0,0,0.4), 0 8px 16px 0 rgba(0,0,0,0.4)",
+        "shadow_1": "0 1px 2px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.2)",
+        "shadow_2": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
+        "shadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
+        "shadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
+        "shadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
         "size_jumbo": "3.25em",
         "size_large": "2.5em",
         "size_medium": "2em",

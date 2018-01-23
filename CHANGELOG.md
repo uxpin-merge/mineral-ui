@@ -1,3 +1,62 @@
+<a name="0.17.0"></a>
+# [0.17.0](https://github.com/mineral-ui/mineral-ui/compare/v0.16.0...v0.17.0) (2018-01-17)
+
+
+### Features
+
+* **avatar:** New component ([dcfb069](https://github.com/mineral-ui/mineral-ui/commit/dcfb069))
+* **card:** Add CardStatus and associated Icons ([3b84fdd](https://github.com/mineral-ui/mineral-ui/commit/3b84fdd))
+* **card:** Update CardTitle `avatar` prop to accept Avatar ([2f575e0](https://github.com/mineral-ui/mineral-ui/commit/2f575e0))
+* **colors:** Add getColor & getReadableTextColor utilities ([f35beb6](https://github.com/mineral-ui/mineral-ui/commit/f35beb6))
+
+
+### BREAKING CHANGES
+
+* **card:** `avatar` prop only accepts Avatar component rather than a raw `img`
+
+
+
+<a name="0.16.0"></a>
+# [0.16.0](https://github.com/mineral-ui/mineral-ui/compare/v0.15.0...v0.16.0) (2018-01-12)
+
+
+### Features
+
+* **form:** Update FormField to support grouped inputs ([d148473](https://github.com/mineral-ui/mineral-ui/commit/d148473))
+* **radio,radiogroup:** New components ([67d7f83](https://github.com/mineral-ui/mineral-ui/commit/67d7f83))
+
+
+
+<a name="0.15.0"></a>
+# [0.15.0](https://github.com/mineral-ui/mineral-ui/compare/v0.14.0...v0.15.0) (2017-12-20)
+
+
+### Features
+
+* **card:** Update design; add functionality ([1891906](https://github.com/mineral-ui/mineral-ui/commit/1891906))
+* **themes:** Add/update theme variables ([50344b8](https://github.com/mineral-ui/mineral-ui/commit/50344b8))
+
+
+### BREAKING CHANGES
+
+* **card:** Card - Change `CardRow_margin` & `CardRow_padding`
+theme variables to `CardRow_marginVertical` &
+`CardRow_paddingHorizontal`, respectively. CardTitle - Remove `minor`
+prop and all associated theme variables; remove `meta` prop; remove
+`CardTitle_marginTop` theme variable.
+
+
+
+<a name="0.14.0"></a>
+# [0.14.0](https://github.com/mineral-ui/mineral-ui/compare/v0.13.0...v0.14.0) (2017-12-15)
+
+
+### Features
+
+* **text-area:** New component ([d2bb771](https://github.com/mineral-ui/mineral-ui/commit/d2bb771))
+
+
+
 <a name="0.13.0"></a>
 # [0.13.0](https://github.com/mineral-ui/mineral-ui/compare/v0.12.0...v0.13.0) (2017-12-12)
 

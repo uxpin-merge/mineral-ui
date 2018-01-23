@@ -19,17 +19,21 @@ Statuses:
 
 | Component                                   | Status           |
 |---------------------------------------------|------------------|
+| [Avatar](/components/avatar)                | [available]      |
 | [Button](/components/button)                | [available]      |
 | [Card](/components/card)                    | [available]      |
 | [Dropdown](/components/dropdown)            | [available]      |
-| [Form](/components/form-field) ~ new        | [available]      |
+| [Form](/components/form-field)              | [available]      |
 | [Icon](/components/icon)                    | [available]      |
 | [Link](/components/link)                    | [available]      |
 | [Menu](/components/menu)                    | [available]      |
 | [Popover](/components/popover)              | [available]      |
-| [TextInput](/components/text-input) ~ new   | [available]      |
+| [Radio](/components/radio) ~ new            | [available]      |
+| [TextArea](/components/text-area)           | [available]      |
+| [TextInput](/components/text-input)         | [available]      |
 | [ThemeProvider](/components/theme-provider) | [available]      |
-| TextArea                                    | [in development] |
+| Checkbox                                    | [in development] |
+| Toggle                                      | [planned]        |
 | Select                                      | [planned]        |
 | Tooltip                                     | [planned]        |
 | DataTable                                   |                  |

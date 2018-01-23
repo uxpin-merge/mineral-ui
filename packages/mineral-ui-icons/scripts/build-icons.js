@@ -28,7 +28,17 @@ const REGEX_MATERIAL_ICONS_SVG_NAME = /ic_(.*?)_24px.svg/;
 const REGEX_MINERAL_ICONS_SVG_NAME = /(.*?).svg/;
 
 // Icons used interally by mineral-ui components
-const internalMineralIcons = ['IconDanger', 'IconSuccess', 'IconWarning'];
+const internalMineralIcons = [
+  'IconDanger',
+  'IconDangerSimple',
+  'IconExpandLess',
+  'IconExpandMore',
+  'IconMoreHoriz',
+  'IconSuccess',
+  'IconSuccessSimple',
+  'IconWarning',
+  'IconWarningSimple'
+];
 
 // A subset of icons should be mirrored for RTL languages
 // http://google.github.io/material-design-icons/#icons-in-rtl

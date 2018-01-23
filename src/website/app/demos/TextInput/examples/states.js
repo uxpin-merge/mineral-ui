@@ -74,7 +74,7 @@ export default {
   title: 'States',
   hideFromProd: true,
   hideSource: true,
-  scope: { DemoLayout, FieldSet, TextInput },
+  scope: { DemoLayout, FieldSet },
   source: `
     <DemoLayout>
       <FieldSet legend="Regular" />

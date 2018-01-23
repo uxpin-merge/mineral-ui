@@ -16,27 +16,33 @@
 
 /* @flow */
 import { mineralTheme } from '../../../../../../themes';
-import Card, { CardBlock, CardImage, CardTitle } from '../../../../../../Card';
+import Card, { CardBlock, CardTitle } from '../../../../../../Card';
 import DemoLayout from '../../components/DemoLayout';
+import loremIpsum from '../../components/loremIpsum';
 
 export default {
-  id: 'minor-title',
-  title: 'Minor Title',
+  id: 'variants',
+  title: 'Variants',
   // $FlowFixMe
   backgroundColor: mineralTheme.color_gray_10,
-  description:
-    'The Card title can be rendered in a minor style. Use this style whenever placing a CardTitle immediately after a CardImage.',
-  scope: { Card, CardBlock, CardImage, CardTitle, DemoLayout },
+  description: `CardTitle is available in a few variants. Be sure to use the
+[appropriate variant](/color#guidelines-variants) for your intent.`,
+  scope: { Card, CardBlock, CardTitle, loremIpsum, DemoLayout },
   source: `
     <DemoLayout>
       <Card>
-        <CardImage src="/images/500x200.png" alt="gradient image" />
-        <CardTitle minor>Minor Card Title</CardTitle>
-        <CardBlock>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis
-          pretium massa. Aliquam erat volutpat. Nulla facilisi. Donec vulputate
-          interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-        </CardBlock>
+        <CardTitle variant="danger">Danger Card Title</CardTitle>
+        <CardBlock>{loremIpsum}</CardBlock>
+      </Card>
+
+      <Card>
+        <CardTitle variant="success">Success Card Title</CardTitle>
+        <CardBlock>{loremIpsum}</CardBlock>
+      </Card>
+
+      <Card>
+        <CardTitle variant="warning" subtitle="Card Subtitle">Warning Card Title</CardTitle>
+        <CardBlock>{loremIpsum}</CardBlock>
       </Card>
     </DemoLayout>`
 };

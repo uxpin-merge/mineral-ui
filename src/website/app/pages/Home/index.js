@@ -69,9 +69,9 @@ const pageMeta = {
 };
 
 const latestPost = {
-  title: 'Change is the Real Value of a Design System',
+  title: 'Deleting 2000 Lines of JavaScript with SVG',
   url:
-    'https://medium.com/@MichaelWaite/change-is-the-real-value-of-a-design-system-3affc03c738d'
+    'https://medium.com/@coldpour/deleting-2000-lines-of-javascript-with-svg-424b89c6e466'
 };
 
 const playgroundThemes = [
@@ -344,13 +344,6 @@ const styles = {
     }
   }),
   getStartedBackgrounds: ({ theme }) => ({
-    '& > :nth-child(1)': {
-      '& > svg': {
-        mixBlendMode: 'luminosity',
-        transform: 'translateX(50%) rotate(180deg) scale(2)'
-      }
-    },
-
     '& > :nth-child(2)': {
       background: `linear-gradient(
         rgba(0,0,0,0.4),
@@ -542,11 +535,7 @@ const styles = {
       ${playgroundThemes[index].color_theme_40},
       ${desaturate(0.5, playgroundThemes[index].color_theme_10)}
     )`,
-    transform: 'scaleX(-1)',
-
-    '& > svg': {
-      transform: 'scale(2)'
-    }
+    transform: 'scaleX(-1)'
   }),
   playgroundSection: ({ index, theme }) => ({
     position: 'relative',
