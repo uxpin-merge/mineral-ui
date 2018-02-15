@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "items": [
+        {
+          "text": "Menu item 1",
+          "secondaryText": "Secondary text"
+        },
+        {
+          "text": "Menu item 2",
+          "secondaryText": "Secondary text"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "text": "Menu item 1",
+          "secondaryText": "Secondary text"
+        },
+        {
+          "text": "Menu item 2",
+          "secondaryText": "Secondary text"
+        }
+      ]
+    }
+  ]
+}
