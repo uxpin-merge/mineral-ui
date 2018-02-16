@@ -1,3 +1,8 @@
 {
-  "children": "Pink Floyd were an English rock band formed in London in 1965. They achieved international acclaim with their progressive and psychedelic music. Distinguished by their use of philosophical lyrics, sonic experimentation, extended compositions, and elaborate live shows, they are one of the most commercially successful and influential groups in popular music history."
+  "rootId": "538BDA4C348A7E7B56609B200C70672A",
+  "elements": {
+    "538BDA4C348A7E7B56609B200C70672A": {
+      "children": "Pink Floyd were an English rock band formed in London in 1965. They achieved international acclaim with their progressive and psychedelic music. Distinguished by their use of philosophical lyrics, sonic experimentation, extended compositions, and elaborate live shows, they are one of the most commercially successful and influential groups in popular music history."
+    }
+  }
 }

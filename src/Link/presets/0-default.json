@@ -1,4 +1,9 @@
 {
-  "children": "Click me",
-  "href": "https://www.google.com/"
+  "rootId": "54FAB3F540C5DA7385E05BC8C0683997",
+  "elements": {
+    "54FAB3F540C5DA7385E05BC8C0683997": {
+      "children": "Click me",
+      "href": "https://www.google.com/"
+    }
+  }
 }
