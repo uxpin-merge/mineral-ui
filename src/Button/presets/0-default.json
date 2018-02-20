@@ -2,9 +2,12 @@
   "rootId": "1526ABF05067F99EF65F83152E26DA39",
   "elements": {
     "1526ABF05067F99EF65F83152E26DA39": {
-      "children": "Default",
-      "fullWidth": true,
-      "primary": true
+      "type": "Button",
+      "props": {
+        "children": "Default",
+        "fullWidth": true,
+        "primary": true
+      }
     }
   }
 }

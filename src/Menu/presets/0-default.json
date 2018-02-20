@@ -2,32 +2,35 @@
   "rootId": "F85995B051CF1B9DAE5B74E20509B335",
   "elements": {
     "F85995B051CF1B9DAE5B74E20509B335": {
-      "data": [
-        {
-          "items": [
-            {
-              "text": "Menu item 1",
-              "secondaryText": "Secondary text"
-            },
-            {
-              "text": "Menu item 2",
-              "secondaryText": "Secondary text"
-            }
-          ]
-        },
-        {
-          "items": [
-            {
-              "text": "Menu item 1",
-              "secondaryText": "Secondary text"
-            },
-            {
-              "text": "Menu item 2",
-              "secondaryText": "Secondary text"
-            }
-          ]
-        }
-      ]
+      "type": "Button",
+      "props": {
+        "data": [
+          {
+            "items": [
+              {
+                "text": "Menu item 1",
+                "secondaryText": "Secondary text"
+              },
+              {
+                "text": "Menu item 2",
+                "secondaryText": "Secondary text"
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "text": "Menu item 1",
+                "secondaryText": "Secondary text"
+              },
+              {
+                "text": "Menu item 2",
+                "secondaryText": "Secondary text"
+              }
+            ]
+          }
+        ]
+      }
     }
   }
 }
