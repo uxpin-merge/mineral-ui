@@ -2,7 +2,7 @@
   "rootId": "AF11C384BDFF8ABB8AC5ED99554F61B9",
   "elements": {
     "AF11C384BDFF8ABB8AC5ED99554F61B9": {
-      "type": "Button",
+      "type": "TextInput",
       "props": {
         "defaultValue": "Hello World"
       }
