@@ -14,7 +14,7 @@ This function is used to create a new styled component based on another componen
 import { createStyledComponent } from 'mineral-ui/styles';
 import Button from 'mineral-ui/Button';
 
-const myButton = createStyledComponent(Button, {
+const MyButton = createStyledComponent(Button, {
   outline: '3px dashed tomato'
 });
 ```
@@ -83,7 +83,7 @@ _With a style function.  Use a style function when you need access to the theme 
 ```jsx
 const StyledSample = createStyledComponent(Sample, ({ theme }) => ({
   outline: '3px dashed tomato',
-  fontSize: theme.fontSize_h1
+  fontSize: theme.h1_fontSize
 }));
 ```
 

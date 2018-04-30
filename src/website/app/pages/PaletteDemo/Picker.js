@@ -1,34 +1,17 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React, { Component } from 'react';
-import { readableColor } from 'polished';
 import { Transition } from 'react-transition-group';
 import { canUseDOM } from 'exenv';
-import { createStyledComponent } from '../../../../styles';
-import color from '../../../../colors';
+import { createStyledComponent } from '../../../../library/styles';
+import color from '../../../../library/colors';
 import IconKeyboardArrowDown from 'mineral-ui-icons/IconKeyboardArrowDown';
 import Heading from '../../SiteHeading';
 import Paragraph from '../../Paragraph';
 
 type Props = {
   activeColor: Colors,
-  availableThemes: { [Colors]: string },
-  changeTheme: Colors => void
+  availableThemes: Array<Colors>,
+  changeTheme: (Colors) => void
 };
 
 type State = {
@@ -39,9 +22,8 @@ type State = {
 type FlipProps = {
   activeColor: Colors,
   colorName: Colors,
-  handleColorChange: Colors => void,
-  in: boolean,
-  readable: string
+  handleColorChange: (Colors) => void,
+  in: boolean
 };
 
 type GrowProps = {
@@ -53,7 +35,7 @@ type Colors =
   | 'blue'
   | 'dusk'
   | 'indigo'
-  | 'lime'
+  | 'magenta'
   | 'purple'
   | 'sky'
   | 'slate'
@@ -105,11 +87,11 @@ const styles = {
     }
   },
 
-  option: ({ theme, active, readableColor, name }) => {
+  option: ({ theme, active, name }) => {
     const css = {
       backgroundColor: color[`${name}_60`],
       borderRadius: theme.borderRadius_1,
-      color: readableColor,
+      color: theme.color_primary,
       cursor: 'pointer',
       display: 'inline-block',
       marginTop: 0,
@@ -156,16 +138,16 @@ const styles = {
   swatch: ({ theme, activeColor, isOpen }) => {
     const hue = color[`${activeColor}_60`];
     return {
-      color: readableColor(hue),
+      color: theme.color_primary,
       backgroundColor: hue,
       borderRadius: theme.borderRadius_1,
       cursor: 'pointer',
       display: isOpen ? 'none' : 'block',
-      fontSize: theme.fontSize_h3,
+      fontSize: theme.h3_fontSize,
       padding: theme.space_inset_md,
       textTransform: 'capitalize',
       [theme.bp_mobile]: {
-        fontSize: theme.fontSize_h5
+        fontSize: theme.h5_fontSize
       }
     };
   },
@@ -194,7 +176,7 @@ const Grow = ({ in: inProp, children }: GrowProps) => (
   <Transition
     in={inProp}
     timeout={{ enter: duration - 50, exit: duration / 2 }}>
-    {state => (
+    {(state) => (
       <div
         style={{
           ...styles.grow,
@@ -211,18 +193,16 @@ const Flip = ({
   activeColor,
   colorName,
   handleColorChange,
-  readable,
   in: inProp
 }: FlipProps) => (
   <Transition in={inProp} timeout={duration}>
-    {state => {
+    {(state) => {
       return (
         <Option
           style={{ ...styles.flip, ...styles.flip[state] }}
           variant="mouse"
           active={activeColor === colorName}
           name={colorName}
-          readableColor={readable}
           onClick={() => handleColorChange(colorName)}>
           {colorName}
           <br />
@@ -260,18 +240,14 @@ export default class Picker extends Component<Props, State> {
             {activeColor}
           </Swatch>
           <OptionList isOpen={isOpen}>
-            {Object.keys(availableThemes).map((colorName, index) => {
-              const readable = readableColor(color[`${colorName}_60`]);
-
+            {availableThemes.map((colorName, index) => {
               return (
                 <Flip
                   activeColor={activeColor}
-                  /* $FlowFixMe colorName is a string, but should be Colors */
                   colorName={colorName}
                   handleColorChange={this.handleColorChange}
                   in={index < visibleThemeCount}
                   key={`flip_${index}`}
-                  readable={readable}
                 />
               );
             })}
@@ -287,7 +263,7 @@ export default class Picker extends Component<Props, State> {
 
   open = () => {
     const { availableThemes } = this.props;
-    const availableThemesCount = Object.keys(availableThemes).length;
+    const availableThemesCount = availableThemes.length;
 
     // Reset visibleThemeCount array so we can animate them in.
     this.setState({ isOpen: true, visibleThemeCount: 0 });

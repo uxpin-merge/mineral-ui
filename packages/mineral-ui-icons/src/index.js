@@ -1,19 +1,3 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 /* eslint-disable prettier/prettier */
 export { default as Icon3DRotation } from './Icon3DRotation';
@@ -68,6 +52,8 @@ export { default as IconArrowDownward } from './IconArrowDownward';
 export { default as IconArrowDropDown } from './IconArrowDropDown';
 export { default as IconArrowDropDownCircle } from './IconArrowDropDownCircle';
 export { default as IconArrowDropUp } from './IconArrowDropUp';
+export { default as IconArrowDropdownDown } from './IconArrowDropdownDown';
+export { default as IconArrowDropdownUp } from './IconArrowDropdownUp';
 export { default as IconArrowForward } from './IconArrowForward';
 export { default as IconArrowUpward } from './IconArrowUpward';
 export { default as IconArtTrack } from './IconArtTrack';
@@ -185,6 +171,8 @@ export { default as IconChatBubble } from './IconChatBubble';
 export { default as IconChatBubbleOutline } from './IconChatBubbleOutline';
 export { default as IconCheck } from './IconCheck';
 export { default as IconCheckBox } from './IconCheckBox';
+export { default as IconCheckBoxCheck } from './IconCheckBoxCheck';
+export { default as IconCheckBoxIndeterminate } from './IconCheckBoxIndeterminate';
 export { default as IconCheckBoxOutlineBlank } from './IconCheckBoxOutlineBlank';
 export { default as IconCheckCircle } from './IconCheckCircle';
 export { default as IconChevronLeft } from './IconChevronLeft';
@@ -239,6 +227,7 @@ export { default as IconCropPortrait } from './IconCropPortrait';
 export { default as IconCropRotate } from './IconCropRotate';
 export { default as IconCropSquare } from './IconCropSquare';
 export { default as IconDanger } from './IconDanger';
+export { default as IconDangerSimple } from './IconDangerSimple';
 export { default as IconDashboard } from './IconDashboard';
 export { default as IconDataUsage } from './IconDataUsage';
 export { default as IconDateRange } from './IconDateRange';
@@ -698,6 +687,7 @@ export { default as IconQueue } from './IconQueue';
 export { default as IconQueueMusic } from './IconQueueMusic';
 export { default as IconQueuePlayNext } from './IconQueuePlayNext';
 export { default as IconRadio } from './IconRadio';
+export { default as IconRadioButtonCheck } from './IconRadioButtonCheck';
 export { default as IconRadioButtonChecked } from './IconRadioButtonChecked';
 export { default as IconRadioButtonUnchecked } from './IconRadioButtonUnchecked';
 export { default as IconRateReview } from './IconRateReview';
@@ -855,6 +845,7 @@ export { default as IconSubscriptions } from './IconSubscriptions';
 export { default as IconSubtitles } from './IconSubtitles';
 export { default as IconSubway } from './IconSubway';
 export { default as IconSuccess } from './IconSuccess';
+export { default as IconSuccessSimple } from './IconSuccessSimple';
 export { default as IconSupervisorAccount } from './IconSupervisorAccount';
 export { default as IconSurroundSound } from './IconSurroundSound';
 export { default as IconSwapCalls } from './IconSwapCalls';
@@ -955,6 +946,7 @@ export { default as IconVpnKey } from './IconVpnKey';
 export { default as IconVpnLock } from './IconVpnLock';
 export { default as IconWallpaper } from './IconWallpaper';
 export { default as IconWarning } from './IconWarning';
+export { default as IconWarningSimple } from './IconWarningSimple';
 export { default as IconWatch } from './IconWatch';
 export { default as IconWatchLater } from './IconWatchLater';
 export { default as IconWbAuto } from './IconWbAuto';

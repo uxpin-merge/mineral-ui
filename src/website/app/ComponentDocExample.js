@@ -1,26 +1,10 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React from 'react';
 import {
   createStyledComponent,
   getNormalizedValue,
   pxToEm
-} from '../../styles';
+} from '../../library/styles';
 import IconArrowBack from 'mineral-ui-icons/IconArrowBack';
 import Callout from './Callout';
 import Heading from './SiteHeading';
@@ -33,9 +17,11 @@ type Props = {
   chromeless?: boolean,
   componentName?: string,
   description?: React$Node,
+  hideFromProd?: boolean,
   hideSource?: boolean,
   id: string,
   scope?: Object,
+  slug: string,
   source?: string,
   standalone?: boolean,
   title?: React$Node
@@ -65,7 +51,9 @@ const styles = {
     // Specificity hack
     // Sometimes Page's intro styling needs undone
     '& > p[class][class]': {
+      color: 'inherit',
       fontSize: theme.fontSize_prose,
+      fontWeight: 'inherit',
       maxWidth: theme.maxTextWidth
     }
   }),
@@ -115,15 +103,21 @@ export default function ComponentDocExample({
   chromeless,
   componentName,
   description,
+  hideFromProd,
   hideSource,
   id,
   scope,
+  slug,
   source,
   standalone,
-  title,
+  title: propsTitle,
   ...restProps
 }: Props) {
   const rootProps = { ...restProps };
+  const descriptionProps = {
+    scope: { Callout },
+    standalone
+  };
   const liveProviderProps = {
     backgroundColor,
     hideSource: chromeless || hideSource,
@@ -139,19 +133,28 @@ export default function ComponentDocExample({
       />
     ) : null;
 
+  const title =
+    hideFromProd && typeof propsTitle === 'string'
+      ? `${propsTitle} [Dev-only]`
+      : propsTitle;
+
   return standalone && chromeless ? (
     liveCode
   ) : (
     <Root {...rootProps}>
       {standalone && (
-        <BackLink to="../">
+        <BackLink to={`/components/${slug}`}>
           <IconArrowBack color="currentColor" size="small" /> {componentName}
         </BackLink>
       )}
       <Title id={!standalone ? id : undefined}>
-        {!standalone ? <Link to={id}>{title}</Link> : title}
+        {!standalone ? (
+          <Link to={`/components/${slug}/${id}`}>{title}</Link>
+        ) : (
+          title
+        )}
       </Title>
-      <Description scope={{ Callout }}>{description || ''}</Description>
+      <Description {...descriptionProps}>{description || ''}</Description>
       {liveCode}
     </Root>
   );

@@ -1,19 +1,3 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React, { createElement } from 'react';
 import marksy from 'marksy/components';
@@ -23,9 +7,9 @@ import {
   createStyledComponent,
   getNormalizedValue,
   pxToEm
-} from '../../styles';
+} from '../../library/styles';
+import Text from '../../library/Text';
 import Heading from './SiteHeading';
-import Paragraph from './Paragraph';
 import Link from './SiteLink';
 import MarkdownTable from './MarkdownTable';
 import getCodeBlockStyles from './utils/getCodeBlockStyles';
@@ -40,7 +24,8 @@ type Props = {
   className?: string,
   scope?: {
     [string]: React$ComponentType<*>
-  }
+  },
+  standalone?: boolean
 };
 
 type mdCodeProps = {
@@ -194,19 +179,19 @@ const styles = {
     // container
     '& h2,& h3,& h4,& h5,& h6': {
       '& > a:link': {
-        color: theme.color_caption,
+        color: theme.color_mouse,
         fontWeight: 'inherit'
       },
       '& > a:hover': {
-        color: theme.SiteLink_color_hover || theme.color_text_primary_hover
+        color: theme.SiteLink_color_hover || theme.color_theme_hover
       },
       '& > a:focus': {
-        color: theme.SiteLink_color_focus || theme.color_text_primary_focus
+        color: theme.SiteLink_color_focus || theme.color_theme_focus
       },
       // `:active` must be last, to follow LVHFA order:
       // https://developer.mozilla.org/en-US/docs/Web/CSS/:active
       '& > a:active': {
-        color: theme.SiteLink_color_active || theme.color_text_primary_active
+        color: theme.SiteLink_color_active || theme.color_theme_active
       },
 
       '& code': {
@@ -222,8 +207,8 @@ const styles = {
     },
 
     '& :not(pre) > code': {
-      backgroundColor: rgba(theme.color_text_primary, 0.15),
-      color: darken(0.1, theme.color_text_primary),
+      backgroundColor: rgba(theme.color_theme, 0.15),
+      color: darken(0.1, theme.color_theme),
       direction: 'ltr',
       fontFamily: theme.fontFamily_monospace,
       fontSize: '0.8em',
@@ -267,7 +252,7 @@ type ListItemProps = {
 };
 
 function ListItem({ children }: ListItemProps) {
-  const newChildren = children.map(child => {
+  const newChildren = children.map((child) => {
     if (child && child.split) {
       const [preLabelText, labelText] = child.split(REGEX_LABEL_DELIMITER);
 
@@ -322,6 +307,7 @@ export default function Markdown({
   children,
   className,
   scope,
+  standalone,
   ...restProps
 }: Props) {
   const rootProps = {
@@ -333,7 +319,16 @@ export default function Markdown({
     createElement,
     elements: {
       a({ href, children }: mdLinkProps) {
-        const linkProps = isNormalLink(href) ? { href } : { to: href };
+        let linkProps = { to: href };
+        if (isNormalLink(href)) {
+          if (standalone && href.startsWith('#')) {
+            // When viewing a standalone example, convert any same-page anchor
+            // links to routed ones
+            linkProps = { to: href.replace('#', '') };
+          } else {
+            linkProps = { href };
+          }
+        }
         return <Link {...linkProps}>{children}</Link>;
       },
       code({ language = 'jsx', code, children }: mdCodeProps) {
@@ -371,7 +366,7 @@ export default function Markdown({
         return replaceHeading(6, children, { id }, anchors);
       },
       p({ children }) {
-        return <Paragraph variant="prose">{children}</Paragraph>;
+        return <Text appearance="prose">{children}</Text>;
       },
       table(props) {
         return <MarkdownTable {...props} />;

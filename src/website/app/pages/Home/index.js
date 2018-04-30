@@ -1,19 +1,3 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React, { Component } from 'react';
 import Media from 'react-media';
@@ -22,19 +6,18 @@ import { canUseDOM } from 'exenv';
 import darken from 'polished/lib/color/darken';
 import desaturate from 'polished/lib/color/desaturate';
 import rgba from 'polished/lib/color/rgba';
-import colors from '../../../../colors';
+import colors from '../../../../library/colors';
 import {
   createStyledComponent,
   getNormalizedValue,
   pxToEm
-} from '../../../../styles';
+} from '../../../../library/styles';
 import {
   createTheme,
   createThemedComponent,
-  mineralTheme,
   ThemeProvider
-} from '../../../../themes';
-import _Button from '../../../../Button';
+} from '../../../../library/themes';
+import _Button from '../../../../library/Button';
 import IconChevronRight from 'mineral-ui-icons/IconChevronRight';
 import IconFavorite from 'mineral-ui-icons/IconFavorite';
 import Canvas from '../../Canvas';
@@ -69,9 +52,8 @@ const pageMeta = {
 };
 
 const latestPost = {
-  title: 'Change is the Real Value of a Design System',
-  url:
-    'https://medium.com/@MichaelWaite/change-is-the-real-value-of-a-design-system-3affc03c738d'
+  title: 'Designing Systematic Colors',
+  url: 'https://uxplanet.org/designing-systematic-colors-b5d2605b15c'
 };
 
 const playgroundThemes = [
@@ -81,7 +63,7 @@ const playgroundThemes = [
 ];
 
 const homeTheme = {
-  color_text_primary: siteColors.orangePunch,
+  color_theme: siteColors.orangePunch,
 
   SiteButton_backgroundColor_primary: siteColors.orangePunch,
   SiteButton_backgroundColor_primary_active: siteColors.orangePunch_active,
@@ -97,9 +79,9 @@ const homeTheme = {
   SiteLink_color_hover: siteColors.orangePunch_hover
 };
 export const heroTheme = {
-  color_text: colors.white,
+  color: colors.white,
 
-  SiteButton_color_text: darken(0.04, siteColors.slateDarker),
+  SiteButton_color: darken(0.04, siteColors.slateDarker),
 
   SiteHeading_color_2: colors.white,
 
@@ -110,16 +92,16 @@ export const heroTheme = {
   SiteLink_color_hover: colors.white
 };
 const gettingStartedTheme = {
-  color_text: colors.white,
-  color_text_primary: siteColors.yellow,
+  color: colors.white,
+  color_theme: siteColors.yellow,
 
   SiteButton_backgroundColor_primary: siteColors.yellow,
   SiteButton_backgroundColor_primary_active: siteColors.yellow_active,
   SiteButton_backgroundColor_primary_focus: siteColors.yellow_focus,
   SiteButton_backgroundColor_primary_hover: siteColors.yellow_hover,
 
-  SiteButton_color_text: colors.gray_100,
-  SiteButton_color_text_primary: colors.gray_100,
+  SiteButton_color: colors.gray_100,
+  SiteButton_color_primary: colors.gray_100,
 
   SiteHeading_color_3: colors.white,
   SiteHeading_color_4: colors.white,
@@ -130,12 +112,12 @@ const gettingStartedTheme = {
   SiteLink_color_focus: siteColors.yellow_focus,
   SiteLink_color_hover: siteColors.yellow_hover
 };
-const buttonTheme = {
-  Button_fontWeight: mineralTheme.fontWeight_regular,
+const buttonTheme = ({ theme: baseTheme }) => ({
+  Button_fontWeight: baseTheme.fontWeight_medium,
   Button_height_jumbo: pxToEm(36),
   Button_paddingHorizontal: pxToEm(12), // For a total of 24
   ButtonContent_fontSize: pxToEm(18)
-};
+});
 const CTALinkTheme = {
   Link_borderColor_focus: siteColors.orangePunch_focus,
   Link_color: siteColors.orangePunch,
@@ -163,7 +145,7 @@ const styles = {
     },
 
     '&::before': {
-      backgroundColor: theme.color_text_primary,
+      backgroundColor: theme.color_theme,
       borderRadius: theme.borderRadius_1,
       content: 'New',
       fontSize: '0.8em',
@@ -300,7 +282,7 @@ const styles = {
       },
 
       '&::before': {
-        backgroundColor: theme.color_text_primary,
+        backgroundColor: theme.color_theme,
         borderRadius: '0.75em',
         content: 'counter(getStarted)',
         color: theme.color_gray_100,
@@ -334,7 +316,7 @@ const styles = {
 
     '& :not(pre) > code': {
       backgroundColor: 'rgba(0, 0, 0, 0.15)',
-      color: theme.color_text
+      color: theme.color
     },
 
     // Specificity hack
@@ -344,13 +326,6 @@ const styles = {
     }
   }),
   getStartedBackgrounds: ({ theme }) => ({
-    '& > :nth-child(1)': {
-      '& > svg': {
-        mixBlendMode: 'luminosity',
-        transform: 'translateX(50%) rotate(180deg) scale(2)'
-      }
-    },
-
     '& > :nth-child(2)': {
       background: `linear-gradient(
         rgba(0,0,0,0.4),
@@ -459,7 +434,7 @@ const styles = {
   }),
   home: ({ theme }) => ({
     '& ::selection': {
-      backgroundColor: rgba(theme.color_text_primary, 0.2)
+      backgroundColor: rgba(theme.color_theme, 0.2)
     }
   }),
   intro: ({ theme }) => ({
@@ -542,11 +517,7 @@ const styles = {
       ${playgroundThemes[index].color_theme_40},
       ${desaturate(0.5, playgroundThemes[index].color_theme_10)}
     )`,
-    transform: 'scaleX(-1)',
-
-    '& > svg': {
-      transform: 'scale(2)'
-    }
+    transform: 'scaleX(-1)'
   }),
   playgroundSection: ({ index, theme }) => ({
     position: 'relative',
@@ -589,7 +560,6 @@ const Root = createStyledComponent('div', styles.home, {
 const Markdown = createStyledComponent(_Markdown, styles.markdown).withProps({
   anchors: false
 });
-// SiteButton must come before LinkButton
 const SiteButton = createThemedComponent(_SiteButton, buttonTheme);
 const BlogLink = createStyledComponent(Link, styles.blogLink);
 const Button = createThemedComponent(_Button, buttonTheme);
@@ -670,7 +640,7 @@ export default class Home extends Component<Props, State> {
     return (
       <ThemeProvider theme={homeTheme}>
         <Media query="(min-width: 39em)">
-          {navExpanded => (
+          {(navExpanded) => (
             <Root>
               <Helmet>
                 <link rel="canonical" href={pageMeta.canonicalLink} />
@@ -680,7 +650,7 @@ export default class Home extends Component<Props, State> {
 
               <ThemeProvider theme={heroTheme}>
                 <Media query="(min-width: 48em)">
-                  {moreSpacious => {
+                  {(moreSpacious) => {
                     /*
                      * [1] These values are dependent on the width of the first
                      *     Hero Button
@@ -744,12 +714,12 @@ export default class Home extends Component<Props, State> {
                 <PlaygroundCanvas index={themeIndex} />
                 <ThemePlayground
                   index={themeIndex}
-                  setIndex={index => {
+                  setIndex={(index) => {
                     this.setThemeIndex(index, true);
                   }}
                   themes={playgroundThemes}>
                   <Media query="(min-width: 23em)">
-                    {navExpanded => {
+                    {(navExpanded) => {
                       const PlaygroundButton = createStyledComponent(Button, {
                         ...styles.button,
                         fontFamily: 'inherit'

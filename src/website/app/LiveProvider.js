@@ -1,19 +1,3 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React from 'react';
 import dedent from 'dedent';
@@ -24,8 +8,8 @@ import {
   LiveError,
   LivePreview
 } from 'react-live';
-import { createStyledComponent } from '../../styles';
-import { ThemeProvider } from '../../themes';
+import { createStyledComponent } from '../../library/styles';
+import { ThemeProvider } from '../../library/themes';
 import getCodeBlockStyles from './utils/getCodeBlockStyles';
 import siteColors from './siteColors';
 
@@ -42,21 +26,26 @@ const styles = {
     return chromeless
       ? { padding: '1rem' }
       : {
-          backgroundColor,
+          backgroundColor: backgroundColor || theme.color_white,
           border: `1px solid ${rgba(siteColors.slate, 0.3)}`,
-          padding: theme.space_inset_md
+          fontFamily: 'comic sans ms',
+          padding: theme.space_inset_md,
+
+          '& ::selection': {
+            backgroundColor: 'highlight'
+          }
         };
   },
   liveEditor: ({ theme }) => ({
     ...getCodeBlockStyles(theme),
 
     '&:focus': {
-      outline: `6px solid ${rgba(theme.color_text_primary, 0.3)}`
+      outline: `6px solid ${rgba(theme.color_theme, 0.3)}`
     }
   }),
   liveError: ({ theme }) => ({
     backgroundColor: '#fce3e3', // color.red_10
-    color: theme.color_text_danger,
+    color: theme.color_danger,
     fontFamily: theme.fontFamily_monospace,
     fontSize: theme.fontSize_mouse,
     lineHeight: theme.lineHeight_prose,

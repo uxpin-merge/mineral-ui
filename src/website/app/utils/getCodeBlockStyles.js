@@ -1,22 +1,6 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
-import colors from '../../../colors';
-import getNormalizedValue from '../../../styles/getNormalizedValue';
+import colors from '../../../library/colors';
+import getNormalizedValue from '../../../library/styles/getNormalizedValue';
 
 /**
  * Many of these styles, especially colors, are modified from atom-dark theme for `prism.js`:
@@ -75,11 +59,11 @@ export default function getCodeBlockStyles(theme: { [string]: any }) {
     },
 
     '& .token.property, & .token.keyword, & .token.tag': {
-      color: colors.yellow_40 // deviation, originally "function"
+      color: '#f7c868' // deviation, originally "function"
     },
 
     '& .token.className': {
-      color: colors.yellow_20,
+      color: '#fce4b6',
       textDecoration: 'underline'
     },
 
@@ -108,7 +92,7 @@ export default function getCodeBlockStyles(theme: { [string]: any }) {
     },
 
     '& .token.entity': {
-      color: colors.yellow_20,
+      color: '#fce4b6',
       cursor: 'help'
       // text-decoration: 'underline'
     },
@@ -122,7 +106,7 @@ export default function getCodeBlockStyles(theme: { [string]: any }) {
     },
 
     '& .token.atrule, & .token.attrValue': {
-      color: colors.yellow_30
+      color: '#fad48e'
     },
 
     '& .token.function': {
@@ -130,11 +114,11 @@ export default function getCodeBlockStyles(theme: { [string]: any }) {
     },
 
     '& .token.regex': {
-      color: colors.yellow_50
+      color: '#f0b241'
     },
 
     '& .token.important': {
-      color: colors.orange_70
+      color: '#cf4615'
     },
 
     '& .token.important, & .token.bold': {

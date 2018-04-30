@@ -1,19 +1,3 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React from 'react';
 import Markdown from '../../Markdown';
@@ -31,7 +15,7 @@ type Theme = (theme: Object) => Object;
 
 const createKeyMirror = (obj: Object) => {
   let mirror = {};
-  Object.keys(obj).forEach(key => {
+  Object.keys(obj).forEach((key) => {
     mirror[key] = `${key}`;
   });
   return mirror;
@@ -83,14 +67,14 @@ export default function DocThemeVariables({
       <Markdown>
         {`These variables can be used as hooks to override this component's
           style at either a
-          [local](/theming/#common-scenarios-theme-your-entire-app-theme-a-component)
-          or [global](/theming/#theming-common-scenarios-theme-your-entire-app)
+          [local](/theming#common-scenarios-theme-your-entire-app-theme-a-component)
+          or [global](/theming#common-scenarios-theme-your-entire-app)
           level. The \`theme\` referenced below is whatever theme is available
           from props to the instance of this component.`}
       </Markdown>
       <VariableTable
         baseTheme={baseTheme}
-        theme={theme}
+        themeToDisplay={theme}
         value={getValue}
         valueColor={getColor}
       />

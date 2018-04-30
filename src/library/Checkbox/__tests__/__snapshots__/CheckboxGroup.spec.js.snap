@@ -1,0 +1,4652 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxGroup demo examples controlled 1`] = `
+.css-0 > *:not(:last-child),
+[data-css-0] > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.css-1,
+[data-css-1] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-1 *,
+[data-css-1] *,
+.css-1 *::before,
+[data-css-1] *::before,
+.css-1 *::after,
+[data-css-1] *::after {
+  box-sizing: inherit;
+}
+
+.css-1 > *:not(:last-child),
+[data-css-1] > *:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.css-2,
+[data-css-2] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+}
+
+.css-2 *,
+[data-css-2] *,
+.css-2 *::before,
+[data-css-2] *::before,
+.css-2 *::after,
+[data-css-2] *::after {
+  box-sizing: inherit;
+}
+
+.css-2:hover span:first-of-type,
+[data-css-2]:hover span:first-of-type {
+  border-color: #5691f0;
+}
+
+.css-4,
+[data-css-4] {
+  border: 0px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  -webkit-clip-path: inset(50%);
+}
+
+.css-4:hover:not(:disabled) + span,
+[data-css-4]:hover:not(:disabled) + span,
+.css-4[data-simulate-hover]:not(:disabled) + span,
+[data-css-4][data-simulate-hover]:not(:disabled) + span {
+  border-color: #5691f0;
+}
+
+.css-4:focus + span,
+[data-css-4]:focus + span,
+.css-4[data-simulate-focus] + span,
+[data-css-4][data-simulate-focus] + span {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+}
+
+.css-4:checked + span,
+[data-css-4]:checked + span,
+.css-4[type="checkbox"]:indeterminate + span,
+[data-css-4][type="checkbox"]:indeterminate + span {
+  background-color: #3272d9;
+  border-color: #3272d9;
+}
+
+.css-4:checked:hover + span,
+[data-css-4]:checked:hover + span,
+.css-4[type="checkbox"]:indeterminate:hover + span,
+[data-css-4][type="checkbox"]:indeterminate:hover + span,
+.css-4:checked[data-simulate-hover] + span,
+[data-css-4]:checked[data-simulate-hover] + span,
+.css-4[type="checkbox"]:indeterminate[data-simulate-hover] + span,
+[data-css-4][type="checkbox"]:indeterminate[data-simulate-hover] + span {
+  background-color: #5691f0;
+  border-color: #5691f0;
+}
+
+.css-4:checked:disabled + span,
+[data-css-4]:checked:disabled + span,
+.css-4[type="checkbox"]:indeterminate:disabled + span,
+[data-css-4][type="checkbox"]:indeterminate:disabled + span {
+  background-color: #c8d1e0;
+  border-color: #c8d1e0;
+  color: #fff;
+}
+
+.css-22,
+[data-css-22] {
+  align-items: center;
+  background-color: #fff;
+  border-color: #c8d1e0;
+  border-radius: 0.1875em;
+  border-style: solid;
+  border-width: 1px;
+  color: #fff;
+  content: "";
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: none;
+  height: 1em;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 1em;
+  width: 1em;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-flex: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+}
+
+.css-22 svg,
+[data-css-22] svg {
+  fill: currentColor;
+  height: auto;
+  width: 100%;
+}
+
+.css-23,
+[data-css-23] {
+  fill: currentcolor;
+  font-size: 16px;
+  height: 1em;
+  width: 1em;
+}
+
+.css-24,
+[data-css-24] {
+  color: #333840;
+  font-size: 0.875em;
+}
+
+<Component>
+  <MyForm>
+    <DemoForm>
+      <glamorous(form)
+        onSubmit={[Function]}
+      >
+        <form
+          className="css-0"
+          onSubmit={[Function]}
+        >
+          <CheckboxGroup
+            checked={
+              Array [
+                "magnetite",
+                "quartz",
+              ]
+            }
+            data={
+              Array [
+                Object {
+                  "label": "Fluorite",
+                  "value": "fluorite",
+                },
+                Object {
+                  "label": "Magnetite",
+                  "value": "magnetite",
+                },
+                Object {
+                  "label": "Quartz",
+                  "value": "quartz",
+                },
+              ]
+            }
+            name="minerals"
+            onChange={[Function]}
+          >
+            <ThemedComponent
+              checked={
+                Array [
+                  "magnetite",
+                  "quartz",
+                ]
+              }
+              data={
+                Array [
+                  Object {
+                    "label": "Fluorite",
+                    "value": "fluorite",
+                  },
+                  Object {
+                    "label": "Magnetite",
+                    "value": "magnetite",
+                  },
+                  Object {
+                    "label": "Quartz",
+                    "value": "quartz",
+                  },
+                ]
+              }
+              input={[Function]}
+              name="minerals"
+              onChange={[Function]}
+              rootProps={Object {}}
+              type="checkbox"
+            >
+              <Themed(ChoiceGroup)
+                checked={
+                  Array [
+                    "magnetite",
+                    "quartz",
+                  ]
+                }
+                data={
+                  Array [
+                    Object {
+                      "label": "Fluorite",
+                      "value": "fluorite",
+                    },
+                    Object {
+                      "label": "Magnetite",
+                      "value": "magnetite",
+                    },
+                    Object {
+                      "label": "Quartz",
+                      "value": "quartz",
+                    },
+                  ]
+                }
+                input={[Function]}
+                name="minerals"
+                onChange={[Function]}
+                rootProps={Object {}}
+                type="checkbox"
+              >
+                <ThemeProvider>
+                  <ThemeProvider>
+                    <ChoiceGroup
+                      checked={
+                        Array [
+                          "magnetite",
+                          "quartz",
+                        ]
+                      }
+                      data={
+                        Array [
+                          Object {
+                            "label": "Fluorite",
+                            "value": "fluorite",
+                          },
+                          Object {
+                            "label": "Magnetite",
+                            "value": "magnetite",
+                          },
+                          Object {
+                            "label": "Quartz",
+                            "value": "quartz",
+                          },
+                        ]
+                      }
+                      input={[Function]}
+                      name="minerals"
+                      onChange={[Function]}
+                      rootProps={Object {}}
+                      type="checkbox"
+                    >
+                      <ChoiceGroup
+                        role="group"
+                        size="large"
+                      >
+                        <div
+                          className="css-1"
+                          role="group"
+                        >
+                          <Checkbox
+                            checked={false}
+                            key="0"
+                            label="Fluorite"
+                            name="minerals"
+                            onChange={[Function]}
+                            size="large"
+                            value="fluorite"
+                          >
+                            <ThemedComponent
+                              checked={false}
+                              iconChecked={<IconCheckBoxCheck />}
+                              inputRef={[Function]}
+                              label="Fluorite"
+                              labelPosition="end"
+                              name="minerals"
+                              onChange={[Function]}
+                              rootProps={
+                                Object {
+                                  "className": undefined,
+                                }
+                              }
+                              size="large"
+                              type="checkbox"
+                              value="fluorite"
+                            >
+                              <Themed(Choice)
+                                checked={false}
+                                iconChecked={<IconCheckBoxCheck />}
+                                inputRef={[Function]}
+                                label="Fluorite"
+                                labelPosition="end"
+                                name="minerals"
+                                onChange={[Function]}
+                                rootProps={
+                                  Object {
+                                    "className": undefined,
+                                  }
+                                }
+                                size="large"
+                                type="checkbox"
+                                value="fluorite"
+                              >
+                                <ThemeProvider>
+                                  <ThemeProvider>
+                                    <Choice
+                                      checked={false}
+                                      iconChecked={<IconCheckBoxCheck />}
+                                      inputRef={[Function]}
+                                      label="Fluorite"
+                                      labelPosition="end"
+                                      name="minerals"
+                                      onChange={[Function]}
+                                      rootProps={
+                                        Object {
+                                          "className": undefined,
+                                        }
+                                      }
+                                      size="large"
+                                      type="checkbox"
+                                      value="fluorite"
+                                    >
+                                      <Choice
+                                        labelPosition="end"
+                                      >
+                                        <label
+                                          className="css-2"
+                                        >
+                                          <glamorous(input)
+                                            checked={false}
+                                            innerRef={[Function]}
+                                            name="minerals"
+                                            onChange={[Function]}
+                                            size="large"
+                                            type="checkbox"
+                                            value="fluorite"
+                                          >
+                                            <input
+                                              checked={false}
+                                              className="css-4"
+                                              name="minerals"
+                                              onChange={[Function]}
+                                              size="large"
+                                              type="checkbox"
+                                              value="fluorite"
+                                            />
+                                          </glamorous(input)>
+                                          <glamorous(span)
+                                            labelPosition="end"
+                                            size="large"
+                                          >
+                                            <span
+                                              className="css-22"
+                                            >
+                                              <IconCheckBoxCheck>
+                                                <Icon
+                                                  rtl={false}
+                                                  size="medium"
+                                                >
+                                                  <glamorous(svg)
+                                                    aria-hidden={true}
+                                                    role="img"
+                                                    rtl={false}
+                                                    size="medium"
+                                                    viewBox="0 0 24 24"
+                                                  >
+                                                    <svg
+                                                      aria-hidden={true}
+                                                      className="css-23"
+                                                      role="img"
+                                                      viewBox="0 0 24 24"
+                                                    >
+                                                      <g>
+                                                        <path
+                                                          d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                        />
+                                                      </g>
+                                                    </svg>
+                                                  </glamorous(svg)>
+                                                </Icon>
+                                              </IconCheckBoxCheck>
+                                            </span>
+                                          </glamorous(span)>
+                                          <glamorous(span)
+                                            labelPosition="end"
+                                            size="large"
+                                          >
+                                            <span
+                                              className="css-24"
+                                            >
+                                              Fluorite
+                                            </span>
+                                          </glamorous(span)>
+                                        </label>
+                                      </Choice>
+                                    </Choice>
+                                  </ThemeProvider>
+                                </ThemeProvider>
+                              </Themed(Choice)>
+                            </ThemedComponent>
+                          </Checkbox>
+                          <Checkbox
+                            checked={true}
+                            key="1"
+                            label="Magnetite"
+                            name="minerals"
+                            onChange={[Function]}
+                            size="large"
+                            value="magnetite"
+                          >
+                            <ThemedComponent
+                              checked={true}
+                              iconChecked={<IconCheckBoxCheck />}
+                              inputRef={[Function]}
+                              label="Magnetite"
+                              labelPosition="end"
+                              name="minerals"
+                              onChange={[Function]}
+                              rootProps={
+                                Object {
+                                  "className": undefined,
+                                }
+                              }
+                              size="large"
+                              type="checkbox"
+                              value="magnetite"
+                            >
+                              <Themed(Choice)
+                                checked={true}
+                                iconChecked={<IconCheckBoxCheck />}
+                                inputRef={[Function]}
+                                label="Magnetite"
+                                labelPosition="end"
+                                name="minerals"
+                                onChange={[Function]}
+                                rootProps={
+                                  Object {
+                                    "className": undefined,
+                                  }
+                                }
+                                size="large"
+                                type="checkbox"
+                                value="magnetite"
+                              >
+                                <ThemeProvider>
+                                  <ThemeProvider>
+                                    <Choice
+                                      checked={true}
+                                      iconChecked={<IconCheckBoxCheck />}
+                                      inputRef={[Function]}
+                                      label="Magnetite"
+                                      labelPosition="end"
+                                      name="minerals"
+                                      onChange={[Function]}
+                                      rootProps={
+                                        Object {
+                                          "className": undefined,
+                                        }
+                                      }
+                                      size="large"
+                                      type="checkbox"
+                                      value="magnetite"
+                                    >
+                                      <Choice
+                                        labelPosition="end"
+                                      >
+                                        <label
+                                          className="css-2"
+                                        >
+                                          <glamorous(input)
+                                            checked={true}
+                                            innerRef={[Function]}
+                                            name="minerals"
+                                            onChange={[Function]}
+                                            size="large"
+                                            type="checkbox"
+                                            value="magnetite"
+                                          >
+                                            <input
+                                              checked={true}
+                                              className="css-4"
+                                              name="minerals"
+                                              onChange={[Function]}
+                                              size="large"
+                                              type="checkbox"
+                                              value="magnetite"
+                                            />
+                                          </glamorous(input)>
+                                          <glamorous(span)
+                                            labelPosition="end"
+                                            size="large"
+                                          >
+                                            <span
+                                              className="css-22"
+                                            >
+                                              <IconCheckBoxCheck>
+                                                <Icon
+                                                  rtl={false}
+                                                  size="medium"
+                                                >
+                                                  <glamorous(svg)
+                                                    aria-hidden={true}
+                                                    role="img"
+                                                    rtl={false}
+                                                    size="medium"
+                                                    viewBox="0 0 24 24"
+                                                  >
+                                                    <svg
+                                                      aria-hidden={true}
+                                                      className="css-23"
+                                                      role="img"
+                                                      viewBox="0 0 24 24"
+                                                    >
+                                                      <g>
+                                                        <path
+                                                          d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                        />
+                                                      </g>
+                                                    </svg>
+                                                  </glamorous(svg)>
+                                                </Icon>
+                                              </IconCheckBoxCheck>
+                                            </span>
+                                          </glamorous(span)>
+                                          <glamorous(span)
+                                            labelPosition="end"
+                                            size="large"
+                                          >
+                                            <span
+                                              className="css-24"
+                                            >
+                                              Magnetite
+                                            </span>
+                                          </glamorous(span)>
+                                        </label>
+                                      </Choice>
+                                    </Choice>
+                                  </ThemeProvider>
+                                </ThemeProvider>
+                              </Themed(Choice)>
+                            </ThemedComponent>
+                          </Checkbox>
+                          <Checkbox
+                            checked={true}
+                            key="2"
+                            label="Quartz"
+                            name="minerals"
+                            onChange={[Function]}
+                            size="large"
+                            value="quartz"
+                          >
+                            <ThemedComponent
+                              checked={true}
+                              iconChecked={<IconCheckBoxCheck />}
+                              inputRef={[Function]}
+                              label="Quartz"
+                              labelPosition="end"
+                              name="minerals"
+                              onChange={[Function]}
+                              rootProps={
+                                Object {
+                                  "className": undefined,
+                                }
+                              }
+                              size="large"
+                              type="checkbox"
+                              value="quartz"
+                            >
+                              <Themed(Choice)
+                                checked={true}
+                                iconChecked={<IconCheckBoxCheck />}
+                                inputRef={[Function]}
+                                label="Quartz"
+                                labelPosition="end"
+                                name="minerals"
+                                onChange={[Function]}
+                                rootProps={
+                                  Object {
+                                    "className": undefined,
+                                  }
+                                }
+                                size="large"
+                                type="checkbox"
+                                value="quartz"
+                              >
+                                <ThemeProvider>
+                                  <ThemeProvider>
+                                    <Choice
+                                      checked={true}
+                                      iconChecked={<IconCheckBoxCheck />}
+                                      inputRef={[Function]}
+                                      label="Quartz"
+                                      labelPosition="end"
+                                      name="minerals"
+                                      onChange={[Function]}
+                                      rootProps={
+                                        Object {
+                                          "className": undefined,
+                                        }
+                                      }
+                                      size="large"
+                                      type="checkbox"
+                                      value="quartz"
+                                    >
+                                      <Choice
+                                        labelPosition="end"
+                                      >
+                                        <label
+                                          className="css-2"
+                                        >
+                                          <glamorous(input)
+                                            checked={true}
+                                            innerRef={[Function]}
+                                            name="minerals"
+                                            onChange={[Function]}
+                                            size="large"
+                                            type="checkbox"
+                                            value="quartz"
+                                          >
+                                            <input
+                                              checked={true}
+                                              className="css-4"
+                                              name="minerals"
+                                              onChange={[Function]}
+                                              size="large"
+                                              type="checkbox"
+                                              value="quartz"
+                                            />
+                                          </glamorous(input)>
+                                          <glamorous(span)
+                                            labelPosition="end"
+                                            size="large"
+                                          >
+                                            <span
+                                              className="css-22"
+                                            >
+                                              <IconCheckBoxCheck>
+                                                <Icon
+                                                  rtl={false}
+                                                  size="medium"
+                                                >
+                                                  <glamorous(svg)
+                                                    aria-hidden={true}
+                                                    role="img"
+                                                    rtl={false}
+                                                    size="medium"
+                                                    viewBox="0 0 24 24"
+                                                  >
+                                                    <svg
+                                                      aria-hidden={true}
+                                                      className="css-23"
+                                                      role="img"
+                                                      viewBox="0 0 24 24"
+                                                    >
+                                                      <g>
+                                                        <path
+                                                          d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                        />
+                                                      </g>
+                                                    </svg>
+                                                  </glamorous(svg)>
+                                                </Icon>
+                                              </IconCheckBoxCheck>
+                                            </span>
+                                          </glamorous(span)>
+                                          <glamorous(span)
+                                            labelPosition="end"
+                                            size="large"
+                                          >
+                                            <span
+                                              className="css-24"
+                                            >
+                                              Quartz
+                                            </span>
+                                          </glamorous(span)>
+                                        </label>
+                                      </Choice>
+                                    </Choice>
+                                  </ThemeProvider>
+                                </ThemeProvider>
+                              </Themed(Choice)>
+                            </ThemedComponent>
+                          </Checkbox>
+                        </div>
+                      </ChoiceGroup>
+                    </ChoiceGroup>
+                  </ThemeProvider>
+                </ThemeProvider>
+              </Themed(ChoiceGroup)>
+            </ThemedComponent>
+          </CheckboxGroup>
+        </form>
+      </glamorous(form)>
+    </DemoForm>
+  </MyForm>
+</Component>
+`;
+
+exports[`CheckboxGroup demo examples data-vs-children 1`] = `
+.css-0 > *:not(:last-child),
+[data-css-0] > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.css-1,
+[data-css-1] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-1 *,
+[data-css-1] *,
+.css-1 *::before,
+[data-css-1] *::before,
+.css-1 *::after,
+[data-css-1] *::after {
+  box-sizing: inherit;
+}
+
+.css-1 > *:not(:last-child),
+[data-css-1] > *:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.css-2,
+[data-css-2] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+}
+
+.css-2 *,
+[data-css-2] *,
+.css-2 *::before,
+[data-css-2] *::before,
+.css-2 *::after,
+[data-css-2] *::after {
+  box-sizing: inherit;
+}
+
+.css-2:hover span:first-of-type,
+[data-css-2]:hover span:first-of-type {
+  border-color: #5691f0;
+}
+
+.css-4,
+[data-css-4] {
+  border: 0px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  -webkit-clip-path: inset(50%);
+}
+
+.css-4:hover:not(:disabled) + span,
+[data-css-4]:hover:not(:disabled) + span,
+.css-4[data-simulate-hover]:not(:disabled) + span,
+[data-css-4][data-simulate-hover]:not(:disabled) + span {
+  border-color: #5691f0;
+}
+
+.css-4:focus + span,
+[data-css-4]:focus + span,
+.css-4[data-simulate-focus] + span,
+[data-css-4][data-simulate-focus] + span {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+}
+
+.css-4:checked + span,
+[data-css-4]:checked + span,
+.css-4[type="checkbox"]:indeterminate + span,
+[data-css-4][type="checkbox"]:indeterminate + span {
+  background-color: #3272d9;
+  border-color: #3272d9;
+}
+
+.css-4:checked:hover + span,
+[data-css-4]:checked:hover + span,
+.css-4[type="checkbox"]:indeterminate:hover + span,
+[data-css-4][type="checkbox"]:indeterminate:hover + span,
+.css-4:checked[data-simulate-hover] + span,
+[data-css-4]:checked[data-simulate-hover] + span,
+.css-4[type="checkbox"]:indeterminate[data-simulate-hover] + span,
+[data-css-4][type="checkbox"]:indeterminate[data-simulate-hover] + span {
+  background-color: #5691f0;
+  border-color: #5691f0;
+}
+
+.css-4:checked:disabled + span,
+[data-css-4]:checked:disabled + span,
+.css-4[type="checkbox"]:indeterminate:disabled + span,
+[data-css-4][type="checkbox"]:indeterminate:disabled + span {
+  background-color: #c8d1e0;
+  border-color: #c8d1e0;
+  color: #fff;
+}
+
+.css-22,
+[data-css-22] {
+  align-items: center;
+  background-color: #fff;
+  border-color: #c8d1e0;
+  border-radius: 0.1875em;
+  border-style: solid;
+  border-width: 1px;
+  color: #fff;
+  content: "";
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: none;
+  height: 1em;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 1em;
+  width: 1em;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-flex: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+}
+
+.css-22 svg,
+[data-css-22] svg {
+  fill: currentColor;
+  height: auto;
+  width: 100%;
+}
+
+.css-23,
+[data-css-23] {
+  fill: currentcolor;
+  font-size: 16px;
+  height: 1em;
+  width: 1em;
+}
+
+.css-24,
+[data-css-24] {
+  color: #333840;
+  font-size: 0.875em;
+}
+
+.css-25,
+[data-css-25] {
+  background-color: #c8d1e0;
+  height: 1px;
+  margin: 0.5em 0;
+}
+
+<DemoForm>
+  <glamorous(form)
+    onSubmit={[Function]}
+  >
+    <form
+      className="css-0"
+      onSubmit={[Function]}
+    >
+      <CheckboxGroup
+        data={
+          Array [
+            Object {
+              "label": "Fluorite",
+              "value": "fluorite",
+            },
+            Object {
+              "label": "Magnetite",
+              "value": "magnetite",
+            },
+            Object {
+              "label": "Quartz",
+              "value": "quartz",
+            },
+          ]
+        }
+        defaultChecked={
+          Array [
+            "magnetite",
+            "quartz",
+          ]
+        }
+        name="minerals-1"
+      >
+        <ThemedComponent
+          data={
+            Array [
+              Object {
+                "label": "Fluorite",
+                "value": "fluorite",
+              },
+              Object {
+                "label": "Magnetite",
+                "value": "magnetite",
+              },
+              Object {
+                "label": "Quartz",
+                "value": "quartz",
+              },
+            ]
+          }
+          defaultChecked={
+            Array [
+              "magnetite",
+              "quartz",
+            ]
+          }
+          input={[Function]}
+          name="minerals-1"
+          rootProps={Object {}}
+          type="checkbox"
+        >
+          <Themed(ChoiceGroup)
+            data={
+              Array [
+                Object {
+                  "label": "Fluorite",
+                  "value": "fluorite",
+                },
+                Object {
+                  "label": "Magnetite",
+                  "value": "magnetite",
+                },
+                Object {
+                  "label": "Quartz",
+                  "value": "quartz",
+                },
+              ]
+            }
+            defaultChecked={
+              Array [
+                "magnetite",
+                "quartz",
+              ]
+            }
+            input={[Function]}
+            name="minerals-1"
+            rootProps={Object {}}
+            type="checkbox"
+          >
+            <ThemeProvider>
+              <ThemeProvider>
+                <ChoiceGroup
+                  data={
+                    Array [
+                      Object {
+                        "label": "Fluorite",
+                        "value": "fluorite",
+                      },
+                      Object {
+                        "label": "Magnetite",
+                        "value": "magnetite",
+                      },
+                      Object {
+                        "label": "Quartz",
+                        "value": "quartz",
+                      },
+                    ]
+                  }
+                  defaultChecked={
+                    Array [
+                      "magnetite",
+                      "quartz",
+                    ]
+                  }
+                  input={[Function]}
+                  name="minerals-1"
+                  rootProps={Object {}}
+                  type="checkbox"
+                >
+                  <ChoiceGroup
+                    role="group"
+                    size="large"
+                  >
+                    <div
+                      className="css-1"
+                      role="group"
+                    >
+                      <Checkbox
+                        defaultChecked={false}
+                        key="0"
+                        label="Fluorite"
+                        name="minerals-1"
+                        size="large"
+                        value="fluorite"
+                      >
+                        <ThemedComponent
+                          defaultChecked={false}
+                          iconChecked={<IconCheckBoxCheck />}
+                          inputRef={[Function]}
+                          label="Fluorite"
+                          labelPosition="end"
+                          name="minerals-1"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="checkbox"
+                          value="fluorite"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={false}
+                            iconChecked={<IconCheckBoxCheck />}
+                            inputRef={[Function]}
+                            label="Fluorite"
+                            labelPosition="end"
+                            name="minerals-1"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="checkbox"
+                            value="fluorite"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={false}
+                                  iconChecked={<IconCheckBoxCheck />}
+                                  inputRef={[Function]}
+                                  label="Fluorite"
+                                  labelPosition="end"
+                                  name="minerals-1"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="checkbox"
+                                  value="fluorite"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-2"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={false}
+                                        innerRef={[Function]}
+                                        name="minerals-1"
+                                        size="large"
+                                        type="checkbox"
+                                        value="fluorite"
+                                      >
+                                        <input
+                                          className="css-4"
+                                          defaultChecked={false}
+                                          name="minerals-1"
+                                          size="large"
+                                          type="checkbox"
+                                          value="fluorite"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-22"
+                                        >
+                                          <IconCheckBoxCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-23"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <path
+                                                      d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconCheckBoxCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-24"
+                                        >
+                                          Fluorite
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Checkbox>
+                      <Checkbox
+                        defaultChecked={true}
+                        key="1"
+                        label="Magnetite"
+                        name="minerals-1"
+                        size="large"
+                        value="magnetite"
+                      >
+                        <ThemedComponent
+                          defaultChecked={true}
+                          iconChecked={<IconCheckBoxCheck />}
+                          inputRef={[Function]}
+                          label="Magnetite"
+                          labelPosition="end"
+                          name="minerals-1"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="checkbox"
+                          value="magnetite"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={true}
+                            iconChecked={<IconCheckBoxCheck />}
+                            inputRef={[Function]}
+                            label="Magnetite"
+                            labelPosition="end"
+                            name="minerals-1"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="checkbox"
+                            value="magnetite"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={true}
+                                  iconChecked={<IconCheckBoxCheck />}
+                                  inputRef={[Function]}
+                                  label="Magnetite"
+                                  labelPosition="end"
+                                  name="minerals-1"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="checkbox"
+                                  value="magnetite"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-2"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={true}
+                                        innerRef={[Function]}
+                                        name="minerals-1"
+                                        size="large"
+                                        type="checkbox"
+                                        value="magnetite"
+                                      >
+                                        <input
+                                          className="css-4"
+                                          defaultChecked={true}
+                                          name="minerals-1"
+                                          size="large"
+                                          type="checkbox"
+                                          value="magnetite"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-22"
+                                        >
+                                          <IconCheckBoxCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-23"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <path
+                                                      d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconCheckBoxCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-24"
+                                        >
+                                          Magnetite
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Checkbox>
+                      <Checkbox
+                        defaultChecked={true}
+                        key="2"
+                        label="Quartz"
+                        name="minerals-1"
+                        size="large"
+                        value="quartz"
+                      >
+                        <ThemedComponent
+                          defaultChecked={true}
+                          iconChecked={<IconCheckBoxCheck />}
+                          inputRef={[Function]}
+                          label="Quartz"
+                          labelPosition="end"
+                          name="minerals-1"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="checkbox"
+                          value="quartz"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={true}
+                            iconChecked={<IconCheckBoxCheck />}
+                            inputRef={[Function]}
+                            label="Quartz"
+                            labelPosition="end"
+                            name="minerals-1"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="checkbox"
+                            value="quartz"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={true}
+                                  iconChecked={<IconCheckBoxCheck />}
+                                  inputRef={[Function]}
+                                  label="Quartz"
+                                  labelPosition="end"
+                                  name="minerals-1"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="checkbox"
+                                  value="quartz"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-2"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={true}
+                                        innerRef={[Function]}
+                                        name="minerals-1"
+                                        size="large"
+                                        type="checkbox"
+                                        value="quartz"
+                                      >
+                                        <input
+                                          className="css-4"
+                                          defaultChecked={true}
+                                          name="minerals-1"
+                                          size="large"
+                                          type="checkbox"
+                                          value="quartz"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-22"
+                                        >
+                                          <IconCheckBoxCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-23"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <path
+                                                      d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconCheckBoxCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-24"
+                                        >
+                                          Quartz
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Checkbox>
+                    </div>
+                  </ChoiceGroup>
+                </ChoiceGroup>
+              </ThemeProvider>
+            </ThemeProvider>
+          </Themed(ChoiceGroup)>
+        </ThemedComponent>
+      </CheckboxGroup>
+      <FormFieldDivider>
+        <FormFieldDivider
+          role="separator"
+        >
+          <div
+            className="css-25"
+            role="separator"
+          />
+        </FormFieldDivider>
+      </FormFieldDivider>
+      <CheckboxGroup
+        defaultChecked={
+          Array [
+            "hematite",
+            "pyrite",
+          ]
+        }
+        name="minerals-2"
+      >
+        <ThemedComponent
+          defaultChecked={
+            Array [
+              "hematite",
+              "pyrite",
+            ]
+          }
+          input={[Function]}
+          name="minerals-2"
+          rootProps={Object {}}
+          type="checkbox"
+        >
+          <Themed(ChoiceGroup)
+            defaultChecked={
+              Array [
+                "hematite",
+                "pyrite",
+              ]
+            }
+            input={[Function]}
+            name="minerals-2"
+            rootProps={Object {}}
+            type="checkbox"
+          >
+            <ThemeProvider>
+              <ThemeProvider>
+                <ChoiceGroup
+                  defaultChecked={
+                    Array [
+                      "hematite",
+                      "pyrite",
+                    ]
+                  }
+                  input={[Function]}
+                  name="minerals-2"
+                  rootProps={Object {}}
+                  type="checkbox"
+                >
+                  <ChoiceGroup
+                    role="group"
+                    size="large"
+                  >
+                    <div
+                      className="css-1"
+                      role="group"
+                    >
+                      <Checkbox
+                        defaultChecked={false}
+                        key="0/.0"
+                        label="Azurite"
+                        name="minerals-2"
+                        size="large"
+                        value="azurite"
+                      >
+                        <ThemedComponent
+                          defaultChecked={false}
+                          iconChecked={<IconCheckBoxCheck />}
+                          inputRef={[Function]}
+                          label="Azurite"
+                          labelPosition="end"
+                          name="minerals-2"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="checkbox"
+                          value="azurite"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={false}
+                            iconChecked={<IconCheckBoxCheck />}
+                            inputRef={[Function]}
+                            label="Azurite"
+                            labelPosition="end"
+                            name="minerals-2"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="checkbox"
+                            value="azurite"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={false}
+                                  iconChecked={<IconCheckBoxCheck />}
+                                  inputRef={[Function]}
+                                  label="Azurite"
+                                  labelPosition="end"
+                                  name="minerals-2"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="checkbox"
+                                  value="azurite"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-2"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={false}
+                                        innerRef={[Function]}
+                                        name="minerals-2"
+                                        size="large"
+                                        type="checkbox"
+                                        value="azurite"
+                                      >
+                                        <input
+                                          className="css-4"
+                                          defaultChecked={false}
+                                          name="minerals-2"
+                                          size="large"
+                                          type="checkbox"
+                                          value="azurite"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-22"
+                                        >
+                                          <IconCheckBoxCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-23"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <path
+                                                      d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconCheckBoxCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-24"
+                                        >
+                                          Azurite
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Checkbox>
+                      <Checkbox
+                        defaultChecked={true}
+                        key="1/.1"
+                        label="Hematite"
+                        name="minerals-2"
+                        size="large"
+                        value="hematite"
+                      >
+                        <ThemedComponent
+                          defaultChecked={true}
+                          iconChecked={<IconCheckBoxCheck />}
+                          inputRef={[Function]}
+                          label="Hematite"
+                          labelPosition="end"
+                          name="minerals-2"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="checkbox"
+                          value="hematite"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={true}
+                            iconChecked={<IconCheckBoxCheck />}
+                            inputRef={[Function]}
+                            label="Hematite"
+                            labelPosition="end"
+                            name="minerals-2"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="checkbox"
+                            value="hematite"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={true}
+                                  iconChecked={<IconCheckBoxCheck />}
+                                  inputRef={[Function]}
+                                  label="Hematite"
+                                  labelPosition="end"
+                                  name="minerals-2"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="checkbox"
+                                  value="hematite"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-2"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={true}
+                                        innerRef={[Function]}
+                                        name="minerals-2"
+                                        size="large"
+                                        type="checkbox"
+                                        value="hematite"
+                                      >
+                                        <input
+                                          className="css-4"
+                                          defaultChecked={true}
+                                          name="minerals-2"
+                                          size="large"
+                                          type="checkbox"
+                                          value="hematite"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-22"
+                                        >
+                                          <IconCheckBoxCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-23"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <path
+                                                      d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconCheckBoxCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-24"
+                                        >
+                                          Hematite
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Checkbox>
+                      <Checkbox
+                        defaultChecked={true}
+                        key="2/.2"
+                        label="Pyrite"
+                        name="minerals-2"
+                        size="large"
+                        value="pyrite"
+                      >
+                        <ThemedComponent
+                          defaultChecked={true}
+                          iconChecked={<IconCheckBoxCheck />}
+                          inputRef={[Function]}
+                          label="Pyrite"
+                          labelPosition="end"
+                          name="minerals-2"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="checkbox"
+                          value="pyrite"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={true}
+                            iconChecked={<IconCheckBoxCheck />}
+                            inputRef={[Function]}
+                            label="Pyrite"
+                            labelPosition="end"
+                            name="minerals-2"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="checkbox"
+                            value="pyrite"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={true}
+                                  iconChecked={<IconCheckBoxCheck />}
+                                  inputRef={[Function]}
+                                  label="Pyrite"
+                                  labelPosition="end"
+                                  name="minerals-2"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="checkbox"
+                                  value="pyrite"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-2"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={true}
+                                        innerRef={[Function]}
+                                        name="minerals-2"
+                                        size="large"
+                                        type="checkbox"
+                                        value="pyrite"
+                                      >
+                                        <input
+                                          className="css-4"
+                                          defaultChecked={true}
+                                          name="minerals-2"
+                                          size="large"
+                                          type="checkbox"
+                                          value="pyrite"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-22"
+                                        >
+                                          <IconCheckBoxCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-23"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <path
+                                                      d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconCheckBoxCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-24"
+                                        >
+                                          Pyrite
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Checkbox>
+                    </div>
+                  </ChoiceGroup>
+                </ChoiceGroup>
+              </ThemeProvider>
+            </ThemeProvider>
+          </Themed(ChoiceGroup)>
+        </ThemedComponent>
+      </CheckboxGroup>
+    </form>
+  </glamorous(form)>
+</DemoForm>
+`;
+
+exports[`CheckboxGroup demo examples form-field 1`] = `
+.css-0 > *:not(:last-child),
+[data-css-0] > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.css-1,
+[data-css-1] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-1 *,
+[data-css-1] *,
+.css-1 *::before,
+[data-css-1] *::before,
+.css-1 *::after,
+[data-css-1] *::after {
+  box-sizing: inherit;
+}
+
+.css-1 > *:not(:last-child),
+[data-css-1] > *:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.css-2,
+[data-css-2] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+}
+
+.css-2 *,
+[data-css-2] *,
+.css-2 *::before,
+[data-css-2] *::before,
+.css-2 *::after,
+[data-css-2] *::after {
+  box-sizing: inherit;
+}
+
+.css-2:hover span:first-of-type,
+[data-css-2]:hover span:first-of-type {
+  border-color: #5691f0;
+}
+
+.css-4,
+[data-css-4] {
+  border: 0px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  -webkit-clip-path: inset(50%);
+}
+
+.css-4:hover:not(:disabled) + span,
+[data-css-4]:hover:not(:disabled) + span,
+.css-4[data-simulate-hover]:not(:disabled) + span,
+[data-css-4][data-simulate-hover]:not(:disabled) + span {
+  border-color: #5691f0;
+}
+
+.css-4:focus + span,
+[data-css-4]:focus + span,
+.css-4[data-simulate-focus] + span,
+[data-css-4][data-simulate-focus] + span {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+}
+
+.css-4:checked + span,
+[data-css-4]:checked + span,
+.css-4[type="checkbox"]:indeterminate + span,
+[data-css-4][type="checkbox"]:indeterminate + span {
+  background-color: #3272d9;
+  border-color: #3272d9;
+}
+
+.css-4:checked:hover + span,
+[data-css-4]:checked:hover + span,
+.css-4[type="checkbox"]:indeterminate:hover + span,
+[data-css-4][type="checkbox"]:indeterminate:hover + span,
+.css-4:checked[data-simulate-hover] + span,
+[data-css-4]:checked[data-simulate-hover] + span,
+.css-4[type="checkbox"]:indeterminate[data-simulate-hover] + span,
+[data-css-4][type="checkbox"]:indeterminate[data-simulate-hover] + span {
+  background-color: #5691f0;
+  border-color: #5691f0;
+}
+
+.css-4:checked:disabled + span,
+[data-css-4]:checked:disabled + span,
+.css-4[type="checkbox"]:indeterminate:disabled + span,
+[data-css-4][type="checkbox"]:indeterminate:disabled + span {
+  background-color: #c8d1e0;
+  border-color: #c8d1e0;
+  color: #fff;
+}
+
+.css-22,
+[data-css-22] {
+  align-items: center;
+  background-color: #fff;
+  border-color: #c8d1e0;
+  border-radius: 0.1875em;
+  border-style: solid;
+  border-width: 1px;
+  color: #fff;
+  content: "";
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: none;
+  height: 1em;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 1em;
+  width: 1em;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-flex: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+}
+
+.css-22 svg,
+[data-css-22] svg {
+  fill: currentColor;
+  height: auto;
+  width: 100%;
+}
+
+.css-23,
+[data-css-23] {
+  fill: currentcolor;
+  font-size: 16px;
+  height: 1em;
+  width: 1em;
+}
+
+.css-24,
+[data-css-24] {
+  color: #333840;
+  font-size: 0.875em;
+}
+
+.css-25,
+[data-css-25] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.css-25 *,
+[data-css-25] *,
+.css-25 *::before,
+[data-css-25] *::before,
+.css-25 *::after,
+[data-css-25] *::after {
+  box-sizing: inherit;
+}
+
+.css-26,
+[data-css-26] {
+  color: #58606e;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.875em;
+  font-weight: 600;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+}
+
+.css-26 > *,
+[data-css-26] > * {
+  align-self: flex-end;
+  display: inline-block;
+  -webkit-align-self: flex-end;
+}
+
+.css-27,
+[data-css-27] {
+  color: #de1b1b;
+  font-size: 0.6875em;
+  font-weight: 400;
+}
+
+.css-28,
+[data-css-28] {
+  color: #2a854e;
+  font-size: 0.6875em;
+  margin-top: 0.7272727272727273em;
+}
+
+<DemoForm>
+  <glamorous(form)
+    onSubmit={[Function]}
+  >
+    <form
+      className="css-0"
+      onSubmit={[Function]}
+    >
+      <FormField
+        caption="Hint: All of the above"
+        data={
+          Array [
+            Object {
+              "label": "Naturally occurring",
+              "value": "natural",
+            },
+            Object {
+              "label": "Inorganic",
+              "value": "inorganic",
+            },
+            Object {
+              "label": "Solid",
+              "value": "solid",
+            },
+            Object {
+              "label": "Definite chemical composition",
+              "value": "composition",
+            },
+            Object {
+              "label": "Crystalline structure",
+              "value": "crystalline",
+            },
+          ]
+        }
+        input={[Function]}
+        label="What are the primary characteristics of a mineral?"
+        name="contact"
+        required={true}
+        requiredText="Required"
+        variant="success"
+      >
+        <FormField>
+          <div
+            className="css-25"
+          >
+            <div>
+              <glamorous(div)
+                key="formField-16-textWrapper"
+              >
+                <div
+                  className="css-26"
+                >
+                  <span
+                    id="formField-16-labelText"
+                  >
+                    What are the primary characteristics of a mineral?
+                  </span>
+                  <glamorous(span)>
+                    <span
+                      className="css-27"
+                    >
+                      Required
+                    </span>
+                  </glamorous(span)>
+                </div>
+              </glamorous(div)>
+              <CheckboxGroup
+                aria-describedby="formField-16-caption"
+                data={
+                  Array [
+                    Object {
+                      "label": "Naturally occurring",
+                      "value": "natural",
+                    },
+                    Object {
+                      "label": "Inorganic",
+                      "value": "inorganic",
+                    },
+                    Object {
+                      "label": "Solid",
+                      "value": "solid",
+                    },
+                    Object {
+                      "label": "Definite chemical composition",
+                      "value": "composition",
+                    },
+                    Object {
+                      "label": "Crystalline structure",
+                      "value": "crystalline",
+                    },
+                  ]
+                }
+                key="formField-16-control"
+                name="contact"
+                required={true}
+                rootProps={
+                  Object {
+                    "aria-describedby": "formField-16-caption",
+                    "aria-labelledby": "formField-16-labelText",
+                  }
+                }
+                variant="success"
+              >
+                <ThemedComponent
+                  aria-describedby="formField-16-caption"
+                  data={
+                    Array [
+                      Object {
+                        "label": "Naturally occurring",
+                        "value": "natural",
+                      },
+                      Object {
+                        "label": "Inorganic",
+                        "value": "inorganic",
+                      },
+                      Object {
+                        "label": "Solid",
+                        "value": "solid",
+                      },
+                      Object {
+                        "label": "Definite chemical composition",
+                        "value": "composition",
+                      },
+                      Object {
+                        "label": "Crystalline structure",
+                        "value": "crystalline",
+                      },
+                    ]
+                  }
+                  input={[Function]}
+                  name="contact"
+                  required={true}
+                  rootProps={
+                    Object {
+                      "aria-describedby": "formField-16-caption",
+                      "aria-labelledby": "formField-16-labelText",
+                    }
+                  }
+                  type="checkbox"
+                  variant="success"
+                >
+                  <Themed(ChoiceGroup)
+                    aria-describedby="formField-16-caption"
+                    data={
+                      Array [
+                        Object {
+                          "label": "Naturally occurring",
+                          "value": "natural",
+                        },
+                        Object {
+                          "label": "Inorganic",
+                          "value": "inorganic",
+                        },
+                        Object {
+                          "label": "Solid",
+                          "value": "solid",
+                        },
+                        Object {
+                          "label": "Definite chemical composition",
+                          "value": "composition",
+                        },
+                        Object {
+                          "label": "Crystalline structure",
+                          "value": "crystalline",
+                        },
+                      ]
+                    }
+                    input={[Function]}
+                    name="contact"
+                    required={true}
+                    rootProps={
+                      Object {
+                        "aria-describedby": "formField-16-caption",
+                        "aria-labelledby": "formField-16-labelText",
+                      }
+                    }
+                    type="checkbox"
+                    variant="success"
+                  >
+                    <ThemeProvider>
+                      <ThemeProvider>
+                        <ChoiceGroup
+                          aria-describedby="formField-16-caption"
+                          data={
+                            Array [
+                              Object {
+                                "label": "Naturally occurring",
+                                "value": "natural",
+                              },
+                              Object {
+                                "label": "Inorganic",
+                                "value": "inorganic",
+                              },
+                              Object {
+                                "label": "Solid",
+                                "value": "solid",
+                              },
+                              Object {
+                                "label": "Definite chemical composition",
+                                "value": "composition",
+                              },
+                              Object {
+                                "label": "Crystalline structure",
+                                "value": "crystalline",
+                              },
+                            ]
+                          }
+                          input={[Function]}
+                          name="contact"
+                          required={true}
+                          rootProps={
+                            Object {
+                              "aria-describedby": "formField-16-caption",
+                              "aria-labelledby": "formField-16-labelText",
+                            }
+                          }
+                          type="checkbox"
+                          variant="success"
+                        >
+                          <ChoiceGroup
+                            aria-describedby="formField-16-caption"
+                            aria-labelledby="formField-16-labelText"
+                            role="group"
+                            size="large"
+                          >
+                            <div
+                              aria-describedby="formField-16-caption"
+                              aria-labelledby="formField-16-labelText"
+                              className="css-1"
+                              role="group"
+                            >
+                              <Checkbox
+                                aria-describedby="formField-16-caption"
+                                key="0"
+                                label="Naturally occurring"
+                                name="contact"
+                                size="large"
+                                value="natural"
+                                variant="success"
+                              >
+                                <ThemedComponent
+                                  aria-describedby="formField-16-caption"
+                                  iconChecked={<IconCheckBoxCheck />}
+                                  inputRef={[Function]}
+                                  label="Naturally occurring"
+                                  labelPosition="end"
+                                  name="contact"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="checkbox"
+                                  value="natural"
+                                  variant="success"
+                                >
+                                  <Themed(Choice)
+                                    aria-describedby="formField-16-caption"
+                                    iconChecked={<IconCheckBoxCheck />}
+                                    inputRef={[Function]}
+                                    label="Naturally occurring"
+                                    labelPosition="end"
+                                    name="contact"
+                                    rootProps={
+                                      Object {
+                                        "className": undefined,
+                                      }
+                                    }
+                                    size="large"
+                                    type="checkbox"
+                                    value="natural"
+                                    variant="success"
+                                  >
+                                    <ThemeProvider>
+                                      <ThemeProvider>
+                                        <Choice
+                                          aria-describedby="formField-16-caption"
+                                          iconChecked={<IconCheckBoxCheck />}
+                                          inputRef={[Function]}
+                                          label="Naturally occurring"
+                                          labelPosition="end"
+                                          name="contact"
+                                          rootProps={
+                                            Object {
+                                              "className": undefined,
+                                            }
+                                          }
+                                          size="large"
+                                          type="checkbox"
+                                          value="natural"
+                                          variant="success"
+                                        >
+                                          <Choice
+                                            labelPosition="end"
+                                          >
+                                            <label
+                                              className="css-2"
+                                            >
+                                              <glamorous(input)
+                                                aria-describedby="formField-16-caption"
+                                                innerRef={[Function]}
+                                                name="contact"
+                                                size="large"
+                                                type="checkbox"
+                                                value="natural"
+                                                variant="success"
+                                              >
+                                                <input
+                                                  aria-describedby="formField-16-caption"
+                                                  className="css-4"
+                                                  name="contact"
+                                                  size="large"
+                                                  type="checkbox"
+                                                  value="natural"
+                                                />
+                                              </glamorous(input)>
+                                              <glamorous(span)
+                                                labelPosition="end"
+                                                size="large"
+                                              >
+                                                <span
+                                                  className="css-22"
+                                                >
+                                                  <IconCheckBoxCheck>
+                                                    <Icon
+                                                      rtl={false}
+                                                      size="medium"
+                                                    >
+                                                      <glamorous(svg)
+                                                        aria-hidden={true}
+                                                        role="img"
+                                                        rtl={false}
+                                                        size="medium"
+                                                        viewBox="0 0 24 24"
+                                                      >
+                                                        <svg
+                                                          aria-hidden={true}
+                                                          className="css-23"
+                                                          role="img"
+                                                          viewBox="0 0 24 24"
+                                                        >
+                                                          <g>
+                                                            <path
+                                                              d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                            />
+                                                          </g>
+                                                        </svg>
+                                                      </glamorous(svg)>
+                                                    </Icon>
+                                                  </IconCheckBoxCheck>
+                                                </span>
+                                              </glamorous(span)>
+                                              <glamorous(span)
+                                                labelPosition="end"
+                                                size="large"
+                                              >
+                                                <span
+                                                  className="css-24"
+                                                >
+                                                  Naturally occurring
+                                                </span>
+                                              </glamorous(span)>
+                                            </label>
+                                          </Choice>
+                                        </Choice>
+                                      </ThemeProvider>
+                                    </ThemeProvider>
+                                  </Themed(Choice)>
+                                </ThemedComponent>
+                              </Checkbox>
+                              <Checkbox
+                                aria-describedby="formField-16-caption"
+                                key="1"
+                                label="Inorganic"
+                                name="contact"
+                                size="large"
+                                value="inorganic"
+                                variant="success"
+                              >
+                                <ThemedComponent
+                                  aria-describedby="formField-16-caption"
+                                  iconChecked={<IconCheckBoxCheck />}
+                                  inputRef={[Function]}
+                                  label="Inorganic"
+                                  labelPosition="end"
+                                  name="contact"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="checkbox"
+                                  value="inorganic"
+                                  variant="success"
+                                >
+                                  <Themed(Choice)
+                                    aria-describedby="formField-16-caption"
+                                    iconChecked={<IconCheckBoxCheck />}
+                                    inputRef={[Function]}
+                                    label="Inorganic"
+                                    labelPosition="end"
+                                    name="contact"
+                                    rootProps={
+                                      Object {
+                                        "className": undefined,
+                                      }
+                                    }
+                                    size="large"
+                                    type="checkbox"
+                                    value="inorganic"
+                                    variant="success"
+                                  >
+                                    <ThemeProvider>
+                                      <ThemeProvider>
+                                        <Choice
+                                          aria-describedby="formField-16-caption"
+                                          iconChecked={<IconCheckBoxCheck />}
+                                          inputRef={[Function]}
+                                          label="Inorganic"
+                                          labelPosition="end"
+                                          name="contact"
+                                          rootProps={
+                                            Object {
+                                              "className": undefined,
+                                            }
+                                          }
+                                          size="large"
+                                          type="checkbox"
+                                          value="inorganic"
+                                          variant="success"
+                                        >
+                                          <Choice
+                                            labelPosition="end"
+                                          >
+                                            <label
+                                              className="css-2"
+                                            >
+                                              <glamorous(input)
+                                                aria-describedby="formField-16-caption"
+                                                innerRef={[Function]}
+                                                name="contact"
+                                                size="large"
+                                                type="checkbox"
+                                                value="inorganic"
+                                                variant="success"
+                                              >
+                                                <input
+                                                  aria-describedby="formField-16-caption"
+                                                  className="css-4"
+                                                  name="contact"
+                                                  size="large"
+                                                  type="checkbox"
+                                                  value="inorganic"
+                                                />
+                                              </glamorous(input)>
+                                              <glamorous(span)
+                                                labelPosition="end"
+                                                size="large"
+                                              >
+                                                <span
+                                                  className="css-22"
+                                                >
+                                                  <IconCheckBoxCheck>
+                                                    <Icon
+                                                      rtl={false}
+                                                      size="medium"
+                                                    >
+                                                      <glamorous(svg)
+                                                        aria-hidden={true}
+                                                        role="img"
+                                                        rtl={false}
+                                                        size="medium"
+                                                        viewBox="0 0 24 24"
+                                                      >
+                                                        <svg
+                                                          aria-hidden={true}
+                                                          className="css-23"
+                                                          role="img"
+                                                          viewBox="0 0 24 24"
+                                                        >
+                                                          <g>
+                                                            <path
+                                                              d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                            />
+                                                          </g>
+                                                        </svg>
+                                                      </glamorous(svg)>
+                                                    </Icon>
+                                                  </IconCheckBoxCheck>
+                                                </span>
+                                              </glamorous(span)>
+                                              <glamorous(span)
+                                                labelPosition="end"
+                                                size="large"
+                                              >
+                                                <span
+                                                  className="css-24"
+                                                >
+                                                  Inorganic
+                                                </span>
+                                              </glamorous(span)>
+                                            </label>
+                                          </Choice>
+                                        </Choice>
+                                      </ThemeProvider>
+                                    </ThemeProvider>
+                                  </Themed(Choice)>
+                                </ThemedComponent>
+                              </Checkbox>
+                              <Checkbox
+                                aria-describedby="formField-16-caption"
+                                key="2"
+                                label="Solid"
+                                name="contact"
+                                size="large"
+                                value="solid"
+                                variant="success"
+                              >
+                                <ThemedComponent
+                                  aria-describedby="formField-16-caption"
+                                  iconChecked={<IconCheckBoxCheck />}
+                                  inputRef={[Function]}
+                                  label="Solid"
+                                  labelPosition="end"
+                                  name="contact"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="checkbox"
+                                  value="solid"
+                                  variant="success"
+                                >
+                                  <Themed(Choice)
+                                    aria-describedby="formField-16-caption"
+                                    iconChecked={<IconCheckBoxCheck />}
+                                    inputRef={[Function]}
+                                    label="Solid"
+                                    labelPosition="end"
+                                    name="contact"
+                                    rootProps={
+                                      Object {
+                                        "className": undefined,
+                                      }
+                                    }
+                                    size="large"
+                                    type="checkbox"
+                                    value="solid"
+                                    variant="success"
+                                  >
+                                    <ThemeProvider>
+                                      <ThemeProvider>
+                                        <Choice
+                                          aria-describedby="formField-16-caption"
+                                          iconChecked={<IconCheckBoxCheck />}
+                                          inputRef={[Function]}
+                                          label="Solid"
+                                          labelPosition="end"
+                                          name="contact"
+                                          rootProps={
+                                            Object {
+                                              "className": undefined,
+                                            }
+                                          }
+                                          size="large"
+                                          type="checkbox"
+                                          value="solid"
+                                          variant="success"
+                                        >
+                                          <Choice
+                                            labelPosition="end"
+                                          >
+                                            <label
+                                              className="css-2"
+                                            >
+                                              <glamorous(input)
+                                                aria-describedby="formField-16-caption"
+                                                innerRef={[Function]}
+                                                name="contact"
+                                                size="large"
+                                                type="checkbox"
+                                                value="solid"
+                                                variant="success"
+                                              >
+                                                <input
+                                                  aria-describedby="formField-16-caption"
+                                                  className="css-4"
+                                                  name="contact"
+                                                  size="large"
+                                                  type="checkbox"
+                                                  value="solid"
+                                                />
+                                              </glamorous(input)>
+                                              <glamorous(span)
+                                                labelPosition="end"
+                                                size="large"
+                                              >
+                                                <span
+                                                  className="css-22"
+                                                >
+                                                  <IconCheckBoxCheck>
+                                                    <Icon
+                                                      rtl={false}
+                                                      size="medium"
+                                                    >
+                                                      <glamorous(svg)
+                                                        aria-hidden={true}
+                                                        role="img"
+                                                        rtl={false}
+                                                        size="medium"
+                                                        viewBox="0 0 24 24"
+                                                      >
+                                                        <svg
+                                                          aria-hidden={true}
+                                                          className="css-23"
+                                                          role="img"
+                                                          viewBox="0 0 24 24"
+                                                        >
+                                                          <g>
+                                                            <path
+                                                              d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                            />
+                                                          </g>
+                                                        </svg>
+                                                      </glamorous(svg)>
+                                                    </Icon>
+                                                  </IconCheckBoxCheck>
+                                                </span>
+                                              </glamorous(span)>
+                                              <glamorous(span)
+                                                labelPosition="end"
+                                                size="large"
+                                              >
+                                                <span
+                                                  className="css-24"
+                                                >
+                                                  Solid
+                                                </span>
+                                              </glamorous(span)>
+                                            </label>
+                                          </Choice>
+                                        </Choice>
+                                      </ThemeProvider>
+                                    </ThemeProvider>
+                                  </Themed(Choice)>
+                                </ThemedComponent>
+                              </Checkbox>
+                              <Checkbox
+                                aria-describedby="formField-16-caption"
+                                key="3"
+                                label="Definite chemical composition"
+                                name="contact"
+                                size="large"
+                                value="composition"
+                                variant="success"
+                              >
+                                <ThemedComponent
+                                  aria-describedby="formField-16-caption"
+                                  iconChecked={<IconCheckBoxCheck />}
+                                  inputRef={[Function]}
+                                  label="Definite chemical composition"
+                                  labelPosition="end"
+                                  name="contact"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="checkbox"
+                                  value="composition"
+                                  variant="success"
+                                >
+                                  <Themed(Choice)
+                                    aria-describedby="formField-16-caption"
+                                    iconChecked={<IconCheckBoxCheck />}
+                                    inputRef={[Function]}
+                                    label="Definite chemical composition"
+                                    labelPosition="end"
+                                    name="contact"
+                                    rootProps={
+                                      Object {
+                                        "className": undefined,
+                                      }
+                                    }
+                                    size="large"
+                                    type="checkbox"
+                                    value="composition"
+                                    variant="success"
+                                  >
+                                    <ThemeProvider>
+                                      <ThemeProvider>
+                                        <Choice
+                                          aria-describedby="formField-16-caption"
+                                          iconChecked={<IconCheckBoxCheck />}
+                                          inputRef={[Function]}
+                                          label="Definite chemical composition"
+                                          labelPosition="end"
+                                          name="contact"
+                                          rootProps={
+                                            Object {
+                                              "className": undefined,
+                                            }
+                                          }
+                                          size="large"
+                                          type="checkbox"
+                                          value="composition"
+                                          variant="success"
+                                        >
+                                          <Choice
+                                            labelPosition="end"
+                                          >
+                                            <label
+                                              className="css-2"
+                                            >
+                                              <glamorous(input)
+                                                aria-describedby="formField-16-caption"
+                                                innerRef={[Function]}
+                                                name="contact"
+                                                size="large"
+                                                type="checkbox"
+                                                value="composition"
+                                                variant="success"
+                                              >
+                                                <input
+                                                  aria-describedby="formField-16-caption"
+                                                  className="css-4"
+                                                  name="contact"
+                                                  size="large"
+                                                  type="checkbox"
+                                                  value="composition"
+                                                />
+                                              </glamorous(input)>
+                                              <glamorous(span)
+                                                labelPosition="end"
+                                                size="large"
+                                              >
+                                                <span
+                                                  className="css-22"
+                                                >
+                                                  <IconCheckBoxCheck>
+                                                    <Icon
+                                                      rtl={false}
+                                                      size="medium"
+                                                    >
+                                                      <glamorous(svg)
+                                                        aria-hidden={true}
+                                                        role="img"
+                                                        rtl={false}
+                                                        size="medium"
+                                                        viewBox="0 0 24 24"
+                                                      >
+                                                        <svg
+                                                          aria-hidden={true}
+                                                          className="css-23"
+                                                          role="img"
+                                                          viewBox="0 0 24 24"
+                                                        >
+                                                          <g>
+                                                            <path
+                                                              d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                            />
+                                                          </g>
+                                                        </svg>
+                                                      </glamorous(svg)>
+                                                    </Icon>
+                                                  </IconCheckBoxCheck>
+                                                </span>
+                                              </glamorous(span)>
+                                              <glamorous(span)
+                                                labelPosition="end"
+                                                size="large"
+                                              >
+                                                <span
+                                                  className="css-24"
+                                                >
+                                                  Definite chemical composition
+                                                </span>
+                                              </glamorous(span)>
+                                            </label>
+                                          </Choice>
+                                        </Choice>
+                                      </ThemeProvider>
+                                    </ThemeProvider>
+                                  </Themed(Choice)>
+                                </ThemedComponent>
+                              </Checkbox>
+                              <Checkbox
+                                aria-describedby="formField-16-caption"
+                                key="4"
+                                label="Crystalline structure"
+                                name="contact"
+                                size="large"
+                                value="crystalline"
+                                variant="success"
+                              >
+                                <ThemedComponent
+                                  aria-describedby="formField-16-caption"
+                                  iconChecked={<IconCheckBoxCheck />}
+                                  inputRef={[Function]}
+                                  label="Crystalline structure"
+                                  labelPosition="end"
+                                  name="contact"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="checkbox"
+                                  value="crystalline"
+                                  variant="success"
+                                >
+                                  <Themed(Choice)
+                                    aria-describedby="formField-16-caption"
+                                    iconChecked={<IconCheckBoxCheck />}
+                                    inputRef={[Function]}
+                                    label="Crystalline structure"
+                                    labelPosition="end"
+                                    name="contact"
+                                    rootProps={
+                                      Object {
+                                        "className": undefined,
+                                      }
+                                    }
+                                    size="large"
+                                    type="checkbox"
+                                    value="crystalline"
+                                    variant="success"
+                                  >
+                                    <ThemeProvider>
+                                      <ThemeProvider>
+                                        <Choice
+                                          aria-describedby="formField-16-caption"
+                                          iconChecked={<IconCheckBoxCheck />}
+                                          inputRef={[Function]}
+                                          label="Crystalline structure"
+                                          labelPosition="end"
+                                          name="contact"
+                                          rootProps={
+                                            Object {
+                                              "className": undefined,
+                                            }
+                                          }
+                                          size="large"
+                                          type="checkbox"
+                                          value="crystalline"
+                                          variant="success"
+                                        >
+                                          <Choice
+                                            labelPosition="end"
+                                          >
+                                            <label
+                                              className="css-2"
+                                            >
+                                              <glamorous(input)
+                                                aria-describedby="formField-16-caption"
+                                                innerRef={[Function]}
+                                                name="contact"
+                                                size="large"
+                                                type="checkbox"
+                                                value="crystalline"
+                                                variant="success"
+                                              >
+                                                <input
+                                                  aria-describedby="formField-16-caption"
+                                                  className="css-4"
+                                                  name="contact"
+                                                  size="large"
+                                                  type="checkbox"
+                                                  value="crystalline"
+                                                />
+                                              </glamorous(input)>
+                                              <glamorous(span)
+                                                labelPosition="end"
+                                                size="large"
+                                              >
+                                                <span
+                                                  className="css-22"
+                                                >
+                                                  <IconCheckBoxCheck>
+                                                    <Icon
+                                                      rtl={false}
+                                                      size="medium"
+                                                    >
+                                                      <glamorous(svg)
+                                                        aria-hidden={true}
+                                                        role="img"
+                                                        rtl={false}
+                                                        size="medium"
+                                                        viewBox="0 0 24 24"
+                                                      >
+                                                        <svg
+                                                          aria-hidden={true}
+                                                          className="css-23"
+                                                          role="img"
+                                                          viewBox="0 0 24 24"
+                                                        >
+                                                          <g>
+                                                            <path
+                                                              d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                            />
+                                                          </g>
+                                                        </svg>
+                                                      </glamorous(svg)>
+                                                    </Icon>
+                                                  </IconCheckBoxCheck>
+                                                </span>
+                                              </glamorous(span)>
+                                              <glamorous(span)
+                                                labelPosition="end"
+                                                size="large"
+                                              >
+                                                <span
+                                                  className="css-24"
+                                                >
+                                                  Crystalline structure
+                                                </span>
+                                              </glamorous(span)>
+                                            </label>
+                                          </Choice>
+                                        </Choice>
+                                      </ThemeProvider>
+                                    </ThemeProvider>
+                                  </Themed(Choice)>
+                                </ThemedComponent>
+                              </Checkbox>
+                            </div>
+                          </ChoiceGroup>
+                        </ChoiceGroup>
+                      </ThemeProvider>
+                    </ThemeProvider>
+                  </Themed(ChoiceGroup)>
+                </ThemedComponent>
+              </CheckboxGroup>
+            </div>
+            <glamorous(div)
+              caption="Hint: All of the above"
+              id="formField-16-caption"
+              isGroup={true}
+              variant="success"
+            >
+              <div
+                className="css-28"
+                id="formField-16-caption"
+              >
+                Hint: All of the above
+              </div>
+            </glamorous(div)>
+          </div>
+        </FormField>
+      </FormField>
+    </form>
+  </glamorous(form)>
+</DemoForm>
+`;
+
+exports[`CheckboxGroup demo examples inline 1`] = `
+.css-0 > *:not(:last-child),
+[data-css-0] > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.css-1,
+[data-css-1] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+}
+
+.css-1 *,
+[data-css-1] *,
+.css-1 *::before,
+[data-css-1] *::before,
+.css-1 *::after,
+[data-css-1] *::after {
+  box-sizing: inherit;
+}
+
+.css-1:hover span:first-of-type,
+[data-css-1]:hover span:first-of-type {
+  border-color: #5691f0;
+}
+
+.css-3,
+[data-css-3] {
+  border: 0px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  -webkit-clip-path: inset(50%);
+}
+
+.css-3:hover:not(:disabled) + span,
+[data-css-3]:hover:not(:disabled) + span,
+.css-3[data-simulate-hover]:not(:disabled) + span,
+[data-css-3][data-simulate-hover]:not(:disabled) + span {
+  border-color: #5691f0;
+}
+
+.css-3:focus + span,
+[data-css-3]:focus + span,
+.css-3[data-simulate-focus] + span,
+[data-css-3][data-simulate-focus] + span {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+}
+
+.css-3:checked + span,
+[data-css-3]:checked + span,
+.css-3[type="checkbox"]:indeterminate + span,
+[data-css-3][type="checkbox"]:indeterminate + span {
+  background-color: #3272d9;
+  border-color: #3272d9;
+}
+
+.css-3:checked:hover + span,
+[data-css-3]:checked:hover + span,
+.css-3[type="checkbox"]:indeterminate:hover + span,
+[data-css-3][type="checkbox"]:indeterminate:hover + span,
+.css-3:checked[data-simulate-hover] + span,
+[data-css-3]:checked[data-simulate-hover] + span,
+.css-3[type="checkbox"]:indeterminate[data-simulate-hover] + span,
+[data-css-3][type="checkbox"]:indeterminate[data-simulate-hover] + span {
+  background-color: #5691f0;
+  border-color: #5691f0;
+}
+
+.css-3:checked:disabled + span,
+[data-css-3]:checked:disabled + span,
+.css-3[type="checkbox"]:indeterminate:disabled + span,
+[data-css-3][type="checkbox"]:indeterminate:disabled + span {
+  background-color: #c8d1e0;
+  border-color: #c8d1e0;
+  color: #fff;
+}
+
+.css-21,
+[data-css-21] {
+  align-items: center;
+  background-color: #fff;
+  border-color: #c8d1e0;
+  border-radius: 0.1875em;
+  border-style: solid;
+  border-width: 1px;
+  color: #fff;
+  content: "";
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: none;
+  height: 1em;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 1em;
+  width: 1em;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-flex: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+}
+
+.css-21 svg,
+[data-css-21] svg {
+  fill: currentColor;
+  height: auto;
+  width: 100%;
+}
+
+.css-22,
+[data-css-22] {
+  fill: currentcolor;
+  font-size: 16px;
+  height: 1em;
+  width: 1em;
+}
+
+.css-23,
+[data-css-23] {
+  color: #333840;
+  font-size: 0.875em;
+}
+
+.css-24,
+[data-css-24] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+}
+
+.css-24 *,
+[data-css-24] *,
+.css-24 *::before,
+[data-css-24] *::before,
+.css-24 *::after,
+[data-css-24] *::after {
+  box-sizing: inherit;
+}
+
+.css-24 > *:not(:last-child),
+[data-css-24] > *:not(:last-child) {
+  margin-bottom: 0;
+  margin-right: 2em;
+}
+
+<DemoForm>
+  <glamorous(form)
+    onSubmit={[Function]}
+  >
+    <form
+      className="css-0"
+      onSubmit={[Function]}
+    >
+      <CheckboxGroup
+        data={
+          Array [
+            Object {
+              "label": "Fluorite",
+              "value": "fluorite",
+            },
+            Object {
+              "label": "Magnetite",
+              "value": "magnetite",
+            },
+            Object {
+              "label": "Quartz",
+              "value": "quartz",
+            },
+          ]
+        }
+        defaultChecked={
+          Array [
+            "magnetite",
+            "quartz",
+          ]
+        }
+        inline={true}
+        name="minerals"
+      >
+        <ThemedComponent
+          data={
+            Array [
+              Object {
+                "label": "Fluorite",
+                "value": "fluorite",
+              },
+              Object {
+                "label": "Magnetite",
+                "value": "magnetite",
+              },
+              Object {
+                "label": "Quartz",
+                "value": "quartz",
+              },
+            ]
+          }
+          defaultChecked={
+            Array [
+              "magnetite",
+              "quartz",
+            ]
+          }
+          inline={true}
+          input={[Function]}
+          name="minerals"
+          rootProps={Object {}}
+          type="checkbox"
+        >
+          <Themed(ChoiceGroup)
+            data={
+              Array [
+                Object {
+                  "label": "Fluorite",
+                  "value": "fluorite",
+                },
+                Object {
+                  "label": "Magnetite",
+                  "value": "magnetite",
+                },
+                Object {
+                  "label": "Quartz",
+                  "value": "quartz",
+                },
+              ]
+            }
+            defaultChecked={
+              Array [
+                "magnetite",
+                "quartz",
+              ]
+            }
+            inline={true}
+            input={[Function]}
+            name="minerals"
+            rootProps={Object {}}
+            type="checkbox"
+          >
+            <ThemeProvider>
+              <ThemeProvider>
+                <ChoiceGroup
+                  data={
+                    Array [
+                      Object {
+                        "label": "Fluorite",
+                        "value": "fluorite",
+                      },
+                      Object {
+                        "label": "Magnetite",
+                        "value": "magnetite",
+                      },
+                      Object {
+                        "label": "Quartz",
+                        "value": "quartz",
+                      },
+                    ]
+                  }
+                  defaultChecked={
+                    Array [
+                      "magnetite",
+                      "quartz",
+                    ]
+                  }
+                  inline={true}
+                  input={[Function]}
+                  name="minerals"
+                  rootProps={Object {}}
+                  type="checkbox"
+                >
+                  <ChoiceGroup
+                    inline={true}
+                    role="group"
+                    size="large"
+                  >
+                    <div
+                      className="css-24"
+                      role="group"
+                    >
+                      <Checkbox
+                        defaultChecked={false}
+                        key="0"
+                        label="Fluorite"
+                        name="minerals"
+                        size="large"
+                        value="fluorite"
+                      >
+                        <ThemedComponent
+                          defaultChecked={false}
+                          iconChecked={<IconCheckBoxCheck />}
+                          inputRef={[Function]}
+                          label="Fluorite"
+                          labelPosition="end"
+                          name="minerals"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="checkbox"
+                          value="fluorite"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={false}
+                            iconChecked={<IconCheckBoxCheck />}
+                            inputRef={[Function]}
+                            label="Fluorite"
+                            labelPosition="end"
+                            name="minerals"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="checkbox"
+                            value="fluorite"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={false}
+                                  iconChecked={<IconCheckBoxCheck />}
+                                  inputRef={[Function]}
+                                  label="Fluorite"
+                                  labelPosition="end"
+                                  name="minerals"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="checkbox"
+                                  value="fluorite"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-1"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={false}
+                                        innerRef={[Function]}
+                                        name="minerals"
+                                        size="large"
+                                        type="checkbox"
+                                        value="fluorite"
+                                      >
+                                        <input
+                                          className="css-3"
+                                          defaultChecked={false}
+                                          name="minerals"
+                                          size="large"
+                                          type="checkbox"
+                                          value="fluorite"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-21"
+                                        >
+                                          <IconCheckBoxCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-22"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <path
+                                                      d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconCheckBoxCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-23"
+                                        >
+                                          Fluorite
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Checkbox>
+                      <Checkbox
+                        defaultChecked={true}
+                        key="1"
+                        label="Magnetite"
+                        name="minerals"
+                        size="large"
+                        value="magnetite"
+                      >
+                        <ThemedComponent
+                          defaultChecked={true}
+                          iconChecked={<IconCheckBoxCheck />}
+                          inputRef={[Function]}
+                          label="Magnetite"
+                          labelPosition="end"
+                          name="minerals"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="checkbox"
+                          value="magnetite"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={true}
+                            iconChecked={<IconCheckBoxCheck />}
+                            inputRef={[Function]}
+                            label="Magnetite"
+                            labelPosition="end"
+                            name="minerals"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="checkbox"
+                            value="magnetite"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={true}
+                                  iconChecked={<IconCheckBoxCheck />}
+                                  inputRef={[Function]}
+                                  label="Magnetite"
+                                  labelPosition="end"
+                                  name="minerals"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="checkbox"
+                                  value="magnetite"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-1"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={true}
+                                        innerRef={[Function]}
+                                        name="minerals"
+                                        size="large"
+                                        type="checkbox"
+                                        value="magnetite"
+                                      >
+                                        <input
+                                          className="css-3"
+                                          defaultChecked={true}
+                                          name="minerals"
+                                          size="large"
+                                          type="checkbox"
+                                          value="magnetite"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-21"
+                                        >
+                                          <IconCheckBoxCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-22"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <path
+                                                      d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconCheckBoxCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-23"
+                                        >
+                                          Magnetite
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Checkbox>
+                      <Checkbox
+                        defaultChecked={true}
+                        key="2"
+                        label="Quartz"
+                        name="minerals"
+                        size="large"
+                        value="quartz"
+                      >
+                        <ThemedComponent
+                          defaultChecked={true}
+                          iconChecked={<IconCheckBoxCheck />}
+                          inputRef={[Function]}
+                          label="Quartz"
+                          labelPosition="end"
+                          name="minerals"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="checkbox"
+                          value="quartz"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={true}
+                            iconChecked={<IconCheckBoxCheck />}
+                            inputRef={[Function]}
+                            label="Quartz"
+                            labelPosition="end"
+                            name="minerals"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="checkbox"
+                            value="quartz"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={true}
+                                  iconChecked={<IconCheckBoxCheck />}
+                                  inputRef={[Function]}
+                                  label="Quartz"
+                                  labelPosition="end"
+                                  name="minerals"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="checkbox"
+                                  value="quartz"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-1"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={true}
+                                        innerRef={[Function]}
+                                        name="minerals"
+                                        size="large"
+                                        type="checkbox"
+                                        value="quartz"
+                                      >
+                                        <input
+                                          className="css-3"
+                                          defaultChecked={true}
+                                          name="minerals"
+                                          size="large"
+                                          type="checkbox"
+                                          value="quartz"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-21"
+                                        >
+                                          <IconCheckBoxCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-22"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <path
+                                                      d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconCheckBoxCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-23"
+                                        >
+                                          Quartz
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Checkbox>
+                    </div>
+                  </ChoiceGroup>
+                </ChoiceGroup>
+              </ThemeProvider>
+            </ThemeProvider>
+          </Themed(ChoiceGroup)>
+        </ThemedComponent>
+      </CheckboxGroup>
+    </form>
+  </glamorous(form)>
+</DemoForm>
+`;
+
+exports[`CheckboxGroup demo examples uncontrolled 1`] = `
+.css-0 > *:not(:last-child),
+[data-css-0] > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.css-1,
+[data-css-1] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-1 *,
+[data-css-1] *,
+.css-1 *::before,
+[data-css-1] *::before,
+.css-1 *::after,
+[data-css-1] *::after {
+  box-sizing: inherit;
+}
+
+.css-1 > *:not(:last-child),
+[data-css-1] > *:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.css-2,
+[data-css-2] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+}
+
+.css-2 *,
+[data-css-2] *,
+.css-2 *::before,
+[data-css-2] *::before,
+.css-2 *::after,
+[data-css-2] *::after {
+  box-sizing: inherit;
+}
+
+.css-2:hover span:first-of-type,
+[data-css-2]:hover span:first-of-type {
+  border-color: #5691f0;
+}
+
+.css-4,
+[data-css-4] {
+  border: 0px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  -webkit-clip-path: inset(50%);
+}
+
+.css-4:hover:not(:disabled) + span,
+[data-css-4]:hover:not(:disabled) + span,
+.css-4[data-simulate-hover]:not(:disabled) + span,
+[data-css-4][data-simulate-hover]:not(:disabled) + span {
+  border-color: #5691f0;
+}
+
+.css-4:focus + span,
+[data-css-4]:focus + span,
+.css-4[data-simulate-focus] + span,
+[data-css-4][data-simulate-focus] + span {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+}
+
+.css-4:checked + span,
+[data-css-4]:checked + span,
+.css-4[type="checkbox"]:indeterminate + span,
+[data-css-4][type="checkbox"]:indeterminate + span {
+  background-color: #3272d9;
+  border-color: #3272d9;
+}
+
+.css-4:checked:hover + span,
+[data-css-4]:checked:hover + span,
+.css-4[type="checkbox"]:indeterminate:hover + span,
+[data-css-4][type="checkbox"]:indeterminate:hover + span,
+.css-4:checked[data-simulate-hover] + span,
+[data-css-4]:checked[data-simulate-hover] + span,
+.css-4[type="checkbox"]:indeterminate[data-simulate-hover] + span,
+[data-css-4][type="checkbox"]:indeterminate[data-simulate-hover] + span {
+  background-color: #5691f0;
+  border-color: #5691f0;
+}
+
+.css-4:checked:disabled + span,
+[data-css-4]:checked:disabled + span,
+.css-4[type="checkbox"]:indeterminate:disabled + span,
+[data-css-4][type="checkbox"]:indeterminate:disabled + span {
+  background-color: #c8d1e0;
+  border-color: #c8d1e0;
+  color: #fff;
+}
+
+.css-22,
+[data-css-22] {
+  align-items: center;
+  background-color: #fff;
+  border-color: #c8d1e0;
+  border-radius: 0.1875em;
+  border-style: solid;
+  border-width: 1px;
+  color: #fff;
+  content: "";
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: none;
+  height: 1em;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 1em;
+  width: 1em;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-flex: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+}
+
+.css-22 svg,
+[data-css-22] svg {
+  fill: currentColor;
+  height: auto;
+  width: 100%;
+}
+
+.css-23,
+[data-css-23] {
+  fill: currentcolor;
+  font-size: 16px;
+  height: 1em;
+  width: 1em;
+}
+
+.css-24,
+[data-css-24] {
+  color: #333840;
+  font-size: 0.875em;
+}
+
+<DemoForm>
+  <glamorous(form)
+    onSubmit={[Function]}
+  >
+    <form
+      className="css-0"
+      onSubmit={[Function]}
+    >
+      <CheckboxGroup
+        data={
+          Array [
+            Object {
+              "label": "Fluorite",
+              "value": "fluorite",
+            },
+            Object {
+              "label": "Magnetite",
+              "value": "magnetite",
+            },
+            Object {
+              "label": "Quartz",
+              "value": "quartz",
+            },
+          ]
+        }
+        defaultChecked={
+          Array [
+            "magnetite",
+            "quartz",
+          ]
+        }
+        name="minerals"
+      >
+        <ThemedComponent
+          data={
+            Array [
+              Object {
+                "label": "Fluorite",
+                "value": "fluorite",
+              },
+              Object {
+                "label": "Magnetite",
+                "value": "magnetite",
+              },
+              Object {
+                "label": "Quartz",
+                "value": "quartz",
+              },
+            ]
+          }
+          defaultChecked={
+            Array [
+              "magnetite",
+              "quartz",
+            ]
+          }
+          input={[Function]}
+          name="minerals"
+          rootProps={Object {}}
+          type="checkbox"
+        >
+          <Themed(ChoiceGroup)
+            data={
+              Array [
+                Object {
+                  "label": "Fluorite",
+                  "value": "fluorite",
+                },
+                Object {
+                  "label": "Magnetite",
+                  "value": "magnetite",
+                },
+                Object {
+                  "label": "Quartz",
+                  "value": "quartz",
+                },
+              ]
+            }
+            defaultChecked={
+              Array [
+                "magnetite",
+                "quartz",
+              ]
+            }
+            input={[Function]}
+            name="minerals"
+            rootProps={Object {}}
+            type="checkbox"
+          >
+            <ThemeProvider>
+              <ThemeProvider>
+                <ChoiceGroup
+                  data={
+                    Array [
+                      Object {
+                        "label": "Fluorite",
+                        "value": "fluorite",
+                      },
+                      Object {
+                        "label": "Magnetite",
+                        "value": "magnetite",
+                      },
+                      Object {
+                        "label": "Quartz",
+                        "value": "quartz",
+                      },
+                    ]
+                  }
+                  defaultChecked={
+                    Array [
+                      "magnetite",
+                      "quartz",
+                    ]
+                  }
+                  input={[Function]}
+                  name="minerals"
+                  rootProps={Object {}}
+                  type="checkbox"
+                >
+                  <ChoiceGroup
+                    role="group"
+                    size="large"
+                  >
+                    <div
+                      className="css-1"
+                      role="group"
+                    >
+                      <Checkbox
+                        defaultChecked={false}
+                        key="0"
+                        label="Fluorite"
+                        name="minerals"
+                        size="large"
+                        value="fluorite"
+                      >
+                        <ThemedComponent
+                          defaultChecked={false}
+                          iconChecked={<IconCheckBoxCheck />}
+                          inputRef={[Function]}
+                          label="Fluorite"
+                          labelPosition="end"
+                          name="minerals"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="checkbox"
+                          value="fluorite"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={false}
+                            iconChecked={<IconCheckBoxCheck />}
+                            inputRef={[Function]}
+                            label="Fluorite"
+                            labelPosition="end"
+                            name="minerals"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="checkbox"
+                            value="fluorite"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={false}
+                                  iconChecked={<IconCheckBoxCheck />}
+                                  inputRef={[Function]}
+                                  label="Fluorite"
+                                  labelPosition="end"
+                                  name="minerals"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="checkbox"
+                                  value="fluorite"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-2"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={false}
+                                        innerRef={[Function]}
+                                        name="minerals"
+                                        size="large"
+                                        type="checkbox"
+                                        value="fluorite"
+                                      >
+                                        <input
+                                          className="css-4"
+                                          defaultChecked={false}
+                                          name="minerals"
+                                          size="large"
+                                          type="checkbox"
+                                          value="fluorite"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-22"
+                                        >
+                                          <IconCheckBoxCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-23"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <path
+                                                      d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconCheckBoxCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-24"
+                                        >
+                                          Fluorite
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Checkbox>
+                      <Checkbox
+                        defaultChecked={true}
+                        key="1"
+                        label="Magnetite"
+                        name="minerals"
+                        size="large"
+                        value="magnetite"
+                      >
+                        <ThemedComponent
+                          defaultChecked={true}
+                          iconChecked={<IconCheckBoxCheck />}
+                          inputRef={[Function]}
+                          label="Magnetite"
+                          labelPosition="end"
+                          name="minerals"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="checkbox"
+                          value="magnetite"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={true}
+                            iconChecked={<IconCheckBoxCheck />}
+                            inputRef={[Function]}
+                            label="Magnetite"
+                            labelPosition="end"
+                            name="minerals"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="checkbox"
+                            value="magnetite"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={true}
+                                  iconChecked={<IconCheckBoxCheck />}
+                                  inputRef={[Function]}
+                                  label="Magnetite"
+                                  labelPosition="end"
+                                  name="minerals"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="checkbox"
+                                  value="magnetite"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-2"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={true}
+                                        innerRef={[Function]}
+                                        name="minerals"
+                                        size="large"
+                                        type="checkbox"
+                                        value="magnetite"
+                                      >
+                                        <input
+                                          className="css-4"
+                                          defaultChecked={true}
+                                          name="minerals"
+                                          size="large"
+                                          type="checkbox"
+                                          value="magnetite"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-22"
+                                        >
+                                          <IconCheckBoxCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-23"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <path
+                                                      d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconCheckBoxCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-24"
+                                        >
+                                          Magnetite
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Checkbox>
+                      <Checkbox
+                        defaultChecked={true}
+                        key="2"
+                        label="Quartz"
+                        name="minerals"
+                        size="large"
+                        value="quartz"
+                      >
+                        <ThemedComponent
+                          defaultChecked={true}
+                          iconChecked={<IconCheckBoxCheck />}
+                          inputRef={[Function]}
+                          label="Quartz"
+                          labelPosition="end"
+                          name="minerals"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="checkbox"
+                          value="quartz"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={true}
+                            iconChecked={<IconCheckBoxCheck />}
+                            inputRef={[Function]}
+                            label="Quartz"
+                            labelPosition="end"
+                            name="minerals"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="checkbox"
+                            value="quartz"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={true}
+                                  iconChecked={<IconCheckBoxCheck />}
+                                  inputRef={[Function]}
+                                  label="Quartz"
+                                  labelPosition="end"
+                                  name="minerals"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="checkbox"
+                                  value="quartz"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-2"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={true}
+                                        innerRef={[Function]}
+                                        name="minerals"
+                                        size="large"
+                                        type="checkbox"
+                                        value="quartz"
+                                      >
+                                        <input
+                                          className="css-4"
+                                          defaultChecked={true}
+                                          name="minerals"
+                                          size="large"
+                                          type="checkbox"
+                                          value="quartz"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-22"
+                                        >
+                                          <IconCheckBoxCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-23"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <path
+                                                      d="M8.8 14.8l-4.2-4.1L2.1 13l6.7 6.7 13-13-2.4-2.6L8.8 14.8z"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconCheckBoxCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-24"
+                                        >
+                                          Quartz
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Checkbox>
+                    </div>
+                  </ChoiceGroup>
+                </ChoiceGroup>
+              </ThemeProvider>
+            </ThemeProvider>
+          </Themed(ChoiceGroup)>
+        </ThemedComponent>
+      </CheckboxGroup>
+    </form>
+  </glamorous(form)>
+</DemoForm>
+`;

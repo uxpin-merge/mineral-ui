@@ -1,29 +1,17 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React from 'react';
-import { FormField, FormFieldset, FormFieldDivider } from '../../../../Form';
-import TextInput from '../../../../TextInput';
+import {
+  FormField,
+  FormFieldset,
+  FormFieldDivider
+} from '../../../../library/Form';
+import TextInput from '../../../../library/TextInput/';
 import DemoLayout from './components/DemoLayout';
 
 const forgotPassword = (
   <a
     href="/forgotPassword"
-    onClick={e => {
+    onClick={(e) => {
       e.preventDefault();
     }}>
     Forgot Password?
@@ -54,7 +42,7 @@ export default {
     },
     {
       type: 'do',
-      description: `Use the [appropriate variant](/color/#guidelines-variants)
+      description: `Use the [appropriate variant](/color#guidelines-variants)
 to match your intent.`,
       example: (
         <FormField input={TextInput} label="Promo Code" variant="success" />
@@ -127,7 +115,7 @@ accessible manner when the design requires it.`,
       type: 'do',
       description: `Wrap multiple, related inputs in a FormFieldset and provide
 a brief, descriptive \`legend\`. Note that the labels for the individual fields
-are provided, but [hidden](../form-field/#hide-label) to reduce noise.`,
+are provided, but [hidden](/components/form-field#hide-label) to reduce noise.`,
       example: (
         <FormFieldset legend="Address">
           <DemoLayout>
@@ -169,7 +157,7 @@ are provided, but [hidden](../form-field/#hide-label) to reduce noise.`,
   formFieldDivider: [
     {
       type: 'dont',
-      description: `Don't separate every [FormField](../form-field) with a
+      description: `Don't separate every [FormField](/components/form-field) with a
 FormFieldDivider.`,
       example: (
         <DemoLayout>

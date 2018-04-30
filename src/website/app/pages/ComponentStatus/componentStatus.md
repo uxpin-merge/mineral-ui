@@ -17,22 +17,65 @@ Statuses:
   [deprecated]
 -->
 
-| Component                                   | Status           |
-|---------------------------------------------|------------------|
-| [Button](/components/button)                | [available]      |
-| [Card](/components/card)                    | [available]      |
-| [Dropdown](/components/dropdown)            | [available]      |
-| [Form](/components/form-field) ~ new        | [available]      |
-| [Icon](/components/icon)                    | [available]      |
-| [Link](/components/link)                    | [available]      |
-| [Menu](/components/menu)                    | [available]      |
-| [Popover](/components/popover)              | [available]      |
-| [TextInput](/components/text-input) ~ new   | [available]      |
-| [ThemeProvider](/components/theme-provider) | [available]      |
-| TextArea                                    | [in development] |
-| Select                                      | [planned]        |
-| Tooltip                                     | [planned]        |
-| DataTable                                   |                  |
-| DatePicker                                  |                  |
-| Grid                                        |                  |
-| Navigation                                  |                  |
+| Component                                   | Status      |
+|---------------------------------------------|-------------|
+| [Avatar](/components/avatar)                | [available] |
+| [Box](/components/box)                      | [available] |
+| [Button](/components/button)                | [available] |
+| [Card](/components/card)                    | [available] |
+| [Checkbox](/components/checkbox)            | [available] |
+| [Dropdown](/components/dropdown)            | [available] |
+| [Flex](/components/flex)                    | [available] |
+| [Form](/components/form-field)              | [available] |
+| [Grid](/components/grid) ~ new              | [available] |
+| [Icon](/components/icon)                    | [available] |
+| [Link](/components/link)                    | [available] |
+| [Menu](/components/menu)                    | [available] |
+| [Popover](/components/popover)              | [available] |
+| [Radio](/components/radio)                  | [available] |
+| [Select](/components/select)                | [available] |
+| [StartEnd](/components/start-end)           | [available] |
+| [TextArea](/components/text-area)           | [available] |
+| [Text](/components/text)                    | [available] |
+| [TextInput](/components/text-input)         | [available] |
+| [ThemeProvider](/components/theme-provider) | [available] |
+| [Tooltip](/components/tooltip)              | [available] |
+| Toggle                                      | [planned]   |
+| Table                                       |             |
+| Alert                                       |             |
+| Badge                                       |             |
+| BreadCrumbs                                 |             |
+| Charts                                      |             |
+| ColorPicker                                 |             |
+| ControlGroup                                |             |
+| DataTable                                   |             |
+| DatePicker                                  |             |
+| Detail                                      |             |
+| Dialog                                      |             |
+| Divider                                     |             |
+| Fix                                         |             |
+| FlagLayout                                  |             |
+| Heading                                     |             |
+| List                                        |             |
+| LogIn                                       |             |
+| Maps                                        |             |
+| Navigation                                  |             |
+| Notification                                |             |
+| NumberInput                                 |             |
+| PageTemplate                                |             |
+| Pagination                                  |             |
+| Progress                                    |             |
+| Scrollable                                  |             |
+| Search                                      |             |
+| SidePanel                                   |             |
+| Sliders                                     |             |
+| StackedLayout                               |             |
+| Tabs                                        |             |
+| Tag                                         |             |
+| TileGrid                                    |             |
+| TimePicker                                  |             |
+| Toolbar                                     |             |
+| Tree                                        |             |
+| Truncation                                  |             |
+| TypeAhead                                   |             |
+| Wizard                                      |             |

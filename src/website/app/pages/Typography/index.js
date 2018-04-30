@@ -1,23 +1,11 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React from 'react';
 import colorable from 'colorable';
-import { createStyledComponent, pxToEm } from '../../../../styles';
+import {
+  createStyledComponent,
+  getNormalizedValue,
+  pxToEm
+} from '../../../../library/styles';
 import Markdown from '../../Markdown';
 import {
   Table as _Table,
@@ -31,7 +19,7 @@ import examples from './examples';
 
 type Props = {};
 
-const a11yColor = color => {
+const a11yColor = (color) => {
   const a11y = colorable({
     main: color,
     white: '#fff',
@@ -51,8 +39,9 @@ const styles = {
       backgroundColor: theme[color],
       borderRadius: theme.borderRadius_1,
       color: a11yColor(theme[color]),
-      padding: `${parseFloat(theme.space_inset_sm) /
-        2}em ${theme.space_inset_sm}`
+      padding: `${parseFloat(theme.space_inset_sm) / 2}em ${
+        theme.space_inset_sm
+      }`
     };
   },
   overflowContainer: {
@@ -70,6 +59,9 @@ const styles = {
   table: {
     fontFamily: 'Open Sans'
   },
+  exampleCell: ({ theme }) => ({
+    fontSize: getNormalizedValue('1em', theme.fontSize_ui)
+  }),
   valueCell: ({ theme }) => ({
     fontFamily: theme.fontFamily_monospace,
     verticalAlign: 'middle'
@@ -83,6 +75,7 @@ const OverflowContainer = createStyledComponent(
 );
 const Section = createStyledComponent('section', styles.section);
 const Table = createStyledComponent(_Table, styles.table);
+const ExampleCell = createStyledComponent(TableCell, styles.exampleCell);
 const ValueCell = createStyledComponent(TableCell, styles.valueCell);
 
 export default function Typography(props: Props) {
@@ -110,7 +103,7 @@ export default function Typography(props: Props) {
                 <tbody>
                   {section.examples.map(({ content, value, color, font }) => (
                     <TableRow key={value}>
-                      <TableCell>{content}</TableCell>
+                      <ExampleCell>{content}</ExampleCell>
                       <ValueCell>{value}</ValueCell>
                       <ValueCell>
                         <ColorValue color={color}>

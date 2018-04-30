@@ -1,24 +1,8 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React from 'react';
 import { mount } from 'enzyme';
 import { LiveProvider, LivePreview } from 'react-live';
-import ThemeProvider from '../src/themes/ThemeProvider';
+import ThemeProvider from '../src/library/themes/ThemeProvider';
 
 type Example = {
   title: React$Node,
@@ -37,13 +21,13 @@ export default function testDemoExamples(
 ) {
   if (options.exclude) {
     const exclusions = options.exclude || [];
-    examples = examples.filter(example => !exclusions.includes(example.id));
+    examples = examples.filter((example) => !exclusions.includes(example.id));
   }
 
   return describe('demo examples', () => {
-    examples.filter(({ scope, source }) => scope && source).map(example => {
+    examples.filter(({ scope, source }) => scope && source).map((example) => {
       it(example.id, () => {
-        const component = mount(
+        const wrapper = mount(
           <ThemeProvider>
             <LiveProvider
               code={example.source}
@@ -53,6 +37,16 @@ export default function testDemoExamples(
             </LiveProvider>
           </ThemeProvider>
         );
+
+        // NOTE: Find the "SUT" component inside the react-live ErrorBoundary
+        const component = wrapper
+          .findWhere(
+            (node) =>
+              // $FlowFixMe
+              node && node.type() && node.type().name === 'ErrorBoundary'
+          )
+          .childAt(0);
+
         expect(component).toMatchSnapshot();
       });
     });

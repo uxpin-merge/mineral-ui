@@ -1,19 +1,3 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React, { Component } from 'react';
 import Media from 'react-media';
@@ -26,9 +10,9 @@ import {
   createStyledComponent,
   getNormalizedValue,
   pxToEm
-} from '../../styles';
-import { mineralTheme, ThemeProvider } from '../../themes';
-import Button from '../../Button';
+} from '../../library/styles';
+import { ThemeProvider } from '../../library/themes';
+import Button from '../../library/Button';
 import IconClose from 'mineral-ui-icons/IconClose';
 import IconMenu from 'mineral-ui-icons/IconMenu';
 import _Canvas from './Canvas';
@@ -42,17 +26,23 @@ import { heroTheme } from './pages/Home/index';
 type Props = {
   children: React$Node,
   chromeless?: boolean,
-  demoRoutes?: { [string]: DemoRoute },
+  demoRoutes: Array<DemoRoute>,
+  glitched?: boolean,
   headerContent?: React$Node,
   pageMeta?: {
     canonicalLink?: string,
     description?: string,
     title?: string
   },
+  slug?: string,
   type?: number
 };
 
-type DemoRoute = { slug: string, title: string, description: string };
+type DemoRoute = {
+  description: string,
+  slug: string,
+  title: string
+};
 
 type State = {
   isNavOpen: boolean
@@ -60,8 +50,10 @@ type State = {
 
 const pageThemes = [
   {
-    borderColor_focus: siteColors.cranberry,
-    color_text_primary: siteColors.cranberry,
+    borderColor_theme_focus: siteColors.cranberry,
+    color_theme: siteColors.cranberry,
+
+    icon_color_theme: siteColors.cranberry,
 
     navLink_color_active_narrow: lighten(0.19, siteColors.cranberry),
 
@@ -79,8 +71,10 @@ const pageThemes = [
     SiteLink_color_hover: siteColors.cranberry_hover
   },
   {
-    borderColor_focus: siteColors.grape,
-    color_text_primary: siteColors.grape,
+    borderColor_theme_focus: siteColors.grape,
+    color_theme: siteColors.grape,
+
+    icon_color_theme: siteColors.grape,
 
     navLink_color_active_narrow: lighten(0.18, siteColors.grape),
 
@@ -98,8 +92,10 @@ const pageThemes = [
     SiteLink_color_hover: siteColors.grape_hover
   },
   {
-    borderColor_focus: siteColors.orangePunch,
-    color_text_primary: siteColors.orangePunch,
+    borderColor_theme_focus: siteColors.orangePunch,
+    color_theme: siteColors.orangePunch,
+
+    icon_color_theme: siteColors.orangePunch,
 
     navLink_color_active_narrow: lighten(0.23, siteColors.orangePunch),
 
@@ -118,25 +114,6 @@ const pageThemes = [
   }
 ];
 
-const navTheme = {
-  Heading_color_4: mineralTheme.color_gray_30,
-
-  SiteLink_borderColor_focus: mineralTheme.color_white,
-  SiteLink_color: mineralTheme.color_gray_30,
-  SiteLink_color_focus: mineralTheme.color_white,
-  SiteLink_color_hover: mineralTheme.color_white
-};
-
-const navThemeWide = {
-  Heading_color_4: siteColors.slateDarker,
-
-  SiteLink_borderColor_focus: siteColors.slateDarker_focus,
-  SiteLink_color: siteColors.slateDarker,
-  SiteLink_color_active: siteColors.slateDarker_active,
-  SiteLink_color_focus: siteColors.slateDarker_focus,
-  SiteLink_color_hover: siteColors.slateDarker_hover
-};
-
 /*
  * [1] The left bleed of the Section needs adjusting due to the nav sidebar.
  *     Point is hardcoded to the Section padding, rather than being prop-driven.
@@ -150,8 +127,7 @@ const magic = 18;
 
 const styles = {
   canvas: ({ theme }) => ({
-    backgroundColor:
-      theme.PageHeader_backgroundColor || theme.color_text_primary,
+    backgroundColor: theme.PageHeader_backgroundColor || theme.color_theme,
 
     [theme.bp_moreSpacious]: {
       left: `calc(-50vw + 50% - ${parseFloat(theme.sidebarWidth) / 2}em)`, // [1]
@@ -165,6 +141,7 @@ const styles = {
       boxSizing: 'content-box',
       marginLeft: theme.sidebarWidth,
       maxWidth: theme.maxContentWidth,
+      overflow: 'hidden', // Neccessary because the nav sidebar is floated
       padding: `0 ${theme.SectionPaddingHorizontalWide} ${theme.baseline_6}`,
 
       '& > *': {
@@ -278,7 +255,6 @@ const styles = {
     // Specificity hack
     '& p[class]': {
       fontFamily: theme.fontFamily_headline,
-      fontWeight: '300',
       margin: 0,
       textShadow: theme.textShadow,
 
@@ -288,6 +264,7 @@ const styles = {
     },
 
     '& h1': {
+      color: theme.color,
       fontSize: theme.SiteHeading_fontSize_2,
       margin: 0,
       textShadow: theme.textShadow,
@@ -337,31 +314,6 @@ const styles = {
           '@supports(position:sticky)': {
             maxHeight: '100vh',
             position: 'sticky'
-          },
-
-          '& h2': {
-            paddingRight: getNormalizedValue(pxToEm(8), theme.fontSize_h4)
-          },
-
-          '& a': {
-            paddingLeft: getNormalizedValue(pxToEm(8), theme.fontSize_ui),
-            paddingRight: getNormalizedValue(pxToEm(8), theme.fontSize_ui),
-
-            '&.active': {
-              backgroundColor: rgba(theme.color_text_primary, 0.15),
-              color: darken(0.1, theme.color_text_primary),
-              position: 'relative',
-
-              '&::before': {
-                backgroundColor: theme.color_text_primary,
-                bottom: 0,
-                content: '""',
-                position: 'absolute',
-                right: `-${pxToEm(3)}`,
-                top: 0,
-                width: pxToEm(3)
-              }
-            }
           }
         }
       : {
@@ -370,33 +322,17 @@ const styles = {
           overflowY: 'scroll', // [3]
           WebkitOverflowScrolling: 'touch', // [3]
           // 30px to match Section padding, 80px to make room for close button
-          padding: `${pxToEm(30)} ${pxToEm(80)} ${pxToEm(30)} ${pxToEm(30)}`,
-
-          '& a': {
-            paddingLeft: 0,
-
-            '&.active': {
-              color: theme.navLink_color_active_narrow,
-              position: 'relative',
-
-              '&::before': {
-                backgroundColor: theme.navLink_color_active_narrow,
-                bottom: 2,
-                content: '""',
-                left: `-${pxToEm(18)}`,
-                position: 'absolute',
-                top: 2,
-                width: pxToEm(6)
-              }
-            }
-          }
+          padding: `${pxToEm(30)} ${pxToEm(80)} ${pxToEm(30)} ${pxToEm(30)}`
         };
   },
-  root: ({ theme }) => ({
+  root: ({ theme, glitched }) => ({
+    backgroundColor: glitched ? 'white' : null,
+    filter: glitched ? 'invert(100%) contrast(120%)' : null,
     fontFamily: theme.fontFamily_system,
+    transform: glitched ? 'rotate(-1deg) scale(1.05)' : null,
 
     '& ::selection': {
-      backgroundColor: rgba(theme.color_text_primary, 0.2)
+      backgroundColor: rgba(theme.color_theme, 0.2)
     }
   }),
   wrap: ({ isNavOpen, theme }) => {
@@ -428,7 +364,9 @@ const Header = createStyledComponent(Section, styles.header).withProps({
 const MenuButton = createStyledComponent(Button, styles.menuButton).withProps({
   circular: true
 });
-const Nav = createStyledComponent(_Nav, styles.nav, { filterProps: ['wide'] });
+const Nav = createStyledComponent(_Nav, styles.nav, {
+  filterProps: ['glitched']
+});
 const Wrap = createStyledComponent('div', styles.wrap);
 const WrapInner = createStyledComponent('div', styles.wrapInner);
 
@@ -446,17 +384,23 @@ export default class Page extends Component<Props, State> {
       children,
       chromeless,
       demoRoutes,
+      glitched,
       headerContent,
       pageMeta,
+      slug,
       type,
       ...restProps
     } = this.props;
     const { isNavOpen } = this.state;
 
-    const rootProps = { ...restProps };
+    const rootProps = { glitched, ...restProps };
     const wrapProps = {
       isNavOpen,
       tabIndex: isNavOpen ? '-1' : undefined
+    };
+    const navProps = {
+      currentDemo: slug,
+      demoRoutes
     };
 
     const helmetItems = pageMeta && (
@@ -471,7 +415,7 @@ export default class Page extends Component<Props, State> {
       </Helmet>
     );
 
-    const navNarrow = moreSpacious => {
+    const navNarrow = (moreSpacious) => {
       if (moreSpacious) {
         noScroll.off();
       } else {
@@ -486,7 +430,7 @@ export default class Page extends Component<Props, State> {
                   inDialog
                   onClick={this.close.bind(this)}
                 />
-                <Nav demoRoutes={demoRoutes} contextualTheme={navTheme} />
+                <Nav {...navProps} />
               </Dialog>
             </div>
           );
@@ -513,10 +457,10 @@ export default class Page extends Component<Props, State> {
     ) : (
       <ThemeProvider theme={type !== undefined ? pageThemes[type] : {}}>
         <Media query="(min-width: 48em)">
-          {moreSpacious => (
-            <Root {...rootProps}>
+          {(moreSpacious) => (
+            <Root {...rootProps} wide={moreSpacious}>
               {helmetItems}
-              {navNarrow(moreSpacious)}
+              {!glitched && navNarrow(moreSpacious)}
               <Wrap {...wrapProps}>
                 <WrapInner>
                   {headerContent && (
@@ -534,13 +478,7 @@ export default class Page extends Component<Props, State> {
                       </Header>
                     </ThemeProvider>
                   )}
-                  {moreSpacious && (
-                    <Nav
-                      demoRoutes={demoRoutes}
-                      contextualTheme={navThemeWide}
-                      wide
-                    />
-                  )}
+                  {moreSpacious && <Nav {...navProps} wide />}
                   <Content>{children}</Content>
                 </WrapInner>
                 <Footer />
