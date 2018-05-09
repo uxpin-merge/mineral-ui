@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FormField demo examples basic 1`] = `
+exports[`FormField demo examples Snapshots: basic 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -77,7 +77,7 @@ exports[`FormField demo examples basic 1`] = `
 [data-css-4] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -118,7 +118,7 @@ exports[`FormField demo examples basic 1`] = `
 .css-4[data-simulate-focus] > div:last-child,
 [data-css-4][data-simulate-focus] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-4:active > div:last-child,
@@ -126,7 +126,7 @@ exports[`FormField demo examples basic 1`] = `
 .css-4[data-simulate-active] > div:last-child,
 [data-css-4][data-simulate-active] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-4 [role="img"],
@@ -201,12 +201,12 @@ exports[`FormField demo examples basic 1`] = `
 .css-15[data-simulate-focus] ~ div:last-child,
 [data-css-15][data-simulate-focus] ~ div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-29,
 [data-css-29] {
-  background-color: #fff;
+  background-color: #ffffff;
   border-color: #c8d1e0;
   border-radius: 0.1875em;
   border-style: solid;
@@ -237,7 +237,7 @@ exports[`FormField demo examples basic 1`] = `
 [data-css-31] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -278,7 +278,7 @@ exports[`FormField demo examples basic 1`] = `
 .css-31[data-simulate-focus] > div:last-child,
 [data-css-31][data-simulate-focus] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-31:active > div:last-child,
@@ -286,7 +286,7 @@ exports[`FormField demo examples basic 1`] = `
 .css-31[data-simulate-active] > div:last-child,
 [data-css-31][data-simulate-active] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-41,
@@ -352,7 +352,7 @@ exports[`FormField demo examples basic 1`] = `
 .css-41[data-simulate-focus] ~ div:last-child,
 [data-css-41][data-simulate-focus] ~ div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 <glamorous(div)>
@@ -587,12 +587,12 @@ exports[`FormField demo examples basic 1`] = `
 </glamorous(div)>
 `;
 
-exports[`FormField demo examples caption 1`] = `
+exports[`FormField demo examples Snapshots: caption 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -664,7 +664,7 @@ exports[`FormField demo examples caption 1`] = `
 [data-css-4] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -705,7 +705,7 @@ exports[`FormField demo examples caption 1`] = `
 .css-4[data-simulate-focus] > div:last-child,
 [data-css-4][data-simulate-focus] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-4:active > div:last-child,
@@ -713,7 +713,7 @@ exports[`FormField demo examples caption 1`] = `
 .css-4[data-simulate-active] > div:last-child,
 [data-css-4][data-simulate-active] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-4 [role="img"],
@@ -788,12 +788,12 @@ exports[`FormField demo examples caption 1`] = `
 .css-15[data-simulate-focus] ~ div:last-child,
 [data-css-15][data-simulate-focus] ~ div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-29,
 [data-css-29] {
-  background-color: #fff;
+  background-color: #ffffff;
   border-color: #c8d1e0;
   border-radius: 0.1875em;
   border-style: solid;
@@ -825,27 +825,27 @@ exports[`FormField demo examples caption 1`] = `
     >
       <label>
         <glamorous(div)
-          key="formField-6-textWrapper"
+          key="formField-11-textWrapper"
         >
           <div
             className="css-1"
           >
             <span
-              id="formField-6-labelText"
+              id="formField-11-labelText"
             >
               Name
             </span>
           </div>
         </glamorous(div)>
         <TextInput
-          aria-describedby="formField-6-caption"
-          key="formField-6-control"
+          aria-describedby="formField-11-caption"
+          key="formField-11-control"
         >
           <TextInput
             control={[Function]}
             controlProps={
               Object {
-                "aria-describedby": "formField-6-caption",
+                "aria-describedby": "formField-11-caption",
                 "aria-invalid": undefined,
                 "aria-required": undefined,
                 "controlRef": undefined,
@@ -862,7 +862,7 @@ exports[`FormField demo examples caption 1`] = `
               control={[Function]}
               controlProps={
                 Object {
-                  "aria-describedby": "formField-6-caption",
+                  "aria-describedby": "formField-11-caption",
                   "aria-invalid": undefined,
                   "aria-required": undefined,
                   "controlRef": undefined,
@@ -882,10 +882,10 @@ exports[`FormField demo examples caption 1`] = `
                   className="css-4"
                 >
                   <glamorous(glamorous(input))
-                    aria-describedby="formField-6-caption"
+                    aria-describedby="formField-11-caption"
                     controlPropsIn={
                       Object {
-                        "aria-describedby": "formField-6-caption",
+                        "aria-describedby": "formField-11-caption",
                         "aria-invalid": undefined,
                         "aria-required": undefined,
                         "controlRef": undefined,
@@ -900,7 +900,7 @@ exports[`FormField demo examples caption 1`] = `
                     type="text"
                   >
                     <input
-                      aria-describedby="formField-6-caption"
+                      aria-describedby="formField-11-caption"
                       className="css-15"
                       size="large"
                       type="text"
@@ -919,11 +919,11 @@ exports[`FormField demo examples caption 1`] = `
       </label>
       <glamorous(div)
         caption="This is help text"
-        id="formField-6-caption"
+        id="formField-11-caption"
       >
         <div
           className="css-30"
-          id="formField-6-caption"
+          id="formField-11-caption"
         >
           This is help text
         </div>
@@ -933,12 +933,12 @@ exports[`FormField demo examples caption 1`] = `
 </FormField>
 `;
 
-exports[`FormField demo examples hide-label 1`] = `
+exports[`FormField demo examples Snapshots: hide-label 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -1010,7 +1010,7 @@ exports[`FormField demo examples hide-label 1`] = `
 [data-css-4] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -1051,7 +1051,7 @@ exports[`FormField demo examples hide-label 1`] = `
 .css-4[data-simulate-focus] > div:last-child,
 [data-css-4][data-simulate-focus] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-4:active > div:last-child,
@@ -1059,7 +1059,7 @@ exports[`FormField demo examples hide-label 1`] = `
 .css-4[data-simulate-active] > div:last-child,
 [data-css-4][data-simulate-active] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-4 [role="img"],
@@ -1134,12 +1134,12 @@ exports[`FormField demo examples hide-label 1`] = `
 .css-15[data-simulate-focus] ~ div:last-child,
 [data-css-15][data-simulate-focus] ~ div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-29,
 [data-css-29] {
-  background-color: #fff;
+  background-color: #ffffff;
   border-color: #c8d1e0;
   border-radius: 0.1875em;
   border-style: solid;
@@ -1202,20 +1202,20 @@ exports[`FormField demo examples hide-label 1`] = `
         >
           <label>
             <glamorous(div)
-              key="formField-13-textWrapper"
+              key="formField-25-textWrapper"
             >
               <div
                 className="css-1"
               >
                 <span
-                  id="formField-13-labelText"
+                  id="formField-25-labelText"
                 >
                   Address
                 </span>
               </div>
             </glamorous(div)>
             <TextInput
-              key="formField-13-control"
+              key="formField-25-control"
               placeholder="1234 Main St"
             >
               <TextInput
@@ -1314,20 +1314,20 @@ exports[`FormField demo examples hide-label 1`] = `
           <label>
             <glamorous(div)
               hideLabel={true}
-              key="formField-14-textWrapper"
+              key="formField-26-textWrapper"
             >
               <div
                 className="css-30"
               >
                 <span
-                  id="formField-14-labelText"
+                  id="formField-26-labelText"
                 >
                   Address Line 2
                 </span>
               </div>
             </glamorous(div)>
             <TextInput
-              key="formField-14-control"
+              key="formField-26-control"
               placeholder="Apt 101"
             >
               <TextInput
@@ -1416,12 +1416,12 @@ exports[`FormField demo examples hide-label 1`] = `
 </glamorous(div)>
 `;
 
-exports[`FormField demo examples required 1`] = `
+exports[`FormField demo examples Snapshots: required 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -1493,7 +1493,7 @@ exports[`FormField demo examples required 1`] = `
 [data-css-4] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -1534,7 +1534,7 @@ exports[`FormField demo examples required 1`] = `
 .css-4[data-simulate-focus] > div:last-child,
 [data-css-4][data-simulate-focus] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-4:active > div:last-child,
@@ -1542,7 +1542,7 @@ exports[`FormField demo examples required 1`] = `
 .css-4[data-simulate-active] > div:last-child,
 [data-css-4][data-simulate-active] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-4 [role="img"],
@@ -1617,12 +1617,12 @@ exports[`FormField demo examples required 1`] = `
 .css-15[data-simulate-focus] ~ div:last-child,
 [data-css-15][data-simulate-focus] ~ div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-29,
 [data-css-29] {
-  background-color: #fff;
+  background-color: #ffffff;
   border-color: #c8d1e0;
   border-radius: 0.1875em;
   border-style: solid;
@@ -1658,13 +1658,13 @@ exports[`FormField demo examples required 1`] = `
         >
           <label>
             <glamorous(div)
-              key="formField-3-textWrapper"
+              key="formField-5-textWrapper"
             >
               <div
                 className="css-1"
               >
                 <span
-                  id="formField-3-labelText"
+                  id="formField-5-labelText"
                 >
                   Name
                 </span>
@@ -1678,7 +1678,7 @@ exports[`FormField demo examples required 1`] = `
               </div>
             </glamorous(div)>
             <TextInput
-              key="formField-3-control"
+              key="formField-5-control"
               required={true}
             >
               <TextInput
@@ -1774,13 +1774,13 @@ exports[`FormField demo examples required 1`] = `
         >
           <label>
             <glamorous(div)
-              key="formField-4-textWrapper"
+              key="formField-6-textWrapper"
             >
               <div
                 className="css-1"
               >
                 <span
-                  id="formField-4-labelText"
+                  id="formField-6-labelText"
                 >
                   Nombre
                 </span>
@@ -1794,7 +1794,7 @@ exports[`FormField demo examples required 1`] = `
               </div>
             </glamorous(div)>
             <TextInput
-              key="formField-4-control"
+              key="formField-6-control"
               required={true}
             >
               <TextInput
@@ -1882,12 +1882,12 @@ exports[`FormField demo examples required 1`] = `
 </glamorous(div)>
 `;
 
-exports[`FormField demo examples rtl 1`] = `
+exports[`FormField demo examples Snapshots: rtl 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -1959,7 +1959,7 @@ exports[`FormField demo examples rtl 1`] = `
 [data-css-4] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -2000,7 +2000,7 @@ exports[`FormField demo examples rtl 1`] = `
 .css-4[data-simulate-focus] > div:last-child,
 [data-css-4][data-simulate-focus] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-4:active > div:last-child,
@@ -2008,7 +2008,7 @@ exports[`FormField demo examples rtl 1`] = `
 .css-4[data-simulate-active] > div:last-child,
 [data-css-4][data-simulate-active] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-4 [role="img"],
@@ -2027,7 +2027,7 @@ exports[`FormField demo examples rtl 1`] = `
 
 .css-15,
 [data-css-15] {
-  background-color: #fff;
+  background-color: #ffffff;
   border-color: #c8d1e0;
   border-radius: 0.1875em;
   border-style: solid;
@@ -2115,7 +2115,7 @@ exports[`FormField demo examples rtl 1`] = `
 .css-18[data-simulate-focus] ~ div:last-child,
 [data-css-18][data-simulate-focus] ~ div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 <div
@@ -2137,13 +2137,13 @@ exports[`FormField demo examples rtl 1`] = `
           >
             <label>
               <glamorous(div)
-                key="formField-16-textWrapper"
+                key="formField-31-textWrapper"
               >
                 <div
                   className="css-1"
                 >
                   <span
-                    id="formField-16-labelText"
+                    id="formField-31-labelText"
                   >
                     نموذج
                   </span>
@@ -2159,7 +2159,7 @@ exports[`FormField demo examples rtl 1`] = `
               <TextInput
                 defaultValue="مرحبا بالعالم"
                 iconStart={<IconBackspace />}
-                key="formField-16-control"
+                key="formField-31-control"
                 required={true}
               >
                 <TextInput
@@ -2286,12 +2286,12 @@ exports[`FormField demo examples rtl 1`] = `
 </div>
 `;
 
-exports[`FormField demo examples secondaryText 1`] = `
+exports[`FormField demo examples Snapshots: secondaryText 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -2363,7 +2363,7 @@ exports[`FormField demo examples secondaryText 1`] = `
 [data-css-4] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -2404,7 +2404,7 @@ exports[`FormField demo examples secondaryText 1`] = `
 .css-4[data-simulate-focus] > div:last-child,
 [data-css-4][data-simulate-focus] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-4:active > div:last-child,
@@ -2412,7 +2412,7 @@ exports[`FormField demo examples secondaryText 1`] = `
 .css-4[data-simulate-active] > div:last-child,
 [data-css-4][data-simulate-active] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-4 [role="img"],
@@ -2487,12 +2487,12 @@ exports[`FormField demo examples secondaryText 1`] = `
 .css-15[data-simulate-focus] ~ div:last-child,
 [data-css-15][data-simulate-focus] ~ div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-29,
 [data-css-29] {
-  background-color: #fff;
+  background-color: #ffffff;
   border-color: #c8d1e0;
   border-radius: 0.1875em;
   border-style: solid;
@@ -2524,13 +2524,13 @@ exports[`FormField demo examples secondaryText 1`] = `
     >
       <label>
         <glamorous(div)
-          key="formField-5-textWrapper"
+          key="formField-9-textWrapper"
         >
           <div
             className="css-1"
           >
             <span
-              id="formField-5-labelText"
+              id="formField-9-labelText"
             >
               Name
             </span>
@@ -2546,7 +2546,7 @@ exports[`FormField demo examples secondaryText 1`] = `
           </div>
         </glamorous(div)>
         <TextInput
-          key="formField-5-control"
+          key="formField-9-control"
         >
           <TextInput
             control={[Function]}
@@ -2627,12 +2627,12 @@ exports[`FormField demo examples secondaryText 1`] = `
 </FormField>
 `;
 
-exports[`FormField demo examples validation 1`] = `
+exports[`FormField demo examples Snapshots: validation 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -2704,7 +2704,7 @@ exports[`FormField demo examples validation 1`] = `
 [data-css-4] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -2745,7 +2745,7 @@ exports[`FormField demo examples validation 1`] = `
 .css-4[data-simulate-focus] > div:last-child,
 [data-css-4][data-simulate-focus] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-4:active > div:last-child,
@@ -2753,7 +2753,7 @@ exports[`FormField demo examples validation 1`] = `
 .css-4[data-simulate-active] > div:last-child,
 [data-css-4][data-simulate-active] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-4 [role="img"],
@@ -2828,12 +2828,12 @@ exports[`FormField demo examples validation 1`] = `
 .css-15[data-simulate-focus] ~ div:last-child,
 [data-css-15][data-simulate-focus] ~ div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
 }
 
 .css-29,
 [data-css-29] {
-  background-color: #fff;
+  background-color: #ffffff;
   border-color: #c8d1e0;
   border-radius: 0.1875em;
   border-style: solid;
@@ -2857,7 +2857,7 @@ exports[`FormField demo examples validation 1`] = `
 [data-css-31] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -2892,7 +2892,7 @@ exports[`FormField demo examples validation 1`] = `
 .css-31[data-simulate-focus],
 [data-css-31][data-simulate-focus] {
   background-color: #ebeff5;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
   color: #333840;
   text-decoration: none;
 }
@@ -3007,13 +3007,13 @@ exports[`FormField demo examples validation 1`] = `
             >
               <label>
                 <glamorous(div)
-                  key="formField-15-textWrapper"
+                  key="formField-29-textWrapper"
                 >
                   <div
                     className="css-1"
                   >
                     <span
-                      id="formField-15-labelText"
+                      id="formField-29-labelText"
                     >
                       Example
                     </span>
@@ -3028,7 +3028,7 @@ exports[`FormField demo examples validation 1`] = `
                 </glamorous(div)>
                 <TextInput
                   inputRef={[Function]}
-                  key="formField-15-control"
+                  key="formField-29-control"
                   onChange={[Function]}
                   required={true}
                   value=""
@@ -3170,12 +3170,12 @@ exports[`FormField demo examples validation 1`] = `
 </Component>
 `;
 
-exports[`FormField demo examples variants 1`] = `
+exports[`FormField demo examples Snapshots: variants 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -3247,7 +3247,7 @@ exports[`FormField demo examples variants 1`] = `
 [data-css-4] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -3288,7 +3288,7 @@ exports[`FormField demo examples variants 1`] = `
 .css-4[data-simulate-focus] > div:last-child,
 [data-css-4][data-simulate-focus] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #20693d;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #20693d;
 }
 
 .css-4:active > div:last-child,
@@ -3296,7 +3296,7 @@ exports[`FormField demo examples variants 1`] = `
 .css-4[data-simulate-active] > div:last-child,
 [data-css-4][data-simulate-active] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #20693d;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #20693d;
 }
 
 .css-4 [role="img"],
@@ -3371,7 +3371,7 @@ exports[`FormField demo examples variants 1`] = `
 .css-15[data-simulate-focus] ~ div:last-child,
 [data-css-15][data-simulate-focus] ~ div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #20693d;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #20693d;
 }
 
 .css-29,
@@ -3384,7 +3384,7 @@ exports[`FormField demo examples variants 1`] = `
 
 .css-30,
 [data-css-30] {
-  background-color: #fff;
+  background-color: #ffffff;
   border-color: #2a854e;
   border-radius: 0.1875em;
   border-style: solid;
@@ -3436,7 +3436,7 @@ exports[`FormField demo examples variants 1`] = `
 [data-css-34] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -3477,7 +3477,7 @@ exports[`FormField demo examples variants 1`] = `
 .css-34[data-simulate-focus] > div:last-child,
 [data-css-34][data-simulate-focus] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #8a4d03;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #8a4d03;
 }
 
 .css-34:active > div:last-child,
@@ -3485,7 +3485,7 @@ exports[`FormField demo examples variants 1`] = `
 .css-34[data-simulate-active] > div:last-child,
 [data-css-34][data-simulate-active] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #8a4d03;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #8a4d03;
 }
 
 .css-34 [role="img"],
@@ -3560,12 +3560,12 @@ exports[`FormField demo examples variants 1`] = `
 .css-45[data-simulate-focus] ~ div:last-child,
 [data-css-45][data-simulate-focus] ~ div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #8a4d03;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #8a4d03;
 }
 
 .css-59,
 [data-css-59] {
-  background-color: #fff;
+  background-color: #ffffff;
   border-color: #ad5f00;
   border-radius: 0.1875em;
   border-style: solid;
@@ -3617,7 +3617,7 @@ exports[`FormField demo examples variants 1`] = `
 [data-css-63] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -3658,7 +3658,7 @@ exports[`FormField demo examples variants 1`] = `
 .css-63[data-simulate-focus] > div:last-child,
 [data-css-63][data-simulate-focus] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #b80d0d;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #b80d0d;
 }
 
 .css-63:active > div:last-child,
@@ -3666,7 +3666,7 @@ exports[`FormField demo examples variants 1`] = `
 .css-63[data-simulate-active] > div:last-child,
 [data-css-63][data-simulate-active] > div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #b80d0d;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #b80d0d;
 }
 
 .css-63 [role="img"],
@@ -3741,12 +3741,12 @@ exports[`FormField demo examples variants 1`] = `
 .css-74[data-simulate-focus] ~ div:last-child,
 [data-css-74][data-simulate-focus] ~ div:last-child {
   border-color: #c8d1e0;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #b80d0d;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #b80d0d;
 }
 
 .css-88,
 [data-css-88] {
-  background-color: #fff;
+  background-color: #ffffff;
   border-color: #de1b1b;
   border-radius: 0.1875em;
   border-style: solid;
@@ -3783,28 +3783,28 @@ exports[`FormField demo examples variants 1`] = `
         >
           <label>
             <glamorous(div)
-              key="formField-7-textWrapper"
+              key="formField-13-textWrapper"
             >
               <div
                 className="css-1"
               >
                 <span
-                  id="formField-7-labelText"
+                  id="formField-13-labelText"
                 >
                   Success
                 </span>
               </div>
             </glamorous(div)>
             <TextInput
-              aria-describedby="formField-7-caption"
-              key="formField-7-control"
+              aria-describedby="formField-13-caption"
+              key="formField-13-control"
               variant="success"
             >
               <TextInput
                 control={[Function]}
                 controlProps={
                   Object {
-                    "aria-describedby": "formField-7-caption",
+                    "aria-describedby": "formField-13-caption",
                     "aria-invalid": undefined,
                     "aria-required": undefined,
                     "controlRef": undefined,
@@ -3822,7 +3822,7 @@ exports[`FormField demo examples variants 1`] = `
                   control={[Function]}
                   controlProps={
                     Object {
-                      "aria-describedby": "formField-7-caption",
+                      "aria-describedby": "formField-13-caption",
                       "aria-invalid": undefined,
                       "aria-required": undefined,
                       "controlRef": undefined,
@@ -3844,10 +3844,10 @@ exports[`FormField demo examples variants 1`] = `
                       className="css-4"
                     >
                       <glamorous(glamorous(input))
-                        aria-describedby="formField-7-caption"
+                        aria-describedby="formField-13-caption"
                         controlPropsIn={
                           Object {
-                            "aria-describedby": "formField-7-caption",
+                            "aria-describedby": "formField-13-caption",
                             "aria-invalid": undefined,
                             "aria-required": undefined,
                             "controlRef": undefined,
@@ -3863,7 +3863,7 @@ exports[`FormField demo examples variants 1`] = `
                         variant="success"
                       >
                         <input
-                          aria-describedby="formField-7-caption"
+                          aria-describedby="formField-13-caption"
                           className="css-15"
                           size="large"
                           type="text"
@@ -3914,12 +3914,12 @@ exports[`FormField demo examples variants 1`] = `
           </label>
           <glamorous(div)
             caption="This is help text"
-            id="formField-7-caption"
+            id="formField-13-caption"
             variant="success"
           >
             <div
               className="css-31"
-              id="formField-7-caption"
+              id="formField-13-caption"
             >
               This is help text
             </div>
@@ -3940,28 +3940,28 @@ exports[`FormField demo examples variants 1`] = `
         >
           <label>
             <glamorous(div)
-              key="formField-9-textWrapper"
+              key="formField-15-textWrapper"
             >
               <div
                 className="css-1"
               >
                 <span
-                  id="formField-9-labelText"
+                  id="formField-15-labelText"
                 >
                   Warning
                 </span>
               </div>
             </glamorous(div)>
             <TextInput
-              aria-describedby="formField-9-caption"
-              key="formField-9-control"
+              aria-describedby="formField-15-caption"
+              key="formField-15-control"
               variant="warning"
             >
               <TextInput
                 control={[Function]}
                 controlProps={
                   Object {
-                    "aria-describedby": "formField-9-caption",
+                    "aria-describedby": "formField-15-caption",
                     "aria-invalid": undefined,
                     "aria-required": undefined,
                     "controlRef": undefined,
@@ -3979,7 +3979,7 @@ exports[`FormField demo examples variants 1`] = `
                   control={[Function]}
                   controlProps={
                     Object {
-                      "aria-describedby": "formField-9-caption",
+                      "aria-describedby": "formField-15-caption",
                       "aria-invalid": undefined,
                       "aria-required": undefined,
                       "controlRef": undefined,
@@ -4001,10 +4001,10 @@ exports[`FormField demo examples variants 1`] = `
                       className="css-34"
                     >
                       <glamorous(glamorous(input))
-                        aria-describedby="formField-9-caption"
+                        aria-describedby="formField-15-caption"
                         controlPropsIn={
                           Object {
-                            "aria-describedby": "formField-9-caption",
+                            "aria-describedby": "formField-15-caption",
                             "aria-invalid": undefined,
                             "aria-required": undefined,
                             "controlRef": undefined,
@@ -4020,7 +4020,7 @@ exports[`FormField demo examples variants 1`] = `
                         variant="warning"
                       >
                         <input
-                          aria-describedby="formField-9-caption"
+                          aria-describedby="formField-15-caption"
                           className="css-45"
                           size="large"
                           type="text"
@@ -4071,12 +4071,12 @@ exports[`FormField demo examples variants 1`] = `
           </label>
           <glamorous(div)
             caption="This is help text"
-            id="formField-9-caption"
+            id="formField-15-caption"
             variant="warning"
           >
             <div
               className="css-60"
-              id="formField-9-caption"
+              id="formField-15-caption"
             >
               This is help text
             </div>
@@ -4097,28 +4097,28 @@ exports[`FormField demo examples variants 1`] = `
         >
           <label>
             <glamorous(div)
-              key="formField-11-textWrapper"
+              key="formField-17-textWrapper"
             >
               <div
                 className="css-1"
               >
                 <span
-                  id="formField-11-labelText"
+                  id="formField-17-labelText"
                 >
                   Danger
                 </span>
               </div>
             </glamorous(div)>
             <TextInput
-              aria-describedby="formField-11-caption"
-              key="formField-11-control"
+              aria-describedby="formField-17-caption"
+              key="formField-17-control"
               variant="danger"
             >
               <TextInput
                 control={[Function]}
                 controlProps={
                   Object {
-                    "aria-describedby": "formField-11-caption",
+                    "aria-describedby": "formField-17-caption",
                     "aria-invalid": undefined,
                     "aria-required": undefined,
                     "controlRef": undefined,
@@ -4136,7 +4136,7 @@ exports[`FormField demo examples variants 1`] = `
                   control={[Function]}
                   controlProps={
                     Object {
-                      "aria-describedby": "formField-11-caption",
+                      "aria-describedby": "formField-17-caption",
                       "aria-invalid": undefined,
                       "aria-required": undefined,
                       "controlRef": undefined,
@@ -4158,10 +4158,10 @@ exports[`FormField demo examples variants 1`] = `
                       className="css-63"
                     >
                       <glamorous(glamorous(input))
-                        aria-describedby="formField-11-caption"
+                        aria-describedby="formField-17-caption"
                         controlPropsIn={
                           Object {
-                            "aria-describedby": "formField-11-caption",
+                            "aria-describedby": "formField-17-caption",
                             "aria-invalid": undefined,
                             "aria-required": undefined,
                             "controlRef": undefined,
@@ -4177,7 +4177,7 @@ exports[`FormField demo examples variants 1`] = `
                         variant="danger"
                       >
                         <input
-                          aria-describedby="formField-11-caption"
+                          aria-describedby="formField-17-caption"
                           className="css-74"
                           size="large"
                           type="text"
@@ -4228,12 +4228,12 @@ exports[`FormField demo examples variants 1`] = `
           </label>
           <glamorous(div)
             caption="This is help text"
-            id="formField-11-caption"
+            id="formField-17-caption"
             variant="danger"
           >
             <div
               className="css-89"
-              id="formField-11-caption"
+              id="formField-17-caption"
             >
               This is help text
             </div>

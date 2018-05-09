@@ -1,8 +1,9 @@
 /* @flow */
 import React from 'react';
 import { createStyledComponent } from '../../library/styles';
-import { Table, TableCell, TableHeaderCell, TableRow } from './Table';
+import { Table as _Table, TableCell, TableHeaderCell, TableRow } from './Table';
 import colorable from 'colorable';
+import { darken, getLuminance } from 'polished';
 
 type Props = {
   baseTheme?: Object,
@@ -15,13 +16,20 @@ const Root = createStyledComponent('div', ({ theme }) => ({
   margin: `${theme.space_stack_xl} 0 0`,
   overflowX: 'auto'
 }));
+const Table = createStyledComponent(_Table, {
+  tableLayout: 'fixed'
+});
 const Name = createStyledComponent('span', ({ theme }) => ({
   fontWeight: theme.fontWeight_semiBold
 }));
 const Value = createStyledComponent('span', ({ color, theme }) => {
   if (color) {
     return {
-      border: color === '#fff' ? `1px solid ${theme.color_gray_50}` : 'none',
+      border: `1px solid ${
+        getLuminance(color) > getLuminance('#ccc')
+          ? darken(0.3, color)
+          : darken(0.1, color)
+      }`,
       backgroundColor: color,
       borderRadius: theme.borderRadius_1,
       color: a11yColor(color),

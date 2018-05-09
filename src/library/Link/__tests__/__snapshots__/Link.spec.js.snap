@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Link demo examples basic 1`] = `
+exports[`Link demo examples Snapshots: basic 1`] = `
 .css-0,
 [data-css-0] {
-  font-family: Open Sans;
+  font-family: "Open Sans";
 }
 
 .css-1,
@@ -184,12 +184,12 @@ exports[`Link demo examples basic 1`] = `
 </glamorous(div)>
 `;
 
-exports[`Link demo examples button 1`] = `
+exports[`Link demo examples Snapshots: button 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -224,7 +224,7 @@ exports[`Link demo examples button 1`] = `
 .css-0[data-simulate-focus],
 [data-css-0][data-simulate-focus] {
   background-color: #ebeff5;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
   color: #333840;
   text-decoration: none;
 }
@@ -357,7 +357,7 @@ exports[`Link demo examples button 1`] = `
 </Button>
 `;
 
-exports[`Link demo examples children 1`] = `
+exports[`Link demo examples Snapshots: children 1`] = `
 .css-0,
 [data-css-0] {
   color: #3272d9;
@@ -415,10 +415,10 @@ exports[`Link demo examples children 1`] = `
 </Link>
 `;
 
-exports[`Link demo examples other 1`] = `
+exports[`Link demo examples Snapshots: other 1`] = `
 .css-0,
 [data-css-0] {
-  font-family: Open Sans;
+  font-family: "Open Sans";
 }
 
 .css-1,
@@ -507,7 +507,7 @@ exports[`Link demo examples other 1`] = `
 </glamorous(div)>
 `;
 
-exports[`Link demo examples states 1`] = `
+exports[`Link demo examples Snapshots: states 1`] = `
 .css-0,
 [data-css-0] {
   color: #3272d9;
@@ -540,7 +540,7 @@ exports[`Link demo examples states 1`] = `
 
 .css-10,
 [data-css-10] {
-  font-family: Open Sans;
+  font-family: "Open Sans";
 }
 
 .css-10 > a,
@@ -1328,7 +1328,7 @@ exports[`Link demo examples states 1`] = `
 </glamorous(glamorous(div))>
 `;
 
-exports[`Link demo examples variants 1`] = `
+exports[`Link demo examples Snapshots: variants 1`] = `
 .css-0,
 [data-css-0] {
   color: #3272d9;
@@ -1361,7 +1361,7 @@ exports[`Link demo examples variants 1`] = `
 
 .css-10,
 [data-css-10] {
-  font-family: Open Sans;
+  font-family: "Open Sans";
 }
 
 .css-10 > a,

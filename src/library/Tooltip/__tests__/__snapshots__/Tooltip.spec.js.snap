@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tooltip demo examples basic 1`] = `
+exports[`Tooltip demo examples Snapshots: basic 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -31,7 +31,7 @@ exports[`Tooltip demo examples basic 1`] = `
 [data-css-2] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -66,7 +66,7 @@ exports[`Tooltip demo examples basic 1`] = `
 .css-2[data-simulate-focus],
 [data-css-2][data-simulate-focus] {
   background-color: #ebeff5;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
   color: #333840;
   text-decoration: none;
 }
@@ -147,10 +147,8 @@ exports[`Tooltip demo examples basic 1`] = `
   hasArrow={true}
 >
   <ThemedComponent
-    content="Edit your account settings"
+    content={[Function]}
     focusTriggerOnClose={false}
-    getContentProps={[Function]}
-    getTriggerProps={[Function]}
     hasArrow={true}
     id="tooltip-1"
     isOpen={false}
@@ -158,10 +156,8 @@ exports[`Tooltip demo examples basic 1`] = `
     onOpen={[Function]}
   >
     <Themed(Popover)
-      content="Edit your account settings"
+      content={[Function]}
       focusTriggerOnClose={false}
-      getContentProps={[Function]}
-      getTriggerProps={[Function]}
       hasArrow={true}
       id="tooltip-1"
       isOpen={false}
@@ -171,23 +167,18 @@ exports[`Tooltip demo examples basic 1`] = `
       <ThemeProvider>
         <ThemeProvider>
           <Popover
-            content="Edit your account settings"
+            content={[Function]}
             focusTriggerOnClose={false}
-            getContentProps={[Function]}
-            getTriggerProps={[Function]}
             hasArrow={true}
             id="tooltip-1"
             isOpen={false}
             onClose={[Function]}
             onOpen={[Function]}
             placement="bottom"
-            wrapContent={true}
           >
             <Popover
-              content="Edit your account settings"
+              content={[Function]}
               focusTriggerOnClose={false}
-              getContentProps={[Function]}
-              getTriggerProps={[Function]}
               hasArrow={true}
               id="tooltip-1"
               isOpen={false}
@@ -195,7 +186,6 @@ exports[`Tooltip demo examples basic 1`] = `
               onOpen={[Function]}
               placement="bottom"
               tag="span"
-              wrapContent={true}
             >
               <Manager
                 className="css-0"
@@ -209,13 +199,22 @@ exports[`Tooltip demo examples basic 1`] = `
                   <PopoverTrigger
                     aria-describedby="tooltip-1-content"
                     aria-owns="tooltip-1-content"
+                    element="button"
+                    iconStart={
+                      <IconPerson
+                        title="account settings"
+                      />
+                    }
                     onBlur={[Function]}
                     onClick={[Function]}
                     onFocus={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                     role="button"
+                    size="large"
                     tabIndex={0}
+                    type="button"
+                    variant="regular"
                   >
                     <PopoverTrigger
                       component="span"
@@ -338,11 +337,11 @@ exports[`Tooltip demo examples basic 1`] = `
 </Tooltip>
 `;
 
-exports[`Tooltip demo examples controlled 1`] = `
+exports[`Tooltip demo examples Snapshots: controlled 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -385,8 +384,8 @@ exports[`Tooltip demo examples controlled 1`] = `
 .css-3,
 [data-css-3] {
   box-sizing: border-box;
-  color: #fff;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #ffffff;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -447,7 +446,7 @@ exports[`Tooltip demo examples controlled 1`] = `
 [data-css-10] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -482,7 +481,7 @@ exports[`Tooltip demo examples controlled 1`] = `
 .css-10[data-simulate-focus],
 [data-css-10][data-simulate-focus] {
   background-color: #ebeff5;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
   color: #333840;
   text-decoration: none;
 }
@@ -586,24 +585,20 @@ exports[`Tooltip demo examples controlled 1`] = `
         placement="top"
       >
         <ThemedComponent
-          content="This tooltip is controlled"
+          content={[Function]}
           focusTriggerOnClose={false}
-          getContentProps={[Function]}
-          getTriggerProps={[Function]}
           hasArrow={true}
-          id="tooltip-11"
+          id="tooltip-21"
           isOpen={true}
           onClose={[Function]}
           onOpen={[Function]}
           placement="top"
         >
           <Themed(Popover)
-            content="This tooltip is controlled"
+            content={[Function]}
             focusTriggerOnClose={false}
-            getContentProps={[Function]}
-            getTriggerProps={[Function]}
             hasArrow={true}
-            id="tooltip-11"
+            id="tooltip-21"
             isOpen={true}
             onClose={[Function]}
             onOpen={[Function]}
@@ -612,51 +607,49 @@ exports[`Tooltip demo examples controlled 1`] = `
             <ThemeProvider>
               <ThemeProvider>
                 <Popover
-                  content="This tooltip is controlled"
+                  content={[Function]}
                   focusTriggerOnClose={false}
-                  getContentProps={[Function]}
-                  getTriggerProps={[Function]}
                   hasArrow={true}
-                  id="tooltip-11"
+                  id="tooltip-21"
                   isOpen={true}
                   onClose={[Function]}
                   onOpen={[Function]}
                   placement="top"
-                  wrapContent={true}
                 >
                   <Popover
-                    content="This tooltip is controlled"
+                    content={[Function]}
                     focusTriggerOnClose={false}
-                    getContentProps={[Function]}
-                    getTriggerProps={[Function]}
                     hasArrow={true}
-                    id="tooltip-11"
+                    id="tooltip-21"
                     isOpen={true}
                     onClose={[Function]}
                     onOpen={[Function]}
                     placement="top"
                     tag="span"
-                    wrapContent={true}
                   >
                     <Manager
                       className="css-0"
-                      id="tooltip-11"
+                      id="tooltip-21"
                       tag="span"
                     >
                       <span
                         className="css-0"
-                        id="tooltip-11"
+                        id="tooltip-21"
                       >
                         <PopoverTrigger
-                          aria-describedby="tooltip-11-content"
-                          aria-owns="tooltip-11-content"
+                          aria-describedby="tooltip-21-content"
+                          aria-owns="tooltip-21-content"
+                          element="button"
                           onBlur={[Function]}
                           onClick={[Function]}
                           onFocus={[Function]}
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                           role="button"
+                          size="large"
                           tabIndex={0}
+                          type="button"
+                          variant="regular"
                         >
                           <PopoverTrigger
                             component="span"
@@ -669,8 +662,8 @@ exports[`Tooltip demo examples controlled 1`] = `
                                 className="css-1"
                               >
                                 <Button
-                                  aria-describedby="tooltip-11-content"
-                                  aria-owns="tooltip-11-content"
+                                  aria-describedby="tooltip-21-content"
+                                  aria-owns="tooltip-21-content"
                                   element="button"
                                   onBlur={[Function]}
                                   onClick={[Function]}
@@ -684,8 +677,8 @@ exports[`Tooltip demo examples controlled 1`] = `
                                   variant="regular"
                                 >
                                   <glamorous(button)
-                                    aria-describedby="tooltip-11-content"
-                                    aria-owns="tooltip-11-content"
+                                    aria-describedby="tooltip-21-content"
+                                    aria-owns="tooltip-21-content"
                                     element="button"
                                     onBlur={[Function]}
                                     onClick={[Function]}
@@ -700,8 +693,8 @@ exports[`Tooltip demo examples controlled 1`] = `
                                     variant="regular"
                                   >
                                     <button
-                                      aria-describedby="tooltip-11-content"
-                                      aria-owns="tooltip-11-content"
+                                      aria-describedby="tooltip-21-content"
+                                      aria-owns="tooltip-21-content"
                                       className="css-10"
                                       onBlur={[Function]}
                                       onClick={[Function]}
@@ -737,14 +730,14 @@ exports[`Tooltip demo examples controlled 1`] = `
                         <PopoverContent
                           aria-live="polite"
                           hasArrow={true}
-                          id="tooltip-11-content"
+                          id="tooltip-21-content"
                           onBlur={[Function]}
                           placement="top"
                           role="tooltip"
                         >
                           <PopoverContent
                             aria-live="polite"
-                            id="tooltip-11-content"
+                            id="tooltip-21-content"
                             onBlur={[Function]}
                             placement="top"
                             role="tooltip"
@@ -752,7 +745,7 @@ exports[`Tooltip demo examples controlled 1`] = `
                             <ThemedComponent
                               aria-live="polite"
                               className="css-3"
-                              id="tooltip-11-content"
+                              id="tooltip-21-content"
                               onBlur={[Function]}
                               placement="top"
                               role="tooltip"
@@ -760,7 +753,7 @@ exports[`Tooltip demo examples controlled 1`] = `
                               <RtlPopper
                                 aria-live="polite"
                                 className="css-3"
-                                id="tooltip-11-content"
+                                id="tooltip-21-content"
                                 onBlur={[Function]}
                                 placement="top"
                                 role="tooltip"
@@ -774,7 +767,7 @@ exports[`Tooltip demo examples controlled 1`] = `
                                     "PopoverContent_borderColor": "#434a54",
                                     "PopoverContent_borderRadius": "0.1875em",
                                     "PopoverContent_boxShadow": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
-                                    "PopoverContent_color": "#fff",
+                                    "PopoverContent_color": "#ffffff",
                                     "PopoverContent_maxWidth": "18em",
                                     "PopoverContent_paddingVertical": "0.5em",
                                     "PopoverContent_zIndex": 100,
@@ -836,10 +829,10 @@ exports[`Tooltip demo examples controlled 1`] = `
                                     "boxShadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
                                     "boxShadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
                                     "boxShadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
-                                    "boxShadow_focusInner": "#fff",
-                                    "breakpoint_medium": 768,
-                                    "breakpoint_narrow": 512,
-                                    "breakpoint_wide": 1024,
+                                    "boxShadow_focusInner": "#ffffff",
+                                    "breakpoint_medium": "768px",
+                                    "breakpoint_narrow": "512px",
+                                    "breakpoint_wide": "1024px",
                                     "color": "#333840",
                                     "color_black": "#1d1f24",
                                     "color_danger": "#de1b1b",
@@ -857,9 +850,9 @@ exports[`Tooltip demo examples controlled 1`] = `
                                     "color_gray_70": "#707a8a",
                                     "color_gray_80": "#58606e",
                                     "color_gray_90": "#434a54",
-                                    "color_inverted": "#fff",
+                                    "color_inverted": "#ffffff",
                                     "color_mouse": "#58606e",
-                                    "color_primary": "#fff",
+                                    "color_primary": "#ffffff",
                                     "color_readOnly": "#58606e",
                                     "color_required": "#de1b1b",
                                     "color_success": "#2a854e",
@@ -884,12 +877,12 @@ exports[`Tooltip demo examples controlled 1`] = `
                                     "color_warning_active": "#8a4d03",
                                     "color_warning_focus": "#ad5f00",
                                     "color_warning_hover": "#cf7911",
-                                    "color_white": "#fff",
+                                    "color_white": "#ffffff",
                                     "direction": "ltr",
-                                    "fontFamily": "Open Sans",
+                                    "fontFamily": "\\"Open Sans\\"",
                                     "fontFamily_monospace": "\\"SF Mono\\", \\"Droid Sans Mono\\", \\"Source Code Pro\\", Monaco, Consolas, \\"Courier New\\", Courier, monospace",
                                     "fontFamily_system": "-apple-system, system-ui, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
-                                    "fontSize_base": 16,
+                                    "fontSize_base": "16px",
                                     "fontSize_mouse": "0.6875em",
                                     "fontSize_prose": "1em",
                                     "fontSize_ui": "0.875em",
@@ -920,17 +913,17 @@ exports[`Tooltip demo examples controlled 1`] = `
                                     "icon_color_success": "#2a854e",
                                     "icon_color_theme": "#3272d9",
                                     "icon_color_warning": "#ad5f00",
-                                    "input_backgroundColor": "#fff",
+                                    "input_backgroundColor": "#ffffff",
                                     "input_backgroundColor_disabled": "#ebeff5",
+                                    "input_color_placeholder": "#8e99ab",
                                     "lineHeight": 1.25,
                                     "lineHeight_heading": 1.25,
                                     "lineHeight_heading_small": 1.5,
                                     "lineHeight_prose": 1.5,
-                                    "panel_backgroundColor": "#fff",
+                                    "panel_backgroundColor": "#ffffff",
                                     "panel_backgroundColor_inverted": "#434a54",
                                     "panel_borderColor": "#ebeff5",
                                     "panel_borderColor_inverted": "#434a54",
-                                    "placeholder_color": "#8e99ab",
                                     "size_jumbo": "3.25em",
                                     "size_large": "2.5em",
                                     "size_medium": "2em",
@@ -972,16 +965,17 @@ exports[`Tooltip demo examples controlled 1`] = `
                                   className="css-3"
                                   component="div"
                                   eventsEnabled={true}
-                                  id="tooltip-11-content"
+                                  id="tooltip-21-content"
                                   modifiers={Object {}}
                                   onBlur={[Function]}
                                   placement="top"
+                                  positionFixed={false}
                                   role="tooltip"
                                 >
                                   <div
                                     aria-live="polite"
                                     className="css-3"
-                                    id="tooltip-11-content"
+                                    id="tooltip-21-content"
                                     onBlur={[Function]}
                                     role="tooltip"
                                     style={
@@ -1112,12 +1106,12 @@ exports[`Tooltip demo examples controlled 1`] = `
 </App>
 `;
 
-exports[`Tooltip demo examples disabled 1`] = `
+exports[`Tooltip demo examples Snapshots: disabled 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -1152,7 +1146,7 @@ exports[`Tooltip demo examples disabled 1`] = `
 .css-0[data-simulate-focus],
 [data-css-0][data-simulate-focus] {
   background-color: #ebeff5;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
   color: #333840;
   text-decoration: none;
 }
@@ -1270,7 +1264,7 @@ exports[`Tooltip demo examples disabled 1`] = `
               >
                 <glamorous(svg)
                   aria-hidden={null}
-                  aria-labelledby="icon-title-icon-10"
+                  aria-labelledby="icon-title-icon-18"
                   role="img"
                   rtl={false}
                   size="1.5em"
@@ -1278,13 +1272,13 @@ exports[`Tooltip demo examples disabled 1`] = `
                 >
                   <svg
                     aria-hidden={null}
-                    aria-labelledby="icon-title-icon-10"
+                    aria-labelledby="icon-title-icon-18"
                     className="css-15"
                     role="img"
                     viewBox="0 0 24 24"
                   >
                     <title
-                      id="icon-title-icon-10"
+                      id="icon-title-icon-18"
                     >
                       account settings
                     </title>
@@ -1305,11 +1299,11 @@ exports[`Tooltip demo examples disabled 1`] = `
 </Tooltip>
 `;
 
-exports[`Tooltip demo examples overflow 1`] = `
+exports[`Tooltip demo examples Snapshots: overflow 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -1352,8 +1346,8 @@ exports[`Tooltip demo examples overflow 1`] = `
 .css-3,
 [data-css-3] {
   box-sizing: border-box;
-  color: #fff;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #ffffff;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -1421,7 +1415,7 @@ exports[`Tooltip demo examples overflow 1`] = `
 [data-css-11] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -1456,7 +1450,7 @@ exports[`Tooltip demo examples overflow 1`] = `
 .css-11[data-simulate-focus],
 [data-css-11][data-simulate-focus] {
   background-color: #ebeff5;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
   color: #333840;
   text-decoration: none;
 }
@@ -1544,24 +1538,20 @@ exports[`Tooltip demo examples overflow 1`] = `
       placement="top"
     >
       <ThemedComponent
-        content="Light years star stuff"
+        content={[Function]}
         focusTriggerOnClose={false}
-        getContentProps={[Function]}
-        getTriggerProps={[Function]}
         hasArrow={true}
-        id="tooltip-6"
+        id="tooltip-11"
         isOpen={true}
         onClose={[Function]}
         onOpen={[Function]}
         placement="top"
       >
         <Themed(Popover)
-          content="Light years star stuff"
+          content={[Function]}
           focusTriggerOnClose={false}
-          getContentProps={[Function]}
-          getTriggerProps={[Function]}
           hasArrow={true}
-          id="tooltip-6"
+          id="tooltip-11"
           isOpen={true}
           onClose={[Function]}
           onOpen={[Function]}
@@ -1570,51 +1560,49 @@ exports[`Tooltip demo examples overflow 1`] = `
           <ThemeProvider>
             <ThemeProvider>
               <Popover
-                content="Light years star stuff"
+                content={[Function]}
                 focusTriggerOnClose={false}
-                getContentProps={[Function]}
-                getTriggerProps={[Function]}
                 hasArrow={true}
-                id="tooltip-6"
+                id="tooltip-11"
                 isOpen={true}
                 onClose={[Function]}
                 onOpen={[Function]}
                 placement="top"
-                wrapContent={true}
               >
                 <Popover
-                  content="Light years star stuff"
+                  content={[Function]}
                   focusTriggerOnClose={false}
-                  getContentProps={[Function]}
-                  getTriggerProps={[Function]}
                   hasArrow={true}
-                  id="tooltip-6"
+                  id="tooltip-11"
                   isOpen={true}
                   onClose={[Function]}
                   onOpen={[Function]}
                   placement="top"
                   tag="span"
-                  wrapContent={true}
                 >
                   <Manager
                     className="css-0"
-                    id="tooltip-6"
+                    id="tooltip-11"
                     tag="span"
                   >
                     <span
                       className="css-0"
-                      id="tooltip-6"
+                      id="tooltip-11"
                     >
                       <PopoverTrigger
-                        aria-describedby="tooltip-6-content"
-                        aria-owns="tooltip-6-content"
+                        aria-describedby="tooltip-11-content"
+                        aria-owns="tooltip-11-content"
+                        element="button"
                         onBlur={[Function]}
                         onClick={[Function]}
                         onFocus={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
                         role="button"
+                        size="large"
                         tabIndex={0}
+                        type="button"
+                        variant="regular"
                       >
                         <PopoverTrigger
                           component="span"
@@ -1627,8 +1615,8 @@ exports[`Tooltip demo examples overflow 1`] = `
                               className="css-1"
                             >
                               <Button
-                                aria-describedby="tooltip-6-content"
-                                aria-owns="tooltip-6-content"
+                                aria-describedby="tooltip-11-content"
+                                aria-owns="tooltip-11-content"
                                 element="button"
                                 onBlur={[Function]}
                                 onClick={[Function]}
@@ -1642,8 +1630,8 @@ exports[`Tooltip demo examples overflow 1`] = `
                                 variant="regular"
                               >
                                 <glamorous(button)
-                                  aria-describedby="tooltip-6-content"
-                                  aria-owns="tooltip-6-content"
+                                  aria-describedby="tooltip-11-content"
+                                  aria-owns="tooltip-11-content"
                                   element="button"
                                   onBlur={[Function]}
                                   onClick={[Function]}
@@ -1658,8 +1646,8 @@ exports[`Tooltip demo examples overflow 1`] = `
                                   variant="regular"
                                 >
                                   <button
-                                    aria-describedby="tooltip-6-content"
-                                    aria-owns="tooltip-6-content"
+                                    aria-describedby="tooltip-11-content"
+                                    aria-owns="tooltip-11-content"
                                     className="css-11"
                                     onBlur={[Function]}
                                     onClick={[Function]}
@@ -1695,14 +1683,14 @@ exports[`Tooltip demo examples overflow 1`] = `
                       <PopoverContent
                         aria-live="polite"
                         hasArrow={true}
-                        id="tooltip-6-content"
+                        id="tooltip-11-content"
                         onBlur={[Function]}
                         placement="top"
                         role="tooltip"
                       >
                         <PopoverContent
                           aria-live="polite"
-                          id="tooltip-6-content"
+                          id="tooltip-11-content"
                           onBlur={[Function]}
                           placement="top"
                           role="tooltip"
@@ -1710,7 +1698,7 @@ exports[`Tooltip demo examples overflow 1`] = `
                           <ThemedComponent
                             aria-live="polite"
                             className="css-3"
-                            id="tooltip-6-content"
+                            id="tooltip-11-content"
                             onBlur={[Function]}
                             placement="top"
                             role="tooltip"
@@ -1718,7 +1706,7 @@ exports[`Tooltip demo examples overflow 1`] = `
                             <RtlPopper
                               aria-live="polite"
                               className="css-3"
-                              id="tooltip-6-content"
+                              id="tooltip-11-content"
                               onBlur={[Function]}
                               placement="top"
                               role="tooltip"
@@ -1732,7 +1720,7 @@ exports[`Tooltip demo examples overflow 1`] = `
                                   "PopoverContent_borderColor": "#434a54",
                                   "PopoverContent_borderRadius": "0.1875em",
                                   "PopoverContent_boxShadow": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
-                                  "PopoverContent_color": "#fff",
+                                  "PopoverContent_color": "#ffffff",
                                   "PopoverContent_maxWidth": "18em",
                                   "PopoverContent_paddingVertical": "0.5em",
                                   "PopoverContent_zIndex": 100,
@@ -1794,10 +1782,10 @@ exports[`Tooltip demo examples overflow 1`] = `
                                   "boxShadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
                                   "boxShadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
                                   "boxShadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
-                                  "boxShadow_focusInner": "#fff",
-                                  "breakpoint_medium": 768,
-                                  "breakpoint_narrow": 512,
-                                  "breakpoint_wide": 1024,
+                                  "boxShadow_focusInner": "#ffffff",
+                                  "breakpoint_medium": "768px",
+                                  "breakpoint_narrow": "512px",
+                                  "breakpoint_wide": "1024px",
                                   "color": "#333840",
                                   "color_black": "#1d1f24",
                                   "color_danger": "#de1b1b",
@@ -1815,9 +1803,9 @@ exports[`Tooltip demo examples overflow 1`] = `
                                   "color_gray_70": "#707a8a",
                                   "color_gray_80": "#58606e",
                                   "color_gray_90": "#434a54",
-                                  "color_inverted": "#fff",
+                                  "color_inverted": "#ffffff",
                                   "color_mouse": "#58606e",
-                                  "color_primary": "#fff",
+                                  "color_primary": "#ffffff",
                                   "color_readOnly": "#58606e",
                                   "color_required": "#de1b1b",
                                   "color_success": "#2a854e",
@@ -1842,12 +1830,12 @@ exports[`Tooltip demo examples overflow 1`] = `
                                   "color_warning_active": "#8a4d03",
                                   "color_warning_focus": "#ad5f00",
                                   "color_warning_hover": "#cf7911",
-                                  "color_white": "#fff",
+                                  "color_white": "#ffffff",
                                   "direction": "ltr",
-                                  "fontFamily": "Open Sans",
+                                  "fontFamily": "\\"Open Sans\\"",
                                   "fontFamily_monospace": "\\"SF Mono\\", \\"Droid Sans Mono\\", \\"Source Code Pro\\", Monaco, Consolas, \\"Courier New\\", Courier, monospace",
                                   "fontFamily_system": "-apple-system, system-ui, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
-                                  "fontSize_base": 16,
+                                  "fontSize_base": "16px",
                                   "fontSize_mouse": "0.6875em",
                                   "fontSize_prose": "1em",
                                   "fontSize_ui": "0.875em",
@@ -1878,17 +1866,17 @@ exports[`Tooltip demo examples overflow 1`] = `
                                   "icon_color_success": "#2a854e",
                                   "icon_color_theme": "#3272d9",
                                   "icon_color_warning": "#ad5f00",
-                                  "input_backgroundColor": "#fff",
+                                  "input_backgroundColor": "#ffffff",
                                   "input_backgroundColor_disabled": "#ebeff5",
+                                  "input_color_placeholder": "#8e99ab",
                                   "lineHeight": 1.25,
                                   "lineHeight_heading": 1.25,
                                   "lineHeight_heading_small": 1.5,
                                   "lineHeight_prose": 1.5,
-                                  "panel_backgroundColor": "#fff",
+                                  "panel_backgroundColor": "#ffffff",
                                   "panel_backgroundColor_inverted": "#434a54",
                                   "panel_borderColor": "#ebeff5",
                                   "panel_borderColor_inverted": "#434a54",
-                                  "placeholder_color": "#8e99ab",
                                   "size_jumbo": "3.25em",
                                   "size_large": "2.5em",
                                   "size_medium": "2em",
@@ -1930,16 +1918,17 @@ exports[`Tooltip demo examples overflow 1`] = `
                                 className="css-3"
                                 component="div"
                                 eventsEnabled={true}
-                                id="tooltip-6-content"
+                                id="tooltip-11-content"
                                 modifiers={Object {}}
                                 onBlur={[Function]}
                                 placement="top"
+                                positionFixed={false}
                                 role="tooltip"
                               >
                                 <div
                                   aria-live="polite"
                                   className="css-3"
-                                  id="tooltip-6-content"
+                                  id="tooltip-11-content"
                                   onBlur={[Function]}
                                   role="tooltip"
                                   style={
@@ -2031,11 +2020,11 @@ exports[`Tooltip demo examples overflow 1`] = `
 </glamorous(div)>
 `;
 
-exports[`Tooltip demo examples placement 1`] = `
+exports[`Tooltip demo examples Snapshots: placement 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -2086,8 +2075,8 @@ exports[`Tooltip demo examples placement 1`] = `
 .css-4,
 [data-css-4] {
   box-sizing: border-box;
-  color: #fff;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #ffffff;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -2164,7 +2153,7 @@ exports[`Tooltip demo examples placement 1`] = `
 [data-css-12] {
   box-sizing: border-box;
   color: #de1b1b;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -2199,7 +2188,7 @@ exports[`Tooltip demo examples placement 1`] = `
 .css-12[data-simulate-focus],
 [data-css-12][data-simulate-focus] {
   background-color: #ebeff5;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #b80d0d;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #b80d0d;
   color: #de1b1b;
   text-decoration: none;
 }
@@ -2261,24 +2250,20 @@ exports[`Tooltip demo examples placement 1`] = `
       placement="bottom"
     >
       <ThemedComponent
-        content="Light years star stuff harvesting star light citizens of distant epochs."
+        content={[Function]}
         focusTriggerOnClose={false}
-        getContentProps={[Function]}
-        getTriggerProps={[Function]}
         hasArrow={true}
-        id="tooltip-4"
+        id="tooltip-7"
         isOpen={true}
         onClose={[Function]}
         onOpen={[Function]}
         placement="bottom"
       >
         <Themed(Popover)
-          content="Light years star stuff harvesting star light citizens of distant epochs."
+          content={[Function]}
           focusTriggerOnClose={false}
-          getContentProps={[Function]}
-          getTriggerProps={[Function]}
           hasArrow={true}
-          id="tooltip-4"
+          id="tooltip-7"
           isOpen={true}
           onClose={[Function]}
           onOpen={[Function]}
@@ -2287,51 +2272,54 @@ exports[`Tooltip demo examples placement 1`] = `
           <ThemeProvider>
             <ThemeProvider>
               <Popover
-                content="Light years star stuff harvesting star light citizens of distant epochs."
+                content={[Function]}
                 focusTriggerOnClose={false}
-                getContentProps={[Function]}
-                getTriggerProps={[Function]}
                 hasArrow={true}
-                id="tooltip-4"
+                id="tooltip-7"
                 isOpen={true}
                 onClose={[Function]}
                 onOpen={[Function]}
                 placement="bottom"
-                wrapContent={true}
               >
                 <Popover
-                  content="Light years star stuff harvesting star light citizens of distant epochs."
+                  content={[Function]}
                   focusTriggerOnClose={false}
-                  getContentProps={[Function]}
-                  getTriggerProps={[Function]}
                   hasArrow={true}
-                  id="tooltip-4"
+                  id="tooltip-7"
                   isOpen={true}
                   onClose={[Function]}
                   onOpen={[Function]}
                   placement="bottom"
                   tag="span"
-                  wrapContent={true}
                 >
                   <Manager
                     className="css-0"
-                    id="tooltip-4"
+                    id="tooltip-7"
                     tag="span"
                   >
                     <span
                       className="css-0"
-                      id="tooltip-4"
+                      id="tooltip-7"
                     >
                       <PopoverTrigger
-                        aria-describedby="tooltip-4-content"
-                        aria-owns="tooltip-4-content"
+                        aria-describedby="tooltip-7-content"
+                        aria-owns="tooltip-7-content"
+                        element="button"
+                        iconStart={
+                          <IconDelete
+                            title="delete"
+                          />
+                        }
                         onBlur={[Function]}
                         onClick={[Function]}
                         onFocus={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
                         role="button"
+                        size="large"
                         tabIndex={0}
+                        type="button"
+                        variant="danger"
                       >
                         <PopoverTrigger
                           component="span"
@@ -2344,8 +2332,8 @@ exports[`Tooltip demo examples placement 1`] = `
                               className="css-1"
                             >
                               <Button
-                                aria-describedby="tooltip-4-content"
-                                aria-owns="tooltip-4-content"
+                                aria-describedby="tooltip-7-content"
+                                aria-owns="tooltip-7-content"
                                 element="button"
                                 iconStart={
                                   <IconDelete
@@ -2364,8 +2352,8 @@ exports[`Tooltip demo examples placement 1`] = `
                                 variant="danger"
                               >
                                 <glamorous(button)
-                                  aria-describedby="tooltip-4-content"
-                                  aria-owns="tooltip-4-content"
+                                  aria-describedby="tooltip-7-content"
+                                  aria-owns="tooltip-7-content"
                                   element="button"
                                   onBlur={[Function]}
                                   onClick={[Function]}
@@ -2379,8 +2367,8 @@ exports[`Tooltip demo examples placement 1`] = `
                                   variant="danger"
                                 >
                                   <button
-                                    aria-describedby="tooltip-4-content"
-                                    aria-owns="tooltip-4-content"
+                                    aria-describedby="tooltip-7-content"
+                                    aria-owns="tooltip-7-content"
                                     className="css-12"
                                     onBlur={[Function]}
                                     onClick={[Function]}
@@ -2407,7 +2395,7 @@ exports[`Tooltip demo examples placement 1`] = `
                                           >
                                             <glamorous(svg)
                                               aria-hidden={null}
-                                              aria-labelledby="icon-title-icon-5"
+                                              aria-labelledby="icon-title-icon-8"
                                               role="img"
                                               rtl={false}
                                               size="1.5em"
@@ -2415,13 +2403,13 @@ exports[`Tooltip demo examples placement 1`] = `
                                             >
                                               <svg
                                                 aria-hidden={null}
-                                                aria-labelledby="icon-title-icon-5"
+                                                aria-labelledby="icon-title-icon-8"
                                                 className="css-3"
                                                 role="img"
                                                 viewBox="0 0 24 24"
                                               >
                                                 <title
-                                                  id="icon-title-icon-5"
+                                                  id="icon-title-icon-8"
                                                 >
                                                   delete
                                                 </title>
@@ -2446,14 +2434,14 @@ exports[`Tooltip demo examples placement 1`] = `
                       <PopoverContent
                         aria-live="polite"
                         hasArrow={true}
-                        id="tooltip-4-content"
+                        id="tooltip-7-content"
                         onBlur={[Function]}
                         placement="bottom"
                         role="tooltip"
                       >
                         <PopoverContent
                           aria-live="polite"
-                          id="tooltip-4-content"
+                          id="tooltip-7-content"
                           onBlur={[Function]}
                           placement="bottom"
                           role="tooltip"
@@ -2461,7 +2449,7 @@ exports[`Tooltip demo examples placement 1`] = `
                           <ThemedComponent
                             aria-live="polite"
                             className="css-4"
-                            id="tooltip-4-content"
+                            id="tooltip-7-content"
                             onBlur={[Function]}
                             placement="bottom"
                             role="tooltip"
@@ -2469,7 +2457,7 @@ exports[`Tooltip demo examples placement 1`] = `
                             <RtlPopper
                               aria-live="polite"
                               className="css-4"
-                              id="tooltip-4-content"
+                              id="tooltip-7-content"
                               onBlur={[Function]}
                               placement="bottom"
                               role="tooltip"
@@ -2483,7 +2471,7 @@ exports[`Tooltip demo examples placement 1`] = `
                                   "PopoverContent_borderColor": "#434a54",
                                   "PopoverContent_borderRadius": "0.1875em",
                                   "PopoverContent_boxShadow": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
-                                  "PopoverContent_color": "#fff",
+                                  "PopoverContent_color": "#ffffff",
                                   "PopoverContent_maxWidth": "18em",
                                   "PopoverContent_paddingVertical": "0.5em",
                                   "PopoverContent_zIndex": 100,
@@ -2545,10 +2533,10 @@ exports[`Tooltip demo examples placement 1`] = `
                                   "boxShadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
                                   "boxShadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
                                   "boxShadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
-                                  "boxShadow_focusInner": "#fff",
-                                  "breakpoint_medium": 768,
-                                  "breakpoint_narrow": 512,
-                                  "breakpoint_wide": 1024,
+                                  "boxShadow_focusInner": "#ffffff",
+                                  "breakpoint_medium": "768px",
+                                  "breakpoint_narrow": "512px",
+                                  "breakpoint_wide": "1024px",
                                   "color": "#333840",
                                   "color_black": "#1d1f24",
                                   "color_danger": "#de1b1b",
@@ -2566,9 +2554,9 @@ exports[`Tooltip demo examples placement 1`] = `
                                   "color_gray_70": "#707a8a",
                                   "color_gray_80": "#58606e",
                                   "color_gray_90": "#434a54",
-                                  "color_inverted": "#fff",
+                                  "color_inverted": "#ffffff",
                                   "color_mouse": "#58606e",
-                                  "color_primary": "#fff",
+                                  "color_primary": "#ffffff",
                                   "color_readOnly": "#58606e",
                                   "color_required": "#de1b1b",
                                   "color_success": "#2a854e",
@@ -2593,12 +2581,12 @@ exports[`Tooltip demo examples placement 1`] = `
                                   "color_warning_active": "#8a4d03",
                                   "color_warning_focus": "#ad5f00",
                                   "color_warning_hover": "#cf7911",
-                                  "color_white": "#fff",
+                                  "color_white": "#ffffff",
                                   "direction": "ltr",
-                                  "fontFamily": "Open Sans",
+                                  "fontFamily": "\\"Open Sans\\"",
                                   "fontFamily_monospace": "\\"SF Mono\\", \\"Droid Sans Mono\\", \\"Source Code Pro\\", Monaco, Consolas, \\"Courier New\\", Courier, monospace",
                                   "fontFamily_system": "-apple-system, system-ui, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
-                                  "fontSize_base": 16,
+                                  "fontSize_base": "16px",
                                   "fontSize_mouse": "0.6875em",
                                   "fontSize_prose": "1em",
                                   "fontSize_ui": "0.875em",
@@ -2629,17 +2617,17 @@ exports[`Tooltip demo examples placement 1`] = `
                                   "icon_color_success": "#2a854e",
                                   "icon_color_theme": "#3272d9",
                                   "icon_color_warning": "#ad5f00",
-                                  "input_backgroundColor": "#fff",
+                                  "input_backgroundColor": "#ffffff",
                                   "input_backgroundColor_disabled": "#ebeff5",
+                                  "input_color_placeholder": "#8e99ab",
                                   "lineHeight": 1.25,
                                   "lineHeight_heading": 1.25,
                                   "lineHeight_heading_small": 1.5,
                                   "lineHeight_prose": 1.5,
-                                  "panel_backgroundColor": "#fff",
+                                  "panel_backgroundColor": "#ffffff",
                                   "panel_backgroundColor_inverted": "#434a54",
                                   "panel_borderColor": "#ebeff5",
                                   "panel_borderColor_inverted": "#434a54",
-                                  "placeholder_color": "#8e99ab",
                                   "size_jumbo": "3.25em",
                                   "size_large": "2.5em",
                                   "size_medium": "2em",
@@ -2681,16 +2669,17 @@ exports[`Tooltip demo examples placement 1`] = `
                                 className="css-4"
                                 component="div"
                                 eventsEnabled={true}
-                                id="tooltip-4-content"
+                                id="tooltip-7-content"
                                 modifiers={Object {}}
                                 onBlur={[Function]}
                                 placement="bottom"
+                                positionFixed={false}
                                 role="tooltip"
                               >
                                 <div
                                   aria-live="polite"
                                   className="css-4"
-                                  id="tooltip-4-content"
+                                  id="tooltip-7-content"
                                   onBlur={[Function]}
                                   role="tooltip"
                                   style={
@@ -2782,11 +2771,11 @@ exports[`Tooltip demo examples placement 1`] = `
 </glamorous(div)>
 `;
 
-exports[`Tooltip demo examples portal 1`] = `
+exports[`Tooltip demo examples Snapshots: portal 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -2830,7 +2819,7 @@ exports[`Tooltip demo examples portal 1`] = `
 [data-css-3] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -2865,7 +2854,7 @@ exports[`Tooltip demo examples portal 1`] = `
 .css-3[data-simulate-focus],
 [data-css-3][data-simulate-focus] {
   background-color: #ebeff5;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
   color: #333840;
   text-decoration: none;
 }
@@ -2983,7 +2972,7 @@ exports[`Tooltip demo examples portal 1`] = `
 [data-css-28] {
   box-sizing: border-box;
   color: #3272d9;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -3020,7 +3009,7 @@ exports[`Tooltip demo examples portal 1`] = `
 [data-css-28]:focus,
 .css-28[data-simulate-focus],
 [data-css-28][data-simulate-focus] {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
   color: #3272d9;
   text-decoration: none;
 }
@@ -3118,12 +3107,10 @@ exports[`Tooltip demo examples portal 1`] = `
                 usePortal={true}
               >
                 <ThemedComponent
-                  content="Light years star stuff"
+                  content={[Function]}
                   focusTriggerOnClose={false}
-                  getContentProps={[Function]}
-                  getTriggerProps={[Function]}
                   hasArrow={true}
-                  id="tooltip-8"
+                  id="tooltip-15"
                   isOpen={true}
                   modifiers={
                     Object {
@@ -3138,12 +3125,10 @@ exports[`Tooltip demo examples portal 1`] = `
                   usePortal={true}
                 >
                   <Themed(Popover)
-                    content="Light years star stuff"
+                    content={[Function]}
                     focusTriggerOnClose={false}
-                    getContentProps={[Function]}
-                    getTriggerProps={[Function]}
                     hasArrow={true}
-                    id="tooltip-8"
+                    id="tooltip-15"
                     isOpen={true}
                     modifiers={
                       Object {
@@ -3160,12 +3145,10 @@ exports[`Tooltip demo examples portal 1`] = `
                     <ThemeProvider>
                       <ThemeProvider>
                         <Popover
-                          content="Light years star stuff"
+                          content={[Function]}
                           focusTriggerOnClose={false}
-                          getContentProps={[Function]}
-                          getTriggerProps={[Function]}
                           hasArrow={true}
-                          id="tooltip-8"
+                          id="tooltip-15"
                           isOpen={true}
                           modifiers={
                             Object {
@@ -3178,15 +3161,12 @@ exports[`Tooltip demo examples portal 1`] = `
                           onOpen={[Function]}
                           placement="bottom"
                           usePortal={true}
-                          wrapContent={true}
                         >
                           <Popover
-                            content="Light years star stuff"
+                            content={[Function]}
                             focusTriggerOnClose={false}
-                            getContentProps={[Function]}
-                            getTriggerProps={[Function]}
                             hasArrow={true}
-                            id="tooltip-8"
+                            id="tooltip-15"
                             isOpen={true}
                             modifiers={
                               Object {
@@ -3200,27 +3180,30 @@ exports[`Tooltip demo examples portal 1`] = `
                             placement="bottom"
                             tag="span"
                             usePortal={true}
-                            wrapContent={true}
                           >
                             <Manager
                               className="css-0"
-                              id="tooltip-8"
+                              id="tooltip-15"
                               tag="span"
                             >
                               <span
                                 className="css-0"
-                                id="tooltip-8"
+                                id="tooltip-15"
                               >
                                 <PopoverTrigger
-                                  aria-describedby="tooltip-8-content"
-                                  aria-owns="tooltip-8-content"
+                                  aria-describedby="tooltip-15-content"
+                                  aria-owns="tooltip-15-content"
+                                  element="button"
                                   onBlur={[Function]}
                                   onClick={[Function]}
                                   onFocus={[Function]}
                                   onMouseEnter={[Function]}
                                   onMouseLeave={[Function]}
                                   role="button"
+                                  size="large"
                                   tabIndex={0}
+                                  type="button"
+                                  variant="regular"
                                 >
                                   <PopoverTrigger
                                     component="span"
@@ -3233,8 +3216,8 @@ exports[`Tooltip demo examples portal 1`] = `
                                         className="css-1"
                                       >
                                         <Button
-                                          aria-describedby="tooltip-8-content"
-                                          aria-owns="tooltip-8-content"
+                                          aria-describedby="tooltip-15-content"
+                                          aria-owns="tooltip-15-content"
                                           element="button"
                                           onBlur={[Function]}
                                           onClick={[Function]}
@@ -3248,8 +3231,8 @@ exports[`Tooltip demo examples portal 1`] = `
                                           variant="regular"
                                         >
                                           <glamorous(button)
-                                            aria-describedby="tooltip-8-content"
-                                            aria-owns="tooltip-8-content"
+                                            aria-describedby="tooltip-15-content"
+                                            aria-owns="tooltip-15-content"
                                             element="button"
                                             onBlur={[Function]}
                                             onClick={[Function]}
@@ -3264,8 +3247,8 @@ exports[`Tooltip demo examples portal 1`] = `
                                             variant="regular"
                                           >
                                             <button
-                                              aria-describedby="tooltip-8-content"
-                                              aria-owns="tooltip-8-content"
+                                              aria-describedby="tooltip-15-content"
+                                              aria-owns="tooltip-15-content"
                                               className="css-3"
                                               onBlur={[Function]}
                                               onClick={[Function]}
@@ -3383,11 +3366,11 @@ exports[`Tooltip demo examples portal 1`] = `
 </ScrollBox>
 `;
 
-exports[`Tooltip demo examples prose 1`] = `
+exports[`Tooltip demo examples Snapshots: prose 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -3412,7 +3395,7 @@ exports[`Tooltip demo examples prose 1`] = `
 
 .css-2,
 [data-css-2] {
-  font-family: Open Sans;
+  font-family: "Open Sans";
 }
 
 .css-3,
@@ -3435,24 +3418,20 @@ exports[`Tooltip demo examples prose 1`] = `
         usePortal={true}
       >
         <ThemedComponent
-          content="Light years star stuff"
+          content={[Function]}
           focusTriggerOnClose={false}
-          getContentProps={[Function]}
-          getTriggerProps={[Function]}
           hasArrow={true}
-          id="tooltip-3"
+          id="tooltip-5"
           isOpen={true}
           onClose={[Function]}
           onOpen={[Function]}
           usePortal={true}
         >
           <Themed(Popover)
-            content="Light years star stuff"
+            content={[Function]}
             focusTriggerOnClose={false}
-            getContentProps={[Function]}
-            getTriggerProps={[Function]}
             hasArrow={true}
-            id="tooltip-3"
+            id="tooltip-5"
             isOpen={true}
             onClose={[Function]}
             onOpen={[Function]}
@@ -3461,46 +3440,40 @@ exports[`Tooltip demo examples prose 1`] = `
             <ThemeProvider>
               <ThemeProvider>
                 <Popover
-                  content="Light years star stuff"
+                  content={[Function]}
                   focusTriggerOnClose={false}
-                  getContentProps={[Function]}
-                  getTriggerProps={[Function]}
                   hasArrow={true}
-                  id="tooltip-3"
+                  id="tooltip-5"
                   isOpen={true}
                   onClose={[Function]}
                   onOpen={[Function]}
                   placement="bottom"
                   usePortal={true}
-                  wrapContent={true}
                 >
                   <Popover
-                    content="Light years star stuff"
+                    content={[Function]}
                     focusTriggerOnClose={false}
-                    getContentProps={[Function]}
-                    getTriggerProps={[Function]}
                     hasArrow={true}
-                    id="tooltip-3"
+                    id="tooltip-5"
                     isOpen={true}
                     onClose={[Function]}
                     onOpen={[Function]}
                     placement="bottom"
                     tag="span"
                     usePortal={true}
-                    wrapContent={true}
                   >
                     <Manager
                       className="css-0"
-                      id="tooltip-3"
+                      id="tooltip-5"
                       tag="span"
                     >
                       <span
                         className="css-0"
-                        id="tooltip-3"
+                        id="tooltip-5"
                       >
                         <PopoverTrigger
-                          aria-describedby="tooltip-3-content"
-                          aria-owns="tooltip-3-content"
+                          aria-describedby="tooltip-5-content"
+                          aria-owns="tooltip-5-content"
                           onBlur={[Function]}
                           onClick={[Function]}
                           onFocus={[Function]}
@@ -3520,8 +3493,8 @@ exports[`Tooltip demo examples prose 1`] = `
                                 className="css-1"
                               >
                                 <glamorous(span)
-                                  aria-describedby="tooltip-3-content"
-                                  aria-owns="tooltip-3-content"
+                                  aria-describedby="tooltip-5-content"
+                                  aria-owns="tooltip-5-content"
                                   onBlur={[Function]}
                                   onClick={[Function]}
                                   onFocus={[Function]}
@@ -3531,8 +3504,8 @@ exports[`Tooltip demo examples prose 1`] = `
                                   tabIndex={0}
                                 >
                                   <span
-                                    aria-describedby="tooltip-3-content"
-                                    aria-owns="tooltip-3-content"
+                                    aria-describedby="tooltip-5-content"
+                                    aria-owns="tooltip-5-content"
                                     className="css-3"
                                     onBlur={[Function]}
                                     onClick={[Function]}
@@ -3583,11 +3556,11 @@ exports[`Tooltip demo examples prose 1`] = `
 </glamorous(div)>
 `;
 
-exports[`Tooltip demo examples scrolling-container 1`] = `
+exports[`Tooltip demo examples Snapshots: scrolling-container 1`] = `
 .css-0,
 [data-css-0] {
   box-sizing: border-box;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -3630,8 +3603,8 @@ exports[`Tooltip demo examples scrolling-container 1`] = `
 .css-3,
 [data-css-3] {
   box-sizing: border-box;
-  color: #fff;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #ffffff;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -3692,7 +3665,7 @@ exports[`Tooltip demo examples scrolling-container 1`] = `
 [data-css-10] {
   box-sizing: border-box;
   color: #333840;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -3727,7 +3700,7 @@ exports[`Tooltip demo examples scrolling-container 1`] = `
 .css-10[data-simulate-focus],
 [data-css-10][data-simulate-focus] {
   background-color: #ebeff5;
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
   color: #333840;
   text-decoration: none;
 }
@@ -3845,7 +3818,7 @@ exports[`Tooltip demo examples scrolling-container 1`] = `
 [data-css-35] {
   box-sizing: border-box;
   color: #3272d9;
-  font-family: Open Sans, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -3882,7 +3855,7 @@ exports[`Tooltip demo examples scrolling-container 1`] = `
 [data-css-35]:focus,
 .css-35[data-simulate-focus],
 [data-css-35][data-simulate-focus] {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1d5bbf;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
   color: #3272d9;
   text-decoration: none;
 }
@@ -3972,24 +3945,20 @@ exports[`Tooltip demo examples scrolling-container 1`] = `
                 placement="left"
               >
                 <ThemedComponent
-                  content="Light years star stuff"
+                  content={[Function]}
                   focusTriggerOnClose={false}
-                  getContentProps={[Function]}
-                  getTriggerProps={[Function]}
                   hasArrow={true}
-                  id="tooltip-7"
+                  id="tooltip-13"
                   isOpen={true}
                   onClose={[Function]}
                   onOpen={[Function]}
                   placement="left"
                 >
                   <Themed(Popover)
-                    content="Light years star stuff"
+                    content={[Function]}
                     focusTriggerOnClose={false}
-                    getContentProps={[Function]}
-                    getTriggerProps={[Function]}
                     hasArrow={true}
-                    id="tooltip-7"
+                    id="tooltip-13"
                     isOpen={true}
                     onClose={[Function]}
                     onOpen={[Function]}
@@ -3998,51 +3967,49 @@ exports[`Tooltip demo examples scrolling-container 1`] = `
                     <ThemeProvider>
                       <ThemeProvider>
                         <Popover
-                          content="Light years star stuff"
+                          content={[Function]}
                           focusTriggerOnClose={false}
-                          getContentProps={[Function]}
-                          getTriggerProps={[Function]}
                           hasArrow={true}
-                          id="tooltip-7"
+                          id="tooltip-13"
                           isOpen={true}
                           onClose={[Function]}
                           onOpen={[Function]}
                           placement="left"
-                          wrapContent={true}
                         >
                           <Popover
-                            content="Light years star stuff"
+                            content={[Function]}
                             focusTriggerOnClose={false}
-                            getContentProps={[Function]}
-                            getTriggerProps={[Function]}
                             hasArrow={true}
-                            id="tooltip-7"
+                            id="tooltip-13"
                             isOpen={true}
                             onClose={[Function]}
                             onOpen={[Function]}
                             placement="left"
                             tag="span"
-                            wrapContent={true}
                           >
                             <Manager
                               className="css-0"
-                              id="tooltip-7"
+                              id="tooltip-13"
                               tag="span"
                             >
                               <span
                                 className="css-0"
-                                id="tooltip-7"
+                                id="tooltip-13"
                               >
                                 <PopoverTrigger
-                                  aria-describedby="tooltip-7-content"
-                                  aria-owns="tooltip-7-content"
+                                  aria-describedby="tooltip-13-content"
+                                  aria-owns="tooltip-13-content"
+                                  element="button"
                                   onBlur={[Function]}
                                   onClick={[Function]}
                                   onFocus={[Function]}
                                   onMouseEnter={[Function]}
                                   onMouseLeave={[Function]}
                                   role="button"
+                                  size="large"
                                   tabIndex={0}
+                                  type="button"
+                                  variant="regular"
                                 >
                                   <PopoverTrigger
                                     component="span"
@@ -4055,8 +4022,8 @@ exports[`Tooltip demo examples scrolling-container 1`] = `
                                         className="css-1"
                                       >
                                         <Button
-                                          aria-describedby="tooltip-7-content"
-                                          aria-owns="tooltip-7-content"
+                                          aria-describedby="tooltip-13-content"
+                                          aria-owns="tooltip-13-content"
                                           element="button"
                                           onBlur={[Function]}
                                           onClick={[Function]}
@@ -4070,8 +4037,8 @@ exports[`Tooltip demo examples scrolling-container 1`] = `
                                           variant="regular"
                                         >
                                           <glamorous(button)
-                                            aria-describedby="tooltip-7-content"
-                                            aria-owns="tooltip-7-content"
+                                            aria-describedby="tooltip-13-content"
+                                            aria-owns="tooltip-13-content"
                                             element="button"
                                             onBlur={[Function]}
                                             onClick={[Function]}
@@ -4086,8 +4053,8 @@ exports[`Tooltip demo examples scrolling-container 1`] = `
                                             variant="regular"
                                           >
                                             <button
-                                              aria-describedby="tooltip-7-content"
-                                              aria-owns="tooltip-7-content"
+                                              aria-describedby="tooltip-13-content"
+                                              aria-owns="tooltip-13-content"
                                               className="css-10"
                                               onBlur={[Function]}
                                               onClick={[Function]}
@@ -4123,14 +4090,14 @@ exports[`Tooltip demo examples scrolling-container 1`] = `
                                 <PopoverContent
                                   aria-live="polite"
                                   hasArrow={true}
-                                  id="tooltip-7-content"
+                                  id="tooltip-13-content"
                                   onBlur={[Function]}
                                   placement="left"
                                   role="tooltip"
                                 >
                                   <PopoverContent
                                     aria-live="polite"
-                                    id="tooltip-7-content"
+                                    id="tooltip-13-content"
                                     onBlur={[Function]}
                                     placement="left"
                                     role="tooltip"
@@ -4138,7 +4105,7 @@ exports[`Tooltip demo examples scrolling-container 1`] = `
                                     <ThemedComponent
                                       aria-live="polite"
                                       className="css-3"
-                                      id="tooltip-7-content"
+                                      id="tooltip-13-content"
                                       onBlur={[Function]}
                                       placement="left"
                                       role="tooltip"
@@ -4146,7 +4113,7 @@ exports[`Tooltip demo examples scrolling-container 1`] = `
                                       <RtlPopper
                                         aria-live="polite"
                                         className="css-3"
-                                        id="tooltip-7-content"
+                                        id="tooltip-13-content"
                                         onBlur={[Function]}
                                         placement="left"
                                         role="tooltip"
@@ -4160,7 +4127,7 @@ exports[`Tooltip demo examples scrolling-container 1`] = `
                                             "PopoverContent_borderColor": "#434a54",
                                             "PopoverContent_borderRadius": "0.1875em",
                                             "PopoverContent_boxShadow": "0 2px 4px 0 rgba(0,0,0,0.2), 0 4px 8px 0 rgba(0,0,0,0.2)",
-                                            "PopoverContent_color": "#fff",
+                                            "PopoverContent_color": "#ffffff",
                                             "PopoverContent_maxWidth": "18em",
                                             "PopoverContent_paddingVertical": "0.5em",
                                             "PopoverContent_zIndex": 100,
@@ -4222,10 +4189,10 @@ exports[`Tooltip demo examples scrolling-container 1`] = `
                                             "boxShadow_3": "0 4px 8px 0 rgba(0,0,0,0.2), 0 8px 16px 0 rgba(0,0,0,0.2)",
                                             "boxShadow_4": "0 8px 16px 0 rgba(0,0,0,0.2), 0 20px 16px -8px rgba(0,0,0,0.2)",
                                             "boxShadow_5": "0 16px 24px 0 rgba(0,0,0,0.2), 0 32px 24px -16px rgba(0,0,0,0.2)",
-                                            "boxShadow_focusInner": "#fff",
-                                            "breakpoint_medium": 768,
-                                            "breakpoint_narrow": 512,
-                                            "breakpoint_wide": 1024,
+                                            "boxShadow_focusInner": "#ffffff",
+                                            "breakpoint_medium": "768px",
+                                            "breakpoint_narrow": "512px",
+                                            "breakpoint_wide": "1024px",
                                             "color": "#333840",
                                             "color_black": "#1d1f24",
                                             "color_danger": "#de1b1b",
@@ -4243,9 +4210,9 @@ exports[`Tooltip demo examples scrolling-container 1`] = `
                                             "color_gray_70": "#707a8a",
                                             "color_gray_80": "#58606e",
                                             "color_gray_90": "#434a54",
-                                            "color_inverted": "#fff",
+                                            "color_inverted": "#ffffff",
                                             "color_mouse": "#58606e",
-                                            "color_primary": "#fff",
+                                            "color_primary": "#ffffff",
                                             "color_readOnly": "#58606e",
                                             "color_required": "#de1b1b",
                                             "color_success": "#2a854e",
@@ -4270,12 +4237,12 @@ exports[`Tooltip demo examples scrolling-container 1`] = `
                                             "color_warning_active": "#8a4d03",
                                             "color_warning_focus": "#ad5f00",
                                             "color_warning_hover": "#cf7911",
-                                            "color_white": "#fff",
+                                            "color_white": "#ffffff",
                                             "direction": "ltr",
-                                            "fontFamily": "Open Sans",
+                                            "fontFamily": "\\"Open Sans\\"",
                                             "fontFamily_monospace": "\\"SF Mono\\", \\"Droid Sans Mono\\", \\"Source Code Pro\\", Monaco, Consolas, \\"Courier New\\", Courier, monospace",
                                             "fontFamily_system": "-apple-system, system-ui, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, Helvetica, Arial, sans-serif, \\"Apple Color Emoji\\", \\"Segoe UI Emoji\\", \\"Segoe UI Symbol\\"",
-                                            "fontSize_base": 16,
+                                            "fontSize_base": "16px",
                                             "fontSize_mouse": "0.6875em",
                                             "fontSize_prose": "1em",
                                             "fontSize_ui": "0.875em",
@@ -4306,17 +4273,17 @@ exports[`Tooltip demo examples scrolling-container 1`] = `
                                             "icon_color_success": "#2a854e",
                                             "icon_color_theme": "#3272d9",
                                             "icon_color_warning": "#ad5f00",
-                                            "input_backgroundColor": "#fff",
+                                            "input_backgroundColor": "#ffffff",
                                             "input_backgroundColor_disabled": "#ebeff5",
+                                            "input_color_placeholder": "#8e99ab",
                                             "lineHeight": 1.25,
                                             "lineHeight_heading": 1.25,
                                             "lineHeight_heading_small": 1.5,
                                             "lineHeight_prose": 1.5,
-                                            "panel_backgroundColor": "#fff",
+                                            "panel_backgroundColor": "#ffffff",
                                             "panel_backgroundColor_inverted": "#434a54",
                                             "panel_borderColor": "#ebeff5",
                                             "panel_borderColor_inverted": "#434a54",
-                                            "placeholder_color": "#8e99ab",
                                             "size_jumbo": "3.25em",
                                             "size_large": "2.5em",
                                             "size_medium": "2em",
@@ -4358,16 +4325,17 @@ exports[`Tooltip demo examples scrolling-container 1`] = `
                                           className="css-3"
                                           component="div"
                                           eventsEnabled={true}
-                                          id="tooltip-7-content"
+                                          id="tooltip-13-content"
                                           modifiers={Object {}}
                                           onBlur={[Function]}
                                           placement="left"
+                                          positionFixed={false}
                                           role="tooltip"
                                         >
                                           <div
                                             aria-live="polite"
                                             className="css-3"
-                                            id="tooltip-7-content"
+                                            id="tooltip-13-content"
                                             onBlur={[Function]}
                                             role="tooltip"
                                             style={
