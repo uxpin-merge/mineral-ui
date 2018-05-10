@@ -5,7 +5,7 @@ import { createThemedComponent } from '../themes';
 import Button from '../Button';
 import IconExpandLess from '../Icon/IconExpandLess';
 import IconExpandMore from '../Icon/IconExpandMore';
-import { componentTheme as cardComponentTheme } from './Card';
+import { componentTheme as cardComponentTheme } from './Card/Card';
 
 type Props = {
   /** Content of CardFooter */

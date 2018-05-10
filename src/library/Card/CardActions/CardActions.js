@@ -1,10 +1,10 @@
 /* @flow */
 import React, { Children, cloneElement } from 'react';
-import { createStyledComponent, getNormalizedValue } from '../styles';
-import Button from '../Button';
-import { componentTheme as cardComponentTheme } from './Card';
-import { componentTheme as cardBlockComponentTheme } from './CardBlock';
-import CardRow from './CardRow';
+import { createStyledComponent, getNormalizedValue } from '../../styles/index';
+import Button from '../../Button/index';
+import { componentTheme as cardComponentTheme } from '../Card/Card';
+import { componentTheme as cardBlockComponentTheme } from '../CardBlock/CardBlock';
+import CardRow from '../CardRow';
 
 type Props = {
   /** Actions associated with Card; see [Button](/components/button), [Link](/components/link) */

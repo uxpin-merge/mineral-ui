@@ -1,7 +1,7 @@
 /* @flow */
-export { default } from './Card';
-export { default as CardActions } from './CardActions';
-export { default as CardBlock } from './CardBlock';
+export { default } from './Card/Card';
+export { default as CardActions } from './CardActions/CardActions';
+export { default as CardBlock } from './CardBlock/CardBlock';
 export { default as CardDivider } from './CardDivider';
 export { default as CardFooter } from './CardFooter';
 export { default as CardImage } from './CardImage';

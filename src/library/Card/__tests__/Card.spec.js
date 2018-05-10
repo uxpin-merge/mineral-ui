@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 import { shallow } from 'enzyme';
-import Card from '../Card';
+import Card from '../Card/Card';
 import examples from '../../../website/app/demos/Card/examples';
 import testDemoExamples from '../../../../utils/testDemoExamples';
 

@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import { createStyledComponent } from '../styles';
+import { createStyledComponent } from '../../styles/index';
 
 type Props = {
   /** Content of Card; see the [Basic](#basic) example for more details */
