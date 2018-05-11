@@ -1,10 +1,10 @@
 /* @flow */
 import React from 'react';
-import { createThemedComponent, mapComponentThemes } from '../themes';
+import { createThemedComponent, mapComponentThemes } from '../../themes/index';
 import Choice, {
   componentTheme as choiceComponentTheme
-} from '../Choice/Choice';
-import IconChecked from '../Icon/IconRadioButtonCheck';
+} from '../../Choice/Choice';
+import IconChecked from '../../Icon/IconRadioButtonCheck';
 
 type Props = {
   /**

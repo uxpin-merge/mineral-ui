@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 import { shallow } from 'enzyme';
-import RadioGroup from '../RadioGroup';
+import RadioGroup from '../RadioGroup/RadioGroup';
 import examples from '../../../website/app/demos/Radio/examples/RadioGroup';
 import testDemoExamples from '../../../../utils/testDemoExamples';
 
