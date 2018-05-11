@@ -1,19 +1,3 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 export default [
   {
@@ -22,8 +6,10 @@ export default [
 will be easier to change later.`,
     example: `
 \`\`\`
-const myTheme = createTheme('blue', {
-  color_text: 'rebeccapurple'
+const myTheme = createTheme({
+  overrides: {
+    color_required: 'rebeccapurple'
+  }
 });
 
 <ThemeProvider theme={myTheme}>
@@ -41,7 +27,7 @@ create a visual separation.`,
 \`\`\`
 <ThemeProvider>
   <ThemeProvider theme={{
-    color_text: 'darkgray'
+    color: 'darkgray'
   }}>
     <nav>Navigation<nav>
   </ThemeProvider>
@@ -57,7 +43,7 @@ the default Mineral UI theme as-is. We've designed the colors, typography and
 layout as a system to provide turn-key consistency for your app.`,
     example: `
 \`\`\`
-<ThemeProvider theme={{ color_text: '#f00' }}>
+<ThemeProvider theme={{ color: '#f00' }}>
   <div>Awesome custom app</div>
 </ThemeProvider>
 \`\`\`

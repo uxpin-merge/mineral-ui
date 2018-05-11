@@ -1,8 +1,6 @@
 const path = require('path');
 const { RemoteBrowserTarget } = require('happo.io');
 
-const babelLoader = require.resolve('babel-loader');
-
 const { HAPPO_KEY, HAPPO_SECRET } = process.env;
 
 module.exports = {
@@ -15,9 +13,6 @@ module.exports = {
   // Set up the browsers and viewports we want to render our happo examples in.
   targets: {
     'chrome': new RemoteBrowserTarget('chrome', {
-      viewport: '800x600'
-    }),
-    'internet explorer': new RemoteBrowserTarget('internet explorer', {
       viewport: '800x600'
     })
   },
@@ -40,18 +35,4 @@ module.exports = {
   getRootElement(document) {
     return document.querySelector('.react-live-preview');
   },
-
-  // We need to tell happo how to load certain modules.
-  customizeWebpackConfig: (config) => {
-    config.module = {
-      rules: [
-        {
-          test: /\.js$/,
-          exclude: /node_modules/,
-          loader: babelLoader
-        }
-      ]
-    };
-    return config;
-  }
 };

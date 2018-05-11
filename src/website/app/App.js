@@ -1,27 +1,10 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
-import { Redirect, Route, Switch } from 'react-router-dom';
 import { canUseDOM } from 'exenv';
 import lighten from 'polished/lib/color/lighten';
-import { pxToEm } from '../../styles';
-import { mineralTheme, ThemeProvider } from '../../themes';
+import { pxToEm } from '../../library/styles';
+import { mineralTheme, ThemeProvider } from '../../library/themes';
 import BaselineGrid from './BaselineGrid';
 import Router from './Router';
 import siteColors from './siteColors';
@@ -31,12 +14,16 @@ declare var GOOGLE_TRACKING_ID: string;
 type Props = {
   children?: any,
   className?: string,
-  demoRoutes: { [string]: DemoRoute },
+  demoRoutes: Array<DemoRoute>,
   history: Object,
   location?: any
 };
 
-type DemoRoute = { slug: string, title: string, description: string };
+type DemoRoute = {
+  description: string,
+  slug: string,
+  title: string
+};
 
 const siteTheme = {
   baseline_1: pxToEm(12),
@@ -70,11 +57,16 @@ const siteTheme = {
   textShadow: '2px 2px 2px rgba(0,0,0,0.2)',
 
   borderColor: siteColors.slate,
-  borderColor_focus: siteColors.jade,
-  color_text: mineralTheme.color_gray_80,
-  color_text_primary: siteColors.jade,
+  borderColor_theme: siteColors.jade,
+  borderColor_theme_focus: siteColors.jade_focus,
+  borderColor_theme_hover: siteColors.jade_hover,
+  color: mineralTheme.color_gray_80,
+  color_theme: siteColors.jade,
   fontFamily: null,
   fontFamily_headline: `franklin-gothic-urw, ${mineralTheme.fontFamily_system}`,
+  fontWeight_medium: 500,
+
+  icon_color_theme: siteColors.jade,
 
   SectionPaddingHorizontal: pxToEm(30),
   SectionPaddingHorizontalWide: pxToEm(100),
@@ -90,7 +82,9 @@ const siteTheme = {
   SiteHeading_color_2: siteColors.slateDarker,
   SiteHeading_color_3: siteColors.jade,
   SiteHeading_color_4: siteColors.slateDarker,
-  SiteHeading_fontFamily: `franklin-gothic-urw, ${mineralTheme.fontFamily_system}`,
+  SiteHeading_fontFamily: `franklin-gothic-urw, ${
+    mineralTheme.fontFamily_system
+  }`,
   SiteHeading_fontSize_1: pxToEm(40),
   SiteHeading_fontSize_1_wide: pxToEm(48),
   SiteHeading_fontSize_2: pxToEm(33),
@@ -131,27 +125,13 @@ class App extends Component<Props> {
     }
   }
 
-  componentDidUpdate(prevProps) {
-    if (canUseDOM && this.props.location !== prevProps.location) {
-      global.window.scrollTo(0, 0);
-    }
-  }
-
   render() {
     const { demoRoutes } = this.props;
 
     return (
       <ThemeProvider theme={siteTheme}>
         <div>
-          <Switch>
-            <Route
-              exact
-              strict
-              path="/:url*"
-              render={props => <Redirect to={`${props.location.pathname}/`} />}
-            />
-            <Route render={() => <Router demoRoutes={demoRoutes} />} />
-          </Switch>
+          <Router demoRoutes={demoRoutes} />
           <BaselineGrid />
         </div>
       </ThemeProvider>

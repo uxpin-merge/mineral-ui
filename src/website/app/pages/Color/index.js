@@ -1,24 +1,8 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React from 'react';
-import { createStyledComponent } from '../../../../styles';
+import { createStyledComponent } from '../../../../library/styles';
+import { type Color as ColorType } from '../../../../library/themes/generated/palette';
 import Markdown from '../../Markdown';
-import Callout from '../../Callout';
 import ColorRamp from './ColorRamp';
 import RampLegend from './RampLegend';
 import Variants from './Variants';
@@ -26,7 +10,8 @@ import content from './color.md';
 
 type Props = {};
 
-const baseColors = [
+// Not generated from palette because of the opinionated order.
+const baseColors: Array<ColorType | 'black'> = [
   'red',
   'magenta',
   'purple',
@@ -35,9 +20,7 @@ const baseColors = [
   'sky',
   'teal',
   'green',
-  'lime',
-  'yellow',
-  'orange',
+  'bronze',
   'slate',
   'dusk',
   'gray',
@@ -52,10 +35,10 @@ const RampHolder = createStyledComponent('div', {
 export default function Color(props: Props) {
   return (
     <div {...props}>
-      <Markdown scope={{ Callout, Variants }}>{content}</Markdown>
+      <Markdown scope={{ Variants }}>{content}</Markdown>
       <RampLegend />
       <RampHolder>
-        {baseColors.map(baseColor => (
+        {baseColors.map((baseColor) => (
           <ColorRamp key={baseColor} baseColor={baseColor} />
         ))}
       </RampHolder>

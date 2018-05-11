@@ -1,23 +1,7 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
-import { pxToEm } from '../../styles';
-import { createThemedComponent } from '../../themes';
-import Button from '../../Button';
+import { pxToEm } from '../../library/styles';
+import { createThemedComponent } from '../../library/themes';
+import Button from '../../library/Button';
 
 // prettier-ignore
 const componentTheme = baseTheme => ({
@@ -35,10 +19,10 @@ const componentTheme = baseTheme => ({
   Button_borderColor_focus: baseTheme.SiteButton_borderColor_focus || baseTheme.color_white,
   Button_borderRadius: baseTheme.SiteButton_borderRadius || baseTheme.borderRadius_1,
   Button_borderWidth: baseTheme.SiteButton_borderWidth || 1, // px
-  Button_boxShadow_focus: baseTheme.SiteButton_boxShadow_focus || `0 0 0 1px ${baseTheme.borderColor_focus}`,
-  Button_color_text: baseTheme.SiteButton_color_text || baseTheme.color_gray_100,
-  Button_color_text_minimal: baseTheme.SiteButton_color_text_minimal || baseTheme.color_text_primary,
-  Button_color_text_primary: baseTheme.SiteButton_color_text_primary || baseTheme.color_text_onprimary,
+  Button_boxShadow_focus: baseTheme.SiteButton_boxShadow_focus || `0 0 0 1px ${baseTheme.borderColor_theme_focus}`,
+  Button_color: baseTheme.SiteButton_color || baseTheme.color_gray_100,
+  Button_color_minimal: baseTheme.SiteButton_color_minimal || baseTheme.color_theme,
+  Button_color_primary: baseTheme.SiteButton_color_primary || baseTheme.color_themePrimary,
   Button_fontWeight: baseTheme.SiteButton_fontWeight || baseTheme.fontWeight_semiBold,
   Button_paddingHorizontal: baseTheme.SiteButton_paddingHorizontal || baseTheme.space_inset_sm,
   Button_paddingIconOnly_small: baseTheme.SiteButton_paddingIconOnly_small || pxToEm(3),

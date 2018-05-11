@@ -1,33 +1,25 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
+import flatten from 'lodash/flatten';
+import createKeyMap from './utils/createKeyMap';
 import ComponentDocExample from './ComponentDocExample';
 import Page from './Page';
 import sections from './pages';
 import ComponentDoc from './pages/ComponentDoc';
+import NotFound from './pages/NotFound';
 import Loadable from './Loadable';
+import ScrollToIdOnMount from './ScrollToIdOnMount';
 
 type Props = {
-  demoRoutes: { [string]: DemoRoute }
+  demoRoutes: Array<DemoRoute>
 };
 
-type DemoRoute = { slug: string, title: string, description: string };
+type DemoRoute = {
+  description: string,
+  slug: string,
+  title: string
+};
 
 const AsyncHome = Loadable({
   loader: () => import('./pages/Home')
@@ -40,27 +32,42 @@ const getPageHeader = (heading: string, title: string) => {
 };
 
 export default function Router({ demoRoutes }: Props) {
+  const flatDemoRoutes = flatten(demoRoutes);
+  const keyedDemoRoutes = createKeyMap(flatDemoRoutes, 'slug');
+  const firstDemoSlug = flatDemoRoutes[0].slug;
+
   const routes = sections
     .map((section, sectionIndex) => {
       return section.pages.map((page, pageIndex) => (
         <Route
           key={`page-${sectionIndex}-${pageIndex}`}
           path={page.path}
-          render={() => {
+          render={({ location }) => {
             const pageMeta = {
               canonicalLink: `https://mineral-ui.com${page.path}`,
               description: page.description,
               title: `${page.title} | Mineral UI`
             };
             const pageProps = {
-              headerContent: getPageHeader(section.heading, page.title),
               demoRoutes,
+              headerContent: getPageHeader(section.heading, page.title),
               pageMeta,
               type: sectionIndex
             };
+
+            const AsyncPage = Loadable({
+              loader: () => import(`./pages/${page.component}`),
+              // eslint-disable-next-line react/display-name
+              render: ({ default: Component }: Object) => (
+                <ScrollToIdOnMount id={location.hash.replace('#', '')}>
+                  <Component />
+                </ScrollToIdOnMount>
+              )
+            });
+
             return (
               <Page {...pageProps}>
-                <page.component />
+                <AsyncPage />
               </Page>
             );
           }}
@@ -78,9 +85,9 @@ export default function Router({ demoRoutes }: Props) {
       {routes}
       <Route
         path="/components/:componentId/:exampleId"
-        render={route => {
+        render={(route) => {
           const { componentId, exampleId } = route.match.params;
-          const selectedDemo = demoRoutes[componentId || 'button'];
+          const selectedDemo = keyedDemoRoutes[componentId || firstDemoSlug];
           const chromeless = route.location.search === '?chromeless';
           const pageProps = {
             chromeless,
@@ -88,7 +95,8 @@ export default function Router({ demoRoutes }: Props) {
             pageMeta: {
               description: selectedDemo.description,
               title: `${selectedDemo.title} | Mineral UI`
-            }
+            },
+            slug: selectedDemo.slug
           };
 
           const AsyncComponentDocExample = Loadable({
@@ -96,12 +104,17 @@ export default function Router({ demoRoutes }: Props) {
             render({ default: fullDemos }: Object) {
               const selectedFullDemo = fullDemos[componentId];
               const selectedExample = selectedFullDemo.examples.find(
-                example => example.id === exampleId
+                (example) => example.id === exampleId
               );
+
+              if (!selectedExample) {
+                return <Redirect to={`/components/${selectedDemo.slug}`} />;
+              }
 
               const exampleProps = {
                 chromeless,
                 componentName: selectedFullDemo.title,
+                slug: selectedDemo.slug,
                 standalone: true,
                 ...selectedExample
               };
@@ -119,9 +132,22 @@ export default function Router({ demoRoutes }: Props) {
       />
       <Route
         path="/components/:componentId"
-        render={route => {
-          const componentId = route.match.params.componentId || 'button';
-          const selectedDemo = demoRoutes[componentId];
+        render={({ location, match }) => {
+          const componentId =
+            flatDemoRoutes.find(
+              (route) => route.slug === match.params.componentId
+            ) && match.params.componentId;
+
+          if (!componentId) {
+            return <Redirect to={`/components/${firstDemoSlug}`} />;
+          }
+
+          const selectedDemo = keyedDemoRoutes[componentId];
+
+          if (selectedDemo.redirect) {
+            return <Redirect to={`/components/${selectedDemo.redirect}`} />;
+          }
+
           const pageMeta = {
             canonicalLink: `https://mineral-ui.com/components/${selectedDemo.title.toLowerCase()}`,
             description: selectedDemo.description,
@@ -130,19 +156,52 @@ export default function Router({ demoRoutes }: Props) {
           const pageProps = {
             demoRoutes,
             headerContent: getPageHeader('Components', selectedDemo.title),
-            pageMeta
+            pageMeta,
+            slug: selectedDemo.slug
           };
 
           const AsyncComponentDoc = Loadable({
             loader: () => import('./demos/index'),
             render({ default: fullDemos }: Object) {
-              return <ComponentDoc {...fullDemos[componentId]} />;
+              const docProps = {
+                slug: selectedDemo.slug,
+                ...fullDemos[componentId]
+              };
+              return (
+                <ScrollToIdOnMount id={location.hash.replace('#', '')}>
+                  <ComponentDoc {...docProps} />
+                </ScrollToIdOnMount>
+              );
             }
           });
 
           return (
             <Page {...pageProps}>
               <AsyncComponentDoc />
+            </Page>
+          );
+        }}
+      />
+      <Route
+        path="/components"
+        render={() => <Redirect to={`/components/${firstDemoSlug}`} />}
+      />
+      <Route
+        path="*"
+        render={() => {
+          const pageMeta = {
+            description: 'Page not found.',
+            title: 'Page not found | Mineral UI'
+          };
+          const pageProps = {
+            headerContent: getPageHeader('Error', '404'),
+            demoRoutes,
+            glitched: true,
+            pageMeta
+          };
+          return (
+            <Page {...pageProps}>
+              <NotFound />
             </Page>
           );
         }}

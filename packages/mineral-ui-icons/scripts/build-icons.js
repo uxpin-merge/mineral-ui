@@ -17,7 +17,7 @@ const MATERIAL_ICONS_SVG_DIR = path.join(
 );
 const MINERAL_ICONS_SVG_DIR = path.join(__dirname, '../svg');
 
-const ICON_COMPONENTS_DIR = path.join(__dirname, '../../../src/Icon');
+const ICON_COMPONENTS_DIR = path.join(__dirname, '../../../src/library/Icon');
 const COMPONENTS_DIR = path.join(__dirname, '../src');
 const TEMPLATES_DIR = path.join(__dirname, '../templates');
 const COMPONENT_TEMPLATE_PATH = path.join(TEMPLATES_DIR, 'Icon.template.js');
@@ -28,7 +28,22 @@ const REGEX_MATERIAL_ICONS_SVG_NAME = /ic_(.*?)_24px.svg/;
 const REGEX_MINERAL_ICONS_SVG_NAME = /(.*?).svg/;
 
 // Icons used interally by mineral-ui components
-const internalMineralIcons = ['IconDanger', 'IconSuccess', 'IconWarning'];
+const internalMineralIcons = [
+  'IconArrowDropdownDown',
+  'IconArrowDropdownUp',
+  'IconCheckBoxCheck',
+  'IconCheckBoxIndeterminate',
+  'IconDanger',
+  'IconDangerSimple',
+  'IconExpandLess',
+  'IconExpandMore',
+  'IconMoreHoriz',
+  'IconRadioButtonCheck',
+  'IconSuccess',
+  'IconSuccessSimple',
+  'IconWarning',
+  'IconWarningSimple'
+];
 
 // A subset of icons should be mirrored for RTL languages
 // http://google.github.io/material-design-icons/#icons-in-rtl
@@ -121,9 +136,9 @@ const svgo = new SVGO({
         name: 'camelCaseAttributes',
         params: {},
         type: 'perItem',
-        fn: item => {
+        fn: (item) => {
           if (item.isElem()) {
-            item.eachAttr(attr => (attr.name = camelCase(attr.name)));
+            item.eachAttr((attr) => (attr.name = camelCase(attr.name)));
           }
         }
       }
@@ -132,10 +147,8 @@ const svgo = new SVGO({
 });
 
 function optimizeSvg(componentName, fileContent) {
-  return new Promise((resolve, reject) => {
-    svgo.optimize(fileContent, ({ data: optimizedContent, error: err }) => {
-      if (err) return reject(`${componentName}: ${err}`);
-
+  return svgo.optimize(fileContent).then(
+    ({ data: optimizedContent }) => {
       if (DEBUG) {
         // Gather optimization metrics for logging
         const bytesSaved = fileContent.length - optimizedContent.length;
@@ -148,9 +161,12 @@ function optimizeSvg(componentName, fileContent) {
         );
       }
 
-      resolve(optimizedContent);
-    });
-  });
+      return optimizedContent;
+    },
+    (err) => {
+      console.error(`${componentName}: ${err}`);
+    }
+  );
 }
 
 async function buildIcons() {
@@ -171,7 +187,7 @@ async function buildIcons() {
   const template = await fs.readFile(COMPONENT_TEMPLATE_PATH, 'utf8');
   Mustache.parse(template);
 
-  const componentPromises = svgFiles.map(svgFile =>
+  const componentPromises = svgFiles.map((svgFile) =>
     generateComponent(template, svgFile)
   );
 
@@ -261,9 +277,9 @@ async function generateIndex(components) {
 }
 
 function copyInternalMineralIcons(components) {
-  const promises = internalMineralIcons.map(icon => {
+  const promises = internalMineralIcons.map((icon) => {
     const { componentFilePath: src } = components.find(
-      component => component.componentName === icon
+      (component) => component.componentName === icon
     );
     const dest = src.replace(COMPONENTS_DIR, ICON_COMPONENTS_DIR);
     return fs.copy(src, dest);

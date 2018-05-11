@@ -1,25 +1,9 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React from 'react';
 import rgba from 'polished/lib/color/rgba';
-import { createStyledComponent, pxToEm } from '../../../../styles';
+import { createStyledComponent, pxToEm } from '../../../../library/styles';
 import IconCheck from 'mineral-ui-icons/IconCheck';
-import { ThemeProvider } from '../../../../themes';
+import { ThemeProvider } from '../../../../library/themes';
 
 type Props = {
   children: React$Node,
@@ -43,7 +27,7 @@ const styles = {
     zIndex: 2,
 
     '& ::selection': {
-      backgroundColor: rgba(themes[index].color_text_primary, 0.2)
+      backgroundColor: rgba(themes[index].color_theme, 0.2)
     },
 
     '@media(min-width: 23em)': {
@@ -74,7 +58,9 @@ const styles = {
       : theme.color_white,
     border: `1px solid ${isActive ? theme.color_white : 'transparent'}`,
     borderRadius: theme.borderRadius_1,
-    boxShadow: isActive ? `0 0 0 1px ${theme[`borderColor_focus`]}` : null,
+    boxShadow: isActive
+      ? `0 0 0 1px ${theme[`borderColor_theme_focus`]}`
+      : null,
     cursor: 'pointer',
     display: 'flex',
     marginBottom: theme.space_stack_sm,
@@ -162,33 +148,20 @@ const styles = {
     // All styles copied from Link (except fontWeight) to negate the SiteLink
     // theme variables despite using the SiteLink component (via Markdown)
     '& p > a': {
-      color: theme.color_text_primary,
+      color: theme.color_theme,
       fontWeight: theme.fontWeight_semiBold,
 
       '&:hover': {
-        color: theme.color_text_primary_hover
+        color: theme.color_theme_hover
       },
       '&:focus': {
-        color: theme.color_text_primary_focus,
-        outlineColor: theme.borderColor_focus
+        color: theme.color_theme_focus,
+        outlineColor: theme.borderColor_theme_focus
       },
       // `:active` must be last, to follow LVHFA order:
       // https://developer.mozilla.org/en-US/docs/Web/CSS/:active
       '&:active': {
-        color: theme.color_text_primary_active
-      }
-    },
-
-    '& button': {
-      '@media(max-width: 22.999em)': {
-        padding: `0 ${theme.space_inline_xxs}`,
-        width: '100%',
-
-        // Content, with a specificity hack
-        '& > span > span[class]': {
-          paddingLeft: theme.space_inline_xxs,
-          paddingRight: theme.space_inline_xxs
-        }
+        color: theme.color_theme_active
       }
     }
   })

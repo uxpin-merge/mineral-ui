@@ -1,28 +1,11 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React, { Component } from 'react';
 import Media from 'react-media';
-import colors from '../../../../colors';
-import { createStyledComponent, pxToEm } from '../../../../styles';
-import { createThemedComponent } from '../../../../themes';
-import Button from '../../../../Button';
+import { createStyledComponent, pxToEm } from '../../../../library/styles';
+import { createThemedComponent } from '../../../../library/themes';
+import Button from '../../../../library/Button';
 import IconArrowDropDown from 'mineral-ui-icons/IconArrowDropDown';
-import _Popover from '../../../../Popover';
+import _Popover from '../../../../library/Popover';
 import Heading from '../../SiteHeading';
 import _Link from '../../SiteLink';
 import LogotypeHorizontal from '../../LogotypeHorizontal';
@@ -40,7 +23,7 @@ type State = {
 
 const menuButtonTheme = ({ theme }) => ({
   fontFamily: theme.fontFamily_headline,
-  Button_color_text_minimal: theme.color_white,
+  Button_color_minimal: theme.color_white,
   Button_backgroundColor_minimal_hover: 'transparent',
   Button_backgroundColor_minimal_active: 'transparent',
   Button_fontWeight: theme.fontWeight_regular,
@@ -72,7 +55,7 @@ const styles = {
       paddingTop: pxToEm(30), // matches horizontal padding
       transition: `margin ${transitionProperties}`,
 
-      '& div[id$="popoverContent"]': {
+      '& div[id$="content"]': {
         // Matches nav link padding + menuButton optical adjustment
         marginTop: `${parseFloat(theme.space_stack_sm) + 0.45}em`,
         opacity: isMenuOpen ? 1 : 0,
@@ -93,7 +76,7 @@ const styles = {
   },
   link: ({ theme }) => ({
     fontFamily: theme.fontFamily_headline,
-    fontWeight: theme.fontWeight_regular,
+    fontWeight: theme.fontWeight_medium,
     fontSize: '1em',
     textDecoration: 'none',
     textShadow: theme.textShadow,
@@ -103,6 +86,7 @@ const styles = {
     }
   }),
   logotype: ({ theme }) => ({
+    color: theme.color,
     lineHeight: 1,
     margin: 0,
 
@@ -121,13 +105,18 @@ const styles = {
   }),
   menuButton: ({ theme }) => ({
     border: 0,
+    fontWeight: theme.fontWeight_medium,
     position: 'relative',
     textShadow: theme.textShadow,
     top: '0.45em', // Optical adjustment for baseline alignment with Logotype
 
     '&:focus': {
-      color: colors.orange_50,
+      color: '#ed774c',
       boxShadow: 'none'
+    },
+
+    '& [role="img"]': {
+      color: 'inherit'
     }
   }),
   nav: ({ theme }) => ({
@@ -182,7 +171,8 @@ const Nav = ({
       <Media
         query="(max-width: 38.999em)"
         render={() =>
-          latestPost && <Link href={latestPost.url}>Latest Blog Post</Link>}
+          latestPost && <Link href={latestPost.url}>Latest Blog Post</Link>
+        }
       />
       <Media
         query="(max-width: 38.999em)"
@@ -227,7 +217,7 @@ export default class Header extends Component<Props, State> {
           <LogotypeHorizontal />
         </Logotype>
         <Media query="(min-width: 39em)">
-          {matches =>
+          {(matches) =>
             matches ? (
               <Nav />
             ) : (
@@ -238,7 +228,8 @@ export default class Header extends Component<Props, State> {
                   Menu
                 </MenuButton>
               </Popover>
-            )}
+            )
+          }
         </Media>
       </Root>
     );

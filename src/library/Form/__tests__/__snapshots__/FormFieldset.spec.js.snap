@@ -1,0 +1,1394 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormFieldset demo examples Snapshots: basic 1`] = `
+.css-0,
+[data-css-0] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  border: 1px solid transparent;
+  border-top-color: #c8d1e0;
+  padding: 0;
+}
+
+.css-0 *,
+[data-css-0] *,
+.css-0 *::before,
+[data-css-0] *::before,
+.css-0 *::after,
+[data-css-0] *::after {
+  box-sizing: inherit;
+}
+
+.css-0 > legend,
+[data-css-0] > legend {
+  color: #333840;
+  font-size: 0.875em;
+  font-weight: 700;
+  line-height: 2em;
+  padding: 0;
+  padding-right: 0.5em;
+}
+
+.css-1,
+[data-css-1] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.css-1 *,
+[data-css-1] *,
+.css-1 *::before,
+[data-css-1] *::before,
+.css-1 *::after,
+[data-css-1] *::after {
+  box-sizing: inherit;
+}
+
+.css-2,
+[data-css-2] {
+  color: #58606e;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.875em;
+  font-weight: 600;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+}
+
+.css-2 > *,
+[data-css-2] > * {
+  align-self: flex-end;
+  display: inline-block;
+  -webkit-align-self: flex-end;
+}
+
+.css-3,
+[data-css-3] {
+  align-items: center;
+  cursor: text;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.css-3 [role="img"],
+[data-css-3] [role="img"] {
+  color: #c8d1e0;
+  display: block;
+  flex: 0 0 auto;
+  margin: 0 0.5em;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-3 [role="img"]:last-of-type,
+[data-css-3] [role="img"]:last-of-type {
+  color: #c8d1e0;
+}
+
+.css-5,
+[data-css-5] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  cursor: text;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.css-5 *,
+[data-css-5] *,
+.css-5 *::before,
+[data-css-5] *::before,
+.css-5 *::after,
+[data-css-5] *::after {
+  box-sizing: inherit;
+}
+
+.css-5:hover > div:last-child,
+[data-css-5]:hover > div:last-child,
+.css-5[data-simulate-hover] > div:last-child,
+[data-css-5][data-simulate-hover] > div:last-child {
+  border-color: #5691f0;
+}
+
+.css-5:focus > div:last-child,
+[data-css-5]:focus > div:last-child,
+.css-5[data-simulate-focus] > div:last-child,
+[data-css-5][data-simulate-focus] > div:last-child {
+  border-color: #c8d1e0;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
+}
+
+.css-5:active > div:last-child,
+[data-css-5]:active > div:last-child,
+.css-5[data-simulate-active] > div:last-child,
+[data-css-5][data-simulate-active] > div:last-child {
+  border-color: #c8d1e0;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
+}
+
+.css-5 [role="img"],
+[data-css-5] [role="img"] {
+  color: #c8d1e0;
+  display: block;
+  flex: 0 0 auto;
+  margin: 0 0.5em;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-5 [role="img"]:last-of-type,
+[data-css-5] [role="img"]:last-of-type {
+  color: #c8d1e0;
+}
+
+.css-16,
+[data-css-16] {
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  flex: 1 1 auto;
+  font-family: inherit;
+  height: 2.857142857142857em;
+  min-width: 0;
+  width: 100%;
+  color: #333840;
+  -webkit-text-fill-color: #333840;
+  font-size: 0.875em;
+  outline: 0;
+  padding-left: 1.1428571428571428em;
+  padding-right: 1.1428571428571428em;
+  -webkit-flex: 1 1 auto;
+}
+
+.css-16::placeholder,
+[data-css-16]::placeholder,
+.css-16[data-simulate-placeholder],
+[data-css-16][data-simulate-placeholder] {
+  color: #8e99ab;
+  -webkit-text-fill-color: #8e99ab;
+  font-style: italic;
+}
+
+.css-16::-ms-input-placeholder,
+[data-css-16]::-ms-input-placeholder,
+.css-16[data-simulate-msinputplaceholder],
+[data-css-16][data-simulate-msinputplaceholder] {
+  color: #8e99ab;
+  -webkit-text-fill-color: #8e99ab;
+  font-style: italic;
+}
+
+.css-16:-ms-input-placeholder,
+[data-css-16]:-ms-input-placeholder,
+.css-16[data-simulate-msinputplaceholder],
+[data-css-16][data-simulate-msinputplaceholder] {
+  color: #8e99ab;
+  -webkit-text-fill-color: #8e99ab;
+  font-style: italic;
+}
+
+.css-16::-ms-clear,
+[data-css-16]::-ms-clear,
+.css-16[data-simulate-msclear],
+[data-css-16][data-simulate-msclear] {
+  display: none;
+}
+
+.css-16:focus ~ div:last-child,
+[data-css-16]:focus ~ div:last-child,
+.css-16[data-simulate-focus] ~ div:last-child,
+[data-css-16][data-simulate-focus] ~ div:last-child {
+  border-color: #c8d1e0;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
+}
+
+.css-30,
+[data-css-30] {
+  background-color: #ffffff;
+  border-color: #c8d1e0;
+  border-radius: 0.1875em;
+  border-style: solid;
+  border-width: 1px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+<FormFieldset
+  legend="Login"
+>
+  <FormFieldset>
+    <fieldset
+      className="css-0"
+    >
+      <legend>
+        Login
+      </legend>
+      <glamorous(div)>
+        <div
+          className="css-1p1xtzc"
+        >
+          <FormField
+            label="Email"
+            requiredText="Required"
+          >
+            <FormField>
+              <div
+                className="css-1"
+              >
+                <label>
+                  <glamorous(div)
+                    key="formField-1-textWrapper"
+                  >
+                    <div
+                      className="css-2"
+                    >
+                      <span
+                        id="formField-1-labelText"
+                      >
+                        Email
+                      </span>
+                    </div>
+                  </glamorous(div)>
+                  <TextInput
+                    key="formField-1-control"
+                    type="email"
+                  >
+                    <TextInput
+                      control={[Function]}
+                      controlProps={
+                        Object {
+                          "aria-describedby": undefined,
+                          "aria-invalid": undefined,
+                          "aria-required": undefined,
+                          "controlRef": undefined,
+                          "disabled": undefined,
+                          "readOnly": undefined,
+                          "required": undefined,
+                          "type": "email",
+                        }
+                      }
+                      size="large"
+                    >
+                      <FauxControl
+                        className="css-3"
+                        control={[Function]}
+                        controlProps={
+                          Object {
+                            "aria-describedby": undefined,
+                            "aria-invalid": undefined,
+                            "aria-required": undefined,
+                            "controlRef": undefined,
+                            "disabled": undefined,
+                            "readOnly": undefined,
+                            "required": undefined,
+                            "type": "email",
+                          }
+                        }
+                        size="large"
+                      >
+                        <FauxControl
+                          className="css-3"
+                          control={[Function]}
+                        >
+                          <div
+                            className="css-5"
+                          >
+                            <glamorous(glamorous(input))
+                              controlPropsIn={
+                                Object {
+                                  "aria-describedby": undefined,
+                                  "aria-invalid": undefined,
+                                  "aria-required": undefined,
+                                  "controlRef": undefined,
+                                  "disabled": undefined,
+                                  "readOnly": undefined,
+                                  "required": undefined,
+                                  "type": "email",
+                                }
+                              }
+                              key="control"
+                              size="large"
+                              type="email"
+                            >
+                              <input
+                                className="css-16"
+                                size="large"
+                                type="email"
+                              />
+                            </glamorous(glamorous(input))>
+                            <Underlay>
+                              <div
+                                className="css-30"
+                              />
+                            </Underlay>
+                          </div>
+                        </FauxControl>
+                      </FauxControl>
+                    </TextInput>
+                  </TextInput>
+                </label>
+              </div>
+            </FormField>
+          </FormField>
+          <FormField
+            label="Password"
+            requiredText="Required"
+          >
+            <FormField>
+              <div
+                className="css-1"
+              >
+                <label>
+                  <glamorous(div)
+                    key="formField-2-textWrapper"
+                  >
+                    <div
+                      className="css-2"
+                    >
+                      <span
+                        id="formField-2-labelText"
+                      >
+                        Password
+                      </span>
+                    </div>
+                  </glamorous(div)>
+                  <TextInput
+                    key="formField-2-control"
+                    type="password"
+                  >
+                    <TextInput
+                      control={[Function]}
+                      controlProps={
+                        Object {
+                          "aria-describedby": undefined,
+                          "aria-invalid": undefined,
+                          "aria-required": undefined,
+                          "controlRef": undefined,
+                          "disabled": undefined,
+                          "readOnly": undefined,
+                          "required": undefined,
+                          "type": "password",
+                        }
+                      }
+                      size="large"
+                    >
+                      <FauxControl
+                        className="css-3"
+                        control={[Function]}
+                        controlProps={
+                          Object {
+                            "aria-describedby": undefined,
+                            "aria-invalid": undefined,
+                            "aria-required": undefined,
+                            "controlRef": undefined,
+                            "disabled": undefined,
+                            "readOnly": undefined,
+                            "required": undefined,
+                            "type": "password",
+                          }
+                        }
+                        size="large"
+                      >
+                        <FauxControl
+                          className="css-3"
+                          control={[Function]}
+                        >
+                          <div
+                            className="css-5"
+                          >
+                            <glamorous(glamorous(input))
+                              controlPropsIn={
+                                Object {
+                                  "aria-describedby": undefined,
+                                  "aria-invalid": undefined,
+                                  "aria-required": undefined,
+                                  "controlRef": undefined,
+                                  "disabled": undefined,
+                                  "readOnly": undefined,
+                                  "required": undefined,
+                                  "type": "password",
+                                }
+                              }
+                              key="control"
+                              size="large"
+                              type="password"
+                            >
+                              <input
+                                className="css-16"
+                                size="large"
+                                type="password"
+                              />
+                            </glamorous(glamorous(input))>
+                            <Underlay>
+                              <div
+                                className="css-30"
+                              />
+                            </Underlay>
+                          </div>
+                        </FauxControl>
+                      </FauxControl>
+                    </TextInput>
+                  </TextInput>
+                </label>
+              </div>
+            </FormField>
+          </FormField>
+        </div>
+      </glamorous(div)>
+    </fieldset>
+  </FormFieldset>
+</FormFieldset>
+`;
+
+exports[`FormFieldset demo examples Snapshots: disabled 1`] = `
+.css-0,
+[data-css-0] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.css-0 *,
+[data-css-0] *,
+.css-0 *::before,
+[data-css-0] *::before,
+.css-0 *::after,
+[data-css-0] *::after {
+  box-sizing: inherit;
+}
+
+.css-1,
+[data-css-1] {
+  color: #58606e;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.875em;
+  font-weight: 600;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+}
+
+.css-1 > *,
+[data-css-1] > * {
+  align-self: flex-end;
+  display: inline-block;
+  -webkit-align-self: flex-end;
+}
+
+.css-2,
+[data-css-2] {
+  align-items: center;
+  cursor: text;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.css-2 [role="img"],
+[data-css-2] [role="img"] {
+  color: #c8d1e0;
+  display: block;
+  flex: 0 0 auto;
+  margin: 0 0.5em;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-2 [role="img"]:last-of-type,
+[data-css-2] [role="img"]:last-of-type {
+  color: #c8d1e0;
+}
+
+.css-4,
+[data-css-4] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  border: 1px solid transparent;
+  border-top-color: #c8d1e0;
+  padding: 0;
+}
+
+.css-4 *,
+[data-css-4] *,
+.css-4 *::before,
+[data-css-4] *::before,
+.css-4 *::after,
+[data-css-4] *::after {
+  box-sizing: inherit;
+}
+
+.css-4 > legend,
+[data-css-4] > legend {
+  color: #afbacc;
+  font-size: 0.875em;
+  font-weight: 700;
+  line-height: 2em;
+  padding: 0;
+  padding-right: 0.5em;
+}
+
+.css-5,
+[data-css-5] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  cursor: text;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.css-5 *,
+[data-css-5] *,
+.css-5 *::before,
+[data-css-5] *::before,
+.css-5 *::after,
+[data-css-5] *::after {
+  box-sizing: inherit;
+}
+
+.css-5:active > div:last-child,
+[data-css-5]:active > div:last-child,
+.css-5[data-simulate-active] > div:last-child,
+[data-css-5][data-simulate-active] > div:last-child {
+  border-color: #c8d1e0;
+  box-shadow: none;
+}
+
+.css-5 [role="img"],
+[data-css-5] [role="img"] {
+  color: #c8d1e0;
+  display: block;
+  flex: 0 0 auto;
+  margin: 0 0.5em;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-5 [role="img"]:last-of-type,
+[data-css-5] [role="img"]:last-of-type {
+  color: #c8d1e0;
+}
+
+.css-10,
+[data-css-10] {
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  flex: 1 1 auto;
+  font-family: inherit;
+  height: 2.857142857142857em;
+  min-width: 0;
+  width: 100%;
+  color: #afbacc;
+  -webkit-text-fill-color: #afbacc;
+  font-size: 0.875em;
+  outline: 0;
+  padding-left: 1.1428571428571428em;
+  padding-right: 1.1428571428571428em;
+  -webkit-flex: 1 1 auto;
+}
+
+.css-10::placeholder,
+[data-css-10]::placeholder,
+.css-10[data-simulate-placeholder],
+[data-css-10][data-simulate-placeholder] {
+  color: #8e99ab;
+  -webkit-text-fill-color: #8e99ab;
+  font-style: italic;
+}
+
+.css-10::-ms-input-placeholder,
+[data-css-10]::-ms-input-placeholder,
+.css-10[data-simulate-msinputplaceholder],
+[data-css-10][data-simulate-msinputplaceholder] {
+  color: #8e99ab;
+  -webkit-text-fill-color: #8e99ab;
+  font-style: italic;
+}
+
+.css-10:-ms-input-placeholder,
+[data-css-10]:-ms-input-placeholder,
+.css-10[data-simulate-msinputplaceholder],
+[data-css-10][data-simulate-msinputplaceholder] {
+  color: #8e99ab;
+  -webkit-text-fill-color: #8e99ab;
+  font-style: italic;
+}
+
+.css-10::-ms-clear,
+[data-css-10]::-ms-clear,
+.css-10[data-simulate-msclear],
+[data-css-10][data-simulate-msclear] {
+  display: none;
+}
+
+.css-10:focus ~ div:last-child,
+[data-css-10]:focus ~ div:last-child,
+.css-10[data-simulate-focus] ~ div:last-child,
+[data-css-10][data-simulate-focus] ~ div:last-child {
+  border-color: #c8d1e0;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
+}
+
+.css-24,
+[data-css-24] {
+  background-color: #ebeff5;
+  border-color: #c8d1e0;
+  border-radius: 0.1875em;
+  border-style: solid;
+  border-width: 1px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+<FormFieldset
+  disabled={true}
+  legend="Login"
+>
+  <FormFieldset
+    disabled={true}
+  >
+    <fieldset
+      className="css-4"
+      disabled={true}
+    >
+      <legend>
+        Login
+      </legend>
+      <glamorous(div)>
+        <div
+          className="css-1p1xtzc"
+        >
+          <FormField
+            label="Email"
+            requiredText="Required"
+          >
+            <FormField>
+              <div
+                className="css-0"
+              >
+                <label>
+                  <glamorous(div)
+                    key="formField-5-textWrapper"
+                  >
+                    <div
+                      className="css-1"
+                    >
+                      <span
+                        id="formField-5-labelText"
+                      >
+                        Email
+                      </span>
+                    </div>
+                  </glamorous(div)>
+                  <TextInput
+                    disabled={true}
+                    key="formField-5-control"
+                    type="email"
+                  >
+                    <TextInput
+                      control={[Function]}
+                      controlProps={
+                        Object {
+                          "aria-describedby": undefined,
+                          "aria-invalid": undefined,
+                          "aria-required": undefined,
+                          "controlRef": undefined,
+                          "disabled": true,
+                          "readOnly": undefined,
+                          "required": undefined,
+                          "type": "email",
+                        }
+                      }
+                      disabled={true}
+                      size="large"
+                    >
+                      <FauxControl
+                        className="css-2"
+                        control={[Function]}
+                        controlProps={
+                          Object {
+                            "aria-describedby": undefined,
+                            "aria-invalid": undefined,
+                            "aria-required": undefined,
+                            "controlRef": undefined,
+                            "disabled": true,
+                            "readOnly": undefined,
+                            "required": undefined,
+                            "type": "email",
+                          }
+                        }
+                        disabled={true}
+                        size="large"
+                      >
+                        <FauxControl
+                          className="css-2"
+                          control={[Function]}
+                          disabled={true}
+                        >
+                          <div
+                            className="css-5"
+                          >
+                            <glamorous(glamorous(input))
+                              controlPropsIn={
+                                Object {
+                                  "aria-describedby": undefined,
+                                  "aria-invalid": undefined,
+                                  "aria-required": undefined,
+                                  "controlRef": undefined,
+                                  "disabled": true,
+                                  "readOnly": undefined,
+                                  "required": undefined,
+                                  "type": "email",
+                                }
+                              }
+                              disabled={true}
+                              key="control"
+                              size="large"
+                              type="email"
+                            >
+                              <input
+                                className="css-10"
+                                disabled={true}
+                                size="large"
+                                type="email"
+                              />
+                            </glamorous(glamorous(input))>
+                            <Underlay
+                              disabled={true}
+                            >
+                              <div
+                                className="css-24"
+                              />
+                            </Underlay>
+                          </div>
+                        </FauxControl>
+                      </FauxControl>
+                    </TextInput>
+                  </TextInput>
+                </label>
+              </div>
+            </FormField>
+          </FormField>
+          <FormField
+            label="Password"
+            requiredText="Required"
+          >
+            <FormField>
+              <div
+                className="css-0"
+              >
+                <label>
+                  <glamorous(div)
+                    key="formField-6-textWrapper"
+                  >
+                    <div
+                      className="css-1"
+                    >
+                      <span
+                        id="formField-6-labelText"
+                      >
+                        Password
+                      </span>
+                    </div>
+                  </glamorous(div)>
+                  <TextInput
+                    disabled={true}
+                    key="formField-6-control"
+                    type="password"
+                  >
+                    <TextInput
+                      control={[Function]}
+                      controlProps={
+                        Object {
+                          "aria-describedby": undefined,
+                          "aria-invalid": undefined,
+                          "aria-required": undefined,
+                          "controlRef": undefined,
+                          "disabled": true,
+                          "readOnly": undefined,
+                          "required": undefined,
+                          "type": "password",
+                        }
+                      }
+                      disabled={true}
+                      size="large"
+                    >
+                      <FauxControl
+                        className="css-2"
+                        control={[Function]}
+                        controlProps={
+                          Object {
+                            "aria-describedby": undefined,
+                            "aria-invalid": undefined,
+                            "aria-required": undefined,
+                            "controlRef": undefined,
+                            "disabled": true,
+                            "readOnly": undefined,
+                            "required": undefined,
+                            "type": "password",
+                          }
+                        }
+                        disabled={true}
+                        size="large"
+                      >
+                        <FauxControl
+                          className="css-2"
+                          control={[Function]}
+                          disabled={true}
+                        >
+                          <div
+                            className="css-5"
+                          >
+                            <glamorous(glamorous(input))
+                              controlPropsIn={
+                                Object {
+                                  "aria-describedby": undefined,
+                                  "aria-invalid": undefined,
+                                  "aria-required": undefined,
+                                  "controlRef": undefined,
+                                  "disabled": true,
+                                  "readOnly": undefined,
+                                  "required": undefined,
+                                  "type": "password",
+                                }
+                              }
+                              disabled={true}
+                              key="control"
+                              size="large"
+                              type="password"
+                            >
+                              <input
+                                className="css-10"
+                                disabled={true}
+                                size="large"
+                                type="password"
+                              />
+                            </glamorous(glamorous(input))>
+                            <Underlay
+                              disabled={true}
+                            >
+                              <div
+                                className="css-24"
+                              />
+                            </Underlay>
+                          </div>
+                        </FauxControl>
+                      </FauxControl>
+                    </TextInput>
+                  </TextInput>
+                </label>
+              </div>
+            </FormField>
+          </FormField>
+        </div>
+      </glamorous(div)>
+    </fieldset>
+  </FormFieldset>
+</FormFieldset>
+`;
+
+exports[`FormFieldset demo examples Snapshots: rtl 1`] = `
+.css-0,
+[data-css-0] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.css-0 *,
+[data-css-0] *,
+.css-0 *::before,
+[data-css-0] *::before,
+.css-0 *::after,
+[data-css-0] *::after {
+  box-sizing: inherit;
+}
+
+.css-1,
+[data-css-1] {
+  color: #58606e;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.875em;
+  font-weight: 600;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+}
+
+.css-1 > *,
+[data-css-1] > * {
+  align-self: flex-end;
+  display: inline-block;
+  -webkit-align-self: flex-end;
+}
+
+.css-2,
+[data-css-2] {
+  align-items: center;
+  cursor: text;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.css-2 [role="img"],
+[data-css-2] [role="img"] {
+  color: #c8d1e0;
+  display: block;
+  flex: 0 0 auto;
+  margin: 0 0.5em;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-2 [role="img"]:last-of-type,
+[data-css-2] [role="img"]:last-of-type {
+  color: #c8d1e0;
+}
+
+.css-4,
+[data-css-4] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  cursor: text;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.css-4 *,
+[data-css-4] *,
+.css-4 *::before,
+[data-css-4] *::before,
+.css-4 *::after,
+[data-css-4] *::after {
+  box-sizing: inherit;
+}
+
+.css-4:hover > div:last-child,
+[data-css-4]:hover > div:last-child,
+.css-4[data-simulate-hover] > div:last-child,
+[data-css-4][data-simulate-hover] > div:last-child {
+  border-color: #5691f0;
+}
+
+.css-4:focus > div:last-child,
+[data-css-4]:focus > div:last-child,
+.css-4[data-simulate-focus] > div:last-child,
+[data-css-4][data-simulate-focus] > div:last-child {
+  border-color: #c8d1e0;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
+}
+
+.css-4:active > div:last-child,
+[data-css-4]:active > div:last-child,
+.css-4[data-simulate-active] > div:last-child,
+[data-css-4][data-simulate-active] > div:last-child {
+  border-color: #c8d1e0;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
+}
+
+.css-4 [role="img"],
+[data-css-4] [role="img"] {
+  color: #c8d1e0;
+  display: block;
+  flex: 0 0 auto;
+  margin: 0 0.5em;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-4 [role="img"]:last-of-type,
+[data-css-4] [role="img"]:last-of-type {
+  color: #c8d1e0;
+}
+
+.css-15,
+[data-css-15] {
+  background-color: #ffffff;
+  border-color: #c8d1e0;
+  border-radius: 0.1875em;
+  border-style: solid;
+  border-width: 1px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.css-16,
+[data-css-16] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  border: 1px solid transparent;
+  border-top-color: #c8d1e0;
+  padding: 0;
+}
+
+.css-16 *,
+[data-css-16] *,
+.css-16 *::before,
+[data-css-16] *::before,
+.css-16 *::after,
+[data-css-16] *::after {
+  box-sizing: inherit;
+}
+
+.css-16 > legend,
+[data-css-16] > legend {
+  color: #333840;
+  font-size: 0.875em;
+  font-weight: 700;
+  line-height: 2em;
+  padding: 0;
+  padding-left: 0.5em;
+}
+
+.css-17,
+[data-css-17] {
+  fill: currentcolor;
+  font-size: 16px;
+  height: 1.5em;
+  transform: scaleX(-1);
+  width: 1.5em;
+  -webkit-transform: scaleX(-1);
+}
+
+.css-18,
+[data-css-18] {
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  flex: 1 1 auto;
+  font-family: inherit;
+  height: 2.857142857142857em;
+  min-width: 0;
+  width: 100%;
+  color: #333840;
+  -webkit-text-fill-color: #333840;
+  font-size: 0.875em;
+  outline: 0;
+  padding-left: 1.1428571428571428em;
+  padding-right: 0;
+  -webkit-flex: 1 1 auto;
+}
+
+.css-18::placeholder,
+[data-css-18]::placeholder,
+.css-18[data-simulate-placeholder],
+[data-css-18][data-simulate-placeholder] {
+  color: #8e99ab;
+  -webkit-text-fill-color: #8e99ab;
+  font-style: italic;
+}
+
+.css-18::-ms-input-placeholder,
+[data-css-18]::-ms-input-placeholder,
+.css-18[data-simulate-msinputplaceholder],
+[data-css-18][data-simulate-msinputplaceholder] {
+  color: #8e99ab;
+  -webkit-text-fill-color: #8e99ab;
+  font-style: italic;
+}
+
+.css-18:-ms-input-placeholder,
+[data-css-18]:-ms-input-placeholder,
+.css-18[data-simulate-msinputplaceholder],
+[data-css-18][data-simulate-msinputplaceholder] {
+  color: #8e99ab;
+  -webkit-text-fill-color: #8e99ab;
+  font-style: italic;
+}
+
+.css-18::-ms-clear,
+[data-css-18]::-ms-clear,
+.css-18[data-simulate-msclear],
+[data-css-18][data-simulate-msclear] {
+  display: none;
+}
+
+.css-18:focus ~ div:last-child,
+[data-css-18]:focus ~ div:last-child,
+.css-18[data-simulate-focus] ~ div:last-child,
+[data-css-18][data-simulate-focus] ~ div:last-child {
+  border-color: #c8d1e0;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
+}
+
+<div
+  dir="rtl"
+>
+  <ThemeProvider>
+    <ThemeProvider>
+      <FormFieldset
+        legend="أسطورة"
+      >
+        <FormFieldset>
+          <fieldset
+            className="css-16"
+          >
+            <legend>
+              أسطورة
+            </legend>
+            <FormField
+              label="مرحبا بالعالم"
+              requiredText="Required"
+            >
+              <FormField>
+                <div
+                  className="css-0"
+                >
+                  <label>
+                    <glamorous(div)
+                      key="formField-9-textWrapper"
+                    >
+                      <div
+                        className="css-1"
+                      >
+                        <span
+                          id="formField-9-labelText"
+                        >
+                          مرحبا بالعالم
+                        </span>
+                      </div>
+                    </glamorous(div)>
+                    <TextInput
+                      defaultValue="مرحبا بالعالم"
+                      iconStart={<IconBackspace />}
+                      key="formField-9-control"
+                    >
+                      <TextInput
+                        control={[Function]}
+                        controlProps={
+                          Object {
+                            "aria-describedby": undefined,
+                            "aria-invalid": undefined,
+                            "aria-required": undefined,
+                            "controlRef": undefined,
+                            "defaultValue": "مرحبا بالعالم",
+                            "disabled": undefined,
+                            "readOnly": undefined,
+                            "required": undefined,
+                            "type": "text",
+                          }
+                        }
+                        iconStart={<IconBackspace />}
+                        size="large"
+                      >
+                        <FauxControl
+                          className="css-2"
+                          control={[Function]}
+                          controlProps={
+                            Object {
+                              "aria-describedby": undefined,
+                              "aria-invalid": undefined,
+                              "aria-required": undefined,
+                              "controlRef": undefined,
+                              "defaultValue": "مرحبا بالعالم",
+                              "disabled": undefined,
+                              "readOnly": undefined,
+                              "required": undefined,
+                              "type": "text",
+                            }
+                          }
+                          iconStart={<IconBackspace />}
+                          size="large"
+                        >
+                          <FauxControl
+                            className="css-2"
+                            control={[Function]}
+                          >
+                            <div
+                              className="css-4"
+                            >
+                              <IconBackspace
+                                key="iconStart"
+                                size="1.5em"
+                              >
+                                <Icon
+                                  rtl={true}
+                                  size="1.5em"
+                                >
+                                  <glamorous(svg)
+                                    aria-hidden={true}
+                                    role="img"
+                                    rtl={true}
+                                    size="1.5em"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <svg
+                                      aria-hidden={true}
+                                      className="css-17"
+                                      role="img"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <g>
+                                        <path
+                                          d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-3 12.59L17.59 17 14 13.41 10.41 17 9 15.59 12.59 12 9 8.41 10.41 7 14 10.59 17.59 7 19 8.41 15.41 12 19 15.59z"
+                                        />
+                                      </g>
+                                    </svg>
+                                  </glamorous(svg)>
+                                </Icon>
+                              </IconBackspace>
+                              <glamorous(glamorous(input))
+                                controlPropsIn={
+                                  Object {
+                                    "aria-describedby": undefined,
+                                    "aria-invalid": undefined,
+                                    "aria-required": undefined,
+                                    "controlRef": undefined,
+                                    "defaultValue": "مرحبا بالعالم",
+                                    "disabled": undefined,
+                                    "readOnly": undefined,
+                                    "required": undefined,
+                                    "type": "text",
+                                  }
+                                }
+                                defaultValue="مرحبا بالعالم"
+                                iconStart={<IconBackspace />}
+                                key="control"
+                                size="large"
+                                type="text"
+                              >
+                                <input
+                                  className="css-18"
+                                  defaultValue="مرحبا بالعالم"
+                                  size="large"
+                                  type="text"
+                                />
+                              </glamorous(glamorous(input))>
+                              <Underlay>
+                                <div
+                                  className="css-15"
+                                />
+                              </Underlay>
+                            </div>
+                          </FauxControl>
+                        </FauxControl>
+                      </TextInput>
+                    </TextInput>
+                  </label>
+                </div>
+              </FormField>
+            </FormField>
+          </fieldset>
+        </FormFieldset>
+      </FormFieldset>
+    </ThemeProvider>
+  </ThemeProvider>
+</div>
+`;

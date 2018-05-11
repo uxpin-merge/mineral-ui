@@ -1,19 +1,3 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React from 'react';
 import { Table, TableCell, TableHeaderCell, TableRow } from './Table';
@@ -40,20 +24,20 @@ export default function MarkdownTable({ children }: Props) {
 
   // a bunch of the elements returned by marksy are null,
   // so there's a lot of filtering and finding with the identity
-  const headNode = head.find(element => element);
-  const headRow = headNode && headNode.props.children.find(row => row);
+  const headNode = head.find((element) => element);
+  const headRow = headNode && headNode.props.children.find((row) => row);
   const headCells =
     headRow &&
     headRow.props.children
-      .filter(cell => cell)
+      .filter((cell) => cell)
       .map((cell, index) => (
         <TableHeaderCell key={index}>{cell.props.children}</TableHeaderCell>
       ));
-  const bodyNode = body.find(element => element);
+  const bodyNode = body.find((element) => element);
   const bodyRows =
     bodyNode &&
-    bodyNode.props.children.filter(row => row).map(row => {
-      const rowCells = row.props.children.filter(cell => cell).map(cell => {
+    bodyNode.props.children.filter((row) => row).map((row) => {
+      const rowCells = row.props.children.filter((cell) => cell).map((cell) => {
         let { children: cellReactChildren } = cell.props;
         if (cellReactChildren == null) {
           return <TableCell key={cell.key} />;
@@ -68,10 +52,10 @@ export default function MarkdownTable({ children }: Props) {
         ];
 
         const enhancedChildren = cellReactChildren
-          .filter(child => child)
+          .filter((child) => child)
           // all the transforms return a (possibly modified) node,
           // which is passed to the next transform
-          .map(child =>
+          .map((child) =>
             transforms.reduce((node, transform) => transform(node), child)
           );
 

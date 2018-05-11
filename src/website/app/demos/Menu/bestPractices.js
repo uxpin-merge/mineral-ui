@@ -1,24 +1,12 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React from 'react';
-import { createStyledComponent, pxToEm } from '../../../../styles';
-import { mineralTheme } from '../../../../themes';
-import Menu, { MenuDivider, MenuGroup, MenuItem } from '../../../../Menu';
+import { createStyledComponent, pxToEm } from '../../../../library/styles';
+import { mineralTheme } from '../../../../library/themes';
+import Menu, {
+  MenuDivider,
+  MenuGroup,
+  MenuItem
+} from '../../../../library/Menu';
 
 const DemoLayout = createStyledComponent('div', {
   '& > div': {
@@ -200,7 +188,7 @@ overwhelming to users and your feature will get buried.`,
     {
       type: 'do',
       backgroundColor,
-      description: `Use the [appropriate variant](/color/#guidelines-variants)
+      description: `Use the [appropriate variant](/color#guidelines-variants)
 to give your users hints about what the potential outcome of an action will be.`,
       example: (
         <DemoLayout>
@@ -230,7 +218,7 @@ to give your users hints about what the potential outcome of an action will be.`
     {
       type: 'do',
       backgroundColor,
-      description: `Clearly label [MenuItem](../menu-item) actions to be
+      description: `Clearly label [MenuItem](/components/menu-item) actions to be
 predictable for frictionless interaction. Labels should be structured:
 \`<verb> <noun>\`.`,
       example: (
@@ -294,7 +282,7 @@ it probably belongs somewhere else.`,
       type: 'dont',
       backgroundColor,
       description: `Don't use disabled MenuItems as section titles. Instead, use
-the \`title\` prop of a [MenuGroup](../menu-group) to show meta information for
+the \`title\` prop of a [MenuGroup](/components/menu-group) to show meta information for
 a group, or place this information elsewhere in the interface.`,
       example: (
         <DemoLayout>

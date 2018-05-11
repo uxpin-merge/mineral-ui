@@ -1,25 +1,9 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React from 'react';
 import colorable from 'colorable';
 import readableColor from 'polished/lib/color/readableColor';
-import { createStyledComponent } from '../../../../styles';
-import color from '../../../../colors';
+import { palette } from 'mineral-ui-tokens';
+import { createStyledComponent } from '../../../../library/styles';
 
 type Props = {
   name: string
@@ -51,7 +35,7 @@ const styles = {
     display: 'block',
     marginBottom: theme.space_stack_sm
   }),
-  blackonBackground: { color: color.black, display: 'block' },
+  blackonBackground: { color: palette.black, display: 'block' },
   accessibilityInfo: {
     display: 'block',
     textAlign: 'right',
@@ -92,21 +76,21 @@ function getBestAccessibility(access) {
 
 export default function ColorRampRow({ name }: Props) {
   // the black here is the color from our theme.
-  const main = color[name];
+  const main = palette[name];
   const readable = readableColor(main);
   const accessibility = colorable({
     main,
-    black: color.black,
-    white: '#fff'
+    black: palette.black,
+    white: palette.white
   });
 
-  const hsl = accessibility.find(result => result.name === 'main').values.hsl;
+  const hsl = accessibility.find((result) => result.name === 'main').values.hsl;
   const blackonBackground = accessibility
-    .find(result => result.name === 'black')
-    .combinations.find(combo => combo.name === 'main');
+    .find((result) => result.name === 'black')
+    .combinations.find((combo) => combo.name === 'main');
   const whiteOnBackground = accessibility
-    .find(result => result.name === 'white')
-    .combinations.find(combo => combo.name === 'main');
+    .find((result) => result.name === 'white')
+    .combinations.find((combo) => combo.name === 'main');
 
   return (
     <Row color={main}>

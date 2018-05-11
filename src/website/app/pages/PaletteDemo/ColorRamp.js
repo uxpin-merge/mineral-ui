@@ -1,26 +1,9 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React from 'react';
-import { createStyledComponent } from '../../../../styles';
+import { createStyledComponent } from '../../../../library/styles';
 import Paragraph from '../../Paragraph';
 
 type Props = {
-  isGray?: boolean,
   ramp: { [string]: string }
 };
 
@@ -70,27 +53,21 @@ const styles = {
 const Hue = createStyledComponent(Paragraph, styles.hue);
 const Swatch = createStyledComponent('span', styles.swatch);
 
-const REGEX_KEY_COLOR = /^.*_/;
-
-export default function ColorRamp({ ramp, isGray }: Props) {
+export default function ColorRamp({ ramp }: Props) {
   return (
     <div>
-      {Object.entries(ramp).map(([key, color]) => {
-        key = isGray ? key : key.replace(REGEX_KEY_COLOR, 'theme_');
-
-        return (
-          <Hue key={key}>
-            <Swatch color={color} />
-            <span>{key}</span>
-            {/*
-              $FlowFixMe
-              Needed to avoid Flow bug: https://github.com/facebook/flow/issues/2221
-              Alternative is to use a refinement, e.g. color = typeof color === 'string' ? '' + color : '';
-            */}
-            <span>{color}</span>
-          </Hue>
-        );
-      })}
+      {Object.entries(ramp).map(([key, color]) => (
+        <Hue key={key}>
+          <Swatch color={color} />
+          <span>{key.replace('color_', '')}</span>
+          {/*
+            $FlowFixMe
+            Needed to avoid Flow bug: https://github.com/facebook/flow/issues/2221
+            Alternative is to use a refinement, e.g. color = typeof color === 'string' ? '' + color : '';
+          */}
+          <span>{color}</span>
+        </Hue>
+      ))}
     </div>
   );
 }

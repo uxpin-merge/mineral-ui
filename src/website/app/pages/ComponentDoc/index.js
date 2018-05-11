@@ -1,27 +1,11 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React from 'react';
 import {
   createStyledComponent,
   getNormalizedValue,
   pxToEm
-} from '../../../../styles';
-import { mineralTheme } from '../../../../themes';
+} from '../../../../library/styles';
+import { mineralTheme } from '../../../../library/themes';
 import Heading from '../../SiteHeading';
 import Intro from '../../Intro';
 import DocBestPractices from './DocBestPractices';
@@ -44,6 +28,7 @@ type Props = {
     canonicalLink: string
   },
   propsComment?: string | React$Element<*>,
+  slug: string,
   title: string,
   whenHowToUse?: string
 };
@@ -94,8 +79,8 @@ export default function ComponentDoc({
   componentTheme,
   doc,
   examples,
-
   propsComment,
+  slug,
   title,
   whenHowToUse,
   ...restProps
@@ -112,6 +97,7 @@ export default function ComponentDoc({
   };
   delete rootProps.subcomponent;
   delete rootProps.slug;
+  const examplesProps = { examples, slug };
   const propProps = { propDoc, propsComment, title };
   const themeVariablesProps = {
     baseTheme: mineralTheme,
@@ -124,7 +110,7 @@ export default function ComponentDoc({
       {doc.description && <DocIntro>{doc.description}</DocIntro>}
       <DocSubNav {...subNavProps} />
       {examples && <DocHeading id="examples">Examples</DocHeading>}
-      {examples && <DocExamples examples={examples} />}
+      {examples && <DocExamples {...examplesProps} />}
       <DocHeading id="api-and-theme">API & Theme</DocHeading>
       <DocProps {...propProps} />
       {componentTheme && <DocThemeVariables {...themeVariablesProps} />}

@@ -1,27 +1,10 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React from 'react';
-import { mount } from 'enzyme';
 import { LiveProvider, LivePreview } from 'react-live';
-import ThemeProvider from '../src/themes/ThemeProvider';
+import { mountInThemeProvider, ssrInThemeProvider } from '../utils/enzymeUtils';
 
 type Example = {
-  title: React$Node,
+  title: string,
   scope?: Object,
   id: string,
   source?: string
@@ -31,29 +14,61 @@ type Options = {
   exclude?: Array<string> // Example id
 };
 
+const mountExample = (example: Example) => {
+  const [, wrapper] = mountInThemeProvider(
+    <LiveProvider
+      code={example.source}
+      scope={example.scope}
+      mountStylesheet={false}>
+      <LivePreview />
+    </LiveProvider>
+  );
+
+  // NOTE: Find the "SUT" component inside the react-live ErrorBoundary
+  const component = wrapper
+    .findWhere(
+      (node) =>
+        // $FlowFixMe
+        node && node.type() && node.type().name === 'ErrorBoundary'
+    )
+    .childAt(0);
+
+  return component;
+};
+
+const ssrExample = (example: Example) => {
+  return ssrInThemeProvider(
+    <LiveProvider
+      code={example.source}
+      scope={example.scope}
+      mountStylesheet={false}>
+      <LivePreview />
+    </LiveProvider>
+  );
+};
+
 export default function testDemoExamples(
   examples: Examples,
   options: Options = {}
 ) {
   if (options.exclude) {
     const exclusions = options.exclude || [];
-    examples = examples.filter(example => !exclusions.includes(example.id));
+    examples = examples.filter((example) => !exclusions.includes(example.id));
   }
 
   return describe('demo examples', () => {
-    examples.filter(({ scope, source }) => scope && source).map(example => {
-      it(example.id, () => {
-        const component = mount(
-          <ThemeProvider>
-            <LiveProvider
-              code={example.source}
-              scope={example.scope}
-              mountStylesheet={false}>
-              <LivePreview />
-            </LiveProvider>
-          </ThemeProvider>
-        );
-        expect(component).toMatchSnapshot();
+    examples.filter(({ scope, source }) => scope && source).map((example) => {
+      describe('Snapshots:', () => {
+        it(example.id, () => {
+          const component = mountExample(example);
+          expect(component).toMatchSnapshot();
+        });
+      });
+
+      describe('Server Side Rendering (SSR):', () => {
+        it(example.id, () => {
+          expect(() => ssrExample(example)).not.toThrow();
+        });
       });
     });
   });

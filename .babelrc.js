@@ -27,8 +27,8 @@ module.exports = {
   plugins: (() => {
     let plugins = [
       'transform-object-rest-spread',
-      'transform-class-properties',
       'flow-react-proptypes',
+      'transform-class-properties',
       'syntax-dynamic-import'
     ];
 
@@ -39,8 +39,12 @@ module.exports = {
       plugins.push(
         ['module-resolver', {
           alias: {
-            'mineral-ui': './src', // Used inside mineral-ui-icons components
-            'mineral-ui-icons': './packages/mineral-ui-icons/src' // Used inside mineral-ui website
+            'mineral-ui': './src/library', // Used inside mineral-ui-icons components
+            'mineral-ui-icons': './packages/mineral-ui-icons/src', // Used inside mineral-ui website,
+            'mineral-ui-tokens':
+              NODE_ENV === 'production'
+                ? 'mineral-ui-tokens'
+                : './packages/mineral-ui-tokens/src' // Used inside mineral-ui website and library
           }
         }]
       );

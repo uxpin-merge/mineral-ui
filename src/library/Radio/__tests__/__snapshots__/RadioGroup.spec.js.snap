@@ -1,0 +1,4528 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioGroup demo examples Snapshots: controlled 1`] = `
+.css-0 > *:not(:last-child),
+[data-css-0] > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.css-1,
+[data-css-1] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-1 *,
+[data-css-1] *,
+.css-1 *::before,
+[data-css-1] *::before,
+.css-1 *::after,
+[data-css-1] *::after {
+  box-sizing: inherit;
+}
+
+.css-1 > *:not(:last-child),
+[data-css-1] > *:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.css-2,
+[data-css-2] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+}
+
+.css-2 *,
+[data-css-2] *,
+.css-2 *::before,
+[data-css-2] *::before,
+.css-2 *::after,
+[data-css-2] *::after {
+  box-sizing: inherit;
+}
+
+.css-2:hover span:first-of-type,
+[data-css-2]:hover span:first-of-type {
+  border-color: #5691f0;
+}
+
+.css-4,
+[data-css-4] {
+  border: 0px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  -webkit-clip-path: inset(50%);
+}
+
+.css-4:hover:not(:disabled) + span,
+[data-css-4]:hover:not(:disabled) + span,
+.css-4[data-simulate-hover]:not(:disabled) + span,
+[data-css-4][data-simulate-hover]:not(:disabled) + span {
+  border-color: #5691f0;
+}
+
+.css-4:focus + span,
+[data-css-4]:focus + span,
+.css-4[data-simulate-focus] + span,
+[data-css-4][data-simulate-focus] + span {
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
+}
+
+.css-4:checked + span,
+[data-css-4]:checked + span,
+.css-4[type="checkbox"]:indeterminate + span,
+[data-css-4][type="checkbox"]:indeterminate + span {
+  background-color: #3272d9;
+  border-color: #3272d9;
+}
+
+.css-4:checked:hover + span,
+[data-css-4]:checked:hover + span,
+.css-4[type="checkbox"]:indeterminate:hover + span,
+[data-css-4][type="checkbox"]:indeterminate:hover + span,
+.css-4:checked[data-simulate-hover] + span,
+[data-css-4]:checked[data-simulate-hover] + span,
+.css-4[type="checkbox"]:indeterminate[data-simulate-hover] + span,
+[data-css-4][type="checkbox"]:indeterminate[data-simulate-hover] + span {
+  background-color: #5691f0;
+  border-color: #5691f0;
+}
+
+.css-4:checked:disabled + span,
+[data-css-4]:checked:disabled + span,
+.css-4[type="checkbox"]:indeterminate:disabled + span,
+[data-css-4][type="checkbox"]:indeterminate:disabled + span {
+  background-color: #c8d1e0;
+  border-color: #c8d1e0;
+  color: #ffffff;
+}
+
+.css-22,
+[data-css-22] {
+  align-items: center;
+  background-color: #ffffff;
+  border-color: #c8d1e0;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 1px;
+  color: #ffffff;
+  content: "";
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: none;
+  height: 1em;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 1em;
+  width: 1em;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-flex: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+}
+
+.css-22 svg,
+[data-css-22] svg {
+  fill: currentColor;
+  height: auto;
+  width: 100%;
+}
+
+.css-23,
+[data-css-23] {
+  fill: currentcolor;
+  font-size: 16px;
+  height: 1em;
+  width: 1em;
+}
+
+.css-24,
+[data-css-24] {
+  color: #333840;
+  font-size: 0.875em;
+}
+
+<Component>
+  <MyForm>
+    <DemoForm>
+      <glamorous(form)
+        onSubmit={[Function]}
+      >
+        <form
+          className="css-0"
+          onSubmit={[Function]}
+        >
+          <RadioGroup
+            checked="quartz"
+            data={
+              Array [
+                Object {
+                  "label": "Fluorite",
+                  "value": "fluorite",
+                },
+                Object {
+                  "label": "Magnetite",
+                  "value": "magnetite",
+                },
+                Object {
+                  "label": "Quartz",
+                  "value": "quartz",
+                },
+              ]
+            }
+            name="mineral"
+            onChange={[Function]}
+          >
+            <ThemedComponent
+              checked="quartz"
+              data={
+                Array [
+                  Object {
+                    "label": "Fluorite",
+                    "value": "fluorite",
+                  },
+                  Object {
+                    "label": "Magnetite",
+                    "value": "magnetite",
+                  },
+                  Object {
+                    "label": "Quartz",
+                    "value": "quartz",
+                  },
+                ]
+              }
+              input={[Function]}
+              name="mineral"
+              onChange={[Function]}
+              rootProps={
+                Object {
+                  "role": "radiogroup",
+                }
+              }
+              type="radio"
+            >
+              <Themed(ChoiceGroup)
+                checked="quartz"
+                data={
+                  Array [
+                    Object {
+                      "label": "Fluorite",
+                      "value": "fluorite",
+                    },
+                    Object {
+                      "label": "Magnetite",
+                      "value": "magnetite",
+                    },
+                    Object {
+                      "label": "Quartz",
+                      "value": "quartz",
+                    },
+                  ]
+                }
+                input={[Function]}
+                name="mineral"
+                onChange={[Function]}
+                rootProps={
+                  Object {
+                    "role": "radiogroup",
+                  }
+                }
+                type="radio"
+              >
+                <ThemeProvider>
+                  <ThemeProvider>
+                    <ChoiceGroup
+                      checked="quartz"
+                      data={
+                        Array [
+                          Object {
+                            "label": "Fluorite",
+                            "value": "fluorite",
+                          },
+                          Object {
+                            "label": "Magnetite",
+                            "value": "magnetite",
+                          },
+                          Object {
+                            "label": "Quartz",
+                            "value": "quartz",
+                          },
+                        ]
+                      }
+                      input={[Function]}
+                      name="mineral"
+                      onChange={[Function]}
+                      rootProps={
+                        Object {
+                          "role": "radiogroup",
+                        }
+                      }
+                      type="radio"
+                    >
+                      <ChoiceGroup
+                        role="radiogroup"
+                        size="large"
+                      >
+                        <div
+                          className="css-1"
+                          role="radiogroup"
+                        >
+                          <Radio
+                            checked={false}
+                            key="0"
+                            label="Fluorite"
+                            name="mineral"
+                            onChange={[Function]}
+                            size="large"
+                            value="fluorite"
+                          >
+                            <ThemedComponent
+                              checked={false}
+                              iconChecked={<IconRadioButtonCheck />}
+                              inputRef={[Function]}
+                              label="Fluorite"
+                              labelPosition="end"
+                              name="mineral"
+                              onChange={[Function]}
+                              rootProps={
+                                Object {
+                                  "className": undefined,
+                                }
+                              }
+                              size="large"
+                              type="radio"
+                              value="fluorite"
+                            >
+                              <Themed(Choice)
+                                checked={false}
+                                iconChecked={<IconRadioButtonCheck />}
+                                inputRef={[Function]}
+                                label="Fluorite"
+                                labelPosition="end"
+                                name="mineral"
+                                onChange={[Function]}
+                                rootProps={
+                                  Object {
+                                    "className": undefined,
+                                  }
+                                }
+                                size="large"
+                                type="radio"
+                                value="fluorite"
+                              >
+                                <ThemeProvider>
+                                  <ThemeProvider>
+                                    <Choice
+                                      checked={false}
+                                      iconChecked={<IconRadioButtonCheck />}
+                                      inputRef={[Function]}
+                                      label="Fluorite"
+                                      labelPosition="end"
+                                      name="mineral"
+                                      onChange={[Function]}
+                                      rootProps={
+                                        Object {
+                                          "className": undefined,
+                                        }
+                                      }
+                                      size="large"
+                                      type="radio"
+                                      value="fluorite"
+                                    >
+                                      <Choice
+                                        labelPosition="end"
+                                      >
+                                        <label
+                                          className="css-2"
+                                        >
+                                          <glamorous(input)
+                                            checked={false}
+                                            innerRef={[Function]}
+                                            name="mineral"
+                                            onChange={[Function]}
+                                            size="large"
+                                            type="radio"
+                                            value="fluorite"
+                                          >
+                                            <input
+                                              checked={false}
+                                              className="css-4"
+                                              name="mineral"
+                                              onChange={[Function]}
+                                              size="large"
+                                              type="radio"
+                                              value="fluorite"
+                                            />
+                                          </glamorous(input)>
+                                          <glamorous(span)
+                                            labelPosition="end"
+                                            size="large"
+                                          >
+                                            <span
+                                              className="css-22"
+                                            >
+                                              <IconRadioButtonCheck>
+                                                <Icon
+                                                  rtl={false}
+                                                  size="medium"
+                                                >
+                                                  <glamorous(svg)
+                                                    aria-hidden={true}
+                                                    role="img"
+                                                    rtl={false}
+                                                    size="medium"
+                                                    viewBox="0 0 24 24"
+                                                  >
+                                                    <svg
+                                                      aria-hidden={true}
+                                                      className="css-23"
+                                                      role="img"
+                                                      viewBox="0 0 24 24"
+                                                    >
+                                                      <g>
+                                                        <circle
+                                                          cx="12"
+                                                          cy="12"
+                                                          r="3.43"
+                                                        />
+                                                      </g>
+                                                    </svg>
+                                                  </glamorous(svg)>
+                                                </Icon>
+                                              </IconRadioButtonCheck>
+                                            </span>
+                                          </glamorous(span)>
+                                          <glamorous(span)
+                                            labelPosition="end"
+                                            size="large"
+                                          >
+                                            <span
+                                              className="css-24"
+                                            >
+                                              Fluorite
+                                            </span>
+                                          </glamorous(span)>
+                                        </label>
+                                      </Choice>
+                                    </Choice>
+                                  </ThemeProvider>
+                                </ThemeProvider>
+                              </Themed(Choice)>
+                            </ThemedComponent>
+                          </Radio>
+                          <Radio
+                            checked={false}
+                            key="1"
+                            label="Magnetite"
+                            name="mineral"
+                            onChange={[Function]}
+                            size="large"
+                            value="magnetite"
+                          >
+                            <ThemedComponent
+                              checked={false}
+                              iconChecked={<IconRadioButtonCheck />}
+                              inputRef={[Function]}
+                              label="Magnetite"
+                              labelPosition="end"
+                              name="mineral"
+                              onChange={[Function]}
+                              rootProps={
+                                Object {
+                                  "className": undefined,
+                                }
+                              }
+                              size="large"
+                              type="radio"
+                              value="magnetite"
+                            >
+                              <Themed(Choice)
+                                checked={false}
+                                iconChecked={<IconRadioButtonCheck />}
+                                inputRef={[Function]}
+                                label="Magnetite"
+                                labelPosition="end"
+                                name="mineral"
+                                onChange={[Function]}
+                                rootProps={
+                                  Object {
+                                    "className": undefined,
+                                  }
+                                }
+                                size="large"
+                                type="radio"
+                                value="magnetite"
+                              >
+                                <ThemeProvider>
+                                  <ThemeProvider>
+                                    <Choice
+                                      checked={false}
+                                      iconChecked={<IconRadioButtonCheck />}
+                                      inputRef={[Function]}
+                                      label="Magnetite"
+                                      labelPosition="end"
+                                      name="mineral"
+                                      onChange={[Function]}
+                                      rootProps={
+                                        Object {
+                                          "className": undefined,
+                                        }
+                                      }
+                                      size="large"
+                                      type="radio"
+                                      value="magnetite"
+                                    >
+                                      <Choice
+                                        labelPosition="end"
+                                      >
+                                        <label
+                                          className="css-2"
+                                        >
+                                          <glamorous(input)
+                                            checked={false}
+                                            innerRef={[Function]}
+                                            name="mineral"
+                                            onChange={[Function]}
+                                            size="large"
+                                            type="radio"
+                                            value="magnetite"
+                                          >
+                                            <input
+                                              checked={false}
+                                              className="css-4"
+                                              name="mineral"
+                                              onChange={[Function]}
+                                              size="large"
+                                              type="radio"
+                                              value="magnetite"
+                                            />
+                                          </glamorous(input)>
+                                          <glamorous(span)
+                                            labelPosition="end"
+                                            size="large"
+                                          >
+                                            <span
+                                              className="css-22"
+                                            >
+                                              <IconRadioButtonCheck>
+                                                <Icon
+                                                  rtl={false}
+                                                  size="medium"
+                                                >
+                                                  <glamorous(svg)
+                                                    aria-hidden={true}
+                                                    role="img"
+                                                    rtl={false}
+                                                    size="medium"
+                                                    viewBox="0 0 24 24"
+                                                  >
+                                                    <svg
+                                                      aria-hidden={true}
+                                                      className="css-23"
+                                                      role="img"
+                                                      viewBox="0 0 24 24"
+                                                    >
+                                                      <g>
+                                                        <circle
+                                                          cx="12"
+                                                          cy="12"
+                                                          r="3.43"
+                                                        />
+                                                      </g>
+                                                    </svg>
+                                                  </glamorous(svg)>
+                                                </Icon>
+                                              </IconRadioButtonCheck>
+                                            </span>
+                                          </glamorous(span)>
+                                          <glamorous(span)
+                                            labelPosition="end"
+                                            size="large"
+                                          >
+                                            <span
+                                              className="css-24"
+                                            >
+                                              Magnetite
+                                            </span>
+                                          </glamorous(span)>
+                                        </label>
+                                      </Choice>
+                                    </Choice>
+                                  </ThemeProvider>
+                                </ThemeProvider>
+                              </Themed(Choice)>
+                            </ThemedComponent>
+                          </Radio>
+                          <Radio
+                            checked={true}
+                            key="2"
+                            label="Quartz"
+                            name="mineral"
+                            onChange={[Function]}
+                            size="large"
+                            value="quartz"
+                          >
+                            <ThemedComponent
+                              checked={true}
+                              iconChecked={<IconRadioButtonCheck />}
+                              inputRef={[Function]}
+                              label="Quartz"
+                              labelPosition="end"
+                              name="mineral"
+                              onChange={[Function]}
+                              rootProps={
+                                Object {
+                                  "className": undefined,
+                                }
+                              }
+                              size="large"
+                              type="radio"
+                              value="quartz"
+                            >
+                              <Themed(Choice)
+                                checked={true}
+                                iconChecked={<IconRadioButtonCheck />}
+                                inputRef={[Function]}
+                                label="Quartz"
+                                labelPosition="end"
+                                name="mineral"
+                                onChange={[Function]}
+                                rootProps={
+                                  Object {
+                                    "className": undefined,
+                                  }
+                                }
+                                size="large"
+                                type="radio"
+                                value="quartz"
+                              >
+                                <ThemeProvider>
+                                  <ThemeProvider>
+                                    <Choice
+                                      checked={true}
+                                      iconChecked={<IconRadioButtonCheck />}
+                                      inputRef={[Function]}
+                                      label="Quartz"
+                                      labelPosition="end"
+                                      name="mineral"
+                                      onChange={[Function]}
+                                      rootProps={
+                                        Object {
+                                          "className": undefined,
+                                        }
+                                      }
+                                      size="large"
+                                      type="radio"
+                                      value="quartz"
+                                    >
+                                      <Choice
+                                        labelPosition="end"
+                                      >
+                                        <label
+                                          className="css-2"
+                                        >
+                                          <glamorous(input)
+                                            checked={true}
+                                            innerRef={[Function]}
+                                            name="mineral"
+                                            onChange={[Function]}
+                                            size="large"
+                                            type="radio"
+                                            value="quartz"
+                                          >
+                                            <input
+                                              checked={true}
+                                              className="css-4"
+                                              name="mineral"
+                                              onChange={[Function]}
+                                              size="large"
+                                              type="radio"
+                                              value="quartz"
+                                            />
+                                          </glamorous(input)>
+                                          <glamorous(span)
+                                            labelPosition="end"
+                                            size="large"
+                                          >
+                                            <span
+                                              className="css-22"
+                                            >
+                                              <IconRadioButtonCheck>
+                                                <Icon
+                                                  rtl={false}
+                                                  size="medium"
+                                                >
+                                                  <glamorous(svg)
+                                                    aria-hidden={true}
+                                                    role="img"
+                                                    rtl={false}
+                                                    size="medium"
+                                                    viewBox="0 0 24 24"
+                                                  >
+                                                    <svg
+                                                      aria-hidden={true}
+                                                      className="css-23"
+                                                      role="img"
+                                                      viewBox="0 0 24 24"
+                                                    >
+                                                      <g>
+                                                        <circle
+                                                          cx="12"
+                                                          cy="12"
+                                                          r="3.43"
+                                                        />
+                                                      </g>
+                                                    </svg>
+                                                  </glamorous(svg)>
+                                                </Icon>
+                                              </IconRadioButtonCheck>
+                                            </span>
+                                          </glamorous(span)>
+                                          <glamorous(span)
+                                            labelPosition="end"
+                                            size="large"
+                                          >
+                                            <span
+                                              className="css-24"
+                                            >
+                                              Quartz
+                                            </span>
+                                          </glamorous(span)>
+                                        </label>
+                                      </Choice>
+                                    </Choice>
+                                  </ThemeProvider>
+                                </ThemeProvider>
+                              </Themed(Choice)>
+                            </ThemedComponent>
+                          </Radio>
+                        </div>
+                      </ChoiceGroup>
+                    </ChoiceGroup>
+                  </ThemeProvider>
+                </ThemeProvider>
+              </Themed(ChoiceGroup)>
+            </ThemedComponent>
+          </RadioGroup>
+        </form>
+      </glamorous(form)>
+    </DemoForm>
+  </MyForm>
+</Component>
+`;
+
+exports[`RadioGroup demo examples Snapshots: data-vs-children 1`] = `
+.css-0 > *:not(:last-child),
+[data-css-0] > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.css-1,
+[data-css-1] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-1 *,
+[data-css-1] *,
+.css-1 *::before,
+[data-css-1] *::before,
+.css-1 *::after,
+[data-css-1] *::after {
+  box-sizing: inherit;
+}
+
+.css-1 > *:not(:last-child),
+[data-css-1] > *:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.css-2,
+[data-css-2] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+}
+
+.css-2 *,
+[data-css-2] *,
+.css-2 *::before,
+[data-css-2] *::before,
+.css-2 *::after,
+[data-css-2] *::after {
+  box-sizing: inherit;
+}
+
+.css-2:hover span:first-of-type,
+[data-css-2]:hover span:first-of-type {
+  border-color: #5691f0;
+}
+
+.css-4,
+[data-css-4] {
+  border: 0px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  -webkit-clip-path: inset(50%);
+}
+
+.css-4:hover:not(:disabled) + span,
+[data-css-4]:hover:not(:disabled) + span,
+.css-4[data-simulate-hover]:not(:disabled) + span,
+[data-css-4][data-simulate-hover]:not(:disabled) + span {
+  border-color: #5691f0;
+}
+
+.css-4:focus + span,
+[data-css-4]:focus + span,
+.css-4[data-simulate-focus] + span,
+[data-css-4][data-simulate-focus] + span {
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
+}
+
+.css-4:checked + span,
+[data-css-4]:checked + span,
+.css-4[type="checkbox"]:indeterminate + span,
+[data-css-4][type="checkbox"]:indeterminate + span {
+  background-color: #3272d9;
+  border-color: #3272d9;
+}
+
+.css-4:checked:hover + span,
+[data-css-4]:checked:hover + span,
+.css-4[type="checkbox"]:indeterminate:hover + span,
+[data-css-4][type="checkbox"]:indeterminate:hover + span,
+.css-4:checked[data-simulate-hover] + span,
+[data-css-4]:checked[data-simulate-hover] + span,
+.css-4[type="checkbox"]:indeterminate[data-simulate-hover] + span,
+[data-css-4][type="checkbox"]:indeterminate[data-simulate-hover] + span {
+  background-color: #5691f0;
+  border-color: #5691f0;
+}
+
+.css-4:checked:disabled + span,
+[data-css-4]:checked:disabled + span,
+.css-4[type="checkbox"]:indeterminate:disabled + span,
+[data-css-4][type="checkbox"]:indeterminate:disabled + span {
+  background-color: #c8d1e0;
+  border-color: #c8d1e0;
+  color: #ffffff;
+}
+
+.css-22,
+[data-css-22] {
+  align-items: center;
+  background-color: #ffffff;
+  border-color: #c8d1e0;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 1px;
+  color: #ffffff;
+  content: "";
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: none;
+  height: 1em;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 1em;
+  width: 1em;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-flex: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+}
+
+.css-22 svg,
+[data-css-22] svg {
+  fill: currentColor;
+  height: auto;
+  width: 100%;
+}
+
+.css-23,
+[data-css-23] {
+  fill: currentcolor;
+  font-size: 16px;
+  height: 1em;
+  width: 1em;
+}
+
+.css-24,
+[data-css-24] {
+  color: #333840;
+  font-size: 0.875em;
+}
+
+.css-25,
+[data-css-25] {
+  background-color: #c8d1e0;
+  height: 1px;
+  margin: 0.5em 0;
+}
+
+<DemoForm>
+  <glamorous(form)
+    onSubmit={[Function]}
+  >
+    <form
+      className="css-0"
+      onSubmit={[Function]}
+    >
+      <RadioGroup
+        data={
+          Array [
+            Object {
+              "label": "Fluorite",
+              "value": "fluorite",
+            },
+            Object {
+              "label": "Magnetite",
+              "value": "magnetite",
+            },
+            Object {
+              "label": "Quartz",
+              "value": "quartz",
+            },
+          ]
+        }
+        defaultChecked="quartz"
+        name="mineral-1"
+      >
+        <ThemedComponent
+          data={
+            Array [
+              Object {
+                "label": "Fluorite",
+                "value": "fluorite",
+              },
+              Object {
+                "label": "Magnetite",
+                "value": "magnetite",
+              },
+              Object {
+                "label": "Quartz",
+                "value": "quartz",
+              },
+            ]
+          }
+          defaultChecked="quartz"
+          input={[Function]}
+          name="mineral-1"
+          rootProps={
+            Object {
+              "role": "radiogroup",
+            }
+          }
+          type="radio"
+        >
+          <Themed(ChoiceGroup)
+            data={
+              Array [
+                Object {
+                  "label": "Fluorite",
+                  "value": "fluorite",
+                },
+                Object {
+                  "label": "Magnetite",
+                  "value": "magnetite",
+                },
+                Object {
+                  "label": "Quartz",
+                  "value": "quartz",
+                },
+              ]
+            }
+            defaultChecked="quartz"
+            input={[Function]}
+            name="mineral-1"
+            rootProps={
+              Object {
+                "role": "radiogroup",
+              }
+            }
+            type="radio"
+          >
+            <ThemeProvider>
+              <ThemeProvider>
+                <ChoiceGroup
+                  data={
+                    Array [
+                      Object {
+                        "label": "Fluorite",
+                        "value": "fluorite",
+                      },
+                      Object {
+                        "label": "Magnetite",
+                        "value": "magnetite",
+                      },
+                      Object {
+                        "label": "Quartz",
+                        "value": "quartz",
+                      },
+                    ]
+                  }
+                  defaultChecked="quartz"
+                  input={[Function]}
+                  name="mineral-1"
+                  rootProps={
+                    Object {
+                      "role": "radiogroup",
+                    }
+                  }
+                  type="radio"
+                >
+                  <ChoiceGroup
+                    role="radiogroup"
+                    size="large"
+                  >
+                    <div
+                      className="css-1"
+                      role="radiogroup"
+                    >
+                      <Radio
+                        defaultChecked={false}
+                        key="0"
+                        label="Fluorite"
+                        name="mineral-1"
+                        size="large"
+                        value="fluorite"
+                      >
+                        <ThemedComponent
+                          defaultChecked={false}
+                          iconChecked={<IconRadioButtonCheck />}
+                          inputRef={[Function]}
+                          label="Fluorite"
+                          labelPosition="end"
+                          name="mineral-1"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="radio"
+                          value="fluorite"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={false}
+                            iconChecked={<IconRadioButtonCheck />}
+                            inputRef={[Function]}
+                            label="Fluorite"
+                            labelPosition="end"
+                            name="mineral-1"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="radio"
+                            value="fluorite"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={false}
+                                  iconChecked={<IconRadioButtonCheck />}
+                                  inputRef={[Function]}
+                                  label="Fluorite"
+                                  labelPosition="end"
+                                  name="mineral-1"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="radio"
+                                  value="fluorite"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-2"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={false}
+                                        innerRef={[Function]}
+                                        name="mineral-1"
+                                        size="large"
+                                        type="radio"
+                                        value="fluorite"
+                                      >
+                                        <input
+                                          className="css-4"
+                                          defaultChecked={false}
+                                          name="mineral-1"
+                                          size="large"
+                                          type="radio"
+                                          value="fluorite"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-22"
+                                        >
+                                          <IconRadioButtonCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-23"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <circle
+                                                      cx="12"
+                                                      cy="12"
+                                                      r="3.43"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconRadioButtonCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-24"
+                                        >
+                                          Fluorite
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Radio>
+                      <Radio
+                        defaultChecked={false}
+                        key="1"
+                        label="Magnetite"
+                        name="mineral-1"
+                        size="large"
+                        value="magnetite"
+                      >
+                        <ThemedComponent
+                          defaultChecked={false}
+                          iconChecked={<IconRadioButtonCheck />}
+                          inputRef={[Function]}
+                          label="Magnetite"
+                          labelPosition="end"
+                          name="mineral-1"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="radio"
+                          value="magnetite"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={false}
+                            iconChecked={<IconRadioButtonCheck />}
+                            inputRef={[Function]}
+                            label="Magnetite"
+                            labelPosition="end"
+                            name="mineral-1"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="radio"
+                            value="magnetite"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={false}
+                                  iconChecked={<IconRadioButtonCheck />}
+                                  inputRef={[Function]}
+                                  label="Magnetite"
+                                  labelPosition="end"
+                                  name="mineral-1"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="radio"
+                                  value="magnetite"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-2"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={false}
+                                        innerRef={[Function]}
+                                        name="mineral-1"
+                                        size="large"
+                                        type="radio"
+                                        value="magnetite"
+                                      >
+                                        <input
+                                          className="css-4"
+                                          defaultChecked={false}
+                                          name="mineral-1"
+                                          size="large"
+                                          type="radio"
+                                          value="magnetite"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-22"
+                                        >
+                                          <IconRadioButtonCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-23"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <circle
+                                                      cx="12"
+                                                      cy="12"
+                                                      r="3.43"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconRadioButtonCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-24"
+                                        >
+                                          Magnetite
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Radio>
+                      <Radio
+                        defaultChecked={true}
+                        key="2"
+                        label="Quartz"
+                        name="mineral-1"
+                        size="large"
+                        value="quartz"
+                      >
+                        <ThemedComponent
+                          defaultChecked={true}
+                          iconChecked={<IconRadioButtonCheck />}
+                          inputRef={[Function]}
+                          label="Quartz"
+                          labelPosition="end"
+                          name="mineral-1"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="radio"
+                          value="quartz"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={true}
+                            iconChecked={<IconRadioButtonCheck />}
+                            inputRef={[Function]}
+                            label="Quartz"
+                            labelPosition="end"
+                            name="mineral-1"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="radio"
+                            value="quartz"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={true}
+                                  iconChecked={<IconRadioButtonCheck />}
+                                  inputRef={[Function]}
+                                  label="Quartz"
+                                  labelPosition="end"
+                                  name="mineral-1"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="radio"
+                                  value="quartz"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-2"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={true}
+                                        innerRef={[Function]}
+                                        name="mineral-1"
+                                        size="large"
+                                        type="radio"
+                                        value="quartz"
+                                      >
+                                        <input
+                                          className="css-4"
+                                          defaultChecked={true}
+                                          name="mineral-1"
+                                          size="large"
+                                          type="radio"
+                                          value="quartz"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-22"
+                                        >
+                                          <IconRadioButtonCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-23"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <circle
+                                                      cx="12"
+                                                      cy="12"
+                                                      r="3.43"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconRadioButtonCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-24"
+                                        >
+                                          Quartz
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Radio>
+                    </div>
+                  </ChoiceGroup>
+                </ChoiceGroup>
+              </ThemeProvider>
+            </ThemeProvider>
+          </Themed(ChoiceGroup)>
+        </ThemedComponent>
+      </RadioGroup>
+      <FormFieldDivider>
+        <FormFieldDivider
+          role="separator"
+        >
+          <div
+            className="css-25"
+            role="separator"
+          />
+        </FormFieldDivider>
+      </FormFieldDivider>
+      <RadioGroup
+        defaultChecked="pyrite"
+        name="mineral-2"
+      >
+        <ThemedComponent
+          defaultChecked="pyrite"
+          input={[Function]}
+          name="mineral-2"
+          rootProps={
+            Object {
+              "role": "radiogroup",
+            }
+          }
+          type="radio"
+        >
+          <Themed(ChoiceGroup)
+            defaultChecked="pyrite"
+            input={[Function]}
+            name="mineral-2"
+            rootProps={
+              Object {
+                "role": "radiogroup",
+              }
+            }
+            type="radio"
+          >
+            <ThemeProvider>
+              <ThemeProvider>
+                <ChoiceGroup
+                  defaultChecked="pyrite"
+                  input={[Function]}
+                  name="mineral-2"
+                  rootProps={
+                    Object {
+                      "role": "radiogroup",
+                    }
+                  }
+                  type="radio"
+                >
+                  <ChoiceGroup
+                    role="radiogroup"
+                    size="large"
+                  >
+                    <div
+                      className="css-1"
+                      role="radiogroup"
+                    >
+                      <Radio
+                        defaultChecked={false}
+                        key="0/.0"
+                        label="Azurite"
+                        name="mineral-2"
+                        size="large"
+                        value="azurite"
+                      >
+                        <ThemedComponent
+                          defaultChecked={false}
+                          iconChecked={<IconRadioButtonCheck />}
+                          inputRef={[Function]}
+                          label="Azurite"
+                          labelPosition="end"
+                          name="mineral-2"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="radio"
+                          value="azurite"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={false}
+                            iconChecked={<IconRadioButtonCheck />}
+                            inputRef={[Function]}
+                            label="Azurite"
+                            labelPosition="end"
+                            name="mineral-2"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="radio"
+                            value="azurite"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={false}
+                                  iconChecked={<IconRadioButtonCheck />}
+                                  inputRef={[Function]}
+                                  label="Azurite"
+                                  labelPosition="end"
+                                  name="mineral-2"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="radio"
+                                  value="azurite"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-2"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={false}
+                                        innerRef={[Function]}
+                                        name="mineral-2"
+                                        size="large"
+                                        type="radio"
+                                        value="azurite"
+                                      >
+                                        <input
+                                          className="css-4"
+                                          defaultChecked={false}
+                                          name="mineral-2"
+                                          size="large"
+                                          type="radio"
+                                          value="azurite"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-22"
+                                        >
+                                          <IconRadioButtonCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-23"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <circle
+                                                      cx="12"
+                                                      cy="12"
+                                                      r="3.43"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconRadioButtonCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-24"
+                                        >
+                                          Azurite
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Radio>
+                      <Radio
+                        defaultChecked={false}
+                        key="1/.1"
+                        label="Hematite"
+                        name="mineral-2"
+                        size="large"
+                        value="hematite"
+                      >
+                        <ThemedComponent
+                          defaultChecked={false}
+                          iconChecked={<IconRadioButtonCheck />}
+                          inputRef={[Function]}
+                          label="Hematite"
+                          labelPosition="end"
+                          name="mineral-2"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="radio"
+                          value="hematite"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={false}
+                            iconChecked={<IconRadioButtonCheck />}
+                            inputRef={[Function]}
+                            label="Hematite"
+                            labelPosition="end"
+                            name="mineral-2"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="radio"
+                            value="hematite"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={false}
+                                  iconChecked={<IconRadioButtonCheck />}
+                                  inputRef={[Function]}
+                                  label="Hematite"
+                                  labelPosition="end"
+                                  name="mineral-2"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="radio"
+                                  value="hematite"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-2"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={false}
+                                        innerRef={[Function]}
+                                        name="mineral-2"
+                                        size="large"
+                                        type="radio"
+                                        value="hematite"
+                                      >
+                                        <input
+                                          className="css-4"
+                                          defaultChecked={false}
+                                          name="mineral-2"
+                                          size="large"
+                                          type="radio"
+                                          value="hematite"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-22"
+                                        >
+                                          <IconRadioButtonCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-23"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <circle
+                                                      cx="12"
+                                                      cy="12"
+                                                      r="3.43"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconRadioButtonCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-24"
+                                        >
+                                          Hematite
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Radio>
+                      <Radio
+                        defaultChecked={true}
+                        key="2/.2"
+                        label="Pyrite"
+                        name="mineral-2"
+                        size="large"
+                        value="pyrite"
+                      >
+                        <ThemedComponent
+                          defaultChecked={true}
+                          iconChecked={<IconRadioButtonCheck />}
+                          inputRef={[Function]}
+                          label="Pyrite"
+                          labelPosition="end"
+                          name="mineral-2"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="radio"
+                          value="pyrite"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={true}
+                            iconChecked={<IconRadioButtonCheck />}
+                            inputRef={[Function]}
+                            label="Pyrite"
+                            labelPosition="end"
+                            name="mineral-2"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="radio"
+                            value="pyrite"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={true}
+                                  iconChecked={<IconRadioButtonCheck />}
+                                  inputRef={[Function]}
+                                  label="Pyrite"
+                                  labelPosition="end"
+                                  name="mineral-2"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="radio"
+                                  value="pyrite"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-2"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={true}
+                                        innerRef={[Function]}
+                                        name="mineral-2"
+                                        size="large"
+                                        type="radio"
+                                        value="pyrite"
+                                      >
+                                        <input
+                                          className="css-4"
+                                          defaultChecked={true}
+                                          name="mineral-2"
+                                          size="large"
+                                          type="radio"
+                                          value="pyrite"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-22"
+                                        >
+                                          <IconRadioButtonCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-23"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <circle
+                                                      cx="12"
+                                                      cy="12"
+                                                      r="3.43"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconRadioButtonCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-24"
+                                        >
+                                          Pyrite
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Radio>
+                    </div>
+                  </ChoiceGroup>
+                </ChoiceGroup>
+              </ThemeProvider>
+            </ThemeProvider>
+          </Themed(ChoiceGroup)>
+        </ThemedComponent>
+      </RadioGroup>
+    </form>
+  </glamorous(form)>
+</DemoForm>
+`;
+
+exports[`RadioGroup demo examples Snapshots: form-field 1`] = `
+.css-0 > *:not(:last-child),
+[data-css-0] > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.css-1,
+[data-css-1] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-1 *,
+[data-css-1] *,
+.css-1 *::before,
+[data-css-1] *::before,
+.css-1 *::after,
+[data-css-1] *::after {
+  box-sizing: inherit;
+}
+
+.css-1 > *:not(:last-child),
+[data-css-1] > *:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.css-2,
+[data-css-2] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+}
+
+.css-2 *,
+[data-css-2] *,
+.css-2 *::before,
+[data-css-2] *::before,
+.css-2 *::after,
+[data-css-2] *::after {
+  box-sizing: inherit;
+}
+
+.css-2:hover span:first-of-type,
+[data-css-2]:hover span:first-of-type {
+  border-color: #5691f0;
+}
+
+.css-4,
+[data-css-4] {
+  border: 0px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  -webkit-clip-path: inset(50%);
+}
+
+.css-4:hover:not(:disabled) + span,
+[data-css-4]:hover:not(:disabled) + span,
+.css-4[data-simulate-hover]:not(:disabled) + span,
+[data-css-4][data-simulate-hover]:not(:disabled) + span {
+  border-color: #5691f0;
+}
+
+.css-4:focus + span,
+[data-css-4]:focus + span,
+.css-4[data-simulate-focus] + span,
+[data-css-4][data-simulate-focus] + span {
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
+}
+
+.css-4:checked + span,
+[data-css-4]:checked + span,
+.css-4[type="checkbox"]:indeterminate + span,
+[data-css-4][type="checkbox"]:indeterminate + span {
+  background-color: #3272d9;
+  border-color: #3272d9;
+}
+
+.css-4:checked:hover + span,
+[data-css-4]:checked:hover + span,
+.css-4[type="checkbox"]:indeterminate:hover + span,
+[data-css-4][type="checkbox"]:indeterminate:hover + span,
+.css-4:checked[data-simulate-hover] + span,
+[data-css-4]:checked[data-simulate-hover] + span,
+.css-4[type="checkbox"]:indeterminate[data-simulate-hover] + span,
+[data-css-4][type="checkbox"]:indeterminate[data-simulate-hover] + span {
+  background-color: #5691f0;
+  border-color: #5691f0;
+}
+
+.css-4:checked:disabled + span,
+[data-css-4]:checked:disabled + span,
+.css-4[type="checkbox"]:indeterminate:disabled + span,
+[data-css-4][type="checkbox"]:indeterminate:disabled + span {
+  background-color: #c8d1e0;
+  border-color: #c8d1e0;
+  color: #ffffff;
+}
+
+.css-22,
+[data-css-22] {
+  align-items: center;
+  background-color: #ffffff;
+  border-color: #c8d1e0;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 1px;
+  color: #ffffff;
+  content: "";
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: none;
+  height: 1em;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 1em;
+  width: 1em;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-flex: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+}
+
+.css-22 svg,
+[data-css-22] svg {
+  fill: currentColor;
+  height: auto;
+  width: 100%;
+}
+
+.css-23,
+[data-css-23] {
+  fill: currentcolor;
+  font-size: 16px;
+  height: 1em;
+  width: 1em;
+}
+
+.css-24,
+[data-css-24] {
+  color: #333840;
+  font-size: 0.875em;
+}
+
+.css-25,
+[data-css-25] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.css-25 *,
+[data-css-25] *,
+.css-25 *::before,
+[data-css-25] *::before,
+.css-25 *::after,
+[data-css-25] *::after {
+  box-sizing: inherit;
+}
+
+.css-26,
+[data-css-26] {
+  color: #58606e;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.875em;
+  font-weight: 600;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+}
+
+.css-26 > *,
+[data-css-26] > * {
+  align-self: flex-end;
+  display: inline-block;
+  -webkit-align-self: flex-end;
+}
+
+.css-27,
+[data-css-27] {
+  color: #de1b1b;
+  font-size: 0.6875em;
+  font-weight: 400;
+}
+
+.css-28,
+[data-css-28] {
+  color: #58606e;
+  font-size: 0.6875em;
+  margin-top: 0.7272727272727273em;
+}
+
+<DemoForm>
+  <glamorous(form)
+    onSubmit={[Function]}
+  >
+    <form
+      className="css-0"
+      onSubmit={[Function]}
+    >
+      <FormField
+        caption="We promise not to spam you."
+        data={
+          Array [
+            Object {
+              "label": "Email",
+              "value": "email",
+            },
+            Object {
+              "label": "Telephone",
+              "value": "telephone",
+            },
+            Object {
+              "label": "Text message",
+              "value": "text",
+            },
+            Object {
+              "label": "None",
+              "value": "none",
+            },
+          ]
+        }
+        defaultChecked="none"
+        input={[Function]}
+        label="What is your preferred contact method?"
+        name="contact"
+        required={true}
+        requiredText="Required"
+      >
+        <FormField>
+          <div
+            className="css-25"
+          >
+            <div>
+              <glamorous(div)
+                key="formField-31-textWrapper"
+              >
+                <div
+                  className="css-26"
+                >
+                  <span
+                    id="formField-31-labelText"
+                  >
+                    What is your preferred contact method?
+                  </span>
+                  <glamorous(span)>
+                    <span
+                      className="css-27"
+                    >
+                      Required
+                    </span>
+                  </glamorous(span)>
+                </div>
+              </glamorous(div)>
+              <RadioGroup
+                aria-describedby="formField-31-caption"
+                data={
+                  Array [
+                    Object {
+                      "label": "Email",
+                      "value": "email",
+                    },
+                    Object {
+                      "label": "Telephone",
+                      "value": "telephone",
+                    },
+                    Object {
+                      "label": "Text message",
+                      "value": "text",
+                    },
+                    Object {
+                      "label": "None",
+                      "value": "none",
+                    },
+                  ]
+                }
+                defaultChecked="none"
+                key="formField-31-control"
+                name="contact"
+                required={true}
+                rootProps={
+                  Object {
+                    "aria-describedby": "formField-31-caption",
+                    "aria-labelledby": "formField-31-labelText",
+                  }
+                }
+              >
+                <ThemedComponent
+                  aria-describedby="formField-31-caption"
+                  data={
+                    Array [
+                      Object {
+                        "label": "Email",
+                        "value": "email",
+                      },
+                      Object {
+                        "label": "Telephone",
+                        "value": "telephone",
+                      },
+                      Object {
+                        "label": "Text message",
+                        "value": "text",
+                      },
+                      Object {
+                        "label": "None",
+                        "value": "none",
+                      },
+                    ]
+                  }
+                  defaultChecked="none"
+                  input={[Function]}
+                  name="contact"
+                  required={true}
+                  rootProps={
+                    Object {
+                      "aria-describedby": "formField-31-caption",
+                      "aria-labelledby": "formField-31-labelText",
+                      "role": "radiogroup",
+                    }
+                  }
+                  type="radio"
+                >
+                  <Themed(ChoiceGroup)
+                    aria-describedby="formField-31-caption"
+                    data={
+                      Array [
+                        Object {
+                          "label": "Email",
+                          "value": "email",
+                        },
+                        Object {
+                          "label": "Telephone",
+                          "value": "telephone",
+                        },
+                        Object {
+                          "label": "Text message",
+                          "value": "text",
+                        },
+                        Object {
+                          "label": "None",
+                          "value": "none",
+                        },
+                      ]
+                    }
+                    defaultChecked="none"
+                    input={[Function]}
+                    name="contact"
+                    required={true}
+                    rootProps={
+                      Object {
+                        "aria-describedby": "formField-31-caption",
+                        "aria-labelledby": "formField-31-labelText",
+                        "role": "radiogroup",
+                      }
+                    }
+                    type="radio"
+                  >
+                    <ThemeProvider>
+                      <ThemeProvider>
+                        <ChoiceGroup
+                          aria-describedby="formField-31-caption"
+                          data={
+                            Array [
+                              Object {
+                                "label": "Email",
+                                "value": "email",
+                              },
+                              Object {
+                                "label": "Telephone",
+                                "value": "telephone",
+                              },
+                              Object {
+                                "label": "Text message",
+                                "value": "text",
+                              },
+                              Object {
+                                "label": "None",
+                                "value": "none",
+                              },
+                            ]
+                          }
+                          defaultChecked="none"
+                          input={[Function]}
+                          name="contact"
+                          required={true}
+                          rootProps={
+                            Object {
+                              "aria-describedby": "formField-31-caption",
+                              "aria-labelledby": "formField-31-labelText",
+                              "role": "radiogroup",
+                            }
+                          }
+                          type="radio"
+                        >
+                          <ChoiceGroup
+                            aria-describedby="formField-31-caption"
+                            aria-labelledby="formField-31-labelText"
+                            role="radiogroup"
+                            size="large"
+                          >
+                            <div
+                              aria-describedby="formField-31-caption"
+                              aria-labelledby="formField-31-labelText"
+                              className="css-1"
+                              role="radiogroup"
+                            >
+                              <Radio
+                                aria-describedby="formField-31-caption"
+                                defaultChecked={false}
+                                key="0"
+                                label="Email"
+                                name="contact"
+                                required={true}
+                                size="large"
+                                value="email"
+                              >
+                                <ThemedComponent
+                                  aria-describedby="formField-31-caption"
+                                  defaultChecked={false}
+                                  iconChecked={<IconRadioButtonCheck />}
+                                  inputRef={[Function]}
+                                  label="Email"
+                                  labelPosition="end"
+                                  name="contact"
+                                  required={true}
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="radio"
+                                  value="email"
+                                >
+                                  <Themed(Choice)
+                                    aria-describedby="formField-31-caption"
+                                    defaultChecked={false}
+                                    iconChecked={<IconRadioButtonCheck />}
+                                    inputRef={[Function]}
+                                    label="Email"
+                                    labelPosition="end"
+                                    name="contact"
+                                    required={true}
+                                    rootProps={
+                                      Object {
+                                        "className": undefined,
+                                      }
+                                    }
+                                    size="large"
+                                    type="radio"
+                                    value="email"
+                                  >
+                                    <ThemeProvider>
+                                      <ThemeProvider>
+                                        <Choice
+                                          aria-describedby="formField-31-caption"
+                                          defaultChecked={false}
+                                          iconChecked={<IconRadioButtonCheck />}
+                                          inputRef={[Function]}
+                                          label="Email"
+                                          labelPosition="end"
+                                          name="contact"
+                                          required={true}
+                                          rootProps={
+                                            Object {
+                                              "className": undefined,
+                                            }
+                                          }
+                                          size="large"
+                                          type="radio"
+                                          value="email"
+                                        >
+                                          <Choice
+                                            labelPosition="end"
+                                          >
+                                            <label
+                                              className="css-2"
+                                            >
+                                              <glamorous(input)
+                                                aria-describedby="formField-31-caption"
+                                                aria-required={true}
+                                                defaultChecked={false}
+                                                innerRef={[Function]}
+                                                name="contact"
+                                                required={true}
+                                                size="large"
+                                                type="radio"
+                                                value="email"
+                                              >
+                                                <input
+                                                  aria-describedby="formField-31-caption"
+                                                  aria-required={true}
+                                                  className="css-4"
+                                                  defaultChecked={false}
+                                                  name="contact"
+                                                  required={true}
+                                                  size="large"
+                                                  type="radio"
+                                                  value="email"
+                                                />
+                                              </glamorous(input)>
+                                              <glamorous(span)
+                                                labelPosition="end"
+                                                size="large"
+                                              >
+                                                <span
+                                                  className="css-22"
+                                                >
+                                                  <IconRadioButtonCheck>
+                                                    <Icon
+                                                      rtl={false}
+                                                      size="medium"
+                                                    >
+                                                      <glamorous(svg)
+                                                        aria-hidden={true}
+                                                        role="img"
+                                                        rtl={false}
+                                                        size="medium"
+                                                        viewBox="0 0 24 24"
+                                                      >
+                                                        <svg
+                                                          aria-hidden={true}
+                                                          className="css-23"
+                                                          role="img"
+                                                          viewBox="0 0 24 24"
+                                                        >
+                                                          <g>
+                                                            <circle
+                                                              cx="12"
+                                                              cy="12"
+                                                              r="3.43"
+                                                            />
+                                                          </g>
+                                                        </svg>
+                                                      </glamorous(svg)>
+                                                    </Icon>
+                                                  </IconRadioButtonCheck>
+                                                </span>
+                                              </glamorous(span)>
+                                              <glamorous(span)
+                                                labelPosition="end"
+                                                size="large"
+                                              >
+                                                <span
+                                                  className="css-24"
+                                                >
+                                                  Email
+                                                </span>
+                                              </glamorous(span)>
+                                            </label>
+                                          </Choice>
+                                        </Choice>
+                                      </ThemeProvider>
+                                    </ThemeProvider>
+                                  </Themed(Choice)>
+                                </ThemedComponent>
+                              </Radio>
+                              <Radio
+                                aria-describedby="formField-31-caption"
+                                defaultChecked={false}
+                                key="1"
+                                label="Telephone"
+                                name="contact"
+                                required={true}
+                                size="large"
+                                value="telephone"
+                              >
+                                <ThemedComponent
+                                  aria-describedby="formField-31-caption"
+                                  defaultChecked={false}
+                                  iconChecked={<IconRadioButtonCheck />}
+                                  inputRef={[Function]}
+                                  label="Telephone"
+                                  labelPosition="end"
+                                  name="contact"
+                                  required={true}
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="radio"
+                                  value="telephone"
+                                >
+                                  <Themed(Choice)
+                                    aria-describedby="formField-31-caption"
+                                    defaultChecked={false}
+                                    iconChecked={<IconRadioButtonCheck />}
+                                    inputRef={[Function]}
+                                    label="Telephone"
+                                    labelPosition="end"
+                                    name="contact"
+                                    required={true}
+                                    rootProps={
+                                      Object {
+                                        "className": undefined,
+                                      }
+                                    }
+                                    size="large"
+                                    type="radio"
+                                    value="telephone"
+                                  >
+                                    <ThemeProvider>
+                                      <ThemeProvider>
+                                        <Choice
+                                          aria-describedby="formField-31-caption"
+                                          defaultChecked={false}
+                                          iconChecked={<IconRadioButtonCheck />}
+                                          inputRef={[Function]}
+                                          label="Telephone"
+                                          labelPosition="end"
+                                          name="contact"
+                                          required={true}
+                                          rootProps={
+                                            Object {
+                                              "className": undefined,
+                                            }
+                                          }
+                                          size="large"
+                                          type="radio"
+                                          value="telephone"
+                                        >
+                                          <Choice
+                                            labelPosition="end"
+                                          >
+                                            <label
+                                              className="css-2"
+                                            >
+                                              <glamorous(input)
+                                                aria-describedby="formField-31-caption"
+                                                aria-required={true}
+                                                defaultChecked={false}
+                                                innerRef={[Function]}
+                                                name="contact"
+                                                required={true}
+                                                size="large"
+                                                type="radio"
+                                                value="telephone"
+                                              >
+                                                <input
+                                                  aria-describedby="formField-31-caption"
+                                                  aria-required={true}
+                                                  className="css-4"
+                                                  defaultChecked={false}
+                                                  name="contact"
+                                                  required={true}
+                                                  size="large"
+                                                  type="radio"
+                                                  value="telephone"
+                                                />
+                                              </glamorous(input)>
+                                              <glamorous(span)
+                                                labelPosition="end"
+                                                size="large"
+                                              >
+                                                <span
+                                                  className="css-22"
+                                                >
+                                                  <IconRadioButtonCheck>
+                                                    <Icon
+                                                      rtl={false}
+                                                      size="medium"
+                                                    >
+                                                      <glamorous(svg)
+                                                        aria-hidden={true}
+                                                        role="img"
+                                                        rtl={false}
+                                                        size="medium"
+                                                        viewBox="0 0 24 24"
+                                                      >
+                                                        <svg
+                                                          aria-hidden={true}
+                                                          className="css-23"
+                                                          role="img"
+                                                          viewBox="0 0 24 24"
+                                                        >
+                                                          <g>
+                                                            <circle
+                                                              cx="12"
+                                                              cy="12"
+                                                              r="3.43"
+                                                            />
+                                                          </g>
+                                                        </svg>
+                                                      </glamorous(svg)>
+                                                    </Icon>
+                                                  </IconRadioButtonCheck>
+                                                </span>
+                                              </glamorous(span)>
+                                              <glamorous(span)
+                                                labelPosition="end"
+                                                size="large"
+                                              >
+                                                <span
+                                                  className="css-24"
+                                                >
+                                                  Telephone
+                                                </span>
+                                              </glamorous(span)>
+                                            </label>
+                                          </Choice>
+                                        </Choice>
+                                      </ThemeProvider>
+                                    </ThemeProvider>
+                                  </Themed(Choice)>
+                                </ThemedComponent>
+                              </Radio>
+                              <Radio
+                                aria-describedby="formField-31-caption"
+                                defaultChecked={false}
+                                key="2"
+                                label="Text message"
+                                name="contact"
+                                required={true}
+                                size="large"
+                                value="text"
+                              >
+                                <ThemedComponent
+                                  aria-describedby="formField-31-caption"
+                                  defaultChecked={false}
+                                  iconChecked={<IconRadioButtonCheck />}
+                                  inputRef={[Function]}
+                                  label="Text message"
+                                  labelPosition="end"
+                                  name="contact"
+                                  required={true}
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="radio"
+                                  value="text"
+                                >
+                                  <Themed(Choice)
+                                    aria-describedby="formField-31-caption"
+                                    defaultChecked={false}
+                                    iconChecked={<IconRadioButtonCheck />}
+                                    inputRef={[Function]}
+                                    label="Text message"
+                                    labelPosition="end"
+                                    name="contact"
+                                    required={true}
+                                    rootProps={
+                                      Object {
+                                        "className": undefined,
+                                      }
+                                    }
+                                    size="large"
+                                    type="radio"
+                                    value="text"
+                                  >
+                                    <ThemeProvider>
+                                      <ThemeProvider>
+                                        <Choice
+                                          aria-describedby="formField-31-caption"
+                                          defaultChecked={false}
+                                          iconChecked={<IconRadioButtonCheck />}
+                                          inputRef={[Function]}
+                                          label="Text message"
+                                          labelPosition="end"
+                                          name="contact"
+                                          required={true}
+                                          rootProps={
+                                            Object {
+                                              "className": undefined,
+                                            }
+                                          }
+                                          size="large"
+                                          type="radio"
+                                          value="text"
+                                        >
+                                          <Choice
+                                            labelPosition="end"
+                                          >
+                                            <label
+                                              className="css-2"
+                                            >
+                                              <glamorous(input)
+                                                aria-describedby="formField-31-caption"
+                                                aria-required={true}
+                                                defaultChecked={false}
+                                                innerRef={[Function]}
+                                                name="contact"
+                                                required={true}
+                                                size="large"
+                                                type="radio"
+                                                value="text"
+                                              >
+                                                <input
+                                                  aria-describedby="formField-31-caption"
+                                                  aria-required={true}
+                                                  className="css-4"
+                                                  defaultChecked={false}
+                                                  name="contact"
+                                                  required={true}
+                                                  size="large"
+                                                  type="radio"
+                                                  value="text"
+                                                />
+                                              </glamorous(input)>
+                                              <glamorous(span)
+                                                labelPosition="end"
+                                                size="large"
+                                              >
+                                                <span
+                                                  className="css-22"
+                                                >
+                                                  <IconRadioButtonCheck>
+                                                    <Icon
+                                                      rtl={false}
+                                                      size="medium"
+                                                    >
+                                                      <glamorous(svg)
+                                                        aria-hidden={true}
+                                                        role="img"
+                                                        rtl={false}
+                                                        size="medium"
+                                                        viewBox="0 0 24 24"
+                                                      >
+                                                        <svg
+                                                          aria-hidden={true}
+                                                          className="css-23"
+                                                          role="img"
+                                                          viewBox="0 0 24 24"
+                                                        >
+                                                          <g>
+                                                            <circle
+                                                              cx="12"
+                                                              cy="12"
+                                                              r="3.43"
+                                                            />
+                                                          </g>
+                                                        </svg>
+                                                      </glamorous(svg)>
+                                                    </Icon>
+                                                  </IconRadioButtonCheck>
+                                                </span>
+                                              </glamorous(span)>
+                                              <glamorous(span)
+                                                labelPosition="end"
+                                                size="large"
+                                              >
+                                                <span
+                                                  className="css-24"
+                                                >
+                                                  Text message
+                                                </span>
+                                              </glamorous(span)>
+                                            </label>
+                                          </Choice>
+                                        </Choice>
+                                      </ThemeProvider>
+                                    </ThemeProvider>
+                                  </Themed(Choice)>
+                                </ThemedComponent>
+                              </Radio>
+                              <Radio
+                                aria-describedby="formField-31-caption"
+                                defaultChecked={true}
+                                key="3"
+                                label="None"
+                                name="contact"
+                                required={true}
+                                size="large"
+                                value="none"
+                              >
+                                <ThemedComponent
+                                  aria-describedby="formField-31-caption"
+                                  defaultChecked={true}
+                                  iconChecked={<IconRadioButtonCheck />}
+                                  inputRef={[Function]}
+                                  label="None"
+                                  labelPosition="end"
+                                  name="contact"
+                                  required={true}
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="radio"
+                                  value="none"
+                                >
+                                  <Themed(Choice)
+                                    aria-describedby="formField-31-caption"
+                                    defaultChecked={true}
+                                    iconChecked={<IconRadioButtonCheck />}
+                                    inputRef={[Function]}
+                                    label="None"
+                                    labelPosition="end"
+                                    name="contact"
+                                    required={true}
+                                    rootProps={
+                                      Object {
+                                        "className": undefined,
+                                      }
+                                    }
+                                    size="large"
+                                    type="radio"
+                                    value="none"
+                                  >
+                                    <ThemeProvider>
+                                      <ThemeProvider>
+                                        <Choice
+                                          aria-describedby="formField-31-caption"
+                                          defaultChecked={true}
+                                          iconChecked={<IconRadioButtonCheck />}
+                                          inputRef={[Function]}
+                                          label="None"
+                                          labelPosition="end"
+                                          name="contact"
+                                          required={true}
+                                          rootProps={
+                                            Object {
+                                              "className": undefined,
+                                            }
+                                          }
+                                          size="large"
+                                          type="radio"
+                                          value="none"
+                                        >
+                                          <Choice
+                                            labelPosition="end"
+                                          >
+                                            <label
+                                              className="css-2"
+                                            >
+                                              <glamorous(input)
+                                                aria-describedby="formField-31-caption"
+                                                aria-required={true}
+                                                defaultChecked={true}
+                                                innerRef={[Function]}
+                                                name="contact"
+                                                required={true}
+                                                size="large"
+                                                type="radio"
+                                                value="none"
+                                              >
+                                                <input
+                                                  aria-describedby="formField-31-caption"
+                                                  aria-required={true}
+                                                  className="css-4"
+                                                  defaultChecked={true}
+                                                  name="contact"
+                                                  required={true}
+                                                  size="large"
+                                                  type="radio"
+                                                  value="none"
+                                                />
+                                              </glamorous(input)>
+                                              <glamorous(span)
+                                                labelPosition="end"
+                                                size="large"
+                                              >
+                                                <span
+                                                  className="css-22"
+                                                >
+                                                  <IconRadioButtonCheck>
+                                                    <Icon
+                                                      rtl={false}
+                                                      size="medium"
+                                                    >
+                                                      <glamorous(svg)
+                                                        aria-hidden={true}
+                                                        role="img"
+                                                        rtl={false}
+                                                        size="medium"
+                                                        viewBox="0 0 24 24"
+                                                      >
+                                                        <svg
+                                                          aria-hidden={true}
+                                                          className="css-23"
+                                                          role="img"
+                                                          viewBox="0 0 24 24"
+                                                        >
+                                                          <g>
+                                                            <circle
+                                                              cx="12"
+                                                              cy="12"
+                                                              r="3.43"
+                                                            />
+                                                          </g>
+                                                        </svg>
+                                                      </glamorous(svg)>
+                                                    </Icon>
+                                                  </IconRadioButtonCheck>
+                                                </span>
+                                              </glamorous(span)>
+                                              <glamorous(span)
+                                                labelPosition="end"
+                                                size="large"
+                                              >
+                                                <span
+                                                  className="css-24"
+                                                >
+                                                  None
+                                                </span>
+                                              </glamorous(span)>
+                                            </label>
+                                          </Choice>
+                                        </Choice>
+                                      </ThemeProvider>
+                                    </ThemeProvider>
+                                  </Themed(Choice)>
+                                </ThemedComponent>
+                              </Radio>
+                            </div>
+                          </ChoiceGroup>
+                        </ChoiceGroup>
+                      </ThemeProvider>
+                    </ThemeProvider>
+                  </Themed(ChoiceGroup)>
+                </ThemedComponent>
+              </RadioGroup>
+            </div>
+            <glamorous(div)
+              caption="We promise not to spam you."
+              id="formField-31-caption"
+              isGroup={true}
+            >
+              <div
+                className="css-28"
+                id="formField-31-caption"
+              >
+                We promise not to spam you.
+              </div>
+            </glamorous(div)>
+          </div>
+        </FormField>
+      </FormField>
+    </form>
+  </glamorous(form)>
+</DemoForm>
+`;
+
+exports[`RadioGroup demo examples Snapshots: inline 1`] = `
+.css-0 > *:not(:last-child),
+[data-css-0] > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.css-1,
+[data-css-1] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+}
+
+.css-1 *,
+[data-css-1] *,
+.css-1 *::before,
+[data-css-1] *::before,
+.css-1 *::after,
+[data-css-1] *::after {
+  box-sizing: inherit;
+}
+
+.css-1:hover span:first-of-type,
+[data-css-1]:hover span:first-of-type {
+  border-color: #5691f0;
+}
+
+.css-3,
+[data-css-3] {
+  border: 0px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  -webkit-clip-path: inset(50%);
+}
+
+.css-3:hover:not(:disabled) + span,
+[data-css-3]:hover:not(:disabled) + span,
+.css-3[data-simulate-hover]:not(:disabled) + span,
+[data-css-3][data-simulate-hover]:not(:disabled) + span {
+  border-color: #5691f0;
+}
+
+.css-3:focus + span,
+[data-css-3]:focus + span,
+.css-3[data-simulate-focus] + span,
+[data-css-3][data-simulate-focus] + span {
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
+}
+
+.css-3:checked + span,
+[data-css-3]:checked + span,
+.css-3[type="checkbox"]:indeterminate + span,
+[data-css-3][type="checkbox"]:indeterminate + span {
+  background-color: #3272d9;
+  border-color: #3272d9;
+}
+
+.css-3:checked:hover + span,
+[data-css-3]:checked:hover + span,
+.css-3[type="checkbox"]:indeterminate:hover + span,
+[data-css-3][type="checkbox"]:indeterminate:hover + span,
+.css-3:checked[data-simulate-hover] + span,
+[data-css-3]:checked[data-simulate-hover] + span,
+.css-3[type="checkbox"]:indeterminate[data-simulate-hover] + span,
+[data-css-3][type="checkbox"]:indeterminate[data-simulate-hover] + span {
+  background-color: #5691f0;
+  border-color: #5691f0;
+}
+
+.css-3:checked:disabled + span,
+[data-css-3]:checked:disabled + span,
+.css-3[type="checkbox"]:indeterminate:disabled + span,
+[data-css-3][type="checkbox"]:indeterminate:disabled + span {
+  background-color: #c8d1e0;
+  border-color: #c8d1e0;
+  color: #ffffff;
+}
+
+.css-21,
+[data-css-21] {
+  align-items: center;
+  background-color: #ffffff;
+  border-color: #c8d1e0;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 1px;
+  color: #ffffff;
+  content: "";
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: none;
+  height: 1em;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 1em;
+  width: 1em;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-flex: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+}
+
+.css-21 svg,
+[data-css-21] svg {
+  fill: currentColor;
+  height: auto;
+  width: 100%;
+}
+
+.css-22,
+[data-css-22] {
+  fill: currentcolor;
+  font-size: 16px;
+  height: 1em;
+  width: 1em;
+}
+
+.css-23,
+[data-css-23] {
+  color: #333840;
+  font-size: 0.875em;
+}
+
+.css-24,
+[data-css-24] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+}
+
+.css-24 *,
+[data-css-24] *,
+.css-24 *::before,
+[data-css-24] *::before,
+.css-24 *::after,
+[data-css-24] *::after {
+  box-sizing: inherit;
+}
+
+.css-24 > *:not(:last-child),
+[data-css-24] > *:not(:last-child) {
+  margin-bottom: 0;
+  margin-right: 2em;
+}
+
+<DemoForm>
+  <glamorous(form)
+    onSubmit={[Function]}
+  >
+    <form
+      className="css-0"
+      onSubmit={[Function]}
+    >
+      <RadioGroup
+        data={
+          Array [
+            Object {
+              "label": "Fluorite",
+              "value": "fluorite",
+            },
+            Object {
+              "label": "Magnetite",
+              "value": "magnetite",
+            },
+            Object {
+              "label": "Quartz",
+              "value": "quartz",
+            },
+          ]
+        }
+        defaultChecked="quartz"
+        inline={true}
+        name="mineral"
+      >
+        <ThemedComponent
+          data={
+            Array [
+              Object {
+                "label": "Fluorite",
+                "value": "fluorite",
+              },
+              Object {
+                "label": "Magnetite",
+                "value": "magnetite",
+              },
+              Object {
+                "label": "Quartz",
+                "value": "quartz",
+              },
+            ]
+          }
+          defaultChecked="quartz"
+          inline={true}
+          input={[Function]}
+          name="mineral"
+          rootProps={
+            Object {
+              "role": "radiogroup",
+            }
+          }
+          type="radio"
+        >
+          <Themed(ChoiceGroup)
+            data={
+              Array [
+                Object {
+                  "label": "Fluorite",
+                  "value": "fluorite",
+                },
+                Object {
+                  "label": "Magnetite",
+                  "value": "magnetite",
+                },
+                Object {
+                  "label": "Quartz",
+                  "value": "quartz",
+                },
+              ]
+            }
+            defaultChecked="quartz"
+            inline={true}
+            input={[Function]}
+            name="mineral"
+            rootProps={
+              Object {
+                "role": "radiogroup",
+              }
+            }
+            type="radio"
+          >
+            <ThemeProvider>
+              <ThemeProvider>
+                <ChoiceGroup
+                  data={
+                    Array [
+                      Object {
+                        "label": "Fluorite",
+                        "value": "fluorite",
+                      },
+                      Object {
+                        "label": "Magnetite",
+                        "value": "magnetite",
+                      },
+                      Object {
+                        "label": "Quartz",
+                        "value": "quartz",
+                      },
+                    ]
+                  }
+                  defaultChecked="quartz"
+                  inline={true}
+                  input={[Function]}
+                  name="mineral"
+                  rootProps={
+                    Object {
+                      "role": "radiogroup",
+                    }
+                  }
+                  type="radio"
+                >
+                  <ChoiceGroup
+                    inline={true}
+                    role="radiogroup"
+                    size="large"
+                  >
+                    <div
+                      className="css-24"
+                      role="radiogroup"
+                    >
+                      <Radio
+                        defaultChecked={false}
+                        key="0"
+                        label="Fluorite"
+                        name="mineral"
+                        size="large"
+                        value="fluorite"
+                      >
+                        <ThemedComponent
+                          defaultChecked={false}
+                          iconChecked={<IconRadioButtonCheck />}
+                          inputRef={[Function]}
+                          label="Fluorite"
+                          labelPosition="end"
+                          name="mineral"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="radio"
+                          value="fluorite"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={false}
+                            iconChecked={<IconRadioButtonCheck />}
+                            inputRef={[Function]}
+                            label="Fluorite"
+                            labelPosition="end"
+                            name="mineral"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="radio"
+                            value="fluorite"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={false}
+                                  iconChecked={<IconRadioButtonCheck />}
+                                  inputRef={[Function]}
+                                  label="Fluorite"
+                                  labelPosition="end"
+                                  name="mineral"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="radio"
+                                  value="fluorite"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-1"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={false}
+                                        innerRef={[Function]}
+                                        name="mineral"
+                                        size="large"
+                                        type="radio"
+                                        value="fluorite"
+                                      >
+                                        <input
+                                          className="css-3"
+                                          defaultChecked={false}
+                                          name="mineral"
+                                          size="large"
+                                          type="radio"
+                                          value="fluorite"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-21"
+                                        >
+                                          <IconRadioButtonCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-22"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <circle
+                                                      cx="12"
+                                                      cy="12"
+                                                      r="3.43"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconRadioButtonCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-23"
+                                        >
+                                          Fluorite
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Radio>
+                      <Radio
+                        defaultChecked={false}
+                        key="1"
+                        label="Magnetite"
+                        name="mineral"
+                        size="large"
+                        value="magnetite"
+                      >
+                        <ThemedComponent
+                          defaultChecked={false}
+                          iconChecked={<IconRadioButtonCheck />}
+                          inputRef={[Function]}
+                          label="Magnetite"
+                          labelPosition="end"
+                          name="mineral"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="radio"
+                          value="magnetite"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={false}
+                            iconChecked={<IconRadioButtonCheck />}
+                            inputRef={[Function]}
+                            label="Magnetite"
+                            labelPosition="end"
+                            name="mineral"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="radio"
+                            value="magnetite"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={false}
+                                  iconChecked={<IconRadioButtonCheck />}
+                                  inputRef={[Function]}
+                                  label="Magnetite"
+                                  labelPosition="end"
+                                  name="mineral"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="radio"
+                                  value="magnetite"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-1"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={false}
+                                        innerRef={[Function]}
+                                        name="mineral"
+                                        size="large"
+                                        type="radio"
+                                        value="magnetite"
+                                      >
+                                        <input
+                                          className="css-3"
+                                          defaultChecked={false}
+                                          name="mineral"
+                                          size="large"
+                                          type="radio"
+                                          value="magnetite"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-21"
+                                        >
+                                          <IconRadioButtonCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-22"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <circle
+                                                      cx="12"
+                                                      cy="12"
+                                                      r="3.43"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconRadioButtonCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-23"
+                                        >
+                                          Magnetite
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Radio>
+                      <Radio
+                        defaultChecked={true}
+                        key="2"
+                        label="Quartz"
+                        name="mineral"
+                        size="large"
+                        value="quartz"
+                      >
+                        <ThemedComponent
+                          defaultChecked={true}
+                          iconChecked={<IconRadioButtonCheck />}
+                          inputRef={[Function]}
+                          label="Quartz"
+                          labelPosition="end"
+                          name="mineral"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="radio"
+                          value="quartz"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={true}
+                            iconChecked={<IconRadioButtonCheck />}
+                            inputRef={[Function]}
+                            label="Quartz"
+                            labelPosition="end"
+                            name="mineral"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="radio"
+                            value="quartz"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={true}
+                                  iconChecked={<IconRadioButtonCheck />}
+                                  inputRef={[Function]}
+                                  label="Quartz"
+                                  labelPosition="end"
+                                  name="mineral"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="radio"
+                                  value="quartz"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-1"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={true}
+                                        innerRef={[Function]}
+                                        name="mineral"
+                                        size="large"
+                                        type="radio"
+                                        value="quartz"
+                                      >
+                                        <input
+                                          className="css-3"
+                                          defaultChecked={true}
+                                          name="mineral"
+                                          size="large"
+                                          type="radio"
+                                          value="quartz"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-21"
+                                        >
+                                          <IconRadioButtonCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-22"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <circle
+                                                      cx="12"
+                                                      cy="12"
+                                                      r="3.43"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconRadioButtonCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-23"
+                                        >
+                                          Quartz
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Radio>
+                    </div>
+                  </ChoiceGroup>
+                </ChoiceGroup>
+              </ThemeProvider>
+            </ThemeProvider>
+          </Themed(ChoiceGroup)>
+        </ThemedComponent>
+      </RadioGroup>
+    </form>
+  </glamorous(form)>
+</DemoForm>
+`;
+
+exports[`RadioGroup demo examples Snapshots: uncontrolled 1`] = `
+.css-0 > *:not(:last-child),
+[data-css-0] > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.css-1,
+[data-css-1] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-1 *,
+[data-css-1] *,
+.css-1 *::before,
+[data-css-1] *::before,
+.css-1 *::after,
+[data-css-1] *::after {
+  box-sizing: inherit;
+}
+
+.css-1 > *:not(:last-child),
+[data-css-1] > *:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.css-2,
+[data-css-2] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+}
+
+.css-2 *,
+[data-css-2] *,
+.css-2 *::before,
+[data-css-2] *::before,
+.css-2 *::after,
+[data-css-2] *::after {
+  box-sizing: inherit;
+}
+
+.css-2:hover span:first-of-type,
+[data-css-2]:hover span:first-of-type {
+  border-color: #5691f0;
+}
+
+.css-4,
+[data-css-4] {
+  border: 0px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  -webkit-clip-path: inset(50%);
+}
+
+.css-4:hover:not(:disabled) + span,
+[data-css-4]:hover:not(:disabled) + span,
+.css-4[data-simulate-hover]:not(:disabled) + span,
+[data-css-4][data-simulate-hover]:not(:disabled) + span {
+  border-color: #5691f0;
+}
+
+.css-4:focus + span,
+[data-css-4]:focus + span,
+.css-4[data-simulate-focus] + span,
+[data-css-4][data-simulate-focus] + span {
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
+}
+
+.css-4:checked + span,
+[data-css-4]:checked + span,
+.css-4[type="checkbox"]:indeterminate + span,
+[data-css-4][type="checkbox"]:indeterminate + span {
+  background-color: #3272d9;
+  border-color: #3272d9;
+}
+
+.css-4:checked:hover + span,
+[data-css-4]:checked:hover + span,
+.css-4[type="checkbox"]:indeterminate:hover + span,
+[data-css-4][type="checkbox"]:indeterminate:hover + span,
+.css-4:checked[data-simulate-hover] + span,
+[data-css-4]:checked[data-simulate-hover] + span,
+.css-4[type="checkbox"]:indeterminate[data-simulate-hover] + span,
+[data-css-4][type="checkbox"]:indeterminate[data-simulate-hover] + span {
+  background-color: #5691f0;
+  border-color: #5691f0;
+}
+
+.css-4:checked:disabled + span,
+[data-css-4]:checked:disabled + span,
+.css-4[type="checkbox"]:indeterminate:disabled + span,
+[data-css-4][type="checkbox"]:indeterminate:disabled + span {
+  background-color: #c8d1e0;
+  border-color: #c8d1e0;
+  color: #ffffff;
+}
+
+.css-22,
+[data-css-22] {
+  align-items: center;
+  background-color: #ffffff;
+  border-color: #c8d1e0;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 1px;
+  color: #ffffff;
+  content: "";
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: none;
+  height: 1em;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 1em;
+  width: 1em;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-flex: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+}
+
+.css-22 svg,
+[data-css-22] svg {
+  fill: currentColor;
+  height: auto;
+  width: 100%;
+}
+
+.css-23,
+[data-css-23] {
+  fill: currentcolor;
+  font-size: 16px;
+  height: 1em;
+  width: 1em;
+}
+
+.css-24,
+[data-css-24] {
+  color: #333840;
+  font-size: 0.875em;
+}
+
+<DemoForm>
+  <glamorous(form)
+    onSubmit={[Function]}
+  >
+    <form
+      className="css-0"
+      onSubmit={[Function]}
+    >
+      <RadioGroup
+        data={
+          Array [
+            Object {
+              "label": "Fluorite",
+              "value": "fluorite",
+            },
+            Object {
+              "label": "Magnetite",
+              "value": "magnetite",
+            },
+            Object {
+              "label": "Quartz",
+              "value": "quartz",
+            },
+          ]
+        }
+        defaultChecked="quartz"
+        name="mineral"
+      >
+        <ThemedComponent
+          data={
+            Array [
+              Object {
+                "label": "Fluorite",
+                "value": "fluorite",
+              },
+              Object {
+                "label": "Magnetite",
+                "value": "magnetite",
+              },
+              Object {
+                "label": "Quartz",
+                "value": "quartz",
+              },
+            ]
+          }
+          defaultChecked="quartz"
+          input={[Function]}
+          name="mineral"
+          rootProps={
+            Object {
+              "role": "radiogroup",
+            }
+          }
+          type="radio"
+        >
+          <Themed(ChoiceGroup)
+            data={
+              Array [
+                Object {
+                  "label": "Fluorite",
+                  "value": "fluorite",
+                },
+                Object {
+                  "label": "Magnetite",
+                  "value": "magnetite",
+                },
+                Object {
+                  "label": "Quartz",
+                  "value": "quartz",
+                },
+              ]
+            }
+            defaultChecked="quartz"
+            input={[Function]}
+            name="mineral"
+            rootProps={
+              Object {
+                "role": "radiogroup",
+              }
+            }
+            type="radio"
+          >
+            <ThemeProvider>
+              <ThemeProvider>
+                <ChoiceGroup
+                  data={
+                    Array [
+                      Object {
+                        "label": "Fluorite",
+                        "value": "fluorite",
+                      },
+                      Object {
+                        "label": "Magnetite",
+                        "value": "magnetite",
+                      },
+                      Object {
+                        "label": "Quartz",
+                        "value": "quartz",
+                      },
+                    ]
+                  }
+                  defaultChecked="quartz"
+                  input={[Function]}
+                  name="mineral"
+                  rootProps={
+                    Object {
+                      "role": "radiogroup",
+                    }
+                  }
+                  type="radio"
+                >
+                  <ChoiceGroup
+                    role="radiogroup"
+                    size="large"
+                  >
+                    <div
+                      className="css-1"
+                      role="radiogroup"
+                    >
+                      <Radio
+                        defaultChecked={false}
+                        key="0"
+                        label="Fluorite"
+                        name="mineral"
+                        size="large"
+                        value="fluorite"
+                      >
+                        <ThemedComponent
+                          defaultChecked={false}
+                          iconChecked={<IconRadioButtonCheck />}
+                          inputRef={[Function]}
+                          label="Fluorite"
+                          labelPosition="end"
+                          name="mineral"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="radio"
+                          value="fluorite"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={false}
+                            iconChecked={<IconRadioButtonCheck />}
+                            inputRef={[Function]}
+                            label="Fluorite"
+                            labelPosition="end"
+                            name="mineral"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="radio"
+                            value="fluorite"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={false}
+                                  iconChecked={<IconRadioButtonCheck />}
+                                  inputRef={[Function]}
+                                  label="Fluorite"
+                                  labelPosition="end"
+                                  name="mineral"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="radio"
+                                  value="fluorite"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-2"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={false}
+                                        innerRef={[Function]}
+                                        name="mineral"
+                                        size="large"
+                                        type="radio"
+                                        value="fluorite"
+                                      >
+                                        <input
+                                          className="css-4"
+                                          defaultChecked={false}
+                                          name="mineral"
+                                          size="large"
+                                          type="radio"
+                                          value="fluorite"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-22"
+                                        >
+                                          <IconRadioButtonCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-23"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <circle
+                                                      cx="12"
+                                                      cy="12"
+                                                      r="3.43"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconRadioButtonCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-24"
+                                        >
+                                          Fluorite
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Radio>
+                      <Radio
+                        defaultChecked={false}
+                        key="1"
+                        label="Magnetite"
+                        name="mineral"
+                        size="large"
+                        value="magnetite"
+                      >
+                        <ThemedComponent
+                          defaultChecked={false}
+                          iconChecked={<IconRadioButtonCheck />}
+                          inputRef={[Function]}
+                          label="Magnetite"
+                          labelPosition="end"
+                          name="mineral"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="radio"
+                          value="magnetite"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={false}
+                            iconChecked={<IconRadioButtonCheck />}
+                            inputRef={[Function]}
+                            label="Magnetite"
+                            labelPosition="end"
+                            name="mineral"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="radio"
+                            value="magnetite"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={false}
+                                  iconChecked={<IconRadioButtonCheck />}
+                                  inputRef={[Function]}
+                                  label="Magnetite"
+                                  labelPosition="end"
+                                  name="mineral"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="radio"
+                                  value="magnetite"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-2"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={false}
+                                        innerRef={[Function]}
+                                        name="mineral"
+                                        size="large"
+                                        type="radio"
+                                        value="magnetite"
+                                      >
+                                        <input
+                                          className="css-4"
+                                          defaultChecked={false}
+                                          name="mineral"
+                                          size="large"
+                                          type="radio"
+                                          value="magnetite"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-22"
+                                        >
+                                          <IconRadioButtonCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-23"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <circle
+                                                      cx="12"
+                                                      cy="12"
+                                                      r="3.43"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconRadioButtonCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-24"
+                                        >
+                                          Magnetite
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Radio>
+                      <Radio
+                        defaultChecked={true}
+                        key="2"
+                        label="Quartz"
+                        name="mineral"
+                        size="large"
+                        value="quartz"
+                      >
+                        <ThemedComponent
+                          defaultChecked={true}
+                          iconChecked={<IconRadioButtonCheck />}
+                          inputRef={[Function]}
+                          label="Quartz"
+                          labelPosition="end"
+                          name="mineral"
+                          rootProps={
+                            Object {
+                              "className": undefined,
+                            }
+                          }
+                          size="large"
+                          type="radio"
+                          value="quartz"
+                        >
+                          <Themed(Choice)
+                            defaultChecked={true}
+                            iconChecked={<IconRadioButtonCheck />}
+                            inputRef={[Function]}
+                            label="Quartz"
+                            labelPosition="end"
+                            name="mineral"
+                            rootProps={
+                              Object {
+                                "className": undefined,
+                              }
+                            }
+                            size="large"
+                            type="radio"
+                            value="quartz"
+                          >
+                            <ThemeProvider>
+                              <ThemeProvider>
+                                <Choice
+                                  defaultChecked={true}
+                                  iconChecked={<IconRadioButtonCheck />}
+                                  inputRef={[Function]}
+                                  label="Quartz"
+                                  labelPosition="end"
+                                  name="mineral"
+                                  rootProps={
+                                    Object {
+                                      "className": undefined,
+                                    }
+                                  }
+                                  size="large"
+                                  type="radio"
+                                  value="quartz"
+                                >
+                                  <Choice
+                                    labelPosition="end"
+                                  >
+                                    <label
+                                      className="css-2"
+                                    >
+                                      <glamorous(input)
+                                        defaultChecked={true}
+                                        innerRef={[Function]}
+                                        name="mineral"
+                                        size="large"
+                                        type="radio"
+                                        value="quartz"
+                                      >
+                                        <input
+                                          className="css-4"
+                                          defaultChecked={true}
+                                          name="mineral"
+                                          size="large"
+                                          type="radio"
+                                          value="quartz"
+                                        />
+                                      </glamorous(input)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-22"
+                                        >
+                                          <IconRadioButtonCheck>
+                                            <Icon
+                                              rtl={false}
+                                              size="medium"
+                                            >
+                                              <glamorous(svg)
+                                                aria-hidden={true}
+                                                role="img"
+                                                rtl={false}
+                                                size="medium"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  className="css-23"
+                                                  role="img"
+                                                  viewBox="0 0 24 24"
+                                                >
+                                                  <g>
+                                                    <circle
+                                                      cx="12"
+                                                      cy="12"
+                                                      r="3.43"
+                                                    />
+                                                  </g>
+                                                </svg>
+                                              </glamorous(svg)>
+                                            </Icon>
+                                          </IconRadioButtonCheck>
+                                        </span>
+                                      </glamorous(span)>
+                                      <glamorous(span)
+                                        labelPosition="end"
+                                        size="large"
+                                      >
+                                        <span
+                                          className="css-24"
+                                        >
+                                          Quartz
+                                        </span>
+                                      </glamorous(span)>
+                                    </label>
+                                  </Choice>
+                                </Choice>
+                              </ThemeProvider>
+                            </ThemeProvider>
+                          </Themed(Choice)>
+                        </ThemedComponent>
+                      </Radio>
+                    </div>
+                  </ChoiceGroup>
+                </ChoiceGroup>
+              </ThemeProvider>
+            </ThemeProvider>
+          </Themed(ChoiceGroup)>
+        </ThemedComponent>
+      </RadioGroup>
+    </form>
+  </glamorous(form)>
+</DemoForm>
+`;

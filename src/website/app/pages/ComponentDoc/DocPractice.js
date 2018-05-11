@@ -1,25 +1,9 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React from 'react';
 import darken from 'polished/lib/color/darken';
 import rgba from 'polished/lib/color/rgba';
-import { createStyledComponent, pxToEm } from '../../../../styles';
-import { mineralTheme, ThemeProvider } from '../../../../themes';
+import { createStyledComponent, pxToEm } from '../../../../library/styles';
+import { mineralTheme, ThemeProvider } from '../../../../library/themes';
 import IconCheck from 'mineral-ui-icons/IconCheck';
 import IconClose from 'mineral-ui-icons/IconClose';
 import Markdown from '../../Markdown';
@@ -36,23 +20,23 @@ type Props = {
 const themes = {
   do: {
     borderColor: darken(0.1, mineralTheme.borderColor_success),
-    color_text_primary: mineralTheme.color_text_success,
+    color_theme: mineralTheme.color_success,
 
-    SiteLink_borderColor_focus: mineralTheme.color_text_success,
-    SiteLink_color: mineralTheme.color_text_success,
-    SiteLink_color_active: mineralTheme.color_text_success,
-    SiteLink_color_hover: mineralTheme.color_text_success,
-    SiteLink_color_focus: mineralTheme.color_text_success
+    SiteLink_borderColor_focus: mineralTheme.color_success,
+    SiteLink_color: mineralTheme.color_success,
+    SiteLink_color_active: mineralTheme.color_success,
+    SiteLink_color_hover: mineralTheme.color_success,
+    SiteLink_color_focus: mineralTheme.color_success
   },
   dont: {
     borderColor: mineralTheme.borderColor_danger,
-    color_text_primary: darken(0.1, mineralTheme.color_text_danger),
+    color_theme: darken(0.1, mineralTheme.color_danger),
 
-    SiteLink_borderColor_focus: darken(0.1, mineralTheme.color_text_danger),
-    SiteLink_color: darken(0.1, mineralTheme.color_text_danger),
-    SiteLink_color_active: darken(0.1, mineralTheme.color_text_danger),
-    SiteLink_color_hover: darken(0.1, mineralTheme.color_text_danger),
-    SiteLink_color_focus: darken(0.1, mineralTheme.color_text_danger)
+    SiteLink_borderColor_focus: darken(0.1, mineralTheme.color_danger),
+    SiteLink_color: darken(0.1, mineralTheme.color_danger),
+    SiteLink_color_active: darken(0.1, mineralTheme.color_danger),
+    SiteLink_color_hover: darken(0.1, mineralTheme.color_danger),
+    SiteLink_color_focus: darken(0.1, mineralTheme.color_danger)
   }
 };
 
@@ -70,7 +54,7 @@ const styles = {
     padding: theme.space_inset_md,
 
     [theme.bp_interior_bestPracticesMultiColumn]: {
-      flex: `1 1 ${7 / 12 * 100}%`
+      width: `${7 / 12 * 100}%`
     },
 
     // Specificity hack
@@ -86,11 +70,11 @@ const styles = {
     [theme.bp_interior_bestPracticesMultiColumn]: {
       borderLeft: `3px solid ${rgba(theme.borderColor, 0.6)}`,
       borderTop: 0,
-      flex: `1 1 ${5 / 12 * 100}%`
+      width: `${5 / 12 * 100}%`
     },
 
     '& ::selection': {
-      backgroundColor: rgba(theme.color_text_primary, 0.2)
+      backgroundColor: rgba(theme.color_theme, 0.2)
     },
 
     '& > [role="img"]': {

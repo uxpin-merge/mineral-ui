@@ -1,27 +1,50 @@
-/**
- * Copyright 2017 CA
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 /* @flow */
 import React from 'react';
+import { renderToString } from 'react-dom/server';
 import { mount } from 'enzyme';
-import ThemeProvider from '../src/themes/ThemeProvider';
+import type { ReactWrapper } from 'enzyme';
+import ThemeProvider from '../src/library/themes/ThemeProvider';
 
-export function mountInThemeProvider(Component: React$Element<*>) {
-  const themeProvider = mount(<ThemeProvider>{Component}</ThemeProvider>);
+export const mountInThemeProvider = (
+  Component: React$Element<*>,
+  options: { attachToDom?: boolean } = {}
+) => {
+  let mountNode, mountOptions;
+
+  if (options.attachToDom) {
+    mountNode = global.document.createElement('div');
+    global.document.body.appendChild(mountNode);
+
+    mountOptions = {
+      attachTo: mountNode
+    };
+  }
+
+  const themeProvider = mount(
+    <ThemeProvider>{Component}</ThemeProvider>,
+    mountOptions
+  );
+
+  if (options.attachToDom) {
+    // $FlowFixMe - Add custom destroy function to make test cleanup easier
+    themeProvider.destroy = () => {
+      global.document.body.removeChild(mountNode);
+      themeProvider.detach();
+    };
+  }
+
   const component = themeProvider.find(Component.type);
 
   return [themeProvider, component];
-}
+};
+
+export const ssrInThemeProvider = (Component: React$Element<*>) => {
+  return renderToString(<ThemeProvider>{Component}</ThemeProvider>);
+};
+
+export const spyOn = (wrapper: ReactWrapper, method: string) => {
+  const spy = jest.spyOn(wrapper.instance(), method);
+  // https://github.com/airbnb/enzyme/issues/365#issuecomment-362166762
+  wrapper.instance().forceUpdate();
+  return spy;
+};

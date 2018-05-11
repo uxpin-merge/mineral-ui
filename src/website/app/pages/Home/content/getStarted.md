@@ -1,6 +1,7 @@
 ### Let’s Get Started
 
-1. **Install the [Mineral UI package](https://www.npmjs.com/package/mineral-ui) using `npm` or `yarn`**
+1. **Install the [Mineral UI package](https://www.npmjs.com/package/mineral-ui)
+and its dependencies using `npm` or `yarn`**
 
     ```bash
     npm install --save mineral-ui glamor glamorous react react-dom

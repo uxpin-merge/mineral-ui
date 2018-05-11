@@ -1,0 +1,554 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormFieldDivider demo examples Snapshots: basic 1`] = `
+.css-0,
+[data-css-0] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.css-0 *,
+[data-css-0] *,
+.css-0 *::before,
+[data-css-0] *::before,
+.css-0 *::after,
+[data-css-0] *::after {
+  box-sizing: inherit;
+}
+
+.css-1,
+[data-css-1] {
+  color: #58606e;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.875em;
+  font-weight: 600;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+}
+
+.css-1 > *,
+[data-css-1] > * {
+  align-self: flex-end;
+  display: inline-block;
+  -webkit-align-self: flex-end;
+}
+
+.css-2,
+[data-css-2] {
+  align-items: center;
+  cursor: text;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.css-2 [role="img"],
+[data-css-2] [role="img"] {
+  color: #c8d1e0;
+  display: block;
+  flex: 0 0 auto;
+  margin: 0 0.5em;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-2 [role="img"]:last-of-type,
+[data-css-2] [role="img"]:last-of-type {
+  color: #c8d1e0;
+}
+
+.css-4,
+[data-css-4] {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  cursor: text;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.css-4 *,
+[data-css-4] *,
+.css-4 *::before,
+[data-css-4] *::before,
+.css-4 *::after,
+[data-css-4] *::after {
+  box-sizing: inherit;
+}
+
+.css-4:hover > div:last-child,
+[data-css-4]:hover > div:last-child,
+.css-4[data-simulate-hover] > div:last-child,
+[data-css-4][data-simulate-hover] > div:last-child {
+  border-color: #5691f0;
+}
+
+.css-4:focus > div:last-child,
+[data-css-4]:focus > div:last-child,
+.css-4[data-simulate-focus] > div:last-child,
+[data-css-4][data-simulate-focus] > div:last-child {
+  border-color: #c8d1e0;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
+}
+
+.css-4:active > div:last-child,
+[data-css-4]:active > div:last-child,
+.css-4[data-simulate-active] > div:last-child,
+[data-css-4][data-simulate-active] > div:last-child {
+  border-color: #c8d1e0;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
+}
+
+.css-4 [role="img"],
+[data-css-4] [role="img"] {
+  color: #c8d1e0;
+  display: block;
+  flex: 0 0 auto;
+  margin: 0 0.5em;
+  -webkit-flex: 0 0 auto;
+}
+
+.css-4 [role="img"]:last-of-type,
+[data-css-4] [role="img"]:last-of-type {
+  color: #c8d1e0;
+}
+
+.css-15,
+[data-css-15] {
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  flex: 1 1 auto;
+  font-family: inherit;
+  height: 2.857142857142857em;
+  min-width: 0;
+  width: 100%;
+  color: #333840;
+  -webkit-text-fill-color: #333840;
+  font-size: 0.875em;
+  outline: 0;
+  padding-left: 1.1428571428571428em;
+  padding-right: 1.1428571428571428em;
+  -webkit-flex: 1 1 auto;
+}
+
+.css-15::placeholder,
+[data-css-15]::placeholder,
+.css-15[data-simulate-placeholder],
+[data-css-15][data-simulate-placeholder] {
+  color: #8e99ab;
+  -webkit-text-fill-color: #8e99ab;
+  font-style: italic;
+}
+
+.css-15::-ms-input-placeholder,
+[data-css-15]::-ms-input-placeholder,
+.css-15[data-simulate-msinputplaceholder],
+[data-css-15][data-simulate-msinputplaceholder] {
+  color: #8e99ab;
+  -webkit-text-fill-color: #8e99ab;
+  font-style: italic;
+}
+
+.css-15:-ms-input-placeholder,
+[data-css-15]:-ms-input-placeholder,
+.css-15[data-simulate-msinputplaceholder],
+[data-css-15][data-simulate-msinputplaceholder] {
+  color: #8e99ab;
+  -webkit-text-fill-color: #8e99ab;
+  font-style: italic;
+}
+
+.css-15::-ms-clear,
+[data-css-15]::-ms-clear,
+.css-15[data-simulate-msclear],
+[data-css-15][data-simulate-msclear] {
+  display: none;
+}
+
+.css-15:focus ~ div:last-child,
+[data-css-15]:focus ~ div:last-child,
+.css-15[data-simulate-focus] ~ div:last-child,
+[data-css-15][data-simulate-focus] ~ div:last-child {
+  border-color: #c8d1e0;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #1d5bbf;
+}
+
+.css-29,
+[data-css-29] {
+  background-color: #ffffff;
+  border-color: #c8d1e0;
+  border-radius: 0.1875em;
+  border-style: solid;
+  border-width: 1px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.css-30,
+[data-css-30] {
+  background-color: #c8d1e0;
+  height: 1px;
+  margin: 0.5em 0;
+}
+
+<glamorous(div)>
+  <div
+    className="css-1p1xtzc"
+  >
+    <FormField
+      label="Old Password"
+      requiredText="Required"
+    >
+      <FormField>
+        <div
+          className="css-0"
+        >
+          <label>
+            <glamorous(div)
+              key="formField-1-textWrapper"
+            >
+              <div
+                className="css-1"
+              >
+                <span
+                  id="formField-1-labelText"
+                >
+                  Old Password
+                </span>
+              </div>
+            </glamorous(div)>
+            <TextInput
+              key="formField-1-control"
+              type="password"
+            >
+              <TextInput
+                control={[Function]}
+                controlProps={
+                  Object {
+                    "aria-describedby": undefined,
+                    "aria-invalid": undefined,
+                    "aria-required": undefined,
+                    "controlRef": undefined,
+                    "disabled": undefined,
+                    "readOnly": undefined,
+                    "required": undefined,
+                    "type": "password",
+                  }
+                }
+                size="large"
+              >
+                <FauxControl
+                  className="css-2"
+                  control={[Function]}
+                  controlProps={
+                    Object {
+                      "aria-describedby": undefined,
+                      "aria-invalid": undefined,
+                      "aria-required": undefined,
+                      "controlRef": undefined,
+                      "disabled": undefined,
+                      "readOnly": undefined,
+                      "required": undefined,
+                      "type": "password",
+                    }
+                  }
+                  size="large"
+                >
+                  <FauxControl
+                    className="css-2"
+                    control={[Function]}
+                  >
+                    <div
+                      className="css-4"
+                    >
+                      <glamorous(glamorous(input))
+                        controlPropsIn={
+                          Object {
+                            "aria-describedby": undefined,
+                            "aria-invalid": undefined,
+                            "aria-required": undefined,
+                            "controlRef": undefined,
+                            "disabled": undefined,
+                            "readOnly": undefined,
+                            "required": undefined,
+                            "type": "password",
+                          }
+                        }
+                        key="control"
+                        size="large"
+                        type="password"
+                      >
+                        <input
+                          className="css-15"
+                          size="large"
+                          type="password"
+                        />
+                      </glamorous(glamorous(input))>
+                      <Underlay>
+                        <div
+                          className="css-29"
+                        />
+                      </Underlay>
+                    </div>
+                  </FauxControl>
+                </FauxControl>
+              </TextInput>
+            </TextInput>
+          </label>
+        </div>
+      </FormField>
+    </FormField>
+    <FormFieldDivider>
+      <FormFieldDivider
+        role="separator"
+      >
+        <div
+          className="css-30"
+          role="separator"
+        />
+      </FormFieldDivider>
+    </FormFieldDivider>
+    <FormField
+      label="New Password"
+      requiredText="Required"
+    >
+      <FormField>
+        <div
+          className="css-0"
+        >
+          <label>
+            <glamorous(div)
+              key="formField-2-textWrapper"
+            >
+              <div
+                className="css-1"
+              >
+                <span
+                  id="formField-2-labelText"
+                >
+                  New Password
+                </span>
+              </div>
+            </glamorous(div)>
+            <TextInput
+              key="formField-2-control"
+              type="password"
+            >
+              <TextInput
+                control={[Function]}
+                controlProps={
+                  Object {
+                    "aria-describedby": undefined,
+                    "aria-invalid": undefined,
+                    "aria-required": undefined,
+                    "controlRef": undefined,
+                    "disabled": undefined,
+                    "readOnly": undefined,
+                    "required": undefined,
+                    "type": "password",
+                  }
+                }
+                size="large"
+              >
+                <FauxControl
+                  className="css-2"
+                  control={[Function]}
+                  controlProps={
+                    Object {
+                      "aria-describedby": undefined,
+                      "aria-invalid": undefined,
+                      "aria-required": undefined,
+                      "controlRef": undefined,
+                      "disabled": undefined,
+                      "readOnly": undefined,
+                      "required": undefined,
+                      "type": "password",
+                    }
+                  }
+                  size="large"
+                >
+                  <FauxControl
+                    className="css-2"
+                    control={[Function]}
+                  >
+                    <div
+                      className="css-4"
+                    >
+                      <glamorous(glamorous(input))
+                        controlPropsIn={
+                          Object {
+                            "aria-describedby": undefined,
+                            "aria-invalid": undefined,
+                            "aria-required": undefined,
+                            "controlRef": undefined,
+                            "disabled": undefined,
+                            "readOnly": undefined,
+                            "required": undefined,
+                            "type": "password",
+                          }
+                        }
+                        key="control"
+                        size="large"
+                        type="password"
+                      >
+                        <input
+                          className="css-15"
+                          size="large"
+                          type="password"
+                        />
+                      </glamorous(glamorous(input))>
+                      <Underlay>
+                        <div
+                          className="css-29"
+                        />
+                      </Underlay>
+                    </div>
+                  </FauxControl>
+                </FauxControl>
+              </TextInput>
+            </TextInput>
+          </label>
+        </div>
+      </FormField>
+    </FormField>
+    <FormField
+      label="Repeat New Password"
+      requiredText="Required"
+    >
+      <FormField>
+        <div
+          className="css-0"
+        >
+          <label>
+            <glamorous(div)
+              key="formField-3-textWrapper"
+            >
+              <div
+                className="css-1"
+              >
+                <span
+                  id="formField-3-labelText"
+                >
+                  Repeat New Password
+                </span>
+              </div>
+            </glamorous(div)>
+            <TextInput
+              key="formField-3-control"
+              type="password"
+            >
+              <TextInput
+                control={[Function]}
+                controlProps={
+                  Object {
+                    "aria-describedby": undefined,
+                    "aria-invalid": undefined,
+                    "aria-required": undefined,
+                    "controlRef": undefined,
+                    "disabled": undefined,
+                    "readOnly": undefined,
+                    "required": undefined,
+                    "type": "password",
+                  }
+                }
+                size="large"
+              >
+                <FauxControl
+                  className="css-2"
+                  control={[Function]}
+                  controlProps={
+                    Object {
+                      "aria-describedby": undefined,
+                      "aria-invalid": undefined,
+                      "aria-required": undefined,
+                      "controlRef": undefined,
+                      "disabled": undefined,
+                      "readOnly": undefined,
+                      "required": undefined,
+                      "type": "password",
+                    }
+                  }
+                  size="large"
+                >
+                  <FauxControl
+                    className="css-2"
+                    control={[Function]}
+                  >
+                    <div
+                      className="css-4"
+                    >
+                      <glamorous(glamorous(input))
+                        controlPropsIn={
+                          Object {
+                            "aria-describedby": undefined,
+                            "aria-invalid": undefined,
+                            "aria-required": undefined,
+                            "controlRef": undefined,
+                            "disabled": undefined,
+                            "readOnly": undefined,
+                            "required": undefined,
+                            "type": "password",
+                          }
+                        }
+                        key="control"
+                        size="large"
+                        type="password"
+                      >
+                        <input
+                          className="css-15"
+                          size="large"
+                          type="password"
+                        />
+                      </glamorous(glamorous(input))>
+                      <Underlay>
+                        <div
+                          className="css-29"
+                        />
+                      </Underlay>
+                    </div>
+                  </FauxControl>
+                </FauxControl>
+              </TextInput>
+            </TextInput>
+          </label>
+        </div>
+      </FormField>
+    </FormField>
+  </div>
+</glamorous(div)>
+`;

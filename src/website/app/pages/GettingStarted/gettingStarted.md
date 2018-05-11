@@ -7,19 +7,18 @@ Mineral UI is an open source project and welcomes all contributions.
 
 ## Installation
 
-Install the [Mineral UI package](https://www.npmjs.com/package/mineral-ui):
+Install the [Mineral UI package](https://www.npmjs.com/package/mineral-ui) and
+its dependencies.
 
 ```bash
-npm install --save mineral-ui
+npm install --save mineral-ui glamor glamorous react react-dom
 ```
 
 or
 
 ```bash
-yarn add mineral-ui
+yarn add mineral-ui glamor glamorous react react-dom
 ```
-
-Then install any missing peer dependencies reported by `npm` or `yarn`.
 
 ## Usage
 
@@ -43,10 +42,10 @@ render(<App />, document.getElementById('app'));
 ```
 
 <Callout title="Note">
-  <p key="one">Your app must be wrapped in a <code key="two">ThemeProvider</code> at its root
+  <p key={0}>Your app must be wrapped in a <code key={1}>ThemeProvider</code> at its root
   in order for the styles to apply correctly.</p>
 
-  <p key="three">Also, please see our <a key="four" target="_blank" href="https://github.com/mineral-ui/mineral-ui/tree/master/docs/import-syntax.md">import syntax guidelines</a>.</p>
+  <p key={2}>Also, please see our <a key={3} target="_blank" href="https://github.com/mineral-ui/mineral-ui/tree/master/docs/import-syntax.md">import syntax guidelines</a>.</p>
 </Callout>
 
 ### Open Sans Font
