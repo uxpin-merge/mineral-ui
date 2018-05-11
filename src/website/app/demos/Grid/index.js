@@ -5,8 +5,8 @@ import bestPractices from './bestPractices';
 import gridExamples from './examples/Grid';
 import gridItemExamples from './examples/GridItem';
 
-const gridDoc = require('!!react-docgen-loader!../../../../library/Grid/Grid');
-const gridItemDoc = require('!!react-docgen-loader!../../../../library/Grid/GridItem');
+const gridDoc = require('!!react-docgen-loader!../../../../library/Grid/Grid/Grid');
+const gridItemDoc = require('!!react-docgen-loader!../../../../library/Grid/GridItem/GridItem');
 
 export default [
   {

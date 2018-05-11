@@ -38,8 +38,7 @@ module.exports = {
         include: [
           'src/library/Box/Box.js',
           'src/library/Flex/!(__tests__)/*.js',
-          'src/library/Grid/Grid.js',
-          'src/library/Grid/GridItem.js',
+          'src/library/Grid/!(__tests__)/*.js',
           'src/library/StartEnd/StartEnd.js',
         ]
       }

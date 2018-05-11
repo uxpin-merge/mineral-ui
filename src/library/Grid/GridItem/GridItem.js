@@ -1,8 +1,8 @@
 /* @flow */
 import React from 'react';
-import { createStyledComponent, getResponsiveStyles } from '../styles';
-import { FlexItem } from '../Flex';
-import type { Values } from '../Flex/Flex/Flex';
+import { createStyledComponent, getResponsiveStyles } from '../../styles/index';
+import { FlexItem } from '../../Flex/index';
+import type { Values } from '../../Flex/Flex/Flex';
 
 type Props = {
   /** Number of columns spanned [[Responsive-capable]](#responsive) */

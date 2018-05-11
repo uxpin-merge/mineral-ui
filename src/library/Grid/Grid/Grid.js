@@ -1,7 +1,7 @@
 /* @flow */
 import React, { Children, cloneElement } from 'react';
-import { createStyledComponent } from '../styles';
-import Flex from '../Flex';
+import { createStyledComponent } from '../../styles/index';
+import Flex from '../../Flex/index';
 
 type Props = {
   /**
