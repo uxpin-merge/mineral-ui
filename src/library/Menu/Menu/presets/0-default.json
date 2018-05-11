@@ -1,0 +1,79 @@
+{
+  "rootId": "F85995B051CF1B9DAE5B74E20509B335",
+  "elements": {
+    "F85995B051CF1B9DAE5B74E20509B335": {
+      "type": "Menu",
+      "props": {
+        "children": [
+          {
+            "uxpinPresetElementId": "5WCQ7AUYKJ6ZC128QSO72KH57V8725YZ"
+          },
+          {
+            "uxpinPresetElementId": "914CHOZ7UST58UST9627WECXHVJHAIT2"
+          },
+          {
+            "uxpinPresetElementId": "ZU22SAKIOQBY5WD86WWOXECG4BB83QR4"
+          }
+        ]
+      }
+    },
+    "5WCQ7AUYKJ6ZC128QSO72KH57V8725YZ": {
+      "name": "MenuItem",
+      "props": {
+        "children": "Menu Item 1"
+      }
+    },
+    "914CHOZ7UST58UST9627WECXHVJHAIT2": {
+      "name": "MenuItem",
+      "props": {
+        "children": "Menu Item 2",
+        "secondaryText": "Secondary text"
+      }
+    },
+    "ZU22SAKIOQBY5WD86WWOXECG4BB83QR4": {
+      "name": "MenuGroup",
+      "props": {
+        "title": "Group Title",
+        "children": [
+          {
+            "uxpinPresetElementId": "ZVZAEWUMZ8DGEX54X1BRDXF9SHMZ5FY7"
+          },
+          {
+            "uxpinPresetElementId": "67CE0I1XGJ25DJ2SKMMETBF8Z9KULMGR"
+          },
+          {
+            "uxpinPresetElementId": "KVMDS3W7NSWU5FXFDEUBPSRAZ7URBH8W"
+          },
+          {
+            "uxpinPresetElementId": "AOVQ6ULGRBO08ADB810R0OWEKBLP245W"
+          }
+        ]
+      }
+    },
+    "ZVZAEWUMZ8DGEX54X1BRDXF9SHMZ5FY7": {
+      "name": "MenuItem",
+      "props": {
+        "children": "First Item in group"
+      }
+    },
+    "67CE0I1XGJ25DJ2SKMMETBF8Z9KULMGR": {
+      "name": "MenuDivider",
+      "props": {
+      }
+    },
+    "KVMDS3W7NSWU5FXFDEUBPSRAZ7URBH8W": {
+      "name": "MenuItem",
+      "props": {
+        "variant": "danger",
+        "children": "Danger variant"
+      }
+    },
+    "AOVQ6ULGRBO08ADB810R0OWEKBLP245W": {
+      "name": "MenuItem",
+      "props": {
+        "disabled": true,
+        "children": "Disabled menu item"
+      }
+    }
+  }
+}

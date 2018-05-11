@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
-import { createStyledComponent } from '../styles';
-import MenuGroupTitle from './MenuGroupTitle';
+import { createStyledComponent } from '../../styles/index';
+import MenuGroupTitle from '../MenuGroupTitle';
 
 type Props = {
   /** [MenuItems](/components/menu-item) */

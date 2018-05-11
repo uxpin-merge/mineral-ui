@@ -8,7 +8,7 @@ import Select, { SelectTrigger } from '../../Select';
 import examples from '../../../website/app/demos/Select/examples';
 import testDemoExamples from '../../../../utils/testDemoExamples';
 
-import type { Items } from '../../Menu/Menu';
+import type { Items } from '../../Menu/Menu/Menu';
 
 const REGEX_SELECT_CONTENT_ID = /^select-\d+-content$/;
 const REGEX_SELECT_MENU_ID = /^select-\d+-menu$/;

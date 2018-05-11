@@ -10,13 +10,13 @@ import Dropdown, {
   componentTheme as dropdownComponentTheme
 } from '../Dropdown/Dropdown';
 import ItemMatcher from '../Dropdown/ItemMatcher';
-import Menu, { getItems } from '../Menu/Menu';
-import MenuItem from '../Menu/MenuItem';
+import Menu, { getItems } from '../Menu/Menu/Menu';
+import MenuItem from '../Menu/MenuItem/MenuItem';
 import SelectTrigger, {
   componentTheme as selectTriggerComponentTheme
 } from './SelectTrigger';
 
-import type { Item, Items, ItemGroups } from '../Menu/Menu';
+import type { Item, Items, ItemGroups } from '../Menu/Menu/Menu';
 
 type Props = {
   /**

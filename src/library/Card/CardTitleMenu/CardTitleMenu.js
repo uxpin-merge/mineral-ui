@@ -5,7 +5,7 @@ import Button from '../../Button/index';
 import Dropdown from '../../Dropdown/index';
 import IconMoreHoriz from '../../Icon/IconMoreHoriz';
 
-import type { Items, ItemGroups } from '../../Menu/Menu';
+import type { Items, ItemGroups } from '../../Menu/Menu/Menu';
 
 type Props = {
   /** See the [Actions Menu](#actions-menu) example */

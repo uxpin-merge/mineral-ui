@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 import { shallow } from 'enzyme';
-import MenuGroup from '../MenuGroup';
+import MenuGroup from '../MenuGroup/MenuGroup';
 import examples from '../../../website/app/demos/Menu/examples/MenuGroup';
 import testDemoExamples from '../../../../utils/testDemoExamples';
 

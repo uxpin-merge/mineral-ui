@@ -2,11 +2,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { mountInThemeProvider } from '../../../../utils/enzymeUtils';
-import Menu from '../Menu';
+import Menu from '../Menu/Menu';
 import examples from '../../../website/app/demos/Menu/examples/Menu';
 import testDemoExamples from '../../../../utils/testDemoExamples';
 
-import type { Items } from '../Menu';
+import type { Items } from '../Menu/Menu';
 
 const data: Items = [{ text: 'Item 1' }, { text: 'Item 2' }];
 

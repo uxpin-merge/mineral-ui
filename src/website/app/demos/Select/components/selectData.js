@@ -2,7 +2,7 @@
 import React from 'react';
 import IconCloud from 'mineral-ui-icons/IconCloud';
 
-import type { Items } from '../../../../../library/Menu/Menu';
+import type { Items } from '../../../../../library/Menu/Menu/Menu';
 
 export const basicData: Items = [
   {

@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 import { shallow } from 'enzyme';
-import MenuDivider from '../MenuDivider';
+import MenuDivider from '../MenuDivider/MenuDivider';
 import examples from '../../../website/app/demos/Menu/examples/MenuDivider';
 import testDemoExamples from '../../../../utils/testDemoExamples';
 

@@ -1,7 +1,7 @@
 /* @flow */
 import React, { Component } from 'react';
-import { createStyledComponent } from '../styles';
-import { MenuDivider, MenuGroup, MenuItem } from './index';
+import { createStyledComponent } from '../../styles/index';
+import { MenuDivider, MenuGroup, MenuItem } from '../index';
 
 type Props = {
   /**

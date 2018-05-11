@@ -1,11 +1,11 @@
 /* @flow */
 import React, { Component, cloneElement } from 'react';
-import { createStyledComponent, getNormalizedValue, pxToEm } from '../styles';
-import IconDanger from '../Icon/IconDanger';
-import IconSuccess from '../Icon/IconSuccess';
-import IconWarning from '../Icon/IconWarning';
+import { createStyledComponent, getNormalizedValue, pxToEm } from '../../styles/index';
+import IconDanger from '../../Icon/IconDanger';
+import IconSuccess from '../../Icon/IconSuccess';
+import IconWarning from '../../Icon/IconWarning';
 
-import type { Item } from './Menu';
+import type { Item } from '../Menu/Menu';
 
 type Props = {
   /** Rendered content of the component */

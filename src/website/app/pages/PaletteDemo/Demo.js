@@ -18,7 +18,7 @@ import Markdown from '../../Markdown';
 import Paragraph from '../../Paragraph';
 import content from './gallery.md';
 
-import type { ItemGroups } from '../../../../library/Menu/Menu';
+import type { ItemGroups } from '../../../../library/Menu/Menu/Menu';
 
 type Props = {
   theme: { [string]: any }
