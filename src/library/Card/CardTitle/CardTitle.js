@@ -1,11 +1,11 @@
 /* @flow */
 import React, { Children, cloneElement } from 'react';
 import { ellipsis } from 'polished';
-import { createStyledComponent, getNormalizedValue, pxToEm } from '../styles';
-import IconDanger from '../Icon/IconDanger';
-import IconSuccess from '../Icon/IconSuccess';
-import IconWarning from '../Icon/IconWarning';
-import CardRow from './CardRow';
+import { createStyledComponent, getNormalizedValue, pxToEm } from '../../styles/index';
+import IconDanger from '../../Icon/IconDanger';
+import IconSuccess from '../../Icon/IconSuccess';
+import IconWarning from '../../Icon/IconWarning';
+import CardRow from '../CardRow';
 
 type Props = {
   /** See the [Actions Menu](#actions-menu) example (will take precedence over `secondaryText`) */

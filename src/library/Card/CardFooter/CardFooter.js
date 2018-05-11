@@ -1,11 +1,11 @@
 /* @flow */
 import React, { Component } from 'react';
-import { createStyledComponent, pxToEm } from '../styles';
-import { createThemedComponent } from '../themes';
-import Button from '../Button';
-import IconExpandLess from '../Icon/IconExpandLess';
-import IconExpandMore from '../Icon/IconExpandMore';
-import { componentTheme as cardComponentTheme } from './Card/Card';
+import { createStyledComponent, pxToEm } from '../../styles/index';
+import { createThemedComponent } from '../../themes/index';
+import Button from '../../Button/index';
+import IconExpandLess from '../../Icon/IconExpandLess';
+import IconExpandMore from '../../Icon/IconExpandMore';
+import { componentTheme as cardComponentTheme } from '../Card/Card';
 
 type Props = {
   /** Content of CardFooter */

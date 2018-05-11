@@ -1,10 +1,10 @@
 /* @flow */
 import React from 'react';
-import { createStyledComponent, pxToEm } from '../styles';
-import IconDangerSimple from '../Icon/IconDangerSimple';
-import IconSuccessSimple from '../Icon/IconSuccessSimple';
-import IconWarningSimple from '../Icon/IconWarningSimple';
-import CardRow from './CardRow';
+import { createStyledComponent, pxToEm } from '../../styles/index';
+import IconDangerSimple from '../../Icon/IconDangerSimple';
+import IconSuccessSimple from '../../Icon/IconSuccessSimple';
+import IconWarningSimple from '../../Icon/IconWarningSimple';
+import CardRow from '../CardRow';
 
 type Props = {
   /** Status text */
