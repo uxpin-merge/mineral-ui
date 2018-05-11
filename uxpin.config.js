@@ -7,8 +7,6 @@ module.exports = {
           'src/library/Avatar/Avatar.js',
           'src/library/Button/Button.js',
           'src/library/Checkbox/!(__tests__)/*.js',
-          'src/library/Choice/Choice.js',
-          'src/library/Choice/ChoiceGroup.js',
           'src/library/Dropdown/Dropdown.js',
           'src/library/Form/FormField.js',
           'src/library/Form/FormFieldDivider.js',
