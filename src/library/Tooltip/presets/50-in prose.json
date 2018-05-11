@@ -1,0 +1,26 @@
+{
+  "rootId": "IUR6EPRYZLA2XRUHSS2SN9BQLGV2429R",
+  "elements": {
+    "MODG7BEJSWVEO19E3JCIU8T9VQO3CRXL": {
+      "name": "Text",
+      "props": {
+        "children": [
+          "Here's some prose with a ",
+          {
+            "uxpinPresetElementId": "IUR6EPRYZLA2XRUHSS2SN9BQLGV2429R"
+          },
+          " in the middle of it."
+        ]
+      }
+    },
+    "IUR6EPRYZLA2XRUHSS2SN9BQLGV2429R": {
+      "name": "Tooltip",
+      "props": {
+        "content": "Light years star stuff",
+        "isOpen": true,
+        "usePortal": true,
+        "children": "Tooltip"
+      }
+    }
+  }
+}
