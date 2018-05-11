@@ -1,3 +1,3 @@
 /* @flow */
-export { default } from './Checkbox';
-export { default as CheckboxGroup } from './CheckboxGroup';
+export { default } from './Checkbox/Checkbox';
+export { default as CheckboxGroup } from './CheckboxGroup/CheckboxGroup';

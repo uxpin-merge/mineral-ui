@@ -6,8 +6,7 @@ module.exports = {
         include: [
           'src/library/Avatar/Avatar.js',
           'src/library/Button/Button.js',
-          'src/library/Checkbox/Checkbox.js',
-          'src/library/Checkbox/CheckboxGroup.js',
+          'src/library/Checkbox/!(__tests__)/*.js',
           'src/library/Choice/Choice.js',
           'src/library/Choice/ChoiceGroup.js',
           'src/library/Dropdown/Dropdown.js',
@@ -32,7 +31,7 @@ module.exports = {
       },
       {
         name: 'Card',
-        include: 'src/library/Card/!(index|CardRow).js'
+        include: 'src/library/Card/!(__tests__)/*.js'
       },
       {
         name: 'Icons',

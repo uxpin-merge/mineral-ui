@@ -1,10 +1,10 @@
 /* @flow */
 import React from 'react';
-import { createThemedComponent, mapComponentThemes } from '../themes';
+import { createThemedComponent, mapComponentThemes } from '../../themes/index';
 import ChoiceGroup, {
   componentTheme as choiceGroupComponentTheme
-} from '../Choice/ChoiceGroup';
-import Checkbox from './Checkbox';
+} from '../../Choice/ChoiceGroup';
+import Checkbox from '../Checkbox/Checkbox';
 
 type Props = {
   /**
