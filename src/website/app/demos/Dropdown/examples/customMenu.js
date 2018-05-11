@@ -2,7 +2,7 @@
 
 import { createStyledComponent } from '../../../../../library/styles';
 import Button from '../../../../../library/Button/Button';
-import FormField from '../../../../../library/Form/FormField';
+import FormField from '../../../../../library/Form/FormField/FormField';
 import IconSearch from 'mineral-ui-icons/IconSearch';
 import Dropdown from '../../../../../library/Dropdown';
 import Menu from '../../../../../library/Menu';

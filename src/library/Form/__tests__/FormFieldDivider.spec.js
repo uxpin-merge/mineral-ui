@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 import { shallow } from 'enzyme';
-import FormFieldDivider from '../FormFieldDivider';
+import FormFieldDivider from '../FormFieldDivider/FormFieldDivider';
 import examples from '../../../website/app/demos/Form/examples/FormFieldDivider';
 import testDemoExamples from '../../../../utils/testDemoExamples';
 

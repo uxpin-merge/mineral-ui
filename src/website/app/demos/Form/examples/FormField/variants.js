@@ -1,7 +1,7 @@
 /* @flow */
 import DemoLayout from '../../components/DemoLayout';
 import TextInput from '../../../../../../library/TextInput';
-import FormField from '../../../../../../library/Form/FormField';
+import FormField from '../../../../../../library/Form/FormField/FormField';
 
 export default {
   id: 'variants',

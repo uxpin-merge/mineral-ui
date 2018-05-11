@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import { createStyledComponent } from '../styles';
+import { createStyledComponent } from '../../styles/index';
 
 type Props = {
   /** Rendered content of the component, most likely [FormField](/components/form-field) */

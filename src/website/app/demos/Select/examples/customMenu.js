@@ -1,7 +1,7 @@
 /* @flow */
 
 import { createStyledComponent } from '../../../../../library/styles';
-import FormField from '../../../../../library/Form/FormField';
+import FormField from '../../../../../library/Form/FormField/FormField';
 import IconSearch from 'mineral-ui-icons/IconSearch';
 import Select from '../../../../../library/Select';
 import Menu from '../../../../../library/Menu';

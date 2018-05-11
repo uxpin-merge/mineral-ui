@@ -2,8 +2,8 @@
 import IconBackspace from 'mineral-ui-icons/IconBackspace';
 import { ThemeProvider } from '../../../../../../library/themes';
 import TextInput from '../../../../../../library/TextInput';
-import FormField from '../../../../../../library/Form/FormField';
-import FormFieldset from '../../../../../../library/Form/FormFieldset';
+import FormField from '../../../../../../library/Form/FormField/FormField';
+import FormFieldset from '../../../../../../library/Form/FormFieldset/FormFieldset';
 
 // Note: The sample text used in the example is Arabic and translates to "Hello World"
 // https://translate.google.com/#auto/ar/Hello%20World

@@ -1,6 +1,6 @@
 /* @flow */
 import TextInput from '../../../../../../library/TextInput';
-import FormField from '../../../../../../library/Form/FormField';
+import FormField from '../../../../../../library/Form/FormField/FormField';
 import DemoLayout from '../../components/DemoLayout';
 
 export default {

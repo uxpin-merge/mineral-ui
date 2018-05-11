@@ -1,8 +1,8 @@
 /* @flow */
 import React, { Children, cloneElement, createElement, Component } from 'react';
 import { hideVisually } from 'polished';
-import { createStyledComponent, getNormalizedValue } from '../styles';
-import { generateId } from '../utils';
+import { createStyledComponent, getNormalizedValue } from '../../styles/index';
+import { generateId } from '../../utils/index';
 
 type Props = {
   /**

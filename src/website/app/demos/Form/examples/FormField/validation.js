@@ -3,7 +3,7 @@ import { Component } from 'react';
 import DemoLayout from '../../components/DemoLayout';
 import Button from '../../../../../../library/Button';
 import TextInput from '../../../../../../library/TextInput';
-import FormField from '../../../../../../library/Form/FormField';
+import FormField from '../../../../../../library/Form/FormField/FormField';
 
 export default {
   id: 'validation',
