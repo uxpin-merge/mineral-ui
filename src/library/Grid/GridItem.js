@@ -2,7 +2,7 @@
 import React from 'react';
 import { createStyledComponent, getResponsiveStyles } from '../styles';
 import { FlexItem } from '../Flex';
-import type { Values } from '../Flex/Flex';
+import type { Values } from '../Flex/Flex/Flex';
 
 type Props = {
   /** Number of columns spanned [[Responsive-capable]](#responsive) */

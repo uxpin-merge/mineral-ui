@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
-import { createStyledComponent, getResponsiveStyles } from '../styles';
-import Box from '../Box';
+import { createStyledComponent, getResponsiveStyles } from '../../styles/index';
+import Box from '../../Box/index';
 
 type Props = {
   /** Align item along the cross axis [[Responsive-capable]](#responsive) */

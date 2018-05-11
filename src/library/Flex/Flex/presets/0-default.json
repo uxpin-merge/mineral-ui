@@ -1,0 +1,39 @@
+{
+  "rootId": "UY8QB4P8Y2TXG5170CH1K8IXALSB8VG0",
+  "elements": {
+    "UY8QB4P8Y2TXG5170CH1K8IXALSB8VG0": {
+      "name": "Flex",
+      "props": {
+        "children": [
+          {
+            "uxpinPresetElementId": "6QZPBJVX17UAIO8R1CESY1Y2U45COCUB"
+          },
+          {
+            "uxpinPresetElementId": "HYKKZD23Z4KW4761DQH3KPFIGHXGVMXS"
+          },
+          {
+            "uxpinPresetElementId": "UE02H9I9LIN3SMMRV949G8KZJ9757XBY"
+          }
+        ]
+      }
+    },
+    "6QZPBJVX17UAIO8R1CESY1Y2U45COCUB": {
+      "name": "FlexItem",
+      "props": {
+        "children": "A"
+      }
+    },
+    "HYKKZD23Z4KW4761DQH3KPFIGHXGVMXS": {
+      "name": "FlexItem",
+      "props": {
+        "children": "B"
+      }
+    },
+    "UE02H9I9LIN3SMMRV949G8KZJ9757XBY": {
+      "name": "FlexItem",
+      "props": {
+        "children": "C"
+      }
+    }
+  }
+}

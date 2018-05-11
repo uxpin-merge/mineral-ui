@@ -39,8 +39,7 @@ module.exports = {
         name: 'Layout',
         include: [
           'src/library/Box/Box.js',
-          'src/library/Flex/Flex.js',
-          'src/library/Flex/FlexItem.js',
+          'src/library/Flex/!(__tests__)/*.js',
           'src/library/Grid/Grid.js',
           'src/library/Grid/GridItem.js',
           'src/library/StartEnd/StartEnd.js',
