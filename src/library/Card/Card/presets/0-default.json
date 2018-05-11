@@ -2,7 +2,7 @@
   "rootId": "OFOK2ZKES405DYHFSHQ28OM9WSKA8APM",
   "elements": {
     "OFOK2ZKES405DYHFSHQ28OM9WSKA8APM": {
-      "type": "Card",
+      "name": "Card",
       "props": {
         "children": [
           {
