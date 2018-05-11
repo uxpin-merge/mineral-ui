@@ -1,11 +1,11 @@
 /* @flow */
 import React from 'react';
-import { createStyledComponent, pxToEm } from '../styles';
-import Button from '../Button';
-import Dropdown from '../Dropdown';
-import IconMoreHoriz from '../Icon/IconMoreHoriz';
+import { createStyledComponent, pxToEm } from '../../styles/index';
+import Button from '../../Button/index';
+import Dropdown from '../../Dropdown/index';
+import IconMoreHoriz from '../../Icon/IconMoreHoriz';
 
-import type { Items, ItemGroups } from '../Menu/Menu';
+import type { Items, ItemGroups } from '../../Menu/Menu';
 
 type Props = {
   /** See the [Actions Menu](#actions-menu) example */

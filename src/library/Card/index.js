@@ -7,4 +7,4 @@ export { default as CardFooter } from './CardFooter/CardFooter';
 export { default as CardImage } from './CardImage/CardImage';
 export { default as CardStatus } from './CardStatus/CardStatus';
 export { default as CardTitle } from './CardTitle/CardTitle';
-export { default as CardTitleMenu } from './CardTitleMenu';
+export { default as CardTitleMenu } from './CardTitleMenu/CardTitleMenu';
