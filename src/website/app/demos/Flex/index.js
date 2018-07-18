@@ -5,8 +5,8 @@ import bestPractices from './bestPractices';
 import flexExamples from './examples/Flex';
 import flexItemExamples from './examples/FlexItem';
 
-const flexDoc = require('!!react-docgen-loader!../../../../library/Flex/Flex');
-const flexItemDoc = require('!!react-docgen-loader!../../../../library/Flex/FlexItem');
+const flexDoc = require('!!react-docgen-loader!../../../../library/Flex/Flex/Flex');
+const flexItemDoc = require('!!react-docgen-loader!../../../../library/Flex/FlexItem/FlexItem');
 
 export default [
   {

@@ -1,0 +1,36 @@
+{
+  "rootId": "EW6KZL8ZZIXSSNAMNU7DHV34F5UQVP1X",
+  "elements": {
+    "EW6KZL8ZZIXSSNAMNU7DHV34F5UQVP1X": {
+      "name": "Text",
+      "props": {
+        "children": [
+          "Lorem ipsum dolor sit amet, ",
+          {
+            "uxpinPresetElementId": "5QNQV48AUD4VQKAG0PWEEF9BSKU55UAR"
+          },
+          " adipiscing elit. Sed non purus id dolor maximus eleifend nec in nunc. ",
+          {
+            "uxpinPresetElementId": "E2FHJ7T5CNDOKC408FMZNVJSH06NQB5D"
+          },
+          " quis lacinia leo, in suscipit orci. Donec enim augue, vehicula vel enim a, vestibulum tempus nunc."
+        ]
+      }
+    },
+    "5QNQV48AUD4VQKAG0PWEEF9BSKU55UAR": {
+      "name": "Text",
+      "props": {
+        "children": "consectetur",
+        "element": "strong"
+      }
+    },
+    "E2FHJ7T5CNDOKC408FMZNVJSH06NQB5D": {
+      "name": "Text",
+      "props": {
+        "children": "Integer",
+        "element": "span",
+        "fontWeight": 300
+      }
+    }
+  }
+}

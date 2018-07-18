@@ -1,0 +1,11 @@
+{
+  "rootId": "IUR6EPRYZLA2XRUHSS2SN9BQLGV2429R",
+  "elements": {
+    "IUR6EPRYZLA2XRUHSS2SN9BQLGV2429R": {
+      "name": "TextArea",
+      "props": {
+        "defaultValue": "Hello World"
+      }
+    }
+  }
+}

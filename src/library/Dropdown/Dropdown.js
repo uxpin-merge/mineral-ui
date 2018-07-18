@@ -4,15 +4,15 @@ import { findDOMNode } from 'react-dom';
 import deepEqual from 'fast-deep-equal';
 import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed';
 import { composeEventHandlers, generateId, isRenderProp } from '../utils';
-import Menu, { getItems } from '../Menu/Menu';
-import MenuItem from '../Menu/MenuItem';
+import Menu, { getItems } from '../Menu/Menu/Menu';
+import MenuItem from '../Menu/MenuItem/MenuItem';
 import Root from '../Popover';
 import DropdownContent, {
   componentTheme as dropdownContentComponentTheme
 } from './DropdownContent';
 import ItemMatcher from './ItemMatcher';
 
-import type { Items, ItemGroups } from '../Menu/Menu';
+import type { Items, ItemGroups } from '../Menu/Menu/Menu';
 
 type Props = {
   /**

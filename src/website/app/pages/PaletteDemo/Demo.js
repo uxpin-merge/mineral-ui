@@ -5,7 +5,7 @@ import { ThemeProvider } from '../../../../library/themes';
 import Button from '../../../../library/Button';
 import _Card, { CardBlock, CardTitle } from '../../../../library/Card';
 import Dropdown from '../../../../library/Dropdown';
-import FormField from '../../../../library/Form/FormField';
+import FormField from '../../../../library/Form/FormField/FormField';
 import TextInput from '../../../../library/TextInput/';
 import IconBatteryCharging50 from 'mineral-ui-icons/IconBatteryCharging50';
 import IconQuestionAnswer from 'mineral-ui-icons/IconQuestionAnswer';
@@ -18,7 +18,7 @@ import Markdown from '../../Markdown';
 import Paragraph from '../../Paragraph';
 import content from './gallery.md';
 
-import type { ItemGroups } from '../../../../library/Menu/Menu';
+import type { ItemGroups } from '../../../../library/Menu/Menu/Menu';
 
 type Props = {
   theme: { [string]: any }

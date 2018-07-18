@@ -3,7 +3,7 @@ import React from 'react';
 import { withTheme } from '../../../../../library/themes';
 import { createStyledComponent, pxToEm } from '../../../../../library/styles';
 import Avatar from '../../../../../library/Avatar';
-import { componentTheme as menuItemTheme } from '../../../../../library/Menu/MenuItem';
+import { componentTheme as menuItemTheme } from '../../../../../library/Menu/MenuItem/MenuItem';
 
 export default function customItem({ props }: Object) {
   const CustomItem = withTheme(({ theme: baseTheme }) => {

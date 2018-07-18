@@ -1,0 +1,61 @@
+{
+  "rootId": "1526ABF05067F99EF65F83152E26DA39",
+  "elements": {
+    "1526ABF05067F99EF65F83152E26DA39": {
+      "name": "Dropdown",
+      "props": {
+        "children": {
+          "uxpinPresetElementId": "SPNM3VK5JSHWM6LK9JJ7OTHYF96AX6KU"
+        },
+        "data": [
+          {
+            "text": "Menu item with onClick"
+          },
+          {
+            "text": "Menu item",
+            "secondaryText": "Secondary text"
+          },
+          {
+            "text": "Icon at start",
+            "iconStart": {
+              "uxpinPresetElementId": "LUT2OEH5MBWIZ14927AYRL9T0UWD6ABK"
+            }
+          },
+          {
+            "text": "Icon at end",
+            "iconEnd": {
+              "uxpinPresetElementId": "8GZ573PJUL8MCE239NVM7O6GTLOB2JQQ"
+            }
+          },
+          {
+            "divider": true
+          },
+          {
+            "text": "Danger variant",
+            "variant": "danger"
+          },
+          {
+            "text": "Disabled menu item",
+            "disabled": true
+          }
+        ]
+      }
+    },
+    "SPNM3VK5JSHWM6LK9JJ7OTHYF96AX6KU": {
+      "name": "Button",
+      "props": {
+        "children": "Menu"
+      }
+    },
+    "LUT2OEH5MBWIZ14927AYRL9T0UWD6ABK": {
+      "name": "IconCloud",
+      "props": {
+      }
+    },
+    "8GZ573PJUL8MCE239NVM7O6GTLOB2JQQ": {
+      "name": "IconCloud",
+      "props": {
+      }
+    }
+  }
+}

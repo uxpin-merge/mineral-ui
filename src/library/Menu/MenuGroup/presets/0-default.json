@@ -1,0 +1,50 @@
+{
+  "rootId": "ZU22SAKIOQBY5WD86WWOXECG4BB83QR4",
+  "elements": {
+    "ZU22SAKIOQBY5WD86WWOXECG4BB83QR4": {
+      "name": "MenuGroup",
+      "props": {
+        "title": "Group Title",
+        "children": [
+          {
+            "uxpinPresetElementId": "ZVZAEWUMZ8DGEX54X1BRDXF9SHMZ5FY7"
+          },
+          {
+            "uxpinPresetElementId": "67CE0I1XGJ25DJ2SKMMETBF8Z9KULMGR"
+          },
+          {
+            "uxpinPresetElementId": "KVMDS3W7NSWU5FXFDEUBPSRAZ7URBH8W"
+          },
+          {
+            "uxpinPresetElementId": "AOVQ6ULGRBO08ADB810R0OWEKBLP245W"
+          }
+        ]
+      }
+    },
+    "ZVZAEWUMZ8DGEX54X1BRDXF9SHMZ5FY7": {
+      "name": "MenuItem",
+      "props": {
+        "children": "First Item in group"
+      }
+    },
+    "67CE0I1XGJ25DJ2SKMMETBF8Z9KULMGR": {
+      "name": "MenuDivider",
+      "props": {
+      }
+    },
+    "KVMDS3W7NSWU5FXFDEUBPSRAZ7URBH8W": {
+      "name": "MenuItem",
+      "props": {
+        "variant": "danger",
+        "children": "Danger variant"
+      }
+    },
+    "AOVQ6ULGRBO08ADB810R0OWEKBLP245W": {
+      "name": "MenuItem",
+      "props": {
+        "disabled": true,
+        "children": "Disabled menu item"
+      }
+    }
+  }
+}

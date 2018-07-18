@@ -9,7 +9,7 @@ import examples from '../../../website/app/demos/Dropdown/examples';
 import testDemoExamples from '../../../../utils/testDemoExamples';
 
 import type { RenderFn } from '../Dropdown';
-import type { Items } from '../../Menu/Menu';
+import type { Items } from '../../Menu/Menu/Menu';
 
 const REGEX_DROPDOWN_CONTENT_ID = /^dropdown-\d+-content$/;
 const REGEX_DROPDOWN_MENU_ID = /^dropdown-\d+-menu$/;

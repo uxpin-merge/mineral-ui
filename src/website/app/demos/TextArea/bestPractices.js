@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import FormField from '../../../../library/Form/FormField';
+import FormField from '../../../../library/Form/FormField/FormField';
 import TextArea from '../../../../library/TextArea';
 
 export default [

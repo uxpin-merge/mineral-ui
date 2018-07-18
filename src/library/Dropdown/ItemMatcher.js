@@ -1,5 +1,5 @@
 /* @flow */
-import type { Item, Items } from '../Menu/Menu';
+import type { Item, Items } from '../Menu/Menu/Menu';
 
 export default class ItemMatcher {
   keys: string = '';

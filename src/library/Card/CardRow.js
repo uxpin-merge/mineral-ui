@@ -1,6 +1,6 @@
 /* @flow */
 import { createStyledComponent } from '../styles';
-import { componentTheme as cardComponentTheme } from './Card';
+import { componentTheme as cardComponentTheme } from './Card/Card';
 
 export default createStyledComponent(
   'div',

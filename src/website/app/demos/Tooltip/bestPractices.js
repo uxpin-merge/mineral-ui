@@ -15,7 +15,7 @@ import IconFormatAlignRight from 'mineral-ui-icons/IconFormatAlignRight';
 import IconKeyboardArrowDown from 'mineral-ui-icons/IconKeyboardArrowDown';
 import IconKeyboardArrowUp from 'mineral-ui-icons/IconKeyboardArrowUp';
 import IconCheck from 'mineral-ui-icons/IconCheck';
-import FormField from '../../../../library/Form/FormField';
+import FormField from '../../../../library/Form/FormField/FormField';
 import TextInput from '../../../../library/TextInput/';
 
 const DemoCardLayout = createStyledComponent('div', {

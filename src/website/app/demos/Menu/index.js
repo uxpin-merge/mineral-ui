@@ -1,17 +1,17 @@
 /* @flow */
-import { componentTheme as menuDividerComponentTheme } from '../../../../library/Menu/MenuDivider';
-import { componentTheme as menuGroupComponentTheme } from '../../../../library/Menu/MenuGroup';
+import { componentTheme as menuDividerComponentTheme } from '../../../../library/Menu/MenuDivider/MenuDivider';
+import { componentTheme as menuGroupComponentTheme } from '../../../../library/Menu/MenuGroup/MenuGroup';
 import { componentTheme as menuGroupTitleComponentTheme } from '../../../../library/Menu/MenuGroupTitle';
-import { componentTheme as menuItemComponentTheme } from '../../../../library/Menu/MenuItem';
+import { componentTheme as menuItemComponentTheme } from '../../../../library/Menu/MenuItem/MenuItem';
 import menuExamples from './examples/Menu';
 import menuDividerExamples from './examples/MenuDivider';
 import menuGroupExamples from './examples/MenuGroup';
 import menuItemExamples from './examples/MenuItem';
 
-const menuDoc = require('!!react-docgen-loader!../../../../library/Menu/Menu');
-const menuDividerDoc = require('!!react-docgen-loader!../../../../library/Menu/MenuDivider');
-const menuGroupDoc = require('!!react-docgen-loader!../../../../library/Menu/MenuGroup');
-const menuItemDoc = require('!!react-docgen-loader!../../../../library/Menu/MenuItem');
+const menuDoc = require('!!react-docgen-loader!../../../../library/Menu/Menu/Menu');
+const menuDividerDoc = require('!!react-docgen-loader!../../../../library/Menu/MenuDivider/MenuDivider');
+const menuGroupDoc = require('!!react-docgen-loader!../../../../library/Menu/MenuGroup/MenuGroup');
+const menuItemDoc = require('!!react-docgen-loader!../../../../library/Menu/MenuItem/MenuItem');
 
 import bestPractices from './bestPractices';
 

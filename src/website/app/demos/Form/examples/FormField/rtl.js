@@ -2,7 +2,7 @@
 import IconBackspace from 'mineral-ui-icons/IconBackspace';
 import { ThemeProvider } from '../../../../../../library/themes';
 import TextInput from '../../../../../../library/TextInput';
-import FormField from '../../../../../../library/Form/FormField';
+import FormField from '../../../../../../library/Form/FormField/FormField';
 
 /*
  * Note: The sample text used in the example is Arabic.

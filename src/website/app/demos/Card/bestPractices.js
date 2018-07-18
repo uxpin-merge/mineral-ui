@@ -16,7 +16,7 @@ import Card, {
 import _Link from '../../../../library/Link';
 import loremIpsum from './components/loremIpsum';
 
-import type { Items } from '../../../../library/Menu/Menu';
+import type { Items } from '../../../../library/Menu/Menu/Menu';
 
 const CardList = createStyledComponent('div', ({ theme }) => ({
   '& > div': {

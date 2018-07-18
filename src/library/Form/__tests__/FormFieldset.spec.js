@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 import { shallow } from 'enzyme';
-import FormFieldset from '../FormFieldset';
+import FormFieldset from '../FormFieldset/FormFieldset';
 import examples from '../../../website/app/demos/Form/examples/FormFieldset';
 import testDemoExamples from '../../../../utils/testDemoExamples';
 

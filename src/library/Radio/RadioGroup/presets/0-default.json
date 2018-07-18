@@ -1,0 +1,44 @@
+{
+  "rootId": "0YDENGD0Q6VGDXJK3N1C0EFN2GHHDFSU",
+  "elements": {
+    "0YDENGD0Q6VGDXJK3N1C0EFN2GHHDFSU": {
+      "name": "RadioGroup",
+      "props": {
+        "name": "minerals-1",
+        "defaultChecked": "pyrite",
+        "children": [
+          {
+            "uxpinPresetElementId": "EW6KZL8ZZIXSSNAMNU7DHV34F5UQVP1X"
+          },
+          {
+            "uxpinPresetElementId": "9BZANYTUTRX8FFZIOATGB0ABIPYYLKTD"
+          },
+          {
+            "uxpinPresetElementId": "25742CUEE2H85OM1XY9XYWQ1QUE12QUA"
+          }
+        ]
+      }
+    },
+    "EW6KZL8ZZIXSSNAMNU7DHV34F5UQVP1X": {
+      "name": "Radio",
+      "props": {
+        "label": "Azurite",
+        "value": "azurite"
+      }
+    },
+    "9BZANYTUTRX8FFZIOATGB0ABIPYYLKTD": {
+      "name": "Radio",
+      "props": {
+        "label": "Hematite",
+        "value": "hematite"
+      }
+    },
+    "25742CUEE2H85OM1XY9XYWQ1QUE12QUA": {
+      "name": "Radio",
+      "props": {
+        "label": "Pyrite",
+        "value": "pyrite"
+      }
+    }
+  }
+}

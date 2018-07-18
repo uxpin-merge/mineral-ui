@@ -1,0 +1,54 @@
+{
+  "rootId": "NH4JFP2A69U6GHFL7YLIMI9EZIM72IZR",
+  "elements": {
+    "NH4JFP2A69U6GHFL7YLIMI9EZIM72IZR": {
+      "name": "CardFooter",
+      "props": {
+        "expandable": true,
+        "defaultIsOpen": true,
+        "title": "Card Footer Title",
+        "children": [
+          {
+            "uxpinPresetElementId": "HRHMIQBTFTTJJH8LPE6XM77ANG2TRV31"
+          },
+          {
+            "uxpinPresetElementId": "791X7S1AMCT4S9CYT7JTG16JMQAQ666I"
+          }
+        ]
+      }
+    },
+    "HRHMIQBTFTTJJH8LPE6XM77ANG2TRV31": {
+      "name": "CardBlock",
+      "props": {
+        "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi."
+      }
+    },
+    "791X7S1AMCT4S9CYT7JTG16JMQAQ666I": {
+      "name": "CardActions",
+      "props": {
+        "children": [
+          {
+            "uxpinPresetElementId": "SCGMAS5M2NJ0TY51HEF9JMO6REP1UF09"
+          },
+          {
+            "uxpinPresetElementId": "DCFUSH8VLNCRVVNEPTAEEBTDNC8HUTNJ"
+          }
+        ]
+      }
+    },
+    "SCGMAS5M2NJ0TY51HEF9JMO6REP1UF09": {
+      "name": "Button",
+      "props": {
+        "minimal": true,
+        "children": "Button 1"
+      }
+    },
+    "DCFUSH8VLNCRVVNEPTAEEBTDNC8HUTNJ": {
+      "name": "Button",
+      "props": {
+        "primary": true,
+        "children": "Button 2"
+      }
+    }
+  }
+}

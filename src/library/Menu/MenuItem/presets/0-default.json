@@ -1,0 +1,11 @@
+{
+  "rootId": "ZVZAEWUMZ8DGEX54X1BRDXF9SHMZ5FY7",
+  "elements": {
+    "ZVZAEWUMZ8DGEX54X1BRDXF9SHMZ5FY7": {
+      "name": "MenuItem",
+      "props": {
+        "children": "Menu Item Name"
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "rootId": "EW6KZL8ZZIXSSNAMNU7DHV34F5UQVP1X",
+  "elements": {
+    "EW6KZL8ZZIXSSNAMNU7DHV34F5UQVP1X": {
+      "name": "StartEnd",
+      "props": {
+        "children": [
+          {
+            "uxpinPresetElementId": "9I7N66RVKQODV9PA0D34VCBY5H0IPJ2M"
+          },
+          {
+            "uxpinPresetElementId": "KIWRK6UAO0TFQT1OGS4AAR5ED6CQQ1Z1"
+          }
+        ]
+      }
+    },
+    "9I7N66RVKQODV9PA0D34VCBY5H0IPJ2M": {
+      "name": "Box",
+      "props": {
+        "children": "Start"
+      }
+    },
+    "KIWRK6UAO0TFQT1OGS4AAR5ED6CQQ1Z1": {
+      "name": "Box",
+      "props": {
+        "children": "End"
+      }
+    }
+  }
+}

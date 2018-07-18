@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 import { shallow } from 'enzyme';
-import CheckboxGroup from '../CheckboxGroup';
+import CheckboxGroup from '../CheckboxGroup/CheckboxGroup';
 import examples from '../../../website/app/demos/Checkbox/examples/CheckboxGroup';
 import testDemoExamples from '../../../../utils/testDemoExamples';
 
