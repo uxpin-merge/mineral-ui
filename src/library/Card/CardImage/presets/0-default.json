@@ -4,7 +4,7 @@
     "NH4JFP2A69U6GHFL7YLIMI9EZIM72IZR": {
       "name": "CardImage",
       "props": {
-        "src": "https://picsum.photos/500/281/?random",
+        "src": "https://picsum.photos/1000/562/?image=871",
         "alt": "Random photo"
       }
     }

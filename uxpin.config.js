@@ -17,7 +17,6 @@ module.exports = {
           'src/library/Text/Text.js',
           'src/library/TextArea/TextArea.js',
           'src/library/TextInput/TextInput.js',
-          'src/library/themes/ThemeProvider.js',
           'src/library/Tooltip/Tooltip.js',
         ]
       },
