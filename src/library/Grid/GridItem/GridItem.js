@@ -6,7 +6,8 @@ import type { Values } from '../../Flex/Flex/Flex';
 
 type Props = {
   /** Number of columns spanned [[Responsive-capable]](#responsive) */
-  span?: number | Array<number | null>
+  span?: number | Array<number | null>,
+  children: React$Node
 };
 
 const getFlexGrow = (value: number): number => (value ? 0 : 1);

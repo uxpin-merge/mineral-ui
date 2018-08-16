@@ -25,7 +25,8 @@ type Props = {
    * Shrink factor along the main axis ([see example](#shrink))
    * [[Responsive-capable]](#responsive)
    */
-  shrink?: number | Array<number | null>
+  shrink?: number | Array<number | null>,
+  children: React$Node
 };
 
 type Values = boolean | null | number | string;
