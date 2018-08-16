@@ -428,7 +428,8 @@ type Props = {
         | null
       >,
   /** Sets the box width [[Responsive-capable]](#responsive) */
-  width?: number | string | Array<number | string | null>
+  width?: number | string | Array<number | string | null>,
+  children: React$Node
 };
 
 type SpacingStyles = {
