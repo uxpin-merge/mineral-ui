@@ -3,7 +3,10 @@ import React from 'react';
 import { createStyledComponent } from '../../styles/index';
 import { componentTheme as cardComponentTheme } from '../Card/Card';
 
-type Props = Object;
+type Props = {
+  src: string,
+  alt: string
+};
 
 const Root = createStyledComponent(
   'img',
