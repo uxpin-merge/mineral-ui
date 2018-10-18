@@ -1,13 +1,13 @@
 /* @flow */
 import React, { PureComponent } from 'react';
 import { canUseDOM } from 'exenv';
-import { createThemedComponent, mapComponentThemes } from '../themes';
+import { createThemedComponent, mapComponentThemes } from '../../themes';
 import Choice, {
   componentTheme as choiceComponentTheme
-} from '../Choice/Choice';
-import IconChecked from '../Icon/IconCheckBoxCheck';
-import IconIndeterminate from '../Icon/IconCheckBoxIndeterminate';
-import { composeEventHandlers } from '../utils';
+} from '../../Choice/Choice';
+import IconChecked from '../../Icon/IconCheckBoxCheck';
+import IconIndeterminate from '../../Icon/IconCheckBoxIndeterminate';
+import { composeEventHandlers } from '../../utils';
 
 type Props = {
   /**

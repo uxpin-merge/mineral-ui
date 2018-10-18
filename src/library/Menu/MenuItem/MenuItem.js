@@ -1,9 +1,13 @@
 /* @flow */
 import React, { cloneElement, PureComponent } from 'react';
-import { createStyledComponent, getNormalizedValue, pxToEm } from '../styles';
-import IconDanger from '../Icon/IconDanger';
-import IconSuccess from '../Icon/IconSuccess';
-import IconWarning from '../Icon/IconWarning';
+import {
+  createStyledComponent,
+  getNormalizedValue,
+  pxToEm
+} from '../../styles';
+import IconDanger from '../../Icon/IconDanger';
+import IconSuccess from '../../Icon/IconSuccess';
+import IconWarning from '../../Icon/IconWarning';
 
 import type { Item } from '../Menu/Menu';
 
