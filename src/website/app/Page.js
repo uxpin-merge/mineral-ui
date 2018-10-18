@@ -23,10 +23,12 @@ import _Nav from './Nav';
 import siteColors from './siteColors';
 import { heroTheme } from './pages/Home/index';
 
+import { type DemoRoutes } from './demos/routes';
+
 type Props = {
   children: React$Node,
   chromeless?: boolean,
-  demoRoutes: Array<DemoRoute>,
+  demoRoutes: DemoRoutes,
   glitched?: boolean,
   headerContent?: React$Node,
   pageMeta?: {
@@ -36,12 +38,6 @@ type Props = {
   },
   slug?: string,
   type?: number
-};
-
-type DemoRoute = {
-  description: string,
-  slug: string,
-  title: string
 };
 
 type State = {
@@ -364,11 +360,15 @@ const Canvas = createStyledComponent(_Canvas, styles.canvas);
 const Content = createStyledComponent('main', styles.content);
 const Dialog = createStyledComponent('div', styles.dialog);
 const Footer = createStyledComponent(_Footer, styles.footer);
-const Header = createStyledComponent(Section, styles.header).withProps({
-  element: 'header'
+const Header = createStyledComponent(Section, styles.header, {
+  withProps: {
+    element: 'header'
+  }
 });
-const MenuButton = createStyledComponent(Button, styles.menuButton).withProps({
-  circular: true
+const MenuButton = createStyledComponent(Button, styles.menuButton, {
+  withProps: {
+    circular: true
+  }
 });
 const Nav = createStyledComponent(_Nav, styles.nav, {
   filterProps: ['glitched']

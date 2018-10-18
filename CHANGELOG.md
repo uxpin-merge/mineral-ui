@@ -1,3 +1,251 @@
+<a name="0.48.0"></a>
+# [0.48.0](https://github.com/mineral-ui/mineral-ui/compare/v0.47.0...v0.48.0) (2018-10-17)
+
+
+### Features
+
+* **table:** Provide rowIndex and columnKey to table rows and cells ([95c1e59](https://github.com/mineral-ui/mineral-ui/commit/95c1e59))
+
+
+
+<a name="0.47.0"></a>
+# [0.47.0](https://github.com/mineral-ui/mineral-ui/compare/v0.46.0...v0.47.0) (2018-09-27)
+
+
+### Features
+
+* **button,buttongroup,menuitem:** Update per new styles ([a08f8f3](https://github.com/mineral-ui/mineral-ui/commit/a08f8f3))
+
+
+
+<a name="0.46.0"></a>
+# [0.46.0](https://github.com/mineral-ui/mineral-ui/compare/v0.45.0...v0.46.0) (2018-09-24)
+
+
+### Bug Fixes
+
+* **button:** Prevent icon from shrinking with long content ([54a24e1](https://github.com/mineral-ui/mineral-ui/commit/54a24e1))
+* **dialog:** DialogBody content overflows correctly ([cf0716b](https://github.com/mineral-ui/mineral-ui/commit/cf0716b))
+* **dropdown,select:** Increment MenuItem ids across MenuGroups ([49d73cf](https://github.com/mineral-ui/mineral-ui/commit/49d73cf))
+
+
+### Features
+
+* **tabs:** New component ([5cbd2bd](https://github.com/mineral-ui/mineral-ui/commit/5cbd2bd))
+* **tooltip:** Add support for `cursor` prop ([b32d773](https://github.com/mineral-ui/mineral-ui/commit/b32d773))
+
+
+### Performance Improvements
+
+* **dropdown,select,menu,menuitem:** Decrease Menu and MenuItem re-renders ([a648de5](https://github.com/mineral-ui/mineral-ui/commit/a648de5))
+
+
+
+<a name="0.45.0"></a>
+# [0.45.0](https://github.com/mineral-ui/mineral-ui/compare/v0.44.0...v0.45.0) (2018-09-13)
+
+
+### Features
+
+* **table:** Add render prop support ([79ac277](https://github.com/mineral-ui/mineral-ui/commit/79ac277))
+
+
+### BREAKING CHANGES
+
+* **table:** Rename theme variables that are used in sortable header cells. TableSortableHeaderCell_border_focus, TableSortableHeaderCell_color_focus
+
+
+
+<a name="0.44.0"></a>
+# [0.44.0](https://github.com/mineral-ui/mineral-ui/compare/v0.43.0...v0.44.0) (2018-08-29)
+
+
+### Bug Fixes
+
+* **dialog:** Remove top & bottom margins from first & last body children ([092e095](https://github.com/mineral-ui/mineral-ui/commit/092e095))
+
+
+
+<a name="0.43.0"></a>
+# [0.43.0](https://github.com/mineral-ui/mineral-ui/compare/v0.42.0...v0.43.0) (2018-08-28)
+
+
+### Code Refactoring
+
+* **overflow-container,table:** Extract shared OverflowContainer ([64ea73f](https://github.com/mineral-ui/mineral-ui/commit/64ea73f))
+
+
+### Features
+
+* **dialog:** Add components ([46fd1a6](https://github.com/mineral-ui/mineral-ui/commit/46fd1a6))
+
+
+### BREAKING CHANGES
+
+* **overflow-container,table:** Rename theme variable from `Table_boxShadow_focus` to `Table_outline_focus`
+
+
+
+<a name="0.42.0"></a>
+# [0.42.0](https://github.com/mineral-ui/mineral-ui/compare/v0.41.0...v0.42.0) (2018-08-13)
+
+
+### Bug Fixes
+
+* **pagination:** Renders in all supported React versions ([ccf03e5](https://github.com/mineral-ui/mineral-ui/commit/ccf03e5))
+
+
+### Code Refactoring
+
+* **table:** Improve sortable tables ([61e7e70](https://github.com/mineral-ui/mineral-ui/commit/61e7e70))
+
+
+### BREAKING CHANGES
+
+* **table:** Tables with a controlled `sort` will now need to sort their own data and pass that sorted data to the Table
+
+
+
+<a name="0.41.0"></a>
+# [0.41.0](https://github.com/mineral-ui/mineral-ui/compare/v0.40.0...v0.41.0) (2018-08-06)
+
+
+### Bug Fixes
+
+* **flex:** Gutter margins respect rtl & responsive props; FlexItem can flex ([4794144](https://github.com/mineral-ui/mineral-ui/commit/4794144))
+* **pagination:** Fix IE11 layout issue ([5657281](https://github.com/mineral-ui/mineral-ui/commit/5657281))
+
+
+### BREAKING CHANGES
+
+* **flex:** Flex will now better respect its surrounding layout due
+to removing the negative left & right margins, but the change may
+require further layout adjustment in some cases.
+
+
+
+<a name="0.40.0"></a>
+# [0.40.0](https://github.com/mineral-ui/mineral-ui/compare/v0.39.0...v0.40.0) (2018-08-03)
+
+
+### Features
+
+* **pagination:** New component ([5837cbb](https://github.com/mineral-ui/mineral-ui/commit/5837cbb))
+* **table:** Export defaultSortComparator ([4be37b9](https://github.com/mineral-ui/mineral-ui/commit/4be37b9))
+* **text-input:** Add support for size html attribute with htmlSize prop ([3da3596](https://github.com/mineral-ui/mineral-ui/commit/3da3596))
+
+
+
+<a name="0.39.0"></a>
+# [0.39.0](https://github.com/mineral-ui/mineral-ui/compare/v0.38.0...v0.39.0) (2018-07-25)
+
+
+### Bug Fixes
+
+* **checkbox:** IE/Edge toggle indeterminate state on single click ([c3f1c41](https://github.com/mineral-ui/mineral-ui/commit/c3f1c41))
+* **select,textarea,textinput:** Support component-level theme variables ([9a0de8f](https://github.com/mineral-ui/mineral-ui/commit/9a0de8f))
+* **table:** Fix theme overrides ([48f132e](https://github.com/mineral-ui/mineral-ui/commit/48f132e))
+* **table:** Make density and messages props optional ([9bb5639](https://github.com/mineral-ui/mineral-ui/commit/9bb5639))
+
+
+
+<a name="0.38.0"></a>
+# [0.38.0](https://github.com/mineral-ui/mineral-ui/compare/v0.37.0...v0.38.0) (2018-07-23)
+
+
+### Features
+
+* **table:** Add column sorting and row selection ([c987616](https://github.com/mineral-ui/mineral-ui/commit/c987616))
+
+
+### Performance Improvements
+
+* **checkbox,radio:** Convert to PureComponents ([d76adfe](https://github.com/mineral-ui/mineral-ui/commit/d76adfe))
+
+
+### BREAKING CHANGES
+
+* **table:** Rename theme variables TableColumnHeader_* to
+TableHeaderCell_*
+
+
+
+<a name="0.37.0"></a>
+# [0.37.0](https://github.com/mineral-ui/mineral-ui/compare/v0.36.0...v0.37.0) (2018-07-10)
+
+
+### Features
+
+* **radio,checkbox:** Add hideLabel prop to accessibly hide the label ([2c081a1](https://github.com/mineral-ui/mineral-ui/commit/2c081a1))
+
+
+### BREAKING CHANGES
+
+* **radio,checkbox:** Rename theme variables RadioControl_marginHorizontal
+to RadioText_marginHorizontal and CheckboxControl_marginHorizontal to
+CheckboxText_marginHorizontal
+
+
+
+<a name="0.36.0"></a>
+# [0.36.0](https://github.com/mineral-ui/mineral-ui/compare/v0.35.0...v0.36.0) (2018-07-03)
+
+
+### Features
+
+* **table:** Add Table component ([9beafcf](https://github.com/mineral-ui/mineral-ui/commit/9beafcf))
+
+
+
+<a name="0.35.0"></a>
+# [0.35.0](https://github.com/mineral-ui/mineral-ui/compare/v0.34.0...v0.35.0) (2018-06-28)
+
+
+### Bug Fixes
+
+* **checkbox,checkbox-group:** Apply correct background to indeterminate ([fd57905](https://github.com/mineral-ui/mineral-ui/commit/fd57905))
+
+
+### Code Refactoring
+
+* **button,link:** Remove regular variant, see commit message for additional changes ([2445a8a](https://github.com/mineral-ui/mineral-ui/commit/2445a8a)), closes [#707](https://github.com/mineral-ui/mineral-ui/issues/707)
+
+
+### Features
+
+* **buttongroup:** Add new component ([5d72edb](https://github.com/mineral-ui/mineral-ui/commit/5d72edb))
+
+
+### BREAKING CHANGES
+
+* **button,link:** Remove ‘regular’ variant
+
+
+
+<a name="0.34.0"></a>
+# [0.34.0](https://github.com/mineral-ui/mineral-ui/compare/v0.33.0...v0.34.0) (2018-06-11)
+
+
+### Bug Fixes
+
+* **all:** Refactor functional components for flow-to-proptypes ([a961fa1](https://github.com/mineral-ui/mineral-ui/commit/a961fa1))
+* **avatar:** Fix display of svg images in IE11 ([c0616a4](https://github.com/mineral-ui/mineral-ui/commit/c0616a4))
+* **text-input:** Fix Safari display of search inputs ([e979e78](https://github.com/mineral-ui/mineral-ui/commit/e979e78))
+* **themes:** Ensure base theme overrides component theme ([c2221e1](https://github.com/mineral-ui/mineral-ui/commit/c2221e1))
+
+
+### Features
+
+* **mineral-ui:** Migrate from Glamorous (deprecated) to Emotion ([928da16](https://github.com/mineral-ui/mineral-ui/commit/928da16))
+
+
+### BREAKING CHANGES
+
+* **mineral-ui:** See our Emotion migration guide for details.
+https://github.com/mineral-ui/mineral-ui/blob/master/docs/emotion-migration.md
+
+
+
 <a name="0.33.0"></a>
 # [0.33.0](https://github.com/mineral-ui/mineral-ui/compare/v0.32.0...v0.33.0) (2018-05-10)
 

@@ -5,6 +5,7 @@ import { mountInThemeProvider } from '../../../../utils/enzymeUtils';
 import Button from '../Button';
 import examples from '../../../website/app/demos/Button/examples';
 import testDemoExamples from '../../../../utils/testDemoExamples';
+import testThemeOverrides from '../../../../utils/testThemeOverrides';
 
 function shallowButton(props = {}) {
   const buttonProps = {
@@ -38,6 +39,11 @@ describe('Button', () => {
     expect(button.exists()).toEqual(true);
   });
 
+  describe('theme overrides', () => {
+    testThemeOverrides(<Button />, ['Button_backgroundColor']);
+    testThemeOverrides(<Button primary />, ['Button_backgroundColor_primary']);
+  });
+
   it('calls onClick when clicked', () => {
     const button = shallowButton();
 
@@ -56,6 +62,7 @@ describe('Button', () => {
           expect(button).toMatchSnapshot();
         });
       });
+
       describe('when type=[button type]', () => {
         it('when element=a', () => {
           const [, anchor] = mountButton({
@@ -63,6 +70,7 @@ describe('Button', () => {
           });
           expect(anchor).toMatchSnapshot();
         });
+
         it('when element=NonFilteringLink', () => {
           const [, link] = mountButton({
             element: NonFilteringLink
@@ -71,6 +79,7 @@ describe('Button', () => {
         });
       });
     });
+
     describe('is not filtered', () => {
       describe('when type=[button type]', () => {
         it('when element=button', () => {
@@ -78,6 +87,7 @@ describe('Button', () => {
           expect(button).toMatchSnapshot();
         });
       });
+
       describe('when type=[MIME type]', () => {
         it('when element=a', () => {
           const [, anchor] = mountButton({
@@ -86,6 +96,7 @@ describe('Button', () => {
           });
           expect(anchor).toMatchSnapshot();
         });
+
         it('when element=NonFilteringLink', () => {
           const [, link] = mountButton({
             element: NonFilteringLink,

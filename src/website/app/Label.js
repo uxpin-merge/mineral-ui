@@ -4,14 +4,13 @@ import { createStyledComponent } from '../../library/styles';
 
 type Props = {
   children: React$Node,
-  variant?: 'regular' | 'success' | 'warning' | 'danger'
+  variant?: 'success' | 'warning' | 'danger'
 };
 
 const Root = createStyledComponent('span', ({ theme, variant }) => {
-  const backgroundColor =
-    variant === 'regular'
-      ? theme.color_theme_60
-      : theme[`backgroundColor_${variant}Primary`];
+  const backgroundColor = variant
+    ? theme[`backgroundColor_${variant}Primary`]
+    : theme.color_theme_60;
 
   return {
     backgroundColor,
@@ -26,12 +25,6 @@ const Root = createStyledComponent('span', ({ theme, variant }) => {
   };
 });
 
-export default function Label({
-  children,
-  variant = 'regular',
-  ...restProps
-}: Props) {
-  const rootProps = { variant, ...restProps };
-
-  return <Root {...rootProps}>{children}</Root>;
+export default function Label(props: Props) {
+  return <Root {...props} />;
 }

@@ -1,11 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Text demo examples Snapshots: alignment 1`] = `
-.css-0,
-[data-css-0] {
+.emotion-0 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
@@ -16,20 +15,16 @@ exports[`Text demo examples Snapshots: alignment 1`] = `
   margin-top: 0;
 }
 
-.css-0 *,
-[data-css-0] *,
-.css-0 *::before,
-[data-css-0] *::before,
-.css-0 *::after,
-[data-css-0] *::after {
+.emotion-0 *,
+.emotion-0 *::before,
+.emotion-0 *::after {
   box-sizing: inherit;
 }
 
-.css-1,
-[data-css-1] {
+.emotion-1 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
@@ -40,20 +35,16 @@ exports[`Text demo examples Snapshots: alignment 1`] = `
   margin-top: 0;
 }
 
-.css-1 *,
-[data-css-1] *,
-.css-1 *::before,
-[data-css-1] *::before,
-.css-1 *::after,
-[data-css-1] *::after {
+.emotion-1 *,
+.emotion-1 *::before,
+.emotion-1 *::after {
   box-sizing: inherit;
 }
 
-.css-2,
-[data-css-2] {
+.emotion-2 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
@@ -64,12 +55,9 @@ exports[`Text demo examples Snapshots: alignment 1`] = `
   margin-top: 0;
 }
 
-.css-2 *,
-[data-css-2] *,
-.css-2 *::before,
-[data-css-2] *::before,
-.css-2 *::after,
-[data-css-2] *::after {
+.emotion-2 *,
+.emotion-2 *::before,
+.emotion-2 *::after {
   box-sizing: inherit;
 }
 
@@ -84,17 +72,17 @@ exports[`Text demo examples Snapshots: alignment 1`] = `
       appearance="p"
       element="p"
     >
-      <glamorous(p)
+      <Styled(p)
         align="end"
         appearance="p"
         element="p"
       >
         <p
-          className="css-0"
+          className="emotion-0"
         >
           Align End
         </p>
-      </glamorous(p)>
+      </Styled(p)>
     </TextProvider>
   </Text>
   <Text
@@ -107,17 +95,17 @@ exports[`Text demo examples Snapshots: alignment 1`] = `
       appearance="p"
       element="p"
     >
-      <glamorous(p)
+      <Styled(p)
         align="center"
         appearance="p"
         element="p"
       >
         <p
-          className="css-1"
+          className="emotion-1"
         >
           Align Center
         </p>
-      </glamorous(p)>
+      </Styled(p)>
     </TextProvider>
   </Text>
   <Text
@@ -130,28 +118,27 @@ exports[`Text demo examples Snapshots: alignment 1`] = `
       appearance="p"
       element="p"
     >
-      <glamorous(p)
+      <Styled(p)
         align="justify"
         appearance="p"
         element="p"
       >
         <p
-          className="css-2"
+          className="emotion-2"
         >
           Align Justify: justified text should stretch the width of the container for each separate line. This example contains words of many lengths to display that lines are justified correctly. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis luctus nunc, in posuere odio viverra et. Quisque aliquam tincidunt ante ac mollis. Vestibulum et massa eget velit ultricies feugiat non non augue. Nulla nisl augue, ullamcorper ac dui.
         </p>
-      </glamorous(p)>
+      </Styled(p)>
     </TextProvider>
   </Text>
 </div>
 `;
 
 exports[`Text demo examples Snapshots: appearance 1`] = `
-.css-0,
-[data-css-0] {
+.emotion-0 {
   box-sizing: border-box;
   color: #58606e;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 22px;
   line-height: 1.25;
   outline: 0;
@@ -162,20 +149,16 @@ exports[`Text demo examples Snapshots: appearance 1`] = `
   margin-top: 0;
 }
 
-.css-0 *,
-[data-css-0] *,
-.css-0 *::before,
-[data-css-0] *::before,
-.css-0 *::after,
-[data-css-0] *::after {
+.emotion-0 *,
+.emotion-0 *::before,
+.emotion-0 *::after {
   box-sizing: inherit;
 }
 
-.css-1,
-[data-css-1] {
+.emotion-1 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.5;
   outline: 0;
@@ -185,20 +168,16 @@ exports[`Text demo examples Snapshots: appearance 1`] = `
   margin-top: 0;
 }
 
-.css-1 *,
-[data-css-1] *,
-.css-1 *::before,
-[data-css-1] *::before,
-.css-1 *::after,
-[data-css-1] *::after {
+.emotion-1 *,
+.emotion-1 *::before,
+.emotion-1 *::after {
   box-sizing: inherit;
 }
 
-.css-2,
-[data-css-2] {
+.emotion-2 {
   box-sizing: border-box;
   color: #58606e;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 11px;
   line-height: 1.5;
   outline: 0;
@@ -208,12 +187,9 @@ exports[`Text demo examples Snapshots: appearance 1`] = `
   margin-top: 0;
 }
 
-.css-2 *,
-[data-css-2] *,
-.css-2 *::before,
-[data-css-2] *::before,
-.css-2 *::after,
-[data-css-2] *::after {
+.emotion-2 *,
+.emotion-2 *::before,
+.emotion-2 *::after {
   box-sizing: inherit;
 }
 
@@ -226,16 +202,16 @@ exports[`Text demo examples Snapshots: appearance 1`] = `
       appearance="h3"
       element="h1"
     >
-      <glamorous(h1)
+      <Styled(h1)
         appearance="h3"
         element="h1"
       >
         <h1
-          className="css-0"
+          className="emotion-0"
         >
           Heading 1 which looks like a Heading 3
         </h1>
-      </glamorous(h1)>
+      </Styled(h1)>
     </TextProvider>
   </Text>
   <Text
@@ -246,16 +222,16 @@ exports[`Text demo examples Snapshots: appearance 1`] = `
       appearance="prose"
       element="p"
     >
-      <glamorous(p)
+      <Styled(p)
         appearance="prose"
         element="p"
       >
         <p
-          className="css-1"
+          className="emotion-1"
         >
           Prose (Long Form) Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie eros at nisl rhoncus, et condimentum dui elementum. Praesent gravida metus at scelerisque ultrices.
         </p>
-      </glamorous(p)>
+      </Styled(p)>
     </TextProvider>
   </Text>
   <Text
@@ -266,27 +242,26 @@ exports[`Text demo examples Snapshots: appearance 1`] = `
       appearance="mouse"
       element="p"
     >
-      <glamorous(p)
+      <Styled(p)
         appearance="mouse"
         element="p"
       >
         <p
-          className="css-2"
+          className="emotion-2"
         >
           Mousetype Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie eros at nisl rhoncus, et condimentum dui elementum. Praesent gravida metus at scelerisque ultrices. Suspendisse at facilisis massa. Integer eleifend eleifend nibh posuere interdum.
         </p>
-      </glamorous(p)>
+      </Styled(p)>
     </TextProvider>
   </Text>
 </div>
 `;
 
 exports[`Text demo examples Snapshots: basic 1`] = `
-.css-0,
-[data-css-0] {
+.emotion-1 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
@@ -296,17 +271,13 @@ exports[`Text demo examples Snapshots: basic 1`] = `
   margin-top: 0;
 }
 
-.css-0 *,
-[data-css-0] *,
-.css-0 *::before,
-[data-css-0] *::before,
-.css-0 *::after,
-[data-css-0] *::after {
+.emotion-1 *,
+.emotion-1 *::before,
+.emotion-1 *::after {
   box-sizing: inherit;
 }
 
-.css-1,
-[data-css-1] {
+.emotion-0 {
   fill: currentcolor;
   font-size: 16px;
   height: 1.25em;
@@ -321,12 +292,12 @@ exports[`Text demo examples Snapshots: basic 1`] = `
     appearance="p"
     element="p"
   >
-    <glamorous(p)
+    <Styled(p)
       appearance="p"
       element="p"
     >
       <p
-        className="css-0"
+        className="emotion-1"
       >
         Lorem ipsum 
         <IconCloud
@@ -336,8 +307,9 @@ exports[`Text demo examples Snapshots: basic 1`] = `
             rtl={false}
             size="large"
           >
-            <glamorous(svg)
+            <Styled(svg)
               aria-hidden={true}
+              focusable="false"
               role="img"
               rtl={false}
               size="large"
@@ -345,7 +317,8 @@ exports[`Text demo examples Snapshots: basic 1`] = `
             >
               <svg
                 aria-hidden={true}
-                className="css-1"
+                className="emotion-0"
+                focusable="false"
                 role="img"
                 viewBox="0 0 24 24"
               >
@@ -355,22 +328,21 @@ exports[`Text demo examples Snapshots: basic 1`] = `
                   />
                 </g>
               </svg>
-            </glamorous(svg)>
+            </Styled(svg)>
           </Icon>
         </IconCloud>
          dolor sit amet, consectetur adipiscing elit. Sed non purus id dolor maximus eleifend nec in nunc. Integer quis lacinia leo, in suscipit orci. Donec enim augue, vehicula vel enim a, vestibulum tempus nunc.
       </p>
-    </glamorous(p)>
+    </Styled(p)>
   </TextProvider>
 </Text>
 `;
 
 exports[`Text demo examples Snapshots: color 1`] = `
-.css-0,
-[data-css-0] {
+.emotion-0 {
   box-sizing: border-box;
   color: #2a854e;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
@@ -380,20 +352,16 @@ exports[`Text demo examples Snapshots: color 1`] = `
   margin-top: 0;
 }
 
-.css-0 *,
-[data-css-0] *,
-.css-0 *::before,
-[data-css-0] *::before,
-.css-0 *::after,
-[data-css-0] *::after {
+.emotion-0 *,
+.emotion-0 *::before,
+.emotion-0 *::after {
   box-sizing: inherit;
 }
 
-.css-1,
-[data-css-1] {
+.emotion-1 {
   box-sizing: border-box;
   color: #d6246e;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
@@ -403,26 +371,21 @@ exports[`Text demo examples Snapshots: color 1`] = `
   margin-top: 0;
 }
 
-.css-1 *,
-[data-css-1] *,
-.css-1 *::before,
-[data-css-1] *::before,
-.css-1 *::after,
-[data-css-1] *::after {
+.emotion-1 *,
+.emotion-1 *::before,
+.emotion-1 *::after {
   box-sizing: inherit;
 }
 
-.css-2,
-[data-css-2] {
+.emotion-3 {
   background-color: #421429;
   padding: 0.5em;
 }
 
-.css-3,
-[data-css-3] {
+.emotion-2 {
   box-sizing: border-box;
   color: #bfe7d4;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
@@ -432,12 +395,9 @@ exports[`Text demo examples Snapshots: color 1`] = `
   margin-top: 0;
 }
 
-.css-3 *,
-[data-css-3] *,
-.css-3 *::before,
-[data-css-3] *::before,
-.css-3 *::after,
-[data-css-3] *::after {
+.emotion-2 *,
+.emotion-2 *::before,
+.emotion-2 *::after {
   box-sizing: inherit;
 }
 
@@ -452,17 +412,17 @@ exports[`Text demo examples Snapshots: color 1`] = `
       color="#2a854e"
       element="p"
     >
-      <glamorous(p)
+      <Styled(p)
         appearance="p"
         color="#2a854e"
         element="p"
       >
         <p
-          className="css-0"
+          className="emotion-0"
         >
           Success Text
         </p>
-      </glamorous(p)>
+      </Styled(p)>
     </TextProvider>
   </Text>
   <Text
@@ -475,24 +435,24 @@ exports[`Text demo examples Snapshots: color 1`] = `
       color="#d6246e"
       element="p"
     >
-      <glamorous(p)
+      <Styled(p)
         appearance="p"
         color="#d6246e"
         element="p"
       >
         <p
-          className="css-1"
+          className="emotion-1"
         >
           Magenta Text
         </p>
-      </glamorous(p)>
+      </Styled(p)>
     </TextProvider>
   </Text>
-  <glamorous(div)
+  <Styled(div)
     backgroundColor="#421429"
   >
     <div
-      className="css-2"
+      className="emotion-3"
     >
       <Text
         appearance="p"
@@ -506,31 +466,30 @@ exports[`Text demo examples Snapshots: color 1`] = `
           element="p"
           noMargins={true}
         >
-          <glamorous(p)
+          <Styled(p)
             appearance="p"
             color="#bfe7d4"
             element="p"
             noMargins={true}
           >
             <p
-              className="css-3"
+              className="emotion-2"
             >
               Custom Text
             </p>
-          </glamorous(p)>
+          </Styled(p)>
         </TextProvider>
       </Text>
     </div>
-  </glamorous(div)>
+  </Styled(div)>
 </div>
 `;
 
 exports[`Text demo examples Snapshots: font-weight 1`] = `
-.css-0,
-[data-css-0] {
+.emotion-0 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
@@ -541,20 +500,16 @@ exports[`Text demo examples Snapshots: font-weight 1`] = `
   margin-top: 0;
 }
 
-.css-0 *,
-[data-css-0] *,
-.css-0 *::before,
-[data-css-0] *::before,
-.css-0 *::after,
-[data-css-0] *::after {
+.emotion-0 *,
+.emotion-0 *::before,
+.emotion-0 *::after {
   box-sizing: inherit;
 }
 
-.css-1,
-[data-css-1] {
+.emotion-1 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
@@ -565,20 +520,16 @@ exports[`Text demo examples Snapshots: font-weight 1`] = `
   margin-top: 0;
 }
 
-.css-1 *,
-[data-css-1] *,
-.css-1 *::before,
-[data-css-1] *::before,
-.css-1 *::after,
-[data-css-1] *::after {
+.emotion-1 *,
+.emotion-1 *::before,
+.emotion-1 *::after {
   box-sizing: inherit;
 }
 
-.css-2,
-[data-css-2] {
+.emotion-2 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
@@ -589,20 +540,16 @@ exports[`Text demo examples Snapshots: font-weight 1`] = `
   margin-top: 0;
 }
 
-.css-2 *,
-[data-css-2] *,
-.css-2 *::before,
-[data-css-2] *::before,
-.css-2 *::after,
-[data-css-2] *::after {
+.emotion-2 *,
+.emotion-2 *::before,
+.emotion-2 *::after {
   box-sizing: inherit;
 }
 
-.css-3,
-[data-css-3] {
+.emotion-3 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
@@ -613,12 +560,9 @@ exports[`Text demo examples Snapshots: font-weight 1`] = `
   margin-top: 0;
 }
 
-.css-3 *,
-[data-css-3] *,
-.css-3 *::before,
-[data-css-3] *::before,
-.css-3 *::after,
-[data-css-3] *::after {
+.emotion-3 *,
+.emotion-3 *::before,
+.emotion-3 *::after {
   box-sizing: inherit;
 }
 
@@ -633,17 +577,17 @@ exports[`Text demo examples Snapshots: font-weight 1`] = `
       element="p"
       fontWeight="semiBold"
     >
-      <glamorous(p)
+      <Styled(p)
         appearance="p"
         element="p"
         fontWeight="semiBold"
       >
         <p
-          className="css-0"
+          className="emotion-0"
         >
           Semi-bold Text
         </p>
-      </glamorous(p)>
+      </Styled(p)>
     </TextProvider>
   </Text>
   <Text
@@ -656,17 +600,17 @@ exports[`Text demo examples Snapshots: font-weight 1`] = `
       element="p"
       fontWeight="bold"
     >
-      <glamorous(p)
+      <Styled(p)
         appearance="p"
         element="p"
         fontWeight="bold"
       >
         <p
-          className="css-1"
+          className="emotion-1"
         >
           Bold Text
         </p>
-      </glamorous(p)>
+      </Styled(p)>
     </TextProvider>
   </Text>
   <Text
@@ -679,17 +623,17 @@ exports[`Text demo examples Snapshots: font-weight 1`] = `
       element="p"
       fontWeight="extraBold"
     >
-      <glamorous(p)
+      <Styled(p)
         appearance="p"
         element="p"
         fontWeight="extraBold"
       >
         <p
-          className="css-2"
+          className="emotion-2"
         >
           Extra-bold Text
         </p>
-      </glamorous(p)>
+      </Styled(p)>
     </TextProvider>
   </Text>
   <Text
@@ -702,28 +646,27 @@ exports[`Text demo examples Snapshots: font-weight 1`] = `
       element="p"
       fontWeight={300}
     >
-      <glamorous(p)
+      <Styled(p)
         appearance="p"
         element="p"
         fontWeight={300}
       >
         <p
-          className="css-3"
+          className="emotion-3"
         >
           Light Text
         </p>
-      </glamorous(p)>
+      </Styled(p)>
     </TextProvider>
   </Text>
 </div>
 `;
 
 exports[`Text demo examples Snapshots: headings 1`] = `
-.css-0,
-[data-css-0] {
+.emotion-0 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 34px;
   line-height: 1.25;
   outline: 0;
@@ -734,20 +677,16 @@ exports[`Text demo examples Snapshots: headings 1`] = `
   margin-top: 0;
 }
 
-.css-0 *,
-[data-css-0] *,
-.css-0 *::before,
-[data-css-0] *::before,
-.css-0 *::after,
-[data-css-0] *::after {
+.emotion-0 *,
+.emotion-0 *::before,
+.emotion-0 *::after {
   box-sizing: inherit;
 }
 
-.css-1,
-[data-css-1] {
+.emotion-1 {
   box-sizing: border-box;
   color: #58606e;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 28px;
   line-height: 1.25;
   outline: 0;
@@ -758,20 +697,16 @@ exports[`Text demo examples Snapshots: headings 1`] = `
   margin-top: 0;
 }
 
-.css-1 *,
-[data-css-1] *,
-.css-1 *::before,
-[data-css-1] *::before,
-.css-1 *::after,
-[data-css-1] *::after {
+.emotion-1 *,
+.emotion-1 *::before,
+.emotion-1 *::after {
   box-sizing: inherit;
 }
 
-.css-2,
-[data-css-2] {
+.emotion-2 {
   box-sizing: border-box;
   color: #58606e;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 22px;
   line-height: 1.25;
   outline: 0;
@@ -782,20 +717,16 @@ exports[`Text demo examples Snapshots: headings 1`] = `
   margin-top: 0;
 }
 
-.css-2 *,
-[data-css-2] *,
-.css-2 *::before,
-[data-css-2] *::before,
-.css-2 *::after,
-[data-css-2] *::after {
+.emotion-2 *,
+.emotion-2 *::before,
+.emotion-2 *::after {
   box-sizing: inherit;
 }
 
-.css-3,
-[data-css-3] {
+.emotion-3 {
   box-sizing: border-box;
   color: #58606e;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 18px;
   line-height: 1.25;
   outline: 0;
@@ -806,20 +737,16 @@ exports[`Text demo examples Snapshots: headings 1`] = `
   margin-top: 0;
 }
 
-.css-3 *,
-[data-css-3] *,
-.css-3 *::before,
-[data-css-3] *::before,
-.css-3 *::after,
-[data-css-3] *::after {
+.emotion-3 *,
+.emotion-3 *::before,
+.emotion-3 *::after {
   box-sizing: inherit;
 }
 
-.css-4,
-[data-css-4] {
+.emotion-4 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 14px;
   outline: 0;
   -moz-osx-font-smoothing: auto;
@@ -829,20 +756,16 @@ exports[`Text demo examples Snapshots: headings 1`] = `
   margin-top: 0;
 }
 
-.css-4 *,
-[data-css-4] *,
-.css-4 *::before,
-[data-css-4] *::before,
-.css-4 *::after,
-[data-css-4] *::after {
+.emotion-4 *,
+.emotion-4 *::before,
+.emotion-4 *::after {
   box-sizing: inherit;
 }
 
-.css-5,
-[data-css-5] {
+.emotion-5 {
   box-sizing: border-box;
   color: #58606e;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 14px;
   outline: 0;
   -moz-osx-font-smoothing: auto;
@@ -852,12 +775,9 @@ exports[`Text demo examples Snapshots: headings 1`] = `
   margin-top: 0;
 }
 
-.css-5 *,
-[data-css-5] *,
-.css-5 *::before,
-[data-css-5] *::before,
-.css-5 *::after,
-[data-css-5] *::after {
+.emotion-5 *,
+.emotion-5 *::before,
+.emotion-5 *::after {
   box-sizing: inherit;
 }
 
@@ -870,16 +790,16 @@ exports[`Text demo examples Snapshots: headings 1`] = `
       appearance="p"
       element="h1"
     >
-      <glamorous(h1)
+      <Styled(h1)
         appearance="p"
         element="h1"
       >
         <h1
-          className="css-0"
+          className="emotion-0"
         >
           Heading 1
         </h1>
-      </glamorous(h1)>
+      </Styled(h1)>
     </TextProvider>
   </Text>
   <Text
@@ -890,16 +810,16 @@ exports[`Text demo examples Snapshots: headings 1`] = `
       appearance="p"
       element="h2"
     >
-      <glamorous(h2)
+      <Styled(h2)
         appearance="p"
         element="h2"
       >
         <h2
-          className="css-1"
+          className="emotion-1"
         >
           Heading 2
         </h2>
-      </glamorous(h2)>
+      </Styled(h2)>
     </TextProvider>
   </Text>
   <Text
@@ -910,16 +830,16 @@ exports[`Text demo examples Snapshots: headings 1`] = `
       appearance="p"
       element="h3"
     >
-      <glamorous(h3)
+      <Styled(h3)
         appearance="p"
         element="h3"
       >
         <h3
-          className="css-2"
+          className="emotion-2"
         >
           Heading 3
         </h3>
-      </glamorous(h3)>
+      </Styled(h3)>
     </TextProvider>
   </Text>
   <Text
@@ -930,16 +850,16 @@ exports[`Text demo examples Snapshots: headings 1`] = `
       appearance="p"
       element="h4"
     >
-      <glamorous(h4)
+      <Styled(h4)
         appearance="p"
         element="h4"
       >
         <h4
-          className="css-3"
+          className="emotion-3"
         >
           Heading 4
         </h4>
-      </glamorous(h4)>
+      </Styled(h4)>
     </TextProvider>
   </Text>
   <Text
@@ -950,16 +870,16 @@ exports[`Text demo examples Snapshots: headings 1`] = `
       appearance="p"
       element="h5"
     >
-      <glamorous(h5)
+      <Styled(h5)
         appearance="p"
         element="h5"
       >
         <h5
-          className="css-4"
+          className="emotion-4"
         >
           Heading 5
         </h5>
-      </glamorous(h5)>
+      </Styled(h5)>
     </TextProvider>
   </Text>
   <Text
@@ -970,27 +890,26 @@ exports[`Text demo examples Snapshots: headings 1`] = `
       appearance="p"
       element="h6"
     >
-      <glamorous(h6)
+      <Styled(h6)
         appearance="p"
         element="h6"
       >
         <h6
-          className="css-5"
+          className="emotion-5"
         >
           Heading 6
         </h6>
-      </glamorous(h6)>
+      </Styled(h6)>
     </TextProvider>
   </Text>
 </div>
 `;
 
 exports[`Text demo examples Snapshots: margin 1`] = `
-.css-0,
-[data-css-0] {
+.emotion-0 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 34px;
   line-height: 1.25;
   outline: 0;
@@ -1001,12 +920,9 @@ exports[`Text demo examples Snapshots: margin 1`] = `
   margin-top: 0;
 }
 
-.css-0 *,
-[data-css-0] *,
-.css-0 *::before,
-[data-css-0] *::before,
-.css-0 *::after,
-[data-css-0] *::after {
+.emotion-0 *,
+.emotion-0 *::before,
+.emotion-0 *::after {
   box-sizing: inherit;
 }
 
@@ -1020,27 +936,26 @@ exports[`Text demo examples Snapshots: margin 1`] = `
     element="h1"
     noMargins={true}
   >
-    <glamorous(h1)
+    <Styled(h1)
       appearance="p"
       element="h1"
       noMargins={true}
     >
       <h1
-        className="css-0"
+        className="emotion-0"
       >
         Heading 1
       </h1>
-    </glamorous(h1)>
+    </Styled(h1)>
   </TextProvider>
 </Text>
 `;
 
 exports[`Text demo examples Snapshots: nested 1`] = `
-.css-0,
-[data-css-0] {
+.emotion-15 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.25;
   outline: 0;
@@ -1048,22 +963,34 @@ exports[`Text demo examples Snapshots: nested 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.css-0 *,
-[data-css-0] *,
-.css-0 *::before,
-[data-css-0] *::before,
-.css-0 *::after,
-[data-css-0] *::after {
+.emotion-15 *,
+.emotion-15 *::before,
+.emotion-15 *::after {
   box-sizing: inherit;
 }
 
-.css-0 > *,
-[data-css-0] > * {
+.emotion-14 {
+  box-sizing: border-box;
+  color: #333840;
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.25;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-14[class] > * {
   margin-bottom: 1em;
 }
 
-.css-1,
-[data-css-1] {
+.emotion-14 *,
+.emotion-14 *::before,
+.emotion-14 *::after {
+  box-sizing: inherit;
+}
+
+.emotion-4 {
   background-color: #e8f4fa;
   color: #064d70;
   font-family: serif;
@@ -1071,25 +998,22 @@ exports[`Text demo examples Snapshots: nested 1`] = `
   padding: 0.5em;
 }
 
-.css-2,
-[data-css-2] {
+.emotion-1 {
   background-color: #dcdcfc;
   padding: 0.5em;
 }
 
-.css-3,
-[data-css-3] {
+.emotion-0 {
   margin-bottom: 0;
   margin-top: 0;
   background-color: #dcdcfc;
   padding: 0.5em;
 }
 
-.css-4,
-[data-css-4] {
+.emotion-5 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
@@ -1101,151 +1025,183 @@ exports[`Text demo examples Snapshots: nested 1`] = `
   padding: 0.5em;
 }
 
-.css-4 *,
-[data-css-4] *,
-.css-4 *::before,
-[data-css-4] *::before,
-.css-4 *::after,
-[data-css-4] *::after {
+.emotion-5 *,
+.emotion-5 *::before,
+.emotion-5 *::after {
   box-sizing: inherit;
 }
 
 <Component>
-  <glamorous(div)>
-    <div
-      className="css-0"
+  <Styled(StyledDemoLayout)>
+    <StyledDemoLayout
+      className="emotion-15"
     >
-      For non-nested Text components, you can opt 
-      <em>
-        in
-      </em>
-       to style inheritance by passing true to the inherit prop. 
-      <glamorous(div)>
-        <div
-          className="css-1"
-        >
-          This is a non-nested div with custom styles. 
-          <glamorous(glamorous(Text))
-            inherit={true}
-          >
-            <Text
-              appearance="p"
-              className="css-2"
-              element="p"
-              inherit={true}
-              noMargins={true}
-            >
-              <TextProvider
-                appearance="p"
-                className="css-2"
-                element="p"
-                inherit={true}
-                noMargins={true}
-              >
-                <glamorous(p)
-                  appearance="p"
-                  className="css-2"
-                  element="p"
-                  inherit={true}
-                  noMargins={true}
-                >
-                  <p
-                    className="css-3"
-                  >
-                    This non-nested Text has opted in to inheriting those custom styles.
-                  </p>
-                </glamorous(p)>
-              </TextProvider>
-            </Text>
-          </glamorous(glamorous(Text))>
-        </div>
-      </glamorous(div)>
-      <glamorous(glamorous(Text))
-        element="div"
+      <DemoLayout
+        className="emotion-15"
+        includeLastChild={true}
+        marginBottom="1em"
       >
-        <Text
-          appearance="p"
-          className="css-2"
-          element="div"
-          noMargins={true}
+        <Styled(div)
+          className="emotion-15"
+          includeLastChild={true}
+          marginBottom="1em"
         >
-          <TextProvider
-            appearance="p"
-            className="css-2"
-            element="div"
-            noMargins={true}
+          <div
+            className="emotion-14"
           >
-            <glamorous(div)
-              appearance="p"
-              className="css-2"
-              element="div"
-              noMargins={true}
-            >
+            For non-nested Text components, you can opt 
+            <em>
+              in
+            </em>
+             to style inheritance by passing true to the inherit prop. 
+            <Styled(div)>
               <div
-                className="css-4"
+                className="emotion-4"
               >
-                For nested Text components (inside another Text), you can opt 
-                <em>
-                  out
-                </em>
-                 of style inheritance by passing false to the inherit prop. 
-                <glamorous(div)>
-                  <div
-                    className="css-1"
+                This is a non-nested div with custom styles. 
+                <withProps(Styled(Text))
+                  inherit={true}
+                >
+                  <Styled(Text)
+                    appearance="p"
+                    element="p"
+                    inherit={true}
+                    noMargins={true}
                   >
-                    This is a nested div with custom styles. 
-                    <glamorous(glamorous(Text))
-                      inherit={false}
+                    <Text
+                      appearance="p"
+                      className="emotion-1"
+                      element="p"
+                      inherit={true}
+                      noMargins={true}
                     >
-                      <Text
+                      <TextProvider
                         appearance="p"
-                        className="css-2"
+                        className="emotion-1"
                         element="p"
-                        inherit={false}
+                        inherit={true}
                         noMargins={true}
                       >
-                        <TextProvider
+                        <Styled(p)
                           appearance="p"
-                          className="css-2"
+                          className="emotion-1"
                           element="p"
-                          inherit={false}
+                          inherit={true}
                           noMargins={true}
-                          parentElement="div"
                         >
-                          <glamorous(p)
-                            appearance="p"
-                            className="css-2"
-                            element="p"
-                            inherit={false}
-                            noMargins={true}
+                          <p
+                            className="emotion-0"
                           >
-                            <p
-                              className="css-4"
-                            >
-                              This nested Text has opted out of inheriting those custom styles.
-                            </p>
-                          </glamorous(p)>
-                        </TextProvider>
-                      </Text>
-                    </glamorous(glamorous(Text))>
-                  </div>
-                </glamorous(div)>
+                            This non-nested Text has opted in to inheriting those custom styles.
+                          </p>
+                        </Styled(p)>
+                      </TextProvider>
+                    </Text>
+                  </Styled(Text)>
+                </withProps(Styled(Text))>
               </div>
-            </glamorous(div)>
-          </TextProvider>
-        </Text>
-      </glamorous(glamorous(Text))>
-    </div>
-  </glamorous(div)>
+            </Styled(div)>
+            <withProps(Styled(Text))
+              element="div"
+            >
+              <Styled(Text)
+                appearance="p"
+                element="div"
+                noMargins={true}
+              >
+                <Text
+                  appearance="p"
+                  className="emotion-1"
+                  element="div"
+                  noMargins={true}
+                >
+                  <TextProvider
+                    appearance="p"
+                    className="emotion-1"
+                    element="div"
+                    noMargins={true}
+                  >
+                    <Styled(div)
+                      appearance="p"
+                      className="emotion-1"
+                      element="div"
+                      noMargins={true}
+                    >
+                      <div
+                        className="emotion-5"
+                      >
+                        For nested Text components (inside another Text), you can opt 
+                        <em>
+                          out
+                        </em>
+                         of style inheritance by passing false to the inherit prop. 
+                        <Styled(div)>
+                          <div
+                            className="emotion-4"
+                          >
+                            This is a nested div with custom styles. 
+                            <withProps(Styled(Text))
+                              inherit={false}
+                            >
+                              <Styled(Text)
+                                appearance="p"
+                                element="p"
+                                inherit={false}
+                                noMargins={true}
+                              >
+                                <Text
+                                  appearance="p"
+                                  className="emotion-1"
+                                  element="p"
+                                  inherit={false}
+                                  noMargins={true}
+                                >
+                                  <TextProvider
+                                    appearance="p"
+                                    className="emotion-1"
+                                    element="p"
+                                    inherit={false}
+                                    noMargins={true}
+                                    parentElement="div"
+                                  >
+                                    <Styled(p)
+                                      appearance="p"
+                                      className="emotion-1"
+                                      element="p"
+                                      inherit={false}
+                                      noMargins={true}
+                                    >
+                                      <p
+                                        className="emotion-5"
+                                      >
+                                        This nested Text has opted out of inheriting those custom styles.
+                                      </p>
+                                    </Styled(p)>
+                                  </TextProvider>
+                                </Text>
+                              </Styled(Text)>
+                            </withProps(Styled(Text))>
+                          </div>
+                        </Styled(div)>
+                      </div>
+                    </Styled(div)>
+                  </TextProvider>
+                </Text>
+              </Styled(Text)>
+            </withProps(Styled(Text))>
+          </div>
+        </Styled(div)>
+      </DemoLayout>
+    </StyledDemoLayout>
+  </Styled(StyledDemoLayout)>
 </Component>
 `;
 
 exports[`Text demo examples Snapshots: nested-elements 1`] = `
-.css-0,
-[data-css-0] {
+.emotion-6 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.5;
   outline: 0;
@@ -1255,55 +1211,42 @@ exports[`Text demo examples Snapshots: nested-elements 1`] = `
   margin-top: 0;
 }
 
-.css-0 *,
-[data-css-0] *,
-.css-0 *::before,
-[data-css-0] *::before,
-.css-0 *::after,
-[data-css-0] *::after {
+.emotion-6 *,
+.emotion-6 *::before,
+.emotion-6 *::after {
   box-sizing: inherit;
 }
 
-.css-1,
-[data-css-1] {
+.emotion-0 {
   margin-bottom: 0;
   margin-top: 0;
 }
 
-.css-2,
-[data-css-2] {
+.emotion-1 {
   margin-bottom: 0;
   margin-top: 0;
-  font-family: "SF Mono", "Droid Sans Mono", "Source Code Pro", Monaco, Consolas, "Courier New", Courier, monospace;
+  font-family: "SF Mono","Droid Sans Mono","Source Code Pro",Monaco,Consolas,"Courier New",Courier,monospace;
 }
 
-.css-3,
-[data-css-3] {
+.emotion-5 {
   color: #3272d9;
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-3:hover,
-[data-css-3]:hover,
-.css-3[data-simulate-hover],
-[data-css-3][data-simulate-hover] {
+.emotion-5:hover {
   color: #5691f0;
+  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.css-3:focus,
-[data-css-3]:focus,
-.css-3[data-simulate-focus],
-[data-css-3][data-simulate-focus] {
+.emotion-5:focus {
   color: #3272d9;
   outline: 1px solid #1d5bbf;
   outline-offset: 2px;
 }
 
-.css-3:active,
-[data-css-3]:active,
-.css-3[data-simulate-active],
-[data-css-3][data-simulate-active] {
+.emotion-5:active {
   color: #1d5bbf;
 }
 
@@ -1316,12 +1259,12 @@ exports[`Text demo examples Snapshots: nested-elements 1`] = `
       appearance="prose"
       element="p"
     >
-      <glamorous(p)
+      <Styled(p)
         appearance="prose"
         element="p"
       >
         <p
-          className="css-0"
+          className="emotion-6"
         >
           This 
           <Text
@@ -1334,17 +1277,17 @@ exports[`Text demo examples Snapshots: nested-elements 1`] = `
               inherit={true}
               parentElement="p"
             >
-              <glamorous(strong)
+              <Styled(strong)
                 appearance="p"
                 element="strong"
                 inherit={true}
               >
                 <strong
-                  className="css-1"
+                  className="emotion-0"
                 >
                   strong text
                 </strong>
-              </glamorous(strong)>
+              </Styled(strong)>
             </TextProvider>
           </Text>
            is in a 
@@ -1358,17 +1301,17 @@ exports[`Text demo examples Snapshots: nested-elements 1`] = `
               inherit={true}
               parentElement="p"
             >
-              <glamorous(code)
+              <Styled(code)
                 appearance="p"
                 element="code"
                 inherit={true}
               >
                 <code
-                  className="css-2"
+                  className="emotion-1"
                 >
                   paragraph
                 </code>
-              </glamorous(code)>
+              </Styled(code)>
             </TextProvider>
           </Text>
           . 
@@ -1382,13 +1325,13 @@ exports[`Text demo examples Snapshots: nested-elements 1`] = `
               inherit={true}
               parentElement="p"
             >
-              <glamorous(span)
+              <Styled(span)
                 appearance="p"
                 element="p"
                 inherit={true}
               >
                 <span
-                  className="css-1"
+                  className="emotion-0"
                 >
                   This 
                   <Text
@@ -1401,34 +1344,35 @@ exports[`Text demo examples Snapshots: nested-elements 1`] = `
                       inherit={true}
                       parentElement="p"
                     >
-                      <glamorous(span)
+                      <Styled(span)
                         appearance="p"
                         element="p"
                         inherit={true}
                       >
                         <span
-                          className="css-1"
+                          className="emotion-0"
                         >
                           span text
                         </span>
-                      </glamorous(span)>
+                      </Styled(span)>
                     </TextProvider>
                   </Text>
                    is in a span
                 </span>
-              </glamorous(span)>
+              </Styled(span)>
             </TextProvider>
           </Text>
           This text is in a paragraph. 
           <Link
+            element="a"
             href="http://example.com"
           >
             <Link
+              element="a"
               href="http://example.com"
-              variant="regular"
             >
               <a
-                className="css-3"
+                className="emotion-5"
                 href="http://example.com"
               >
                 <Text
@@ -1441,24 +1385,24 @@ exports[`Text demo examples Snapshots: nested-elements 1`] = `
                     inherit={true}
                     parentElement="p"
                   >
-                    <glamorous(span)
+                    <Styled(span)
                       appearance="p"
                       element="p"
                       inherit={true}
                     >
                       <span
-                        className="css-1"
+                        className="emotion-0"
                       >
                         This link has a span inside
                       </span>
-                    </glamorous(span)>
+                    </Styled(span)>
                   </TextProvider>
                 </Text>
               </a>
             </Link>
           </Link>
         </p>
-      </glamorous(p)>
+      </Styled(p)>
     </TextProvider>
   </Text>
   <hr />
@@ -1470,12 +1414,12 @@ exports[`Text demo examples Snapshots: nested-elements 1`] = `
       appearance="prose"
       element="div"
     >
-      <glamorous(div)
+      <Styled(div)
         appearance="prose"
         element="div"
       >
         <div
-          className="css-0"
+          className="emotion-6"
         >
           This text is in a div 
           <Text
@@ -1488,13 +1432,13 @@ exports[`Text demo examples Snapshots: nested-elements 1`] = `
               inherit={true}
               parentElement="div"
             >
-              <glamorous(p)
+              <Styled(p)
                 appearance="p"
                 element="p"
                 inherit={true}
               >
                 <p
-                  className="css-1"
+                  className="emotion-0"
                 >
                   This 
                   <Text
@@ -1507,37 +1451,36 @@ exports[`Text demo examples Snapshots: nested-elements 1`] = `
                       inherit={true}
                       parentElement="p"
                     >
-                      <glamorous(span)
+                      <Styled(span)
                         appearance="p"
                         element="p"
                         inherit={true}
                       >
                         <span
-                          className="css-1"
+                          className="emotion-0"
                         >
                           span text
                         </span>
-                      </glamorous(span)>
+                      </Styled(span)>
                     </TextProvider>
                   </Text>
                    is in a paragraph
                 </p>
-              </glamorous(p)>
+              </Styled(p)>
             </TextProvider>
           </Text>
         </div>
-      </glamorous(div)>
+      </Styled(div)>
     </TextProvider>
   </Text>
 </div>
 `;
 
 exports[`Text demo examples Snapshots: rtl 1`] = `
-.css-0,
-[data-css-0] {
+.emotion-0 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
@@ -1547,20 +1490,16 @@ exports[`Text demo examples Snapshots: rtl 1`] = `
   margin-top: 0;
 }
 
-.css-0 *,
-[data-css-0] *,
-.css-0 *::before,
-[data-css-0] *::before,
-.css-0 *::after,
-[data-css-0] *::after {
+.emotion-0 *,
+.emotion-0 *::before,
+.emotion-0 *::after {
   box-sizing: inherit;
 }
 
-.css-1,
-[data-css-1] {
+.emotion-1 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
@@ -1571,12 +1510,9 @@ exports[`Text demo examples Snapshots: rtl 1`] = `
   margin-top: 0;
 }
 
-.css-1 *,
-[data-css-1] *,
-.css-1 *::before,
-[data-css-1] *::before,
-.css-1 *::after,
-[data-css-1] *::after {
+.emotion-1 *,
+.emotion-1 *::before,
+.emotion-1 *::after {
   box-sizing: inherit;
 }
 
@@ -1594,16 +1530,16 @@ exports[`Text demo examples Snapshots: rtl 1`] = `
             appearance="p"
             element="p"
           >
-            <glamorous(p)
+            <Styled(p)
               appearance="p"
               element="p"
             >
               <p
-                className="css-0"
+                className="emotion-0"
               >
                 محاذاة البداية
               </p>
-            </glamorous(p)>
+            </Styled(p)>
           </TextProvider>
         </Text>
         <Text
@@ -1616,17 +1552,17 @@ exports[`Text demo examples Snapshots: rtl 1`] = `
             appearance="p"
             element="p"
           >
-            <glamorous(p)
+            <Styled(p)
               align="end"
               appearance="p"
               element="p"
             >
               <p
-                className="css-1"
+                className="emotion-1"
               >
                 محاذاة النهاية
               </p>
-            </glamorous(p)>
+            </Styled(p)>
           </TextProvider>
         </Text>
       </div>
@@ -1636,11 +1572,10 @@ exports[`Text demo examples Snapshots: rtl 1`] = `
 `;
 
 exports[`Text demo examples Snapshots: truncate 1`] = `
-.css-0,
-[data-css-0] {
+.emotion-0 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
@@ -1655,20 +1590,16 @@ exports[`Text demo examples Snapshots: truncate 1`] = `
   word-wrap: normal;
 }
 
-.css-0 *,
-[data-css-0] *,
-.css-0 *::before,
-[data-css-0] *::before,
-.css-0 *::after,
-[data-css-0] *::after {
+.emotion-0 *,
+.emotion-0 *::before,
+.emotion-0 *::after {
   box-sizing: inherit;
 }
 
-.css-1,
-[data-css-1] {
+.emotion-1 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
@@ -1683,20 +1614,16 @@ exports[`Text demo examples Snapshots: truncate 1`] = `
   word-wrap: normal;
 }
 
-.css-1 *,
-[data-css-1] *,
-.css-1 *::before,
-[data-css-1] *::before,
-.css-1 *::after,
-[data-css-1] *::after {
+.emotion-1 *,
+.emotion-1 *::before,
+.emotion-1 *::after {
   box-sizing: inherit;
 }
 
-.css-2,
-[data-css-2] {
+.emotion-2 {
   box-sizing: border-box;
   color: #333840;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 14px;
   line-height: 1.5;
   outline: 0;
@@ -1711,12 +1638,9 @@ exports[`Text demo examples Snapshots: truncate 1`] = `
   word-wrap: normal;
 }
 
-.css-2 *,
-[data-css-2] *,
-.css-2 *::before,
-[data-css-2] *::before,
-.css-2 *::after,
-[data-css-2] *::after {
+.emotion-2 *,
+.emotion-2 *::before,
+.emotion-2 *::after {
   box-sizing: inherit;
 }
 
@@ -1731,17 +1655,17 @@ exports[`Text demo examples Snapshots: truncate 1`] = `
       element="p"
       truncate={true}
     >
-      <glamorous(p)
+      <Styled(p)
         appearance="p"
         element="p"
         truncate={true}
       >
         <p
-          className="css-0"
+          className="emotion-0"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus id dolor maximus eleifend nec in nunc. Integer quis lacinia leo.
         </p>
-      </glamorous(p)>
+      </Styled(p)>
     </TextProvider>
   </Text>
   <Text
@@ -1754,17 +1678,17 @@ exports[`Text demo examples Snapshots: truncate 1`] = `
       element="p"
       truncate={200}
     >
-      <glamorous(p)
+      <Styled(p)
         appearance="p"
         element="p"
         truncate={200}
       >
         <p
-          className="css-1"
+          className="emotion-1"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus id dolor maximus eleifend nec in nunc. Integer quis lacinia leo.
         </p>
-      </glamorous(p)>
+      </Styled(p)>
     </TextProvider>
   </Text>
   <Text
@@ -1777,17 +1701,17 @@ exports[`Text demo examples Snapshots: truncate 1`] = `
       element="p"
       truncate="50%"
     >
-      <glamorous(p)
+      <Styled(p)
         appearance="p"
         element="p"
         truncate="50%"
       >
         <p
-          className="css-2"
+          className="emotion-2"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus id dolor maximus eleifend nec in nunc. Integer quis lacinia leo.
         </p>
-      </glamorous(p)>
+      </Styled(p)>
     </TextProvider>
   </Text>
 </div>

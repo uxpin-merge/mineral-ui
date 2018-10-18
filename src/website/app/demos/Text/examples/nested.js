@@ -1,25 +1,31 @@
 /* @flow */
+import React from 'react';
 import { palette } from 'mineral-ui-tokens';
-import { createStyledComponent } from '../../../../../library/styles';
-import { mineralTheme as theme } from '../../../../../library/themes';
 import _Text from '../../../../../library/Text';
+import { mineralTheme as theme } from '../../../../../library/themes';
+import { createStyledComponent } from '../../../../../library/styles';
+import _DemoLayout from '../../shared/DemoLayout';
+
+const StyledDemoLayout = (props) => (
+  <_DemoLayout includeLastChild marginBottom="1em" {...props} />
+);
 
 const DemoLayout = createStyledComponent(
-  'div',
-  {
-    '& > *': {
-      marginBottom: '1em'
-    }
-  },
+  StyledDemoLayout,
+  {},
   {
     includeStyleReset: true
   }
 );
 
-const Text = createStyledComponent(_Text, ({ theme }) => ({
-  backgroundColor: palette.indigo_20,
-  padding: theme.space_inset_sm
-})).withProps({ noMargins: true });
+const Text = createStyledComponent(
+  _Text,
+  ({ theme }) => ({
+    backgroundColor: palette.indigo_20,
+    padding: theme.space_inset_sm
+  }),
+  { withProps: { noMargins: true } }
+);
 
 export default {
   id: 'nested',

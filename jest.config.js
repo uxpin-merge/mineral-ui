@@ -14,7 +14,7 @@ module.exports = {
   setupTestFrameworkScriptFile: '<rootDir>/utils/setupTestFrameworkScript.js',
   snapshotSerializers: [
     'enzyme-to-json/serializer',
-    'jest-glamor-react',
     '<rootDir>/utils/snapshotSerializer'
-  ]
+  ],
+  testURL: 'http://localhost/'
 };
