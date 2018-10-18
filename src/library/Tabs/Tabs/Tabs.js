@@ -5,7 +5,7 @@ import { createStyledComponent } from '../../styles';
 import { withTheme } from '../../themes';
 import { generateId } from '../../utils';
 import TabList from '../TabList/TabList';
-import TabPanel from '../TabPanel';
+import TabPanel from '../TabPanel/TabPanel';
 
 type Props = {
   /**  Horizontal or vertical alignment of Tabs in the tab list */

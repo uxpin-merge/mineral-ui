@@ -11,7 +11,7 @@ import IconChevronRight from '../../Icon/IconChevronRight';
 import IconExpandLess from '../../Icon/IconExpandLess';
 import IconExpandMore from '../../Icon/IconExpandMore';
 import { OverflowContainerWithShadows } from '../../OverflowContainer';
-import { componentTheme as tabPanelComponentTheme } from '../TabPanel';
+import { componentTheme as tabPanelComponentTheme } from '../TabPanel/TabPanel';
 
 type Props = {
   /** Horizontal or vertical alignment of TabList children */
