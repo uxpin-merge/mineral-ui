@@ -1,11 +1,11 @@
 /* @flow */
 import React, { Children, cloneElement } from 'react';
-import { withTheme } from '../themes';
-import { createStyledComponent, pxToEm } from '../styles';
+import { withTheme } from '../../themes';
+import { createStyledComponent, pxToEm } from '../../styles';
 import getResponsiveStyles, {
   getPrevNonNull
-} from '../styles/getResponsiveStyles';
-import Box from '../Box';
+} from '../../styles/getResponsiveStyles';
+import Box from '../../Box';
 
 type Props = {
   /** Align items along the cross axis [[Responsive-capable]](#responsive) */

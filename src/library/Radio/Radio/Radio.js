@@ -1,6 +1,6 @@
 /* @flow */
 import React, { PureComponent } from 'react';
-import { createThemedComponent, mapComponentThemes } from '../themes';
+import { createThemedComponent, mapComponentThemes } from '../../themes';
 import Choice, {
   componentTheme as choiceComponentTheme
 } from '../../Choice/Choice';

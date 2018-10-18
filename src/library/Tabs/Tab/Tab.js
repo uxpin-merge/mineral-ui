@@ -1,9 +1,9 @@
 /* @flow */
 import React, { Component } from 'react';
-import { createStyledComponent } from '../styles';
-import { createThemedComponent } from '../themes';
-import Button from '../Button';
-import Truncate from '../Truncate';
+import { createStyledComponent } from '../../styles';
+import { createThemedComponent } from '../../themes';
+import Button from '../../Button';
+import Truncate from '../../Truncate';
 
 type Props = {
   /** Content of the tab panel */

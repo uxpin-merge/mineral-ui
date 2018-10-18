@@ -1,17 +1,17 @@
 /* @flow */
 import React, { Children, Component } from 'react';
 import debounce from 'lodash.debounce';
-import EventListener from '../EventListener';
-import { createStyledComponent, pxToEm } from '../styles';
-import { createThemedComponent } from '../themes';
-import { onlyIEAndEdge } from '../utils/cssSelectors';
-import Button from '../Button';
-import IconChevronLeft from '../Icon/IconChevronLeft';
-import IconChevronRight from '../Icon/IconChevronRight';
-import IconExpandLess from '../Icon/IconExpandLess';
-import IconExpandMore from '../Icon/IconExpandMore';
-import { OverflowContainerWithShadows } from '../OverflowContainer';
-import { componentTheme as tabPanelComponentTheme } from './TabPanel';
+import EventListener from '../../EventListener';
+import { createStyledComponent, pxToEm } from '../../styles';
+import { createThemedComponent } from '../../themes';
+import { onlyIEAndEdge } from '../../utils/cssSelectors';
+import Button from '../../Button';
+import IconChevronLeft from '../../Icon/IconChevronLeft';
+import IconChevronRight from '../../Icon/IconChevronRight';
+import IconExpandLess from '../../Icon/IconExpandLess';
+import IconExpandMore from '../../Icon/IconExpandMore';
+import { OverflowContainerWithShadows } from '../../OverflowContainer';
+import { componentTheme as tabPanelComponentTheme } from '../TabPanel';
 
 type Props = {
   /** Horizontal or vertical alignment of TabList children */
