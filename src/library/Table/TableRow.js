@@ -4,7 +4,7 @@ import { isRenderProp } from '../utils';
 import { createStyledComponent } from '../styles';
 import { TableContext } from './TableBase';
 
-import { type RenderFn } from './Table';
+import { type RenderFn } from './Table/Table';
 
 type Props = {
   /** Rendered content can be TD or TH */

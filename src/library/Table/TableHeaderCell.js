@@ -9,7 +9,7 @@ import TableCell, {
 } from './TableCell';
 import { TableContext } from './TableBase';
 
-import { type RenderFn } from './Table';
+import { type RenderFn } from './Table/Table';
 
 type Props = {
   /** Rendered content */

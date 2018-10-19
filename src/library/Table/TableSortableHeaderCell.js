@@ -8,7 +8,7 @@ import TableHeaderCell from './TableHeaderCell';
 import { TableContext } from './TableBase';
 
 import type { SortableType } from './Sortable';
-import type { Messages, RenderFn } from './Table';
+import type { Messages, RenderFn } from './Table/Table';
 
 type Props = {
   /** Rendered content */

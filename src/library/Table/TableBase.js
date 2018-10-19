@@ -15,7 +15,7 @@ import TableTitle from './TableTitle';
 
 import type { SelectableType } from './Selectable';
 import type { SortableType } from './Sortable';
-import type { Columns, Messages, Rows } from './Table';
+import type { Columns, Messages, Rows } from './Table/Table';
 
 // See Table
 type Props = {

@@ -1,0 +1,41 @@
+# Table
+
+```javascript
+    <Table 
+        data = {
+            [
+                {
+                    Fruits: 'Pomello',
+                    Vegetables: 'Bok Choi',
+                    Grains: 'Chia',
+                    Dairy: 'Pule',
+                    Protein: 'Crickets'
+                },
+                {
+                    Fruits: 'Starfruit',
+                    Vegetables: 'Romanesco',
+                    Grains: 'Sorghum',
+                    Dairy: 'Casu marzu',
+                    Protein: 'Barnacles'
+                },
+                {
+                    Fruits: 'Durian',
+                    Vegetables: 'Ramps',
+                    Grains: 'Teff',
+                    Dairy: 'Vieux Lille',
+                    Protein: 'Inca nuts'
+                },
+                {
+                    Fruits: 'Persimmons',
+                    Vegetables: 'Fiddleheads',
+                    Grains: 'Quinoa',
+                    Dairy: 'Milbenkase',
+                    Protein: 'Spirulina'
+                }
+            ]
+        }
+        rowKey="Fruits"
+        title="Foods of the World"
+        hideTitle
+    />
+```

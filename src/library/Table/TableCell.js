@@ -5,7 +5,7 @@ import { createStyledComponent, getNormalizedValue, pxToEm } from '../styles';
 import { isRenderProp, rtlTextAlign } from '../utils';
 import { TableContext } from './TableBase';
 
-import type { RenderFn } from './Table';
+import type { RenderFn } from './Table/Table';
 
 type Props = {
   /** Rendered content */

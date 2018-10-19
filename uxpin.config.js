@@ -19,7 +19,8 @@ module.exports = {
           'src/library/TextArea/TextArea.js',
           'src/library/Tooltip/Tooltip.js',
           'src/library/StartEnd/StartEnd.js',
-          'src/library/Tabs/!(__tests__)/*js'
+          'src/library/Tabs/!(__tests__)/*js',
+          'src/library/Table/!(__tests__)/*js'
         ]
       },
       {

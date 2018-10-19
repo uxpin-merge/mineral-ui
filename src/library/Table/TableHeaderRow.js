@@ -8,7 +8,7 @@ import TableRow from './TableRow';
 
 import type { ToggleAll } from './Selectable';
 import type { SortableType } from './Sortable';
-import type { Columns, Messages } from './Table';
+import type { Columns, Messages } from './Table/Table';
 
 type Props = {
   checked?: boolean,

@@ -6,7 +6,7 @@ import TableCell from './TableCell';
 import TableRow from './TableRow';
 
 import type { Toggle } from './Selectable';
-import type { Columns, Messages, Row } from './Table';
+import type { Columns, Messages, Row } from './Table/Table';
 
 type Props = {
   checked?: boolean,
