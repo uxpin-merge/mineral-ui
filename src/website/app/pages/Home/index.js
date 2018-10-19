@@ -52,8 +52,9 @@ const pageMeta = {
 };
 
 const latestPost = {
-  title: 'Designing Systematic Colors',
-  url: 'https://uxplanet.org/designing-systematic-colors-b5d2605b15c'
+  title: 'The Themes are Always Changing, but the Tokens Stay the Same',
+  url:
+    'https://medium.com/@kylegach/the-themes-are-always-changing-but-the-tokens-stay-the-same-258d57b18f31'
 };
 
 const playgroundThemes = [
@@ -165,7 +166,7 @@ const styles = {
     '&::before': {
       backgroundColor: theme.color_theme,
       borderRadius: theme.borderRadius_1,
-      content: 'New',
+      content: '"New"',
       fontSize: '0.8em',
       fontWeight: theme.fontWeight_bold,
       marginRight: theme.space_inline_sm,
@@ -190,7 +191,7 @@ const styles = {
   buttons: ({ theme }) => ({
     marginTop: theme.baseline_2,
 
-    '& > * + *': {
+    '& > [class] + [class]': {
       marginLeft: theme.space_inline_lg
     }
   }),
@@ -212,7 +213,7 @@ const styles = {
     },
 
     [theme.bp_home_navExpanded]: {
-      flex: `0 0 ${5 / 12 * 100}%`,
+      flex: `0 0 ${(5 / 12) * 100}%`,
       textAlign: 'left',
 
       '& + &': {
@@ -391,8 +392,8 @@ const styles = {
 
     [theme.bp_home_guidelinesMultiColumn]: {
       flex: `1 1 auto`,
-      marginLeft: `${1 / 12 * 100}%`,
-      marginRight: `${1 / 12 * 100}%`,
+      marginLeft: `${(1 / 12) * 100}%`,
+      marginRight: `${(1 / 12) * 100}%`,
       order: 1,
       textAlign: 'right'
     },
@@ -428,7 +429,7 @@ const styles = {
     // Guidelines
     '& > div > :last-child': {
       [theme.bp_home_betweenMoreSpaciousAndGuidelinesMultiColumn]: {
-        margin: `0 ${1 / 12 * 100}%`
+        margin: `0 ${(1 / 12) * 100}%`
       }
     }
   }),
@@ -565,7 +566,7 @@ const styles = {
     // Playground
     '& > div > :last-child': {
       [theme.bp_home_guidelinesMultiColumn]: {
-        margin: `0 ${1 / 12 * 100}%`
+        margin: `0 ${(1 / 12) * 100}%`
       }
     }
   })
@@ -575,8 +576,10 @@ const Root = createStyledComponent('div', styles.home, {
   includeStyleReset: true
 });
 // Markdown must come before all of the other Markdown-based components
-const Markdown = createStyledComponent(_Markdown, styles.markdown).withProps({
-  anchors: false
+const Markdown = createStyledComponent(_Markdown, styles.markdown, {
+  withProps: {
+    anchors: false
+  }
 });
 const SiteButton = createThemedComponent(_SiteButton, buttonTheme);
 const BlogLink = createStyledComponent(Link, styles.blogLink);
@@ -585,8 +588,10 @@ const Buttons = createStyledComponent('div', styles.buttons);
 const ThemedCTALink = createThemedComponent(Link, CTALinkTheme);
 const CTALink = createStyledComponent(ThemedCTALink, styles.CTALink);
 const Feature = createStyledComponent('div', styles.feature);
-const FeatureImg = createStyledComponent('img', styles.featureImg).withProps({
-  alt: ''
+const FeatureImg = createStyledComponent('img', styles.featureImg, {
+  withProps: {
+    alt: ''
+  }
 });
 const FloatingMinerals = createStyledComponent('div', styles.floatingMinerals);
 const FeatureSection = createStyledComponent(Section, styles.featureSection);
@@ -611,15 +616,19 @@ const GuidelinesSection = createStyledComponent(
   Section,
   styles.guidelinesSection
 );
-const Hero = createStyledComponent(Section, styles.hero).withProps({
-  element: 'header'
+const Hero = createStyledComponent(Section, styles.hero, {
+  withProps: {
+    element: 'header'
+  }
 });
 const HeroCanvas = createStyledComponent(Canvas, styles.heroCanvas);
 const Intro = createStyledComponent(Markdown, styles.intro);
-const LinkButton = createStyledComponent(SiteButton, styles.button).withProps({
-  element: Link,
-  size: 'jumbo',
-  type: null
+const LinkButton = createStyledComponent(SiteButton, styles.button, {
+  withProps: {
+    element: Link,
+    size: 'jumbo',
+    type: null
+  }
 });
 const PlaygroundCanvas = createStyledComponent(Canvas, styles.playgroundCanvas);
 const PlaygroundSection = createStyledComponent(
@@ -738,16 +747,26 @@ export default class Home extends Component<Props, State> {
                   themes={playgroundThemes}>
                   <Media query="(min-width: 23em)">
                     {(navExpanded) => {
-                      const PlaygroundButton = createStyledComponent(Button, {
-                        ...styles.button,
-                        fontFamily: 'inherit'
-                      }).withProps({
-                        element: Link,
-                        iconStart: navExpanded ? <IconFavorite /> : undefined,
-                        primary: true,
-                        size: 'jumbo',
-                        type: null
-                      });
+                      const PlaygroundButton = createStyledComponent(
+                        Button,
+                        {
+                          ...styles.button,
+                          fontFamily: 'inherit'
+                        },
+                        {
+                          withProps: {
+                            element: Link,
+                            iconStart: navExpanded ? (
+                              <IconFavorite />
+                            ) : (
+                              undefined
+                            ),
+                            primary: true,
+                            size: 'jumbo',
+                            type: null
+                          }
+                        }
+                      );
 
                       return (
                         <Markdown

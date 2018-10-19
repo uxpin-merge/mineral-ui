@@ -1,5 +1,6 @@
 /* @flow */
-import React from 'react';
+import React, { Component } from 'react';
+import memoizeOne from 'memoize-one';
 import { createStyledComponent } from '../styles';
 
 type Props = {
@@ -10,7 +11,7 @@ type Props = {
   /** Element to be used as the root node - e.g. `a` or `ReactRouterLink` */
   element?: $FlowFixMe, // Should allow string | React class
   /** Available variants */
-  variant?: 'regular' | 'danger' | 'success' | 'warning'
+  variant?: 'danger' | 'success' | 'warning'
 };
 
 export const componentTheme = (baseTheme: Object) => ({
@@ -23,10 +24,10 @@ export const componentTheme = (baseTheme: Object) => ({
   ...baseTheme
 });
 
-const linkStyles = ({ variant, theme: baseTheme }) => {
+const styles = ({ variant, theme: baseTheme }) => {
   let theme = componentTheme(baseTheme);
 
-  if (variant !== 'regular') {
+  if (variant) {
     // prettier-ignore
     theme = {
       ...theme,
@@ -59,23 +60,35 @@ const linkStyles = ({ variant, theme: baseTheme }) => {
   };
 };
 
-/**
- * The Link component creates a hyperlink to external pages, files, anchors on the same page, or another URL.
- */
-export default function Link({
-  children,
-  element = 'a',
-  variant = 'regular',
-  ...restProps
-}: Props) {
-  const rootProps = {
-    variant,
-    ...restProps
-  };
-  const Root = createStyledComponent(element, linkStyles, {
-    displayName: 'Link',
-    filterProps: ['variant']
-  });
+const createRootNode = (props: Props) => {
+  const { element = Link.defaultProps.element } = props;
 
-  return <Root {...rootProps}>{children}</Root>;
+  return createStyledComponent(element, styles, {
+    displayName: 'Link',
+    filterProps: ['element', 'variant'],
+    rootEl: element
+  });
+};
+
+/**
+ * The Link component creates a hyperlink to external pages, files, anchors on
+ * the same page, or another URL.
+ */
+export default class Link extends Component<Props> {
+  static defaultProps = {
+    element: 'a'
+  };
+
+  // Must be an instance method to avoid affecting other instances memoized keys
+  getRootNode = memoizeOne(
+    createRootNode,
+    (nextProps: Props, prevProps: Props) =>
+      nextProps.element === prevProps.element
+  );
+
+  render() {
+    const Root = this.getRootNode(this.props);
+
+    return <Root {...this.props} />;
+  }
 }

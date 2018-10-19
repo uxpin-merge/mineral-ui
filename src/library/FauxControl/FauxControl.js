@@ -1,5 +1,6 @@
 /* @flow */
 import React, { Component, cloneElement } from 'react';
+import memoizeOne from 'memoize-one';
 import { ellipsis } from 'polished';
 import { createStyledComponent, getNormalizedValue, pxToEm } from '../styles';
 import IconDanger from '../Icon/IconDanger';
@@ -90,18 +91,21 @@ const styles = {
   },
   control: ({
     controlPropsIn,
+    controlSize,
     disabled,
     hasPlaceholder,
     iconEnd,
     iconStart,
     prefix,
     readOnly,
-    size,
+    size: nonHtmlSize,
     suffix,
     theme: baseTheme,
     variant
   }) => {
     let theme = componentTheme(baseTheme);
+
+    const size = controlSize || nonHtmlSize;
 
     if (variant) {
       // prettier-ignore
@@ -177,7 +181,7 @@ const styles = {
         display: 'none'
       },
 
-      '&:focus,&[data-simulate-focus]': {
+      '&:focus': {
         '& ~ div:last-child': {
           borderColor: theme.FauxControl_borderColor_focus,
           boxShadow: theme.FauxControl_boxShadow_focus
@@ -201,20 +205,20 @@ const styles = {
       position: 'relative',
       zIndex: 1,
 
-      '&:hover,&[data-simulate-hover]': {
+      '&:hover': {
         '& > div:last-child': {
           borderColor: !disabled ? theme.FauxControl_borderColor_hover : null
         }
       },
 
-      '&:focus,&[data-simulate-focus]': {
+      '&:focus': {
         '& > div:last-child': {
           borderColor: !disabled ? theme.FauxControl_borderColor_focus : null,
           boxShadow: !disabled ? theme.FauxControl_boxShadow_focus : null
         }
       },
 
-      '&:active,&[data-simulate-active]': {
+      '&:active': {
         '& > div:last-child': {
           borderColor: theme.FauxControl_borderColor_active,
           boxShadow: disabled ? 'none' : theme.FauxControl_boxShadow_active
@@ -243,11 +247,15 @@ const styles = {
       flex: '0 0 auto',
       fontSize,
       marginLeft: rtl
-        ? iconEnd || variant ? 0 : marginWithIcon
+        ? iconEnd || variant
+          ? 0
+          : marginWithIcon
         : marginWithoutIcon,
       marginRight: rtl
         ? marginWithoutIcon
-        : iconEnd || variant ? 0 : marginWithIcon,
+        : iconEnd || variant
+          ? 0
+          : marginWithIcon,
       whiteSpace: 'nowrap',
       ...ellipsis('8em')
     };
@@ -317,7 +325,9 @@ function getIcons({
   const endIconSource =
     iconEnd !== null && variant
       ? variantIcons[variant]
-      : iconEnd ? iconEnd : null;
+      : iconEnd
+        ? iconEnd
+        : null;
 
   const endIcon =
     endIconSource &&
@@ -329,23 +339,22 @@ function getIcons({
   return [startIcon, endIcon];
 }
 
-// The control node must be created outside of render, so that the entire DOM
-// element is replaced only when the control prop is changed.
 const createControlNode = (props: Props) => {
-  return createStyledComponent(props.control, styles.control);
+  return createStyledComponent(props.control, styles.control, {
+    displayName: 'Control'
+  });
 };
 
 /**
  * FauxControl
  */
 export default class FauxControl extends Component<Props> {
-  componentWillUpdate(nextProps: Props) {
-    if (this.props.control !== nextProps.control) {
-      this.controlNode = createControlNode(nextProps);
-    }
-  }
-
-  controlNode: React$ComponentType<*> = createControlNode(this.props);
+  // Must be an instance method to avoid affecting other instances memoized keys
+  getControlNode = memoizeOne(
+    createControlNode,
+    (nextProps: Props, prevProps: Props) =>
+      nextProps.control === prevProps.control
+  );
 
   render() {
     const {
@@ -410,12 +419,14 @@ export default class FauxControl extends Component<Props> {
       prefix: prefixIn,
       innerRef: controlPropsIn && controlPropsIn.controlRef,
       readOnly,
-      size,
+      ...(controlPropsIn && controlPropsIn.htmlSize
+        ? { controlSize: size, size: controlPropsIn.htmlSize }
+        : { size }),
       suffix: suffixIn,
       variant
     };
 
-    const Control = this.controlNode;
+    const Control = this.getControlNode(this.props);
 
     const underlayProps = { disabled, readOnly, variant };
 

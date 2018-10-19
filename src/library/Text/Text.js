@@ -1,10 +1,11 @@
 /* @flow */
 import React, { Component } from 'react';
-import { string } from 'prop-types';
 import { createStyledComponent } from '../styles';
+import { rtlTextAlign } from '../utils';
+import ElementContext from './ElementContext';
 import TextProvider from './TextProvider';
 
-type Props = {
+export type Props = {
   /** Available horizontal alignments */
   align?: 'start' | 'end' | 'center' | 'justify',
   /** Available styles */
@@ -120,10 +121,11 @@ const styles = {
     const appearance =
       propAppearance !== Text.defaultProps.appearance
         ? propAppearance
-        : isHeadingElement ? element : undefined;
+        : isHeadingElement
+          ? element
+          : undefined;
     const headingAppearance =
       headingElements.indexOf(appearance) !== -1 && appearance;
-    const rtl = theme.direction === 'rtl';
 
     if (headingAppearance) {
       theme = {
@@ -166,15 +168,7 @@ const styles = {
         }
       })(),
       lineHeight: theme.Text_lineHeight,
-      textAlign: (() => {
-        if ((rtl && align == 'start') || (!rtl && align == 'end')) {
-          return 'right';
-        } else if ((rtl && align == 'end') || align == 'start') {
-          return 'left';
-        } else {
-          return align;
-        }
-      })(),
+      textAlign: rtlTextAlign(align, theme.direction),
       ...commonStyles(element, theme, truncate),
       // 1 - Not normalized because we actually want `##em` as applied value
       // 2 - Must come after commonStyles
@@ -185,15 +179,13 @@ const styles = {
   }
 };
 
-// Text's root node must be created outside of render, so that the entire DOM
-// element is replaced only when the element prop is changed, otherwise it is
-// updated in place
-export function createRootNode(props: Props) {
+export const createRootNode = (props: Props) => {
   let { parentElement, element = Text.defaultProps.element, inherit } = props;
   element =
     parentElement === 'p' && element === Text.defaultProps.element
       ? 'span'
       : element;
+
   return createStyledComponent(
     element,
     inherit ? styles.inherit : styles.noInherit,
@@ -202,7 +194,7 @@ export function createRootNode(props: Props) {
       includeStyleReset: !inherit
     }
   );
-}
+};
 
 /**
  * The Text component provides styles and semantic meaning for text and headings
@@ -214,19 +206,20 @@ export default class Text extends Component<Props> {
     element: 'p'
   };
 
-  static contextTypes = {
-    parentElement: string
-  };
-
   render() {
     const { inherit, ...restProps } = this.props;
-    const parentElement = this.context.parentElement;
-    const rootProps = {
-      inherit: inherit === false || !parentElement ? inherit : true,
-      parentElement,
-      ...restProps
-    };
 
-    return <TextProvider {...rootProps} />;
+    return (
+      <ElementContext.Consumer>
+        {(parentElement) => {
+          const rootProps = {
+            inherit: inherit === false || !parentElement ? inherit : true,
+            parentElement,
+            ...restProps
+          };
+          return <TextProvider {...rootProps} />;
+        }}
+      </ElementContext.Consumer>
+    );
   }
 }

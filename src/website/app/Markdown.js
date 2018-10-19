@@ -51,6 +51,17 @@ type mdLinkProps = {
 };
 
 const styles = {
+  blockquote: ({ theme }) => {
+    return {
+      borderLeft: `${theme.space_inline_sm} solid ${rgba(
+        theme.color_theme,
+        0.15
+      )}`,
+      margin: 0,
+      marginLeft: theme.space_inline_md,
+      paddingLeft: theme.space_inset_md
+    };
+  },
   codeBlock: ({ theme }) => ({
     marginBottom: theme.space_stack_xl
   }),
@@ -226,6 +237,7 @@ const styles = {
   })
 };
 
+const Blockquote = createStyledComponent('blockquote', styles.blockquote);
 const CodeBlock = createStyledComponent('div', styles.codeBlock);
 const Image = createStyledComponent('img', styles.image);
 const Label = createStyledComponent(_Label, styles.label);
@@ -260,11 +272,13 @@ function ListItem({ children }: ListItemProps) {
         return child;
       }
 
-      const labelVariant = 'done' === labelText ? 'success' : 'regular';
+      const labelProps = {
+        ...(labelText === 'done' ? { variant: 'success' } : undefined)
+      };
 
       return [
         preLabelText,
-        <Label key={1} variant={labelVariant}>
+        <Label key={1} {...labelProps}>
           {labelText}
         </Label>
       ];
@@ -302,14 +316,15 @@ function isNormalLink(url) {
   return REGEX_IS_NON_ROUTED_LINK.test(url);
 }
 
-export default function Markdown({
-  anchors = true,
-  children,
-  className,
-  scope,
-  standalone,
-  ...restProps
-}: Props) {
+const Markdown = (props: Props) => {
+  const {
+    anchors,
+    children,
+    className,
+    scope,
+    standalone,
+    ...restProps
+  } = props;
   const rootProps = {
     className: className ? `markdown ${className}` : 'markdown',
     ...restProps
@@ -330,6 +345,9 @@ export default function Markdown({
           }
         }
         return <Link {...linkProps}>{children}</Link>;
+      },
+      blockquote(props) {
+        return <Blockquote {...props} />;
       },
       code({ language = 'jsx', code, children }: mdCodeProps) {
         return code ? (
@@ -383,4 +401,10 @@ export default function Markdown({
   const compiled = compile(children, { smartypants: false });
 
   return <Root {...rootProps}>{compiled.tree}</Root>;
-}
+};
+
+Markdown.defaultProps = {
+  anchors: true
+};
+
+export default Markdown;

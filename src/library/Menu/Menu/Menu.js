@@ -1,6 +1,6 @@
 /* @flow */
-import React, { Component } from 'react';
-import { createStyledComponent } from '../../styles/index';
+import React, { PureComponent } from 'react';
+import { createStyledComponent } from '../../styles';
 import { MenuDivider, MenuGroup, MenuItem } from '../index';
 
 type Props = {
@@ -12,10 +12,12 @@ type Props = {
   children?: React$Node,
   /** Data used to contruct Menu. See [example](#data) */
   data?: Items | ItemGroups,
+  /** @Private Index of the highlighted item. Used by Dropdown and Select. */
+  highlightedIndex?: number,
   /**
    * Provides custom rendering control for the items. See the
    * [custom item example](/components/menu#custom-item) and
-   * [React docs](https://reactjs.org/docs/render-props.html).
+   * our [render props guide](/render-props).
    */
   item?: RenderFn,
   /**
@@ -57,7 +59,7 @@ const Root = createStyledComponent(
 );
 
 const isGroupedData = (data: Items | ItemGroups) => {
-  return data[0].hasOwnProperty('items');
+  return data.length && data[0].hasOwnProperty('items');
 };
 
 const groupifyData = (data: Items | ItemGroups) => {
@@ -76,11 +78,13 @@ export const getItems = (data: Items | ItemGroups) => {
 
 /**
  * A Menu presents a list of options representing actions or navigation.
- * Composed of [MenuItems](/components/menu-item), Menu is usually combined with [Popover](/components/popover) to create a [Dropdown](/components/dropdown).
+ * Composed of [MenuItems](/components/menu-item), Menu is usually combined with
+ * [Popover](/components/popover) to create a [Dropdown](/components/dropdown).
  *
- * Menus are great for collecting actions in one place so your users don't need to scan the entire document to find a feature.
+ * Menus are great for collecting actions in one place so your users don't need
+ * to scan the entire document to find a feature.
  */
-export default class Menu extends Component<Props> {
+export default class Menu extends PureComponent<Props> {
   render() {
     const { children, data, ...rootProps } = this.props;
 
@@ -90,32 +94,36 @@ export default class Menu extends Component<Props> {
   }
 
   renderFromData = (data: Items | ItemGroups) => {
+    const { highlightedIndex } = this.props;
     // $FlowFixMe https://github.com/facebook/flow/issues/5885
     const itemGroups: ItemGroups = groupifyData(data);
-    return itemGroups.map(this.renderMenuGroup);
-  };
 
-  renderMenuGroup = (group: ItemGroup, groupIndex: number) => {
-    return group.items && group.items.length ? (
-      <MenuGroup key={groupIndex} title={group.title}>
-        {
-          group.items.reduce(
-            ({ items, index }, item) => ({
-              items: items.concat(
-                this.renderItem({
-                  props: {
-                    index,
-                    item
-                  }
-                })
-              ),
-              index: item.divider ? index : index + 1
-            }),
-            { items: [], index: 0 }
-          ).items
+    return itemGroups.reduce(
+      (acc, group: ItemGroup, groupIndex: number) => {
+        if (!group.items || !group.items.length) {
+          return acc;
         }
-      </MenuGroup>
-    ) : null;
+
+        const menuGroup = (
+          <MenuGroup key={groupIndex} title={group.title}>
+            {group.items.map((item) =>
+              this.renderItem({
+                props: {
+                  isHighlighted: highlightedIndex === acc.index,
+                  index: item.divider ? acc.index : acc.index++,
+                  item
+                }
+              })
+            )}
+          </MenuGroup>
+        );
+
+        acc.groups.push(menuGroup);
+
+        return acc;
+      },
+      { groups: [], index: 0 }
+    ).groups;
   };
 
   getItemProps: PropGetter = (props = {}) => {

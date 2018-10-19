@@ -5,7 +5,7 @@ import IconDanger from '../Icon/IconDanger';
 import IconSuccess from '../Icon/IconSuccess';
 import IconWarning from '../Icon/IconWarning';
 import { createStyledComponent, getNormalizedValue, pxToEm } from '../styles';
-import { mapComponentThemes } from '../themes';
+import { createThemedComponent, mapComponentThemes } from '../themes';
 import IconArrowDropdownUp from '../Icon/IconArrowDropdownUp';
 import IconArrowDropdownDown from '../Icon/IconArrowDropdownDown';
 import FauxControl from '../FauxControl';
@@ -36,8 +36,8 @@ type Props = {
   variant?: 'success' | 'warning' | 'danger'
 };
 
-export const componentTheme = (baseTheme: Object) => ({
-  ...mapComponentThemes(
+export const componentTheme = (baseTheme: Object) =>
+  mapComponentThemes(
     {
       name: 'TextInput',
       theme: textInputComponentTheme(baseTheme)
@@ -54,8 +54,23 @@ export const componentTheme = (baseTheme: Object) => ({
       }
     },
     baseTheme
-  )
-});
+  );
+
+const ThemedFauxControl = createThemedComponent(
+  FauxControl,
+  ({ theme: baseTheme }) =>
+    mapComponentThemes(
+      {
+        name: 'Select',
+        theme: componentTheme(baseTheme)
+      },
+      {
+        name: 'FauxControl',
+        theme: {}
+      },
+      baseTheme
+    )
+);
 
 const styles = {
   root: ({
@@ -73,6 +88,7 @@ const styles = {
       display: 'flex',
       width: '100%',
 
+      // all icons
       '& [role="img"]': {
         display: 'block',
         color: theme.SelectIcon_color,
@@ -89,13 +105,17 @@ const styles = {
         }
       },
 
+      // the arrow icon
       '& :not([role="img"]) ~ [role="img"]': {
         color:
           disabled || readOnly
             ? theme.color_disabled
-            : variant ? theme[`icon_color_${variant}`] : theme.SelectIcon_color
+            : variant
+              ? theme[`icon_color_${variant}`]
+              : theme.SelectIcon_color
       },
 
+      // the variant icon
       '& :not([role="img"]) + [role="img"]:not(:last-of-type)': {
         color:
           disabled || readOnly
@@ -118,7 +138,6 @@ const styles = {
 
     return {
       alignItems: 'center',
-      color: 'teal',
       display: 'flex',
       flex: '1 1 auto',
       height: getNormalizedValue(theme[`Select_height_${size}`], fontSize),
@@ -132,7 +151,7 @@ const styles = {
   }
 };
 
-const Root = createStyledComponent(FauxControl, styles.root, {
+const Root = createStyledComponent(ThemedFauxControl, styles.root, {
   displayName: 'SelectTrigger'
 });
 const Trigger = createStyledComponent('div', styles.trigger, {
@@ -173,11 +192,18 @@ export default class SelectTrigger extends Component<Props> {
       jumbo: 14
     };
 
-    const Arrow = isOpen ? IconArrowDropdownUp : IconArrowDropdownDown;
-    const iconProps = {
-      css: { margin: pxToEm(iconMarginMap[size]) },
-      size: size === 'small' || size === 'medium' ? 'medium' : pxToEm(24)
-    };
+    const ArrowIcon = isOpen ? IconArrowDropdownUp : IconArrowDropdownDown;
+    const Arrow = createStyledComponent(
+      ArrowIcon,
+      {
+        margin: pxToEm(iconMarginMap[size])
+      },
+      {
+        withProps: {
+          size: size === 'small' || size === 'medium' ? 'medium' : pxToEm(24)
+        }
+      }
+    );
 
     const controlProps = {
       hasPlaceholder: !item,
@@ -192,7 +218,7 @@ export default class SelectTrigger extends Component<Props> {
 
     let rootProps = {
       afterItems: [
-        <Arrow {...iconProps} key="arrow" />,
+        <Arrow key="arrow" />,
         <input {...inputProps} key="input" />
       ],
       control: Trigger,

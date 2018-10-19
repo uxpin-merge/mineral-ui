@@ -2,15 +2,18 @@
 import React from 'react';
 import { createStyledComponent } from '../../../../../library/styles';
 import _Link from '../../../../../library/Link';
-import _DemoLayout from '../components/DemoLayout';
+import _DemoLayout from '../../shared/DemoLayout';
+
+const DemoLayout = createStyledComponent(
+  _DemoLayout,
+  {},
+  {
+    includeStyleReset: true,
+    withProps: { marginRight: '1em' }
+  }
+);
 
 const Link = (props: {}) => <_Link target="_blank" {...props} />;
-
-const DemoLayout = createStyledComponent(_DemoLayout, {
-  '& > a': {
-    marginRight: '0.5rem'
-  }
-});
 
 export default {
   id: 'variants',
@@ -19,7 +22,7 @@ export default {
   scope: { DemoLayout, Link },
   source: `
     <DemoLayout>
-      <Link href="http://example.com">Regular</Link>
+      <Link href="http://example.com">Default</Link>
       <Link variant="danger" href="http://example.com">Danger</Link>
       <Link variant="success" href="http://example.com">Success</Link>
       <Link variant="warning" href="http://example.com">Warning</Link>

@@ -12,12 +12,15 @@ module.exports = {
           'src/library/Link/Link.js',
           'src/library/Menu/!(__tests__)/*.js',
           'src/library/Popover/Popover.js',
+          'src/library/TextInput/TextInput.js',
           'src/library/Radio/!(__tests__)/*.js',
           'src/library/Select/Select.js',
           'src/library/Text/Text.js',
           'src/library/TextArea/TextArea.js',
-          'src/library/TextInput/TextInput.js',
           'src/library/Tooltip/Tooltip.js',
+          'src/library/StartEnd/StartEnd.js',
+          'src/library/Tabs/!(__tests__)/*js',
+          'src/library/Table/!(__tests__)/*js'
         ]
       },
       {
@@ -33,8 +36,7 @@ module.exports = {
         include: [
           'src/library/Box/Box.js',
           'src/library/Flex/!(__tests__)/*.js',
-          'src/library/Grid/!(__tests__)/*.js',
-          'src/library/StartEnd/StartEnd.js',
+          'src/library/Grid/!(__tests__)/*.js'
         ]
       }
     ]

@@ -2,6 +2,7 @@
 import React from 'react';
 import darken from 'polished/lib/color/darken';
 import rgba from 'polished/lib/color/rgba';
+import clearFix from 'polished/lib/mixins/clearFix';
 import { createStyledComponent, pxToEm } from '../../../../library/styles';
 import { mineralTheme, ThemeProvider } from '../../../../library/themes';
 import IconCheck from 'mineral-ui-icons/IconCheck';
@@ -54,7 +55,7 @@ const styles = {
     padding: theme.space_inset_md,
 
     [theme.bp_interior_bestPracticesMultiColumn]: {
-      width: `${7 / 12 * 100}%`
+      width: `${(7 / 12) * 100}%`
     },
 
     // Specificity hack
@@ -70,8 +71,10 @@ const styles = {
     [theme.bp_interior_bestPracticesMultiColumn]: {
       borderLeft: `3px solid ${rgba(theme.borderColor, 0.6)}`,
       borderTop: 0,
-      width: `${5 / 12 * 100}%`
+      width: `${(5 / 12) * 100}%`
     },
+
+    ...clearFix(),
 
     '& ::selection': {
       backgroundColor: rgba(theme.color_theme, 0.2)
@@ -83,6 +86,7 @@ const styles = {
       fill: theme.borderColor,
       float: 'left',
       height: theme.baseline_3,
+      marginBottom: pxToEm(4), // Optical alignment
       marginRight: theme.baseline_2,
       padding: `${parseFloat(theme.baseline_1) / 2}em`,
       position: 'relative',
@@ -105,13 +109,8 @@ const Root = createStyledComponent('div', styles.root);
 const Example = createStyledComponent('div', styles.example);
 const Header = createStyledComponent('div', styles.header);
 
-export default function DocPractice({
-  backgroundColor,
-  children,
-  className,
-  example,
-  type
-}: Props) {
+export default function DocPractice(props: Props) {
+  const { backgroundColor, children, className, example, type } = props;
   const iconProps = {
     size: pxToEm(50)
   };
