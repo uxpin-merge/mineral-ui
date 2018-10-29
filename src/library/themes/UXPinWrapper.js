@@ -1,8 +1,10 @@
 import ThemeProvider from './ThemeProvider';
-import { simulations } from 'glamor';
 import React from 'react';
 
-export default function UXPinWrapper({ children }) {
-  simulations(true);
+type Props = {
+  children: React$Node
+};
+
+export default function UXPinWrapper({ children }: Props) {
   return <ThemeProvider>{children}</ThemeProvider>;
 }

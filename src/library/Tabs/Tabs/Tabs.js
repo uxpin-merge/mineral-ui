@@ -1,11 +1,11 @@
 /* @flow */
 import React, { Children, cloneElement, Component } from 'react';
 import { canUseDOM } from 'exenv';
-import { createStyledComponent } from '../styles';
-import { withTheme } from '../themes';
-import { generateId } from '../utils';
-import TabList from './TabList';
-import TabPanel from './TabPanel';
+import { createStyledComponent } from '../../styles';
+import { withTheme } from '../../themes';
+import { generateId } from '../../utils';
+import TabList from '../TabList';
+import TabPanel from '../TabPanel';
 
 type Props = {
   /**  Horizontal or vertical alignment of Tabs in the tab list */

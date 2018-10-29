@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 import { shallow } from 'enzyme';
-import Tab, { componentTheme } from '../Tab';
+import Tab, { componentTheme } from '../Tab/Tab';
 import testThemeOverrides from '../../../../utils/testThemeOverrides';
 import { getProcessedComponentThemeKeys } from '../../themes/processComponentTheme';
 

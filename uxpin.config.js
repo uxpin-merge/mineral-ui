@@ -13,11 +13,14 @@ module.exports = {
           'src/library/Menu/!(__tests__)/*.js',
           'src/library/Popover/Popover.js',
           'src/library/Radio/!(__tests__)/*.js',
+          'src/library/Pagination/Pagination.js',
           'src/library/Select/Select.js',
           'src/library/Text/Text.js',
+          'src/library/Tabs/Tabs/Tabs.js',
+          'src/library/Tabs/Tab/Tab.js',
           'src/library/TextArea/TextArea.js',
           'src/library/TextInput/TextInput.js',
-          'src/library/Tooltip/Tooltip.js',
+          'src/library/Tooltip/Tooltip.js'
         ]
       },
       {
@@ -34,7 +37,7 @@ module.exports = {
           'src/library/Box/Box.js',
           'src/library/Flex/!(__tests__)/*.js',
           'src/library/Grid/!(__tests__)/*.js',
-          'src/library/StartEnd/StartEnd.js',
+          'src/library/StartEnd/StartEnd.js'
         ]
       }
     ]
