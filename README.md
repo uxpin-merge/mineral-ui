@@ -1,11 +1,9 @@
 
-[![build status](https://travis-ci.org/mineral-ui/mineral-ui.svg?branch=master)](https://travis-ci.org/mineral-ui/mineral-ui)
+[![build status](https://travis-ci.com/mineral-ui/mineral-ui.svg?branch=master)](https://travis-ci.com/mineral-ui/mineral-ui)
 [![dependency status](https://david-dm.org/mineral-ui/mineral-ui.svg)](https://david-dm.org/mineral-ui/mineral-ui)
 [![managed with Waffle](https://img.shields.io/badge/managed_with-Waffle-72b2e4.svg)](https://waffle.io/mineral-ui/mineral-ui)
 [![Commitizen friendly](https://img.shields.io/badge/Commitizen-friendly-brightgreen.svg?style=flat)](https://github.com/commitizen/cz-cli)
 [![code style Prettier](https://img.shields.io/badge/code_style-Prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-
-> **_NOTE:_** _We’re just getting started. While we appreciate any feedback, we’re not yet ready to accept public contributions._
 
 # [Mineral UI](https://mineral-ui.com/)
 
@@ -28,13 +26,13 @@ Install the [Mineral UI package](https://www.npmjs.com/package/mineral-ui) and
 its dependencies.
 
 ```bash
-npm install --save mineral-ui glamor glamorous react react-dom
+npm install --save mineral-ui emotion emotion-theming react-emotion react react-dom
 ```
 
 or
 
 ```bash
-yarn add mineral-ui glamor glamorous react react-dom
+yarn add mineral-ui emotion emotion-theming react-emotion react react-dom
 ```
 
 
@@ -61,7 +59,7 @@ render(<App />, document.getElementById('app'));
 
 > Your app must be wrapped in a [ThemeProvider](https://mineral-ui.com/components/theme-provider/) at its root in order for the styles to apply correctly.
 
-> Also, please see our [import syntax guidelines](./docs/import-syntax.md).
+> Also, please see our [import syntax guide](https://mineral-ui.com/import-syntax).
 
 
 ### Open Sans Font
@@ -72,13 +70,16 @@ Mineral UI was designed around [Open Sans](https://fonts.google.com/specimen/Ope
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 ```
 
-For more options loading this font from Google, check out the Seleted Family popup, in the [specimen](https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans). You can also download the font file and serve it yourself if you'd like, but we'll leave that to you.
+For more options loading this font from Google, check out the Selected Family popup, in the [specimen](https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans). You can also download the font file and serve it yourself if you'd like, but we'll leave that to you.
 
 
 ### Styling
 
-This project uses CSS-in-JS and [Glamorous](https://glamorous.rocks) for styling components. Refer to the [styling page](https://mineral-ui.com/styling/) for details.
+This project uses CSS-in-JS and [Emotion](https://emotion.sh/) for component styling. Refer to the [styling page](https://mineral-ui.com/styling/) for details.
 
+## Questions
+
+If you have read through the documentation but are still facing difficulties, we are happy to help. Please reproduce your error by forking our [Mineral UI Starter](https://codesandbox.io/s/v410y75m0) and adding the relevant code there. Then, send us a message on the Flowdock "Mineral & Styleguide" Flow or open an issue including the relevant link.
 
 ## Contributing
 

@@ -2,15 +2,13 @@ Theming is a core concept in Mineral UI.  Themes provide a consistent look and
 feel across pages with varied functionality.  Mineral UI makes it simple to
 implement and maintain theming across your app.
 
-<Button primary element="a" href="/palette-demo/">Mineral UI Palette Demo</Button>
-
 ## Common Scenarios
 
 ### Theme your entire app
 
 Wrap your app in a [ThemeProvider](#common-scenarios-api) in order for styles to
 be properly applied. The ThemeProvider provides the theme to the tree of Mineral
-UI components, and any other Glamorous components contained within.
+UI components, and any other Emotion components contained within.
 
 ```jsx
 import React from 'react';
@@ -252,8 +250,6 @@ that enables theme access inside any component.
 **Parameters**
 
 * `component`: A React component
-* `options`: Optional. An object containing [Glamorous](https://github.com/paypal/glamorous/blob/master/src/with-theme.js)
-options.
 
 **Returns**
 

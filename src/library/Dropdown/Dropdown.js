@@ -1,7 +1,8 @@
 /* @flow */
 import React, { Children, Component, cloneElement } from 'react';
 import { findDOMNode } from 'react-dom';
-import deepEqual from 'fast-deep-equal';
+import deepEqual from 'react-fast-compare';
+import memoizeOne from 'memoize-one';
 import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed';
 import { composeEventHandlers, generateId, isRenderProp } from '../utils';
 import Menu, { getItems } from '../Menu/Menu/Menu';
@@ -18,7 +19,7 @@ type Props = {
   /**
    * Trigger for the Dropdown. Optionally provides custom rendering control.
    * See the [custom trigger example](/components/dropdown#custom-trigger)
-   * and [React docs](https://reactjs.org/docs/render-props.html).
+   * and our [render props guide](/render-props).
    */
   children: React$Node | RenderFn,
   /**
@@ -50,7 +51,7 @@ type Props = {
   /**
    * Provides custom rendering control for the items. See the
    * [custom item example](/components/dropdown#custom-item) and
-   * [React docs](https://reactjs.org/docs/render-props.html).
+   * our [render props guide](/render-props).
    */
   item?: RenderFn,
   /**
@@ -61,7 +62,7 @@ type Props = {
   /**
    * Provides custom rendering control for the menu. See the
    * [custom menu example](/components/dropdown#custom-menu) and
-   * [React docs](https://reactjs.org/docs/render-props.html).
+   * our [render props guide](/render-props).
    */
   menu?: RenderFn,
   /**
@@ -142,18 +143,14 @@ export default class Dropdown extends Component<Props, State> {
 
   itemMatcher: any;
 
-  items: Items = getItems(this.props.data);
+  items: Items;
 
-  componentWillReceiveProps(nextProps: Props) {
-    if (!deepEqual(this.props.data, nextProps.data)) {
-      this.items = getItems(nextProps.data);
-    }
-  }
+  getItems = memoizeOne(getItems, deepEqual);
 
   render() {
     const {
       children,
-      data: ignoreData,
+      data,
       item: ignoreItem,
       menu: ignoreMenu,
       ...restProps
@@ -169,6 +166,8 @@ export default class Dropdown extends Component<Props, State> {
       content: this.renderContent,
       triggerRef: this.setTriggerRef
     };
+
+    this.items = this.getItems(data);
 
     return (
       <Root {...rootProps}>
@@ -274,6 +273,7 @@ export default class Dropdown extends Component<Props, State> {
       id: this.getMenuId(),
       itemKey,
       data,
+      highlightedIndex: this.getControllableValue('highlightedIndex'),
       item: this.renderItem,
       role: 'menu'
     };

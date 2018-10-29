@@ -26,7 +26,7 @@ const styles = {
     marginTop: pxToEm(89), // to baseline
     position: 'sticky',
     top: -1,
-    zIndex: theme.zIndex_800,
+    zIndex: theme.zIndex_100,
 
     [theme.bp_moreSpacious]: {
       marginTop: pxToEm(108) // to baseline
@@ -40,17 +40,15 @@ const styles = {
   })
 };
 
-const Root = createStyledComponent(Section, styles.subnav).withProps({
-  element: 'nav'
+const Root = createStyledComponent(Section, styles.subnav, {
+  withProps: {
+    element: 'nav'
+  }
 });
 const NavElement = createStyledComponent(Link, styles.navElement);
 
-export default function DocSubNav({
-  bestPractices,
-  examples,
-  whenHowToUse,
-  ...restProps
-}: Props) {
+export default function DocSubNav(props: Props) {
+  const { bestPractices, examples, whenHowToUse, ...restProps } = props;
   // there is no Examples h2, so we just link to the first example.
   let firstExampleId = 'examples';
   if (examples && examples.length > 0) {

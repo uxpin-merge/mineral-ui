@@ -1,5 +1,15 @@
 /* @flow */
-export default [
+
+export type DemoRoutes = Array<DemoRoute>;
+export type DemoRoute = Array<Route> | Route;
+type Route = {
+  description: string,
+  redirect?: string,
+  slug: string,
+  title: string
+};
+
+const demoRoutes: DemoRoutes = [
   {
     description:
       'Avatar provides a graphic representation of an identity. It can display an image, text, or an icon.',
@@ -11,6 +21,12 @@ export default [
       'Buttons trigger actions or state changes in your app. Choose a button color to match the intent of the action.',
     slug: 'button',
     title: 'Button'
+  },
+  {
+    description:
+      'ButtonGroup stylistically groups related buttons and provides the capability to select buttons like radios or checkboxes.',
+    slug: 'button-group',
+    title: 'ButtonGroup'
   },
   [
     {
@@ -75,6 +91,42 @@ export default [
       title: 'CheckboxGroup'
     }
   ],
+  [
+    {
+      description:
+        'Dialog displays content in a layer above the app and requires user interaction to dismiss it. It may appear contextually or as a modal.',
+      slug: 'dialog',
+      title: 'Dialog'
+    },
+    {
+      description:
+        'DialogActions renders primary and secondary actions inside Dialog.',
+      slug: 'dialog-actions',
+      title: 'DialogActions'
+    },
+    {
+      description: 'DialogBody contains the main content of Dialog.',
+      slug: 'dialog-body',
+      title: 'DialogBody'
+    },
+    {
+      description:
+        'DialogFooter displays actionable content at the bottom of Dialog.',
+      slug: 'dialog-footer',
+      title: 'DialogFooter'
+    },
+    {
+      description:
+        'DialogHeader displays title content and an optional close button at the top of Dialog.',
+      slug: 'dialog-header',
+      title: 'DialogHeader'
+    },
+    {
+      description: 'DialogTitle displays the title of Dialog.',
+      slug: 'dialog-title',
+      title: 'DialogTitle'
+    }
+  ],
   {
     description:
       'Dropdowns display a hidden Menu, available upon user interaction. Use Dropdowns for non-primary actions only.',
@@ -109,6 +161,7 @@ export default [
   },
   [
     {
+      description: 'Redirect layout to box',
       redirect: 'box',
       slug: 'layout',
       title: 'Layout'
@@ -183,6 +236,12 @@ export default [
   ],
   {
     description:
+      'Pagination offers a means to control the space consumed by a collection of items by limiting the page size and providing navigation for access to all pages.',
+    slug: 'pagination',
+    title: 'Pagination'
+  },
+  {
+    description:
       'Popovers display supporting content when your user interacts with an associated trigger. Use Popovers to implement other custom behaviors or widgets.',
     slug: 'popover',
     title: 'Popover'
@@ -206,6 +265,26 @@ export default [
     slug: 'select',
     title: 'Select'
   },
+  {
+    description:
+      'Table displays structured data with sortable columns and selectable rows.',
+    slug: 'table',
+    title: 'Table'
+  },
+  [
+    {
+      description:
+        'Tabs provide easy management for viewing related content in the same layout region.',
+      slug: 'tabs',
+      title: 'Tabs'
+    },
+    {
+      description:
+        'Tab displays the tab title and associated panel content (when selected).',
+      slug: 'tab',
+      title: 'Tab'
+    }
+  ],
   {
     description:
       'The Text component provides styles and semantic meaning for text and headings in a manner consistent with other components.',
@@ -237,3 +316,5 @@ export default [
     title: 'Tooltip'
   }
 ];
+
+export default demoRoutes;

@@ -1,5 +1,6 @@
 /* @flow */
 import React, { Component } from 'react';
+import memoizeOne from 'memoize-one';
 import { createStyledComponent } from '../../library/styles';
 
 type Props = {
@@ -34,24 +35,22 @@ const styles = {
         ? paddingWithClipWide
         : theme.SectionPaddingVerticalWide;
 
-    const styles = [
-      {
-        margin: '0 auto',
-        maxWidth: '80em',
-        paddingBottom,
-        paddingLeft: theme.SectionPaddingHorizontal,
-        paddingRight: theme.SectionPaddingHorizontal,
-        paddingTop,
-        position: 'relative',
+    const styles = {
+      margin: '0 auto',
+      maxWidth: '80em',
+      paddingBottom,
+      paddingLeft: theme.SectionPaddingHorizontal,
+      paddingRight: theme.SectionPaddingHorizontal,
+      paddingTop,
+      position: 'relative',
 
-        [theme.bp_moreSpacious]: {
-          paddingBottom: paddingBottomWide,
-          paddingLeft: theme.SectionPaddingHorizontalWide,
-          paddingRight: theme.SectionPaddingHorizontalWide,
-          paddingTop: paddingTopWide
-        }
+      [theme.bp_moreSpacious]: {
+        paddingBottom: paddingBottomWide,
+        paddingLeft: theme.SectionPaddingHorizontalWide,
+        paddingRight: theme.SectionPaddingHorizontalWide,
+        paddingTop: paddingTopWide
       }
-    ];
+    };
 
     const pseudoStyles = {
       backgroundColor: clipColor,
@@ -78,29 +77,21 @@ const styles = {
      * [2] This calc takes the distance from [1] and adds the proportional width
      *     of each clipping shape
      */
-
-    const beforeStyles = {
-      '&::before': {
+    if (point) {
+      styles['&::before'] = {
         ...pseudoStyles,
         left: 'calc(-50vw + 50%)', // [1]
         transform: `skewY(${angles[0]}deg) ${transformProperties}`,
         transformOrigin: `${clipBottomEdge ? 'top' : 'bottom'} right`,
         width: `calc(50vw - 50% + ${beforeWidth})` // [2]
-      }
-    };
-
-    const afterStyles = {
-      '&::after': {
+      };
+      styles['&::after'] = {
         ...pseudoStyles,
         right: 'calc(-50vw + 50%)', // [1]
         transform: `skewY(${-1 * angles[1]}deg) ${transformProperties}`,
         transformOrigin: `${clipBottomEdge ? 'top' : 'bottom'} left`,
         width: `calc(50vw - 50% + ${afterWidth})` // [2]
-      }
-    };
-
-    if (point) {
-      styles.push(beforeStyles, afterStyles);
+      };
     }
 
     return styles;
@@ -109,15 +100,13 @@ const styles = {
 
 const Inner = createStyledComponent('div', styles.inner);
 
-// Root node must be created outside of render, so that the entire DOM element
-// is replaced only when the element prop is changed, otherwise it is updated in place
-function createRootNode(props: Props) {
+const createRootNode = (props: Props) => {
   const { element = Section.defaultProps.element } = props;
 
   return createStyledComponent(element, styles.root, {
     rootEl: element
   });
-}
+};
 
 export default class Section extends Component<Props> {
   static defaultProps = {
@@ -126,13 +115,12 @@ export default class Section extends Component<Props> {
     element: 'section'
   };
 
-  componentWillUpdate(nextProps: Props) {
-    if (this.props.element !== nextProps.element) {
-      this.rootNode = createRootNode(nextProps);
-    }
-  }
-
-  rootNode: React$ComponentType<*> = createRootNode(this.props);
+  // Must be an instance method to avoid affecting other instances memoized keys
+  getRootNode = memoizeOne(
+    createRootNode,
+    (nextProps: Props, prevProps: Props) =>
+      nextProps.element === prevProps.element
+  );
 
   render() {
     const {
@@ -143,7 +131,7 @@ export default class Section extends Component<Props> {
       ...restProps
     } = this.props;
 
-    const Root = this.rootNode;
+    const Root = this.getRootNode(this.props);
 
     const rootProps = {
       point,
