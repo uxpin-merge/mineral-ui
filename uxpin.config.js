@@ -16,6 +16,7 @@ module.exports = {
           'src/library/Pagination/Pagination.js',
           'src/library/Select/Select.js',
           'src/library/Text/Text.js',
+          'src/library/Table/Table.js',
           'src/library/Tabs/Tabs/Tabs.js',
           'src/library/Tabs/Tab/Tab.js',
           'src/library/TextArea/TextArea.js',
