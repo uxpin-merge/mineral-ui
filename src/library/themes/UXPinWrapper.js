@@ -1,3 +1,4 @@
+/* @flow */
 import ThemeProvider from './ThemeProvider';
 import React from 'react';
 
