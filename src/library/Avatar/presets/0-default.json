@@ -4,7 +4,8 @@
     "IUR6EPRYZLA2XRUHSS2SN9BQLGV2429R": {
       "name": "Avatar",
       "props": {
-        "children": "Melissa"
+        "children": "Melissa",
+        "size": "large"
       }
     }
   }
