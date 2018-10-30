@@ -6,7 +6,8 @@
       "props": {
         "currentPage": 1,
         "pageSize": 10,
-        "totalCount": 100
+        "size": "small",
+        "totalCount": 30
       }
     }
   }
