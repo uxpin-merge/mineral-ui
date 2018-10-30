@@ -6,6 +6,7 @@ module.exports = {
         include: [
           'src/library/Avatar/Avatar.js',
           'src/library/Button/Button.js',
+          'src/library/ButtonGroup/ButtonGroup.js',
           'src/library/Checkbox/!(__tests__)/*.js',
           'src/library/Dropdown/Dropdown.js',
           'src/library/Form/!(__tests__)/*.js',

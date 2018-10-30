@@ -1,6 +1,7 @@
 /* @flow */
 import React, { Children, Component, cloneElement } from 'react';
 import { createStyledComponent } from '../styles';
+import { getType } from '../utils/children';
 import { setFromArray, toArray } from '../utils/collections';
 import composeEventHandlers from '../utils/composeEventHandlers';
 import Button from '../Button';
@@ -267,7 +268,7 @@ export default class ButtonGroup extends Component<Props, State> {
     const buttons = Children.map(children, (child, index) => {
       const isChildToggleable = mode;
       const isChildChecked = isChecked(checked, index);
-      const hasNestedButton = child.type !== Button;
+      const hasNestedButton = getType(child) !== Button;
       const nestedButton = hasNestedButton && child.props.children;
 
       return cloneElement(child, {
