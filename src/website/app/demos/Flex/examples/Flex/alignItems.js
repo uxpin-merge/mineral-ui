@@ -4,14 +4,18 @@ import FlexItem from '../../components/FlexItem';
 import _DemoLayout from '../../components/DemoLayout';
 import _Flex from '../../components/Flex';
 
-const DemoLayout = _DemoLayout.withProps({ lastRowStartsAt: 5 });
+const DemoLayout = createStyledComponent(
+  _DemoLayout,
+  {},
+  { withProps: { lastRowStartsAt: 5 } }
+);
 
 const Flex = createStyledComponent(_Flex, ({ direction }) => {
   return direction === 'column'
     ? {
         float: 'left',
         height: '11rem',
-        width: '22%',
+        width: '21%',
 
         '&:not(:last-child)': {
           marginRight: '5%'

@@ -1,11 +1,13 @@
 /* @flow */
 import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
-import deepEqual from 'fast-deep-equal';
+import deepEqual from 'react-fast-compare';
+import memoizeOne from 'memoize-one';
 import scrollIntoViewIfNeeded from 'scroll-into-view-if-needed';
 import { createStyledComponent, pxToEm } from '../styles';
 import { createThemedComponent, mapComponentThemes } from '../themes';
 import { composeEventHandlers, generateId, isRenderProp } from '../utils';
+import ModifiersContext from '../Dialog/ModifiersContext';
 import Dropdown, {
   componentTheme as dropdownComponentTheme
 } from '../Dropdown/Dropdown';
@@ -52,7 +54,7 @@ type Props = {
   /**
    * Provides custom rendering control for the items. See the
    * [custom item example](/components/select#custom-item) and
-   * [React docs](https://reactjs.org/docs/render-props.html).
+   * our [render props guide](/render-props).
    */
   item?: RenderFn,
   /**
@@ -63,7 +65,7 @@ type Props = {
   /**
    * Provides custom rendering control for the menu. See the
    * [custom menu example](/components/select#custom-menu) and
-   * [React docs](https://reactjs.org/docs/render-props.html).
+   * our [render props guide](/render-props).
    */
   menu?: RenderFn,
   /**
@@ -100,7 +102,7 @@ type Props = {
   /**
    * Provides custom rendering control for the trigger. See the
    * [custom trigger example](/components/select#custom-trigger) and
-   * [React docs](https://reactjs.org/docs/render-props.html).
+   * our [render props guide](/render-props).
    */
   trigger?: RenderFn,
   /** Ref for the trigger */
@@ -137,8 +139,8 @@ type RenderProps = {
   props: Object
 } & StateAndHelpers;
 
-export const componentTheme = (baseTheme: Object) => ({
-  ...mapComponentThemes(
+export const componentTheme = (baseTheme: Object) =>
+  mapComponentThemes(
     {
       name: 'Dropdown',
       theme: dropdownComponentTheme(baseTheme)
@@ -151,24 +153,20 @@ export const componentTheme = (baseTheme: Object) => ({
       ...selectTriggerComponentTheme(baseTheme),
       ...baseTheme
     }
-  )
-});
+  );
 
-const ThemedDropdown = createThemedComponent(
-  Dropdown,
-  ({ theme: baseTheme }) => ({
-    ...mapComponentThemes(
-      {
-        name: 'Select',
-        theme: componentTheme(baseTheme)
-      },
-      {
-        name: 'Dropdown',
-        theme: {}
-      },
-      baseTheme
-    )
-  })
+const ThemedDropdown = createThemedComponent(Dropdown, ({ theme: baseTheme }) =>
+  mapComponentThemes(
+    {
+      name: 'Select',
+      theme: componentTheme(baseTheme)
+    },
+    {
+      name: 'Dropdown',
+      theme: {}
+    },
+    baseTheme
+  )
 );
 
 const Root = createStyledComponent(
@@ -218,39 +216,55 @@ export default class Select extends Component<Props, State> {
 
   itemMatcher: any;
 
-  items: Items = getItems(this.props.data);
+  items: Items;
+
+  getItems = memoizeOne(getItems, deepEqual);
 
   selectTrigger: ?React$Component<*, *>;
 
-  componentWillReceiveProps(nextProps: Props) {
-    if (!deepEqual(this.props.data, nextProps.data)) {
-      this.items = getItems(nextProps.data);
-    }
-  }
-
   render() {
-    const { disabled, modifiers, readOnly, trigger, ...restProps } = this.props;
+    const {
+      data,
+      disabled,
+      modifiers,
+      readOnly,
+      trigger,
+      ...restProps
+    } = this.props;
+
     const isOpen = this.getControllableValue('isOpen');
+
+    this.items = this.getItems(data);
 
     const rootProps = {
       ...restProps,
       id: this.id,
+      data,
       disabled: disabled || readOnly,
       highlightedIndex: this.getHighlightedOrSelectedIndex(),
       isOpen,
-      modifiers: {
-        contentWidth: contentWidthModifier,
-        ...modifiers
-      },
       onClose: this.close,
       onOpen: this.open,
       menu: this.renderMenu
     };
 
     return (
-      <Root {...rootProps}>
-        {isRenderProp(trigger) ? this.renderTrigger : this.renderTrigger()}
-      </Root>
+      <ModifiersContext.Consumer>
+        {(contextModifiers) => {
+          rootProps.modifiers = {
+            contentWidth: contentWidthModifier,
+            ...(modifiers || contextModifiers)
+          };
+
+          return (
+            <Root {...rootProps}>
+              {isRenderProp(trigger)
+                ? this.renderTrigger
+                : this.renderTrigger()}
+            </Root>
+          );
+        }}
+      </ModifiersContext.Consumer>
     );
   }
 
@@ -514,7 +528,9 @@ export default class Select extends Component<Props, State> {
         return {
           highlightedIndex: selectedItem
             ? this.items.indexOf(selectedItem)
-            : prevState.highlightedIndex ? prevState.highlightedIndex : 0
+            : prevState.highlightedIndex
+              ? prevState.highlightedIndex
+              : 0
         };
       }, this.scrollHighlightedItemIntoViewIfNeeded);
     }

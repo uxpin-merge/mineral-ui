@@ -4,15 +4,14 @@ import { shallow } from 'enzyme';
 import { mountInThemeProvider } from '../../../../utils/enzymeUtils';
 import { DropdownContent } from '../../Dropdown';
 import { MenuItem } from '../../Menu';
-import Select, { SelectTrigger } from '../../Select';
+import Select, { componentTheme } from '../../Select/Select';
+import SelectTrigger from '../../Select/SelectTrigger';
 import examples from '../../../website/app/demos/Select/examples';
 import testDemoExamples from '../../../../utils/testDemoExamples';
+import testThemeOverrides from '../../../../utils/testThemeOverrides';
+import { getProcessedComponentThemeKeys } from '../../themes/processComponentTheme';
 
 import type { Items } from '../../Menu/Menu/Menu';
-
-const REGEX_SELECT_CONTENT_ID = /^select-\d+-content$/;
-const REGEX_SELECT_MENU_ID = /^select-\d+-menu$/;
-const REGEX_SELECT_ITEM_ID = /^select-\d+-item-\d+$/;
 
 const data: Items = [
   {
@@ -95,6 +94,25 @@ describe('Select', () => {
     });
   });
 
+  describe('theme overrides', () => {
+    testThemeOverrides(
+      <Select data={data} id="test" isOpen>
+        <button>trigger</button>
+      </Select>,
+      getProcessedComponentThemeKeys(componentTheme, {
+        excludeKeys: [
+          'Select_color',
+          'Select_color_readOnly',
+          'Select_fontSize_small',
+          'Select_paddingHorizontal_small',
+          'Select_height_small',
+          'Select_height_medium',
+          'Select_height_jumbo'
+        ]
+      })
+    );
+  });
+
   describe('mounted in DOM', () => {
     let themeProvider;
 
@@ -103,179 +121,33 @@ describe('Select', () => {
     });
 
     describe('render props', () => {
+      let renderer = jest.fn(() => <div />);
+
+      beforeEach(() => {
+        renderer.mockClear();
+      });
+
       describe('trigger', () => {
-        let select, trigger;
-
-        beforeEach(() => {
-          trigger = jest.fn().mockImplementation(({ props }) => {
-            const {
-              isOpen: ignoreIsOpen,
-              item: ignoreItem,
-              triggerRef: ignoreTriggerRef,
-              variant: ignoreVariant,
-              ...restProps
-            } = props;
-
-            return <div {...restProps}>Trigger</div>;
-          });
-
-          [themeProvider, select] = mountSelect({
-            trigger
-          });
-        });
-
         it('calls trigger prop with expected arguments', () => {
-          expect(trigger).toBeCalledWith(
-            expect.objectContaining({
-              state: expect.objectContaining({
-                highlightedIndex: undefined,
-                isOpen: false,
-                selectedItem: undefined
-              }),
-              helpers: expect.objectContaining({
-                close: expect.any(Function),
-                focusTrigger: expect.any(Function),
-                open: expect.any(Function)
-              }),
-              props: expect.objectContaining({
-                'aria-describedby': expect.stringMatching(
-                  REGEX_SELECT_CONTENT_ID
-                ),
-                'aria-disabled': undefined,
-                'aria-expanded': false,
-                'aria-haspopup': 'listbox',
-                'aria-invalid': undefined,
-                'aria-owns': expect.stringMatching(REGEX_SELECT_CONTENT_ID),
-                'aria-readonly': undefined,
-                'aria-required': undefined,
-                children: undefined,
-                disabled: undefined,
-                isOpen: false,
-                item: undefined,
-                name: undefined,
-                onBlur: expect.any(Function),
-                onClick: expect.any(Function),
-                onKeyDown: expect.any(Function),
-                onKeyUp: expect.any(Function),
-                placeholder: expect.any(String),
-                readOnly: undefined,
-                ref: expect.any(Function),
-                role: 'button',
-                size: 'large',
-                tabIndex: 0,
-                variant: undefined
-              })
-            })
-          );
-        });
+          [themeProvider] = mountSelect({ trigger: renderer });
 
-        it('renders expected content', () => {
-          expect(select).toMatchSnapshot();
+          expect(renderer.mock.calls[0]).toMatchSnapshot();
         });
       });
 
       describe('menu', () => {
-        let select, menu;
-
-        beforeEach(() => {
-          menu = jest.fn().mockImplementation(({ props }) => {
-            const {
-              renderItem: ignoreRenderItem,
-              itemKey: ignoreItemKey,
-              item: ignoreItem,
-              ...restProps
-            } = props;
-            return <div {...restProps}>Menu</div>;
-          });
-
-          [themeProvider, select] = mountSelect({ menu, isOpen: true });
-        });
-
         it('calls menu prop with expected arguments', () => {
-          expect(menu).toBeCalledWith(
-            expect.objectContaining({
-              state: expect.objectContaining({
-                highlightedIndex: undefined,
-                isOpen: true,
-                selectedItem: undefined
-              }),
-              helpers: expect.objectContaining({
-                close: expect.any(Function),
-                focusTrigger: expect.any(Function),
-                open: expect.any(Function)
-              }),
-              props: expect.objectContaining({
-                data,
-                id: expect.stringMatching(REGEX_SELECT_MENU_ID),
-                itemKey: 'value',
-                item: expect.any(Function),
-                role: 'listbox'
-              })
-            })
-          );
-        });
+          [themeProvider] = mountSelect({ menu: renderer, isOpen: true });
 
-        it('renders expected content', () => {
-          expect(select).toMatchSnapshot();
+          expect(renderer.mock.calls[0]).toMatchSnapshot();
         });
       });
 
       describe('item', () => {
-        let select, item;
-
-        beforeEach(() => {
-          item = jest.fn().mockImplementation(({ props }) => {
-            const {
-              render: ignoreRender,
-              text: ignoreText,
-              index: ignoreIndex,
-              item,
-              variant: ignoreVariant,
-              isHighlighted: ignoreIsHighlighted,
-              ...restProps
-            } = props;
-
-            return <div {...restProps}>{item.text}</div>;
-          });
-
-          [themeProvider, select] = mountSelect({ item, isOpen: true });
-        });
-
         it('calls item prop with expected arguments', () => {
-          expect(item).toBeCalledWith(
-            expect.objectContaining({
-              state: expect.objectContaining({
-                highlightedIndex: undefined,
-                isOpen: true,
-                selectedItem: undefined
-              }),
-              helpers: expect.objectContaining({
-                close: expect.any(Function),
-                focusTrigger: expect.any(Function),
-                open: expect.any(Function)
-              }),
-              props: expect.objectContaining({
-                'aria-disabled': undefined,
-                'aria-selected': false,
-                children: 'A item',
-                disabled: undefined,
-                id: expect.stringMatching(REGEX_SELECT_ITEM_ID),
-                index: expect.any(Number),
-                isHighlighted: false,
-                item: expect.any(Object),
-                onClick: expect.any(Function),
-                onKeyDown: expect.any(Function),
-                role: 'option',
-                tabIndex: null,
-                text: expect.any(String),
-                value: expect.any(String)
-              })
-            })
-          );
-        });
+          [themeProvider] = mountSelect({ item: renderer, isOpen: true });
 
-        it('renders expected content', () => {
-          expect(select).toMatchSnapshot();
+          expect(renderer.mock.calls[0]).toMatchSnapshot();
         });
       });
     });

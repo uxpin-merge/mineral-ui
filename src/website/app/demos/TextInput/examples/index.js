@@ -14,7 +14,7 @@ import readOnly from './readOnly';
 import required from './required';
 import rtl from './rtl';
 import sizes from './sizes';
-import states from './states';
+import types from './types';
 import uncontrolled from './uncontrolled';
 import variants from './variants';
 
@@ -35,6 +35,6 @@ export default [
   rtl,
   formField,
   nextToButton,
-  kitchenSink,
-  states
+  types,
+  kitchenSink
 ];

@@ -1,5 +1,6 @@
 /* @flow */
 import React, { Component, cloneElement } from 'react';
+import memoizeOne from 'memoize-one';
 import { ellipsis } from 'polished';
 import { createStyledComponent, pxToEm, getNormalizedValue } from '../styles';
 
@@ -29,14 +30,14 @@ type Props = {
   /** Available types */
   type?: string,
   /** Available variants */
-  variant?: 'regular' | 'danger' | 'success' | 'warning'
+  variant?: 'danger' | 'success' | 'warning'
 };
 
 // prettier-ignore
 export const componentTheme = (baseTheme: Object) => ({
-  Button_backgroundColor: baseTheme.color_gray_20,
-  Button_backgroundColor_active: baseTheme.color_gray_30,
-  Button_backgroundColor_focus: baseTheme.color_gray_20,
+  Button_backgroundColor: baseTheme.backgroundColor,
+  Button_backgroundColor_active: baseTheme.backgroundColor_active,
+  Button_backgroundColor_focus: baseTheme.backgroundColor_focus,
   Button_backgroundColor_hover: baseTheme.backgroundColor_hover,
   Button_backgroundColor_minimal_active: baseTheme.backgroundColor_active,
   Button_backgroundColor_minimal_hover: baseTheme.backgroundColor_hover,
@@ -45,10 +46,13 @@ export const componentTheme = (baseTheme: Object) => ({
   Button_backgroundColor_primary_focus: baseTheme.backgroundColor_themePrimary_focus,
   Button_backgroundColor_primary_hover: baseTheme.backgroundColor_themePrimary_hover,
   Button_borderColor: baseTheme.borderColor,
+  Button_borderColor_active: baseTheme.borderColor_theme_active,
+  Button_borderColor_focus: baseTheme.borderColor_theme_focus,
+  Button_borderColor_hover: baseTheme.borderColor_theme_hover,
   Button_borderRadius: baseTheme.borderRadius_1,
   Button_borderWidth: 1, // px
   Button_boxShadow_focus: `0 0 0 1px ${baseTheme.boxShadow_focusInner}, 0 0 0 2px ${baseTheme.borderColor_theme_focus}`,
-  Button_color: baseTheme.color,
+  Button_color: baseTheme.color_theme,
   Button_color_minimal: baseTheme.color_theme,
   Button_color_primary: baseTheme.color_themePrimary,
   Button_fontWeight: baseTheme.fontWeight_semiBold,
@@ -84,20 +88,23 @@ function chooseColor({ disabled, primary, minimal }: Props, theme) {
 }
 
 const styles = {
-  button: (props) => {
-    let theme = componentTheme(props.theme);
-    const {
-      circular,
-      disabled,
-      fullWidth,
-      minimal,
-      primary,
-      size,
-      text,
-      variant
-    } = props;
+  button: ({
+    circular,
+    disabled,
+    fullWidth,
+    minimal,
+    primary,
+    size,
+    text,
+    theme: baseTheme,
+    variant
+  }) => {
+    let theme = componentTheme(baseTheme);
+    const rtl = theme.direction === 'rtl';
+    const firstChildMarginProperty = rtl ? 'marginLeft' : 'marginRight';
+    const lastChildMarginProperty = rtl ? 'marginRight' : 'marginLeft';
 
-    if (variant !== 'regular') {
+    if (variant) {
       // prettier-ignore
       theme = {
         ...theme,
@@ -105,6 +112,9 @@ const styles = {
         Button_backgroundColor_primary_active: theme[`backgroundColor_${variant}Primary_active`],
         Button_backgroundColor_primary_focus: theme[`backgroundColor_${variant}Primary_focus`],
         Button_backgroundColor_primary_hover: theme[`backgroundColor_${variant}Primary_hover`],
+        Button_borderColor_active: theme[`borderColor_${variant}_active`],
+        Button_borderColor_focus: theme[`borderColor_${variant}_focus`],
+        Button_borderColor_hover: theme[`borderColor_${variant}_hover`],
         Button_boxShadow_focus: `0 0 0 1px ${theme.boxShadow_focusInner}, 0 0 0 2px ${theme[`borderColor_${variant}_focus`]}`,
         Button_color: theme[`color_${variant}`],
         Button_color_primary: theme[`color_${variant}Primary`],
@@ -113,7 +123,7 @@ const styles = {
       };
     }
 
-    const color = chooseColor(props, theme);
+    const color = chooseColor({ disabled, primary, minimal }, theme);
     return {
       backgroundColor: (() => {
         if (disabled && !minimal) {
@@ -140,6 +150,7 @@ const styles = {
       display: 'inline-block',
       fontWeight: theme.Button_fontWeight,
       height: theme[`Button_height_${size}`],
+      margin: 0,
       // if the user puts in a small icon in a large button
       // we want to force the button to be round/square
       // (really just pertinent on icon-only buttons)
@@ -161,7 +172,8 @@ const styles = {
             return theme.Button_backgroundColor_focus;
           }
         })(),
-        boxShadow: theme.Button_boxShadow_focus,
+        borderColor: minimal ? theme.Button_borderColor_focus : undefined,
+        boxShadow: minimal ? undefined : theme.Button_boxShadow_focus,
         color,
         textDecoration: 'none'
       },
@@ -177,8 +189,23 @@ const styles = {
             }
           }
         })(),
+        borderColor:
+          disabled || minimal || primary
+            ? undefined
+            : theme.Button_borderColor_hover,
         color,
         textDecoration: 'none'
+      },
+      '&:focus:active, &:focus:hover': {
+        borderColor: (() => {
+          if (primary) {
+            return 'transparent';
+          } else if (minimal) {
+            return theme.Button_borderColor_focus;
+          } else {
+            return theme.Button_borderColor;
+          }
+        })()
       },
       // `:active` must be last, to follow LVHFA order:
       // https://developer.mozilla.org/en-US/docs/Web/CSS/:active
@@ -194,6 +221,8 @@ const styles = {
             }
           }
         })(),
+        borderColor:
+          !minimal && !disabled ? theme.Button_borderColor_active : undefined,
         color
       },
       '&::-moz-focus-inner': { border: 0 },
@@ -202,19 +231,14 @@ const styles = {
         boxSizing: 'content-box',
         color: disabled || primary ? null : theme.ButtonIcon_color,
         display: 'block',
+        flexShrink: 0,
 
         '&:first-child': {
-          marginLeft:
-            theme.direction === 'rtl' ? theme.ButtonIcon_margin : null,
-          marginRight:
-            theme.direction === 'ltr' ? theme.ButtonIcon_margin : null
+          [firstChildMarginProperty]: theme.ButtonIcon_margin
         },
 
         '&:last-child': {
-          marginLeft:
-            theme.direction === 'ltr' ? theme.ButtonIcon_margin : null,
-          marginRight:
-            theme.direction === 'rtl' ? theme.ButtonIcon_margin : null
+          [lastChildMarginProperty]: theme.ButtonIcon_margin
         },
 
         '&:only-child': {
@@ -223,9 +247,11 @@ const styles = {
       }
     };
   },
-  content: (props) => {
-    const theme = componentTheme(props.theme);
-    const { size } = props;
+  content: ({ size, theme: baseTheme }) => {
+    const theme = componentTheme(baseTheme);
+    const rtl = theme.direction === 'rtl';
+    const firstChildPaddingProperty = rtl ? 'paddingRight' : 'paddingLeft';
+    const lastChildPaddingProperty = rtl ? 'paddingLeft' : 'paddingRight';
 
     let paddings;
 
@@ -241,13 +267,11 @@ const styles = {
       );
       paddings = {
         '&:first-child': {
-          paddingLeft: theme.direction === 'ltr' ? padding : null,
-          paddingRight: theme.direction === 'rtl' ? padding : null
+          [firstChildPaddingProperty]: padding
         },
 
         '&:last-child': {
-          paddingLeft: theme.direction === 'rtl' ? padding : null,
-          paddingRight: theme.direction === 'ltr' ? padding : null
+          [lastChildPaddingProperty]: padding
         }
       };
     }
@@ -266,6 +290,7 @@ const styles = {
     display: 'inline-flex',
     justifyContent: 'center',
     maxHeight: '100%',
+    pointerEvents: 'none',
     width: '100%'
   }
 };
@@ -296,18 +321,16 @@ function filterProps({ element, type }: Props) {
   return invalidComponentProps.concat(invalidLinkProps);
 }
 
-// Button's root node must be created outside of render, so that the entire DOM
-// element is replaced only when the element prop is changed, otherwise it is
-// updated in place
-function createRootNode(props: Props) {
+const createRootNode = (props: Props) => {
   const { element = Button.defaultProps.element } = props;
 
   return createStyledComponent(element, styles.button, {
+    displayName: 'Button',
     filterProps: filterProps(props),
     includeStyleReset: true,
     rootEl: element
   });
-}
+};
 
 /**
  * The Button component represents a clickable button.
@@ -318,19 +341,15 @@ export default class Button extends Component<Props> {
   static defaultProps = {
     element: 'button',
     size: 'large',
-    type: 'button',
-    variant: 'regular'
+    type: 'button'
   };
 
-  componentWillUpdate(nextProps: Props) {
-    if (this.props.element !== nextProps.element) {
-      this.rootNode = createRootNode(nextProps);
-    }
-  }
-
-  props: Props;
-
-  rootNode: React$ComponentType<*> = createRootNode(this.props);
+  // Must be an instance method to avoid affecting other instances memoized keys
+  getRootNode = memoizeOne(
+    createRootNode,
+    (nextProps: Props, prevProps: Props) =>
+      nextProps.element === prevProps.element
+  );
 
   render() {
     const {
@@ -339,7 +358,7 @@ export default class Button extends Component<Props> {
       iconEnd,
       size = Button.defaultProps.size,
       type = Button.defaultProps.type,
-      variant = Button.defaultProps.variant,
+      variant,
       ...restProps
     } = this.props;
 
@@ -351,7 +370,7 @@ export default class Button extends Component<Props> {
       ...restProps
     };
 
-    const Root = this.rootNode;
+    const Root = this.getRootNode(this.props);
 
     const startIcon = iconStart
       ? cloneElement(iconStart, { size: iconSize[size], key: 'iconStart' })

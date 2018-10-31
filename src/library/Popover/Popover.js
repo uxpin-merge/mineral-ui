@@ -4,6 +4,7 @@ import { findDOMNode } from 'react-dom';
 import { Manager } from 'react-popper';
 import { createStyledComponent } from '../styles';
 import { composeEventHandlers, generateId, isRenderProp } from '../utils';
+import ModifiersContext from '../Dialog/ModifiersContext';
 import EventListener from '../EventListener';
 import Portal from '../Portal';
 import PopoverTrigger from './PopoverTrigger';
@@ -16,15 +17,20 @@ type Props = {
   /**
    * Trigger for the Popover. Optionally provides custom rendering control.
    * See the [custom trigger example](/components/popover#custom-trigger)
-   * and [React docs](https://reactjs.org/docs/render-props.html).
+   * and our [render props guide](/render-props).
    */
   children: React$Node | RenderFn,
   /**
    * Content of the Popover. Optionally provides custom rendering control.
    * See the [custom content example](/components/popover#custom-content)
-   * and [React docs](https://reactjs.org/docs/render-props.html).
+   * and our [render props guide](/render-props).
    */
   content: $FlowFixMe | RenderFn,
+  /**
+   * @Private Cursor applied when hovering the popover trigger; accepts any
+   * [valid CSS value](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor)
+   */
+  cursor?: string,
   /**
    * Open the Popover upon initialization. Primarily for use with uncontrolled
    * components.
@@ -121,7 +127,6 @@ const Root = createStyledComponent(
   },
   {
     displayName: 'Popover',
-    includeStyleReset: true,
     forwardProps: ['tag'],
     rootEl: 'span'
   }
@@ -148,36 +153,45 @@ export default class Popover extends Component<Props, State> {
   popoverTrigger: ?React$Component<*, *>;
 
   render() {
+    const { modifiers, ...restProps } = this.props;
     const isOpen = this.getControllableValue('isOpen');
 
     const rootProps = {
-      ...this.props,
+      ...restProps,
       tag: 'span'
     };
 
     return (
-      <Root {...rootProps}>
-        {this.renderTrigger()}
-        {isOpen && this.renderContent()}
-        {isOpen && (
-          <EventListener
-            listeners={[
-              {
-                target: 'document',
-                event: 'click',
-                handler: this.handleDocumentClick,
-                options: true
-              },
-              {
-                target: 'document',
-                event: 'keydown',
-                handler: this.handleDocumentKeydown,
-                options: true
-              }
-            ]}
-          />
-        )}
-      </Root>
+      <ModifiersContext.Consumer>
+        {(contextModifiers) => {
+          rootProps.modifiers = modifiers || contextModifiers;
+
+          return (
+            <Root {...rootProps}>
+              {this.renderTrigger()}
+              {isOpen && this.renderContent()}
+              {isOpen && (
+                <EventListener
+                  listeners={[
+                    {
+                      target: 'document',
+                      event: 'click',
+                      handler: this.handleDocumentClick,
+                      options: true
+                    },
+                    {
+                      target: 'document',
+                      event: 'keydown',
+                      handler: this.handleDocumentKeydown,
+                      options: true
+                    }
+                  ]}
+                />
+              )}
+            </Root>
+          );
+        }}
+      </ModifiersContext.Consumer>
     );
   }
 
@@ -265,7 +279,7 @@ export default class Popover extends Component<Props, State> {
   getTriggerProps: PropGetter = (props = {}) => {
     const isOpen = this.getControllableValue('isOpen');
     const contentId = this.getContentId();
-    const { children, disabled } = this.props;
+    const { children, cursor, disabled } = this.props;
 
     let child, childDisabled;
     if (!isRenderProp(children)) {
@@ -280,6 +294,7 @@ export default class Popover extends Component<Props, State> {
       'aria-expanded': isOpen,
       'aria-owns': contentId,
       children: child,
+      cursor,
       disabled: child && childDisabled ? childDisabled : disabled,
       ref: this.setTriggerRef,
       role: 'button',
@@ -351,6 +366,7 @@ export default class Popover extends Component<Props, State> {
 
   handleDocumentKeydown = (event: SyntheticKeyboardEvent<>) => {
     if (event.key === 'Escape') {
+      event.preventDefault();
       this.close(event);
     }
   };
@@ -362,8 +378,11 @@ export default class Popover extends Component<Props, State> {
     const { usePortal } = this.props;
     const node = findDOMNode(this);
     const popoverContentNode = findDOMNode(this.popoverContent);
+
     const target =
-      event.type === 'blur' && event.relatedTarget
+      event.type === 'blur' &&
+      event.relatedTarget &&
+      popoverContentNode === event.target
         ? event.relatedTarget
         : event.target;
 

@@ -10,7 +10,7 @@ const semver = require('semver');
 const argv = require('yargs')
   .option('version', {
     describe: 'Version of React to use',
-    default: ['15.3.2', '15.4.2', '15.5.4', '15.6.2', '16.3.0'],
+    default: ['15.3.2', '15.4.2', '15.5.4', '15.6.2', '16.4.2'],
     type: 'string'
   })
   .array('version')
@@ -40,7 +40,7 @@ const installDependencies = (version) => {
   } else if (semver.satisfies(version, '^15.5.0')) {
     dependencies = `react@${version} react-dom@${version} react-test-renderer@${version} enzyme-adapter-react-15`;
   } else if (semver.satisfies(version, '^16.0.0')) {
-    dependencies = `react@${version} react-dom@${version} react-test-renderer@${version} enzyme-adapter-react-16`;
+    dependencies = `react@${version} react-dom@${version} react-test-renderer@${version} enzyme-react-adapter-future`;
   }
 
   if (dependencies) {

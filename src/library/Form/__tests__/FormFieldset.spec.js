@@ -1,9 +1,11 @@
 /* @flow */
 import React from 'react';
 import { shallow } from 'enzyme';
-import FormFieldset from '../FormFieldset/FormFieldset';
+import FormFieldset, { componentTheme } from '../FormFieldset/FormFieldset';
 import examples from '../../../website/app/demos/Form/examples/FormFieldset';
 import testDemoExamples from '../../../../utils/testDemoExamples';
+import testThemeOverrides from '../../../../utils/testThemeOverrides';
+import { getProcessedComponentThemeKeys } from '../../themes/processComponentTheme';
 
 function shallowFormFieldset(props = {}) {
   const formFieldsetProps = {
@@ -22,5 +24,12 @@ describe('FormFieldset', () => {
 
       expect(formFieldset.exists()).toEqual(true);
     });
+  });
+
+  describe('theme overrides', () => {
+    testThemeOverrides(
+      <FormFieldset legend="test" />,
+      getProcessedComponentThemeKeys(componentTheme)
+    );
   });
 });

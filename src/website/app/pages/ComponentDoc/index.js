@@ -17,16 +17,13 @@ import DocThemeVariables from './DocThemeVariables';
 import DocWhenHowToUse from './DocWhenHowToUse';
 
 type Props = {
+  additionalTypes?: Array<Object>,
   bestPractices?: Array<BestPractice>,
   className?: string,
   componentTheme?: Theme | Array<Theme>,
   description?: React$Node,
   doc: Object,
   examples?: Array<any>,
-  pageMeta: {
-    title: string,
-    canonicalLink: string
-  },
   propsComment?: string | React$Element<*>,
   slug: string,
   title: string,
@@ -42,18 +39,24 @@ type BestPractice = {
 
 type Theme = (theme: Object) => Object;
 
-const StyledDocHeading = createStyledComponent(Heading, ({ theme }) => ({
-  marginBottom: 0,
-  paddingTop: getNormalizedValue(pxToEm(62), theme.SiteHeading_fontSize_2),
+const StyledDocHeading = createStyledComponent(
+  Heading,
+  ({ theme }) => ({
+    marginBottom: 0,
+    paddingTop: getNormalizedValue(pxToEm(62), theme.SiteHeading_fontSize_2),
 
-  [theme.bp_moreSpacious]: {
-    fontSize: theme.SiteHeading_fontSize_2_wide,
-    paddingTop: getNormalizedValue(
-      pxToEm(80),
-      theme.SiteHeading_fontSize_2_wide
-    )
+    [theme.bp_moreSpacious]: {
+      fontSize: theme.SiteHeading_fontSize_2_wide,
+      paddingTop: getNormalizedValue(
+        pxToEm(80),
+        theme.SiteHeading_fontSize_2_wide
+      )
+    }
+  }),
+  {
+    withProps: { level: 2 }
   }
-})).withProps({ level: 2 });
+);
 
 const DocHeading = ({
   children,
@@ -74,17 +77,19 @@ const DocIntro = ({ children }: { children: string }) => (
   </DocSection>
 );
 
-export default function ComponentDoc({
-  bestPractices,
-  componentTheme,
-  doc,
-  examples,
-  propsComment,
-  slug,
-  title,
-  whenHowToUse,
-  ...restProps
-}: Props) {
+export default function ComponentDoc(props: Props) {
+  const {
+    additionalTypes,
+    bestPractices,
+    componentTheme,
+    doc,
+    examples,
+    propsComment,
+    slug,
+    title,
+    whenHowToUse,
+    ...restProps
+  } = props;
   const { props: propDoc } = doc;
   const subNavProps = {
     bestPractices,
@@ -98,7 +103,7 @@ export default function ComponentDoc({
   delete rootProps.subcomponent;
   delete rootProps.slug;
   const examplesProps = { examples, slug };
-  const propProps = { propDoc, propsComment, title };
+  const propProps = { additionalTypes, propDoc, propsComment, title };
   const themeVariablesProps = {
     baseTheme: mineralTheme,
     componentTheme,

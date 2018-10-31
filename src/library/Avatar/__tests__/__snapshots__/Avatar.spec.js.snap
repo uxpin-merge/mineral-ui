@@ -1,1453 +1,1448 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Avatar demo examples Snapshots: basic 1`] = `
-.css-0 > *,
-[data-css-0] > * {
+.emotion-1 {
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 2.5em;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #3272d9;
+  border-radius: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 700;
+  height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  vertical-align: middle;
+  width: 2.5em;
+}
+
+.emotion-1 *,
+.emotion-1 *::before,
+.emotion-1 *::after {
+  box-sizing: inherit;
+}
+
+.emotion-1 > abbr,
+.emotion-1 > span {
+  font-size: 1.125em;
+}
+
+.emotion-1 > abbr {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-1 > img {
+  border-radius: 100%;
+  display: block;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+
+.emotion-1 > [role="img"] {
+  color: #ffffff;
+}
+
+.emotion-4[class] > * {
   margin-right: 1rem;
   margin-bottom: 1rem;
 }
 
-.css-1,
-[data-css-1] {
+.emotion-0 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-1 *,
-[data-css-1] *,
-.css-1 *::before,
-[data-css-1] *::before,
-.css-1 *::after,
-[data-css-1] *::after {
+.emotion-0 *,
+.emotion-0 *::before,
+.emotion-0 *::after {
   box-sizing: inherit;
 }
 
-.css-1 > abbr,
-[data-css-1] > abbr,
-.css-1 > span,
-[data-css-1] > span {
+.emotion-0 > abbr,
+.emotion-0 > span {
   font-size: 1.125em;
 }
 
-.css-1 > abbr,
-[data-css-1] > abbr {
+.emotion-0 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-1 > img,
-[data-css-1] > img {
+.emotion-0 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-1 > [role="img"],
-[data-css-1] > [role="img"] {
+.emotion-0 > [role="img"] {
   color: #ffffff;
 }
 
-.css-3,
-[data-css-3] {
+.emotion-3 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #3272d9;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-3 *,
-[data-css-3] *,
-.css-3 *::before,
-[data-css-3] *::before,
-.css-3 *::after,
-[data-css-3] *::after {
+.emotion-3 *,
+.emotion-3 *::before,
+.emotion-3 *::after {
   box-sizing: inherit;
 }
 
-.css-3 > abbr,
-[data-css-3] > abbr,
-.css-3 > span,
-[data-css-3] > span {
-  font-size: 1.125em;
-}
-
-.css-3 > abbr,
-[data-css-3] > abbr {
+.emotion-3 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-3 > img,
-[data-css-3] > img {
+.emotion-3 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-3 > [role="img"],
-[data-css-3] > [role="img"] {
+.emotion-3 > [role="img"] {
   color: #ffffff;
 }
 
-.css-5,
-[data-css-5] {
-  box-sizing: border-box;
-  color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px;
-  line-height: 2.5em;
-  outline: 0;
-  -moz-osx-font-smoothing: auto;
-  -webkit-font-smoothing: antialiased;
-  align-items: center;
-  background-color: #3272d9;
-  border-radius: 100%;
-  display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
-  display: -webkit-inline-flex;
-  display: inline-flex;
-  font-weight: 700;
-  height: 2.5em;
-  justify-content: center;
-  vertical-align: middle;
-  width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-}
-
-.css-5 *,
-[data-css-5] *,
-.css-5 *::before,
-[data-css-5] *::before,
-.css-5 *::after,
-[data-css-5] *::after {
-  box-sizing: inherit;
-}
-
-.css-5 > abbr,
-[data-css-5] > abbr {
-  text-decoration: none;
-}
-
-.css-5 > img,
-[data-css-5] > img {
-  border-radius: 100%;
-  display: block;
-  width: 100%;
-}
-
-.css-5 > [role="img"],
-[data-css-5] > [role="img"] {
-  color: #ffffff;
-}
-
-.css-7,
-[data-css-7] {
+.emotion-2 {
   fill: currentcolor;
   font-size: 16px;
   height: 1.5em;
   width: 1.5em;
 }
 
-<glamorous(div)>
-  <div
-    className="css-0"
+<DemoLayout>
+  <DemoLayout
+    includeLastChild={true}
+    marginRight="1rem"
   >
-    <Avatar>
-      <Avatar
-        noBackground={true}
-        shape="circle"
-        size="large"
+    <Styled(div)
+      includeLastChild={true}
+      marginBottom="1rem"
+      marginRight="1rem"
+    >
+      <div
+        className="emotion-4"
       >
-        <span
-          className="css-1"
+        <Avatar
+          shape="circle"
+          size="large"
         >
-          <img
-            alt="Allison"
-            src="/images/avatar.svg"
-          />
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar>
-      <Avatar
-        shape="circle"
-        size="large"
-      >
-        <span
-          className="css-3"
-        >
-          <abbr
-            title="Allison"
+          <Avatar
+            noBackground={true}
+            shape="circle"
+            size="large"
           >
-            A
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar>
-      <Avatar
-        icon={
-          <IconCloud
-            size="1.5em"
-            title="cloud"
-          />
-        }
-        shape="circle"
-        size="large"
-      >
-        <span
-          className="css-5"
-        >
-          <IconCloud
-            size="1.5em"
-            title="cloud"
-          >
-            <Icon
-              rtl={false}
-              size="1.5em"
-              title="cloud"
+            <span
+              className="emotion-0"
             >
-              <glamorous(svg)
-                aria-hidden={null}
-                aria-labelledby="icon-title-icon-1"
-                role="img"
-                rtl={false}
-                size="1.5em"
-                viewBox="0 0 24 24"
+              <img
+                alt="Allison"
+                src="/images/avatar.svg"
+              />
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          shape="circle"
+          size="large"
+        >
+          <Avatar
+            shape="circle"
+            size="large"
+          >
+            <span
+              className="emotion-1"
+            >
+              <abbr
+                title="Allison"
               >
-                <svg
-                  aria-hidden={null}
-                  aria-labelledby="icon-title-icon-1"
-                  className="css-7"
-                  role="img"
-                  viewBox="0 0 24 24"
+                A
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          shape="circle"
+          size="large"
+        >
+          <Avatar
+            icon={
+              <IconCloud
+                size="1.5em"
+                title="cloud"
+              />
+            }
+            shape="circle"
+            size="large"
+          >
+            <span
+              className="emotion-3"
+            >
+              <IconCloud
+                size="1.5em"
+                title="cloud"
+              >
+                <Icon
+                  rtl={false}
+                  size="1.5em"
+                  title="cloud"
                 >
-                  <title
-                    id="icon-title-icon-1"
+                  <Styled(svg)
+                    aria-hidden={null}
+                    aria-labelledby="icon-title-icon-1"
+                    focusable="false"
+                    role="img"
+                    rtl={false}
+                    size="1.5em"
+                    viewBox="0 0 24 24"
                   >
-                    cloud
-                  </title>
-                  <g>
-                    <path
-                      d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"
-                    />
-                  </g>
-                </svg>
-              </glamorous(svg)>
-            </Icon>
-          </IconCloud>
-        </span>
-      </Avatar>
-    </Avatar>
-  </div>
-</glamorous(div)>
+                    <svg
+                      aria-hidden={null}
+                      aria-labelledby="icon-title-icon-1"
+                      className="emotion-2"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 24 24"
+                    >
+                      <title
+                        id="icon-title-icon-1"
+                      >
+                        cloud
+                      </title>
+                      <g>
+                        <path
+                          d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"
+                        />
+                      </g>
+                    </svg>
+                  </Styled(svg)>
+                </Icon>
+              </IconCloud>
+            </span>
+          </Avatar>
+        </Avatar>
+      </div>
+    </Styled(div)>
+  </DemoLayout>
+</DemoLayout>
 `;
 
 exports[`Avatar demo examples Snapshots: colors 1`] = `
-.css-0 > *,
-[data-css-0] > * {
+.emotion-0 {
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 2.5em;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #3272d9;
+  border-radius: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 700;
+  height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  vertical-align: middle;
+  width: 2.5em;
+}
+
+.emotion-0 *,
+.emotion-0 *::before,
+.emotion-0 *::after {
+  box-sizing: inherit;
+}
+
+.emotion-0 > abbr,
+.emotion-0 > span {
+  font-size: 1.125em;
+}
+
+.emotion-0 > abbr {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0 > img {
+  border-radius: 100%;
+  display: block;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+
+.emotion-0 > [role="img"] {
+  color: #ffffff;
+}
+
+.emotion-14[class] > * {
   margin-right: 1rem;
   margin-bottom: 1rem;
 }
 
-.css-1,
-[data-css-1] {
+.emotion-1 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
-  align-items: center;
-  background-color: #3272d9;
-  border-radius: 100%;
-  display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
-  display: -webkit-inline-flex;
-  display: inline-flex;
-  font-weight: 700;
-  height: 2.5em;
-  justify-content: center;
-  vertical-align: middle;
-  width: 2.5em;
-  -webkit-box-align: center;
   -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-}
-
-.css-1 *,
-[data-css-1] *,
-.css-1 *::before,
-[data-css-1] *::before,
-.css-1 *::after,
-[data-css-1] *::after {
-  box-sizing: inherit;
-}
-
-.css-1 > abbr,
-[data-css-1] > abbr,
-.css-1 > span,
-[data-css-1] > span {
-  font-size: 1.125em;
-}
-
-.css-1 > abbr,
-[data-css-1] > abbr {
-  text-decoration: none;
-}
-
-.css-1 > img,
-[data-css-1] > img {
-  border-radius: 100%;
-  display: block;
-  width: 100%;
-}
-
-.css-1 > [role="img"],
-[data-css-1] > [role="img"] {
-  color: #ffffff;
-}
-
-.css-3,
-[data-css-3] {
-  box-sizing: border-box;
-  color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px;
-  line-height: 2.5em;
-  outline: 0;
-  -moz-osx-font-smoothing: auto;
-  -webkit-font-smoothing: antialiased;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #de1b1b;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-3 *,
-[data-css-3] *,
-.css-3 *::before,
-[data-css-3] *::before,
-.css-3 *::after,
-[data-css-3] *::after {
+.emotion-1 *,
+.emotion-1 *::before,
+.emotion-1 *::after {
   box-sizing: inherit;
 }
 
-.css-3 > abbr,
-[data-css-3] > abbr,
-.css-3 > span,
-[data-css-3] > span {
+.emotion-1 > abbr,
+.emotion-1 > span {
   font-size: 1.125em;
 }
 
-.css-3 > abbr,
-[data-css-3] > abbr {
+.emotion-1 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-3 > img,
-[data-css-3] > img {
+.emotion-1 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-3 > [role="img"],
-[data-css-3] > [role="img"] {
+.emotion-1 > [role="img"] {
   color: #ffffff;
 }
 
-.css-5,
-[data-css-5] {
+.emotion-2 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #d6246e;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-5 *,
-[data-css-5] *,
-.css-5 *::before,
-[data-css-5] *::before,
-.css-5 *::after,
-[data-css-5] *::after {
+.emotion-2 *,
+.emotion-2 *::before,
+.emotion-2 *::after {
   box-sizing: inherit;
 }
 
-.css-5 > abbr,
-[data-css-5] > abbr,
-.css-5 > span,
-[data-css-5] > span {
+.emotion-2 > abbr,
+.emotion-2 > span {
   font-size: 1.125em;
 }
 
-.css-5 > abbr,
-[data-css-5] > abbr {
+.emotion-2 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-5 > img,
-[data-css-5] > img {
+.emotion-2 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-5 > [role="img"],
-[data-css-5] > [role="img"] {
+.emotion-2 > [role="img"] {
   color: #ffffff;
 }
 
-.css-7,
-[data-css-7] {
+.emotion-3 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #9656d6;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-7 *,
-[data-css-7] *,
-.css-7 *::before,
-[data-css-7] *::before,
-.css-7 *::after,
-[data-css-7] *::after {
+.emotion-3 *,
+.emotion-3 *::before,
+.emotion-3 *::after {
   box-sizing: inherit;
 }
 
-.css-7 > abbr,
-[data-css-7] > abbr,
-.css-7 > span,
-[data-css-7] > span {
+.emotion-3 > abbr,
+.emotion-3 > span {
   font-size: 1.125em;
 }
 
-.css-7 > abbr,
-[data-css-7] > abbr {
+.emotion-3 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-7 > img,
-[data-css-7] > img {
+.emotion-3 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-7 > [role="img"],
-[data-css-7] > [role="img"] {
+.emotion-3 > [role="img"] {
   color: #ffffff;
 }
 
-.css-9,
-[data-css-9] {
+.emotion-4 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #6767e6;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-9 *,
-[data-css-9] *,
-.css-9 *::before,
-[data-css-9] *::before,
-.css-9 *::after,
-[data-css-9] *::after {
+.emotion-4 *,
+.emotion-4 *::before,
+.emotion-4 *::after {
   box-sizing: inherit;
 }
 
-.css-9 > abbr,
-[data-css-9] > abbr,
-.css-9 > span,
-[data-css-9] > span {
+.emotion-4 > abbr,
+.emotion-4 > span {
   font-size: 1.125em;
 }
 
-.css-9 > abbr,
-[data-css-9] > abbr {
+.emotion-4 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-9 > img,
-[data-css-9] > img {
+.emotion-4 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-9 > [role="img"],
-[data-css-9] > [role="img"] {
+.emotion-4 > [role="img"] {
   color: #ffffff;
 }
 
-.css-11,
-[data-css-11] {
+.emotion-6 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #0c7bb3;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-11 *,
-[data-css-11] *,
-.css-11 *::before,
-[data-css-11] *::before,
-.css-11 *::after,
-[data-css-11] *::after {
+.emotion-6 *,
+.emotion-6 *::before,
+.emotion-6 *::after {
   box-sizing: inherit;
 }
 
-.css-11 > abbr,
-[data-css-11] > abbr,
-.css-11 > span,
-[data-css-11] > span {
+.emotion-6 > abbr,
+.emotion-6 > span {
   font-size: 1.125em;
 }
 
-.css-11 > abbr,
-[data-css-11] > abbr {
+.emotion-6 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-11 > img,
-[data-css-11] > img {
+.emotion-6 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-11 > [role="img"],
-[data-css-11] > [role="img"] {
+.emotion-6 > [role="img"] {
   color: #ffffff;
 }
 
-.css-13,
-[data-css-13] {
+.emotion-7 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #17827b;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-13 *,
-[data-css-13] *,
-.css-13 *::before,
-[data-css-13] *::before,
-.css-13 *::after,
-[data-css-13] *::after {
+.emotion-7 *,
+.emotion-7 *::before,
+.emotion-7 *::after {
   box-sizing: inherit;
 }
 
-.css-13 > abbr,
-[data-css-13] > abbr,
-.css-13 > span,
-[data-css-13] > span {
+.emotion-7 > abbr,
+.emotion-7 > span {
   font-size: 1.125em;
 }
 
-.css-13 > abbr,
-[data-css-13] > abbr {
+.emotion-7 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-13 > img,
-[data-css-13] > img {
+.emotion-7 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-13 > [role="img"],
-[data-css-13] > [role="img"] {
+.emotion-7 > [role="img"] {
   color: #ffffff;
 }
 
-.css-15,
-[data-css-15] {
+.emotion-8 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #2a854e;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-15 *,
-[data-css-15] *,
-.css-15 *::before,
-[data-css-15] *::before,
-.css-15 *::after,
-[data-css-15] *::after {
+.emotion-8 *,
+.emotion-8 *::before,
+.emotion-8 *::after {
   box-sizing: inherit;
 }
 
-.css-15 > abbr,
-[data-css-15] > abbr,
-.css-15 > span,
-[data-css-15] > span {
+.emotion-8 > abbr,
+.emotion-8 > span {
   font-size: 1.125em;
 }
 
-.css-15 > abbr,
-[data-css-15] > abbr {
+.emotion-8 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-15 > img,
-[data-css-15] > img {
+.emotion-8 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-15 > [role="img"],
-[data-css-15] > [role="img"] {
+.emotion-8 > [role="img"] {
   color: #ffffff;
 }
 
-.css-17,
-[data-css-17] {
+.emotion-9 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #ad5f00;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-17 *,
-[data-css-17] *,
-.css-17 *::before,
-[data-css-17] *::before,
-.css-17 *::after,
-[data-css-17] *::after {
+.emotion-9 *,
+.emotion-9 *::before,
+.emotion-9 *::after {
   box-sizing: inherit;
 }
 
-.css-17 > abbr,
-[data-css-17] > abbr,
-.css-17 > span,
-[data-css-17] > span {
+.emotion-9 > abbr,
+.emotion-9 > span {
   font-size: 1.125em;
 }
 
-.css-17 > abbr,
-[data-css-17] > abbr {
+.emotion-9 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-17 > img,
-[data-css-17] > img {
+.emotion-9 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-17 > [role="img"],
-[data-css-17] > [role="img"] {
+.emotion-9 > [role="img"] {
   color: #ffffff;
 }
 
-.css-19,
-[data-css-19] {
+.emotion-10 {
   box-sizing: border-box;
   color: #1d1f24;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #8e99ab;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-19 *,
-[data-css-19] *,
-.css-19 *::before,
-[data-css-19] *::before,
-.css-19 *::after,
-[data-css-19] *::after {
+.emotion-10 *,
+.emotion-10 *::before,
+.emotion-10 *::after {
   box-sizing: inherit;
 }
 
-.css-19 > abbr,
-[data-css-19] > abbr,
-.css-19 > span,
-[data-css-19] > span {
+.emotion-10 > abbr,
+.emotion-10 > span {
   font-size: 1.125em;
 }
 
-.css-19 > abbr,
-[data-css-19] > abbr {
+.emotion-10 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-19 > img,
-[data-css-19] > img {
+.emotion-10 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-19 > [role="img"],
-[data-css-19] > [role="img"] {
+.emotion-10 > [role="img"] {
   color: #1d1f24;
 }
 
-.css-21,
-[data-css-21] {
+.emotion-11 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #48799c;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-21 *,
-[data-css-21] *,
-.css-21 *::before,
-[data-css-21] *::before,
-.css-21 *::after,
-[data-css-21] *::after {
+.emotion-11 *,
+.emotion-11 *::before,
+.emotion-11 *::after {
   box-sizing: inherit;
 }
 
-.css-21 > abbr,
-[data-css-21] > abbr,
-.css-21 > span,
-[data-css-21] > span {
+.emotion-11 > abbr,
+.emotion-11 > span {
   font-size: 1.125em;
 }
 
-.css-21 > abbr,
-[data-css-21] > abbr {
+.emotion-11 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-21 > img,
-[data-css-21] > img {
+.emotion-11 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-21 > [role="img"],
-[data-css-21] > [role="img"] {
+.emotion-11 > [role="img"] {
   color: #ffffff;
 }
 
-.css-23,
-[data-css-23] {
+.emotion-12 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #7a68b3;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-23 *,
-[data-css-23] *,
-.css-23 *::before,
-[data-css-23] *::before,
-.css-23 *::after,
-[data-css-23] *::after {
+.emotion-12 *,
+.emotion-12 *::before,
+.emotion-12 *::after {
   box-sizing: inherit;
 }
 
-.css-23 > abbr,
-[data-css-23] > abbr,
-.css-23 > span,
-[data-css-23] > span {
+.emotion-12 > abbr,
+.emotion-12 > span {
   font-size: 1.125em;
 }
 
-.css-23 > abbr,
-[data-css-23] > abbr {
+.emotion-12 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-23 > img,
-[data-css-23] > img {
+.emotion-12 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-23 > [role="img"],
-[data-css-23] > [role="img"] {
+.emotion-12 > [role="img"] {
   color: #ffffff;
 }
 
-.css-25,
-[data-css-25] {
+.emotion-13 {
   box-sizing: border-box;
   color: hsl(322,71%,27%);
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: rgba(139,231,172,0.8);
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-25 *,
-[data-css-25] *,
-.css-25 *::before,
-[data-css-25] *::before,
-.css-25 *::after,
-[data-css-25] *::after {
+.emotion-13 *,
+.emotion-13 *::before,
+.emotion-13 *::after {
   box-sizing: inherit;
 }
 
-.css-25 > abbr,
-[data-css-25] > abbr,
-.css-25 > span,
-[data-css-25] > span {
+.emotion-13 > abbr,
+.emotion-13 > span {
   font-size: 1.125em;
 }
 
-.css-25 > abbr,
-[data-css-25] > abbr {
+.emotion-13 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-25 > img,
-[data-css-25] > img {
+.emotion-13 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-25 > [role="img"],
-[data-css-25] > [role="img"] {
+.emotion-13 > [role="img"] {
   color: hsl(322,71%,27%);
 }
 
-<glamorous(div)>
-  <div
-    className="css-0"
+<DemoLayout>
+  <DemoLayout
+    includeLastChild={true}
+    marginRight="1rem"
   >
-    <Avatar>
-      <Avatar
-        shape="circle"
-        size="large"
-      >
-        <span
-          className="css-1"
-        >
-          <abbr
-            title="Theme  "
-          >
-            T
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      background="#de1b1b"
+    <Styled(div)
+      includeLastChild={true}
+      marginBottom="1rem"
+      marginRight="1rem"
     >
-      <Avatar
-        background="#de1b1b"
-        shape="circle"
-        size="large"
+      <div
+        className="emotion-14"
       >
-        <span
-          className="css-3"
+        <Avatar
+          shape="circle"
+          size="large"
         >
-          <abbr
-            title="Red    "
+          <Avatar
+            shape="circle"
+            size="large"
           >
-            R
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      background="#d6246e"
-    >
-      <Avatar
-        background="#d6246e"
-        shape="circle"
-        size="large"
-      >
-        <span
-          className="css-5"
+            <span
+              className="emotion-0"
+            >
+              <abbr
+                title="Theme  "
+              >
+                T
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          background="#de1b1b"
+          shape="circle"
+          size="large"
         >
-          <abbr
-            title="Magenta"
+          <Avatar
+            background="#de1b1b"
+            shape="circle"
+            size="large"
           >
-            M
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      background="#9656d6"
-    >
-      <Avatar
-        background="#9656d6"
-        shape="circle"
-        size="large"
-      >
-        <span
-          className="css-7"
+            <span
+              className="emotion-1"
+            >
+              <abbr
+                title="Red    "
+              >
+                R
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          background="#d6246e"
+          shape="circle"
+          size="large"
         >
-          <abbr
-            title="Purple "
+          <Avatar
+            background="#d6246e"
+            shape="circle"
+            size="large"
           >
-            P
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      background="#6767e6"
-    >
-      <Avatar
-        background="#6767e6"
-        shape="circle"
-        size="large"
-      >
-        <span
-          className="css-9"
+            <span
+              className="emotion-2"
+            >
+              <abbr
+                title="Magenta"
+              >
+                M
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          background="#9656d6"
+          shape="circle"
+          size="large"
         >
-          <abbr
-            title="Indigo "
+          <Avatar
+            background="#9656d6"
+            shape="circle"
+            size="large"
           >
-            I
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      background="#3272d9"
-    >
-      <Avatar
-        background="#3272d9"
-        shape="circle"
-        size="large"
-      >
-        <span
-          className="css-1"
+            <span
+              className="emotion-3"
+            >
+              <abbr
+                title="Purple "
+              >
+                P
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          background="#6767e6"
+          shape="circle"
+          size="large"
         >
-          <abbr
-            title="Blue   "
+          <Avatar
+            background="#6767e6"
+            shape="circle"
+            size="large"
           >
-            B
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      background="#0c7bb3"
-    >
-      <Avatar
-        background="#0c7bb3"
-        shape="circle"
-        size="large"
-      >
-        <span
-          className="css-11"
+            <span
+              className="emotion-4"
+            >
+              <abbr
+                title="Indigo "
+              >
+                I
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          background="#3272d9"
+          shape="circle"
+          size="large"
         >
-          <abbr
-            title="Sky    "
+          <Avatar
+            background="#3272d9"
+            shape="circle"
+            size="large"
           >
-            S
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      background="#17827b"
-    >
-      <Avatar
-        background="#17827b"
-        shape="circle"
-        size="large"
-      >
-        <span
-          className="css-13"
+            <span
+              className="emotion-0"
+            >
+              <abbr
+                title="Blue   "
+              >
+                B
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          background="#0c7bb3"
+          shape="circle"
+          size="large"
         >
-          <abbr
-            title="Teal   "
+          <Avatar
+            background="#0c7bb3"
+            shape="circle"
+            size="large"
           >
-            T
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      background="#2a854e"
-    >
-      <Avatar
-        background="#2a854e"
-        shape="circle"
-        size="large"
-      >
-        <span
-          className="css-15"
+            <span
+              className="emotion-6"
+            >
+              <abbr
+                title="Sky    "
+              >
+                S
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          background="#17827b"
+          shape="circle"
+          size="large"
         >
-          <abbr
-            title="Green  "
+          <Avatar
+            background="#17827b"
+            shape="circle"
+            size="large"
           >
-            G
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      background="#ad5f00"
-    >
-      <Avatar
-        background="#ad5f00"
-        shape="circle"
-        size="large"
-      >
-        <span
-          className="css-17"
+            <span
+              className="emotion-7"
+            >
+              <abbr
+                title="Teal   "
+              >
+                T
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          background="#2a854e"
+          shape="circle"
+          size="large"
         >
-          <abbr
-            title="Bronze "
+          <Avatar
+            background="#2a854e"
+            shape="circle"
+            size="large"
           >
-            B
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      background="#8e99ab"
-      color="#1d1f24"
-    >
-      <Avatar
-        background="#8e99ab"
-        color="#1d1f24"
-        shape="circle"
-        size="large"
-      >
-        <span
-          className="css-19"
+            <span
+              className="emotion-8"
+            >
+              <abbr
+                title="Green  "
+              >
+                G
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          background="#ad5f00"
+          shape="circle"
+          size="large"
         >
-          <abbr
-            title="Gray"
+          <Avatar
+            background="#ad5f00"
+            shape="circle"
+            size="large"
           >
-            G
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      background="#48799c"
-    >
-      <Avatar
-        background="#48799c"
-        shape="circle"
-        size="large"
-      >
-        <span
-          className="css-21"
+            <span
+              className="emotion-9"
+            >
+              <abbr
+                title="Bronze "
+              >
+                B
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          background="#8e99ab"
+          color="#1d1f24"
+          shape="circle"
+          size="large"
         >
-          <abbr
-            title="Slate  "
+          <Avatar
+            background="#8e99ab"
+            color="#1d1f24"
+            shape="circle"
+            size="large"
           >
-            S
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      background="#7a68b3"
-    >
-      <Avatar
-        background="#7a68b3"
-        shape="circle"
-        size="large"
-      >
-        <span
-          className="css-23"
+            <span
+              className="emotion-10"
+            >
+              <abbr
+                title="Gray"
+              >
+                G
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          background="#48799c"
+          shape="circle"
+          size="large"
         >
-          <abbr
-            title="Dusk   "
+          <Avatar
+            background="#48799c"
+            shape="circle"
+            size="large"
           >
-            D
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      background="rgba(139,231,172,0.8)"
-      color="hsl(322,71%,27%)"
-    >
-      <Avatar
-        background="rgba(139,231,172,0.8)"
-        color="hsl(322,71%,27%)"
-        shape="circle"
-        size="large"
-      >
-        <span
-          className="css-25"
+            <span
+              className="emotion-11"
+            >
+              <abbr
+                title="Slate  "
+              >
+                S
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          background="#7a68b3"
+          shape="circle"
+          size="large"
         >
-          <abbr
-            title="Custom"
+          <Avatar
+            background="#7a68b3"
+            shape="circle"
+            size="large"
           >
-            C
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-  </div>
-</glamorous(div)>
+            <span
+              className="emotion-12"
+            >
+              <abbr
+                title="Dusk   "
+              >
+                D
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          background="rgba(139,231,172,0.8)"
+          color="hsl(322,71%,27%)"
+          shape="circle"
+          size="large"
+        >
+          <Avatar
+            background="rgba(139,231,172,0.8)"
+            color="hsl(322,71%,27%)"
+            shape="circle"
+            size="large"
+          >
+            <span
+              className="emotion-13"
+            >
+              <abbr
+                title="Custom"
+              >
+                C
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+      </div>
+    </Styled(div)>
+  </DemoLayout>
+</DemoLayout>
 `;
 
 exports[`Avatar demo examples Snapshots: custom-text-abbr 1`] = `
-.css-0,
-[data-css-0] {
+.emotion-0 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #3272d9;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-0 *,
-[data-css-0] *,
-.css-0 *::before,
-[data-css-0] *::before,
-.css-0 *::after,
-[data-css-0] *::after {
+.emotion-0 *,
+.emotion-0 *::before,
+.emotion-0 *::after {
   box-sizing: inherit;
 }
 
-.css-0 > abbr,
-[data-css-0] > abbr,
-.css-0 > span,
-[data-css-0] > span {
+.emotion-0 > abbr,
+.emotion-0 > span {
   font-size: 1.125em;
 }
 
-.css-0 > abbr,
-[data-css-0] > abbr {
+.emotion-0 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-0 > img,
-[data-css-0] > img {
+.emotion-0 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-0 > [role="img"],
-[data-css-0] > [role="img"] {
+.emotion-0 > [role="img"] {
   color: #ffffff;
 }
 
 <Avatar
   abbr="B"
+  shape="circle"
+  size="large"
 >
   <Avatar
     shape="circle"
     size="large"
   >
     <span
-      className="css-0"
+      className="emotion-0"
     >
       <abbr
         title="Dr. Bernard Johnson"
@@ -1460,1365 +1455,1362 @@ exports[`Avatar demo examples Snapshots: custom-text-abbr 1`] = `
 `;
 
 exports[`Avatar demo examples Snapshots: shapes 1`] = `
-.css-0 > *,
-[data-css-0] > * {
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-}
-
-.css-1,
-[data-css-1] {
+.emotion-0 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #3272d9;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-1 *,
-[data-css-1] *,
-.css-1 *::before,
-[data-css-1] *::before,
-.css-1 *::after,
-[data-css-1] *::after {
+.emotion-0 *,
+.emotion-0 *::before,
+.emotion-0 *::after {
   box-sizing: inherit;
 }
 
-.css-1 > abbr,
-[data-css-1] > abbr,
-.css-1 > span,
-[data-css-1] > span {
+.emotion-0 > abbr,
+.emotion-0 > span {
   font-size: 1.125em;
 }
 
-.css-1 > abbr,
-[data-css-1] > abbr {
+.emotion-0 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-1 > img,
-[data-css-1] > img {
+.emotion-0 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-1 > [role="img"],
-[data-css-1] > [role="img"] {
+.emotion-0 > [role="img"] {
   color: #ffffff;
 }
 
-.css-3,
-[data-css-3] {
+.emotion-3[class] > * {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.emotion-1 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #3272d9;
   border-radius: 0.1875em;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-3 *,
-[data-css-3] *,
-.css-3 *::before,
-[data-css-3] *::before,
-.css-3 *::after,
-[data-css-3] *::after {
+.emotion-1 *,
+.emotion-1 *::before,
+.emotion-1 *::after {
   box-sizing: inherit;
 }
 
-.css-3 > abbr,
-[data-css-3] > abbr,
-.css-3 > span,
-[data-css-3] > span {
+.emotion-1 > abbr,
+.emotion-1 > span {
   font-size: 1.125em;
 }
 
-.css-3 > abbr,
-[data-css-3] > abbr {
+.emotion-1 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-3 > img,
-[data-css-3] > img {
+.emotion-1 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-3 > [role="img"],
-[data-css-3] > [role="img"] {
+.emotion-1 > [role="img"] {
   color: #ffffff;
 }
 
-.css-5,
-[data-css-5] {
+.emotion-2 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #3272d9;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-5 *,
-[data-css-5] *,
-.css-5 *::before,
-[data-css-5] *::before,
-.css-5 *::after,
-[data-css-5] *::after {
+.emotion-2 *,
+.emotion-2 *::before,
+.emotion-2 *::after {
   box-sizing: inherit;
 }
 
-.css-5 > abbr,
-[data-css-5] > abbr,
-.css-5 > span,
-[data-css-5] > span {
+.emotion-2 > abbr,
+.emotion-2 > span {
   font-size: 1.125em;
 }
 
-.css-5 > abbr,
-[data-css-5] > abbr {
+.emotion-2 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-5 > img,
-[data-css-5] > img {
+.emotion-2 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-5 > [role="img"],
-[data-css-5] > [role="img"] {
+.emotion-2 > [role="img"] {
   color: #ffffff;
 }
 
-<glamorous(div)>
-  <div
-    className="css-0"
+<DemoLayout>
+  <DemoLayout
+    includeLastChild={true}
+    marginRight="1rem"
   >
-    <Avatar>
-      <Avatar
-        shape="circle"
-        size="large"
-      >
-        <span
-          className="css-1"
-        >
-          <abbr
-            title="Circle"
-          >
-            C
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      shape="rounded"
+    <Styled(div)
+      includeLastChild={true}
+      marginBottom="1rem"
+      marginRight="1rem"
     >
-      <Avatar
-        shape="rounded"
-        size="large"
+      <div
+        className="emotion-3"
       >
-        <span
-          className="css-3"
+        <Avatar
+          shape="circle"
+          size="large"
         >
-          <abbr
-            title="Rounded"
+          <Avatar
+            shape="circle"
+            size="large"
           >
-            R
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      shape="square"
-    >
-      <Avatar
-        shape="square"
-        size="large"
-      >
-        <span
-          className="css-5"
+            <span
+              className="emotion-0"
+            >
+              <abbr
+                title="Circle"
+              >
+                C
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          shape="rounded"
+          size="large"
         >
-          <abbr
-            title="Square"
+          <Avatar
+            shape="rounded"
+            size="large"
           >
-            S
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-  </div>
-</glamorous(div)>
+            <span
+              className="emotion-1"
+            >
+              <abbr
+                title="Rounded"
+              >
+                R
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          shape="square"
+          size="large"
+        >
+          <Avatar
+            shape="square"
+            size="large"
+          >
+            <span
+              className="emotion-2"
+            >
+              <abbr
+                title="Square"
+              >
+                S
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+      </div>
+    </Styled(div)>
+  </DemoLayout>
+</DemoLayout>
 `;
 
 exports[`Avatar demo examples Snapshots: sizes 1`] = `
-.css-0 > *,
-[data-css-0] > * {
+.emotion-9 {
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 2.5em;
+  outline: 0;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #3272d9;
+  border-radius: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 700;
+  height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  vertical-align: middle;
+  width: 2.5em;
+}
+
+.emotion-9 *,
+.emotion-9 *::before,
+.emotion-9 *::after {
+  box-sizing: inherit;
+}
+
+.emotion-9 > abbr,
+.emotion-9 > span {
+  font-size: 1.125em;
+}
+
+.emotion-9 > abbr {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-9 > img {
+  border-radius: 100%;
+  display: block;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+
+.emotion-9 > [role="img"] {
+  color: #ffffff;
+}
+
+.emotion-16[class] > * {
   margin-right: 1rem;
   margin-bottom: 1rem;
 }
 
-.css-1,
-[data-css-1] {
+.emotion-8 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-1 *,
-[data-css-1] *,
-.css-1 *::before,
-[data-css-1] *::before,
-.css-1 *::after,
-[data-css-1] *::after {
+.emotion-8 *,
+.emotion-8 *::before,
+.emotion-8 *::after {
   box-sizing: inherit;
 }
 
-.css-1 > abbr,
-[data-css-1] > abbr,
-.css-1 > span,
-[data-css-1] > span {
+.emotion-8 > abbr,
+.emotion-8 > span {
   font-size: 1.125em;
 }
 
-.css-1 > abbr,
-[data-css-1] > abbr {
+.emotion-8 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-1 > img,
-[data-css-1] > img {
+.emotion-8 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-1 > [role="img"],
-[data-css-1] > [role="img"] {
+.emotion-8 > [role="img"] {
   color: #ffffff;
 }
 
-.css-3,
-[data-css-3] {
+.emotion-11 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #3272d9;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-3 *,
-[data-css-3] *,
-.css-3 *::before,
-[data-css-3] *::before,
-.css-3 *::after,
-[data-css-3] *::after {
+.emotion-11 *,
+.emotion-11 *::before,
+.emotion-11 *::after {
   box-sizing: inherit;
 }
 
-.css-3 > abbr,
-[data-css-3] > abbr,
-.css-3 > span,
-[data-css-3] > span {
-  font-size: 1.125em;
-}
-
-.css-3 > abbr,
-[data-css-3] > abbr {
+.emotion-11 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-3 > img,
-[data-css-3] > img {
+.emotion-11 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-3 > [role="img"],
-[data-css-3] > [role="img"] {
+.emotion-11 > [role="img"] {
   color: #ffffff;
 }
 
-.css-5,
-[data-css-5] {
-  box-sizing: border-box;
-  color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px;
-  line-height: 2.5em;
-  outline: 0;
-  -moz-osx-font-smoothing: auto;
-  -webkit-font-smoothing: antialiased;
-  align-items: center;
-  background-color: #3272d9;
-  border-radius: 100%;
-  display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
-  display: -webkit-inline-flex;
-  display: inline-flex;
-  font-weight: 700;
-  height: 2.5em;
-  justify-content: center;
-  vertical-align: middle;
-  width: 2.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-}
-
-.css-5 *,
-[data-css-5] *,
-.css-5 *::before,
-[data-css-5] *::before,
-.css-5 *::after,
-[data-css-5] *::after {
-  box-sizing: inherit;
-}
-
-.css-5 > abbr,
-[data-css-5] > abbr {
-  text-decoration: none;
-}
-
-.css-5 > img,
-[data-css-5] > img {
-  border-radius: 100%;
-  display: block;
-  width: 100%;
-}
-
-.css-5 > [role="img"],
-[data-css-5] > [role="img"] {
-  color: #ffffff;
-}
-
-.css-7,
-[data-css-7] {
+.emotion-10 {
   fill: currentcolor;
   font-size: 16px;
   height: 1.5em;
   width: 1.5em;
 }
 
-.css-8,
-[data-css-8] {
+.emotion-0 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 1.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 1.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-8 *,
-[data-css-8] *,
-.css-8 *::before,
-[data-css-8] *::before,
-.css-8 *::after,
-[data-css-8] *::after {
+.emotion-0 *,
+.emotion-0 *::before,
+.emotion-0 *::after {
   box-sizing: inherit;
 }
 
-.css-8 > abbr,
-[data-css-8] > abbr,
-.css-8 > span,
-[data-css-8] > span {
+.emotion-0 > abbr,
+.emotion-0 > span {
   font-size: 0.6875em;
 }
 
-.css-8 > abbr,
-[data-css-8] > abbr {
+.emotion-0 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-8 > img,
-[data-css-8] > img {
+.emotion-0 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-8 > [role="img"],
-[data-css-8] > [role="img"] {
+.emotion-0 > [role="img"] {
   color: #ffffff;
 }
 
-.css-10,
-[data-css-10] {
+.emotion-1 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #3272d9;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 1.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 1.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-10 *,
-[data-css-10] *,
-.css-10 *::before,
-[data-css-10] *::before,
-.css-10 *::after,
-[data-css-10] *::after {
+.emotion-1 *,
+.emotion-1 *::before,
+.emotion-1 *::after {
   box-sizing: inherit;
 }
 
-.css-10 > abbr,
-[data-css-10] > abbr,
-.css-10 > span,
-[data-css-10] > span {
+.emotion-1 > abbr,
+.emotion-1 > span {
   font-size: 0.6875em;
 }
 
-.css-10 > abbr,
-[data-css-10] > abbr {
+.emotion-1 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-10 > img,
-[data-css-10] > img {
+.emotion-1 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-10 > [role="img"],
-[data-css-10] > [role="img"] {
+.emotion-1 > [role="img"] {
   color: #ffffff;
 }
 
-.css-12,
-[data-css-12] {
+.emotion-3 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.5em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #3272d9;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 1.5em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 1.5em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-12 *,
-[data-css-12] *,
-.css-12 *::before,
-[data-css-12] *::before,
-.css-12 *::after,
-[data-css-12] *::after {
+.emotion-3 *,
+.emotion-3 *::before,
+.emotion-3 *::after {
   box-sizing: inherit;
 }
 
-.css-12 > abbr,
-[data-css-12] > abbr {
+.emotion-3 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-12 > img,
-[data-css-12] > img {
+.emotion-3 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-12 > [role="img"],
-[data-css-12] > [role="img"] {
+.emotion-3 > [role="img"] {
   color: #ffffff;
 }
 
-.css-14,
-[data-css-14] {
+.emotion-2 {
   fill: currentcolor;
   font-size: 16px;
   height: 1em;
   width: 1em;
 }
 
-.css-15,
-[data-css-15] {
+.emotion-4 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-15 *,
-[data-css-15] *,
-.css-15 *::before,
-[data-css-15] *::before,
-.css-15 *::after,
-[data-css-15] *::after {
+.emotion-4 *,
+.emotion-4 *::before,
+.emotion-4 *::after {
   box-sizing: inherit;
 }
 
-.css-15 > abbr,
-[data-css-15] > abbr,
-.css-15 > span,
-[data-css-15] > span {
+.emotion-4 > abbr,
+.emotion-4 > span {
   font-size: 0.875em;
 }
 
-.css-15 > abbr,
-[data-css-15] > abbr {
+.emotion-4 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-15 > img,
-[data-css-15] > img {
+.emotion-4 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-15 > [role="img"],
-[data-css-15] > [role="img"] {
+.emotion-4 > [role="img"] {
   color: #ffffff;
 }
 
-.css-17,
-[data-css-17] {
+.emotion-5 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #3272d9;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-17 *,
-[data-css-17] *,
-.css-17 *::before,
-[data-css-17] *::before,
-.css-17 *::after,
-[data-css-17] *::after {
+.emotion-5 *,
+.emotion-5 *::before,
+.emotion-5 *::after {
   box-sizing: inherit;
 }
 
-.css-17 > abbr,
-[data-css-17] > abbr,
-.css-17 > span,
-[data-css-17] > span {
+.emotion-5 > abbr,
+.emotion-5 > span {
   font-size: 0.875em;
 }
 
-.css-17 > abbr,
-[data-css-17] > abbr {
+.emotion-5 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-17 > img,
-[data-css-17] > img {
+.emotion-5 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-17 > [role="img"],
-[data-css-17] > [role="img"] {
+.emotion-5 > [role="img"] {
   color: #ffffff;
 }
 
-.css-19,
-[data-css-19] {
+.emotion-7 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 2em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #3272d9;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 2em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 2em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-19 *,
-[data-css-19] *,
-.css-19 *::before,
-[data-css-19] *::before,
-.css-19 *::after,
-[data-css-19] *::after {
+.emotion-7 *,
+.emotion-7 *::before,
+.emotion-7 *::after {
   box-sizing: inherit;
 }
 
-.css-19 > abbr,
-[data-css-19] > abbr {
+.emotion-7 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-19 > img,
-[data-css-19] > img {
+.emotion-7 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-19 > [role="img"],
-[data-css-19] > [role="img"] {
+.emotion-7 > [role="img"] {
   color: #ffffff;
 }
 
-.css-21,
-[data-css-21] {
+.emotion-12 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 3.25em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 3.25em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 3.25em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-21 *,
-[data-css-21] *,
-.css-21 *::before,
-[data-css-21] *::before,
-.css-21 *::after,
-[data-css-21] *::after {
+.emotion-12 *,
+.emotion-12 *::before,
+.emotion-12 *::after {
   box-sizing: inherit;
 }
 
-.css-21 > abbr,
-[data-css-21] > abbr,
-.css-21 > span,
-[data-css-21] > span {
+.emotion-12 > abbr,
+.emotion-12 > span {
   font-size: 1.125em;
 }
 
-.css-21 > abbr,
-[data-css-21] > abbr {
+.emotion-12 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-21 > img,
-[data-css-21] > img {
+.emotion-12 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-21 > [role="img"],
-[data-css-21] > [role="img"] {
+.emotion-12 > [role="img"] {
   color: #ffffff;
 }
 
-.css-23,
-[data-css-23] {
+.emotion-13 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 3.25em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #3272d9;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 3.25em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 3.25em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-23 *,
-[data-css-23] *,
-.css-23 *::before,
-[data-css-23] *::before,
-.css-23 *::after,
-[data-css-23] *::after {
+.emotion-13 *,
+.emotion-13 *::before,
+.emotion-13 *::after {
   box-sizing: inherit;
 }
 
-.css-23 > abbr,
-[data-css-23] > abbr,
-.css-23 > span,
-[data-css-23] > span {
+.emotion-13 > abbr,
+.emotion-13 > span {
   font-size: 1.125em;
 }
 
-.css-23 > abbr,
-[data-css-23] > abbr {
+.emotion-13 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-23 > img,
-[data-css-23] > img {
+.emotion-13 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-23 > [role="img"],
-[data-css-23] > [role="img"] {
+.emotion-13 > [role="img"] {
   color: #ffffff;
 }
 
-.css-25,
-[data-css-25] {
+.emotion-15 {
   box-sizing: border-box;
   color: #ffffff;
-  font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Open Sans",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   line-height: 3.25em;
   outline: 0;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #3272d9;
   border-radius: 100%;
   display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 700;
   height: 3.25em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   vertical-align: middle;
   width: 3.25em;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
 }
 
-.css-25 *,
-[data-css-25] *,
-.css-25 *::before,
-[data-css-25] *::before,
-.css-25 *::after,
-[data-css-25] *::after {
+.emotion-15 *,
+.emotion-15 *::before,
+.emotion-15 *::after {
   box-sizing: inherit;
 }
 
-.css-25 > abbr,
-[data-css-25] > abbr {
+.emotion-15 > abbr {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.css-25 > img,
-[data-css-25] > img {
+.emotion-15 > img {
   border-radius: 100%;
   display: block;
-  width: 100%;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
-.css-25 > [role="img"],
-[data-css-25] > [role="img"] {
+.emotion-15 > [role="img"] {
   color: #ffffff;
 }
 
-<glamorous(div)>
-  <div
-    className="css-0"
+<DemoLayout>
+  <DemoLayout
+    includeLastChild={true}
+    marginRight="1rem"
   >
-    <Avatar
-      size="small"
+    <Styled(div)
+      includeLastChild={true}
+      marginBottom="1rem"
+      marginRight="1rem"
     >
-      <Avatar
-        noBackground={true}
-        shape="circle"
-        size="small"
+      <div
+        className="emotion-16"
       >
-        <span
-          className="css-8"
+        <Avatar
+          shape="circle"
+          size="small"
         >
-          <img
-            alt="Sam"
-            src="/images/avatar.svg"
-          />
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      size="small"
-    >
-      <Avatar
-        shape="circle"
-        size="small"
-      >
-        <span
-          className="css-10"
-        >
-          <abbr
-            title="Sam"
+          <Avatar
+            noBackground={true}
+            shape="circle"
+            size="small"
           >
-            S
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      size="small"
-    >
-      <Avatar
-        icon={
-          <IconCloud
-            size="medium"
-            title="cloud"
-          />
-        }
-        shape="circle"
-        size="small"
-      >
-        <span
-          className="css-12"
-        >
-          <IconCloud
-            size="medium"
-            title="cloud"
-          >
-            <Icon
-              rtl={false}
-              size="medium"
-              title="cloud"
+            <span
+              className="emotion-0"
             >
-              <glamorous(svg)
-                aria-hidden={null}
-                aria-labelledby="icon-title-icon-3"
-                role="img"
-                rtl={false}
+              <img
+                alt="Sam"
+                src="/images/avatar.svg"
+              />
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          shape="circle"
+          size="small"
+        >
+          <Avatar
+            shape="circle"
+            size="small"
+          >
+            <span
+              className="emotion-1"
+            >
+              <abbr
+                title="Sam"
+              >
+                S
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          shape="circle"
+          size="small"
+        >
+          <Avatar
+            icon={
+              <IconCloud
                 size="medium"
-                viewBox="0 0 24 24"
-              >
-                <svg
-                  aria-hidden={null}
-                  aria-labelledby="icon-title-icon-3"
-                  className="css-14"
-                  role="img"
-                  viewBox="0 0 24 24"
-                >
-                  <title
-                    id="icon-title-icon-3"
-                  >
-                    cloud
-                  </title>
-                  <g>
-                    <path
-                      d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"
-                    />
-                  </g>
-                </svg>
-              </glamorous(svg)>
-            </Icon>
-          </IconCloud>
-        </span>
-      </Avatar>
-    </Avatar>
-    <br />
-    <Avatar
-      size="medium"
-    >
-      <Avatar
-        noBackground={true}
-        shape="circle"
-        size="medium"
-      >
-        <span
-          className="css-15"
-        >
-          <img
-            alt="Melissa"
-            src="/images/avatar.svg"
-          />
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      size="medium"
-    >
-      <Avatar
-        shape="circle"
-        size="medium"
-      >
-        <span
-          className="css-17"
-        >
-          <abbr
-            title="Melissa"
+                title="cloud"
+              />
+            }
+            shape="circle"
+            size="small"
           >
-            M
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      size="medium"
-    >
-      <Avatar
-        icon={
-          <IconCloud
-            size="medium"
-            title="cloud"
-          />
-        }
-        shape="circle"
-        size="medium"
-      >
-        <span
-          className="css-19"
-        >
-          <IconCloud
-            size="medium"
-            title="cloud"
-          >
-            <Icon
-              rtl={false}
-              size="medium"
-              title="cloud"
+            <span
+              className="emotion-3"
             >
-              <glamorous(svg)
-                aria-hidden={null}
-                aria-labelledby="icon-title-icon-4"
-                role="img"
-                rtl={false}
+              <IconCloud
                 size="medium"
-                viewBox="0 0 24 24"
+                title="cloud"
               >
-                <svg
-                  aria-hidden={null}
-                  aria-labelledby="icon-title-icon-4"
-                  className="css-14"
-                  role="img"
-                  viewBox="0 0 24 24"
+                <Icon
+                  rtl={false}
+                  size="medium"
+                  title="cloud"
                 >
-                  <title
-                    id="icon-title-icon-4"
+                  <Styled(svg)
+                    aria-hidden={null}
+                    aria-labelledby="icon-title-icon-3"
+                    focusable="false"
+                    role="img"
+                    rtl={false}
+                    size="medium"
+                    viewBox="0 0 24 24"
                   >
-                    cloud
-                  </title>
-                  <g>
-                    <path
-                      d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"
-                    />
-                  </g>
-                </svg>
-              </glamorous(svg)>
-            </Icon>
-          </IconCloud>
-        </span>
-      </Avatar>
-    </Avatar>
-    <br />
-    <Avatar>
-      <Avatar
-        noBackground={true}
-        shape="circle"
-        size="large"
-      >
-        <span
-          className="css-1"
+                    <svg
+                      aria-hidden={null}
+                      aria-labelledby="icon-title-icon-3"
+                      className="emotion-2"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 24 24"
+                    >
+                      <title
+                        id="icon-title-icon-3"
+                      >
+                        cloud
+                      </title>
+                      <g>
+                        <path
+                          d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"
+                        />
+                      </g>
+                    </svg>
+                  </Styled(svg)>
+                </Icon>
+              </IconCloud>
+            </span>
+          </Avatar>
+        </Avatar>
+        <br />
+        <Avatar
+          shape="circle"
+          size="medium"
         >
-          <img
-            alt="Larry"
-            src="/images/avatar.svg"
-          />
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar>
-      <Avatar
-        shape="circle"
-        size="large"
-      >
-        <span
-          className="css-3"
-        >
-          <abbr
-            title="Larry"
+          <Avatar
+            noBackground={true}
+            shape="circle"
+            size="medium"
           >
-            L
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar>
-      <Avatar
-        icon={
-          <IconCloud
-            size="1.5em"
-            title="cloud"
-          />
-        }
-        shape="circle"
-        size="large"
-      >
-        <span
-          className="css-5"
-        >
-          <IconCloud
-            size="1.5em"
-            title="cloud"
-          >
-            <Icon
-              rtl={false}
-              size="1.5em"
-              title="cloud"
+            <span
+              className="emotion-4"
             >
-              <glamorous(svg)
-                aria-hidden={null}
-                aria-labelledby="icon-title-icon-5"
-                role="img"
-                rtl={false}
-                size="1.5em"
-                viewBox="0 0 24 24"
-              >
-                <svg
-                  aria-hidden={null}
-                  aria-labelledby="icon-title-icon-5"
-                  className="css-7"
-                  role="img"
-                  viewBox="0 0 24 24"
-                >
-                  <title
-                    id="icon-title-icon-5"
-                  >
-                    cloud
-                  </title>
-                  <g>
-                    <path
-                      d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"
-                    />
-                  </g>
-                </svg>
-              </glamorous(svg)>
-            </Icon>
-          </IconCloud>
-        </span>
-      </Avatar>
-    </Avatar>
-    <br />
-    <Avatar
-      size="jumbo"
-    >
-      <Avatar
-        noBackground={true}
-        shape="circle"
-        size="jumbo"
-      >
-        <span
-          className="css-21"
+              <img
+                alt="Melissa"
+                src="/images/avatar.svg"
+              />
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          shape="circle"
+          size="medium"
         >
-          <img
-            alt="Jennifer"
-            src="/images/avatar.svg"
-          />
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      size="jumbo"
-    >
-      <Avatar
-        shape="circle"
-        size="jumbo"
-      >
-        <span
-          className="css-23"
-        >
-          <abbr
-            title="Jennifer"
+          <Avatar
+            shape="circle"
+            size="medium"
           >
-            J
-          </abbr>
-        </span>
-      </Avatar>
-    </Avatar>
-    <Avatar
-      size="jumbo"
-    >
-      <Avatar
-        icon={
-          <IconCloud
-            size="1.5em"
-            title="cloud"
-          />
-        }
-        shape="circle"
-        size="jumbo"
-      >
-        <span
-          className="css-25"
-        >
-          <IconCloud
-            size="1.5em"
-            title="cloud"
-          >
-            <Icon
-              rtl={false}
-              size="1.5em"
-              title="cloud"
+            <span
+              className="emotion-5"
             >
-              <glamorous(svg)
-                aria-hidden={null}
-                aria-labelledby="icon-title-icon-6"
-                role="img"
-                rtl={false}
-                size="1.5em"
-                viewBox="0 0 24 24"
+              <abbr
+                title="Melissa"
               >
-                <svg
-                  aria-hidden={null}
-                  aria-labelledby="icon-title-icon-6"
-                  className="css-7"
-                  role="img"
-                  viewBox="0 0 24 24"
+                M
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          shape="circle"
+          size="medium"
+        >
+          <Avatar
+            icon={
+              <IconCloud
+                size="medium"
+                title="cloud"
+              />
+            }
+            shape="circle"
+            size="medium"
+          >
+            <span
+              className="emotion-7"
+            >
+              <IconCloud
+                size="medium"
+                title="cloud"
+              >
+                <Icon
+                  rtl={false}
+                  size="medium"
+                  title="cloud"
                 >
-                  <title
-                    id="icon-title-icon-6"
+                  <Styled(svg)
+                    aria-hidden={null}
+                    aria-labelledby="icon-title-icon-4"
+                    focusable="false"
+                    role="img"
+                    rtl={false}
+                    size="medium"
+                    viewBox="0 0 24 24"
                   >
-                    cloud
-                  </title>
-                  <g>
-                    <path
-                      d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"
-                    />
-                  </g>
-                </svg>
-              </glamorous(svg)>
-            </Icon>
-          </IconCloud>
-        </span>
-      </Avatar>
-    </Avatar>
-  </div>
-</glamorous(div)>
+                    <svg
+                      aria-hidden={null}
+                      aria-labelledby="icon-title-icon-4"
+                      className="emotion-2"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 24 24"
+                    >
+                      <title
+                        id="icon-title-icon-4"
+                      >
+                        cloud
+                      </title>
+                      <g>
+                        <path
+                          d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"
+                        />
+                      </g>
+                    </svg>
+                  </Styled(svg)>
+                </Icon>
+              </IconCloud>
+            </span>
+          </Avatar>
+        </Avatar>
+        <br />
+        <Avatar
+          shape="circle"
+          size="large"
+        >
+          <Avatar
+            noBackground={true}
+            shape="circle"
+            size="large"
+          >
+            <span
+              className="emotion-8"
+            >
+              <img
+                alt="Larry"
+                src="/images/avatar.svg"
+              />
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          shape="circle"
+          size="large"
+        >
+          <Avatar
+            shape="circle"
+            size="large"
+          >
+            <span
+              className="emotion-9"
+            >
+              <abbr
+                title="Larry"
+              >
+                L
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          shape="circle"
+          size="large"
+        >
+          <Avatar
+            icon={
+              <IconCloud
+                size="1.5em"
+                title="cloud"
+              />
+            }
+            shape="circle"
+            size="large"
+          >
+            <span
+              className="emotion-11"
+            >
+              <IconCloud
+                size="1.5em"
+                title="cloud"
+              >
+                <Icon
+                  rtl={false}
+                  size="1.5em"
+                  title="cloud"
+                >
+                  <Styled(svg)
+                    aria-hidden={null}
+                    aria-labelledby="icon-title-icon-5"
+                    focusable="false"
+                    role="img"
+                    rtl={false}
+                    size="1.5em"
+                    viewBox="0 0 24 24"
+                  >
+                    <svg
+                      aria-hidden={null}
+                      aria-labelledby="icon-title-icon-5"
+                      className="emotion-10"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 24 24"
+                    >
+                      <title
+                        id="icon-title-icon-5"
+                      >
+                        cloud
+                      </title>
+                      <g>
+                        <path
+                          d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"
+                        />
+                      </g>
+                    </svg>
+                  </Styled(svg)>
+                </Icon>
+              </IconCloud>
+            </span>
+          </Avatar>
+        </Avatar>
+        <br />
+        <Avatar
+          shape="circle"
+          size="jumbo"
+        >
+          <Avatar
+            noBackground={true}
+            shape="circle"
+            size="jumbo"
+          >
+            <span
+              className="emotion-12"
+            >
+              <img
+                alt="Jennifer"
+                src="/images/avatar.svg"
+              />
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          shape="circle"
+          size="jumbo"
+        >
+          <Avatar
+            shape="circle"
+            size="jumbo"
+          >
+            <span
+              className="emotion-13"
+            >
+              <abbr
+                title="Jennifer"
+              >
+                J
+              </abbr>
+            </span>
+          </Avatar>
+        </Avatar>
+        <Avatar
+          shape="circle"
+          size="jumbo"
+        >
+          <Avatar
+            icon={
+              <IconCloud
+                size="1.5em"
+                title="cloud"
+              />
+            }
+            shape="circle"
+            size="jumbo"
+          >
+            <span
+              className="emotion-15"
+            >
+              <IconCloud
+                size="1.5em"
+                title="cloud"
+              >
+                <Icon
+                  rtl={false}
+                  size="1.5em"
+                  title="cloud"
+                >
+                  <Styled(svg)
+                    aria-hidden={null}
+                    aria-labelledby="icon-title-icon-6"
+                    focusable="false"
+                    role="img"
+                    rtl={false}
+                    size="1.5em"
+                    viewBox="0 0 24 24"
+                  >
+                    <svg
+                      aria-hidden={null}
+                      aria-labelledby="icon-title-icon-6"
+                      className="emotion-10"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 24 24"
+                    >
+                      <title
+                        id="icon-title-icon-6"
+                      >
+                        cloud
+                      </title>
+                      <g>
+                        <path
+                          d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"
+                        />
+                      </g>
+                    </svg>
+                  </Styled(svg)>
+                </Icon>
+              </IconCloud>
+            </span>
+          </Avatar>
+        </Avatar>
+      </div>
+    </Styled(div)>
+  </DemoLayout>
+</DemoLayout>
 `;
