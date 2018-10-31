@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import { componentTheme as tabComponentTheme } from '../../../../library/Tabs/Tab';
+import { componentTheme as tabComponentTheme } from '../../../../library/Tabs/Tab/Tab';
 import { componentTheme as tabListComponentTheme } from '../../../../library/Tabs/TabList';
 import { componentTheme as tabPanelComponentTheme } from '../../../../library/Tabs/TabPanel';
 import bestPractices from './bestPractices';
@@ -8,8 +8,8 @@ import bestPractices from './bestPractices';
 import tabsExamples from './examples/Tabs';
 import tabExamples from './examples/Tab';
 
-const tabsDoc = require('!!react-docgen-loader!../../../../library/Tabs/Tabs');
-const tabDoc = require('!!react-docgen-loader!../../../../library/Tabs/Tab');
+const tabsDoc = require('!!react-docgen-loader!../../../../library/Tabs/Tabs/Tabs');
+const tabDoc = require('!!react-docgen-loader!../../../../library/Tabs/Tab/Tab');
 
 export default [
   {

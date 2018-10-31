@@ -1,0 +1,40 @@
+{
+  "rootId": "753fdfae-4d3d-4a49-8a77-7f2f7f80dca4",
+  "elements": {
+    "753fdfae-4d3d-4a49-8a77-7f2f7f80dca4": {
+      "name": "ButtonGroup",
+      "props": {
+        "aria-label": "Edit text",
+        "children": [
+          {
+            "uxpinPresetElementId": "80d7ecb4-9beb-4a9d-8370-7cc041338cfb"
+          },
+          {
+            "uxpinPresetElementId": "d35eecc6-9666-4e11-9b7c-5690d3485281"
+          },
+          {
+            "uxpinPresetElementId": "6569b196-df04-4f61-970f-dbb497878c19"
+          }
+        ]
+      }
+    },
+    "80d7ecb4-9beb-4a9d-8370-7cc041338cfb": {
+      "name": "Button",
+      "props": {
+        "children": "Cut"
+      }
+    },
+    "d35eecc6-9666-4e11-9b7c-5690d3485281": {
+      "name": "Button",
+      "props": {
+        "children": "Copy"
+      }
+    },
+    "6569b196-df04-4f61-970f-dbb497878c19": {
+      "name": "Button",
+      "props": {
+        "children": "Paste"
+      }
+    }
+  }
+}

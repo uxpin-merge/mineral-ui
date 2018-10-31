@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
-import Tabs from '../Tabs';
-import Tab from '../Tab';
+import Tabs from '../Tabs/Tabs';
+import Tab from '../Tab/Tab';
 import TabPanel from '../TabPanel';
 import examples from '../../../website/app/demos/Tabs/examples';
 import testDemoExamples from '../../../../utils/testDemoExamples';
