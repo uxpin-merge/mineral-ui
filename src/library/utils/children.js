@@ -6,7 +6,7 @@ export function findByType(children: React$Node, type: React$ComponentType<*>) {
   let match;
 
   Children.forEach(children, (child) => {
-    if (!match && child && child.type === type) {
+    if (!match && child && getType(child) === type) {
       match = child;
     }
   });
@@ -19,7 +19,7 @@ export function findAllByType(
   type: React$ComponentType<*>
 ) {
   return Children.map(children, (child) => {
-    if (child && child.type === type) {
+    if (child && getType(child) === type) {
       return child;
     }
   });
@@ -31,8 +31,12 @@ export function excludeByType(
 ) {
   const types = toArray(type);
   return Children.map(children, (child) => {
-    if (types.indexOf(child.type) === -1) {
+    if (types.indexOf(getType(child)) === -1) {
       return child;
     }
   });
+}
+
+export function getType(child: React$Element<any>): React$ComponentType<*> {
+  return child.type.WrappedComponent || child.type;
 }
