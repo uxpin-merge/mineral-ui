@@ -3,8 +3,8 @@ import Tab from '../Tab';
 import Text from '../../../Text';
 
 export default (
-  <Tab key="26877535-2644-4f60-80f4-0523f1f95f3a" title="Malachite">
-    <Text key="887edeb0-87c5-4d16-a14b-ec550be08c53">
+  <Tab key="90A8771ED300567F18983C4F2D5BDD57" title="Malachite">
+    <Text key="E13D2EF56E3668952D093A80EA398F81">
       Malachite is a copper carbonate hydroxide mineral, with the formula
       Cu2CO3(OH)2. This opaque, green banded mineral crystallizes in the
       monoclinic crystal system, and most often forms botryoidal, fibrous, or

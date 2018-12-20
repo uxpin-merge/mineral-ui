@@ -4,9 +4,9 @@ import Tab from '../../Tab/Tab';
 import Text from '../../../Text';
 
 export default (
-  <Tabs key="03579df8-8c48-41a6-93b5-5c1ffc051653">
-    <Tab key="26877535-2644-4f60-80f4-0523f1f95f3a" title="Malachite">
-      <Text key="887edeb0-87c5-4d16-a14b-ec550be08c53">
+  <Tabs key="1CA6D97F5C771BD1CB33A0B795ED474F">
+    <Tab key="510D5829F949591440EB0B70818332F2" title="Malachite">
+      <Text key="9CE95E14FAF457BDD077D1AFF88A9B23">
         Malachite is a copper carbonate hydroxide mineral, with the formula
         Cu2CO3(OH)2. This opaque, green banded mineral crystallizes in the
         monoclinic crystal system, and most often forms botryoidal, fibrous, or
@@ -16,9 +16,9 @@ export default (
       </Text>
     </Tab>
     <Tab
-      key="660f6328-fe93-44d1-bfd9-7e8440b13852"
+      key="514B71671F6E88F2C795207F59C3FAE5"
       title="Fluorite Will Truncate">
-      <Text key="79325d16-9fcc-48cc-9da6-2d8d9101c51f">
+      <Text key="8ABB6532D3FCE9993579D926A4452A61">
         Fluorite (also called fluorspar) is the mineral form of calcium
         fluoride, CaF2. It belongs to the halide minerals. It crystallizes in
         isometric cubic habit, although octahedral and more complex isometric
@@ -32,8 +32,8 @@ export default (
         fluorine-containing fine chemicals.
       </Text>
     </Tab>
-    <Tab key="6ea7fae3-2339-4dfe-8d83-d6e223ded07c" title="Magnetite">
-      <Text key="24b89da5-395f-41eb-b9d2-b666315c98fc">
+    <Tab key="96063D6EEFD20D41D2A811A80B690609" title="Magnetite">
+      <Text key="4DC6E64AE06656A88F2D7AD65A66F243">
         Magnetite is a rock mineral and one of the main iron ores, with the
         chemical formula Fe3O4. It is one of the oxides of iron, and is
         ferrimagnetic; it is attracted to a magnet and can be magnetized to
