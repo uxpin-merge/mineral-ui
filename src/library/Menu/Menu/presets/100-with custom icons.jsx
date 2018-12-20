@@ -13,12 +13,12 @@ export default (
     <MenuGroup key="ZU22SAKIOQBY5WD86WWOXECG4BB83QR4">
       <MenuItem
         key="ZVZAEWUMZ8DGEX54X1BRDXF9SHMZ5FY7"
-        iconStart={<IconCloud />}>
+        iconStart={<IconCloud key="NP4Z1C9PJW9Z4J36NY6BUFI0JRFT1WCF" />}>
         Icon at start
       </MenuItem>
       <MenuItem
         key="I2SWYA89DXXC502FF5TLKOUSLGODDXQM"
-        iconEnd={<IconWbSunny />}
+        iconEnd={<IconWbSunny key="CEFQWE4EMYU45HRQNVJCHX3FQ6QY8JO8" />}
         secondaryText="Secondary text">
         Icon at end
       </MenuItem>

@@ -28,4 +28,4 @@ const data = [
   }
 ];
 
-export default <Menu data={data} />;
+export default <Menu data={data} key="F85995B051CF1B9DAE5B74E20509B335" />;
