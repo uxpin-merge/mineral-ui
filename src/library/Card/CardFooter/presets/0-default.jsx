@@ -16,10 +16,10 @@ export default (
     </CardBlock>
     <CardActions key="791X7S1AMCT4S9CYT7JTG16JMQAQ666I">
       <Button key="SCGMAS5M2NJ0TY51HEF9JMO6REP1UF09" minimal>
-        Children 1
+        Button 1
       </Button>
       <Button key="DCFUSH8VLNCRVVNEPTAEEBTDNC8HUTNJ" primary>
-        Children 2
+        Button 2
       </Button>
     </CardActions>
   </CardFooter>

@@ -5,8 +5,8 @@ export default (
   <Radio
     defaultChecked
     key="EW6KZL8ZZIXSSNAMNU7DHV34F5UQVP1X"
-    label="quartz"
+    label="Quartz"
     name="minerals"
-    value="Quartz"
+    value="quartz"
   />
 );

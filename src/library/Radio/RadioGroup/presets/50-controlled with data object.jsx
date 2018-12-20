@@ -19,6 +19,7 @@ const data = [
 export default (
   <RadioGroup
     data={data}
+    defaultChecked="quartz"
     key="HT9WU09S0XSJNWKDZPE1CFVVH11FXRDC"
     name="minerals-2"
   />

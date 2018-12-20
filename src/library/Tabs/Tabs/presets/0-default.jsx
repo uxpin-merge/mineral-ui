@@ -17,6 +17,7 @@ export default (
     </Tab>
     <Tab
       key="514B71671F6E88F2C795207F59C3FAE5"
+      maxWidth="6em"
       title="Fluorite Will Truncate">
       <Text key="8ABB6532D3FCE9993579D926A4452A61">
         Fluorite (also called fluorspar) is the mineral form of calcium
