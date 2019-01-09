@@ -1,0 +1,26 @@
+{
+  "rootId": "HT9WU09S0XSJNWKDZPE1CFVVH11FXRDC",
+  "elements": {
+    "HT9WU09S0XSJNWKDZPE1CFVVH11FXRDC": {
+      "name": "RadioGroup",
+      "props": {
+        "name": "minerals-2",
+        "defaultChecked": "quartz",
+        "data": [
+          {
+            "label": "Fluorite",
+            "value": "fluorite"
+          },
+          {
+            "label": "Magnetite",
+            "value": "magnetite"
+          },
+          {
+            "label": "Quartz",
+            "value": "quartz"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "rootId": "VQ0Z5S02EDHJFHP55YLJR4LFP4WBUMOK",
+  "elements": {
+    "VQ0Z5S02EDHJFHP55YLJR4LFP4WBUMOK": {
+      "name": "CardTitle",
+      "props": {
+        "children": "Card Title",
+        "subtitle": "Card Subtitle"
+      }
+    }
+  }
+}

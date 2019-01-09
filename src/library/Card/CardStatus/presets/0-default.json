@@ -1,0 +1,12 @@
+{
+  "rootId": "1HYO5HMRE3M0G7ZECDNZRSJBI95NPV2D",
+  "elements": {
+    "1HYO5HMRE3M0G7ZECDNZRSJBI95NPV2D": {
+      "name": "CardStatus",
+      "props": {
+        "variant": "success",
+        "children": "Available"
+      }
+    }
+  }
+}

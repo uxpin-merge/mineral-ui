@@ -1,0 +1,14 @@
+{
+  "rootId": "9116b126-bbc3-4320-bff2-ab60bbb5c2a0",
+  "elements": {
+    "9116b126-bbc3-4320-bff2-ab60bbb5c2a0": {
+      "name": "Pagination",
+      "props": {
+        "currentPage": 1,
+        "pageSize": 10,
+        "size": "small",
+        "totalCount": 30
+      }
+    }
+  }
+}
