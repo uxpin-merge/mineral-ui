@@ -22,4 +22,4 @@ const data = [
   }
 ];
 
-export default <Select data={data} key="EW6KZL8ZZIXSSNAMNU7DHV34F5UQVP1X" />;
+export default <Select data={data} uxpId="EW6KZL8ZZIXSSNAMNU7DHV34F5UQVP1X" />;

@@ -27,9 +27,9 @@ const data = [
 export default (
   <CardTitle
     actions={
-      <CardTitleMenu data={data} key="NH4JFP2A69U6GHFL7YLIMI9EZIM72IZR" />
+      <CardTitleMenu data={data} uxpId="NH4JFP2A69U6GHFL7YLIMI9EZIM72IZR" />
     }
-    key="VQ0Z5S02EDHJFHP55YLJR4LFP4WBUMOK">
+    uxpId="VQ0Z5S02EDHJFHP55YLJR4LFP4WBUMOK">
     Card Title
   </CardTitle>
 );

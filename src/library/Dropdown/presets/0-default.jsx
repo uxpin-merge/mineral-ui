@@ -21,7 +21,7 @@ const data = [
 ];
 
 export default (
-  <Dropdown data={data} key="1526ABF05067F99EF65F83152E26DA39">
-    <Button key="SPNM3VK5JSHWM6LK9JJ7OTHYF96AX6KU">Menu</Button>
+  <Dropdown data={data} uxpId="1526ABF05067F99EF65F83152E26DA39">
+    <Button uxpId="SPNM3VK5JSHWM6LK9JJ7OTHYF96AX6KU">Menu</Button>
   </Dropdown>
 );

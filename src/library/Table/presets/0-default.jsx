@@ -36,7 +36,7 @@ export default (
   <Table
     data={data}
     hideTitle
-    key="681489D4F626B3171ED12CD98CDD2CB5"
+    uxpId="681489D4F626B3171ED12CD98CDD2CB5"
     rowKey="Fruits"
     title="Foods of the World"
   />

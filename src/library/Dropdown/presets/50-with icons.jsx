@@ -37,9 +37,9 @@ const data = [
 ];
 
 export default (
-  <Dropdown data={data} key="1526ABF05067F99EF65F83152E26DA39">
-    <Button key="SPNM3VK5JSHWM6LK9JJ7OTHYF96AX6KU">Menu</Button>
-    <IconCloud key="LUT2OEH5MBWIZ14927AYRL9T0UWD6ABK" />
-    <IconCloud key="8GZ573PJUL8MCE239NVM7O6GTLOB2JQQ" />
+  <Dropdown data={data} uxpId="1526ABF05067F99EF65F83152E26DA39">
+    <Button uxpId="SPNM3VK5JSHWM6LK9JJ7OTHYF96AX6KU">Menu</Button>
+    <IconCloud uxpId="LUT2OEH5MBWIZ14927AYRL9T0UWD6ABK" />
+    <IconCloud uxpId="8GZ573PJUL8MCE239NVM7O6GTLOB2JQQ" />
   </Dropdown>
 );
