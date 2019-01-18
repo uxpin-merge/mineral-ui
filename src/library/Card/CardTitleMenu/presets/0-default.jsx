@@ -24,5 +24,5 @@ const data = [
 ];
 
 export default (
-  <CardTitleMenu data={data} key="QATTOR6N3QK74G14MFCTCWGEA7MWM0KA" />
+  <CardTitleMenu data={data} uxpId="QATTOR6N3QK74G14MFCTCWGEA7MWM0KA" />
 );

@@ -15,13 +15,13 @@ const data = [
   {
     text: 'Icon at start',
     value: 'iconStart',
-    iconStart: <IconCloud key="NP4Z1C9PJW9Z4J36NY6BUFI0JRFT1WCF" />
+    iconStart: <IconCloud uxpId="NP4Z1C9PJW9Z4J36NY6BUFI0JRFT1WCF" />
   },
   {
     text: 'Icon at end',
     value: 'iconEnd',
-    iconEnd: <IconWbSunny key="CEFQWE4EMYU45HRQNVJCHX3FQ6QY8JO8" />
+    iconEnd: <IconWbSunny uxpId="CEFQWE4EMYU45HRQNVJCHX3FQ6QY8JO8" />
   }
 ];
 
-export default <Select data={data} key="EW6KZL8ZZIXSSNAMNU7DHV34F5UQVP1X" />;
+export default <Select data={data} uxpId="EW6KZL8ZZIXSSNAMNU7DHV34F5UQVP1X" />;

@@ -19,7 +19,7 @@ const data = [
 export default (
   <CheckboxGroup
     data={data}
-    key="HT9WU09S0XSJNWKDZPE1CFVVH11FXRDC"
+    uxpId="HT9WU09S0XSJNWKDZPE1CFVVH11FXRDC"
     name="minerals-2"
   />
 );
