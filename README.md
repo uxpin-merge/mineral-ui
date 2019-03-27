@@ -1,9 +1,7 @@
 # Mineral UI + UXPin Merge
 Integration of [Mineral UI](https://mineral-ui.com/) with UXPin Merge Technology.
 
-![alt text](https://github.com/uxpin-merge/rmwc-merge/blob/master/img/header.png "RMWC in UXPin")
-
-## About RMWC
+## About Mineral UI
 
 A design system and [React](https://reactjs.org/) component library for the web that lets you quickly build high-quality, accessible apps. Created by [CA Technologies](http://ca.com).
 
