@@ -42,6 +42,9 @@ module.exports = {
           'src/library/StartEnd/StartEnd.js'
         ]
       }
-    ]
-  }
+    ],
+    wrapper: 'src/library/themes/UXPinWrapper.js',
+    webpackConfig: 'webpack.config.js',
+  },
+  name: "Mineral UI"
 };
