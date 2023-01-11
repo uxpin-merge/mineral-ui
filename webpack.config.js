@@ -54,7 +54,7 @@ module.exports = {
       index: '/'
     }
   },
-  devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',
+  devtool: isProduction ? 'source-map' : 'hidden-source-map',
   optimization: {
     runtimeChunk: true,
     splitChunks: {
