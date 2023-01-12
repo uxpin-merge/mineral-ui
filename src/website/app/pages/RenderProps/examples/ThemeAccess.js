@@ -4,7 +4,7 @@ import LiveProvider from '../../../LiveProvider';
 import { createStyledComponent } from '../../../../../library/styles';
 import { withTheme } from '../../../../../library/themes';
 import Menu from '../../../../../library/Menu';
-import { componentTheme as menuItemTheme } from '../../../../../library/Menu/MenuItem';
+import { componentTheme as menuItemTheme } from '../../../../../library/Menu/MenuItem/MenuItem';
 
 export default function ThemeAccess() {
   const liveProviderProps = {

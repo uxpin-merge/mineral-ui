@@ -2,7 +2,7 @@
 import FormField from '../../../../../../library/Form/FormField/FormField';
 import TextArea from '../../../../../../library/TextArea';
 import TextInput from '../../../../../../library/TextInput';
-import DemoLayout from '../../../../shared/DemoLayout';
+import DemoLayout from '../../../shared/DemoLayout';
 
 export default {
   id: 'basic',

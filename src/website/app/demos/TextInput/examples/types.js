@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import FormField from '../../../../../library/Form/FormField';
+import FormField from '../../../../../library/Form/FormField/FormField';
 import TextInput from '../../../../../library/TextInput/';
 import DemoLayout from '../../shared/DemoLayout';
 

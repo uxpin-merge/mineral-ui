@@ -46,9 +46,8 @@ module.exports = {
     mainFields: ['browser', 'module', 'main']
   },
   devServer: {
-    contentBase: path.join(__dirname, './src/website'),
+    static: path.join(__dirname, './src/website'),
     compress: true,
-    disableHostCheck: true,
     host: '0.0.0.0',
     historyApiFallback: {
       index: '/'
