@@ -1,3 +1,4 @@
+# ARCHIVED
 # Mineral UI + UXPin Merge
 Integration of [Mineral UI](https://mineral-ui.com/) with UXPin Merge Technology.
 
